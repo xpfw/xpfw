@@ -1,0 +1,73 @@
+{
+  "name": "@xpfw/test-util",
+  "version": "0.1.1",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "license": "MIT",
+  "dependencies": {
+    "@feathersjs/authentication": "^2.1.13",
+    "@feathersjs/authentication-jwt": "^2.0.7",
+    "@feathersjs/authentication-local": "^1.2.7",
+    "@feathersjs/express": "^1.2.7",
+    "@feathersjs/feathers": "^3.2.3",
+    "@feathersjs/socketio": "^3.2.7",
+    "@xpfw/validate": "0.1.1",
+    "feathers-memory": "^2.2.0",
+    "feathers-mongodb": "^3.4.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.10"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/feathersjs__authentication": "^2.1.2",
+    "@types/feathersjs__authentication-jwt": "^1.0.3",
+    "@types/feathersjs__authentication-local": "^1.0.3",
+    "@types/feathersjs__errors": "^3.2.1",
+    "@types/feathersjs__express": "^1.1.4",
+    "@types/feathersjs__feathers": "^3.0.5",
+    "@types/feathersjs__socketio": "^3.0.3",
+    "@types/jest": "^23.3.9",
+    "@types/lodash": "^4.14.118",
+    "@types/mongodb": "^3.1.14",
+    "@types/node": "^10.12.9",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "mockdate": "^2.0.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "ts-jest": "=23.10.4",
+    "typescript": "^3.1.6",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

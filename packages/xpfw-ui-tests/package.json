@@ -1,0 +1,83 @@
+{
+  "name": "@xpfw/ui-tests",
+  "version": "0.1.1",
+  "main": "dist",
+  "typings": "dist",
+  "license": "MIT",
+  "peerDependencies": {
+    "lodash": "4.x.x",
+    "moment": "2.x.x",
+    "resub": "1.x.x",
+    "resub-persist": "1.x.x",
+    "@xpfw/validate": "0.1.x",
+    "@xpfw/form-shared": "0.1.x",
+    "@xpfw/ui-shared": "0.1.x",
+    "@xpfw/ui-feathers": "0.1.x"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "resub": "1.0.13",
+    "resub-persist": "^1.2.8",
+    "@types/jest": "^23.3.9",
+    "@types/lodash": "^4.14.118",
+    "@types/mockdate": "^2.0.0",
+    "@types/react": "^16.7.6",
+    "@types/socket.io-client": "^1.4.32",
+    "@xpfw/test-util": "0.1.1",
+    "@xpfw/validate": "^0.1.1",
+    "@xpfw/form-shared": "^0.1.1",
+    "@xpfw/ui-shared": "^0.1.1",
+    "@xpfw/ui-feathers": "^0.1.1",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "mockdate": "^2.0.2",
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.4",
+    "preact-render-to-json": "^3.6.6",
+    "quick_check": "^0.7.0",
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "ts-jest": "=23.10.4",
+    "tslib": "^1.9.3",
+    "typescript": "^3.1.6",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleNameMapper": {
+      "preact-render-to-json": "preact-render-to-json",
+      "preact": "preact",
+      "react": "preact-compat",
+      "react-dom": "preact-compat"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

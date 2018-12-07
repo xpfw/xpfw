@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic Fields Test: empty render 1`] = `
+<div
+  class="text"
+>
+  {
+  "field": null
+}
+</div>
+`;
+
+exports[`Basic Fields Test: field updated to default value because no value set 1`] = `
+<div
+  class="mocktest"
+>
+  {
+  "field": {
+    "mapTo": "guestName",
+    "type": 2,
+    "validate": {
+      "permission": {
+        "find": "guest",
+        "update": "guest",
+        "create": "guest",
+        "remove": "guest"
+      },
+      "defaultValue": "myDefaultTEXTS"
+    }
+  },
+  "form": {
+    "model": "formModel",
+    "collection": "simpleTestCol",
+    "sections": [
+      {
+        "fields": [
+          {
+            "mapTo": "myString",
+            "type": 2,
+            "validate": {
+              "required": {
+                "type": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "mapTo": "myNum",
+            "type": 3,
+            "validate": {}
+          }
+        ]
+      }
+    ]
+  },
+  "theme": "test",
+  "value": "myDefaultTEXTS"
+}
+</div>
+`;
+
+exports[`Basic Fields Test: namefield 1`] = `
+<div
+  class="text"
+>
+  {
+  "field": {
+    "mapTo": "guestName",
+    "type": 2,
+    "validate": {
+      "permission": {
+        "find": "guest",
+        "update": "guest",
+        "create": "guest",
+        "remove": "guest"
+      }
+    }
+  }
+}
+</div>
+`;
+
+exports[`Basic Fields Test: namefield changed val 1`] = `
+<div
+  class="text"
+>
+  {
+  "field": {
+    "mapTo": "guestName",
+    "type": 2,
+    "validate": {
+      "permission": {
+        "find": "guest",
+        "update": "guest",
+        "create": "guest",
+        "remove": "guest"
+      }
+    }
+  },
+  "value": "myval"
+}
+</div>
+`;
+
+exports[`Basic Fields Test: render field with default component and value already set 1`] = `
+<div
+  class="mocktest"
+>
+  {
+  "field": {
+    "mapTo": "guestName",
+    "type": 2,
+    "validate": {
+      "permission": {
+        "find": "guest",
+        "update": "guest",
+        "create": "guest",
+        "remove": "guest"
+      },
+      "defaultValue": "myDefaultTEXTS"
+    }
+  },
+  "form": {
+    "model": "formModel",
+    "collection": "simpleTestCol",
+    "sections": [
+      {
+        "fields": [
+          {
+            "mapTo": "myString",
+            "type": 2,
+            "validate": {
+              "required": {
+                "type": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "mapTo": "myNum",
+            "type": 3,
+            "validate": {}
+          }
+        ]
+      }
+    ]
+  },
+  "theme": "test",
+  "value": "THIS AINT THE DEFAULT VAL YO!"
+}
+</div>
+`;
+
+exports[`Basic Fields Test: unfindable themed component fallsback to default 1`] = `
+<div
+  class="text"
+>
+  {
+  "field": {
+    "mapTo": "guestName",
+    "type": 2,
+    "validate": {
+      "permission": {
+        "find": "guest",
+        "update": "guest",
+        "create": "guest",
+        "remove": "guest"
+      }
+    }
+  },
+  "form": {
+    "model": "formModel",
+    "collection": "simpleTestCol",
+    "sections": [
+      {
+        "fields": [
+          {
+            "mapTo": "myString",
+            "type": 2,
+            "validate": {
+              "required": {
+                "type": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "mapTo": "myNum",
+            "type": 3,
+            "validate": {}
+          }
+        ]
+      }
+    ]
+  },
+  "theme": "test",
+  "value": "setviavaluewrap"
+}
+</div>
+`;
+
+exports[`Basic Fields Test: use themed component 1`] = `
+<div
+  class="mocktest"
+>
+  {
+  "field": {
+    "mapTo": "guestName",
+    "type": 2,
+    "validate": {
+      "permission": {
+        "find": "guest",
+        "update": "guest",
+        "create": "guest",
+        "remove": "guest"
+      }
+    }
+  },
+  "form": {
+    "model": "formModel",
+    "collection": "simpleTestCol",
+    "sections": [
+      {
+        "fields": [
+          {
+            "mapTo": "myString",
+            "type": 2,
+            "validate": {
+              "required": {
+                "type": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "mapTo": "myNum",
+            "type": 3,
+            "validate": {}
+          }
+        ]
+      }
+    ]
+  },
+  "theme": "test",
+  "value": "setviavaluewrap"
+}
+</div>
+`;

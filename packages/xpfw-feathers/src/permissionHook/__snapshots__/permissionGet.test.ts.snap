@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify func: Allowed get 1`] = `
+Object {
+  "belongsTo": "asdf",
+  "id": 0,
+  "missing": "required",
+}
+`;
+
+exports[`verify func: Forbidden get 1`] = `[Forbidden: insufficient permission]`;
+
+exports[`verify func: result of successfull creation 1`] = `
+Object {
+  "belongsTo": "asdf",
+  "id": 0,
+  "missing": "required",
+}
+`;

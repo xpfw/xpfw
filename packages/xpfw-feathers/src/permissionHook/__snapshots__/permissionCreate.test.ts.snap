@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify func: allowed to create because logged in 1`] = `
+Object {
+  "id": 0,
+  "missing": "required",
+  "string": "inhere",
+}
+`;
+
+exports[`verify func: result of creation 1`] = `[Forbidden: insufficient permission]`;

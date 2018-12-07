@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify func: Allowed Update 1`] = `
+Object {
+  "belongsTo": "notme",
+  "bla": "la",
+  "id": 0,
+}
+`;
+
+exports[`verify func: Allowed patch 1`] = `
+Object {
+  "belongsTo": "asdf",
+  "bla": "la",
+  "id": 0,
+  "missing": "required",
+}
+`;
+
+exports[`verify func: Forbidden Update 1`] = `[Forbidden: insufficient permission]`;
+
+exports[`verify func: Forbidden Update 2`] = `[Forbidden: insufficient permission]`;
+
+exports[`verify func: Forbidden Update after destroying belongsTo 1`] = `[Forbidden: insufficient permission]`;
+
+exports[`verify func: result of successfull creation 1`] = `
+Object {
+  "belongsTo": "asdf",
+  "id": 0,
+  "missing": "required",
+}
+`;

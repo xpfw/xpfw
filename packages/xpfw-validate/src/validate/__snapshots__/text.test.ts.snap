@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Full Coverage for validate/text Form Validation: invalid text type 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+    Object {
+      "type": 5,
+    },
+    Object {
+      "type": 420,
+    },
+  ],
+  "mapTo": "myStringUser",
+}
+`;
+
+exports[`Full Coverage for validate/text Form Validation: mismatch errors 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "custom": Object {
+        "toMatch": "a",
+      },
+      "type": 6,
+    },
+  ],
+  "mapTo": "pw2",
+}
+`;
+
+exports[`Full Coverage for validate/text Form Validation: result of successfull matchOpts validation 1`] = `"c"`;
+
+exports[`Full Coverage for validate/text Form Validation: result of successfull textField validation 1`] = `"mywayondahighway!"`;
+
+exports[`Full Coverage for validate/text Form Validation: text too long 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 420,
+    },
+  ],
+  "mapTo": "myStringUser",
+}
+`;
+
+exports[`Full Coverage for validate/text Form Validation: text too short 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 5,
+    },
+  ],
+  "mapTo": "myStringUser",
+}
+`;

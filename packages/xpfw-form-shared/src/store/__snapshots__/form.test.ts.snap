@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cover Form Store: Copied empty values from doc 1`] = `
+Object {
+  "formData": Object {
+    "my": Object {
+      "model": "overwritten",
+    },
+    "myNum": null,
+    "myString": undefined,
+  },
+}
+`;
+
+exports[`Cover Form Store: Copied valid values from doc 1`] = `
+Object {
+  "formData": Object {
+    "my": Object {
+      "model": "overwritten",
+    },
+    "myNum": 5432,
+    "myString": "lala",
+  },
+}
+`;
+
+exports[`Cover Form Store: Copied values from doc with a prefix 1`] = `
+Object {
+  "formData": Object {
+    "Prefix": Object {
+      "myNum": 420,
+      "myString": "gdfgfsf",
+    },
+    "my": Object {
+      "model": "overwritten",
+    },
+    "myNum": null,
+    "myString": undefined,
+  },
+}
+`;
+
+exports[`Cover Form Store: Initial State 1`] = `
+Object {
+  "formData": Object {},
+}
+`;
+
+exports[`Cover Form Store: Overwritten my.model with string 1`] = `
+Object {
+  "formData": Object {
+    "my": Object {
+      "model": "overwritten",
+    },
+  },
+}
+`;
+
+exports[`Cover Form Store: Set my model via single calls to complex object 1`] = `
+Object {
+  "formData": Object {
+    "my": Object {
+      "model": Object {
+        "arr": Array [
+          23,
+          4,
+          "a",
+          false,
+        ],
+        "bool": true,
+        "num": 65234,
+        "obj": Object {
+          "a": "b",
+          "c": 2,
+          "d": false,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Cover Form Store: after reset 1`] = `
+Object {
+  "formData": Object {
+    "Prefix": Object {
+      "myNum": 420,
+      "myString": "gdfgfsf",
+    },
+    "my": Object {
+      "model": "overwritten",
+    },
+    "myNum": undefined,
+    "myString": undefined,
+  },
+}
+`;
+
+exports[`Cover Form Store: before reset 1`] = `
+Object {
+  "formData": Object {
+    "Prefix": Object {
+      "myNum": 420,
+      "myString": "gdfgfsf",
+    },
+    "my": Object {
+      "model": "overwritten",
+    },
+    "myNum": 4201,
+    "myString": "MYREQUIREDNOTRESET",
+  },
+}
+`;
+
+exports[`Cover Form Store: default specified and set in document 1`] = `
+Object {
+  "myNum": null,
+  "myString": "string IS SET to this",
+}
+`;
+
+exports[`Cover Form Store: default specified but overriden by convert 1`] = `
+Object {
+  "myNum": null,
+  "myString": "CONVERTED",
+}
+`;
+
+exports[`Cover Form Store: for findgetformdata dont add undefined fields 1`] = `Object {}`;
+
+exports[`Cover Form Store: no default specified 1`] = `
+Object {
+  "myNum": null,
+  "myString": undefined,
+}
+`;

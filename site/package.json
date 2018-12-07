@@ -1,0 +1,93 @@
+{
+  "name": "site",
+  "version": "0.1.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.prod.ts || true",
+    "static": "npm run build && ./node_modules/.bin/webpack --config ./webpack.config.pre.ts || true && rm recipes tagCol tags || true && node ./webpackDist/prerender.js",
+    "dev": "cross-env ./node_modules/.bin/webpack-dev-server --config ./webpack.config.ts --port 4201 --content-base webpackDist"
+  },
+  "dependencies": {
+    "@xpfw/form-bulma": "^0.1.1",
+    "@xpfw/form-shared": "^0.1.1",
+    "@xpfw/form-web": "^0.1.1",
+    "@xpfw/router": "^0.1.1",
+    "@xpfw/ui-bulma": "^0.1.1",
+    "@xpfw/ui-nedb": "^0.1.1",
+    "@xpfw/ui-shared": "^0.1.1",
+    "@xpfw/validate": "^0.1.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "bulma": "^0.7.2",
+    "localforage": "^1.7.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-icons": "^3.2.2",
+    "react-syntax-highlighter": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/copy-webpack-plugin": "^4.4.2",
+    "@types/extract-text-webpack-plugin": "^3.0.3",
+    "@types/graceful-fs": "^4.1.2",
+    "@types/jest": "^23.3.9",
+    "@types/lodash": "^4.14.118",
+    "@types/node": "^10.12.9",
+    "@types/npm": "^2.0.29",
+    "@types/react": "^16.7.6",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/uglifyjs-webpack-plugin": "^1.1.0",
+    "@types/webpack": "^4.4.19",
+    "@xpfw/test-util": "0.1.1",
+    "@xpfw/ui-tests": "^0.1.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "graceful-fs": "^4.1.15",
+    "jest": "^23.6.0",
+    "node-sass": "^4.10.0",
+    "preact-render-to-json": "^3.6.6",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "ts-jest": "=23.10.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleNameMapper": {
+      "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts",
+      "isofw-node(.*)": "<rootDir>/../isofw-node$1",
+      "isofw-shared(.*)": "<rootDir>/../isofw-shared$1",
+      "isofw-web(.*)": "<rootDir>/../isofw-web$1",
+      "isofw-rn(.*)": "<rootDir>/../isofw-rn$1",
+      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
+      "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared",
+      "@xpfw/ui-shared": "<rootDir>/node_modules/@xpfw/ui-shared",
+      "@xpfw/ui-tests": "<rootDir>/node_modules/@xpfw/ui-tests",
+      "@xpfw/test-util": "<rootDir>/node_modules/@xpfw/test-util"
+    },
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}

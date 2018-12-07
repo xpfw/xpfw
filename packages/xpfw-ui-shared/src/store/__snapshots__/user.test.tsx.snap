@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Store Test: after login 1`] = `
+Object {
+  "authErr": null,
+  "connected": false,
+  "loading": false,
+  "loggedIn": true,
+  "user": Object {
+    "email": "admin",
+    "id": 0,
+  },
+}
+`;
+
+exports[`User Store Test: after login form 1`] = `
+Object {
+  "formData": Object {
+    "email": "admin",
+    "password": "",
+  },
+}
+`;
+
+exports[`User Store Test: after logout 1`] = `
+Object {
+  "authErr": null,
+  "connected": false,
+  "loading": false,
+  "loggedIn": false,
+  "user": null,
+}
+`;
+
+exports[`User Store Test: after logout 2`] = `
+Object {
+  "authErr": null,
+  "connected": false,
+  "loading": false,
+  "loggedIn": false,
+  "user": null,
+}
+`;
+
+exports[`User Store Test: after register 1`] = `
+Object {
+  "authErr": null,
+  "connected": false,
+  "loading": false,
+  "loggedIn": true,
+  "user": Object {
+    "email": "admin",
+    "id": 0,
+  },
+}
+`;
+
+exports[`User Store Test: after register err 1`] = `
+Object {
+  "authErr": [TypeError: Cannot read property 'service' of null],
+  "connected": false,
+  "loading": false,
+  "loggedIn": false,
+  "user": null,
+}
+`;
+
+exports[`User Store Test: after register form 1`] = `
+Object {
+  "formData": Object {
+    "email": "admin",
+    "password": "admin",
+  },
+}
+`;
+
+exports[`User Store Test: after relogin 1`] = `
+Object {
+  "authErr": null,
+  "connected": false,
+  "loading": false,
+  "loggedIn": true,
+  "user": Object {
+    "email": "admin",
+    "id": 0,
+  },
+}
+`;
+
+exports[`User Store Test: after relogin form 1`] = `
+Object {
+  "formData": Object {
+    "email": "admin",
+    "password": "",
+  },
+}
+`;
+
+exports[`User Store Test: before register 1`] = `
+Object {
+  "authErr": null,
+  "connected": false,
+  "loading": false,
+  "loggedIn": false,
+  "user": null,
+}
+`;
+
+exports[`User Store Test: before registerform 1`] = `
+Object {
+  "formData": Object {
+    "email": "admin",
+    "password": "admin",
+  },
+}
+`;
+
+exports[`User Store Test: makeauth 1`] = `[NotAuthenticated: Could not find stored JWT and no authentication strategy was given]`;
+
+exports[`User Store Test: result of registration 1`] = `
+Object {
+  "email": "admin",
+  "id": 0,
+}
+`;

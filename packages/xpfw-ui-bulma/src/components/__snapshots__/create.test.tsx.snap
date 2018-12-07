@@ -1,0 +1,660 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Create Test: Before reset on mount 1`] = `
+Object {
+  "formData": Object {
+    "email": "user",
+    "myNum": 420,
+    "myString": "myText",
+    "password": "",
+  },
+}
+`;
+
+exports[`DbStore Create Test: Before reset on mount 2`] = `
+Object {
+  "formData": Object {
+    "createpref": Object {
+      "myNum": 421,
+      "myString": "SECOND OBJECT",
+    },
+    "email": "user",
+    "myNum": 420,
+    "myString": "myText",
+    "password": "",
+  },
+}
+`;
+
+exports[`DbStore Create Test: after create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "required": Object {
+            "type": 2,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+    value="myText"
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-success"
+  >
+    Successfully created 
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: after login 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "required": Object {
+            "type": 2,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: after purposely set invalid err 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "required": Object {
+            "type": 2,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+    value="myText"
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: after reset on mount 1`] = `
+Object {
+  "formData": Object {
+    "email": "user",
+    "myNum": undefined,
+    "myString": undefined,
+    "password": "",
+  },
+}
+`;
+
+exports[`DbStore Create Test: after reset on mount 2`] = `
+Object {
+  "formData": Object {
+    "createpref": Object {
+      "myNum": 421,
+      "myString": "SECOND OBJECT",
+    },
+    "email": "user",
+    "myNum": undefined,
+    "myString": undefined,
+    "password": "",
+  },
+}
+`;
+
+exports[`DbStore Create Test: before create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "required": Object {
+            "type": 2,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+    value="myText"
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: before login 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "required": Object {
+            "type": 2,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: hidden in create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: hidden text 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: not hidden in create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "hide": Object {
+            "create": false,
+            "find": false,
+            "update": true,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+    value="myText"
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed after create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+    value={421}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-success"
+  >
+    Successfully created 
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed after purposely set invalid err 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+    value={421}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed before create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed hidden in create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+    value={421}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed hidden text 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+    value={421}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed not hidden in create 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "hide": Object {
+            "create": false,
+            "find": false,
+            "update": true,
+          },
+        },
+      }
+    }
+    key="myString"
+    prefix="createpref"
+    setValue={[Function]}
+    value="SECOND OBJECT"
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+    value={421}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-danger"
+  >
+    Error please recheck your inputs or connection {"errors":["a","b"]}
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed while loading 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    prefix="createpref"
+    setValue={[Function]}
+    value={421}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-success"
+  >
+    Successfully created 
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: resetOnMount = true 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: resetOnMount = true 2`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: while loading 1`] = `
+<div>
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myString",
+        "type": 2,
+        "validate": Object {
+          "required": Object {
+            "type": 2,
+          },
+        },
+      }
+    }
+    key="myString"
+    setValue={[Function]}
+    value="myText"
+  />
+  <UNDEFINED
+    field={
+      Object {
+        "mapTo": "myNum",
+        "type": 3,
+        "validate": Object {},
+      }
+    }
+    key="myNum"
+    setValue={[Function]}
+    value={420}
+  />
+  <a
+    class="button is-primary"
+    onClick={[Function]}
+  >
+    Create
+  </a>
+  <div
+    class="notification is-success"
+  >
+    Successfully created 
+  </div>
+</div>
+`;

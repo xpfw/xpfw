@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify sum caluclation: configless mean of mockData 1`] = `
+Object {
+  "01.04": 1,
+  "02.04": 1,
+  "03.04": 1,
+  "14.03": 1,
+  "15.03": 1,
+  "16.03": 1,
+  "17.03": 1,
+  "18.03": 1,
+  "19.03": 1,
+  "20.03": 1,
+  "21.03": 1,
+  "22.03": 1,
+  "23.03": 1,
+  "24.03": 1,
+  "25.03": 1,
+  "26.03": 1,
+  "27.03": 1,
+  "28.03": 1,
+  "29.03": 1,
+  "30.03": 1,
+  "31.03": 1,
+}
+`;
+
+exports[`verify sum caluclation: using itempath myNum of mockData 1`] = `
+Object {
+  "01.04": 154,
+  "02.04": 158,
+  "03.04": 162,
+  "14.03": 42,
+  "15.03": 38,
+  "16.03": 34,
+  "17.03": 30,
+  "18.03": 26,
+  "19.03": 22,
+  "20.03": 18,
+  "21.03": 14,
+  "22.03": 10,
+  "23.03": 6,
+  "24.03": 2,
+  "25.03": 126,
+  "26.03": 130,
+  "27.03": 134,
+  "28.03": 138,
+  "29.03": 142,
+  "30.03": 146,
+  "31.03": 150,
+}
+`;
+
+exports[`verify sum caluclation: using itempath myNum of mockData with monthlist 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 770,
+  "03.1978": 2118,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify sum caluclation: using itempath myNum of mockData with yearlist 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 7200,
+}
+`;

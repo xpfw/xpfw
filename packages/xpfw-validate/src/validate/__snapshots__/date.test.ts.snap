@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Full Coverage for validate/checkbox Form Validation: Invalid type 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": undefined,
+}
+`;
+
+exports[`Full Coverage for validate/checkbox Form Validation: Required and not ok because 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 4,
+    },
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": undefined,
+}
+`;
+
+exports[`Full Coverage for validate/checkbox Form Validation: Required and ok 1`] = `0280-03-04T23:06:32.000Z`;
+
+exports[`Full Coverage for validate/checkbox Form Validation: Required and ok because was parsable 1`] = `4202-11-20T23:00:00.000Z`;
+
+exports[`Full Coverage for validate/checkbox Form Validation: Required but invalid 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 4,
+    },
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": undefined,
+}
+`;

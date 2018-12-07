@@ -1,0 +1,655 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List filter Test: getformdat 1`] = `
+Object {
+  "myNum": undefined,
+  "myString": undefined,
+}
+`;
+
+exports[`List filter Test: result of initial search 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "id": 0,
+      "myNum": 0,
+      "myString": "0*0",
+    },
+    Object {
+      "id": 1,
+      "myNum": 1,
+      "myString": "1*1",
+    },
+    Object {
+      "id": 2,
+      "myNum": 2,
+      "myString": "2*2",
+    },
+    Object {
+      "id": 3,
+      "myNum": 3,
+      "myString": "3*3",
+    },
+    Object {
+      "id": 4,
+      "myNum": 4,
+      "myString": "4*4",
+    },
+    Object {
+      "id": 5,
+      "myNum": 5,
+      "myString": "5*5",
+    },
+    Object {
+      "id": 6,
+      "myNum": 6,
+      "myString": "6*6",
+    },
+    Object {
+      "id": 7,
+      "myNum": 7,
+      "myString": "7*7",
+    },
+    Object {
+      "id": 8,
+      "myNum": 8,
+      "myString": "8*8",
+    },
+    Object {
+      "id": 9,
+      "myNum": 9,
+      "myString": "9*9",
+    },
+  ],
+  "skip": 0,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of initial search 2`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 40,
+      "myNum": 40,
+      "myString": "40*40",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 41,
+      "myNum": 41,
+      "myString": "41*41",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 42,
+      "myNum": 42,
+      "myString": "42*42",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 43,
+      "myNum": 43,
+      "myString": "43*43",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 44,
+      "myNum": 44,
+      "myString": "44*44",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 45,
+      "myNum": 45,
+      "myString": "45*45",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 46,
+      "myNum": 46,
+      "myString": "46*46",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 47,
+      "myNum": 47,
+      "myString": "47*47",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 48,
+      "myNum": 48,
+      "myString": "48*48",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 49,
+      "myNum": 49,
+      "myString": "49*49",
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 40,
+      "myNum": 16800,
+      "ownedBy": 40,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 41,
+      "myNum": 17220,
+      "ownedBy": 41,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 42,
+      "myNum": 17640,
+      "ownedBy": 42,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 43,
+      "myNum": 18060,
+      "ownedBy": 43,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 44,
+      "myNum": 18480,
+      "ownedBy": 44,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 45,
+      "myNum": 18900,
+      "ownedBy": 45,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 46,
+      "myNum": 19320,
+      "ownedBy": 46,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 47,
+      "myNum": 19740,
+      "ownedBy": 47,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 48,
+      "myNum": 20160,
+      "ownedBy": 48,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 49,
+      "myNum": 20580,
+      "ownedBy": 49,
+    },
+  ],
+  "skip": 40,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of search with number 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "id": 240,
+      "myNum": 240,
+      "myString": "240*240",
+    },
+  ],
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with ownedBy 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 6,
+      "myNum": 2520,
+      "ownedBy": 6,
+    },
+  ],
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with specifc number 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 420,
+      "myNum": 420,
+      "myString": "420*420",
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 1,
+      "myNum": 420,
+      "ownedBy": 1,
+    },
+  ],
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with text 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "id": 4,
+      "myNum": 4,
+      "myString": "4*4",
+    },
+  ],
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with text 2`] = `
+Object {
+  "limit": 10,
+  "result": Array [],
+  "skip": 0,
+  "total": 0,
+}
+`;
+
+exports[`List filter Test: result of searching in higher page 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "id": 40,
+      "myNum": 40,
+      "myString": "40*40",
+    },
+    Object {
+      "id": 41,
+      "myNum": 41,
+      "myString": "41*41",
+    },
+    Object {
+      "id": 42,
+      "myNum": 42,
+      "myString": "42*42",
+    },
+    Object {
+      "id": 43,
+      "myNum": 43,
+      "myString": "43*43",
+    },
+    Object {
+      "id": 44,
+      "myNum": 44,
+      "myString": "44*44",
+    },
+    Object {
+      "id": 45,
+      "myNum": 45,
+      "myString": "45*45",
+    },
+    Object {
+      "id": 46,
+      "myNum": 46,
+      "myString": "46*46",
+    },
+    Object {
+      "id": 47,
+      "myNum": 47,
+      "myString": "47*47",
+    },
+    Object {
+      "id": 48,
+      "myNum": 48,
+      "myString": "48*48",
+    },
+    Object {
+      "id": 49,
+      "myNum": 49,
+      "myString": "49*49",
+    },
+  ],
+  "skip": 40,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of searching in higher page 2`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 40,
+      "myNum": 40,
+      "myString": "40*40",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 41,
+      "myNum": 41,
+      "myString": "41*41",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 42,
+      "myNum": 42,
+      "myString": "42*42",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 43,
+      "myNum": 43,
+      "myString": "43*43",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 44,
+      "myNum": 44,
+      "myString": "44*44",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 45,
+      "myNum": 45,
+      "myString": "45*45",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 46,
+      "myNum": 46,
+      "myString": "46*46",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 47,
+      "myNum": 47,
+      "myString": "47*47",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 48,
+      "myNum": 48,
+      "myString": "48*48",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 49,
+      "myNum": 49,
+      "myString": "49*49",
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 40,
+      "myNum": 16800,
+      "ownedBy": 40,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 41,
+      "myNum": 17220,
+      "ownedBy": 41,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 42,
+      "myNum": 17640,
+      "ownedBy": 42,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 43,
+      "myNum": 18060,
+      "ownedBy": 43,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 44,
+      "myNum": 18480,
+      "ownedBy": 44,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 45,
+      "myNum": 18900,
+      "ownedBy": 45,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 46,
+      "myNum": 19320,
+      "ownedBy": 46,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 47,
+      "myNum": 19740,
+      "ownedBy": 47,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 48,
+      "myNum": 20160,
+      "ownedBy": 48,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 49,
+      "myNum": 20580,
+      "ownedBy": 49,
+    },
+  ],
+  "skip": 40,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of searching too far 1`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "id": 440,
+      "myNum": 440,
+      "myString": "440*440",
+    },
+    Object {
+      "id": 441,
+      "myNum": 441,
+      "myString": "441*441",
+    },
+    Object {
+      "id": 442,
+      "myNum": 442,
+      "myString": "442*442",
+    },
+    Object {
+      "id": 443,
+      "myNum": 443,
+      "myString": "443*443",
+    },
+    Object {
+      "id": 444,
+      "myNum": 444,
+      "myString": "444*444",
+    },
+    Object {
+      "id": 445,
+      "myNum": 445,
+      "myString": "445*445",
+    },
+    Object {
+      "id": 446,
+      "myNum": 446,
+      "myString": "446*446",
+    },
+    Object {
+      "id": 447,
+      "myNum": 447,
+      "myString": "447*447",
+    },
+    Object {
+      "id": 448,
+      "myNum": 448,
+      "myString": "448*448",
+    },
+    Object {
+      "id": 449,
+      "myNum": 449,
+      "myString": "449*449",
+    },
+  ],
+  "skip": 440,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of searching too far 2`] = `
+Object {
+  "limit": 10,
+  "result": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 440,
+      "myNum": 440,
+      "myString": "440*440",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 441,
+      "myNum": 441,
+      "myString": "441*441",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 442,
+      "myNum": 442,
+      "myString": "442*442",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 443,
+      "myNum": 443,
+      "myString": "443*443",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 444,
+      "myNum": 444,
+      "myString": "444*444",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 445,
+      "myNum": 445,
+      "myString": "445*445",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 446,
+      "myNum": 446,
+      "myString": "446*446",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 447,
+      "myNum": 447,
+      "myString": "447*447",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 448,
+      "myNum": 448,
+      "myString": "448*448",
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "id": 449,
+      "myNum": 449,
+      "myString": "449*449",
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 440,
+      "myNum": 184800,
+      "ownedBy": 440,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 441,
+      "myNum": 185220,
+      "ownedBy": 441,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 442,
+      "myNum": 185640,
+      "ownedBy": 442,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 443,
+      "myNum": 186060,
+      "ownedBy": 443,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 444,
+      "myNum": 186480,
+      "ownedBy": 444,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 445,
+      "myNum": 186900,
+      "ownedBy": 445,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 446,
+      "myNum": 187320,
+      "ownedBy": 446,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 447,
+      "myNum": 187740,
+      "ownedBy": 447,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 448,
+      "myNum": 188160,
+      "ownedBy": 448,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 449,
+      "myNum": 188580,
+      "ownedBy": 449,
+    },
+  ],
+  "skip": 440,
+  "total": 450,
+}
+`;

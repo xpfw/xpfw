@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify timeStep caluclation: avgPrevTimeDistance using itempath createdAt of mockData 1`] = `
+Object {
+  "01.04": 0,
+  "02.04": 0,
+  "03.04": 0,
+  "14.03": 0,
+  "15.03": 0,
+  "16.03": 0,
+  "17.03": 0,
+  "18.03": 0,
+  "19.03": 0,
+  "20.03": 0,
+  "21.03": 0,
+  "22.03": 0,
+  "23.03": 0,
+  "24.03": 0,
+  "25.03": 0,
+  "26.03": 0,
+  "27.03": 0,
+  "28.03": 0,
+  "29.03": 0,
+  "30.03": 0,
+  "31.03": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: avgPrevTimeDistance using itempath createdAt of mockData and months 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 86400000,
+  "03.1978": 103680000,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: avgPrevTimeDistance using itempath createdAt of mockData and years 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 127403389.83050847,
+}
+`;
+
+exports[`verify timeStep caluclation: avgTimeDistance using itempath createdAt of mockData 1`] = `
+Object {
+  "01.04": 3974400000,
+  "02.04": 4147200000,
+  "03.04": 4320000000,
+  "14.03": 864000000,
+  "15.03": 1036800000,
+  "16.03": 1209600000,
+  "17.03": 1382400000,
+  "18.03": 1555200000,
+  "19.03": 1728000000,
+  "20.03": 1900800000,
+  "21.03": 2073600000,
+  "22.03": 2246400000,
+  "23.03": 2419200000,
+  "24.03": 2592000000,
+  "25.03": 2764800000,
+  "26.03": 2937600000,
+  "27.03": 3110400000,
+  "28.03": 3283200000,
+  "29.03": 3456000000,
+  "30.03": 3628800000,
+  "31.03": 3801600000,
+}
+`;
+
+exports[`verify timeStep caluclation: avgTimeDistance using itempath createdAt of mockData and months 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 2073600000,
+  "03.1978": 1610941935.483871,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: avgTimeDistance using itempath createdAt of mockData and years 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 3196800000,
+}
+`;
+
+exports[`verify timeStep caluclation: configless sum 1`] = `
+Object {
+  "01.04": 1,
+  "02.04": 1,
+  "03.04": 1,
+  "14.03": 1,
+  "15.03": 1,
+  "16.03": 1,
+  "17.03": 1,
+  "18.03": 1,
+  "19.03": 1,
+  "20.03": 1,
+  "21.03": 1,
+  "22.03": 1,
+  "23.03": 1,
+  "24.03": 1,
+  "25.03": 1,
+  "26.03": 1,
+  "27.03": 1,
+  "28.03": 1,
+  "29.03": 1,
+  "30.03": 1,
+  "31.03": 1,
+}
+`;
+
+exports[`verify timeStep caluclation: mean using itempath myNum of mockData 1`] = `
+Object {
+  "01.04": 154,
+  "02.04": 158,
+  "03.04": 162,
+  "14.03": 42,
+  "15.03": 38,
+  "16.03": 34,
+  "17.03": 30,
+  "18.03": 26,
+  "19.03": 22,
+  "20.03": 18,
+  "21.03": 14,
+  "22.03": 10,
+  "23.03": 6,
+  "24.03": 2,
+  "25.03": 126,
+  "26.03": 130,
+  "27.03": 134,
+  "28.03": 138,
+  "29.03": 142,
+  "30.03": 146,
+  "31.03": 150,
+}
+`;
+
+exports[`verify timeStep caluclation: mean using itempath myNum of mockData and months 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 110,
+  "03.1978": 68.3225806451613,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: mean using itempath myNum of mockData and years 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 120,
+}
+`;
+
+exports[`verify timeStep caluclation: sum using itempath myNum of mockData 1`] = `
+Object {
+  "01.04": 154,
+  "02.04": 158,
+  "03.04": 162,
+  "14.03": 42,
+  "15.03": 38,
+  "16.03": 34,
+  "17.03": 30,
+  "18.03": 26,
+  "19.03": 22,
+  "20.03": 18,
+  "21.03": 14,
+  "22.03": 10,
+  "23.03": 6,
+  "24.03": 2,
+  "25.03": 126,
+  "26.03": 130,
+  "27.03": 134,
+  "28.03": 138,
+  "29.03": 142,
+  "30.03": 146,
+  "31.03": 150,
+}
+`;
+
+exports[`verify timeStep caluclation: sum using itempath myNum of mockData and months 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 770,
+  "03.1978": 2118,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: sum using itempath myNum of mockData and years 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 7200,
+}
+`;
+
+exports[`verify timeStep caluclation: sumPrevTimeDistance using itempath createdAt of mockData 1`] = `
+Object {
+  "01.04": 0,
+  "02.04": 0,
+  "03.04": 0,
+  "14.03": 0,
+  "15.03": 0,
+  "16.03": 0,
+  "17.03": 0,
+  "18.03": 0,
+  "19.03": 0,
+  "20.03": 0,
+  "21.03": 0,
+  "22.03": 0,
+  "23.03": 0,
+  "24.03": 0,
+  "25.03": 0,
+  "26.03": 0,
+  "27.03": 0,
+  "28.03": 0,
+  "29.03": 0,
+  "30.03": 0,
+  "31.03": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: sumPrevTimeDistance using itempath createdAt of mockData and months 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 518400000,
+  "03.1978": 3110400000,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: sumPrevTimeDistance using itempath createdAt of mockData and years 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 7516800000,
+}
+`;
+
+exports[`verify timeStep caluclation: sumTimeDistance using itempath createdAt of mockData 1`] = `
+Object {
+  "01.04": 3974400000,
+  "02.04": 4147200000,
+  "03.04": 4320000000,
+  "14.03": 864000000,
+  "15.03": 1036800000,
+  "16.03": 1209600000,
+  "17.03": 1382400000,
+  "18.03": 1555200000,
+  "19.03": 1728000000,
+  "20.03": 1900800000,
+  "21.03": 2073600000,
+  "22.03": 2246400000,
+  "23.03": 2419200000,
+  "24.03": 2592000000,
+  "25.03": 2764800000,
+  "26.03": 2937600000,
+  "27.03": 3110400000,
+  "28.03": 3283200000,
+  "29.03": 3456000000,
+  "30.03": 3628800000,
+  "31.03": 3801600000,
+}
+`;
+
+exports[`verify timeStep caluclation: sumTimeDistance using itempath createdAt of mockData and months 1`] = `
+Object {
+  "01.1978": 0,
+  "02.1978": 14515200000,
+  "03.1978": 49939200000,
+  "12.1977": 0,
+}
+`;
+
+exports[`verify timeStep caluclation: sumTimeDistance using itempath createdAt of mockData and years 1`] = `
+Object {
+  "1975": 0,
+  "1976": 0,
+  "1977": 0,
+  "1978": 191808000000,
+}
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Patch Test: createresult 1`] = `
+Object {
+  "result": Object {
+    "id": 0,
+    "myNum": 420,
+    "myString": "myText",
+  },
+}
+`;
+
+exports[`DbStore Patch Test: getresult 1`] = `
+Object {
+  "result": Object {
+    "id": 0,
+    "myNum": 123,
+    "myString": "changedText",
+  },
+}
+`;
+
+exports[`DbStore Patch Test: patchresult 1`] = `
+Object {
+  "result": Object {
+    "id": 0,
+    "myNum": 123,
+    "myString": "changedText",
+  },
+}
+`;

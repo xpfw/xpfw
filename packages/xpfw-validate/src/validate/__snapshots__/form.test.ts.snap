@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Verify validateForm: Error validating empty object 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "errors": Array [
+        Object {
+          "type": 4,
+        },
+      ],
+      "mapTo": "myString",
+    },
+  ],
+  "model": "formModel",
+}
+`;
+
+exports[`Verify validateForm: Error validating invalid object 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "errors": Array [
+        Object {
+          "type": 3,
+        },
+      ],
+      "mapTo": "myString",
+    },
+    Object {
+      "errors": Array [
+        Object {
+          "type": 3,
+        },
+      ],
+      "mapTo": "myNum",
+    },
+  ],
+  "model": "formModel",
+}
+`;
+
+exports[`Verify validateForm: Validated Object successfully and stripped empty but because update is error 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "model": "none",
+      "type": 7,
+    },
+  ],
+  "model": "formModel",
+}
+`;
+
+exports[`Verify validateForm: Validated Object successfully and stripped unknown keys 1`] = `
+Object {
+  "myNum": 5,
+  "myString": "gfsd",
+}
+`;
+
+exports[`Verify validateForm: called without any args 1`] = `Object {}`;

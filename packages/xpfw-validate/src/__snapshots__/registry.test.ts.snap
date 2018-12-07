@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`registerform: after registering form 1`] = `
+ValidationRegistry {
+  "fields": Object {
+    "myNum": Object {
+      "mapTo": "myNum",
+      "type": 3,
+      "validate": Object {},
+    },
+    "myString": Object {
+      "mapTo": "myString",
+      "type": 2,
+      "validate": Object {
+        "required": Object {
+          "type": 2,
+        },
+      },
+    },
+  },
+  "forms": Object {
+    "formModel": Object {
+      "collection": "myCOLL",
+      "model": "formModel",
+      "sections": Array [
+        Object {
+          "fields": Array [
+            Object {
+              "mapTo": "myString",
+              "type": 2,
+              "validate": Object {
+                "required": Object {
+                  "type": 2,
+                },
+              },
+            },
+          ],
+        },
+        Object {
+          "fields": Array [
+            Object {
+              "mapTo": "myNum",
+              "type": 3,
+              "validate": Object {},
+            },
+          ],
+        },
+      ],
+    },
+    "myCOLL": Object {
+      "collection": "myCOLL",
+      "model": "formModel",
+      "sections": Array [
+        Object {
+          "fields": Array [
+            Object {
+              "mapTo": "myString",
+              "type": 2,
+              "validate": Object {
+                "required": Object {
+                  "type": 2,
+                },
+              },
+            },
+          ],
+        },
+        Object {
+          "fields": Array [
+            Object {
+              "mapTo": "myNum",
+              "type": 3,
+              "validate": Object {},
+            },
+          ],
+        },
+      ],
+    },
+  },
+  "validators": Object {},
+}
+`;
+
+exports[`registerform: before anything 1`] = `
+ValidationRegistry {
+  "fields": Object {},
+  "forms": Object {},
+  "validators": Object {},
+}
+`;

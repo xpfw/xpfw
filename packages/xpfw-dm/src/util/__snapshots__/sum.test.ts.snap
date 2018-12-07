@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify sum caluclation: configless mean of mockData 1`] = `30`;
+
+exports[`verify sum caluclation: using itempath myNum of mockData 1`] = `3173`;

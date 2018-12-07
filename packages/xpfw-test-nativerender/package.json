@@ -1,0 +1,54 @@
+{
+  "name": "@xpfw/test-nativerender",
+  "version": "0.1.1",
+  "main": "dist",
+  "typings": "dist",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@types/jest": "^23.3.9",
+    "@types/react": "^16.7.6",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "react": "^16.6.3",
+    "react-test-renderer": "^16.6.3",
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "ts-jest": "=23.10.4",
+    "tslib": "^1.9.3",
+    "typescript": "^3.1.6",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleNameMapper": {},
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

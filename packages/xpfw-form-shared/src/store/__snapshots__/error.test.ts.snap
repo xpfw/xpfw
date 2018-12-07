@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cover Form Store: Initial State 1`] = `
+Object {
+  "errors": Object {},
+}
+`;
+
+exports[`Cover Form Store: Set Error 1`] = `
+Object {
+  "errors": Object {
+    "errpath": Object {
+      "my": "error",
+    },
+  },
+}
+`;

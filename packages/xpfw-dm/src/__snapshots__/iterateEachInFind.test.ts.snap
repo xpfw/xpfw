@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect iterateEachInFind behaves as expected: result of iterate 1`] = `
+Array [
+  Object {
+    "item": Object {
+      "a": "b",
+      "fromCollection": "bla",
+    },
+    "sort": 0,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "q": "b",
+    },
+    "sort": 1,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "h": "b",
+    },
+    "sort": 2,
+  },
+  Object {
+    "item": Object {
+      "e": "b",
+      "fromCollection": "bla",
+    },
+    "sort": 3,
+  },
+  Object {
+    "item": Object {
+      "a": "c",
+      "fromCollection": "bla",
+    },
+    "sort": 4,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "jh": "we",
+    },
+    "sort": 5,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "ju": "3",
+    },
+    "sort": 6,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "k": "4",
+    },
+    "sort": 7,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "l": "ö",
+    },
+    "sort": 8,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "r": "e",
+    },
+    "sort": 9,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "jh": "we",
+    },
+    "sort": 10,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "ju": "3",
+    },
+    "sort": 11,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "k": "4",
+    },
+    "sort": 12,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "l": "ö",
+    },
+    "sort": 13,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "r": "e",
+    },
+    "sort": 14,
+  },
+]
+`;
+
+exports[`Expect iterateEachInFind behaves as expected: result of no faulty find iteration 1`] = `Array []`;
+
+exports[`Expect iterateEachInFind behaves as expected: result of no query iteration 1`] = `
+Array [
+  Object {
+    "item": Object {
+      "a": "b",
+      "fromCollection": "bla",
+    },
+    "sort": 15,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "q": "b",
+    },
+    "sort": 16,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "h": "b",
+    },
+    "sort": 17,
+  },
+  Object {
+    "item": Object {
+      "e": "b",
+      "fromCollection": "bla",
+    },
+    "sort": 18,
+  },
+  Object {
+    "item": Object {
+      "a": "c",
+      "fromCollection": "bla",
+    },
+    "sort": 19,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "jh": "we",
+    },
+    "sort": 20,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "ju": "3",
+    },
+    "sort": 21,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "k": "4",
+    },
+    "sort": 22,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "l": "ö",
+    },
+    "sort": 23,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "r": "e",
+    },
+    "sort": 24,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "jh": "we",
+    },
+    "sort": 25,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "ju": "3",
+    },
+    "sort": 26,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "k": "4",
+    },
+    "sort": 27,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "l": "ö",
+    },
+    "sort": 28,
+  },
+  Object {
+    "item": Object {
+      "fromCollection": "bla",
+      "r": "e",
+    },
+    "sort": 29,
+  },
+]
+`;

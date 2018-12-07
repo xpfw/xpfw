@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Boolean Field Test: boolfield 1`] = `
+<div
+  class="field"
+>
+  <div
+    class="control"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        onChange={[Function]}
+        type="checkbox"
+      />
+      valOfBool
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Boolean Field Test: set to false 1`] = `
+<div
+  class="field"
+>
+  <div
+    class="control"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      valOfBool
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Boolean Field Test: set to invalid 1`] = `
+<div
+  class="field"
+>
+  <div
+    class="control"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        checked="invalid"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      valOfBool
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Boolean Field Test: set to true 1`] = `
+<div
+  class="field"
+>
+  <div
+    class="control"
+  >
+    <label
+      class="checkbox"
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      valOfBool
+    </label>
+  </div>
+</div>
+`;

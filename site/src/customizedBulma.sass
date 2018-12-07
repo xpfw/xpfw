@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+
+// Set your brand colors
+$purple: #673ab7;
+$pink: #e91e63;
+$brown: #795548;
+$beige-light: #4db6ac;
+$beige-lighter: #80cbc4;
+
+// Update Bulma's global variables
+$primary: #2196f3;
+$link: #3f51b5;
+$link-invert: white;
+$info: #64b5f6;
+$info-dark: #1976d2;
+// TODO
+$success: #64dd17;
+$warning: #fdd835;
+$danger: #e53935;
+
+$standardTransparency: 0.2;
+$transparentPrimary: rgba($primary, $standardTransparency);
+$transparentInfo: rgba($info, $standardTransparency);
+
+$pagination-current-background-color: rgba($info, 0.3);
+$pagination-current-border-color: rgba($info, 0.3);
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/pagination.sass";
+@import "../node_modules/bulma/sass/elements/tag.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/notification.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "./customStyles.sass";

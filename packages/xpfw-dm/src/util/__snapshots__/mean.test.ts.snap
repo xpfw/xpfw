@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify mean caluclation: configless mean of mockData 1`] = `30`;
+
+exports[`verify mean caluclation: using itempath myNum of mockData 1`] = `105.76666666666667`;

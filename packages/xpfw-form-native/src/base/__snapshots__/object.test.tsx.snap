@@ -1,0 +1,720 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Object Field Test: locationField 1`] = `
+<View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.myNum
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.myNum",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View />
+  </View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.my.nested.number
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.my.nested.number",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View />
+  </View>
+</View>
+`;
+
+exports[`Object Field Test: set to invalid 1`] = `
+<View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.myNum
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.myNum",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="invalid"
+      />
+    </View>
+    <View />
+  </View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.my.nested.number
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.my.nested.number",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View />
+  </View>
+</View>
+`;
+
+exports[`Object Field Test: set to otherValidLocation 1`] = `
+<View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.myNum
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.myNum",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value={767}
+      />
+    </View>
+    <View />
+  </View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.my.nested.number
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.my.nested.number",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View />
+  </View>
+</View>
+`;
+
+exports[`Object Field Test: set to validLocation 1`] = `
+<View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.myNum
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.myNum",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value={41}
+      />
+    </View>
+    <View />
+  </View>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "#86939e",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "marginBottom": 1,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 15,
+              },
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      >
+        myObj.my.nested.number
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#bdc6cf",
+          "borderBottomWidth": 1,
+          "marginLeft": 20,
+          "marginRight": 20,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        field={
+          Object {
+            "mapTo": "myObj.my.nested.number",
+            "type": 3,
+            "validate": Object {},
+          }
+        }
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        secureTextEntry={false}
+        setValue={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#86939e",
+              "minHeight": 36,
+              "width": 750,
+            },
+            Object {
+              "fontSize": 17.5,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View />
+  </View>
+</View>
+`;

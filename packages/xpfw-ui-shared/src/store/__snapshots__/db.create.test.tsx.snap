@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Create Test: After calling create 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "result": Object {
+        "belongsTo": "myuserid",
+        "createdAt": "1904-02-28T23:00:00.000Z",
+        "id": 0,
+        "myNum": 420,
+        "myString": "myText",
+      },
+    },
+  },
+  "getState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Create Test: Before calling create 1`] = `
+Object {
+  "createState": Object {},
+  "getState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Create Test: getresult 1`] = `
+Object {
+  "result": Object {
+    "belongsTo": "myuserid",
+    "createdAt": "1904-02-28T23:00:00.000Z",
+    "id": 0,
+    "myNum": 420,
+    "myString": "myText",
+  },
+}
+`;

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Create Test: Successfully removed 1`] = `
+<div>
+  <a
+    class="button is-success"
+  >
+    Deleted
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: While removing 1`] = `
+<div>
+  <a
+    class="button is-info"
+  >
+    Loading...
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: after login 1`] = `
+<div>
+  <a
+    class="button is-warning"
+    onClick={[Function]}
+  >
+    Delete
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: before login 1`] = `
+<div>
+  <a
+    class="button is-warning"
+    onClick={[Function]}
+  >
+    Delete
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: error for not exisiting anymore 1`] = `[NotFound: No record found for id '0']`;
+
+exports[`DbStore Create Test: fetch existing resource 1`] = `
+Object {
+  "id": 0,
+  "myNum": 420,
+  "myString": "myText",
+}
+`;
+
+exports[`DbStore Create Test: remove render 1`] = `
+<div>
+  <a
+    class="button is-warning"
+    onClick={[Function]}
+  >
+    Delete
+  </a>
+</div>
+`;
+
+exports[`DbStore Create Test: remove result 1`] = `
+Object {
+  "result": Object {
+    "id": 0,
+    "myNum": 420,
+    "myString": "myText",
+  },
+}
+`;

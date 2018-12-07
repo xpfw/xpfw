@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify sum caluclation: configless mean of mockData 1`] = `7516800000`;

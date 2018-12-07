@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Full Coverage for validate/number Form Validation: Invalid type 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 4,
+    },
+  ],
+  "mapTo": "myLocationField",
+}
+`;
+
+exports[`Full Coverage for validate/number Form Validation: invalid type and required 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 4,
+    },
+  ],
+  "mapTo": "myLocationField",
+}
+`;
+
+exports[`Full Coverage for validate/number Form Validation: wrong array contents 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": "myLocationField",
+}
+`;

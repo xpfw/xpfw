@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Store Test: after invalid login 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": null,
+  "loggedIn": false,
+  "error": {
+    "name": "BadRequest",
+    "message": "Missing credentials",
+    "code": 400,
+    "className": "bad-request",
+    "data": {
+      "message": "Missing credentials"
+    },
+    "errors": {}
+  },
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: after logout 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": null,
+  "loggedIn": false,
+  "error": null,
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: after logout 2`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": null,
+  "loggedIn": false,
+  "error": null,
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: after register 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": {
+    "email": "admin",
+    "id": 0
+  },
+  "loggedIn": true,
+  "error": null,
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: after register err 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": null,
+  "loggedIn": false,
+  "error": {},
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: after relogin 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": {
+    "email": "admin",
+    "id": 0
+  },
+  "loggedIn": true,
+  "error": null,
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: before register 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": null,
+  "loggedIn": false,
+  "error": null,
+  "connected": false
+}
+</div>
+`;
+
+exports[`User Store Test: result of register and lgoin at once 1`] = `
+Object {
+  "email": "admin",
+  "id": 0,
+}
+`;

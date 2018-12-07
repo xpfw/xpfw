@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Full Coverage for validate/object Form Validation: Correctly Validated deeply nested object 1`] = `
+Object {
+  "nested": Object {
+    "second": 5423,
+  },
+  "second": 5423,
+  "waddup": "bra",
+}
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Required  1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": undefined,
+}
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Validated array with varying nestings 1`] = `
+Array [
+  Object {
+    "second": 773,
+    "waddup": "cool",
+  },
+  Object {
+    "nested": Object {
+      "waddup": "gasd",
+    },
+  },
+  Object {
+    "nested": Object {
+      "second": 672,
+    },
+  },
+]
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Validated array with varying nestings and fault 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": "second",
+}
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Validated deeply nested object 1`] = `
+Object {
+  "nested": Object {
+    "second": 6243,
+    "waddup": "ghfsd",
+  },
+  "second": 5423,
+  "waddup": "bra",
+}
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Validated deeply nested object with fault 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": "second",
+}
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Validated faulty object 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+  ],
+  "mapTo": "waddup",
+}
+`;
+
+exports[`Full Coverage for validate/object Form Validation: Validated valid object 1`] = `
+Object {
+  "waddup": "bra",
+}
+`;

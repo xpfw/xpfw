@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nedb adapter behaves as expected: after creation get operation works correctly 0 1`] = `
+Object {
+  "_id": "#1",
+  "bla": "blubb",
+  "hey": 3,
+}
+`;
+
+exports[`nedb adapter behaves as expected: after creation get operation works correctly 1 1`] = `
+Object {
+  "_id": "#2",
+  "blu": 5,
+  "schwap": "didap",
+}
+`;
+
+exports[`nedb adapter behaves as expected: after creation get operation works correctly 2 1`] = `
+Object {
+  "_id": "#3",
+  "dabs": 1,
+  "yo": "420",
+}
+`;
+
+exports[`nedb adapter behaves as expected: after removal and update other entries pertain 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "_id": "#1",
+      "bla": "blubb",
+      "fun": 6,
+      "hey": 3,
+    },
+    Object {
+      "_id": "#2",
+      "blu": 5,
+      "schwap": "didap",
+    },
+  ],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 2,
+}
+`;
+
+exports[`nedb adapter behaves as expected: after removal single element cant be found 1`] = `
+Object {
+  "data": Array [],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 0,
+}
+`;
+
+exports[`nedb adapter behaves as expected: after update element can be found by new property 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "_id": "#1",
+      "bla": "blubb",
+      "fun": 6,
+      "hey": 3,
+    },
+  ],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 1,
+}
+`;
+
+exports[`nedb adapter behaves as expected: before creation get operation returns nothing 0 1`] = `null`;
+
+exports[`nedb adapter behaves as expected: before creation get operation returns nothing 1 1`] = `null`;
+
+exports[`nedb adapter behaves as expected: before creation get operation returns nothing 2 1`] = `null`;
+
+exports[`nedb adapter behaves as expected: before update element can't be found 1`] = `
+Object {
+  "data": Array [],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 0,
+}
+`;
+
+exports[`nedb adapter behaves as expected: creation result of 0 1`] = `
+Object {
+  "_id": "#1",
+  "bla": "blubb",
+  "hey": 3,
+}
+`;
+
+exports[`nedb adapter behaves as expected: creation result of 1 1`] = `
+Object {
+  "_id": "#2",
+  "blu": 5,
+  "schwap": "didap",
+}
+`;
+
+exports[`nedb adapter behaves as expected: creation result of 2 1`] = `
+Object {
+  "_id": "#3",
+  "dabs": 1,
+  "yo": "420",
+}
+`;
+
+exports[`nedb adapter behaves as expected: empty search result because nothing yet created 1`] = `
+Object {
+  "data": Array [],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 0,
+}
+`;
+
+exports[`nedb adapter behaves as expected: find filter works 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "_id": "#3",
+      "dabs": 1,
+      "yo": "420",
+    },
+  ],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 1,
+}
+`;
+
+exports[`nedb adapter behaves as expected: find should now have entries 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "_id": "#1",
+      "bla": "blubb",
+      "hey": 3,
+    },
+    Object {
+      "_id": "#2",
+      "blu": 5,
+      "schwap": "didap",
+    },
+    Object {
+      "_id": "#3",
+      "dabs": 1,
+      "yo": "420",
+    },
+  ],
+  "limit": undefined,
+  "skip": undefined,
+  "total": 3,
+}
+`;
+
+exports[`nedb adapter behaves as expected: result of removal 1`] = `1`;
+
+exports[`nedb adapter behaves as expected: result of update 1`] = `1`;

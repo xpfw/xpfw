@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should be required test: No args means not required 1`] = `false`;
+
+exports[`Should be required test: Required ifNotSet with empty object true 1`] = `true`;
+
+exports[`Should be required test: Required ifNotSet with object and field set false 1`] = `true`;
+
+exports[`Should be required test: Required ifNotSet with object but field not set true 1`] = `true`;
+
+exports[`Should be required test: Required ifSetToValue with empty object 1`] = `false`;
+
+exports[`Should be required test: Required ifSetToValue with field set to correct value true 1`] = `true`;
+
+exports[`Should be required test: Required ifSetToValue with field set to different value false 1`] = `false`;
+
+exports[`Should be required test: Required ifSetToValue with field set to second correct value true 1`] = `true`;
+
+exports[`Should be required test: Required ifSetToValue with field set to second correct value true 2`] = `false`;
+
+exports[`Should be required test: Required true shoud return true 1`] = `true`;

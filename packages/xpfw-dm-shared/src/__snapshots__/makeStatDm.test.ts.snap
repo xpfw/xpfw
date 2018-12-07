@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`makeStat test: regular 1`] = `10`;
+
+exports[`makeStat test: withCoinfig 1`] = `1890`;

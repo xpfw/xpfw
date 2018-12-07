@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Full Coverage for validate/number Form Validation: Invalid type 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 3,
+    },
+    Object {
+      "type": 4,
+    },
+  ],
+  "mapTo": "myNumberField",
+}
+`;
+
+exports[`Full Coverage for validate/number Form Validation: Number too high 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 420,
+    },
+  ],
+  "mapTo": "myNumberField",
+}
+`;
+
+exports[`Full Coverage for validate/number Form Validation: Number too low 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "type": 5,
+    },
+  ],
+  "mapTo": "myNumberField",
+}
+`;

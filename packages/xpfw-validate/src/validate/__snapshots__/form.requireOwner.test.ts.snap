@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in $and find 1`] = `
+Object {
+  "$and": Array [
+    Object {
+      "myNum": 20,
+      "ownedBy": "MYID",
+    },
+    Object {
+      "myNum": 30,
+      "ownedBy": "MYID",
+    },
+  ],
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in $or find 1`] = `
+Object {
+  "$or": Array [
+    Object {
+      "myNum": 20,
+      "ownedBy": "MYID",
+    },
+    Object {
+      "myNum": 30,
+      "ownedBy": "MYID",
+    },
+  ],
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in regular create 1`] = `
+Object {
+  "myNum": 756,
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in regular find 1`] = `
+Object {
+  "myNum": 432,
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in regular find 2`] = `
+Object {
+  "$limit": 10,
+  "$skip": 1,
+  "$sort": Object {},
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in regular patch 1`] = `
+Object {
+  "myNum": 1666,
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in regular update 1`] = `
+Object {
+  "myNum": 222,
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in specific find 1`] = `
+Object {
+  "myNum": 222,
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By got added in specific update 1`] = `
+Object {
+  "myNum": 222,
+  "ownedBy": "MYID",
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By not added because not wanted created 1`] = `
+Object {
+  "myNum": 756,
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Owned By not added because not wanted patch 1`] = `
+Object {
+  "myNum": 1666,
+}
+`;

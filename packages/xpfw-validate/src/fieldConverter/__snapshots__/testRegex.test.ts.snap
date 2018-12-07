@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expect createFormData behaves consistently: result of to regex 1`] = `
+Object {
+  "$options": "isg",
+  "$regex": "(.*?)myString(.*?)",
+}
+`;

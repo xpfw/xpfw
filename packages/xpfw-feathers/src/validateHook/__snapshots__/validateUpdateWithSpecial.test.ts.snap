@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`verify func: Valid Update via special query persisted 1`] = `
+Object {
+  "_id": "ID#0",
+  "my": Object {
+    "nested": Object {
+      "number": 558,
+    },
+  },
+}
+`;
+
+exports[`verify func: result of creation 1`] = `
+Object {
+  "_id": "ID#0",
+  "my": Object {
+    "nested": Object {
+      "number": 324,
+    },
+  },
+}
+`;
