@@ -14,7 +14,7 @@ const nodeModules: any = {}
 
 const webpackServerConfig: webpack.Configuration = {
   target: "node" as "node",
-  mode: "development",
+  mode: "production",
   externals: [nodeModules],
   entry: "./src/prerender.tsx",
   output: {
