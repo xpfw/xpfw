@@ -41,8 +41,8 @@ class UiPage extends React.Component<any, any> {
         >
           <div className="has-text-centered is-size-5 pullUpMargin">
             Below is an example of using&nbsp;
-            <a target="_blank" className={siteGlobals.linkClass} href="https://github.com/xpfw/core/packages/xpfw-ui-bulma">
-            @xpfw/ui-bulma
+            <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-ui-bulma`}>
+              @xpfw/ui-bulma
             </a> with a relational model. At the bottom are Tag Collections which have a ManyToMany relationship to the Tags right below.
           </div>
           <div style={{marginTop: "3.8rem"}}>

@@ -24,7 +24,7 @@ class FormPage extends React.Component<any, any> {
           Check out 
           <a className={siteGlobals.linkClass} href={"/ui.html"}>
           @xpfw/ui
-          </a>. It comes with backend independent CRUD UI's.
+          </a>. It enables with backend independent CRUD UI's.
         </div>
         </BulmaHero>
       </PageContainer>

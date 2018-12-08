@@ -21,7 +21,7 @@ class ModularityInfo extends React.Component<any, any> {
                   name: "Simple Validation",
                   children: (
                     <span className={siteGlobals.contentClass} key="val">
-                      The <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/hierarchy.html"}>root package</a> is
+                      The root package is
                       <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/core.html"}>@xpfw/validate</a><br />
                       It's kind of like&nbsp;
                       <a {...siteGlobals.externalLinkConfig} href="http://json-schema.org/">JSON-Schema</a>
@@ -60,7 +60,7 @@ class ModularityInfo extends React.Component<any, any> {
                   name: "Backend Independent",
                   children: (
                     <span className={siteGlobals.contentClass}><a onClick={linkClickHandler} {...siteGlobals.externalLinkConfig} href="/ui.html">@xpfw/ui</a> has been written backend independently.<br />
-                    Simply implement <a className={siteGlobals.linkClass} href={"/hierarchy"}>IBackendClient</a> or use existing ones like <a className={siteGlobals.linkClass} href={"/docs/stacks/feathers.html"}>feathers</a>.</span>
+                    Simply implement <a className={siteGlobals.linkClass} href={`${siteGlobals.webRoot}docs/ui/ibackendclient.html`}>IBackendClient</a> or use existing ones like <a className={siteGlobals.linkClass} href={"/docs/stacks/feathers.html"}>feathers</a>.</span>
                   ),
                   icon: GoServer
                 }

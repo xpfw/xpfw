@@ -94,7 +94,7 @@ class CoreIntro extends React.Component<any, any> {
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
                         Want an offline app? Use&nbsp;
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-feathers/`}>
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-nedb/`}>
                           @xpfw/ui-nedb
                         </a> to persist data in localStorage!
                         Read&nbsp;

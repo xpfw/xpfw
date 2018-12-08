@@ -86,7 +86,8 @@ const siteGlobals = {
     className: "has-text-link",
     target: "_blank"
   },
-  gitRoot: "https://github.com/xpfw/xpfw/"
+  gitRoot: "https://github.com/xpfw/xpfw/tree/master/",
+  webRoot: "https://xpfw.github.io/"
 }
 
 export default siteGlobals
