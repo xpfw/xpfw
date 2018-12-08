@@ -16,7 +16,7 @@ For an online plugin you also need to implement
 - `register`
 - `logout`
 
-Since *xpfw* is strongly typed your IDE should tell you what parameters to expect. In case you are not using typescript see an abstract from the API docs below.
+Since *xpfw* is strongly typed your IDE should tell you what parameters to expect. In case you are not using typescript you can use this abstract from the API docs:
 
 
 <a id="client"></a>

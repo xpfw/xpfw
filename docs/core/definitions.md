@@ -1,5 +1,5 @@
 Definitions are descriptions of your data.
-One could see it as a more complicated version of [JSON-Schema](https://jsonschema.org) with support for [permisisons](/core/permissions.md).
+It's kind of like [JSON-Schema](https://jsonschema.org) with support for [permisisons](/core/permissions.md).
 
 It is a simple definition that facilitates rendering [forms](/form/usage.md) and [CRUD-UI's](/ui/usage.md).
 ```js
