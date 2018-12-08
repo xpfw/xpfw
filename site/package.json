@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run dev",
     "build": "./node_modules/.bin/webpack --config ./webpack.config.prod.ts || true",
-    "static": "npm run build && ./node_modules/.bin/webpack --config ./webpack.config.pre.ts || true && rm recipes tagCol tags || true && node ./webpackDist/prerender.js",
+    "buildPre": "./node_modules/.bin/webpack --config ./webpack.config.pre.ts",
+    "preRender": "node ./webpackDist/prerender.js",
     "dev": "cross-env ./node_modules/.bin/webpack-dev-server --config ./webpack.config.ts --port 4201 --content-base webpackDist"
   },
   "dependencies": {

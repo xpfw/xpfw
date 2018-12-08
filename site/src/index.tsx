@@ -8,16 +8,10 @@ declare const module: any
 
 
 // Render your app
-console.log("checking for doc")
 if (document !== 'undefined') {
-  console.log("got doc")
-  console.log("loaded")
   let renderMethod: any
-  document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("domcontent loaded", document.location.pathname)
     const rootEle =  document.getElementById('root')
-    console.log("ROOT IS", rootEle)
     renderMethod = rootEle.children.length === 0 ? ReactDOM.render : ReactDOM.hydrate
     if (document.location.pathname.length > 0) {
       RouterStore.visit({path: document.location.pathname})
@@ -29,5 +23,7 @@ if (document !== 'undefined') {
   
     // Render!
     render(<App />)
-   })
+   //})
+   console.log("Edit event IS")
+
 }

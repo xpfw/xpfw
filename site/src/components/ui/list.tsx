@@ -16,7 +16,7 @@ const createData = async (form: IForm) => {
   let list: any
   if(form.model === TagCollectionModel.model) {
     list = await ListStore.getList(`list.${TagModel.model}`, TagModel, "list", true)
-    list = list.result.data
+    list = list.result
   }
   for (let i = 0; i <= 20; i++) {
     if (form.model === RecipeModel.model) {
@@ -31,8 +31,8 @@ const createData = async (form: IForm) => {
       FormStore.setValue(TagDescription.mapTo, "desc#"+i)
     } else if(form.model === TagCollectionModel.model) {
       FormStore.setValue(Title.mapTo, "title#"+i)
-      console.log("setting tags to ", list, [list[i % 10]._id,list[i+2 % 10]._id,list[i + 4 % 10]._id])
-      FormStore.setValue(Tags.mapTo, [list[i % 10]._id,list[i+2 % 10]._id,list[i + 4 % 10]._id])
+      console.log("setting tags to ", list, [list[i % 10]._id,list[(i+2) % 10]._id,list[(i + 4) % 10]._id])
+      FormStore.setValue(Tags.mapTo, [list[i % 10]._id,list[(i+2) % 10]._id,list[(i + 4) % 10]._id])
     }
     await DbStore.create(form)
   }
@@ -43,12 +43,13 @@ const createData = async (form: IForm) => {
     FormStore.setValue(RecipeDate.mapTo, new Date())
     FormStore.setValue("create." + RecipeDate.mapTo, new Date())
   }
-  
+  await ListStore.makeQuery( form, "list" )
 }
 const readyData = async (form: IForm) => {
   const res = await ListStore.makeQuery(form)
-  if (res.result.total === 0) {
-    createData(form)
+  console.log(" references are ", res)
+  if (res.total === 0) {
+    await createData(form)
   }
 }
 
@@ -56,8 +57,8 @@ const resetData = async (form: IForm) => {
   let total = 1
   while (total !== 0) {
     const res = await ListStore.makeQuery(form, "none")
-    total = res.result.total
-    for (const item of res.result.data) {
+    total = res.total
+    for (const item of res.result) {
       const c: any = form.collection
       await DbStore.remove(item._id, c)
     }
