@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "build": "./node_modules/.bin/webpack --config ./webpack.config.prod.ts || true",
-    "buildPre": "./node_modules/.bin/webpack --config ./webpack.config.pre.ts",
+    "buildPre": "./node_modules/.bin/webpack --config ./webpack.config.pre.ts || true",
     "preRender": "node ./webpackDist/prerender.js",
     "dev": "cross-env ./node_modules/.bin/webpack-dev-server --config ./webpack.config.ts --port 4201 --content-base webpackDist"
   },

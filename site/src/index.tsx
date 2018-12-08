@@ -10,7 +10,7 @@ declare const module: any
 // Render your app
 if (document !== 'undefined') {
   let renderMethod: any
-
+  document.addEventListener("DOMContentLoaded", function(event: any) { 
     const rootEle =  document.getElementById('root')
     renderMethod = rootEle.children.length === 0 ? ReactDOM.render : ReactDOM.hydrate
     if (document.location.pathname.length > 0) {
@@ -23,7 +23,5 @@ if (document !== 'undefined') {
   
     // Render!
     render(<App />)
-   //})
-   console.log("Edit event IS")
-
+  });
 }

@@ -5,6 +5,7 @@ import Home from "./containers/home"
 import core from "./containers/core"
 import form from "./containers/form"
 import ui from "./containers/ui"
+import Page404 from "./containers/404";
 
 
 RouterStore.registerRoute("/", Home)
@@ -15,10 +16,9 @@ RouterStore.registerRoute("/ui.html", ui)
 
 class App extends React.Component<any, any> {
     public render() {
-        const text = this.state && this.state.clicked ? "CHanged text" : "Unchanged text"
         return (
             <Router
-                emptyComponent={<div>404 not found</div>}
+                emptyComponent={Page404}
             />
         )
     }

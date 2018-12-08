@@ -1,8 +1,7 @@
 import {  IField } from "@xpfw/validate"
 import { get, isNil } from "lodash"
 import * as React from "react"
-import { SharedFormShow } from "@xpfw/ui-shared";
-import { IFormShowProps } from '../../../../packages/xpfw-ui-shared/dist/components/show';
+import { SharedFormShow, IFormShowProps } from "@xpfw/ui-shared";
 
 class RelationshipListItemW extends React.Component<{
     item: any

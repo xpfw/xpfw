@@ -21,7 +21,7 @@ const start = `<!DOCTYPE html>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon-precomposed" href="ios-favicon.png">
     <link rel="android-touch-icon" href="ios-favicon.png">
-    <script async src="./isoapp.js"></script>
+    <script src="./isoapp.js"></script>
   </head>
   <body>
     <div id="root">
