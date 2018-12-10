@@ -34,7 +34,9 @@ const createData = async (form: IForm) => {
       const creationDate = new Date()
       creationDate.setDate(i)
       FormStore.setValue(CreatedAt.mapTo, creationDate)
-      FormStore.setValue(Tags.mapTo, [list[i % 10]._id,list[(i+2) % 10]._id,list[(i + 4) % 10]._id])
+      const newVals = [list[i % 10]._id, list[(i+2) % 10]._id,list[(i + 4) % 10]._id]
+      newVals.splice(Math.floor(Math.random() * 3) + 1)
+      FormStore.setValue(Tags.mapTo, newVals)
     }
     await DbStore.create(form)
   }

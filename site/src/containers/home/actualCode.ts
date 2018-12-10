@@ -61,6 +61,35 @@ const TagCollectionModel: IForm = {
 ValidationRegistry.registerForm(TagModel)
 ValidationRegistry.registerForm(TagCollectionModel)`
 
+const statCode = `import { StatType } from "@xpfw/validate"
+import { TagCollectionModel } from "./tagModel"
+
+TagCollectionModel.stats = [{
+  id: "Some",
+  type: StatType.sum,
+  options: {itemPath: \`\${Tags.mapTo}.length\`}
+},{
+  id: "Average",
+  type: StatType.mean,
+  options: {itemPath: \`\${Tags.mapTo}.length\`}
+},{
+  id: "timeDistance",
+  type: StatType.avgPrevTimeDistance,
+  options: {itemPath: CreatedAt.mapTo}
+},{
+  id: "timeStepson",
+  type: StatType.timeStep,
+  options: {subType: StatType.sum, subConfig: {itemPath: \`\${Tags.mapTo}.length\`}}
+},{
+  id: "timeStepMean",
+  type: StatType.timeStep,
+  options: {subType: StatType.mean, subConfig: {itemPath: \`\${Tags.mapTo}.length\`}}
+},{
+  id: "timeSteppedDistance",
+  type: StatType.timeStep,
+  options: {subType: StatType.avgPrevTimeDistance, subConfig: {itemPath: \`\${Tags.mapTo}.length\`}}
+}]`
+
 export {
-  basicFormCode, relationshipCode
+  basicFormCode, relationshipCode, statCode
 }

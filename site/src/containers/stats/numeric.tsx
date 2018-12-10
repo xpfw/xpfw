@@ -10,14 +10,7 @@ class StatShower extends React.Component<any, any> {
       return <WebTimeStepChart {...this.props} />
     }
     return (
-      <div className="card">
-        <div className="card-content">
-          <div className="flex1">
-            <div className="flex1"><b>{this.props.config.id}</b></div>
-            <span>{this.props.stat}</span>
-          </div>
-        </div>
-      </div>
+      <span>{this.props.stat}</span>
     )
   }
 }

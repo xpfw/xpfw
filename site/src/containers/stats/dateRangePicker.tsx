@@ -8,7 +8,7 @@ class WebDateRangePicker extends React.Component<any, any> {
   public render() {
     return (
       <div>
-        <div className="stackedField">
+        <div className="inline">
           <SharedField field={TimeBeginField} />
           <SharedField field={TimeEndField} />
         </div>
