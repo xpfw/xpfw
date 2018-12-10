@@ -4,7 +4,7 @@ import { each, get, map } from "lodash"
 import * as React from "react"
 import { FormStore } from "@xpfw/form-shared";
 import {
-  RecipeName, RecipeAuthor, RecipeDate, RecipeModel,
+  RecipeName, RecipeAuthor, RecipeDate, RecipeModel, CreatedAt,
   TagModel, TagCollectionModel, TagName, Title, TagDescription, Tags
 } from "../../globals";
 import NedbClient from '@xpfw/ui-nedb';
@@ -31,7 +31,9 @@ const createData = async (form: IForm) => {
       FormStore.setValue(TagDescription.mapTo, "desc#"+i)
     } else if(form.model === TagCollectionModel.model) {
       FormStore.setValue(Title.mapTo, "title#"+i)
-      console.log("setting tags to ", list, [list[i % 10]._id,list[(i+2) % 10]._id,list[(i + 4) % 10]._id])
+      const creationDate = new Date()
+      creationDate.setDate(i)
+      FormStore.setValue(CreatedAt.mapTo, creationDate)
       FormStore.setValue(Tags.mapTo, [list[i % 10]._id,list[(i+2) % 10]._id,list[(i + 4) % 10]._id])
     }
     await DbStore.create(form)

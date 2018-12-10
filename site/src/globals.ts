@@ -1,4 +1,4 @@
-import { globals, IField, IForm, ValidationRegistry } from "@xpfw/validate"
+import { globals, IField, IForm, ValidationRegistry, StatType } from "@xpfw/validate"
 
 const FieldType = globals.FieldType
 const RequiredType = globals.RequiredType
@@ -29,6 +29,11 @@ const Title: IField = {
   validate: {required: {type: RequiredType.Always}}
 }
 
+const CreatedAt: IField = {
+  mapTo: "createdAt",
+  type: FieldType.Date
+}
+
 const Tags: IField = {
   mapTo: "tags",
   type: FieldType.RelationshipMulti,
@@ -42,10 +47,35 @@ const Tags: IField = {
 const TagCollectionModel: IForm = {
   model: "tagColModel",
   collection: "tagCol",
-  sections: [{fields: [Title, Tags]}],
+  sections: [{fields: [Title, Tags, CreatedAt]}],
   options: {
     idPath: "_id"
-  }
+  },
+  stats: [{
+    id: "Some",
+    type: StatType.sum,
+    options: {itemPath: `${Tags.mapTo}.length`}
+  },{
+    id: "Average",
+    type: StatType.mean,
+    options: {itemPath: `${Tags.mapTo}.length`}
+  },{
+    id: "timeDistance",
+    type: StatType.avgPrevTimeDistance,
+    options: {itemPath: CreatedAt.mapTo}
+  },{
+    id: "timeStepson",
+    type: StatType.timeStep,
+    options: {subType: StatType.sum, subConfig: {itemPath: `${Tags.mapTo}.length`}}
+  },{
+    id: "timeStepMean",
+    type: StatType.timeStep,
+    options: {subType: StatType.mean, subConfig: {itemPath: `${Tags.mapTo}.length`}}
+  },{
+    id: "timeSteppedDistance",
+    type: StatType.timeStep,
+    options: {subType: StatType.avgPrevTimeDistance, subConfig: {itemPath: `${Tags.mapTo}.length`}}
+  }]
 }
 
 ValidationRegistry.registerForm(TagModel)
@@ -93,5 +123,5 @@ const siteGlobals = {
 export default siteGlobals
 export {
   TagModel, TagCollectionModel, TagName, TagDescription, Title, Tags,
-  RecipeModel, RecipeName, RecipeAuthor, RecipeDate
+  RecipeModel, RecipeName, RecipeAuthor, RecipeDate, CreatedAt
 }

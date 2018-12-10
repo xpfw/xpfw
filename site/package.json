@@ -11,6 +11,8 @@
     "dev": "cross-env ./node_modules/.bin/webpack-dev-server --config ./webpack.config.ts --port 4201 --content-base webpackDist"
   },
   "dependencies": {
+    "@xpfw/dm": "^0.1.1",
+    "@xpfw/dm-shared": "^0.1.1",
     "@xpfw/form-bulma": "^0.1.1",
     "@xpfw/form-shared": "^0.1.1",
     "@xpfw/form-web": "^0.1.1",
@@ -25,7 +27,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",
-    "react-syntax-highlighter": "^10.0.1"
+    "react-syntax-highlighter": "^10.0.1",
+    "victory": "^31.0.1"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^4.4.2",
