@@ -1,8 +1,9 @@
-import { TestDefs } from "@xpfw/validate"
+import { Permission, TestDefs } from "@xpfw/validate"
 const FormWithPermissionsOnFieldsAndGeneralPerms = TestDefs.FormWithPermissionsOnFieldsAndGeneralPerms
 import getRandomApp from "../testUtil/getRandomApp"
 import permissionGet from "./permissionGet"
 
+FormWithPermissionsOnFieldsAndGeneralPerms.permissions.required.get = Permission.User
 test("verify func", async () => {
   const serviceName = "permissionGet"
   const { app, service } = await getRandomApp(serviceName)
