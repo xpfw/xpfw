@@ -12,7 +12,6 @@ const io: any = sio
 const listenToFeathersAuthEvents = (app: any, store: any) => {
   const logoutHandler = (authRes: any) => {
     store.loggedOut()
-    app.authenticate()
   }
   app.on("authenticated", async (authRes: any) => {
     store.setLoggedIn(await getDataFromToken(authRes.accessToken))
