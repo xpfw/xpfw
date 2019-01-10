@@ -12,53 +12,25 @@ exports[`DbStore Create Test: after autoselectable search with option enabled an
   <div
     class="control"
   >
-    <div
-      class="card"
-      style={
-        Object {
-          "marginBottom": "1rem",
-          "marginTop": "1rem",
-        }
-      }
-    >
-      <header
-        style={
-          Object {
-            "margin": "0.4rem",
-          }
-        }
-      >
+    <div>
+      <div>
         <div
-          class="columns"
+          class="field"
         >
-          <div
-            class="column is-two-thirds has-text-justified"
+          <label
+            class="label"
           >
-            <span
-              class="is-size-6 has-text-weight-bold"
-            >
-              loading
-            </span>
-          </div>
-          <div
-            class="column is-one-third"
-          >
-            <div
-              class="is-pulled-right"
-            >
-              <a
-                class="button"
-                onClick={[Function]}
-              >
-                Remove
-              </a>
-            </div>
-            <div
-              class="is-clearfix"
-            />
-          </div>
+            myString
+          </label>
+          <input
+            class="input is-success"
+            oninput={[Function]}
+            type="text"
+            value="myText 2"
+          />
         </div>
-      </header>
+        <div />
+      </div>
     </div>
   </div>
 </div>
@@ -93,248 +65,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled bu
             value="myText"
           />
         </div>
-        <div>
-          <div
-            class="card"
-            style={
-              Object {
-                "marginBottom": "1rem",
-                "marginTop": "1rem",
-              }
-            }
-          >
-            <header
-              style={
-                Object {
-                  "margin": "0.4rem",
-                }
-              }
-            >
-              <div
-                class="columns"
-              >
-                <div
-                  class="column is-two-thirds has-text-justified"
-                >
-                  <span
-                    class="is-size-6 has-text-weight-bold"
-                  >
-                    myText 0
-                  </span>
-                </div>
-                <div
-                  class="column is-one-third"
-                >
-                  <div
-                    class="is-pulled-right"
-                  >
-                    <a
-                      class="button"
-                      onClick={[Function]}
-                    >
-                      Add
-                    </a>
-                  </div>
-                  <div
-                    class="is-clearfix"
-                  />
-                </div>
-              </div>
-            </header>
-          </div>
-          <div
-            class="card"
-            style={
-              Object {
-                "marginBottom": "1rem",
-                "marginTop": "1rem",
-              }
-            }
-          >
-            <header
-              style={
-                Object {
-                  "margin": "0.4rem",
-                }
-              }
-            >
-              <div
-                class="columns"
-              >
-                <div
-                  class="column is-two-thirds has-text-justified"
-                >
-                  <span
-                    class="is-size-6 has-text-weight-bold"
-                  >
-                    myText 2
-                  </span>
-                </div>
-                <div
-                  class="column is-one-third"
-                >
-                  <div
-                    class="is-pulled-right"
-                  >
-                    <a
-                      class="button"
-                      onClick={[Function]}
-                    >
-                      Add
-                    </a>
-                  </div>
-                  <div
-                    class="is-clearfix"
-                  />
-                </div>
-              </div>
-            </header>
-          </div>
-          <div
-            class="card"
-            style={
-              Object {
-                "marginBottom": "1rem",
-                "marginTop": "1rem",
-              }
-            }
-          >
-            <header
-              style={
-                Object {
-                  "margin": "0.4rem",
-                }
-              }
-            >
-              <div
-                class="columns"
-              >
-                <div
-                  class="column is-two-thirds has-text-justified"
-                >
-                  <span
-                    class="is-size-6 has-text-weight-bold"
-                  >
-                    myText 4
-                  </span>
-                </div>
-                <div
-                  class="column is-one-third"
-                >
-                  <div
-                    class="is-pulled-right"
-                  >
-                    <a
-                      class="button"
-                      onClick={[Function]}
-                    >
-                      Add
-                    </a>
-                  </div>
-                  <div
-                    class="is-clearfix"
-                  />
-                </div>
-              </div>
-            </header>
-          </div>
-          <div
-            class="card"
-            style={
-              Object {
-                "marginBottom": "1rem",
-                "marginTop": "1rem",
-              }
-            }
-          >
-            <header
-              style={
-                Object {
-                  "margin": "0.4rem",
-                }
-              }
-            >
-              <div
-                class="columns"
-              >
-                <div
-                  class="column is-two-thirds has-text-justified"
-                >
-                  <span
-                    class="is-size-6 has-text-weight-bold"
-                  >
-                    myText 6
-                  </span>
-                </div>
-                <div
-                  class="column is-one-third"
-                >
-                  <div
-                    class="is-pulled-right"
-                  >
-                    <a
-                      class="button"
-                      onClick={[Function]}
-                    >
-                      Add
-                    </a>
-                  </div>
-                  <div
-                    class="is-clearfix"
-                  />
-                </div>
-              </div>
-            </header>
-          </div>
-          <div
-            class="card"
-            style={
-              Object {
-                "marginBottom": "1rem",
-                "marginTop": "1rem",
-              }
-            }
-          >
-            <header
-              style={
-                Object {
-                  "margin": "0.4rem",
-                }
-              }
-            >
-              <div
-                class="columns"
-              >
-                <div
-                  class="column is-two-thirds has-text-justified"
-                >
-                  <span
-                    class="is-size-6 has-text-weight-bold"
-                  >
-                    myText 8
-                  </span>
-                </div>
-                <div
-                  class="column is-one-third"
-                >
-                  <div
-                    class="is-pulled-right"
-                  >
-                    <a
-                      class="button"
-                      onClick={[Function]}
-                    >
-                      Add
-                    </a>
-                  </div>
-                  <div
-                    class="is-clearfix"
-                  />
-                </div>
-              </div>
-            </header>
-          </div>
-        </div>
+        <div />
       </div>
     </div>
   </div>
@@ -370,56 +101,7 @@ exports[`DbStore Create Test: after autoselectable search without option enabled
             value="myText 2"
           />
         </div>
-        <div>
-          <div
-            class="card"
-            style={
-              Object {
-                "marginBottom": "1rem",
-                "marginTop": "1rem",
-              }
-            }
-          >
-            <header
-              style={
-                Object {
-                  "margin": "0.4rem",
-                }
-              }
-            >
-              <div
-                class="columns"
-              >
-                <div
-                  class="column is-two-thirds has-text-justified"
-                >
-                  <span
-                    class="is-size-6 has-text-weight-bold"
-                  >
-                    myText 2
-                  </span>
-                </div>
-                <div
-                  class="column is-one-third"
-                >
-                  <div
-                    class="is-pulled-right"
-                  >
-                    <a
-                      class="button"
-                      onClick={[Function]}
-                    >
-                      Add
-                    </a>
-                  </div>
-                  <div
-                    class="is-clearfix"
-                  />
-                </div>
-              </div>
-            </header>
-          </div>
-        </div>
+        <div />
       </div>
     </div>
   </div>
@@ -516,7 +198,439 @@ exports[`DbStore Create Test: after reset 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
                   </span>
                 </div>
                 <div
@@ -914,7 +1028,7 @@ exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
               <span
                 class="is-size-6 has-text-weight-bold"
               >
-                myText 4
+                loading
               </span>
             </div>
             <div
@@ -1044,7 +1158,439 @@ exports[`DbStore Create Test: multi after autoselectable search with option enab
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
                   </span>
                 </div>
                 <div
@@ -1128,7 +1674,439 @@ exports[`DbStore Create Test: multi after autoselectable search without option e
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
                   </span>
                 </div>
                 <div
@@ -1250,7 +2228,7 @@ exports[`DbStore Create Test: multi load with none missing 1`] = `
               <span
                 class="is-size-6 has-text-weight-bold"
               >
-                myText 4
+                loading
               </span>
             </div>
             <div
@@ -1586,7 +2564,7 @@ exports[`DbStore Create Test: multi removed one 1`] = `
               <span
                 class="is-size-6 has-text-weight-bold"
               >
-                myText 4
+                loading
               </span>
             </div>
             <div
@@ -1754,7 +2732,7 @@ exports[`DbStore Create Test: multi removed two 1`] = `
               <span
                 class="is-size-6 has-text-weight-bold"
               >
-                myText 4
+                loading
               </span>
             </div>
             <div
@@ -1843,59 +2821,503 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
     class="control"
   >
     <div>
-      <a
-        class="button"
-        onClick={[Function]}
-      >
-        Search
-      </a>
-      <div
-        class="card"
-        style={
-          Object {
-            "marginBottom": "1rem",
-            "marginTop": "1rem",
-          }
-        }
-      >
-        <header
-          style={
-            Object {
-              "margin": "0.4rem",
-            }
-          }
+      <div>
+        <div
+          class="field"
         >
-          <div
-            class="columns"
+          <label
+            class="label"
           >
-            <div
-              class="column is-two-thirds has-text-justified"
-            >
-              <span
-                class="is-size-6 has-text-weight-bold"
-              >
-                myText 3
-              </span>
-            </div>
-            <div
-              class="column is-one-third"
+            myString
+          </label>
+          <input
+            class="input is-success"
+            oninput={[Function]}
+            type="text"
+          />
+        </div>
+        <div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
             >
               <div
-                class="is-pulled-right"
+                class="columns"
               >
-                <a
-                  class="button"
-                  onClick={[Function]}
+                <div
+                  class="column is-two-thirds has-text-justified"
                 >
-                  Remove
-                </a>
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
               </div>
-              <div
-                class="is-clearfix"
-              />
-            </div>
+            </header>
           </div>
-        </header>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1915,107 +3337,503 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
     class="control"
   >
     <div>
-      <a
-        class="button"
-        onClick={[Function]}
-      >
-        Search
-      </a>
-      <div
-        class="card"
-        style={
-          Object {
-            "marginBottom": "1rem",
-            "marginTop": "1rem",
-          }
-        }
-      >
-        <header
-          style={
-            Object {
-              "margin": "0.4rem",
-            }
-          }
+      <div>
+        <div
+          class="field"
         >
-          <div
-            class="columns"
+          <label
+            class="label"
           >
-            <div
-              class="column is-two-thirds has-text-justified"
-            >
-              <span
-                class="is-size-6 has-text-weight-bold"
-              >
-                myText 3
-              </span>
-            </div>
-            <div
-              class="column is-one-third"
-            >
-              <div
-                class="is-pulled-right"
-              >
-                <a
-                  class="button"
-                  onClick={[Function]}
-                >
-                  Remove
-                </a>
-              </div>
-              <div
-                class="is-clearfix"
-              />
-            </div>
-          </div>
-        </header>
-      </div>
-      <div
-        class="card"
-        style={
-          Object {
-            "marginBottom": "1rem",
-            "marginTop": "1rem",
-          }
-        }
-      >
-        <header
-          style={
-            Object {
-              "margin": "0.4rem",
+            myString
+          </label>
+          <input
+            class="input is-success"
+            oninput={[Function]}
+            type="text"
+          />
+        </div>
+        <div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
             }
-          }
-        >
-          <div
-            class="columns"
           >
-            <div
-              class="column is-two-thirds has-text-justified"
-            >
-              <span
-                class="is-size-6 has-text-weight-bold"
-              >
-                myText 5
-              </span>
-            </div>
-            <div
-              class="column is-one-third"
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
             >
               <div
-                class="is-pulled-right"
+                class="columns"
               >
-                <a
-                  class="button"
-                  onClick={[Function]}
+                <div
+                  class="column is-two-thirds has-text-justified"
                 >
-                  Remove
-                </a>
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
               </div>
-              <div
-                class="is-clearfix"
-              />
-            </div>
+            </header>
           </div>
-        </header>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2085,7 +3903,488 @@ exports[`DbStore Create Test: nothing yet 1`] = `
             type="text"
           />
         </div>
-        <div />
+        <div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2204,7 +4503,488 @@ exports[`DbStore Create Test: nothing yet 3`] = `
             type="text"
           />
         </div>
-        <div />
+        <div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2301,7 +5081,7 @@ exports[`DbStore Create Test: search for Text 1`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
-                    myText 7
+                    myText 0
                   </span>
                 </div>
                 <div
@@ -2324,43 +5104,6 @@ exports[`DbStore Create Test: search for Text 1`] = `
               </div>
             </header>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DbStore Create Test: search for Text 2`] = `
-<div
-  class="field"
->
-  <label
-    class="label"
-  >
-    Relationship ownedByMulti
-  </label>
-  <div
-    class="control"
-  >
-    <div>
-      <div>
-        <div
-          class="field"
-        >
-          <label
-            class="label"
-          >
-            myString
-          </label>
-          <input
-            class="input is-success"
-            oninput={[Function]}
-            type="text"
-            value="Text"
-          />
-        </div>
-        <div>
           <div
             class="card"
             style={
@@ -2386,7 +5129,7 @@ exports[`DbStore Create Test: search for Text 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
-                    myText 0
+                    myText 1
                   </span>
                 </div>
                 <div
@@ -2482,7 +5225,103 @@ exports[`DbStore Create Test: search for Text 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
                   </span>
                 </div>
                 <div
@@ -2578,6 +5417,54 @@ exports[`DbStore Create Test: search for Text 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 8
                   </span>
                 </div>
@@ -2601,7 +5488,91 @@ exports[`DbStore Create Test: search for Text 2`] = `
               </div>
             </header>
           </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: search for Text 2`] = `
+<div
+  class="field"
+>
+  <label
+    class="label"
+  >
+    Relationship ownedByMulti
+  </label>
+  <div
+    class="control"
+  >
+    <div>
+      <div>
+        <div
+          class="field"
+        >
+          <label
+            class="label"
+          >
+            myString
+          </label>
+          <input
+            class="input is-success"
+            oninput={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div />
       </div>
     </div>
   </div>
@@ -2734,7 +5705,7 @@ exports[`DbStore Create Test: search for my 1`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
-                    myText 7
+                    myText 0
                   </span>
                 </div>
                 <div
@@ -2757,43 +5728,6 @@ exports[`DbStore Create Test: search for my 1`] = `
               </div>
             </header>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DbStore Create Test: search for my 2`] = `
-<div
-  class="field"
->
-  <label
-    class="label"
-  >
-    Relationship ownedByMulti
-  </label>
-  <div
-    class="control"
-  >
-    <div>
-      <div>
-        <div
-          class="field"
-        >
-          <label
-            class="label"
-          >
-            myString
-          </label>
-          <input
-            class="input is-success"
-            oninput={[Function]}
-            type="text"
-            value="my"
-          />
-        </div>
-        <div>
           <div
             class="card"
             style={
@@ -2819,7 +5753,7 @@ exports[`DbStore Create Test: search for my 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
-                    myText 0
+                    myText 1
                   </span>
                 </div>
                 <div
@@ -2915,7 +5849,103 @@ exports[`DbStore Create Test: search for my 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
                   </span>
                 </div>
                 <div
@@ -3011,6 +6041,54 @@ exports[`DbStore Create Test: search for my 2`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 8
                   </span>
                 </div>
@@ -3034,7 +6112,91 @@ exports[`DbStore Create Test: search for my 2`] = `
               </div>
             </header>
           </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: search for my 2`] = `
+<div
+  class="field"
+>
+  <label
+    class="label"
+  >
+    Relationship ownedByMulti
+  </label>
+  <div
+    class="control"
+  >
+    <div>
+      <div>
+        <div
+          class="field"
+        >
+          <label
+            class="label"
+          >
+            myString
+          </label>
+          <input
+            class="input is-success"
+            oninput={[Function]}
+            type="text"
+            value="my"
+          />
+        </div>
+        <div />
       </div>
     </div>
   </div>
@@ -3095,7 +6257,439 @@ exports[`DbStore Create Test: search for null 1`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 2
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 6
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 8
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
                   </span>
                 </div>
                 <div
@@ -3382,6 +6976,41 @@ exports[`DbStore Create Test: single search for Text 1`] = `
             value="Text"
           />
         </div>
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DbStore Create Test: single search for my 1`] = `
+<div
+  class="field"
+>
+  <label
+    class="label"
+  >
+    Relationship ownedBy
+  </label>
+  <div
+    class="control"
+  >
+    <div>
+      <div>
+        <div
+          class="field"
+        >
+          <label
+            class="label"
+          >
+            myString
+          </label>
+          <input
+            class="input is-success"
+            oninput={[Function]}
+            type="text"
+          />
+        </div>
         <div>
           <div
             class="card"
@@ -3409,6 +7038,54 @@ exports[`DbStore Create Test: single search for Text 1`] = `
                     class="is-size-6 has-text-weight-bold"
                   >
                     myText 0
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 1
                   </span>
                 </div>
                 <div
@@ -3504,7 +7181,103 @@ exports[`DbStore Create Test: single search for Text 1`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 3
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 4
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 5
                   </span>
                 </div>
                 <div
@@ -3600,6 +7373,54 @@ exports[`DbStore Create Test: single search for Text 1`] = `
                   <span
                     class="is-size-6 has-text-weight-bold"
                   >
+                    myText 7
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
+          >
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
                     myText 8
                   </span>
                 </div>
@@ -3623,42 +7444,55 @@ exports[`DbStore Create Test: single search for Text 1`] = `
               </div>
             </header>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`DbStore Create Test: single search for my 1`] = `
-<div
-  class="field"
->
-  <label
-    class="label"
-  >
-    Relationship ownedBy
-  </label>
-  <div
-    class="control"
-  >
-    <div>
-      <div>
-        <div
-          class="field"
-        >
-          <label
-            class="label"
+          <div
+            class="card"
+            style={
+              Object {
+                "marginBottom": "1rem",
+                "marginTop": "1rem",
+              }
+            }
           >
-            myString
-          </label>
-          <input
-            class="input is-success"
-            oninput={[Function]}
-            type="text"
-          />
+            <header
+              style={
+                Object {
+                  "margin": "0.4rem",
+                }
+              }
+            >
+              <div
+                class="columns"
+              >
+                <div
+                  class="column is-two-thirds has-text-justified"
+                >
+                  <span
+                    class="is-size-6 has-text-weight-bold"
+                  >
+                    myText 9
+                  </span>
+                </div>
+                <div
+                  class="column is-one-third"
+                >
+                  <div
+                    class="is-pulled-right"
+                  >
+                    <a
+                      class="button"
+                      onClick={[Function]}
+                    >
+                      Add
+                    </a>
+                  </div>
+                  <div
+                    class="is-clearfix"
+                  />
+                </div>
+              </div>
+            </header>
+          </div>
         </div>
-        <div />
       </div>
     </div>
   </div>

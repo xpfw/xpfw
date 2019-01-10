@@ -110,6 +110,10 @@ exports[`DbStore Edit Test: after create 1`] = `
       "id": 0
     }
   },
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -195,6 +199,10 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
       "myNum": 240,
       "id": 0
     }
+  },
+  "user": {
+    "email": "user",
+    "id": 0
   },
   "fields": [
     {
@@ -307,6 +315,10 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
       "id": 0
     }
   },
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -395,6 +407,10 @@ exports[`DbStore Edit Test: hidden in update 1`] = `
       "id": 0
     }
   },
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -460,6 +476,10 @@ exports[`DbStore Edit Test: hidden text 1`] = `
       "myNum": 240,
       "id": 0
     }
+  },
+  "user": {
+    "email": "user",
+    "id": 0
   },
   "fields": [
     {
@@ -537,6 +557,10 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
       "myNum": 240,
       "id": 0
     }
+  },
+  "user": {
+    "email": "user",
+    "id": 0
   },
   "fields": [
     {
@@ -703,6 +727,10 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
       "id": 1
     }
   },
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -789,6 +817,10 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
       "myNum": 6543,
       "id": 1
     }
+  },
+  "user": {
+    "email": "user",
+    "id": 0
   },
   "fields": [
     {
@@ -917,6 +949,10 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
       "id": 1
     }
   },
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -1024,6 +1060,10 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
       "id": 1
     }
   },
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -1095,6 +1135,10 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
       "myNum": 240,
       "id": 0
     }
+  },
+  "user": {
+    "email": "user",
+    "id": 0
   },
   "fields": [
     {
@@ -1181,6 +1225,10 @@ exports[`DbStore Edit Test: while loading 1`] = `
       "myNum": 240,
       "id": 0
     }
+  },
+  "user": {
+    "email": "user",
+    "id": 0
   },
   "fields": [
     {

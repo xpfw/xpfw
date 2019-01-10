@@ -12,14 +12,14 @@ Object {
   "limit": 10,
   "result": Array [
     Object {
+      "id": 225,
+      "myNum": 225,
+      "myString": "225*225",
+    },
+    Object {
       "id": 0,
       "myNum": 0,
       "myString": "0*0",
-    },
-    Object {
-      "id": 1,
-      "myNum": 1,
-      "myString": "1*1",
     },
     Object {
       "id": 2,

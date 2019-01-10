@@ -18,16 +18,8 @@ exports[`Relationship Fetching Test: multi added and loaded 1`] = `
     7
   ],
   "relatedObject": [
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
-    {
-      "myString": "myText 7",
-      "myNum": 427,
-      "id": 7
-    }
+    null,
+    null
   ],
   "searchForm": {
     "model": "searchFor.ownedByMulti",
@@ -70,11 +62,7 @@ exports[`Relationship Fetching Test: multi added but not yet loaded 1`] = `
     7
   ],
   "relatedObject": [
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
+    null,
     null
   ],
   "searchForm": {
@@ -124,11 +112,7 @@ exports[`Relationship Fetching Test: multi load with none missing 1`] = `
       "myNum": 423,
       "id": 3
     },
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
+    null,
     {
       "myString": "myText 5",
       "myNum": 425,
@@ -227,11 +211,7 @@ exports[`Relationship Fetching Test: multi removed one 1`] = `
       "myNum": 423,
       "id": 3
     },
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    }
+    null
   ],
   "searchForm": {
     "model": "searchFor.ownedByMulti",
@@ -269,11 +249,7 @@ exports[`Relationship Fetching Test: multi removed two 1`] = `
     4
   ],
   "relatedObject": [
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    }
+    null
   ],
   "searchForm": {
     "model": "searchFor.ownedByMulti",

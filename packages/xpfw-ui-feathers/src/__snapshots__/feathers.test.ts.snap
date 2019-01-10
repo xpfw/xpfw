@@ -6,20 +6,28 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "bla": "1",
-        "id": 0,
+        "result": Object {
+          "bla": "1",
+          "id": 0,
+        },
       },
       "1": Object {
-        "bla": "4",
-        "id": 1,
+        "result": Object {
+          "bla": "4",
+          "id": 1,
+        },
       },
       "2": Object {
-        "bla": "5",
-        "id": 2,
+        "result": Object {
+          "bla": "5",
+          "id": 2,
+        },
       },
       "3": Object {
-        "bla": "2",
-        "id": 3,
+        "result": Object {
+          "bla": "2",
+          "id": 3,
+        },
       },
     },
   },
@@ -33,17 +41,23 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "bla": "1",
-        "id": 0,
+        "result": Object {
+          "bla": "1",
+          "id": 0,
+        },
       },
       "1": Object {
-        "bla": "4",
-        "id": 1,
+        "result": Object {
+          "bla": "4",
+          "id": 1,
+        },
       },
       "2": null,
       "3": Object {
-        "bla": "2",
-        "id": 3,
+        "result": Object {
+          "bla": "2",
+          "id": 3,
+        },
       },
     },
   },

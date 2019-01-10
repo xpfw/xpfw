@@ -7,14 +7,14 @@ Object {
       "limit": 10,
       "result": Array [
         Object {
+          "id": 49,
+          "myNum": 20580,
+          "myString": "49num",
+        },
+        Object {
           "id": 0,
           "myNum": 0,
           "myString": "0num",
-        },
-        Object {
-          "id": 1,
-          "myNum": 420,
-          "myString": "1num",
         },
         Object {
           "id": 2,
@@ -754,10 +754,10 @@ exports[`DbStore Create Test: list after fetch 1`] = `
       <tr>
         <td />
         <td>
-          "0num"
+          "49num"
         </td>
         <td>
-          0
+          20580
         </td>
         <td>
           <span
@@ -777,10 +777,10 @@ exports[`DbStore Create Test: list after fetch 1`] = `
       <tr>
         <td />
         <td>
-          "1num"
+          "0num"
         </td>
         <td>
-          420
+          0
         </td>
         <td>
           <span
@@ -1391,63 +1391,6 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
 exports[`DbStore Create Test: prefix after list get 1`] = `
 Object {
   "lists": Object {
-    "createpref.formModel": Object {
-      "limit": 10,
-      "result": Array [
-        Object {
-          "id": 0,
-          "myNum": 0,
-          "myString": "0num",
-        },
-        Object {
-          "id": 1,
-          "myNum": 420,
-          "myString": "1num",
-        },
-        Object {
-          "id": 2,
-          "myNum": 840,
-          "myString": "2num",
-        },
-        Object {
-          "id": 3,
-          "myNum": 1260,
-          "myString": "3num",
-        },
-        Object {
-          "id": 4,
-          "myNum": 1680,
-          "myString": "4num",
-        },
-        Object {
-          "id": 5,
-          "myNum": 2100,
-          "myString": "5num",
-        },
-        Object {
-          "id": 6,
-          "myNum": 2520,
-          "myString": "6num",
-        },
-        Object {
-          "id": 7,
-          "myNum": 2940,
-          "myString": "7num",
-        },
-        Object {
-          "id": 8,
-          "myNum": 3360,
-          "myString": "8num",
-        },
-        Object {
-          "id": 9,
-          "myNum": 3780,
-          "myString": "9num",
-        },
-      ],
-      "skip": 0,
-      "total": 99,
-    },
     "formModel": Object {
       "limit": 10,
       "result": Array [
@@ -1530,233 +1473,8 @@ exports[`DbStore Create Test: prefix list after fetch 1`] = `
     </thead>
     <tbody>
       <tr>
-        <td />
         <td>
-          "0num"
-        </td>
-        <td>
-          0
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "1num"
-        </td>
-        <td>
-          420
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "2num"
-        </td>
-        <td>
-          840
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "3num"
-        </td>
-        <td>
-          1260
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "4num"
-        </td>
-        <td>
-          1680
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "5num"
-        </td>
-        <td>
-          2100
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "6num"
-        </td>
-        <td>
-          2520
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "7num"
-        </td>
-        <td>
-          2940
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "8num"
-        </td>
-        <td>
-          3360
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          "9num"
-        </td>
-        <td>
-          3780
-        </td>
-        <td>
-          <span
-            class="has-text-danger"
-          >
-            <div>
-              <a
-                class="button is-warning"
-                onClick={[Function]}
-              >
-                Delete
-              </a>
-            </div>
-          </span>
+          Loading
         </td>
       </tr>
     </tbody>
@@ -1797,7 +1515,7 @@ exports[`DbStore Create Test: prefix list after fetch 1`] = `
         <a
           class="pagination-link"
         >
-          10
+          1
         </a>
       </li>
     </ul>

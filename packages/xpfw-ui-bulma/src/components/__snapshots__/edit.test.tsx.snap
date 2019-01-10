@@ -84,6 +84,12 @@ exports[`DbStore Edit Test: after create 1`] = `
     }
     key="myString"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="myText"
   />
   <UNDEFINED
@@ -96,6 +102,12 @@ exports[`DbStore Edit Test: after create 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={420}
   />
   <button
@@ -133,6 +145,12 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
     }
     key="myString"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="changed"
   />
   <UNDEFINED
@@ -145,6 +163,12 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={240}
   />
   <button
@@ -218,6 +242,12 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
     }
     key="myString"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="changed"
   />
   <UNDEFINED
@@ -230,6 +260,12 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={240}
   />
   <button
@@ -268,6 +304,12 @@ exports[`DbStore Edit Test: hidden in update 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <button
     onClick={[Function]}
@@ -298,6 +340,12 @@ exports[`DbStore Edit Test: hidden text 1`] = `
     }
     key="myString"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <UNDEFINED
     field={
@@ -309,6 +357,12 @@ exports[`DbStore Edit Test: hidden text 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <button
     onClick={[Function]}
@@ -341,6 +395,12 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
     }
     key="myString"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <UNDEFINED
     field={
@@ -352,6 +412,12 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <button
     onClick={[Function]}
@@ -483,6 +549,12 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
     key="myString"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <UNDEFINED
     field={
@@ -495,6 +567,12 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
     key="myNum"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <button
     onClick={[Function]}
@@ -532,6 +610,12 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
     key="myString"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="SECOND change"
   />
   <UNDEFINED
@@ -545,6 +629,12 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
     key="myNum"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={6543}
   />
   <button
@@ -634,6 +724,12 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
     key="myString"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="SECOND change"
   />
   <UNDEFINED
@@ -647,6 +743,12 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
     key="myNum"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={6543}
   />
   <button
@@ -710,6 +812,12 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
     key="myString"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="SECOND change"
   />
   <UNDEFINED
@@ -723,6 +831,12 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
     key="myNum"
     prefix="editPrefix"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={6543}
   />
   <button
@@ -750,6 +864,12 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
   />
   <button
     onClick={[Function]}
@@ -800,6 +920,12 @@ exports[`DbStore Edit Test: while loading 1`] = `
     }
     key="myString"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value="changed"
   />
   <UNDEFINED
@@ -812,6 +938,12 @@ exports[`DbStore Edit Test: while loading 1`] = `
     }
     key="myNum"
     setValue={[Function]}
+    user={
+      Object {
+        "email": "user",
+        "id": 0,
+      }
+    }
     value={240}
   />
   <button

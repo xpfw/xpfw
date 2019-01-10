@@ -70,6 +70,10 @@ exports[`DbStore Create Test: after create 1`] = `
     }
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -124,6 +128,10 @@ exports[`DbStore Create Test: after login 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -184,6 +192,10 @@ exports[`DbStore Create Test: after purposely set invalid err 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -264,6 +276,10 @@ exports[`DbStore Create Test: before create 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -318,6 +334,7 @@ exports[`DbStore Create Test: before login 1`] = `
     ]
   },
   "loading": false,
+  "user": null,
   "fields": [
     {
       "mapTo": "myString",
@@ -380,6 +397,10 @@ exports[`DbStore Create Test: hidden in create 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -431,6 +452,10 @@ exports[`DbStore Create Test: hidden text 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -484,6 +509,10 @@ exports[`DbStore Create Test: not hidden in create 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -553,6 +582,10 @@ exports[`DbStore Create Test: prefixed after create 1`] = `
     }
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -607,6 +640,10 @@ exports[`DbStore Create Test: prefixed after purposely set invalid err 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -655,6 +692,10 @@ exports[`DbStore Create Test: prefixed before create 1`] = `
   },
   "prefix": "createpref",
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -709,6 +750,10 @@ exports[`DbStore Create Test: prefixed hidden in create 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -761,6 +806,10 @@ exports[`DbStore Create Test: prefixed hidden text 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -815,6 +864,10 @@ exports[`DbStore Create Test: prefixed not hidden in create 1`] = `
     ]
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",
@@ -884,6 +937,10 @@ exports[`DbStore Create Test: prefixed while loading 1`] = `
     }
   },
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -932,6 +989,10 @@ exports[`DbStore Create Test: resetOnMount = true 1`] = `
   },
   "resetOnMount": true,
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -980,6 +1041,10 @@ exports[`DbStore Create Test: resetOnMount = true 2`] = `
   },
   "resetOnMount": true,
   "loading": false,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myNum",
@@ -1035,6 +1100,10 @@ exports[`DbStore Create Test: while loading 1`] = `
     }
   },
   "loading": true,
+  "user": {
+    "email": "user",
+    "id": 0
+  },
   "fields": [
     {
       "mapTo": "myString",

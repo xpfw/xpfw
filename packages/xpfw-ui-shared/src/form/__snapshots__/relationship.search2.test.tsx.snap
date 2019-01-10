@@ -14,7 +14,6 @@ exports[`DbStore Create Test: after autoselectable search with option enabled an
     }
   },
   "prefix": "ownedBy",
-  "value": 2,
   "searchForm": {
     "model": "searchFor.ownedBy",
     "collection": "simpleTestCol",
@@ -29,10 +28,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled an
         ]
       }
     ]
-  },
-  "lastUsed": [
-    2
-  ]
+  }
 }
 </div>
 `;
@@ -354,11 +350,7 @@ exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
       "myNum": 423,
       "id": 3
     },
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
+    null,
     {
       "myString": "myText 5",
       "myNum": 425,
@@ -483,11 +475,7 @@ exports[`DbStore Create Test: multi load with none missing 1`] = `
       "myNum": 423,
       "id": 3
     },
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
+    null,
     {
       "myString": "myText 5",
       "myNum": 425,
@@ -587,11 +575,7 @@ exports[`DbStore Create Test: multi removed one 1`] = `
       "myNum": 423,
       "id": 3
     },
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
+    null,
     {
       "myString": "myText 5",
       "myNum": 425,
@@ -641,11 +625,7 @@ exports[`DbStore Create Test: multi removed two 1`] = `
       "myNum": 423,
       "id": 3
     },
-    {
-      "myString": "myText 4",
-      "myNum": 424,
-      "id": 4
-    },
+    null,
     {
       "myString": "myText 5",
       "myNum": 425,
@@ -685,16 +665,6 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
     }
   },
   "prefix": "ownedBy",
-  "value": [
-    3
-  ],
-  "relatedObject": [
-    {
-      "myString": "myText 3",
-      "myNum": 423,
-      "id": 3
-    }
-  ],
   "searchForm": {
     "model": "searchFor.ownedByMulti",
     "collection": "simpleTestCol",
@@ -712,7 +682,6 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
   },
   "displayMode": 0,
   "lastUsed": [
-    3,
     7
   ]
 }
@@ -733,22 +702,6 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
     }
   },
   "prefix": "ownedBy",
-  "value": [
-    3,
-    5
-  ],
-  "relatedObject": [
-    {
-      "myString": "myText 3",
-      "myNum": 423,
-      "id": 3
-    },
-    {
-      "myString": "myText 5",
-      "myNum": 425,
-      "id": 5
-    }
-  ],
   "searchForm": {
     "model": "searchFor.ownedByMulti",
     "collection": "simpleTestCol",
@@ -766,8 +719,6 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
   },
   "displayMode": 0,
   "lastUsed": [
-    5,
-    3,
     7
   ]
 }

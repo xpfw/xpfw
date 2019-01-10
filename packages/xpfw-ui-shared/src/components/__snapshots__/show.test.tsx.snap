@@ -7,7 +7,7 @@ exports[`DbStore Show Test: after create 1`] = `
   {
   "collection": "simpleTestCol",
   "id": 0,
-  "loading": true
+  "loading": false
 }
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`DbStore Show Test: before anything 1`] = `
 >
   {
   "collection": "simpleTestCol",
-  "loading": true
+  "loading": false
 }
 </div>
 `;
