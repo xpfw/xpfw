@@ -86,10 +86,9 @@ export class ListStore extends StoreBase implements IPersistableStore {
 
   public async makeQuery(form: IForm, prefix: string = "") {
     const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
-    let qKey: any
     try {
       const queryObj = this.buildQueryObj(form, prefix)
-      qKey = `${JSON.stringify(form.multiCollection)}${form.collection}${JSON.stringify(queryObj)}`
+      const qKey = `${JSON.stringify(form.multiCollection)}${form.collection}${JSON.stringify(queryObj)}`
       if (!this.doingQuery[qKey]) {
         this.doingQuery[qKey] = true
         LoadingStore.setLoading(getAt, true)
@@ -133,6 +132,7 @@ export class ListStore extends StoreBase implements IPersistableStore {
           this.lists[getAt] = returnedResult
           this.trigger(getAt)
           this.doingQuery[qKey] = false
+          LoadingStore.setLoading(getAt, false)
           return returnedResult
         }
       } else {
@@ -142,6 +142,7 @@ export class ListStore extends StoreBase implements IPersistableStore {
       this.lists[getAt] = {error}
       this.trigger(getAt)
       this.doingQuery[qKey] = false
+      LoadingStore.setLoading(getAt, false)
       return {error}
     }
   }
