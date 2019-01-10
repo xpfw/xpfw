@@ -48,8 +48,7 @@ class UiIntro extends React.Component<any, any> {
                           <div className="is-flex centerJustify smallMarginBottom">
                           Go through demo data and created items &nbsp;
                           <a className="button" onClick={async () => {
-                            resetData(RecipeModel)
-                            await ListStore.getList(`list.${RecipeModel.model}`,RecipeModel, "list", true)
+                            await resetData(RecipeModel)
                           }}>
                             <FaUndo />Reset Data
                           </a>

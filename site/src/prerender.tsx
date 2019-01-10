@@ -8,14 +8,16 @@ const routes = [
     {name: "index"},
     {name: "core"},
     {name: "form"},
-    {name: "ui"}
+    {name: "ui"},
+    {name: "stats"},
+    {name: "licenses"}
 ]
 
 const start = `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>xpstat</title>
+    <title>xpfw</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="style.css">

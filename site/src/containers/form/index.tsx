@@ -8,6 +8,7 @@ import FormIntro from './formIntro';
 import siteGlobals from '../../globals';
 import ThemeExample from './themeExample';
 import { FaMagic } from 'react-icons/fa';
+import linkClickHandler from '../../components/linkHandler';
 
 class FormPage extends React.Component<any, any> {
   public render() {
@@ -22,9 +23,9 @@ class FormPage extends React.Component<any, any> {
         >
         <div className="has-text-centered is-size-4 pullUpMargin">
           Check out 
-          <a className={siteGlobals.linkClass} href={"/ui.html"}>
+          <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>
           @xpfw/ui
-          </a>. It enables with backend independent CRUD UI's.
+          </a>. It comes with backend independent CRUD UI's.
         </div>
         </BulmaHero>
       </PageContainer>

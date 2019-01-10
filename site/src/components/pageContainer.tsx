@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Menu from './menu';
 import { FaHeart, FaGithub, FaCode, FaBalanceScale } from "react-icons/fa"
+import siteGlobals from '../globals';
+import linkClickHandler from './linkHandler';
 
 class PageContainer extends React.Component<any, any> {
   public render() {
@@ -23,14 +25,15 @@ class PageContainer extends React.Component<any, any> {
               </a>
               .
               </span>
-                <a href="https://github.com/xpfw/core/" target="_blank">
+                <a href={siteGlobals.gitRoot} target="_blank">
                   <span className="icon">
                   <FaCode className="textIcon" /></span><span>Source code</span>
                 </a> is distributed under the
                 <a href="https://opensource.org/licenses/mit-license.php" target="_blank">
                   <span className="icon">
                   <FaBalanceScale className="textIcon" /></span> MIT
-                </a> License.
+                </a> License.<br />
+                <a onClick={linkClickHandler} href="/licenses.html" >Open source licenses</a>
               </p>
             </div>
           </div>

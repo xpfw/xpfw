@@ -47,11 +47,10 @@ const createData = async (form: IForm) => {
     FormStore.setValue(RecipeDate.mapTo, new Date())
     FormStore.setValue("create." + RecipeDate.mapTo, new Date())
   }
-  await ListStore.makeQuery( form, "list" )
+  await ListStore.makeQuery( form, "list" )  
 }
 const readyData = async (form: IForm) => {
   const res = await ListStore.makeQuery(form)
-  console.log(" references are ", res)
   if (res.total === 0) {
     await createData(form)
   }
@@ -68,6 +67,10 @@ const resetData = async (form: IForm) => {
     }
   }
   await createData(form)
+  await ListStore.getList(`list.${form.model}`, form, "list", true)
+  if (form.collection === TagModel.collection) {
+    await resetData(TagCollectionModel)
+  }
 }
 
 class WebFormL extends React.Component<IFormListProps, any> {

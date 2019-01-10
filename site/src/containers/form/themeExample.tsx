@@ -12,14 +12,14 @@ class ThemeExample extends React.Component<any, any> {
     return (
       <BulmaHero
         className="is-light"
-        title="Easy Customization"
+        title="Type supported customization"
         iconConfig={FaPaintBrush}
       >
       <div className="has-text-centered is-size-4 pullUpMargin">
         <a className={siteGlobals.externalLinkConfig.className} href="/docs/form/theming.html">
           Theming a type
-        </a> is achievable with a simple <a target="_blank" className={siteGlobals.externalLinkConfig.className} href="https://reactjs.org/docs/react-component.html">
-          React Component
+        </a> is achievable through <a target="_blank" className={siteGlobals.externalLinkConfig.className} href="https://reactjs.org/docs/react-component.html">
+          React Components
         </a>.
       </div>
       <SharedField field={{mapTo: "myGuidedNumber", type: FieldType.Number}} theme="guided" />

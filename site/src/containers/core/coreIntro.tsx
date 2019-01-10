@@ -20,10 +20,10 @@ class CoreIntro extends React.Component<any, any> {
           <CardColumn
                 content={[
                   {
-                    name: "Easy Definitions",
+                    name: "Form Definitions",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        Simple but flexible <a {...siteGlobals.externalLinkConfig} href="/docs/core/definitions.html">Form definitions</a> allow all higher level packages to do as much as possible automatically.
+                        Flexible <a {...siteGlobals.externalLinkConfig} href="/docs/core/definitions.html">Form definitions</a> allow all higher level packages to do as much as possible automatically.
                       </span>
                     ),
                     icon: FaFileAlt
@@ -32,7 +32,7 @@ class CoreIntro extends React.Component<any, any> {
                     name: "Relationships",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>@xpfw/ui</a> shows how easy Relationships are with a simple addition to a definition.
+                        <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>@xpfw/ui</a> shows how relationships are modeled in definitions.
                       </span>
                     ),
                     icon: FaUsers
@@ -50,9 +50,9 @@ class CoreIntro extends React.Component<any, any> {
                     name: "Roll your own stack",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-validate/`}>@xpfw/validate</a>
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-validate/`}>@xpfw/validate</a>&nbsp;
                         exports <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>validateForm</a>&nbsp;
-                        and <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>validatePermission</a> to make it easy to intergrate into your own backend.
+                        and <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>validatePermission</a> to allow quick intergration into your own existing backend.
                         Need to connect the UI as well? Check out <a className={siteGlobals.linkClass} href={"/docs/ui/ibackendclient.html"}>IBackendClient</a>.
                       </span>
                     ),
@@ -76,11 +76,11 @@ class CoreIntro extends React.Component<any, any> {
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
                         Have a full stack ready and waiting by using&nbsp;
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-feathers/`}>
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-feathers/`}>
                           @xpfw/feathers
                         </a> hooks in a feathers application.
                         Connect to it via&nbsp;
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-ui-feathers/`}>
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-ui-feathers/`}>
                           @xpfw/ui-feathers
                         </a>.
                         A full example can be found&nbsp;
@@ -94,7 +94,7 @@ class CoreIntro extends React.Component<any, any> {
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
                         Want an offline app? Use&nbsp;
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-nedb/`}>
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-feathers/`}>
                           @xpfw/ui-nedb
                         </a> to persist data in localStorage!
                         Read&nbsp;

@@ -36,13 +36,13 @@ class UiPage extends React.Component<any, any> {
       <PageContainer {...this.props}>
         <BulmaHero
           className="is-light"
-          title="Easy Relationships with fields"
+          title="Relationships with fields"
           iconConfig={FaUsers}
         >
           <div className="has-text-centered is-size-5 pullUpMargin">
             Below is an example of using&nbsp;
-            <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-ui-bulma`}>
-              @xpfw/ui-bulma
+            <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-ui-bulma`}>
+            @xpfw/ui-bulma
             </a> with a relational model. At the bottom are Tag Collections which have a ManyToMany relationship to the Tags right below.
           </div>
           <div style={{marginTop: "3.8rem"}}>
@@ -66,8 +66,7 @@ class UiPage extends React.Component<any, any> {
                           <div className="is-flex centerJustify smallMarginBottom">
                           Check which Tags can be searched for in the Tag Collection Relationship Field.
                           <a className="button" onClick={async () => {
-                            resetData(TagModel)
-                            await ListStore.getList(`list.${TagModel.model}`, TagModel, "list", true)
+                            await resetData(TagModel)
                           }}>
                             <FaUndo />Reset Data
                           </a>
@@ -106,14 +105,13 @@ class UiPage extends React.Component<any, any> {
                           icon: FaPlusCircle
                         },
                         {
-                          name: "Easy related lists",
+                          name: "Related lists",
                           children: (
                             <div>
                               <div className="is-flex centerJustify smallMarginBottom">
                               Just like in the search _id is resolved to a name display &nbsp;
                               <a className="button" onClick={async () => {
-                                resetData(TagCollectionModel)
-                                await ListStore.getList(`list.${TagCollectionModel.model}`, TagCollectionModel, "list", true)
+                                await resetData(TagCollectionModel)
                               }}>
                                 <FaUndo />Reset Data
                               </a>
@@ -146,7 +144,7 @@ class UiPage extends React.Component<any, any> {
         >
         <div className="has-text-centered is-size-5 pullUpMargin">
           Here are some screenshots of using&nbsp;
-          <a target="_blank" className={siteGlobals.linkClass} href="https://github.com/xpfw/core/packages/xpfw-ui-native">
+          <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-ui-native`}>
           @xpfw/ui-native
           </a>.
         </div>
@@ -165,7 +163,7 @@ class UiPage extends React.Component<any, any> {
                           icon: FaPlusCircle
                         },
                         {
-                          name: "Easy related lists",
+                          name: "Related lists",
                           children: (
                             <div>screen
                             </div>

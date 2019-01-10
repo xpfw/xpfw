@@ -18,10 +18,10 @@ class ModularityInfo extends React.Component<any, any> {
         <CardColumn
               content={[
                 {
-                  name: "Simple Validation",
+                  name: "Validation",
                   children: (
                     <span className={siteGlobals.contentClass} key="val">
-                      The root package is
+                      xpfw's root package is
                       <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/core.html"}>@xpfw/validate</a><br />
                       It's kind of like&nbsp;
                       <a {...siteGlobals.externalLinkConfig} href="http://json-schema.org/">JSON-Schema</a>
@@ -34,7 +34,7 @@ class ModularityInfo extends React.Component<any, any> {
                   icon: MdSpellcheck
                 },
                 {
-                  name: "Easy Forms",
+                  name: "Forms",
                   children: (
                     <span className={siteGlobals.contentClass}>
                       <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/form.html"}>@xpfw/form</a> lets you display and customize forms based on @xpfw/validate <a className={siteGlobals.linkClass} href={"/docs/core/definitions.html"}>definitions</a>.<br />
@@ -47,11 +47,11 @@ class ModularityInfo extends React.Component<any, any> {
                   icon: FaWpforms
                 },
                 {
-                  name: "Admin / CMS Ready",
+                  name: "CRUD",
                   children: (
                     <span className={siteGlobals.contentClass}>
-                      <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>@xpfw/ui</a>  like <a {...siteGlobals.externalLinkConfig} href="https://www.meteor.com/">Meteor</a> abstracts simple CRUD and paginated Lists for collections and comes with readily usable React UI.<br />
-                      Think of <a {...siteGlobals.externalLinkConfig} href="https://github.com/marmelab/react-admin">react-admin</a> written for @xpfw/validate <a onClick={linkClickHandler}  className={siteGlobals.linkClass} href={"/docs/core/definitions.html"}>definitions</a>.
+                      <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>@xpfw/ui</a>  like <a {...siteGlobals.externalLinkConfig} href="https://www.meteor.com/">Meteor</a> abstracts CRUD and paginated Lists for collections and comes with readily usable React UI.<br />
+                      Think of <a {...siteGlobals.externalLinkConfig} href="https://github.com/marmelab/react-admin">react-admin</a> written for @xpfw/validate <a className={siteGlobals.linkClass} href={"/docs/core/definitions.html"}>definitions</a>.
                     </span>
                   ),
                   icon: MdWbIncandescent
@@ -60,7 +60,7 @@ class ModularityInfo extends React.Component<any, any> {
                   name: "Backend Independent",
                   children: (
                     <span className={siteGlobals.contentClass}><a onClick={linkClickHandler} {...siteGlobals.externalLinkConfig} href="/ui.html">@xpfw/ui</a> has been written backend independently.<br />
-                    Simply implement <a className={siteGlobals.linkClass} href={`${siteGlobals.webRoot}docs/ui/ibackendclient.html`}>IBackendClient</a> or use existing ones like <a className={siteGlobals.linkClass} href={"/docs/stacks/feathers.html"}>feathers</a>.</span>
+                    Implement <a className={siteGlobals.linkClass} href={"/docs/ui/ibackendclient.html"}>IBackendClient</a> or use existing ones like <a className={siteGlobals.linkClass} href={"/docs/stacks/feathers.html"}>feathers</a>.</span>
                   ),
                   icon: GoServer
                 }

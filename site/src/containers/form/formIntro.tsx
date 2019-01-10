@@ -12,7 +12,7 @@ class FormIntro extends React.Component<any, any> {
       <div>
         <BulmaHero
           className="is-light"
-          title="Dead simple form rendering with validation"
+          title="Concise form rendering with validation"
           iconConfig={FaReact}
         >
         <div className="has-text-centered is-size-4 pullUpMargin">
@@ -34,7 +34,7 @@ class FormIntro extends React.Component<any, any> {
                     name: "Web",
                     children: (
                       <div>
-                          Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-form-bulma`}>
+                          Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-form-bulma`}>
             @xpfw/form-bulma
             </a>
                           <HighlightedCode className="code-container" source={`import { IForm, getFieldsFromForm } from "@xpfw/validate"
@@ -66,7 +66,7 @@ class FormRenderer extends React.Component<{
                     name: "Native",
                     children: (
                       <div>
-                        Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.gitRoot}packages/xpfw-form-native`}>
+                        Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-form-native`}>
                           @xpfw/form-native
                         </a>
                         <HighlightedCode className="code-container" source={`import { IForm, getFieldsFromForm } from "@xpfw/validate"

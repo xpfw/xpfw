@@ -1,6 +1,6 @@
 import * as React from "react"
 import { RouterStore } from "@xpfw/router";
-import { FaHome, FaCogs, FaWpforms, FaChartLine, FaCloud, FaBook } from "react-icons/fa";
+import { FaHome, FaCogs, FaWpforms, FaCloud, FaBook, FaChartLine } from "react-icons/fa";
 import linkClickHandler from "./linkHandler";
 // import Logo from "./logo.png"
 
