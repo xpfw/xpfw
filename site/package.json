@@ -6,8 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "build": "./node_modules/.bin/webpack --config ./webpack.config.prod.ts || true",
-    "buildPre": "./node_modules/.bin/webpack --config ./webpack.config.pre.ts || true",
-    "preRender": "node ./webpackDist/prerender.js",
+    "static": "npm run build && ./node_modules/.bin/webpack --config ./webpack.config.pre.ts || true && rm recipes tagCol tags || true && node ./webpackDist/prerender.js",
     "dev": "cross-env ./node_modules/.bin/webpack-dev-server --config ./webpack.config.ts --port 4201 --content-base webpackDist"
   },
   "dependencies": {
@@ -24,11 +23,14 @@
     "awesome-typescript-loader": "^5.2.1",
     "bulma": "^0.7.2",
     "localforage": "^1.7.3",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",
     "react-syntax-highlighter": "^10.0.1",
-    "victory": "^31.0.1"
+    "resub": "^1.0.13",
+    "resub-persist": "^1.2.8"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^4.4.2",
