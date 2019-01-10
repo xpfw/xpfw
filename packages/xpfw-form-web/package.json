@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/form-web",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
