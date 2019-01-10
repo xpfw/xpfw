@@ -69,7 +69,9 @@
       "preact-render-to-json": "preact-render-to-json",
       "preact": "preact",
       "react": "preact-compat",
-      "react-dom": "preact-compat"
+      "react-dom": "preact-compat",
+      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
+      "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared"
     },
     "moduleFileExtensions": [
       "ts",

@@ -2,7 +2,6 @@ import { FormStore, SharedField } from "@xpfw/form-shared"
 import { globals, IField, IFieldSelect } from "@xpfw/validate"
 import * as React from "react"
 import render from "../testUtil/render"
-import "./select"
 
 const SelectField: IFieldSelect = {
   mapTo: "selectMeVal",
