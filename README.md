@@ -22,4 +22,4 @@ You can connect [@xpfw/ui](https://xpfw.github.io/ui) [to any backend](https://x
 [@xpfw/form](https://xpfw.github.io/form) and [@xpfw/ui](https://xpfw.github.io/ui) are also [built to be themed](https://xpfw.github.io/docs/ui/theme) with ease.
 
 ## Preact
-xpfw has full preact compatability. In fact all jest tests use preact instead of react to render, and the [live demo / website](https://xpfw.github.io) also uses preact.
+xpfw has full preact compatability. In fact all jest tests use preact instead of react to render.
