@@ -86,7 +86,7 @@ export class ListStore extends StoreBase implements IPersistableStore {
 
   public async makeQuery(form: IForm, prefix: string = "") {
     const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
-    let qKey
+    let qKey: any
     try {
       const queryObj = this.buildQueryObj(form, prefix)
       qKey = `${JSON.stringify(form.multiCollection)}${form.collection}${JSON.stringify(queryObj)}`
