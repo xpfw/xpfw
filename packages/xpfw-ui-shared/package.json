@@ -73,6 +73,7 @@
       "react-dom": "preact-compat",
       "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
       "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared",
+      "@xpfw/ui-feathers": "<rootDir>/node_modules/@xpfw/ui-feathers",
       "@xpfw/ui-shared": "<rootDir>/src"
     },
     "moduleFileExtensions": [
