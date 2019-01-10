@@ -58,7 +58,7 @@ const getRandomApp = async (memoryServiceNames: string | string[],
       app.use(memoryServiceName, mongoServic({
         Model: col,
         paginate: {default: 10, max: 100},
-        whitelist: ["$regex"]
+        whitelist: ["$regex", "$options"]
       }))
       if (get(options, "convertIds", false)) {
         app.service(memoryServiceName).hooks({
