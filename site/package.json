@@ -30,7 +30,8 @@
     "react-icons": "^3.2.2",
     "react-syntax-highlighter": "^10.0.1",
     "resub": "^1.0.13",
-    "resub-persist": "^1.2.8"
+    "resub-persist": "^1.2.8",
+    "victory": "^31.1.0"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^4.4.2",
