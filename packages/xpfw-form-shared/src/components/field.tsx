@@ -33,7 +33,7 @@ const setValueWrap = (thisRef: {props: ISharedField}) => {
     const currentUser = get(thisRef, "props.user")
     const prefix = get(thisRef.props, "prefix", "")
     const valuePath = `${prefix && prefix.length > 0 ? prefix + "." : ""}${get(thisRef, "props.field.mapTo", "undefined")}`
-    const type = get(thisRef, "props.field.validate.type")
+    const type = get(thisRef, "props.field.type")
     FormStore.setValue(valuePath, newValue, type === FieldType.Array)
     const field = get(thisRef, "props.field")
     const form = get(thisRef, "props.form")
