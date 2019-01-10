@@ -14,9 +14,9 @@ export class FormStore extends StoreBase implements IPersistableStore {
 
   public getPropKeys() { return ["formData"] }
 
-  public setValue(valuePath: string, value: any) {
+  public setValue(valuePath: string, value: any, fullTrigger: boolean = false) {
     set(this.formData, valuePath, value)
-    this.trigger(valuePath)
+    this.trigger(fullTrigger ? undefined : valuePath)
   }
 
   @autoSubscribe
@@ -52,6 +52,7 @@ export class FormStore extends StoreBase implements IPersistableStore {
     iterateFields(form, (field) => {
         this.setValue(`${prefix && prefix.length > 0 ? prefix + "." : ""}${field.mapTo}`, get(doc, field.mapTo))
     })
+    this.trigger()
   }
 
   public async validateField(field: IField, form: IForm, method: string = "create",

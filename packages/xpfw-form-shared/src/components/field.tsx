@@ -1,4 +1,4 @@
-import { IField, IFieldError, IForm } from "@xpfw/validate"
+import { IField, IFieldError, IForm, FieldType } from "@xpfw/validate"
 import { get, isNil } from "lodash"
 import * as React from "react"
 import { ComponentBase } from "resub"
@@ -33,7 +33,8 @@ const setValueWrap = (thisRef: {props: ISharedField}) => {
     const currentUser = get(thisRef, "props.user")
     const prefix = get(thisRef.props, "prefix", "")
     const valuePath = `${prefix && prefix.length > 0 ? prefix + "." : ""}${get(thisRef, "props.field.mapTo", "undefined")}`
-    FormStore.setValue(valuePath, newValue)
+    const type = get(thisRef, "props.field.validate.type")
+    FormStore.setValue(valuePath, newValue, type === FieldType.Array)
     const field = get(thisRef, "props.field")
     const form = get(thisRef, "props.form")
     if (!isNil(field)) {
