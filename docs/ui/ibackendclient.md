@@ -1,6 +1,6 @@
 # IBackendClient
 
-Connecting your own backend to *xpfw* is as easy as implementing the `IBackendClient` interface.
+Connecting your own backend to *xpfw* is done by implementing the `IBackendClient` interface.
 
 For an offline plugin you only need to implement
 - `get`
@@ -16,7 +16,7 @@ For an online plugin you also need to implement
 - `register`
 - `logout`
 
-Since *xpfw* is strongly typed your IDE should tell you what parameters to expect. In case you are not using typescript you can use this abstract from the API docs:
+Since *xpfw* is strongly typed your IDE should tell you what parameters to expect. In case you are not using typescript see an abstract from the API docs below.
 
 
 <a id="client"></a>

@@ -2,7 +2,7 @@
 Permissions are usable, if you use **xpfw** in your backend.
 That is the case if you [integrate it into your backend](/core/backend.md) or use one of the [suggested stacks](/stacks/overview.md).
 
-To make use of them simply add the `permission`-key (see [FieldPermissionDef](#fieldpermissiondef) for full reference).
+To make use of them add the `permission`-key (see [FieldPermissionDef](#fieldpermissiondef) for full reference).
 
  ```js
 import { FieldType, RequiredType, ValidationRegistry } from "@xpfw/validate"

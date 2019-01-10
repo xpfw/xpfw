@@ -1,6 +1,6 @@
 # xpfw
 
-xpfw is a collection of packages to make rendering forms and having CRUD-UI's in React as well as React Native blast. Check out the [live demo](https://xpfw.github.io) to see what's possible
+xpfw is a collection of packages to make rendering forms and having CRUD-UI's in React as well as React Native a blast. Check out the [live demo](https://xpfw.github.io) to see what's possible
 
 It is divided into three main packages:
 - [Core](#Core)
@@ -8,7 +8,7 @@ It is divided into three main packages:
 - [UI](#UI)
 
 ## Core
-[@xpfw/validate](https://xpfw.github.io/form), the core of xpfw, allows you to do form and permission validations based on a simple form definition.
+[@xpfw/validate](https://xpfw.github.io/form), the core of xpfw, allows you to do form and permission validations based on a form definition.
 
 ## Forms
 [@xpfw/form](https://xpfw.github.io/form) allows you to visualize the form definitions and their validation suggestions in React and React Native.

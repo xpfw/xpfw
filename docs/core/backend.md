@@ -27,7 +27,7 @@ In case more inspiration is required you could look at how [@xpfw/feathers integ
 
 # Validating
 
-Thanks to the [IForm definition](/core/definitions.md) validating is doable with one simple asynchronous call of `valdiateForm`. All unknown object keys will be stripped by this call!
+Thanks to the [IForm definition](/core/definitions.md) validating is doable with one asynchronous call of `valdiateForm`. All unknown object keys will be stripped by this call!
 
 ```js
 import {  validateForm, TestDefs } from "@xpfw/validate"

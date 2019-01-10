@@ -1,6 +1,6 @@
 # Custom Types
 
-**xpfw** is made to be flexible. Need to validate a type more complex than one of the base ones? Simply write your own!
+**xpfw** is made to be flexible. Need to validate a type more complex than one of the base ones? Write your own validator!
 
 To do that first [register a validator](/core/types.md) for said type.
 After that you can register a themed component for the `default`-theme of your new type.

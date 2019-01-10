@@ -1,6 +1,6 @@
 # Usage
 
-To render a field simply use the `SharedField` component and pass it your [`IField` definition](/core/definitions.md)
+To render a field use the `SharedField` component and pass it your [`IField` definition](/core/definitions.md)
 
 ```typescript
 import { FieldType } from "@xpfw/validate"
@@ -14,7 +14,7 @@ class StaticFieldRenderer extends React.Component<any, any> {
   }
 }
 ```
-Rendering a form is as easy as iterating over it's fields and rendering them in a `SharedField`.
+Rendering a form is achieved by iterating over it's fields and rendering them in a `SharedField`.
 
 If you require readily usable create / edit pages and more check out [@xpfw/ui](/ui/usage.md).
 ```typescript

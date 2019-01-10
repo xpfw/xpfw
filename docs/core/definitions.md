@@ -1,7 +1,7 @@
 Definitions are descriptions of your data.
-It's kind of like [JSON-Schema](https://jsonschema.org) with support for [permisisons](/core/permissions.md).
+One could see it as a more complicated version of [JSON-Schema](https://jsonschema.org) with support for [permisisons](/core/permissions.md).
 
-It is a simple definition that facilitates rendering [forms](/form/usage.md) and [CRUD-UI's](/ui/usage.md).
+It is a definition that facilitates rendering [forms](/form/usage.md) and [CRUD-UI's](/ui/usage.md).
 ```js
 import { FieldType, RequiredType, ValidationRegistry } from "@xpfw/validate"
 

@@ -5,7 +5,7 @@ Theming a validation type is possible by writing a [React Component](https://rea
 ComponentRegistry.registerComponent(FieldType.Number, "guided", GuidedNumbersField)
 ```
 With this we have registered a theme named `guided` for the `Number`-FieldType.
-To render a number field with said theme simply pass the `theme`-property to a `SharedField`.
+To render a number field with said theme pass the `theme`-property to a `SharedField`.
 
 ```jsx
 <SharedField 
