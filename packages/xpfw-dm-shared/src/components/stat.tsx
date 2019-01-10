@@ -19,10 +19,15 @@ export interface ISharedStat extends React.Props<any> {
 
 export interface ISharedStatState {
   stat: any
+  config?: any
+  query?: any
 }
 
-const SharedStatWrapper: any = (Container: React.ComponentType<any>) => {
-  return class extends ComponentBase<any, any> {
+export interface ISharedStatProps extends ISharedStat, ISharedStatState {
+}
+
+const SharedStatWrapper: any = (Container: React.ComponentType<ISharedStatProps>) => {
+  return class extends ComponentBase<ISharedStat, ISharedStatState> {
     public constructor(props: any) {
       super(props)
     }
