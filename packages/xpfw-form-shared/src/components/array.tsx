@@ -1,19 +1,23 @@
 import { IField } from "@xpfw/validate"
-import { cloneDeep, get, map } from "lodash"
+import { cloneDeep, get, isNumber } from "lodash"
 import * as React from "react"
 import { IFieldProps } from "./field"
 
 const increaseSize = (thisRef: any) => {
-  return () => {
+  return (index: any) => {
     let currentArray = get(thisRef, "props.value")
     if (!Array.isArray(currentArray)) {
       currentArray = []
     }
     currentArray = cloneDeep(currentArray)
-    if (currentArray.length === 0) {
+    if (isNumber(index)) {
+      currentArray.splice(index, 0, undefined)
+    } else {
+      if (currentArray.length === 0) {
+        currentArray.push(undefined)
+      }
       currentArray.push(undefined)
     }
-    currentArray.push(undefined)
     thisRef.props.setValue(currentArray)
   }
 }
