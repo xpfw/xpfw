@@ -65,7 +65,7 @@ class SharedField extends ComponentBase<ISharedField, any> {
   }
   public render() {
     const type = get(this.props, "field.type", 2)
-    const Component: any = ComponentRegistry.getComponent(type, this.props.theme)
+    const Component: any = ComponentRegistry.getComponent(type, get(this.props, "theme", get(this.props, "field.theme")))
     return <Component {...this.props} {...this.state} setValue={this.setValue} />
   }
   protected _buildState(props: ISharedField, initialBuild: boolean): ISharedFieldState {
