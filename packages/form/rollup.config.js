@@ -12,10 +12,8 @@ export default {
   ],
   external: [
     "lodash",
-    "moment",
+    "lodash-es",
     "mobx",
-    "feathers-client",
-    "socket.io-client",
     "react",
     "react-dom"
   ]
