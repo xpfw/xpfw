@@ -3,7 +3,7 @@ import { JSONSchemaDefinition } from "../jsonschema"
 import jsonValidator from "../jsonValidator"
 import FormStore from "../store/form"
 
-const useField = (name: string, definition: JSONSchemaDefinition, prefix?: string) => {
+const useField = (name: string, prefix?: string) => {
   const value = FormStore.getValue(name, prefix)
   const setValue = (newValue: any) => {
     FormStore.setValue(name, newValue, prefix)
@@ -14,7 +14,7 @@ const useField = (name: string, definition: JSONSchemaDefinition, prefix?: strin
 }
 
 const useFieldWithValidation = (name: string, definition: JSONSchemaDefinition, prefix?: string) => {
-  const originalWrapped = useField(name, definition, prefix)
+  const originalWrapped = useField(name, prefix)
   const setValue = action ((newValue: any) => {
     originalWrapped.setValue(newValue)
     const validationResults = jsonValidator.validate(definition, newValue)

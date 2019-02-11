@@ -15,10 +15,10 @@ describe("Form Hooks Test", () => {
     const valueOne = "theFirstValue"
     const valueTwo = "mySecondVal"
     FormStore.setValue(valueToSet,  valueOne)
-    let stringHook = useField(valueToSet, stringScheme)
+    let stringHook = useField(valueToSet)
     expect(stringHook.value).toBe(valueOne)
     stringHook.setValue(valueTwo)
-    stringHook = useField(valueToSet, stringScheme)
+    stringHook = useField(valueToSet)
     expect(stringHook.value).toBe(valueTwo)
   })
   it("useFieldWithValidation", () => {
