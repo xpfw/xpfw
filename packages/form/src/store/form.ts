@@ -15,7 +15,7 @@ export class FormStoreClass {
 
   @action
   public setValue(valuePath: string, value: any, prefix?: string) {
-    set(this.formData, valuePath, value)
+    set(this.formData, `${prefixMaker(prefix)}${valuePath}`, value)
   }
 
   public getError(valuePath: string, prefix?: string): any {
