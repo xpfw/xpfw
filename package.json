@@ -1,12 +1,12 @@
 {
   "devDependencies": {
-    "@types/node": "^10.5.4",
-    "@types/shelljs": "^0.8.0",
-    "lerna": "^3.0.0-rc.0",
-    "npm-check-updates": "^2.14.2",
-    "shelljs": "^0.8.2",
-    "ts-node": "^7.0.0",
-    "typescript": "^3.0.1"
+    "@types/node": "^10.12.24",
+    "@types/shelljs": "^0.8.2",
+    "lerna": "^3.11.0",
+    "npm-check-updates": "^2.15.0",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
   },
   "scripts": {
     "update": "./node_modules/.bin/ts-node ci/update && lerna bootstrap",
@@ -15,6 +15,6 @@
     "buildSite": "./node_modules/.bin/ts-node ci/buildSite"
   },
   "dependencies": {
-    "rollup-plugin-typescript2": "^0.16.1"
+    "rollup-plugin-typescript2": "^0.19.2"
   }
 }
