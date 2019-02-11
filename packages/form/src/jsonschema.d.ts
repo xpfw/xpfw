@@ -49,7 +49,7 @@ export declare type JSONSchemaDefinition = {
   required?: string[];
   propertyOrder?: string[];
   properties?: {
-      [key: string]: any;
+      [key: string]: JSONSchemaDefinition | undefined;
   };
   defaultProperties?: string[];
   patternProperties?: {
