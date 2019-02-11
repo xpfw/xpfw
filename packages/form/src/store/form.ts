@@ -4,7 +4,7 @@ import prefixMaker from "../util/prefixMaker"
 import { action } from "mobx"
 
 /**
- * Holds data relevant form Forms such as values and validation errors
+ * Holds data relevant for Forms such as values and validation errors
  */
 export class FormStoreClass {
   /**
