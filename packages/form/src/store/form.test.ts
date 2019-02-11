@@ -1,12 +1,7 @@
-import { JSONSchemaDefinition } from "../jsonschema"
 import FormStore from "./form"
 
-const schema: JSONSchemaDefinition = {
-  type: "string"
-}
-
 describe("Form Store Test", () => {
-  it("Should behave as expected", () => {
+  it("getValue/setValue", () => {
     const valueToSet = "myVal"
     const valueOne = "theFirstValue"
     const valueTwo = "mySecondVal"
@@ -16,5 +11,16 @@ describe("Form Store Test", () => {
     FormStore.setValue(valueToSet, valueTwo)
     expect(FormStore.getValue(valueToSet)).not.toBe(valueOne)
     expect(FormStore.getValue(valueToSet)).toBe(valueTwo)
+  })
+  it("getError/setError", () => {
+    const valueToSet = "myVal"
+    const valueOne = "theFirstValue"
+    const valueTwo = "mySecondVal"
+    FormStore.setError(valueToSet, valueOne)
+    expect(FormStore.getError(valueToSet)).toBe(valueOne)
+    expect(FormStore.getError(valueToSet)).not.toBe(valueTwo)
+    FormStore.setError(valueToSet, valueTwo)
+    expect(FormStore.getError(valueToSet)).not.toBe(valueOne)
+    expect(FormStore.getError(valueToSet)).toBe(valueTwo)
   })
 })
