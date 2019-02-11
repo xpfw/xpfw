@@ -8,22 +8,20 @@ import FormStore from "../store/form"
  * @param mapTo key where the value of the field will be saved. uses lodash.get/set string syntax style so subfields, array indices etc. can be used within the string
  * @param prefix prepended to mapTo to allow same mapTo keys to have different values
  */
-const useField: (mapTo: string, prefix?: string) => {
-  /**
-   * Set the fields value to the new value
-   */
-  setValue: (newValue: any) => void
-  /**
-   * mobx tracked value of the field
-   */
-  value: any
-} = (mapTo: string, prefix?: string) => {
+const useField = (mapTo: string, prefix?: string) => {
   const value = FormStore.getValue(mapTo, prefix)
   const setValue = (newValue: any) => {
     FormStore.setValue(mapTo, newValue, prefix)
   }
   return {
-    value, setValue
+    /**
+     * mobx tracked value of the field
+     */
+    value,
+    /**
+     * Set the fields value to the new value
+     */
+    setValue
   }
 }
 
@@ -44,7 +42,14 @@ const useFieldWithValidation = (mapTo: string, definition: JSONSchemaDefinition,
     }
   })
   return {
-    value: originalWrapped.value, setValue,
+    /**
+     * mobx tracked value of the field
+     */
+    value: originalWrapped.value,
+    /**
+     * Set the fields value to the new value
+     */
+    setValue,
     /**
      * MobX tracked error of the field
      */
