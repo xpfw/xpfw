@@ -1,6 +1,6 @@
 import { get, set } from "lodash-es"
 import { observable } from "mobx"
-import prefixMaker from "../util/prefixMaker"
+import { prependPrefix } from "../util/prefixMaker"
 import { action } from "mobx"
 
 /**
@@ -25,7 +25,7 @@ export class FormStoreClass {
    * @param defaultValue value to return if it is not set in the form data
    */
   public getValue(valuePath: string, prefix?: string, defaultValue?: any): any {
-    return get(this.formData, `${prefixMaker(prefix)}${valuePath}`, defaultValue)
+    return get(this.formData, prependPrefix(valuePath, prefix), defaultValue)
   }
 
   /**
@@ -36,7 +36,7 @@ export class FormStoreClass {
    */
   @action
   public setValue(valuePath: string, value: any, prefix?: string) {
-    set(this.formData, `${prefixMaker(prefix)}${valuePath}`, value)
+    set(this.formData, prependPrefix(valuePath, prefix), value)
   }
 
   /**
@@ -45,7 +45,7 @@ export class FormStoreClass {
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    */
   public getError(valuePath: string, prefix?: string): any {
-    return get(this.errors, `${prefixMaker(prefix)}${valuePath}`)
+    return get(this.errors, prependPrefix(valuePath, prefix))
   }
 
   /**
