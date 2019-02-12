@@ -11,6 +11,7 @@ export default {
     typescript()
   ],
   external: [
+    "ajv",
     "lodash",
     "lodash-es",
     "mobx",
