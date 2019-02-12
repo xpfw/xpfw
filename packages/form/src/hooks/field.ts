@@ -34,7 +34,7 @@ const useField = (mapTo: string, prefix?: string) => {
  */
 const useFieldWithValidation = (mapTo: string, definition: JSONSchemaDefinition, prefix?: string) => {
   const originalWrapped = useField(mapTo, prefix)
-  const setValue = action ((newValue: any) => {
+  const setValue = action((newValue: any) => {
     originalWrapped.setValue(newValue)
     const validationResults = jsonValidator.validate(definition, newValue)
     if (validationResults === false) {
