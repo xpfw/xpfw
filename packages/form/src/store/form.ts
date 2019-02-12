@@ -22,9 +22,10 @@ export class FormStoreClass {
    * Acquire a value from the form data
    * @param valuePath key where the value of the field will be saved. uses lodash.get/set string syntax style so subfields, array indices etc. can be used within the string
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
+   * @param defaultValue value to return if it is not set in the form data
    */
-  public getValue(valuePath: string, prefix?: string): any {
-    return get(this.formData, `${prefixMaker(prefix)}${valuePath}`)
+  public getValue(valuePath: string, prefix?: string, defaultValue?: any): any {
+    return get(this.formData, `${prefixMaker(prefix)}${valuePath}`, defaultValue)
   }
 
   /**

@@ -5,12 +5,15 @@ describe("Form Store Test", () => {
     const valueToSet = "myVal"
     const valueOne = "theFirstValue"
     const valueTwo = "mySecondVal"
+    const prefix = "mySecondVal"
     FormStore.setValue(valueToSet, valueOne)
     expect(FormStore.getValue(valueToSet)).toBe(valueOne)
     expect(FormStore.getValue(valueToSet)).not.toBe(valueTwo)
     FormStore.setValue(valueToSet, valueTwo)
     expect(FormStore.getValue(valueToSet)).not.toBe(valueOne)
     expect(FormStore.getValue(valueToSet)).toBe(valueTwo)
+    expect(FormStore.getValue(valueToSet, prefix)).toBe(undefined)
+    expect(FormStore.getValue(valueToSet, prefix, 5)).toBe(5)
   })
   it("getError/setError", () => {
     const valueToSet = "myVal"
