@@ -1,8 +1,8 @@
 import { get } from "lodash"
 
-const setFromEvent = (thisRef: {props: {setValue: any}}, eventKey: string) => {
+const setFromEvent = (setValue: any, eventKey: string) => {
   return (e: any) => {
-    thisRef.props.setValue(get(e, eventKey))
+    setValue(get(e, eventKey))
   }
 }
 

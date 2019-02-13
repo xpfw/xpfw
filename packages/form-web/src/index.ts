@@ -1,5 +1,4 @@
-import { ComponentRegistry } from "@xpfw/form-shared"
-import { FieldType } from "@xpfw/validate"
+import { ComponentRegistry } from "@xpfw/form"
 import BooleanField from "./base/boolean"
 import ObjectField from "./base/object"
 import ArrayField from "./base/object"
@@ -8,15 +7,10 @@ import TextField from "./base/text"
 import { setFromEvent } from "./base/valueUtil"
 
 const registerComponents = () => {
-  ComponentRegistry.registerComponent(FieldType.Text, TextField)
-  ComponentRegistry.registerComponent(FieldType.Number, TextField)
-  ComponentRegistry.registerComponent(FieldType.Date, TextField)
-  ComponentRegistry.registerComponent(FieldType.Password, TextField)
-  ComponentRegistry.registerComponent(FieldType.Slider, TextField)
-  ComponentRegistry.registerComponent(FieldType.Boolean, BooleanField)
-  ComponentRegistry.registerComponent(FieldType.Select, SelectField)
-  ComponentRegistry.registerComponent(FieldType.Object, ObjectField)
-  ComponentRegistry.registerComponent(FieldType.Array, ArrayField)
+  ComponentRegistry.registerComponent("string", TextField)
+  ComponentRegistry.registerComponent("boolean", BooleanField)
+  ComponentRegistry.registerComponent("object", ObjectField)
+  ComponentRegistry.registerComponent("array", ArrayField)
 }
 
 export {
