@@ -1,6 +1,9 @@
 import { JSONSchemaDefinition } from "../jsonschema"
 import { prependPrefix } from "../util/prefixMaker"
 
+/**
+ * use these Parameters for useField or useFieldWithValidation
+ */
 export interface IobjectProperty {
   mapTo: string
   prefix?: string
