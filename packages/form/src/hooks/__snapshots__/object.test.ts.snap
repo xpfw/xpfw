@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Hooks Test useObject: Before anything 1`] = `
+Object {
+  "fields": Array [
+    Object {
+      "mapTo": "myStringValue.checked",
+      "objectDefinition": Object {
+        "type": "boolean",
+      },
+      "prefix": undefined,
+    },
+    Object {
+      "mapTo": "myStringValue.id",
+      "objectDefinition": Object {
+        "type": "integer",
+      },
+      "prefix": undefined,
+    },
+    Object {
+      "mapTo": "myStringValue.name",
+      "objectDefinition": Object {
+        "type": "string",
+      },
+      "prefix": undefined,
+    },
+  ],
+}
+`;
