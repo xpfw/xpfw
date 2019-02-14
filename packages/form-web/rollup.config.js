@@ -20,6 +20,7 @@ export default {
     "mobx",
     "react",
     "react-dom",
+    "moment",
     "@xpfw/form"
   ]
 };
