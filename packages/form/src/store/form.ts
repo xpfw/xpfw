@@ -24,7 +24,7 @@ export class FormStoreClass {
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    * @param defaultValue value to return if it is not set in the form data
    */
-  public getValue(valuePath: string, prefix?: string, defaultValue?: any): any {
+  public getValue(valuePath?: string, prefix?: string, defaultValue?: any): any {
     return get(this.formData, prependPrefix(valuePath, prefix), defaultValue)
   }
 
@@ -35,7 +35,7 @@ export class FormStoreClass {
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    */
   @action
-  public setValue(valuePath: string, value: any, prefix?: string) {
+  public setValue(valuePath?: string, value?: any, prefix?: string) {
     set(this.formData, prependPrefix(valuePath, prefix), value)
   }
 
@@ -44,7 +44,7 @@ export class FormStoreClass {
    * @param valuePath key where the value of the field will be saved. uses lodash.get/set string syntax style so subfields, array indices etc. can be used within the string
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    */
-  public getError(valuePath: string, prefix?: string): any {
+  public getError(valuePath?: string, prefix?: string): any {
     return get(this.errors, prependPrefix(valuePath, prefix))
   }
 
@@ -55,8 +55,8 @@ export class FormStoreClass {
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    */
   @action
-  public setError(valuePath: string, value: any, prefix?: string) {
-    set(this.errors, valuePath, value)
+  public setError(valuePath?: string, value?: any, prefix?: string) {
+    set(this.errors, String(valuePath), value)
   }
 }
 
