@@ -20,6 +20,7 @@ export default {
     "mobx",
     "react",
     "react-dom",
+    "preact-render-to-json",
     "moment",
     "@xpfw/form"
   ]

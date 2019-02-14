@@ -21,6 +21,7 @@ export default {
     "react",
     "react-dom",
     "moment",
+    "preact-render-to-json",
     "@xpfw/form"
   ]
 };

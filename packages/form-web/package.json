@@ -24,9 +24,7 @@
     "@types/mockdate": "^2.0.0",
     "@types/node": "^11.9.3",
     "@types/react": "^16.8.2",
-    "@xpfw/form-shared": "0.1.5",
     "@xpfw/form-tests": "0.1.1",
-    "@xpfw/validate": "0.1.1",
     "@xpfw/form": "0.2.0",
     "awesome-typescript-loader": "^5.2.1",
     "jest": "^24.1.0",
@@ -65,12 +63,13 @@
     "moduleNameMapper": {
       "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts",
-      "preact-render-to-json": "preact-render-to-json",
-      "preact": "preact",
-      "react": "preact-compat",
-      "react-dom": "preact-compat",
-      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
-      "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared"
+      "^@xpfw/form-tests$": "<rootDir>/node_modules/@xpfw/form-tests",
+      "^@xpfw/form$": "<rootDir>/node_modules/@xpfw/form",
+      "^preact-render-to-json$": "preact-render-to-json",
+      "^preact$": "<rootDir>/node_modules/preact",
+      "^react$": "<rootDir>/node_modules/preact-compat",
+      "^react-dom$": "<rootDir>/node_modules/preact-compat",
+      "^lodash-es$": "<rootDir>/node_modules/lodash/index.js"
     },
     "moduleFileExtensions": [
       "ts",
