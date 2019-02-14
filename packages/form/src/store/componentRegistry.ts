@@ -4,6 +4,7 @@ import { JSONSchemaDefinition } from "../jsonschema"
 export interface IFieldProps {
   mapTo: string
   prefix?: string
+  theme?: string
   schema: JSONSchemaDefinition
 }
 

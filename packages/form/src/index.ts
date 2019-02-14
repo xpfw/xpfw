@@ -1,3 +1,4 @@
+import SharedField from "./components/field"
 import useArray from "./hooks/array"
 import { useField, useFieldWithValidation } from "./hooks/field"
 import useObject from "./hooks/object"
@@ -8,5 +9,6 @@ import prefixMaker from "./util/prefixMaker"
 
 export {
   useField, useFieldWithValidation, prefixMaker, FormStore, FormStoreClass,
-  useArray, useObject, ComponentRegistry, JSONSchemaDefinition, IFieldProps
+  useArray, useObject, ComponentRegistry, JSONSchemaDefinition, IFieldProps,
+  SharedField
 }
