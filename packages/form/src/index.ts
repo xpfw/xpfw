@@ -6,9 +6,10 @@ import { JSONSchemaDefinition } from "./jsonschema"
 import ComponentRegistry, { IFieldProps } from "./store/componentRegistry"
 import FormStore, { FormStoreClass } from "./store/form"
 import prefixMaker from "./util/prefixMaker"
+import getMapToFromProps from "./util/getMapToFromProps"
 
 export {
   useField, useFieldWithValidation, prefixMaker, FormStore, FormStoreClass,
   useArray, useObject, ComponentRegistry, JSONSchemaDefinition, IFieldProps,
-  SharedField
+  SharedField, getMapToFromProps
 }
