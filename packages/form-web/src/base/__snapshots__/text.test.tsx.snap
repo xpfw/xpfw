@@ -2,7 +2,7 @@
 
 exports[`Text Field Test: after date set 1`] = `2012-01-10T23:00:00.000Z`;
 
-exports[`Text Field Test: after datetime-local set 1`] = `2018-02-22T06:55:00.000Z`;
+exports[`Text Field Test: after datetime-local set 1`] = `2011-05-05T18:55:00.000Z`;
 
 exports[`Text Field Test: after time set 1`] = `2011-05-05T14:20:00.000Z`;
 
@@ -71,8 +71,8 @@ exports[`Text Field Test: as slider field with string number 1`] = `
 exports[`Text Field Test: date with content 1`] = `
 <input
   oninput={[Function]}
-  type="datetime-local"
-  value="2012-01-11T00:00"
+  type="date"
+  value="2012-01-11"
 />
 `;
 
@@ -103,23 +103,22 @@ exports[`Text Field Test: datetime-local with content 2`] = `
 exports[`Text Field Test: empty datetime-local field 1`] = `
 <input
   oninput={[Function]}
-  type="datetime-local"
-  value="2011-05-05T16:20"
+  type="date"
+  value="2011-05-05"
 />
 `;
 
 exports[`Text Field Test: empty datetime-local field 2`] = `
 <input
   oninput={[Function]}
-  type="datetime-local"
+  type="time"
   value="Invalid date"
 />
 `;
 
 exports[`Text Field Test: empty render 1`] = `
-<input
-  oninput={[Function]}
-  type="text"
+<UNDEFINED
+  schema={null}
 />
 `;
 
@@ -148,7 +147,7 @@ exports[`Text Field Test: password field 1`] = `
 exports[`Text Field Test: time with content 1`] = `
 <input
   oninput={[Function]}
-  type="datetime-local"
+  type="time"
   value="Invalid date"
 />
 `;

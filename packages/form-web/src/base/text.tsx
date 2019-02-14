@@ -1,4 +1,4 @@
-import { IFieldProps, JSONSchemaDefinition, useFieldWithValidation } from "@xpfw/form"
+import { getMapToFromProps, IFieldProps, JSONSchemaDefinition, useFieldWithValidation } from "@xpfw/form"
 import { get } from "lodash"
 import * as momentA from "moment"
 import * as React from "react"
@@ -24,7 +24,7 @@ const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) 
   }
 }
 const TextField: React.FunctionComponent<IFieldProps> = (props) => {
-  const fieldHelper = useFieldWithValidation(props.mapTo, props.schema, props.prefix)
+  const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix)
   const fieldType = get(props, "schema.type")
   const format = get(props, "schema.format")
   let value = fieldHelper.value
