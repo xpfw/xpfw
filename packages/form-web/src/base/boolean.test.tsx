@@ -1,7 +1,7 @@
-import { ComponentRegistry } from "@xpfw/form-shared"
-import { tests } from "@xpfw/form-tests"
-import { FieldType  } from "@xpfw/validate"
+import { ComponentRegistry } from "@xpfw/form"
+import { booleanTest } from "@xpfw/form-tests"
 import BooleanField from "./boolean"
-ComponentRegistry.registerComponent(FieldType.Boolean, BooleanField)
 
-test("Boolean Field Test", tests.boolean)
+ComponentRegistry.registerComponent("boolean", BooleanField)
+
+test("Boolean Field Test", booleanTest)

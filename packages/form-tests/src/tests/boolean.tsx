@@ -1,23 +1,21 @@
-import { FormStore, SharedField } from "@xpfw/form-shared"
-import { globals, IField } from "@xpfw/validate"
+import { FormStore, JSONSchemaDefinition, SharedField } from "@xpfw/form"
 import * as React from "react"
 import render from "../testUtil/render"
 
-const BooleanField: IField = {
-  mapTo: "valOfBool",
-  type: globals.FieldType.Boolean,
-  validate: {}
+const BooleanField: any = {
+  title: "valOfBool",
+  type: "boolean"
 }
 
 const booleanTest = () => {
   const n: any = null
-  render(<SharedField field={BooleanField} />, "boolfield")
-  FormStore.setValue(BooleanField.mapTo, true)
-  render(<SharedField field={BooleanField} />, "set to true")
-  FormStore.setValue(BooleanField.mapTo, false)
-  render(<SharedField field={BooleanField} />, "set to false")
-  FormStore.setValue(BooleanField.mapTo, "invalid")
-  render(<SharedField field={BooleanField} />, "set to invalid")
+  render(<SharedField mapTo={BooleanField.title} schema={BooleanField} />, "boolfield")
+  FormStore.setValue(BooleanField.title, true)
+  render(<SharedField mapTo={BooleanField.title} schema={BooleanField} />, "set to true")
+  FormStore.setValue(BooleanField.title, false)
+  render(<SharedField mapTo={BooleanField.title} schema={BooleanField} />, "set to false")
+  FormStore.setValue(BooleanField.title, "invalid")
+  render(<SharedField mapTo={BooleanField.title} schema={BooleanField} />, "set to invalid")
 }
 
 export default booleanTest

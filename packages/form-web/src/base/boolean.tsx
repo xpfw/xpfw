@@ -1,22 +1,19 @@
-import { IFieldProps } from "@xpfw/form-shared"
+import { IFieldProps, useFieldWithValidation } from "@xpfw/form"
+import { get } from "lodash"
 import * as React from "react"
 import { setFromEvent } from "./valueUtil"
 
-class BooleanField extends React.Component<IFieldProps, any> {
-  private onChange: any
-  constructor(props: any) {
-    super(props)
-    this.onChange = setFromEvent(this, "nativeEvent.target.checked")
-  }
-  public render() {
-    return (
-      <input
-        type="checkbox"
-        checked={this.props.value}
-        onChange={this.onChange}
-      />
-    )
-  }
+const BooleanField: React.FunctionComponent<IFieldProps> = (props) => {
+  const fieldHelper = useFieldWithValidation(props.mapTo, props.schema, props.prefix)
+  return (
+    <input
+      type="checkbox"
+      id={get(props, "id")}
+      className={get(props, "className")}
+      checked={fieldHelper.value}
+      onChange={setFromEvent(fieldHelper.setValue, "nativeEvent.target.value")}
+    />
+  )
 }
 
 export default BooleanField
