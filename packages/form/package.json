@@ -22,19 +22,20 @@
     "@types/lodash-es": "^4.17.1",
     "@types/mockdate": "^2.0.0",
     "@types/react": "^16.8.2",
+    "ajv": "^6.9.1",
     "jest": "^24.1.0",
     "jest-cli": "^24.1.0",
     "lodash": "^4.17.11",
+    "lodash-es": "^4.17.11",
+    "mobx": "^5.9.0",
+    "react": "^16.8.1",
     "rollup": "^1.1.2",
     "rollup-plugin-typescript2": "^0.19.2",
     "rollup-plugin-uglify": "^6.0.2",
     "ts-jest": "=23.10.5",
     "tslib": "^1.9.3",
     "typescript": "^3.3.3",
-    "uglify-es": "^3.3.10",
-    "ajv": "^6.9.1",
-    "lodash-es": "^4.17.11",
-    "mobx": "^5.9.0"
+    "uglify-es": "^3.3.10"
   },
   "jest": {
     "transform": {
