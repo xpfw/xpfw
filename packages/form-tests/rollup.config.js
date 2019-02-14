@@ -21,6 +21,7 @@ export default {
     "react",
     "react-dom",
     "moment",
+    "mockdate",
     "preact-render-to-json",
     "@xpfw/form"
   ]
