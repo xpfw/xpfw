@@ -2,7 +2,7 @@ import * as React from "react"
 import { JSONSchemaDefinition } from "../jsonschema"
 
 export interface IFieldProps {
-  mapTo: string
+  mapTo?: string
   prefix?: string
   theme?: string
   schema: JSONSchemaDefinition

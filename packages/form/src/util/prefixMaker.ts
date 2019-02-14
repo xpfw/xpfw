@@ -12,7 +12,7 @@ const prefixMaker = (prefix?: string) => {
  * This is done so that prefixed values are saved in an own object inside of e.g. FormStore
  * @param prefix
  */
-const prependPrefix = (mapTo: string, prefix?: string) => {
+const prependPrefix = (mapTo?: string, prefix?: string) => {
   return `${prefixMaker(prefix)}${mapTo}`
 }
 
