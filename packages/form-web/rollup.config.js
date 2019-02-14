@@ -14,16 +14,12 @@ export default {
     // uglify({}, minify)
   ],
   external: [
+    "ajv",
     "lodash",
-    "moment",
-    "feathers-client",
-    "resub",
-    "resub-persist",
-    "socket.io-client",
-    "@xpfw/validate",
-    "@xpfw/form-shared",
+    "lodash-es",
+    "mobx",
     "react",
     "react-dom",
-    "leaflet"
+    "@xpfw/form"
   ]
 };
