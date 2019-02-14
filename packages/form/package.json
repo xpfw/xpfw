@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "@types/ajv": "^1.0.0",
-    "@types/jest": "^24.0.0",
-    "@types/lodash-es": "^4.17.1",
+    "@types/jest": "^24.0.4",
+    "@types/lodash-es": "^4.17.2",
     "@types/mockdate": "^2.0.0",
-    "@types/react": "^16.8.2",
+    "@types/react": "^16.8.3",
     "ajv": "^6.9.1",
     "jest": "^24.1.0",
     "jest-cli": "^24.1.0",
