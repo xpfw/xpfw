@@ -1,7 +1,6 @@
 import { get, set } from "lodash-es"
-import { observable } from "mobx"
+import { action, observable } from "mobx"
 import { prependPrefix } from "../util/prefixMaker"
-import { action } from "mobx"
 
 /**
  * Holds data relevant for Forms such as values and validation errors
