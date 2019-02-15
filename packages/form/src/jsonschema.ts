@@ -87,4 +87,20 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
    * Could for example be used to render custom components per field
    */
   theme?: string
+  collection?: string
+  multiCollection?: string[]
+  relationship?: {
+    /**
+     * Collection to search in if Field has type RelationshipSingle or RelationshipMany
+     */
+    collection?: string
+    /**
+     * Path to get name from if has type RelationshipSingle or RelationshipMany
+     */
+    namePath?: string
+    /**
+     * Path to get id from if has type RelationshipSingle or RelationshipMany
+     */
+    idPath?: string
+  }
 }

@@ -1,44 +1,39 @@
-import { FormStore } from "@xpfw/form-shared"
-import { globals } from "@xpfw/validate"
-import { get, isNil, isNumber, set } from "lodash"
-import { AutoSubscribeStore, autoSubscribeWithKey, StoreBase } from "resub"
-import { IPersistableStore } from "resub-persist"
+import { FormStore } from "@xpfw/form"
+import { get, isNil } from "lodash-es"
+import { action, observable } from "mobx"
 import BackendClient from "../client"
 import { AuthForm, PwField } from "../components/auth"
+import dataOptions from "../options"
 import DbStore from "./db"
 
-@AutoSubscribeStore
-export class UserStore extends StoreBase implements IPersistableStore {
-  public name = "userStore"
+export class UserStore {
+  @observable
   public user: any = null
+  @observable
   private loggedIn: boolean = false
+  @observable
   private loading: boolean = false
+  @observable
   private authErr: any = null
+  @observable
   private connected: boolean = false
 
-  public getPropKeys() { return ["user", "loggedIn", "loading", "authErr", "connected"] }
-
-  @autoSubscribeWithKey("loading")
   public getLoading() {
     return this.loading
   }
 
-  @autoSubscribeWithKey("user")
   public getUser() {
     return this.user
   }
 
-  @autoSubscribeWithKey("loggedIn")
   public getLoggedIn() {
     return this.loggedIn
   }
 
-  @autoSubscribeWithKey("authErr")
   public getAuthErr() {
     return this.authErr
   }
 
-  @autoSubscribeWithKey("connected")
   public getConnected() {
     return this.connected
   }
@@ -48,26 +43,24 @@ export class UserStore extends StoreBase implements IPersistableStore {
     const ADbStore: any = DbStore
     // TODO: more elegant solution maybe?
     // doing this because xpfw/ui-feathers already fetdches from server so two roundtrips would be dumb
-    if (isNil(ADbStore.getState[globals.options.userCollection])) {
-      ADbStore.getState[globals.options.userCollection] = {}
+    if (isNil(ADbStore.getState[dataOptions.userCollection])) {
+      ADbStore.getState[dataOptions.userCollection] = {}
     }
-    ADbStore.getState[globals.options.userCollection][get(user, globals.options.userIdPath, "-1")] = {result: user}
+    ADbStore.getState[dataOptions.userCollection][get(user, dataOptions.userIdPath, "-1")] = {result: user}
     this.loggedIn = true
     this.authErr = null
-    this.trigger()
   }
 
   public async login() {
-    const loginData = FormStore.getFormData(AuthForm)
+    const loginData = FormStore.getValue(String(AuthForm.title))
     loginData.strategy = "local"
     try {
       this.loading = true
-      this.trigger()
       const loginRes = await BackendClient.client.login(loginData)
       this.loading = false
       const user = get(loginRes, "user")
       this.setLoggedIn(user)
-      FormStore.setValue(PwField.mapTo, "")
+      FormStore.setValue(PwField.title, "")
       return loginRes
     } catch (e) {
       this.authErr = e
@@ -77,19 +70,16 @@ export class UserStore extends StoreBase implements IPersistableStore {
   }
 
   public async register() {
-    const newUser = FormStore.getFormData(AuthForm)
+    const newUser = FormStore.getValue(String(AuthForm.title))
     try {
       this.loading = true
-      this.trigger()
       const res = await BackendClient.client.register(newUser)
       this.loading = false
       this.setLoggedIn(res)
-      this.trigger()
       return res
     } catch (e) {
       this.authErr = e
       this.loading = false
-      this.trigger()
       return e
     }
   }
@@ -103,11 +93,9 @@ export class UserStore extends StoreBase implements IPersistableStore {
     this.user = null
     this.loggedIn = false
     this.loading = false
-    this.trigger()
   }
   public setConnected(newCon: boolean) {
     this.connected = newCon
-    this.trigger("connected")
   }
 }
 

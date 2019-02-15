@@ -1,7 +1,6 @@
-import { ValidationRegistry } from "@xpfw/validate"
 import BackendClient, { IBackendClient, IUiClient } from "./client"
-import SharedFormAuth, {
-  AuthForm, IFormAuthProps, ISharedFormAuth, ISharedFormAuthState, MailField, OwnerField, PwField
+import useAuth, {
+  AuthForm, MailField, OwnerField, PwField
 } from "./components/auth"
 import SharedFormCreate, {
   IFormCreateProps, ISharedFormCreate, ISharedFormCreateState, SubmitCreate
@@ -22,20 +21,19 @@ import RelationShipWrapper, {
   addId, getListFormFromRelationshipField, ISharedRelationshipField,
   ISharedRelationshipFieldProps, removeId, searchRelated
 } from "./form/relationship"
+import dataOptions from "./options"
 import DbStore, { REMOVE_ADDON_KEY } from "./store/db"
 import ListStore from "./store/list"
 import UserStore from "./store/user"
 
-ValidationRegistry.registerForm(AuthForm)
-
 export {
-  DbStore, ListStore, BackendClient, IBackendClient, IUiClient,
+  DbStore, ListStore, BackendClient, IBackendClient, IUiClient, dataOptions,
   SharedFormCreate, ISharedFormCreate, ISharedFormCreateState, IFormCreateProps, SubmitCreate,
   SharedFormList, IFormListProps, ISharedFormList, ISharedFormListState,
   SharedFormEdit, IFormEditProps, ISharedFormEdit, ISharedFormEditState,
   SharedFormShow, IFormShowProps, ISharedFormShow, ISharedFormShowState,
   SharedFormRemove, IFormRemoveProps, ISharedFormRemove, ISharedFormRemoveState,
-  SharedFormAuth, IFormAuthProps, ISharedFormAuth, ISharedFormAuthState,
+  useAuth,
   UserStore, AuthForm, PwField, MailField, OwnerField,
   RelationShipWrapper, addId, removeId, searchRelated, getListFormFromRelationshipField,
   ISharedRelationshipFieldProps, ISharedRelationshipField, REMOVE_ADDON_KEY
