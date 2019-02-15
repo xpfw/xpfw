@@ -1,5 +1,5 @@
 import { ValidationRegistry } from "@xpfw/validate"
-import BackendClient, { IBackendClient } from "./client"
+import BackendClient, { IBackendClient, IUiClient } from "./client"
 import SharedFormAuth, {
   AuthForm, IFormAuthProps, ISharedFormAuth, ISharedFormAuthState, MailField, OwnerField, PwField
 } from "./components/auth"
@@ -29,7 +29,7 @@ import UserStore from "./store/user"
 ValidationRegistry.registerForm(AuthForm)
 
 export {
-  DbStore, ListStore, BackendClient, IBackendClient,
+  DbStore, ListStore, BackendClient, IBackendClient, IUiClient,
   SharedFormCreate, ISharedFormCreate, ISharedFormCreateState, IFormCreateProps, SubmitCreate,
   SharedFormList, IFormListProps, ISharedFormList, ISharedFormListState,
   SharedFormEdit, IFormEditProps, ISharedFormEdit, ISharedFormEditState,

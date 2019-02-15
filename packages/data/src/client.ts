@@ -1,4 +1,29 @@
-import { IUiClient } from "@xpfw/validate"
+export interface IUiClient {
+  client: any
+  connectTo: (url: string, options?: {
+    authOptions?: any,
+    makeAuth?: boolean,
+    useRest?: boolean,
+    userStore?: any
+    /**
+     * Pass the dbStore to get realtime updates
+     */
+    dbStore?: any
+    /**
+     * Realtime Updates will only be fetched for collections defined here
+     */
+    collections?: string[]
+  }) => void
+  disconnect: () => void,
+  login: (loginData: any) => Promise<{user: any, custom?: any}>,
+  register: (registerData: any) => Promise<any>,
+  logout: () => Promise<any>,
+  get: (collection: string, id: any) => Promise<any>,
+  remove: (collection: string, id: any) => Promise<any>,
+  create: (collection: string, createData: any) => Promise<any>,
+  find: (collection: string, createData: any) => Promise<any>,
+  patch: (collection: string, id: any, createData: any) => Promise<any>,
+}
 
 export interface IBackendClient {
   client: IUiClient
