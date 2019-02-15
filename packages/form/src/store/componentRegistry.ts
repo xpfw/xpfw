@@ -1,11 +1,11 @@
 import * as React from "react"
-import { JSONSchemaDefinition } from "../jsonschema"
+import { ExtendedJSONSchema } from "../jsonschema"
 
 export interface IFieldProps {
   mapTo?: string
   prefix?: string
   theme?: string
-  schema: JSONSchemaDefinition
+  schema: ExtendedJSONSchema
 }
 
 export class ComponentRegistryClass {

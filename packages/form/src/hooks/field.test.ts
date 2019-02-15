@@ -26,24 +26,24 @@ describe("Form Hooks Test", () => {
     const valueOne = "theFirstValue"
     const valueTwo = 42
     // set valid value
-    let numberHook = useFieldWithValidation(valueToSet, numberScheme)
+    let numberHook = useFieldWithValidation(numberScheme, valueToSet)
     numberHook.setValue(valueTwo)
-    numberHook = useFieldWithValidation(valueToSet, numberScheme)
+    numberHook = useFieldWithValidation(numberScheme, valueToSet)
     expect(numberHook.value).toBe(valueTwo)
     expect(numberHook.error).toMatchSnapshot(" no error because valid number ")
     // set invalid value
     numberHook.setValue(valueOne)
-    numberHook = useFieldWithValidation(valueToSet, numberScheme)
+    numberHook = useFieldWithValidation(numberScheme, valueToSet)
     expect(numberHook.value).toBe(valueOne)
     const initialError = numberHook.error
     expect(numberHook.error).toMatchSnapshot("Error because not a valid number instead it's a string")
     // set valid value with prefix while previous value should stay untouched due to the prefix in use
-    let withPrefix = useFieldWithValidation(valueToSet, numberScheme, "myPrefixValue")
+    let withPrefix = useFieldWithValidation(numberScheme, valueToSet, "myPrefixValue")
     withPrefix.setValue(valueTwo)
-    numberHook = useFieldWithValidation(valueToSet, numberScheme)
+    numberHook = useFieldWithValidation(numberScheme, valueToSet)
     expect(numberHook.value).toBe(valueOne)
     expect(initialError).toBe(numberHook.error)
-    withPrefix = useFieldWithValidation(valueToSet, numberScheme, "myPrefixValue")
+    withPrefix = useFieldWithValidation(numberScheme, valueToSet, "myPrefixValue")
     expect(withPrefix.value).toBe(valueTwo)
   })
 })

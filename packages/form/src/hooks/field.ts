@@ -1,7 +1,8 @@
 import { action } from "mobx"
-import { JSONSchemaDefinition } from "../jsonschema"
+import { ExtendedJSONSchema } from "../jsonschema"
 import jsonValidator from "../jsonValidator"
 import FormStore from "../store/form"
+import memo from "../util/memo"
 
 /**
  * Hook to acquire a value and a function to change it
@@ -10,9 +11,9 @@ import FormStore from "../store/form"
  */
 const useField = (mapTo: string, prefix?: string) => {
   const value = FormStore.getValue(mapTo, prefix)
-  const setValue = (newValue: any) => {
+  const setValue = memo(() => (newValue: any) => {
     FormStore.setValue(mapTo, newValue, prefix)
-  }
+  }, [mapTo, prefix])
   return {
     /**
      * mobx tracked value of the field
@@ -33,15 +34,15 @@ const useField = (mapTo: string, prefix?: string) => {
  * @param prefix prepended to mapTo to allow same mapTo keys to have different values
  * @returns
  */
-const useFieldWithValidation = (definition: JSONSchemaDefinition, mapTo?: string, prefix?: string) => {
+const useFieldWithValidation = (definition: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   const originalWrapped = useField(mapTo ? mapTo : String(definition.title), prefix)
-  const setValue = action((newValue: any) => {
+  const setValue = memo(() => action((newValue: any) => {
     originalWrapped.setValue(newValue)
     const validationResults = jsonValidator.validate(definition, newValue)
     if (validationResults === false) {
       FormStore.setError(mapTo, jsonValidator.errors, prefix)
     }
-  })
+  }), [JSON.stringify(definition), mapTo, prefix])
   return {
     /**
      * mobx tracked value of the field

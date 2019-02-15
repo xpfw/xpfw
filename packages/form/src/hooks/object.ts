@@ -1,4 +1,4 @@
-import { JSONSchemaDefinition } from "../jsonschema"
+import { ExtendedJSONSchema } from "../jsonschema"
 import { prependPrefix } from "../util/prefixMaker"
 
 /**
@@ -7,7 +7,7 @@ import { prependPrefix } from "../util/prefixMaker"
 export interface IobjectProperty {
   mapTo: string
   prefix?: string
-  objectDefinition: JSONSchemaDefinition
+  objectDefinition: ExtendedJSONSchema
 }
 
 /**
@@ -16,8 +16,11 @@ export interface IobjectProperty {
  * @param objectDefinition JSONSchema for the type object. It is expected that the properties Field exists
  * @param prefix prepended to mapTo to allow same mapTo keys to have different values
  */
-const useObject = (mapTo: string, objectDefinition: JSONSchemaDefinition, prefix?: string) => {
+const useObject = (objectDefinition: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   const fields: IobjectProperty[] = []
+  if (mapTo == null) {
+    mapTo = objectDefinition.title
+  }
   if (objectDefinition != null && objectDefinition.properties != null) {
     const u: any = objectDefinition.properties
     for (const key of Object.keys(u)) {

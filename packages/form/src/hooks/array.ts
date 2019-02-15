@@ -1,10 +1,10 @@
 import { isNumber, memoize } from "lodash-es"
 import { action } from "mobx"
 import FormStore from "../store/form"
-import { prependPrefix } from "../util/prefixMaker"
+import memo from "../util/memo"
 
 const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: number) => {
-  return action(() => {
+  return memo(() => action(() => {
     const currentArray = FormStore.getValue(mapTo, prefix, [undefined])
     const length = currentArray.length
     if (!isNumber(insertAt)) {
@@ -16,7 +16,7 @@ const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: numbe
       currentArray.splice(insertAt, 1)
     }
     FormStore.setValue(mapTo, currentArray, prefix)
-  })
+  }), [mapTo, prefix, isAdd, insertAt])
 }
 export interface IArrayfield  {
   mapTo: string
