@@ -1,25 +1,19 @@
-import { FormStore, SharedField } from "@xpfw/form-shared"
-import { globals, IField, TestDefs } from "@xpfw/validate"
+import { SharedField, useFieldWithValidation, useObject } from "@xpfw/form"
 import * as React from "react"
 import render from "../testUtil/render"
+import { ObjectField } from "../testUtil/schema"
 
-const NumberObjectField: IField = {
-  mapTo: "m",
-  type: globals.FieldType.Location,
-  validate: {}
+const objectTest = () => {
+  const objField = ObjectField
+  const objectTook = useObject(objField)
+  const subField = useFieldWithValidation(objectTook.fields[0].objectDefinition, objectTook.fields[0].mapTo)
+  render(<SharedField schema={objField} />, "locationField")
+  subField.setValue(41)
+  render(<SharedField schema={objField} />, "set to validLocation")
+  subField.setValue(767)
+  render(<SharedField schema={objField} />, "set to otherValidLocation")
+  subField.setValue("invalid")
+  render(<SharedField schema={objField} />, "set to invalid")
 }
 
-const locationTest = () => {
-  const n: any = null
-  const objField = TestDefs.NumberObjectField
-  const objChildField = TestDefs.NumberField
-  render(<SharedField field={objField} />, "locationField")
-  FormStore.setValue(`${objField.mapTo}.${objChildField.mapTo}`, 41)
-  render(<SharedField field={objField} />, "set to validLocation")
-  FormStore.setValue(`${objField.mapTo}.${objChildField.mapTo}`, 767)
-  render(<SharedField field={objField} />, "set to otherValidLocation")
-  FormStore.setValue(`${objField.mapTo}.${objChildField.mapTo}`, "invalid")
-  render(<SharedField field={objField} />, "set to invalid")
-}
-
-export default locationTest
+export default objectTest

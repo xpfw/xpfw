@@ -1,11 +1,7 @@
 import { FormStore, JSONSchemaDefinition, SharedField } from "@xpfw/form"
 import * as React from "react"
 import render from "../testUtil/render"
-
-const BooleanField: any = {
-  title: "valOfBool",
-  type: "boolean"
-}
+import { BooleanField } from "../testUtil/schema"
 
 const booleanTest = () => {
   const n: any = null

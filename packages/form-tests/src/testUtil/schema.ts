@@ -1,4 +1,4 @@
-import { JSONSchemaDefinition } from "@xpfw/form"
+import { ExtendedJSONSchema, JSONSchemaDefinition } from "@xpfw/form"
 
 const DateField: JSONSchemaDefinition = {
   title: "dateVal",
@@ -22,6 +22,47 @@ const NameField: JSONSchemaDefinition = {
   title: "guestName"
 }
 
+const SelectField: ExtendedJSONSchema = {
+  title: "selectMeVal",
+  type: "number",
+  format: "select",
+  selectOptions: [
+    {label: "c", value: 4},
+    {label: "a", value: 2}
+  ]
+}
+
+const LocationField: ExtendedJSONSchema = {
+  title: "valOfBool",
+  type: "array",
+  theme: "location",
+  items: {
+    type: "number"
+  }
+}
+
+const ObjectField: JSONSchemaDefinition = {
+  type: "object",
+  title: "objectKey",
+  properties: {
+    [String(NumberField.title)]: NumberField
+  }
+}
+
+const BooleanField: JSONSchemaDefinition = {
+  title: "valOfBool",
+  type: "boolean"
+}
+
+const ArrayField: JSONSchemaDefinition = {
+  title: "myArray",
+  type: "array",
+  items: {
+    type: "string"
+  }
+}
+
 export {
-  NumberField, NameField, DateField, PwField
+  ArrayField, BooleanField, DateField, LocationField, NameField,
+  NumberField, ObjectField, PwField, SelectField
 }
