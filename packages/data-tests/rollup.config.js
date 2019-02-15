@@ -14,19 +14,35 @@ export default {
     // uglify({}, minify)
   ],
   external: [
+    "isomorphic-fetch",
+    "ajv",
     "lodash",
+    "lodash-es",
+    "mobx",
+    "react",
+    "react-dom",
+    "preact-render-to-json",
     "moment",
-    "feathers-client",
+    "mockdate",
+    "@xpfw/form",
+    "moment",
+    "@feathersjs/feathers",
+    "@feathersjs/authentication-client",
+    "@feathersjs/socketio-client",
+    "@feathersjs/rest-client",
     "resub",
     "resub-persist",
     "socket.io-client",
     "@xpfw/validate",
     "@xpfw/form-shared",
-    "@xpfw/ui-shared",
+    "@xpfw/ui-tests",
     "@xpfw/ui-feathers",
+    "@xpfw/data",
+    "@xpfw/data-tests",
+    "@xpfw/data-feathers",
     "@xpfw/test-util",
     "react",
     "react-dom",
-    "preact-render-to-json"
+    "isomorphic-fetch"
   ]
 };

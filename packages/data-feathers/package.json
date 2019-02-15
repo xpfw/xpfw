@@ -1,6 +1,6 @@
 {
-  "name": "@xpfw/ui-feathers",
-  "version": "0.1.1",
+  "name": "@xpfw/data-feathers",
+  "version": "0.2.0",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
@@ -9,13 +9,13 @@
     "@feathersjs/feathers": "^3.3.1",
     "@feathersjs/rest-client": "^1.4.7",
     "@feathersjs/socketio-client": "^1.2.1",
-    "resub-persist": "^1.2.8",
     "socket.io-client": "^2.2.0"
   },
   "peerDependencies": {
     "lodash": "4.x.x",
     "moment": "2.x.x",
-    "@xpfw/validate": "0.1.x"
+    "@xpfw/form": "0.2.x",
+    "@xpfw/data": "0.2.x"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -25,19 +25,22 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
+    "lodash-es": "^4.17.11",
+    "mobx": "^5.9.0",
+    "ajv": "^6.9.1",
     "@types/feathersjs__authentication-client": "^1.0.4",
     "@types/feathersjs__feathers": "^3.1.1",
     "@types/feathersjs__rest-client": "^1.3.0",
     "@types/feathersjs__socketio-client": "^1.0.1",
     "@types/jest": "^23.3.12",
     "@types/lodash": "^4.14.119",
+    "@types/lodash-es": "^4.14.118",
     "@types/mockdate": "^2.0.0",
     "@types/socket.io-client": "^1.4.32",
-    "@xpfw/form-shared": "^0.1.2",
+    "@xpfw/form": "^0.2.0",
     "@xpfw/test-util": "0.1.1",
-    "@xpfw/ui-shared": "^0.1.1",
-    "@xpfw/ui-tests": "0.1.1",
-    "@xpfw/validate": "^0.1.1",
+    "@xpfw/data": "^0.2.0",
+    "@xpfw/data-tests": "0.2.0",
     "isomorphic-fetch": "^2.2.1",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
