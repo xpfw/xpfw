@@ -5,7 +5,6 @@ import * as MockDate from "mockdate"
 import * as React from "react"
 import render from "../testUtil/render"
 import TextField, { setDate } from  "./text"
-import { setFromEvent } from "./valueUtil"
 MockDate.set(new Date(2011, 4, 5, 16, 20, 42, 1337))
 
 ComponentRegistry.registerComponent("string", TextField)
@@ -29,11 +28,4 @@ test("Text Field Test", () => {
   dateSetter({value: "16:20"})
   expect(setTo).toMatchSnapshot("after time set")
   render(<SharedField schema={DateField} />, "time with content")
-
-  let called = 0
-  const setValue = () => called++
-  const valueSetter = setFromEvent(setValue, "value")
-  expect(called).toBe(0)
-  valueSetter(undefined)
-  expect(called).toBe(1)
 })

@@ -45,7 +45,8 @@ const ObjectField: JSONSchemaDefinition = {
   type: "object",
   title: "objectKey",
   properties: {
-    [String(NumberField.title)]: NumberField
+    [String(NumberField.title)]: NumberField,
+    secondNum: NumberField
   }
 }
 

@@ -6,7 +6,7 @@ import { ObjectField } from "../testUtil/schema"
 const objectTest = () => {
   const objField = ObjectField
   const objectTook = useObject(objField)
-  const subField = useFieldWithValidation(objectTook.fields[0].objectDefinition, objectTook.fields[0].mapTo)
+  const subField = useFieldWithValidation(objectTook.fields[0].schema, objectTook.fields[0].mapTo)
   render(<SharedField schema={objField} />, "locationField")
   subField.setValue(41)
   render(<SharedField schema={objField} />, "set to validLocation")

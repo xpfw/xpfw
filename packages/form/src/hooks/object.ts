@@ -1,14 +1,6 @@
 import { ExtendedJSONSchema } from "../jsonschema"
+import { IFieldProps } from "../store/componentRegistry"
 import { prependPrefix } from "../util/prefixMaker"
-
-/**
- * use these Parameters for useField or useFieldWithValidation
- */
-export interface IobjectProperty {
-  mapTo: string
-  prefix?: string
-  objectDefinition: ExtendedJSONSchema
-}
 
 /**
  * Helper function to render object types
@@ -17,7 +9,7 @@ export interface IobjectProperty {
  * @param prefix prepended to mapTo to allow same mapTo keys to have different values
  */
 const useObject = (objectDefinition: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
-  const fields: IobjectProperty[] = []
+  const fields: IFieldProps[] = []
   if (mapTo == null) {
     mapTo = objectDefinition.title
   }
@@ -26,7 +18,7 @@ const useObject = (objectDefinition: ExtendedJSONSchema, mapTo?: string, prefix?
     for (const key of Object.keys(u)) {
       fields.push({
         mapTo: prependPrefix(key, mapTo),
-        prefix, objectDefinition: u[key]
+        prefix, schema: u[key]
       })
     }
   }

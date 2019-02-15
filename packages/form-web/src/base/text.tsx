@@ -1,8 +1,7 @@
-import { getMapToFromProps, IFieldProps, JSONSchemaDefinition, useFieldWithValidation } from "@xpfw/form"
+import { getMapToFromProps, IFieldProps, JSONSchemaDefinition, memo, useFieldWithValidation } from "@xpfw/form"
 import { get } from "lodash"
 import * as momentA from "moment"
 import * as React from "react"
-import { setFromEvent } from "./valueUtil"
 
 const moment: any = momentA
 const getOriginalFormatFromType = (dateType?: string) => {
@@ -24,15 +23,18 @@ const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) 
   }
 }
 const TextField: React.FunctionComponent<IFieldProps> = (props) => {
-  const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix)
-  const fieldType = get(props, "schema.type")
   const format = get(props, "schema.format")
+  const isDate = format === "date" || format === "date-time" || format === "time"
+  const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix, {
+    valueEventKey: "nativeEvent.target.value"
+  })
+  const fieldType = get(props, "schema.type")
   let value = fieldHelper.value
   let type = "text"
   let min
   let max
   let step
-  let onChange = setFromEvent(fieldHelper.setValue, "nativeEvent.target.value")
+  let onChange = fieldHelper.setValue
   if (fieldType === "number") {
     type = "number"
     min = get(props, "schema.minimum")
@@ -43,8 +45,9 @@ const TextField: React.FunctionComponent<IFieldProps> = (props) => {
     type = "range"
   } else if (format === "password") {
     type = "password"
-  } else if (format === "date" || format === "date-time" || format === "time") {
-    onChange = setDate(fieldHelper.setValue, props.schema, "nativeEvent.target.value")
+  } else if (isDate) {
+    onChange = memo(setDate(fieldHelper.setValue, props.schema, "nativeEvent.target.value"),
+      [JSON.stringify(props.schema), props.mapTo, props.prefix])
     if (format === "date") {
       type = "date"
     } else if (format === "time") {

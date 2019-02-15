@@ -1,32 +1,303 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Boolean Field Test: boolfield 1`] = `
-<input
-  onChange={[Function]}
-  type="checkbox"
-/>
+exports[`Array Field Test: got three values 1`] = `
+<div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex center"
+  >
+    <a
+      class="is-fullwidth is-info"
+      onClick={[Function]}
+    >
+      Add
+    </a>
+  </div>
+</div>
 `;
 
-exports[`Boolean Field Test: set to false 1`] = `
-<input
-  checked={false}
-  onChange={[Function]}
-  type="checkbox"
-/>
+exports[`Array Field Test: increased size to four 1`] = `
+<div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex center"
+  >
+    <a
+      class="is-fullwidth is-info"
+      onClick={[Function]}
+    >
+      Add
+    </a>
+  </div>
+</div>
 `;
 
-exports[`Boolean Field Test: set to invalid 1`] = `
-<input
-  checked="invalid"
-  onChange={[Function]}
-  type="checkbox"
-/>
+exports[`Array Field Test: removed second item 1`] = `
+<div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex center"
+  >
+    <a
+      class="is-fullwidth is-info"
+      onClick={[Function]}
+    >
+      Add
+    </a>
+  </div>
+</div>
 `;
 
-exports[`Boolean Field Test: set to true 1`] = `
-<input
-  checked={true}
-  onChange={[Function]}
-  type="checkbox"
-/>
+exports[`Array Field Test: unchanged render 1`] = `
+<div>
+  <div
+    class="flex flex1 center"
+  >
+    <UNDEFINED
+      schema={
+        Object {
+          "type": "string",
+        }
+      }
+    />
+    <a
+      class="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
+    class="flex center"
+  >
+    <a
+      class="is-fullwidth is-info"
+      onClick={[Function]}
+    >
+      Add
+    </a>
+  </div>
+</div>
 `;

@@ -1,5 +1,6 @@
 import { isNumber, memoize } from "lodash-es"
 import { action } from "mobx"
+import { ExtendedJSONSchema } from "../jsonschema"
 import FormStore from "../store/form"
 import memo from "../util/memo"
 
@@ -21,6 +22,7 @@ const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: numbe
 export interface IArrayfield  {
   mapTo: string
   prefix?: string
+  schema: ExtendedJSONSchema
   increaseSize: () => void
   decreaseSize: () => void
 }
@@ -31,15 +33,20 @@ export interface IArrayfield  {
  * @param mapTo key where the value of the field will be saved. uses lodash.get/set string syntax style so subfields, array indices etc. can be used within the string
  * @param prefix prepended to mapTo to allow same mapTo keys to have different values
  */
-const useArrayHelper = (mapTo: string, prefix?: string) => {
+const useArrayHelper = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
+  if (mapTo == null) {
+    mapTo = schema.title
+  }
   const length = FormStore.getValue(`${mapTo}.length`, prefix, 1)
   const fields: IArrayfield[] = []
+  const subSchema: any = schema.items
   for (let i = 0; i < length; i++) {
     fields.push({
       mapTo: `${mapTo}[${i}]`,
       prefix,
-      increaseSize: changeSize(mapTo, prefix, true, i),
-      decreaseSize: changeSize(mapTo, prefix, false, i)
+      schema: Array.isArray(subSchema) ? subSchema[i] : subSchema,
+      increaseSize: changeSize(String(mapTo), prefix, true, i),
+      decreaseSize: changeSize(String(mapTo), prefix, false, i)
     })
   }
   return {
@@ -50,11 +57,11 @@ const useArrayHelper = (mapTo: string, prefix?: string) => {
     /**
      * Increase the size of the array by one
      */
-    increaseSize: changeSize(mapTo, prefix, true),
+    increaseSize: changeSize(String(mapTo), prefix, true),
     /**
      * Decrease the size of the array by one
      */
-    decreaseSize: changeSize(mapTo, prefix, false),
+    decreaseSize: changeSize(String(mapTo), prefix, false),
     /**
      * An array with the subfields for rendering
      */

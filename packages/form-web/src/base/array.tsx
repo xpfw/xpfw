@@ -1,36 +1,33 @@
-import { IArrayProps, IFieldProps, SharedArray, SharedField } from "@xpfw/form-shared"
-import { IField } from "@xpfw/validate"
-import { cloneDeep, get, map } from "lodash"
+import { getMapToFromProps, IFieldProps, prependPrefix, SharedField, useArray } from "@xpfw/form"
 import * as React from "react"
-class BulmaArrayField extends React.Component<IArrayProps, any> {
-  public render() {
-    return (
-      <div>
-        {map(this.props.subFields, (field: any, index: any) => {
-          return (
-          <div className="flex flex1 center">
-            <SharedField field={field} prefix={this.props.prefix} />
-            <a
-              className="button is-warning  iconMargin"
-              style={{marginTop: "1.2rem"}}
-              onClick={this.props.removeItem(index)}
-            >
-              Delete
-            </a>
-          </div>
-        )})}
-        <div className="flex center">
+
+const ArrayField: React.FunctionComponent<IFieldProps> = (props) => {
+  const arrayHelper = useArray(props.schema, getMapToFromProps(props), props.prefix)
+  return (
+    <div>
+      {arrayHelper.fields.map((field) => {
+        return (
+        <div className="flex flex1 center" key={prependPrefix(field.mapTo, field.prefix)}>
+          <SharedField schema={field.schema} prefix={field.prefix} />
           <a
-            className="is-fullwidth is-info"
-            onClick={this.props.increaseSize}
+            className="button is-warning  iconMargin"
+            style={{marginTop: "1.2rem"}}
+            onClick={field.decreaseSize}
           >
-            Add
+            Delete
           </a>
         </div>
-      </div >
-    )
-  }
+      )})}
+      <div className="flex center">
+        <a
+          className="is-fullwidth is-info"
+          onClick={arrayHelper.increaseSize}
+        >
+          Add
+        </a>
+      </div>
+    </div >
+  )
 }
 
-const BulmaArrayFieldWrapped = SharedArray(BulmaArrayField)
-export default BulmaArrayFieldWrapped
+export default ArrayField
