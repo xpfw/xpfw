@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Form Hooks Test useObject: Before anything 1`] = `
+exports[`Form Hooks Test useObject: generated subschemas with prefix 1`] = `
 Object {
   "fields": Array [
     Object {
@@ -8,17 +8,45 @@ Object {
       "objectDefinition": Object {
         "type": "boolean",
       },
-      "prefix": undefined,
+      "prefix": "prefix",
     },
     Object {
       "mapTo": "myStringValue.id",
       "objectDefinition": Object {
         "type": "integer",
       },
-      "prefix": undefined,
+      "prefix": "prefix",
     },
     Object {
       "mapTo": "myStringValue.name",
+      "objectDefinition": Object {
+        "type": "string",
+      },
+      "prefix": "prefix",
+    },
+  ],
+}
+`;
+
+exports[`Form Hooks Test useObject: generated subschemas without mapTo and prefix 1`] = `
+Object {
+  "fields": Array [
+    Object {
+      "mapTo": "myObject.checked",
+      "objectDefinition": Object {
+        "type": "boolean",
+      },
+      "prefix": undefined,
+    },
+    Object {
+      "mapTo": "myObject.id",
+      "objectDefinition": Object {
+        "type": "integer",
+      },
+      "prefix": undefined,
+    },
+    Object {
+      "mapTo": "myObject.name",
       "objectDefinition": Object {
         "type": "string",
       },

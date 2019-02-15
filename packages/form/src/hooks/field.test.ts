@@ -25,8 +25,9 @@ describe("Form Hooks Test", () => {
     const valueToSet = "myNumberValue"
     const valueOne = "theFirstValue"
     const valueTwo = 42
+    numberScheme.title = valueToSet
     // set valid value
-    let numberHook = useFieldWithValidation(numberScheme, valueToSet)
+    let numberHook = useFieldWithValidation(numberScheme)
     numberHook.setValue(valueTwo)
     numberHook = useFieldWithValidation(numberScheme, valueToSet)
     expect(numberHook.value).toBe(valueTwo)
