@@ -1,22 +1,18 @@
-import { FormStore } from "@xpfw/form-shared"
-import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
 import {
-  AuthForm, BackendClient, DbStore,
-  MailField, PwField, SharedFormAuth, SharedFormCreate, UserStore
-} from "@xpfw/ui-shared"
-import { globals, ValidationRegistry } from "@xpfw/validate"
-import { get, isFunction } from "lodash"
+  AuthForm, BackendClient, dataOptions,
+  DbStore, MailField, PwField, UserStore
+} from "@xpfw/data"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { FormStore, useField, useFieldWithValidation, useObject } from "@xpfw/form"
+import { getRandomApp } from "@xpfw/test-util"
+import { get, isFunction } from "lodash-es"
 import * as React from "react"
-import { matchStoreState } from "resub-persist"
-import makeMockElement from "../testUtil/baseMock"
 import render from "../testUtil/render"
 
 BackendClient.client = FeathersClient
-globals.options.userIdPath = "id"
+dataOptions.idPath = "id"
 
 const testAuth = (MockEle: any, submitLogin?: any, submitLogout?: any, submitRegister?: any) => {
-  ValidationRegistry.registerForm(AuthForm)
   if (!isFunction(submitLogin)) {
     submitLogin = UserStore.login
   }
@@ -30,9 +26,12 @@ const testAuth = (MockEle: any, submitLogin?: any, submitLogout?: any, submitReg
     const appRef = await getRandomApp("a", false, BackendClient.client, false, {
       userStore: UserStore
     })
-    const MockedAuth = SharedFormAuth(MockEle)
-    FormStore.setValue(MailField.mapTo, "admin")
-    FormStore.setValue(PwField.mapTo, "admin")
+    const MockedAuth = MockEle
+    const hookedForm = useObject(AuthForm)
+    const hookedMail = useFieldWithValidation(hookedForm.fields[0].schema)
+    const hookedPw = useFieldWithValidation(hookedForm.fields[1].schema)
+    hookedMail.setValue("admin")
+    hookedPw.setValue("admin")
     render(<MockedAuth />, "before register")
     const registerRes = await submitRegister()
     expect(registerRes).toMatchSnapshot("result of register and lgoin at once")
@@ -40,13 +39,16 @@ const testAuth = (MockEle: any, submitLogin?: any, submitLogout?: any, submitReg
     await submitLogout()
     render(<MockedAuth />, "after logout")
     expect(await BackendClient.client.client.passport.getJWT()).toBeNull()
-    FormStore.setValue(PwField.mapTo, "admin")
-    await UserStore.login()
+    hookedPw.setValue("admin")
+    await submitLogin()
     render(<MockedAuth />, "after relogin")
     await UserStore.logout()
     render(<MockedAuth />, "after logout")
     const invalidLogin = await UserStore.login()
     render(<MockedAuth />, "after invalid login")
+    hookedPw.setValue("WRONGPW")
+    await UserStore.login()
+    render(<MockedAuth />, "after wrong password login")
     const client = BackendClient.client.client
     BackendClient.client.client = null
     const reRegister = await UserStore.register()

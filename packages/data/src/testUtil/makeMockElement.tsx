@@ -1,18 +1,18 @@
-import { cloneDeep, get, isArray, isNil, isObject, isString, set } from "lodash"
+import { cloneDeep, get, isString, set } from "lodash-es"
 import * as React from "react"
 
 const idtmp: string[] = []
 
-const makeMockElement = (name: string, stripIdsAt?: string | string[], idPath: string = "_id") => {
+const makeMockElement = (name: string, stripIdsAt?: string | string[], idPath: string = "_id", stringifier?: () => any) => {
   return class extends React.Component<any, any> {
     public render() {
-      const toStringify = this.props
-      const stripMe = isArray(stripIdsAt) ? stripIdsAt : [stripIdsAt]
-      if (isArray(stripIdsAt)) {
-        for (const stripper of stripIdsAt) {
+      const toStringify = stringifier ? stringifier() : this.props
+      const stripMe = Array.isArray(stripIdsAt) ? stripIdsAt : [stripIdsAt]
+      if (Array.isArray(stripMe)) {
+        for (const stripper of stripMe) {
           if (isString(stripper)) {
             let toStrip = get(this.props, stripper)
-            if (!isArray(toStrip)) {
+            if (!Array.isArray(toStrip)) {
               toStrip = [toStrip]
             }
             const newIds = []
@@ -31,7 +31,7 @@ const makeMockElement = (name: string, stripIdsAt?: string | string[], idPath: s
                 newIds.push(objClone)
               }
             }
-            if (newIds.length > 0 && !isNil(newIds[0])) {
+            if (newIds.length > 0 && newIds[0] != null) {
               set(toStringify, stripper, newIds)
             }
           }

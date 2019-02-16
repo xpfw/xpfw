@@ -2,7 +2,7 @@ import auth from "@feathersjs/authentication-client"
 import * as feathers from "@feathersjs/feathers"
 import restClient from "@feathersjs/rest-client"
 import socketio from "@feathersjs/socketio-client"
-import { globals, IUiClient, ValidationRegistry } from "@xpfw/validate"
+import { dataOptions, IUiClient } from "@xpfw/data"
 import { get, isNil } from "lodash"
 import * as sio from "socket.io-client"
 
@@ -43,7 +43,7 @@ const listenToFeathersServiceEvents = (app: any, store: any, collectionList: str
       }
     }
     const dbService = app.service(collection)
-    const idPath = get(ValidationRegistry, `forms.${collection}.options.idPath`, "id")
+    const idPath = dataOptions.idPath
     dbService.on(`created`, eventHandler(false))
     dbService.on(`patched`, eventHandler(false))
     dbService.on(`updated`, eventHandler(false))
@@ -56,7 +56,7 @@ const getDataFromToken = async (token: any) => {
   if (verification.user) {
     return verification.user
   }
-  return FeathersClient.get(globals.options.userCollection, get(verification, "userId"))
+  return FeathersClient.get(dataOptions.userCollection, get(verification, "userId"))
 }
 
 const FeathersClient: IUiClient = {
@@ -98,7 +98,7 @@ const FeathersClient: IUiClient = {
     return {user: await getDataFromToken(loginRes.accessToken)}
   },
   register: (registerData: any) => {
-    return FeathersClient.client.service(globals.options.userCollection).create(registerData)
+    return FeathersClient.client.service(dataOptions.userCollection).create(registerData)
   },
   logout: () => {
     return FeathersClient.client.logout()

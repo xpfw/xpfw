@@ -1,5 +1,5 @@
 const dataOptions = {
   userCollection: "users",
-  userIdPath: "_id"
+  idPath: "_id"
 }
 export default dataOptions

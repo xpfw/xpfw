@@ -76,7 +76,7 @@ exports[`User Store Test: after register err 1`] = `
   "loading": false,
   "user": null,
   "loggedIn": false,
-  "error": {},
+  "error": "TypeError: Cannot read property 'service' of null",
   "connected": true
 }
 </div>
@@ -94,6 +94,29 @@ exports[`User Store Test: after relogin 1`] = `
   },
   "loggedIn": true,
   "error": null,
+  "connected": true
+}
+</div>
+`;
+
+exports[`User Store Test: after wrong password login 1`] = `
+<div
+  class="mymock"
+>
+  {
+  "loading": false,
+  "user": null,
+  "loggedIn": false,
+  "error": {
+    "name": "NotAuthenticated",
+    "message": "Invalid login",
+    "code": 401,
+    "className": "not-authenticated",
+    "data": {
+      "message": "Invalid login"
+    },
+    "errors": {}
+  },
   "connected": true
 }
 </div>

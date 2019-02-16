@@ -1,4 +1,4 @@
-import { FormStore } from "@xpfw/form"
+import { FormStore, useFieldWithValidation, useObject } from "@xpfw/form"
 import { get, isNil } from "lodash-es"
 import { action, observable } from "mobx"
 import BackendClient from "../client"
@@ -46,7 +46,7 @@ export class UserStore {
     if (isNil(ADbStore.getState[dataOptions.userCollection])) {
       ADbStore.getState[dataOptions.userCollection] = {}
     }
-    ADbStore.getState[dataOptions.userCollection][get(user, dataOptions.userIdPath, "-1")] = {result: user}
+    ADbStore.getState[dataOptions.userCollection][get(user, dataOptions.idPath, "-1")] = {result: user}
     this.loggedIn = true
     this.authErr = null
   }
@@ -60,7 +60,8 @@ export class UserStore {
       this.loading = false
       const user = get(loginRes, "user")
       this.setLoggedIn(user)
-      FormStore.setValue(PwField.title, "")
+      // Reset Password after succesful login
+      useFieldWithValidation(useObject(AuthForm).fields[1].schema).setValue("")
       return loginRes
     } catch (e) {
       this.authErr = e
@@ -78,8 +79,8 @@ export class UserStore {
       this.setLoggedIn(res)
       return res
     } catch (e) {
-      this.authErr = e
-      this.loading = false
+      this.authErr = e.toString()
+      this.loggedOut()
       return e
     }
   }
@@ -94,6 +95,7 @@ export class UserStore {
     this.loggedIn = false
     this.loading = false
   }
+
   public setConnected(newCon: boolean) {
     this.connected = newCon
   }

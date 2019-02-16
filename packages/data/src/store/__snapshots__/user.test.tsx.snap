@@ -15,9 +15,10 @@ Object {
 
 exports[`User Store Test: after login form 1`] = `
 Object {
-  "formData": Object {
+  "authForm": Object {
     "email": "admin",
     "password": "",
+    "strategy": "local",
   },
 }
 `;
@@ -57,7 +58,7 @@ Object {
 
 exports[`User Store Test: after register err 1`] = `
 Object {
-  "authErr": [TypeError: Cannot read property 'service' of null],
+  "authErr": Object {},
   "connected": false,
   "loading": false,
   "loggedIn": false,
@@ -67,7 +68,7 @@ Object {
 
 exports[`User Store Test: after register form 1`] = `
 Object {
-  "formData": Object {
+  "authForm": Object {
     "email": "admin",
     "password": "admin",
   },
@@ -89,9 +90,10 @@ Object {
 
 exports[`User Store Test: after relogin form 1`] = `
 Object {
-  "formData": Object {
+  "authForm": Object {
     "email": "admin",
     "password": "",
+    "strategy": "local",
   },
 }
 `;
@@ -108,7 +110,7 @@ Object {
 
 exports[`User Store Test: before registerform 1`] = `
 Object {
-  "formData": Object {
+  "authForm": Object {
     "email": "admin",
     "password": "admin",
   },
