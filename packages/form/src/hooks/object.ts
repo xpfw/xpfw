@@ -1,3 +1,4 @@
+import { cloneDeep } from "lodash-es"
 import { ExtendedJSONSchema } from "../jsonschema"
 import { IFieldProps } from "../store/componentRegistry"
 import { prependPrefix } from "../util/prefixMaker"
@@ -10,15 +11,21 @@ import { prependPrefix } from "../util/prefixMaker"
  */
 const useObject = (objectDefinition: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   const fields: IFieldProps[] = []
-  if (mapTo == null) {
+  const overWriteTitle = mapTo == null
+  if (overWriteTitle) {
     mapTo = objectDefinition.title
   }
   if (objectDefinition != null && objectDefinition.properties != null) {
     const u: any = objectDefinition.properties
     for (const key of Object.keys(u)) {
+      const prepended = prependPrefix(key, mapTo)
+      const schema = overWriteTitle ? cloneDeep(u[key]) : u[key]
+      if (overWriteTitle) {
+        schema.title = prepended
+      }
       fields.push({
-        mapTo: prependPrefix(key, mapTo),
-        prefix, schema: u[key]
+        mapTo: prepended,
+        prefix, schema
       })
     }
   }
