@@ -2,30 +2,33 @@
 
 exports[`DbStore Patch Test: createresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;
+
+exports[`DbStore Patch Test: error store after broken patch 1`] = `
+Object {
+  "formModel0": Object {
+    "name": "FetchError",
+    "type": "invalid-json",
   },
 }
 `;
 
 exports[`DbStore Patch Test: getresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 123,
-    "myString": "changedText",
-  },
+  "guestName": "changedText",
+  "id": 0,
+  "myVal": 123,
 }
 `;
 
 exports[`DbStore Patch Test: patchresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 123,
-    "myString": "changedText",
-  },
+  "guestName": "changedText",
+  "id": 0,
+  "myVal": 123,
 }
 `;

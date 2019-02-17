@@ -4,15 +4,23 @@ exports[`DbStore Remove Test: After calling remove 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "id": 0,
-        "myNum": 420,
-        "myString": "myText",
-      },
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
     },
   },
+  "currentlyEditing": "",
+  "fetching": Object {},
   "getState": Object {
     "simpleTestCol": Object {},
+  },
+  "lastFetch": Object {},
+  "removeState": Object {
+    "0": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+    },
   },
   "updateState": Object {},
 }
@@ -21,27 +29,27 @@ Object {
 exports[`DbStore Remove Test: before anything 1`] = `
 Object {
   "createState": Object {},
+  "currentlyEditing": "",
+  "fetching": Object {},
   "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
 
 exports[`DbStore Remove Test: createresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
-  },
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
 }
 `;
 
 exports[`DbStore Remove Test: removeresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
-  },
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
 }
 `;

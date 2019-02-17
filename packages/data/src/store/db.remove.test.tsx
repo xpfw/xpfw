@@ -1,39 +1,38 @@
-import { FormStore } from "@xpfw/form-shared"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { toJS } from "@xpfw/data-tests"
+import { FormStore } from "@xpfw/form"
+import { makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
-import { TestDefs } from "@xpfw/validate"
 import "isomorphic-fetch"
-import { get } from "lodash"
-import { matchStoreState } from "resub-persist"
+import { get } from "lodash-es"
 import BackendClient from "../client"
 import DbStore from "./db"
 
 BackendClient.client = FeathersClient
 
 test("DbStore Remove Test", async () => {
-  const s: any = TestDefs.FormNumberAndRequiredText.collection
+  const s: any = NumberAndRequiredTextSchema.collection
   const appRef = await getRandomApp(s, false, BackendClient.client, true)
-  matchStoreState(DbStore, "before anything")
+  expect(toJS(DbStore)).toMatchSnapshot("before anything")
 
-  FormStore.setValue(TestDefs.RequiredTextField.mapTo, "myText")
-  FormStore.setValue(TestDefs.NumberField.mapTo, 420)
-  const createdObject = await DbStore.create(TestDefs.FormNumberAndRequiredText)
+  const fields = makeSubFields(NumberAndRequiredTextSchema)
+  fields[NameField.title].setValue("myText")
+  fields[NumberField.title].setValue(420)
+  const createdObject = await DbStore.create(NumberAndRequiredTextSchema)
   expect(createdObject).toMatchSnapshot("createresult")
-  FormStore.setValue(TestDefs.RequiredTextField.mapTo, "changedText")
-  FormStore.setValue(TestDefs.NumberField.mapTo, 123)
-  const removeRes = await DbStore.remove(get(createdObject, "result.id"), TestDefs.FormNumberAndRequiredText.collection)
+  const removeRes = await DbStore.remove(get(createdObject, "id"), NumberAndRequiredTextSchema.collection)
   expect(removeRes).toEqual(createdObject)
   expect(removeRes).toMatchSnapshot("removeresult")
-  matchStoreState(DbStore, "After calling remove")
-  const getResult = await DbStore.getFromServer(get(createdObject, "result.id"),
-    TestDefs.FormNumberAndRequiredText.collection)
-  expect(get(getResult, "error")).not.toBeNull()
+  expect(toJS(DbStore)).toMatchSnapshot("After calling remove")
+  const getResult = await DbStore.getFromServer(get(createdObject, "id"),
+    NumberAndRequiredTextSchema.collection)
+  expect(getResult).not.toBeNull()
   expect(getResult).not.toEqual(removeRes)
   expect(getResult).not.toEqual(createdObject)
-  expect(removeRes).toEqual(DbStore.getRemoveState(get(createdObject, "result.id")))
+  expect(removeRes).toEqual(DbStore.getRemoveState(get(createdObject, "id")))
 
-  TestDefs.FormNumberAndRequiredText.collection = "broken"
-  const res = await DbStore.remove(get(createdObject, "result.id"), TestDefs.FormNumberAndRequiredText.collection)
-  expect(get(res, "error")).not.toBeNull()
+  NumberAndRequiredTextSchema.collection = "broken"
+  const res = await DbStore.remove(get(createdObject, "id"), NumberAndRequiredTextSchema.collection)
+  expect(res).not.toBeNull()
   await appRef.cleanUp()
 }, 10000)

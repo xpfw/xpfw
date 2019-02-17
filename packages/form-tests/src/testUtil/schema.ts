@@ -63,7 +63,17 @@ const ArrayField: JSONSchemaDefinition = {
   }
 }
 
+const NumberAndRequiredTextSchema: ExtendedJSONSchema = {
+  title: "formModel",
+  collection: "simpleTestCol",
+  items: {
+    [String(NameField.title)]: NameField,
+    [String(NumberField.title)]: NumberField
+  },
+  required: [String(NameField.title)]
+}
+
 export {
   ArrayField, BooleanField, DateField, LocationField, NameField,
-  NumberField, ObjectField, PwField, SelectField
+  NumberField, ObjectField, PwField, SelectField, NumberAndRequiredTextSchema
 }

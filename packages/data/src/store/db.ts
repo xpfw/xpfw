@@ -1,90 +1,80 @@
-import { FormStore, LoadingStore } from "@xpfw/form-shared"
-import { IForm } from "@xpfw/validate"
-import { get, isEqual, isNil, set } from "lodash"
-import { autoSubscribe, AutoSubscribeStore, key, StoreBase } from "resub"
-import { IPersistableStore } from "resub-persist"
+import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
+import { get, isEqual, isNil, set } from "lodash-es"
+import { action, observable } from "mobx"
 import BackendClient from "../client"
+import dataOptions from "../options"
 import UserStore from "./user"
-
-export interface IResult {
-  result?: any
-  error?: any
-  loading?: boolean
-}
 
 const FETCH_THRESHOLD = 1000 * 60 * 3
 
 const REMOVE_ADDON_KEY = "remove"
 
-@AutoSubscribeStore
-export class DbStore extends StoreBase implements IPersistableStore {
-  public name = "adminStore"
-  private createState: {[index: string]: IResult | undefined} = {}
-  private removeState: {[index: string]: IResult | undefined} = {}
-  private updateState: {[index: string]: IResult | undefined} = {}
-  private getState: {[index: string]: {[index: string]: IResult | undefined}} = {}
+export class DbStore {
+  @observable
+  private createState: {[index: string]: any | undefined} = {}
+  @observable
+  private removeState: {[index: string]: any | undefined} = {}
+  @observable
+  private updateState: {[index: string]: any | undefined} = {}
+  @observable
+  private getState: {[index: string]: {[index: string]: any | undefined}} = {}
+  @observable
   private lastFetch: {[index: string]: number} = {}
+  @observable
   private fetching: {[index: string]: boolean} = {}
+  @observable
   private currentlyEditing: string = ""
 
-  public getPropKeys() { return ["createState", "updateState", "getState"] }
-
-  public async create(form: IForm, prefix: string = "") {
-    const saveResultAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
+  public async create(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    mapTo = getMapTo(schema, mapTo)
+    const saveResultAt = prependPrefix(mapTo, prefix)
     try {
-      const data = FormStore.getFormData(form, prefix)
-      if (get(form, "options.addCreatedAt", false)) {
+      const data = FormStore.getValue(mapTo, prefix)
+      if (get(schema, "modify.addCreatedAt", false)) {
         data.createdAt = new Date()
       }
-      if (get(form, "options.addBelongsTo", false)) {
-        data.belongsTo = get(UserStore.getUser(), get(form, "options.idPath", "id"))
+      if (get(schema, "modify.addBelongsTo", false)) {
+        data.belongsTo = get(UserStore.getUser(), dataOptions.idPath)
       }
-      LoadingStore.setLoading(saveResultAt, true)
-      this.trigger(saveResultAt)
-      const col: any = form.collection
+      FormStore.setLoading(saveResultAt, true)
+      const col: any = schema.collection
       const result = await BackendClient.client.create(col, data)
-      const res = {result}
-      this.createState[saveResultAt] = res
-      LoadingStore.setLoading(saveResultAt, false)
-      this.trigger(saveResultAt)
-      return res
-    } catch (error) {
-      const res = {error}
-      this.createState[saveResultAt] = res
-      LoadingStore.setLoading(saveResultAt, false)
-      this.trigger(saveResultAt)
-      return res
-    }
-  }
-
-  public async patch(id: string, form: IForm, prefix: string = "") {
-    const saveResultAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${id}${form.model}`
-    try {
-      LoadingStore.setLoading(saveResultAt, true)
-      this.trigger(saveResultAt)
-      const col: any = form.collection
-      const result = await BackendClient.client.patch(col, id, FormStore.getFormData(form, prefix))
-      const res = {result}
-      this.updateState[saveResultAt] = res
-      LoadingStore.setLoading(saveResultAt, false)
-      this.trigger(saveResultAt)
-      if (isNil(this.getState[col])) {
+      this.createState[saveResultAt] = result
+      if (this.getState[col] == null) {
         this.getState[col] = {}
       }
-      this.getState[col][id] = res
-      this.trigger(id)
-      return res
+      this.getState[col][get(result, dataOptions.idPath)] = result
+      FormStore.setLoading(saveResultAt, false)
+      return result
     } catch (error) {
-      const res = {error}
-      this.updateState[saveResultAt] = res
-      LoadingStore.setLoading(saveResultAt, false)
-      this.trigger(saveResultAt)
-      return res
+      FormStore.setError(saveResultAt, error)
+      FormStore.setLoading(saveResultAt, false)
+      return error
     }
   }
 
-  @autoSubscribe
-  public getGetState(@key id: string, collection: string, tryFetch: boolean) {
+  public async patch(id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    mapTo = getMapTo(schema, mapTo)
+    const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
+    try {
+      FormStore.setLoading(saveResultAt, true)
+      const col: any = schema.collection
+      const result = await BackendClient.client.patch(col, id, FormStore.getValue(mapTo, prefix))
+      this.updateState[saveResultAt] = result
+      FormStore.setLoading(saveResultAt, false)
+      if (this.getState[col] == null) {
+        this.getState[col] = {}
+      }
+      this.getState[col][id] = result
+      return result
+    } catch (error) {
+      FormStore.setError(saveResultAt, error)
+      FormStore.setLoading(saveResultAt, false)
+      return error
+    }
+  }
+
+  public getGetState(id: string, collection: string, tryFetch: boolean) {
     if (tryFetch) {
       const thisRef: any = this
       setTimeout(() => thisRef.getFromServer(id, collection), 1)
@@ -92,24 +82,23 @@ export class DbStore extends StoreBase implements IPersistableStore {
     return this.getState[collection] ? this.getState[collection][id] : undefined
   }
 
+  @action
   public setItem(id: string, collection: string, object: any) {
     if (!this.getState[collection]) {
       this.getState[collection] = {}
     }
     this.getState[collection][id] = object
     this.lastFetch[id] = Date.now()
-    this.trigger(id)
   }
 
-  @autoSubscribe
-  public getEditOriginal(@key id: string, form: IForm, prefix: string = "", returnFetchPromise?: boolean) {
-    const collection: any = get(form, "collection")
+  public getEditOriginal(id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
+    const collection: any = get(schema, "collection")
     if (this.currentlyEditing !== id) {
       this.currentlyEditing = id
+      mapTo = getMapTo(schema, mapTo)
       const fetchPromise = this.getFromServer(id, collection).then((res) => {
-        const doc = isNil(res) ? this.getState[collection][id] : res
-        FormStore.copyDocToFormData(get(doc, "result"), form, prefix)
-        this.trigger(id)
+        const doc = res == null ? this.getState[collection][id] : res
+        FormStore.setValue(mapTo, doc, prefix)
         return doc
       })
       if (returnFetchPromise) {
@@ -122,33 +111,25 @@ export class DbStore extends StoreBase implements IPersistableStore {
 
   public setCreateState(model: string, value: any) {
     this.createState[model] = value
-    this.trigger(model)
-    return
   }
 
-  @autoSubscribe
-  public getCreateState(@key model: string) {
+  public getCreateState(model: string) {
     return this.createState[model]
   }
 
   public setUpdateState(model: string, value: any) {
     this.updateState[model] = value
-    this.trigger(model)
-    return
   }
 
-  @autoSubscribe
-  public getUpdateState(@key model: string) {
+  public getUpdateState(model: string) {
     return this.updateState[model]
   }
 
-  @autoSubscribe
-  public getRemoveState(@key id: string) {
+  public getRemoveState(id: string) {
     return this.removeState[id]
   }
 
-  @autoSubscribe
-  public get(@key id: string, collection: string, returnFetchPromise?: boolean) {
+  public get(id: string, collection: string, returnFetchPromise?: boolean) {
     // todo: dont always call this first
     const fetchPromise = this.getFromServer(id, collection)
     return returnFetchPromise ? fetchPromise : this.getState[collection][id]
@@ -164,57 +145,42 @@ export class DbStore extends StoreBase implements IPersistableStore {
       return
     }
     this.getState = {...this.getState}
-    if (isNil(this.getState[collection])) {
+    if (this.getState[collection] == null) {
       this.getState[collection] = {}
     }
     try {
       this.fetching[id] = true
-      LoadingStore.setLoading(id, true)
+      FormStore.setLoading(id, true)
       const result = await BackendClient.client.get(collection, id)
       this.lastFetch[id] = Date.now()
-      const res = {result}
-      const isNew = !isEqual(res, this.getState[collection][id])
-      this.getState[collection][id] = res
-      LoadingStore.setLoading(id, false)
-      if (isNew) {
-        this.trigger(id)
-      }
+      this.getState[collection][id] = result
+      FormStore.setLoading(id, false)
       this.fetching[id] = false
-      return res
+      return result
     } catch (error) {
-      LoadingStore.setLoading(id, false)
-      const res = {error}
-      const isNew = !isEqual(res, this.getState[collection][id])
-      this.getState[collection][id] = res
-      if (isNew) {
-        this.trigger(id)
-      }
+      FormStore.setLoading(id, false)
+      FormStore.setError(id, error)
       this.fetching[id] = false
-      return res
+      return error
     }
   }
 
   public async remove(id: string, collection: string) {
     this.getState = {...this.getState}
-    if (isNil(this.getState[collection])) {
+    if (this.getState[collection] == null) {
       this.getState[collection] = {}
     }
     try {
-      LoadingStore.setLoading(REMOVE_ADDON_KEY + id, true)
-      this.trigger(id)
+      FormStore.setLoading(id, true, REMOVE_ADDON_KEY)
       const result = await BackendClient.client.remove(collection, id)
-      const res = {result}
-      this.removeState[id] = res
+      this.removeState[id] = result
       delete this.getState[collection][id]
-      LoadingStore.setLoading(REMOVE_ADDON_KEY + id, false)
-      this.trigger(id)
-      return res
+      FormStore.setLoading(id, false, REMOVE_ADDON_KEY)
+      return result
     } catch (error) {
-      const res = {error}
-      this.removeState[id] = res
-      LoadingStore.setLoading(REMOVE_ADDON_KEY + id, false)
-      this.trigger(id)
-      return res
+      FormStore.setError(id, error, REMOVE_ADDON_KEY)
+      FormStore.setLoading(id, false, REMOVE_ADDON_KEY)
+      return error
     }
   }
 

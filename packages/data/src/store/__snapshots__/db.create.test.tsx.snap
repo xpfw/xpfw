@@ -4,16 +4,18 @@ exports[`DbStore Create Test: After calling create 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "belongsTo": "myuserid",
-        "createdAt": "1904-02-28T23:00:00.000Z",
-        "id": 0,
-        "myNum": 420,
-        "myString": "myText",
-      },
+      "belongsTo": "myuserid",
+      "createdAt": "2011-05-05T14:20:43.337Z",
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
     },
   },
+  "currentlyEditing": "",
+  "fetching": Object {},
   "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -21,19 +23,21 @@ Object {
 exports[`DbStore Create Test: Before calling create 1`] = `
 Object {
   "createState": Object {},
+  "currentlyEditing": "",
+  "fetching": Object {},
   "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
 
 exports[`DbStore Create Test: getresult 1`] = `
 Object {
-  "result": Object {
-    "belongsTo": "myuserid",
-    "createdAt": "1904-02-28T23:00:00.000Z",
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
-  },
+  "belongsTo": "myuserid",
+  "createdAt": "2011-05-05T14:20:43.337Z",
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
 }
 `;

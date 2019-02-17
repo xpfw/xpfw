@@ -4,36 +4,34 @@ exports[`DbStore Patch Test: after patch 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "id": 0,
-        "myNum": 4654320,
-        "myString": "gettext",
-      },
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
     },
+  },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "result": Object {
-          "id": 0,
-          "myNum": 65243,
-          "myString": "get is now diff",
-        },
-      },
-    },
-    "wrongcol": Object {
-      "0": Object {
-        "error": [NotFound: Service 'wrongcol' not found],
-      },
-    },
-  },
-  "updateState": Object {
-    "0formModel": Object {
-      "result": Object {
+        "guestName": "get is now diff",
         "id": 0,
-        "myNum": 65243,
-        "myString": "get is now diff",
+        "myVal": 65243,
       },
+    },
+    "wrongcol": Object {},
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "formModel0": Object {
+      "guestName": "get is now diff",
+      "id": 0,
+      "myVal": 65243,
     },
   },
 }
@@ -41,11 +39,9 @@ Object {
 
 exports[`DbStore Patch Test: createresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 4654320,
-    "myString": "gettext",
-  },
+  "guestName": "gettext",
+  "id": 0,
+  "myVal": 4654320,
 }
 `;
 
@@ -53,25 +49,27 @@ exports[`DbStore Patch Test: dbstore after create 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "id": 0,
-        "myNum": 4654320,
-        "myString": "gettext",
-      },
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
     },
+  },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "error": [NotFound: No record found for id '0'],
+        "guestName": "gettext",
+        "id": 0,
+        "myVal": 4654320,
       },
     },
-    "wrongcol": Object {
-      "0": Object {
-        "error": [NotFound: Service 'wrongcol' not found],
-      },
-    },
+    "wrongcol": Object {},
   },
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -80,29 +78,29 @@ exports[`DbStore Patch Test: dbstore after create get 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "id": 0,
-        "myNum": 4654320,
-        "myString": "gettext",
-      },
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
     },
+  },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "result": Object {
-          "id": 0,
-          "myNum": 4654320,
-          "myString": "gettext",
-        },
+        "guestName": "gettext",
+        "id": 0,
+        "myVal": 4654320,
       },
     },
-    "wrongcol": Object {
-      "0": Object {
-        "error": [NotFound: Service 'wrongcol' not found],
-      },
-    },
+    "wrongcol": Object {},
   },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -110,13 +108,15 @@ Object {
 exports[`DbStore Patch Test: dbstore after nothingtoget 1`] = `
 Object {
   "createState": Object {},
-  "getState": Object {
-    "simpleTestCol": Object {
-      "0": Object {
-        "error": [NotFound: No record found for id '0'],
-      },
-    },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
+  "getState": Object {
+    "simpleTestCol": Object {},
+  },
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -125,36 +125,34 @@ exports[`DbStore Patch Test: dbstore after patch 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "id": 0,
-        "myNum": 4654320,
-        "myString": "gettext",
-      },
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
     },
+  },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "result": Object {
-          "id": 0,
-          "myNum": 65243,
-          "myString": "get is now diff",
-        },
-      },
-    },
-    "wrongcol": Object {
-      "0": Object {
-        "error": [NotFound: Service 'wrongcol' not found],
-      },
-    },
-  },
-  "updateState": Object {
-    "0formModel": Object {
-      "result": Object {
+        "guestName": "get is now diff",
         "id": 0,
-        "myNum": 65243,
-        "myString": "get is now diff",
+        "myVal": 65243,
       },
+    },
+    "wrongcol": Object {},
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "formModel0": Object {
+      "guestName": "get is now diff",
+      "id": 0,
+      "myVal": 65243,
     },
   },
 }
@@ -164,36 +162,34 @@ exports[`DbStore Patch Test: dbstore after patch get 1`] = `
 Object {
   "createState": Object {
     "formModel": Object {
-      "result": Object {
-        "id": 0,
-        "myNum": 4654320,
-        "myString": "gettext",
-      },
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
     },
+  },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "result": Object {
-          "id": 0,
-          "myNum": 65243,
-          "myString": "get is now diff",
-        },
-      },
-    },
-    "wrongcol": Object {
-      "0": Object {
-        "error": [NotFound: Service 'wrongcol' not found],
-      },
-    },
-  },
-  "updateState": Object {
-    "0formModel": Object {
-      "result": Object {
+        "guestName": "get is now diff",
         "id": 0,
-        "myNum": 65243,
-        "myString": "get is now diff",
+        "myVal": 65243,
       },
+    },
+    "wrongcol": Object {},
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "formModel0": Object {
+      "guestName": "get is now diff",
+      "id": 0,
+      "myVal": 65243,
     },
   },
 }
@@ -202,18 +198,16 @@ Object {
 exports[`DbStore Patch Test: dbstore after wrongcol 1`] = `
 Object {
   "createState": Object {},
-  "getState": Object {
-    "simpleTestCol": Object {
-      "0": Object {
-        "error": [NotFound: No record found for id '0'],
-      },
-    },
-    "wrongcol": Object {
-      "0": Object {
-        "error": [NotFound: Service 'wrongcol' not found],
-      },
-    },
+  "currentlyEditing": "",
+  "fetching": Object {
+    "0": false,
   },
+  "getState": Object {
+    "simpleTestCol": Object {},
+    "wrongcol": Object {},
+  },
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -221,49 +215,54 @@ Object {
 exports[`DbStore Patch Test: dbstore at start 1`] = `
 Object {
   "createState": Object {},
+  "currentlyEditing": "",
+  "fetching": Object {},
   "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
+}
+`;
+
+exports[`DbStore Patch Test: errorstore after wrongcol 1`] = `
+Object {
+  "0": NotFound {
+    "className": "not-found",
+    "code": 404,
+    "constructor": [Function],
+    "data": undefined,
+    "errors": Object {},
+    "message": "Service 'wrongcol' not found",
+    "name": "NotFound",
+    "type": "FeathersError",
+  },
 }
 `;
 
 exports[`DbStore Patch Test: getcreated 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 4654320,
-    "myString": "gettext",
-  },
+  "guestName": "gettext",
+  "id": 0,
+  "myVal": 4654320,
 }
 `;
 
 exports[`DbStore Patch Test: getpatched 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 65243,
-    "myString": "get is now diff",
-  },
+  "guestName": "get is now diff",
+  "id": 0,
+  "myVal": 65243,
 }
 `;
 
-exports[`DbStore Patch Test: nothingtoget 1`] = `
-Object {
-  "error": [NotFound: No record found for id '0'],
-}
-`;
+exports[`DbStore Patch Test: nothingtoget 1`] = `[NotFound: No record found for id '0']`;
 
 exports[`DbStore Patch Test: patchresult 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 65243,
-    "myString": "get is now diff",
-  },
+  "guestName": "get is now diff",
+  "id": 0,
+  "myVal": 65243,
 }
 `;
 
-exports[`DbStore Patch Test: wrongcollection 1`] = `
-Object {
-  "error": [NotFound: Service 'wrongcol' not found],
-}
-`;
+exports[`DbStore Patch Test: wrongcollection 1`] = `[NotFound: Service 'wrongcol' not found]`;

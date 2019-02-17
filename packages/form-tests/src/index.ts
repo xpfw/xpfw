@@ -5,14 +5,15 @@ import locationTest from "./tests/location"
 import objectTest from "./tests/object"
 import selectTest from "./tests/select"
 import stringTest from "./tests/string"
+import makeSubFields from "./testUtil/makeSubFields"
 import {
   ArrayField, BooleanField, DateField, LocationField, NameField,
-  NumberField, ObjectField, PwField, SelectField
+  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, SelectField
 } from "./testUtil/schema"
 
 export {
   booleanTest, stringTest, arrayTest, dateTest,
-  locationTest, objectTest, selectTest,
+  locationTest, objectTest, selectTest, makeSubFields,
   ArrayField, BooleanField, DateField, LocationField, NameField,
-  NumberField, ObjectField, PwField, SelectField
+  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, SelectField
 }

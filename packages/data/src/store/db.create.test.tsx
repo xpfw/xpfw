@@ -2,12 +2,12 @@ import "isomorphic-fetch"
 import * as MockDate from "mockdate"
 MockDate.set(new Date(4, 2, 0))
 
-import { FormStore } from "@xpfw/form-shared"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { toJS } from "@xpfw/data-tests"
+import { FormStore } from "@xpfw/form"
+import { makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
-import { TestDefs } from "@xpfw/validate"
-import { get } from "lodash"
-import { matchStoreState } from "resub-persist"
+import { get } from "lodash-es"
 import BackendClient from "../client"
 import DbStore from "./db"
 import UserStore from "./user"
@@ -15,29 +15,29 @@ import UserStore from "./user"
 BackendClient.client = FeathersClient
 
 test("DbStore Create Test", async () => {
-  const s: any = TestDefs.FormNumberAndRequiredText.collection
+  const s: any = NumberAndRequiredTextSchema.collection
   const appRef = await getRandomApp(s, false, BackendClient.client, true)
   const prefix = "createpref"
-  FormStore.setValue(TestDefs.RequiredTextField.mapTo, "myText")
-  FormStore.setValue(TestDefs.NumberField.mapTo, 420)
-  matchStoreState(DbStore, "Before calling create")
+  const fields = makeSubFields(NumberAndRequiredTextSchema)
+  fields[NameField.title].setValue("myText")
+  fields[NumberField.title].setValue(420)
+  expect(toJS(DbStore)).toMatchSnapshot("Before calling create")
   UserStore.user = {id: "myuserid"}
   const opts: any = {
     addCreatedAt: true,
     addBelongsTo: true
   }
-  TestDefs.FormNumberAndRequiredText.options = opts
-  const createdObject = await DbStore.create(TestDefs.FormNumberAndRequiredText)
-  matchStoreState(DbStore, "After calling create")
-  const col: any = TestDefs.FormNumberAndRequiredText.collection
-  const getResult = await DbStore.getFromServer(get(createdObject, "result.id"),
-    col)
+  NumberAndRequiredTextSchema.modify = opts
+  const createdObject = await DbStore.create(NumberAndRequiredTextSchema)
+  expect(toJS(DbStore)).toMatchSnapshot("After calling create")
+  const col: any = NumberAndRequiredTextSchema.collection
+  const getResult = await DbStore.getFromServer(get(createdObject, "id"), col)
   expect(getResult).toMatchSnapshot("getresult")
   expect(getResult).toEqual(createdObject)
-  expect(getResult).toEqual(DbStore.getCreateState(TestDefs.FormNumberAndRequiredText.model))
+  expect(getResult).toEqual(DbStore.getCreateState(NumberAndRequiredTextSchema.title))
 
-  TestDefs.FormNumberAndRequiredText.collection = "broken"
-  const res = await DbStore.create(TestDefs.FormNumberAndRequiredText)
-  expect(get(res, "error")).not.toBeNull()
+  NumberAndRequiredTextSchema.collection = "broken"
+  const res = await DbStore.create(NumberAndRequiredTextSchema)
+  expect(res).not.toBeNull()
   await appRef.cleanUp()
 }, 10000)
