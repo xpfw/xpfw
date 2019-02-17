@@ -1,62 +1,56 @@
-import { FormStore, LoadingStore } from "@xpfw/form-shared"
-import { IForm } from "@xpfw/validate"
-import { get, isNil, isNumber, isObject, set } from "lodash"
-import { autoSubscribe, AutoSubscribeStore, key, StoreBase } from "resub"
-import { IPersistableStore } from "resub-persist"
+import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
+import { get, isNil, isNumber, isObject, set } from "lodash-es"
+import { action, observable, toJS } from "mobx"
 import BackendClient from "../client"
-import { IResult } from "./db"
 
-const FETCH_THRESHOLD = 1000 * 60 * 3
-
-@AutoSubscribeStore
-export class ListStore extends StoreBase implements IPersistableStore {
-  public name = "listStore"
+export class ListStore {
+  @observable
   public pageSize: number = 10
-  private lists: {[index: string]: IResult} = {}
+  @observable
+  private lists: {[index: string]: any} = {}
+  @observable
   private currentPage: {[index: string]: number} = {}
+  @observable
   private maxPage: {[index: string]: number} = {}
+  @observable
   private doingQuery: {[index: string]: boolean} = {}
 
-  public getPropKeys() { return ["lists"] }
-
-  @autoSubscribe
-  public getList(@key getKey: string, form: IForm, prefix: string = "", awaitQuery?: boolean) {
-    if (isNil(this.lists[getKey]) || awaitQuery) {
-      const promise = this.makeQuery(form, prefix)
+  public getList(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", awaitQuery?: boolean) {
+    mapTo = getMapTo(schema, mapTo)
+    if (isNil(this.lists[mapTo]) || awaitQuery) {
+      const promise = this.makeQuery(schema, mapTo, prefix)
       if (awaitQuery) {
         return promise
       }
     }
-    return this.lists[getKey]
+    return this.lists[mapTo]
   }
 
-  @autoSubscribe
-  public getCurrentPage(@key index: string) {
+  public getCurrentPage(index: string) {
     return isNumber(this.currentPage[index]) ? this.currentPage[index] : 0
   }
 
-  @autoSubscribe
-  public getMaxPage(@key index: string) {
+  public getMaxPage(index: string) {
     return isNumber(this.maxPage[index]) ? this.maxPage[index] : 1
   }
 
-  public resetPage(form: IForm, prefix: string = "") {
-    const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
+  public resetPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
     this.currentPage[getAt] = 0
   }
 
-  public async nextPage(form: IForm, prefix: string = "") {
-    const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
-    return this.searchInPage(form, prefix, isNumber(this.currentPage[getAt]) ? this.currentPage[getAt] + 1 : 1)
+  public async nextPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
+    return this.searchInPage(schema, mapTo, prefix, isNumber(this.currentPage[getAt]) ? this.currentPage[getAt] + 1 : 1)
   }
 
-  public async prevPage(form: IForm, prefix: string = "") {
-    const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
-    return this.searchInPage(form, prefix, isNumber(this.currentPage[getAt]) ? this.currentPage[getAt] - 1 : 0)
+  public async prevPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
+    return this.searchInPage(schema, mapTo, prefix, isNumber(this.currentPage[getAt]) ? this.currentPage[getAt] - 1 : 0)
   }
 
-  public async searchInPage(form: IForm, prefix: string = "", pageNumber: number) {
-    const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
+  public async searchInPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", pageNumber: number = 0) {
+    const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
     if (isNumber(this.maxPage[getAt]) && pageNumber > this.maxPage[getAt]) {
       pageNumber = this.maxPage[getAt] - 1
     }
@@ -64,13 +58,14 @@ export class ListStore extends StoreBase implements IPersistableStore {
       pageNumber = 0
     }
     this.currentPage[getAt] = pageNumber
-    return this.makeQuery(form, prefix)
+    return this.makeQuery(schema, mapTo, prefix)
   }
 
-  public buildQueryObj(form: IForm, prefix: string = "") {
-    const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
-    const queryBuilder: any = get(form, "options.queryBuilder", FormStore.getFormData)
-    const queryObj: any = queryBuilder.apply(FormStore, [form, prefix, "find"])
+  public buildQueryObj(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    mapTo = getMapTo(schema, mapTo)
+    const getAt = prependPrefix(mapTo, prefix)
+    const queryBuilder: any = get(schema, "modify.queryBuilder")
+    const queryObj: any = queryBuilder ? queryBuilder.apply(FormStore, [schema, mapTo, prefix, "find"]) : FormStore.getValue(mapTo, prefix, {})
     const currentPage = this.getCurrentPage(getAt)
     if (isNil(queryObj.$limit)) {
         queryObj.$limit = this.pageSize
@@ -79,25 +74,27 @@ export class ListStore extends StoreBase implements IPersistableStore {
         queryObj.$skip = queryObj.$limit * currentPage
     }
     if (isNil(queryObj.$sort)) {
-        queryObj.$sort = get(form, "options.defaultSort", { createdAt: -1 })
+        queryObj.$sort = get(schema, "modify.defaultSort", { createdAt: -1 })
     }
     return queryObj
   }
 
-  public async makeQuery(form: IForm, prefix: string = "") {
-    const getAt = `${prefix && prefix.length > 0 ? prefix + "." : ""}${form.model}`
+  public async makeQuery(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    mapTo = getMapTo(schema, mapTo)
+    const getAt = prependPrefix(mapTo, prefix)
     let qKey: any
     try {
-      const queryObj = this.buildQueryObj(form, prefix)
-      qKey = `${JSON.stringify(form.multiCollection)}${form.collection}${JSON.stringify(queryObj)}`
+      const queryObj = toJS(this.buildQueryObj(schema, mapTo, prefix), {exportMapsAsObjects: false, detectCycles: true, recurseEverything: true})
+      console.log("ABOUT TO QUERY WITH", queryObj)
+      qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
       if (!this.doingQuery[qKey]) {
         this.doingQuery[qKey] = true
-        LoadingStore.setLoading(getAt, true)
-        if (Array.isArray(form.multiCollection)) {
+        FormStore.setLoading(getAt, true)
+        if (Array.isArray(schema.multiCollection)) {
           const resList: any[] = []
           const promises: any[] = []
           let biggestTotal = 0
-          for (const col of form.multiCollection) {
+          for (const col of schema.multiCollection) {
             promises.push(BackendClient.client.find(col, queryObj))
           }
           let i = 0
@@ -108,7 +105,7 @@ export class ListStore extends StoreBase implements IPersistableStore {
                 biggestTotal = promiseRes.total
               }
               for (const e of promiseRes.data) {
-                e.fromCollection = form.multiCollection[i]
+                e.fromCollection = schema.multiCollection[i]
                 resList.push(e)
               }
             }
@@ -116,35 +113,27 @@ export class ListStore extends StoreBase implements IPersistableStore {
           }
           this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
           this.lists[getAt] = {result: resList}
-          LoadingStore.setLoading(getAt, false)
-          this.trigger(getAt)
+          FormStore.setLoading(getAt, false)
           this.doingQuery[qKey] = false
           return {result: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
         } else {
-          const col: any = form.collection
+          const col: any = schema.collection
           const result = await BackendClient.client.find(col, queryObj)
           const total = get(result, "total", 1)
           this.maxPage[getAt] = Math.ceil(total / this.pageSize)
-          const returnedResult: any = {
-            result: get(result, "data"), total,
-            limit: get(result, "limit", 1),
-            skip: get(result, "skip", 1)
-          }
-          this.lists[getAt] = returnedResult
-          this.trigger(getAt)
+          this.lists[getAt] = result
           this.doingQuery[qKey] = false
-          LoadingStore.setLoading(getAt, false)
-          return returnedResult
+          FormStore.setLoading(getAt, false)
+          return result
         }
       } else {
         return Promise.resolve(false)
       }
     } catch (error) {
-      this.lists[getAt] = {error}
-      this.trigger(getAt)
       this.doingQuery[qKey] = false
-      LoadingStore.setLoading(getAt, false)
-      return {error}
+      FormStore.setError(getAt, error)
+      FormStore.setLoading(getAt, false)
+      return error
     }
   }
 

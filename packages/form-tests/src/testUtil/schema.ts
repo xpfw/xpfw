@@ -66,14 +66,46 @@ const ArrayField: JSONSchemaDefinition = {
 const NumberAndRequiredTextSchema: ExtendedJSONSchema = {
   title: "formModel",
   collection: "simpleTestCol",
-  items: {
+  properties: {
     [String(NameField.title)]: NameField,
     [String(NumberField.title)]: NumberField
   },
   required: [String(NameField.title)]
 }
 
+const RelationshipSingleField: ExtendedJSONSchema = {
+  title: "ownedBy",
+  type: "string",
+  theme: "single",
+  relationship: {
+    collection: NumberAndRequiredTextSchema.collection,
+    namePath: NameField.title
+  }
+}
+
+const RelationshipMultiField: ExtendedJSONSchema = {
+  title: "ownedByMulti",
+  type: "string",
+  theme: "multi",
+  items: {type: "string"},
+  relationship: {
+    collection: NumberAndRequiredTextSchema.collection,
+    namePath: NameField.title
+  }
+}
+
+const RelationshipAndNumberSchema: ExtendedJSONSchema = {
+  title: "relationshipFormModel",
+  collection: "myRelationshipCollection",
+  properties: {
+    [String(RelationshipSingleField.title)]: RelationshipSingleField,
+    [String(RelationshipMultiField.title)]: RelationshipMultiField,
+    [String(NumberField.title)]: NumberField
+  }
+}
+
 export {
   ArrayField, BooleanField, DateField, LocationField, NameField,
-  NumberField, ObjectField, PwField, SelectField, NumberAndRequiredTextSchema
+  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, RelationshipAndNumberSchema,
+  RelationshipMultiField, RelationshipSingleField, SelectField
 }

@@ -8,12 +8,14 @@ import stringTest from "./tests/string"
 import makeSubFields from "./testUtil/makeSubFields"
 import {
   ArrayField, BooleanField, DateField, LocationField, NameField,
-  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, SelectField
+  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, RelationshipAndNumberSchema,
+  RelationshipMultiField, RelationshipSingleField, SelectField
 } from "./testUtil/schema"
 
 export {
   booleanTest, stringTest, arrayTest, dateTest,
   locationTest, objectTest, selectTest, makeSubFields,
   ArrayField, BooleanField, DateField, LocationField, NameField,
-  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, SelectField
+  NumberAndRequiredTextSchema, NumberField, ObjectField, PwField, RelationshipAndNumberSchema,
+  RelationshipMultiField, RelationshipSingleField, SelectField
 }

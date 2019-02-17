@@ -1,10 +1,13 @@
-import { FormStore } from "@xpfw/form-shared"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { toJS } from "@xpfw/data-tests"
+import { FormStore } from "@xpfw/form"
+import {
+  makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField,
+  RelationshipAndNumberSchema, RelationshipMultiField, RelationshipSingleField
+ } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
-import { TestDefs, ValidationRegistry } from "@xpfw/validate"
 import "isomorphic-fetch"
-import { cloneDeep, get, isNil } from "lodash"
-import { matchStoreState } from "resub-persist"
+import { cloneDeep, get, isNil } from "lodash-es"
 import BackendClient from "../client"
 import { AuthForm, MailField, PwField } from "../components/auth"
 import DbStore from "./db"
@@ -12,56 +15,60 @@ import ListStore from "./list"
 
 BackendClient.client = FeathersClient
 
-ValidationRegistry.registerForm(AuthForm)
-
 test("List filter Test", async () => {
-  const cols: any = ["simpleTestCol", TestDefs.FormRelationshipToNumAndRequiredText.collection]
+  const cols: any = ["simpleTestCol", RelationshipAndNumberSchema.collection]
   const appRef = await getRandomApp(cols, false, BackendClient.client, false)
+  const fields = makeSubFields(NumberAndRequiredTextSchema)
+  const relFields = makeSubFields(RelationshipAndNumberSchema)
   for (let i = 0; i < 450; i++) {
-    FormStore.setValue(TestDefs.RequiredTextField.mapTo, `${i}*${i}`)
-    FormStore.setValue(TestDefs.NumberField.mapTo, i)
-    const res: any = await DbStore.create(TestDefs.FormNumberAndRequiredText)
-    FormStore.setValue(TestDefs.RelationshipSingleField.mapTo, res.result.id)
-    FormStore.setValue(TestDefs.NumberField.mapTo, i * 420)
-    await DbStore.create(TestDefs.FormRelationshipToNumAndRequiredText)
+    fields[NameField.title].setValue(`${i}*${i}`)
+    fields[NumberField.title].setValue(i)
+    const res: any = await DbStore.create(NumberAndRequiredTextSchema)
+    relFields[RelationshipSingleField.title].setValue(res.id)
+    relFields[NumberField.title].setValue(i * 420)
+    await DbStore.create(RelationshipAndNumberSchema)
   }
-  expect(FormStore.getFormData(TestDefs.FormNumberAndRequiredText, "page")).toMatchSnapshot("getformdat")
-  expect(await ListStore.makeQuery(TestDefs.FormNumberAndRequiredText, "page"))
+  FormStore.setValue(NumberAndRequiredTextSchema.title, undefined)
+  FormStore.setValue(RelationshipAndNumberSchema.title, undefined)
+  expect(await ListStore.makeQuery(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "page"))
     .toMatchSnapshot("result of initial search")
-  expect(await ListStore.searchInPage(TestDefs.FormNumberAndRequiredText, "page", 99999))
+  expect(await ListStore.searchInPage(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "page", 99999))
     .toMatchSnapshot("result of searching too far")
-  expect(await ListStore.searchInPage(TestDefs.FormNumberAndRequiredText, "page", 4))
+  expect(await ListStore.searchInPage(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "page", 4))
     .toMatchSnapshot("result of searching in higher page")
-  FormStore.setValue("find." + TestDefs.RequiredTextField.mapTo, "4*4")
-  expect(await ListStore.makeQuery(TestDefs.FormNumberAndRequiredText, "find"))
+  let findFields = makeSubFields(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "find")
+  findFields[NameField.title].setValue("4*4")
+  expect(await ListStore.makeQuery(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "find"))
     .toMatchSnapshot("result of search with text")
-  FormStore.setValue("asdf." + TestDefs.RequiredTextField.mapTo, undefined)
-  FormStore.setValue("asdf." + TestDefs.NumberField.mapTo, 240)
-  expect(await ListStore.makeQuery(TestDefs.FormNumberAndRequiredText, "asdf"))
+  const find2Fields = makeSubFields(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "asdf")
+  find2Fields[NumberField.title].setValue(240)
+  expect(await ListStore.makeQuery(NumberAndRequiredTextSchema, NumberAndRequiredTextSchema.title, "asdf"))
     .toMatchSnapshot("result of search with number")
 
-  const multiFormStore = cloneDeep(TestDefs.FormNumberAndRequiredText)
+  const multiFormStore = cloneDeep(NumberAndRequiredTextSchema)
   delete multiFormStore.collection
-  multiFormStore.sections[0].fields.push(TestDefs.RelationshipSingleField)
+  multiFormStore.properties[String(RelationshipSingleField.title)] = RelationshipSingleField
   multiFormStore.multiCollection = cols
-  FormStore.setValue(TestDefs.RequiredTextField.mapTo, undefined)
-  FormStore.setValue(TestDefs.NumberField.mapTo, undefined)
-  expect(await ListStore.makeQuery(multiFormStore, "page"))
+  console.log("MUILTIFORM IS", multiFormStore)
+  FormStore.setValue(multiFormStore.title, undefined, "find")
+  findFields = makeSubFields(multiFormStore, multiFormStore.title, "find")
+  expect(await ListStore.makeQuery(multiFormStore, undefined, "page"))
     .toMatchSnapshot("result of initial search")
-  expect(await ListStore.searchInPage(multiFormStore, "page", 999))
+  expect(await ListStore.searchInPage(multiFormStore, undefined, "page", 999))
     .toMatchSnapshot("result of searching too far")
-  expect(await ListStore.searchInPage(multiFormStore, "page", 4))
+  expect(await ListStore.searchInPage(multiFormStore, undefined, "page", 4))
     .toMatchSnapshot("result of searching in higher page")
-  FormStore.setValue("find." + TestDefs.RequiredTextField.mapTo, "6x6")
-  expect(await ListStore.makeQuery(multiFormStore, "find"))
+  findFields[NameField.title].setValue("6x6")
+  expect(await ListStore.makeQuery(multiFormStore, undefined,  "find"))
     .toMatchSnapshot("result of search with text")
-  FormStore.setValue("find." + TestDefs.RequiredTextField.mapTo, undefined)
-  FormStore.setValue("find." + TestDefs.RelationshipSingleField.mapTo, 6)
-  expect(await ListStore.makeQuery(multiFormStore, "find"))
+  findFields[multiFormStore.title].setValue(undefined)
+  findFields[RelationshipSingleField.title].setValue(6)
+  expect(await ListStore.makeQuery(multiFormStore, undefined, "find"))
     .toMatchSnapshot("result of search with ownedBy")
-  FormStore.setValue("find." + TestDefs.RelationshipSingleField.mapTo, undefined)
-  FormStore.setValue("find." + TestDefs.NumberField.mapTo, 420)
-  expect(await ListStore.makeQuery(multiFormStore, "find"))
+  findFields[multiFormStore.title].setValue(undefined)
+  findFields[NumberField.title].setValue(420)
+  expect(await ListStore.makeQuery(multiFormStore, undefined, "find"))
     .toMatchSnapshot("result of search with specifc number")
+  // expect(toJS(FormStore)).toMatchSnapshot("form store after all query data filled in")
   await appRef.cleanUp()
 }, 10000)

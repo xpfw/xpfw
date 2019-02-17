@@ -120,7 +120,7 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      *
      * @type {Function}
      */
-    queryBuilder?: (form: ExtendedJSONSchema, prefix?: string) => any
+    queryBuilder?: (form: ExtendedJSONSchema, method: string, mapTo?: string, prefix?: string) => any
     /**
      * The default sort for this collection
      */
