@@ -1,5 +1,8 @@
-import jsonValidatorCreator from "ajv"
+import jsonValidatorCreator, { Ajv } from "ajv"
 
-const jsonValidator = new jsonValidatorCreator()
+const jsonValidator: Ajv = new jsonValidatorCreator()
 jsonValidator.addFormat("password", () => true)
 export default jsonValidator
+export {
+  Ajv
+}

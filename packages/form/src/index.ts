@@ -3,7 +3,7 @@ import useArray from "./hooks/array"
 import { useField, useFieldWithValidation } from "./hooks/field"
 import useObject from "./hooks/object"
 import { ExtendedJSONSchema, JSONSchemaDefinition } from "./jsonschema"
-import jsonValidator from "./jsonValidator"
+import jsonValidator, { Ajv } from "./jsonValidator"
 import ComponentRegistry, { IFieldProps } from "./store/componentRegistry"
 import FormStore, { FormStoreClass } from "./store/form"
 import getMapToFromProps, { getMapTo } from "./util/getMapToFromProps"
@@ -15,5 +15,5 @@ export {
   useField, useFieldWithValidation, prefixMaker, FormStore, FormStoreClass,
   useArray, useObject, ComponentRegistry, JSONSchemaDefinition, IFieldProps,
   SharedField, getMapToFromProps, memo, ExtendedJSONSchema, prependPrefix,
-  getMapTo, iterateSubFields, jsonValidator
+  getMapTo, iterateSubFields, jsonValidator, Ajv
 }

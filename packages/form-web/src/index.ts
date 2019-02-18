@@ -3,7 +3,7 @@ import BooleanField from "./base/boolean"
 import ObjectField from "./base/object"
 import ArrayField from "./base/object"
 import SelectField from "./base/select"
-import TextField from "./base/text"
+import TextField, { setDate } from "./base/text"
 
 const registerComponents = () => {
   ComponentRegistry.registerComponent("string", TextField)
@@ -13,6 +13,6 @@ const registerComponents = () => {
 }
 
 export {
-  ComponentRegistry, TextField, registerComponents,
+  ComponentRegistry, TextField, registerComponents, setDate,
   ArrayField, ObjectField, BooleanField, SelectField
 }
