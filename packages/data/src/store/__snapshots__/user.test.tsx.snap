@@ -58,7 +58,7 @@ Object {
 
 exports[`User Store Test: after register err 1`] = `
 Object {
-  "authErr": Object {},
+  "authErr": "TypeError: Cannot read property 'service' of null",
   "connected": false,
   "loading": false,
   "loggedIn": false,

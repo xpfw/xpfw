@@ -1,10 +1,10 @@
 import { editTest } from "@xpfw/data-tests"
 import "isomorphic-fetch"
 import * as React from "react"
-import useEdit, { submitEdit } from "./edit"
+import { IEditHookProps, submitEdit, useEditWithProps } from "./edit"
 
-const testFunc: React.FunctionComponent<any> = (props) => {
-  const edited = useEdit(props.id, props.schema, props.mapTo, props.prefix, props.reset)
+const testFunc: React.FunctionComponent<IEditHookProps> = (props) => {
+  const edited = useEditWithProps(props)
   return (
     <div>
       {JSON.stringify(edited, undefined, 2)}

@@ -15,7 +15,14 @@ const useRemove = (id: string, schema: ExtendedJSONSchema) => {
   }
 }
 
+export interface IRemoveHookProps {
+  schema: ExtendedJSONSchema
+  id: string
+}
+
+const useRemoveWithProps = (props: IRemoveHookProps) => useRemove(props.id, props.schema)
+
 export default useRemove
 export {
-  submitRemove
+  useRemoveWithProps, submitRemove
 }

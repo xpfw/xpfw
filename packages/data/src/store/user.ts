@@ -2,7 +2,7 @@ import { FormStore, useFieldWithValidation, useObject } from "@xpfw/form"
 import { get, isNil } from "lodash-es"
 import { action, observable } from "mobx"
 import BackendClient from "../client"
-import { AuthForm, PwField } from "../components/auth"
+import { AuthForm, PwField } from "../hooks/auth"
 import dataOptions from "../options"
 import DbStore from "./db"
 

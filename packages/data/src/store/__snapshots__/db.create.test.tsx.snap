@@ -13,7 +13,17 @@ Object {
   },
   "currentlyEditing": "",
   "fetching": Object {},
-  "getState": Object {},
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "belongsTo": "myuserid",
+        "createdAt": "2011-05-05T14:20:43.337Z",
+        "guestName": "myText",
+        "id": 0,
+        "myVal": 420,
+      },
+    },
+  },
   "lastFetch": Object {},
   "removeState": Object {},
   "updateState": Object {},

@@ -4,7 +4,7 @@ import { FormStore, useFieldWithValidation, useObject } from "@xpfw/form"
 import { getRandomApp } from "@xpfw/test-util"
 import "isomorphic-fetch"
 import BackendClient from "../client"
-import { AuthForm, MailField, PwField } from "../components/auth"
+import { AuthForm, MailField, PwField } from "../hooks/auth"
 import UserStore from "./user"
 
 BackendClient.client = FeathersClient

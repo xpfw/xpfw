@@ -2,7 +2,7 @@
 
 exports[`User Store Test: after invalid login 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -25,7 +25,7 @@ exports[`User Store Test: after invalid login 1`] = `
 
 exports[`User Store Test: after logout 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -39,7 +39,7 @@ exports[`User Store Test: after logout 1`] = `
 
 exports[`User Store Test: after logout 2`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -53,7 +53,7 @@ exports[`User Store Test: after logout 2`] = `
 
 exports[`User Store Test: after register 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -70,7 +70,7 @@ exports[`User Store Test: after register 1`] = `
 
 exports[`User Store Test: after register err 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -84,7 +84,7 @@ exports[`User Store Test: after register err 1`] = `
 
 exports[`User Store Test: after relogin 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -101,7 +101,7 @@ exports[`User Store Test: after relogin 1`] = `
 
 exports[`User Store Test: after wrong password login 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,
@@ -124,7 +124,7 @@ exports[`User Store Test: after wrong password login 1`] = `
 
 exports[`User Store Test: before register 1`] = `
 <div
-  class="mymock"
+  className="mymock"
 >
   {
   "loading": false,

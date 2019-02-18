@@ -61,16 +61,18 @@ export class ListStore {
     return this.makeQuery(schema, mapTo, prefix)
   }
 
-  public buildQueryObj(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+  public buildQueryObj(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", noDynamicNums?: boolean) {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
     const queryBuilder: any = get(schema, "modify.queryBuilder")
-    const queryObj: any = queryBuilder ? queryBuilder.apply(FormStore, [schema, mapTo, prefix, "find"]) : FormStore.getValue(mapTo, prefix, {})
+    let queryObj: any = queryBuilder ?
+      queryBuilder.apply(FormStore, [schema, mapTo, prefix, "find"]) : FormStore.getValue(mapTo, prefix, {})
+    queryObj = toJS(queryObj, {exportMapsAsObjects: false, detectCycles: true, recurseEverything: true})
     const currentPage = this.getCurrentPage(getAt)
-    if (isNil(queryObj.$limit)) {
+    if (!noDynamicNums && isNil(queryObj.$limit)) {
         queryObj.$limit = this.pageSize
     }
-    if (isNil(queryObj.$skip)) {
+    if (!noDynamicNums && isNil(queryObj.$skip)) {
         queryObj.$skip = queryObj.$limit * currentPage
     }
     if (isNil(queryObj.$sort)) {
@@ -84,7 +86,7 @@ export class ListStore {
     const getAt = prependPrefix(mapTo, prefix)
     let qKey: any
     try {
-      const queryObj = toJS(this.buildQueryObj(schema, mapTo, prefix), {exportMapsAsObjects: false, detectCycles: true, recurseEverything: true})
+      const queryObj = this.buildQueryObj(schema, mapTo, prefix)
       console.log("ABOUT TO QUERY WITH", queryObj)
       qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
       if (!this.doingQuery[qKey]) {

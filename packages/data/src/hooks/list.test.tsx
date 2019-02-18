@@ -1,6 +1,15 @@
-import { tests } from "@xpfw/ui-tests"
+import { listTest } from "@xpfw/data-tests"
 import "isomorphic-fetch"
-import makeMockElement from "../testUtil/makeMockElement"
-import { nextPage, prevPage, onUpdate} from "./list"
+import * as React from "react"
+import { IListHookProps, nextPage, prevPage, useListWithProps } from "./list"
 
-tests.list(makeMockElement("mymock"), nextPage, prevPage, onUpdate)
+const testFunc: React.FunctionComponent<IListHookProps> = (props) => {
+  const rem = useListWithProps(props)
+  return (
+    <div>
+      {JSON.stringify(rem, undefined, 2)}
+    </div>
+  )
+}
+
+listTest(testFunc, nextPage, prevPage)

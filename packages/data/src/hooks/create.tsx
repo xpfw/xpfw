@@ -39,7 +39,16 @@ const useCreate = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, 
   }
 }
 
+export interface ICreateHookProps {
+  schema: ExtendedJSONSchema
+  prefix?: string
+  mapTo?: string
+  reset?: boolean
+}
+
+const useCreateWithProps = (props: ICreateHookProps) => useCreate(props.schema, props.mapTo, props.prefix, props.reset)
+
 export default useCreate
 export {
-  submitCreate
+  useCreateWithProps, submitCreate
 }

@@ -1,111 +1,94 @@
-import { FormStore } from "@xpfw/form-shared"
+import { BackendClient, dataOptions, DbStore, ListStore } from "@xpfw/data"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { FormStore } from "@xpfw/form"
+import { makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
-import { BackendClient, DbStore, ListStore, SharedFormList } from "@xpfw/ui-shared"
 import { globals, TestDefs } from "@xpfw/validate"
-import { get, isFunction } from "lodash"
+import { get, isFunction } from "lodash-es"
 import * as React from "react"
-import { matchStoreState } from "resub-persist"
-import makeMockElement from "../testUtil/baseMock"
 import render from "../testUtil/render"
+import toJS from "../testUtil/toJS"
 import login from "./login"
 
 BackendClient.client = FeathersClient
-globals.options.userIdPath = "id"
+dataOptions.idPath = "id"
 
-const testList = (MockEle: any, nextPage?: Function, prevPage?: Function, onUpdate?: Function) => {
+const testList = (MockedList: any, nextPage?: Function, prevPage?: Function) => {
   test("DbStore Create Test", async () => {
-    const form = TestDefs.FormNumberAndRequiredText
-    const s: any = form.collection
+    const schema = NumberAndRequiredTextSchema
+    const s: any = schema.collection
     const appRef = await getRandomApp(s, false, BackendClient.client, true)
-    const MockedList = SharedFormList(MockEle)
-    render(<MockedList form={form} />, "before login")
+    render(<MockedList schema={schema} />, "before login")
     await login()
-    render(<MockedList form={form} />, "after login")
+    render(<MockedList schema={schema} />, "after login")
     const prefix = "createpref"
+    const fields = makeSubFields(NumberAndRequiredTextSchema)
     const defaultList = []
     for (let i = 0; i !== 99; i++) {
-      FormStore.setValue(TestDefs.RequiredTextField.mapTo, String(i) + "num")
-      FormStore.setValue(TestDefs.NumberField.mapTo, i * 420)
-      const result: any = await DbStore.create(form)
+      fields[String(NameField.title)].setValue(String(i) + "num")
+      fields[String(NumberField.title)].setValue(i * 420)
+      const result: any = await DbStore.create(schema)
       if (i % 11 === 0) {
-        defaultList.push(result.result.id)
+        defaultList.push(result.id)
       }
     }
-    FormStore.setValue(TestDefs.NumberField.mapTo, undefined)
-    FormStore.setValue(TestDefs.RequiredTextField.mapTo, undefined)
-    render(<MockedList form={form} />, "list before fetch")
-    await ListStore.getList(form.model, form, "", true)
-    render(<MockedList form={form} />, "list after fetch")
+    fields[String(NumberAndRequiredTextSchema.title)].setValue(undefined)
+    render(<MockedList schema={schema} />, "list before fetch")
+    await ListStore.getList(schema, undefined, "", true)
+    render(<MockedList schema={schema} />, "list after fetch")
     expect(toJS(ListStore)).toMatchSnapshot("after list get")
 
-    await ListStore.nextPage(form)
+    await ListStore.nextPage(schema)
     expect(toJS(ListStore)).toMatchSnapshot("after second page get")
 
-    await ListStore.nextPage(form)
+    await ListStore.nextPage(schema)
     expect(toJS(ListStore)).toMatchSnapshot("after third page get")
     if (isFunction(nextPage)) {
-      await nextPage({props: {form}})()
+      await nextPage({props: {schema}})()
     } else {
-      await ListStore.nextPage(form)
+      await ListStore.nextPage(schema)
     }
-    render(<MockedList form={form} />, "list on fourth page")
+    render(<MockedList schema={schema} />, "list on fourth page")
     if (isFunction(prevPage)) {
-      await prevPage({props: {form}})()
+      await prevPage({props: {schema}})()
     } else {
-      await ListStore.prevPage(form)
+      await ListStore.prevPage(schema)
     }
-    render(<MockedList form={form} />, "using prevPage back to third page")
-    if (isFunction(onUpdate)) {
-      FormStore.setValue(TestDefs.RequiredTextField.mapTo, null)
-      const upThisRef: any = {props: {form}, state: {}}
-      upThisRef.setState = (newState: any) => {
-        upThisRef.state = newState
-      }
-      await onUpdate(upThisRef)()
-      render(<MockedList form={form} />, "changing value manually but onUpdate detects changes no query")
-      console.log("result is", await ListStore.makeQuery(form))
-      render(<MockedList form={form} />, "changing value manually but onUpdate detects changes no query loaded")
-      FormStore.setValue(TestDefs.RequiredTextField.mapTo, "9num")
-      await ListStore.makeQuery(form)
-      await onUpdate(upThisRef)()
-      render(<MockedList form={form} />, "changing value manually but onUpdate detects changes now loading")
-      await ListStore.makeQuery(form)
-      render(<MockedList form={form} />, "changing value manually but onUpdate detects changes loaded narrowing search")
-      FormStore.setValue(TestDefs.RequiredTextField.mapTo, null)
-    }
+    render(<MockedList schema={schema} />, "using prevPage back to third page")
 
-    render(<MockedList prefix={prefix} form={form} />, "prefix list before fetch")
-    await ListStore.getList(form.model, form, prefix, true)
-    render(<MockedList prefix={prefix} form={form} />, "prefix list after fetch")
+    render(<MockedList prefix={prefix} schema={schema} />, "prefix list before fetch")
+    await ListStore.getList(schema, undefined, prefix, true)
+    render(<MockedList prefix={prefix} schema={schema} />, "prefix list after fetch")
     expect(toJS(ListStore)).toMatchSnapshot("prefix after list get")
 
-    await ListStore.nextPage(form, prefix)
-    render(<MockedList prefix={prefix} form={form} />, "prefix second page")
+    await ListStore.nextPage(schema, prefix)
+    render(<MockedList prefix={prefix} schema={schema} />, "prefix second page")
 
-    await ListStore.nextPage(form, prefix)
-    render(<MockedList prefix={prefix} form={form} />, "prefix third page")
-    FormStore.setValue(TestDefs.NumberField.mapTo, undefined)
-    FormStore.setValue(TestDefs.RequiredTextField.mapTo, undefined)
-    FormStore.setValue("newpre." + TestDefs.NumberField.mapTo, undefined)
-    FormStore.setValue("newpre." + TestDefs.RequiredTextField.mapTo, "1num")
-    await ListStore.getList(form.model, form, "newpre", true)
-    render(<MockedList prefix={"newpre"} form={form} />, "prefix still first if prefix unknown but query set")
-    FormStore.setValue("newpre." + TestDefs.NumberField.mapTo, 840)
-    FormStore.setValue("newpre." + TestDefs.RequiredTextField.mapTo, undefined)
-    console.log("search res is", await ListStore.getList("newpre." + form.model, form, "newpre", true))
+    await ListStore.nextPage(schema, prefix)
+    render(<MockedList prefix={prefix} schema={schema} />, "prefix third page")
+
+    const pre = "newpre"
+    const prefixedFields = makeSubFields(NumberAndRequiredTextSchema, pre)
+    // prefixedFields[String(NumberField.title)].setValue(undefined)
+    prefixedFields[String(NameField.title)].setValue("1num")
+    await ListStore.getList(schema, undefined, pre, true)
+    render(<MockedList prefix={pre} schema={schema} />, "prefix still first if prefix unknown but query set")
+    prefixedFields[String(NumberField.title)].setValue(840)
+    prefixedFields[String(NameField.title)].setValue(undefined)
+    console.log("search res is", await ListStore.getList(schema, undefined, "newpre", true))
     // TODO: find out why number query does not work here
-    render(<MockedList prefix={"newpre"} form={form} />, "prefix still first if prefix unknown but query number")
-    FormStore.setValue("newpre." + TestDefs.RequiredTextField.mapTo, "UNDEFINEDAAA")
-    console.log("empty search res is", await ListStore.getList("newpre." + form.model, form, "newpre", true))
-    render(<MockedList prefix={"newpre"} form={form} />, "empty result")
-    render(<MockedList prefix={"newpre"} form={form} defaultEntries={defaultList} />, "empty result with defaultVals but not fetched yet")
+    render(<MockedList prefix={pre} schema={schema} />, "prefix still first if prefix unknown but query number")
+
+    prefixedFields[String(NameField.title)].setValue("UNDEFINEDAAA")
+    console.log("empty search res is", await ListStore.getList(schema, undefined, "newpre", true))
+    render(<MockedList prefix={pre} schema={schema} />, "empty result")
+    render(<MockedList prefix={pre} schema={schema} defaultEntries={defaultList} />, "empty result with defaultVals but not fetched yet")
     for (const entry in defaultList) {
       await DbStore.getFromServer(entry, s)
     }
-    render(<MockedList prefix={"newpre"} form={form} defaultEntries={defaultList} />, "empty result with defaultVals with guaranteed fetch")
-    form.collection = "broken"
-    const errRes = await ListStore.getList("asdf", form, undefined, true)
+    render(<MockedList prefix={pre} schema={schema} defaultEntries={defaultList} />, "empty result with defaultVals with guaranteed fetch")
+    schema.collection = "broken"
+    const errRes = await ListStore.getList(schema, undefined, "asdf", true)
     expect(errRes.error).not.toBeNull()
     expect(errRes.result).toBe(undefined)
     await appRef.cleanUp()

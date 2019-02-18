@@ -9,4 +9,14 @@ const useGet = (id: string, collection: string) => {
   }
 }
 
+export interface IGetHookProps {
+  collection: string
+  id: string
+}
+
+const useGetWithProps = (props: IGetHookProps) => useGet(props.id, props.collection)
+
 export default useGet
+export {
+  useGetWithProps
+}

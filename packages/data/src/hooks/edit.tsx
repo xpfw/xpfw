@@ -40,7 +40,17 @@ const useEdit = (id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix?
   }
 }
 
+export interface IEditHookProps {
+  schema: ExtendedJSONSchema
+  id: string
+  prefix?: string
+  mapTo?: string
+  reset?: boolean
+}
+
+const useEditWithProps = (props: IEditHookProps) => useEdit(props.id, props.schema, props.mapTo, props.prefix, props.reset)
+
 export default useEdit
 export {
-  submitEdit
+  useEditWithProps, submitEdit
 }
