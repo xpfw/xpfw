@@ -1,14 +1,14 @@
 import BackendClient, { IBackendClient, IUiClient } from "./client"
-import useRelationship, {
-  addId, displayModeChanger, getListFormFromRelationshipField, IRelationshipHookProps,
-  removeId, searchRelated, useRelationshipWithProps
-} from "./form/relationship"
 import useAuth, {
   AuthForm, MailField, OwnerField, PwField
 } from "./hooks/auth"
 import useCreate, { ICreateHookProps, useCreateWithProps } from "./hooks/create"
 import useEdit, { IEditHookProps, useEditWithProps } from "./hooks/edit"
 import useList, { IListHookProps, useListWithProps } from "./hooks/list"
+import useRelationship, {
+  addId, displayModeChanger, getListFormFromRelationshipField, IRelationshipHookProps,
+  removeId, searchRelated, useRelationshipWithProps
+} from "./hooks/relationship"
 import useRemove, { IRemoveHookProps, useRemoveWithProps } from "./hooks/remove"
 import useGet, { IGetHookProps, useGetWithProps } from "./hooks/show"
 import dataOptions from "./options"
