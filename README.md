@@ -20,6 +20,3 @@ It is divided into three main packages:
 xpfw is all about integration.
 You can connect [@xpfw/ui](https://xpfw.github.io/ui) [to any backend](https://xpfw.github.io/docs/ui/backend).
 [@xpfw/form](https://xpfw.github.io/form) and [@xpfw/ui](https://xpfw.github.io/ui) are also [built to be themed](https://xpfw.github.io/docs/ui/theme) with ease.
-
-## Preact
-xpfw has full preact compatability. In fact all jest tests use preact instead of react to render.
