@@ -26,7 +26,7 @@
     "@types/node": "^11.9.3",
     "@types/react": "^16.8.2",
     "@xpfw/form-tests": "0.1.1",
-    "@xpfw/form": "0.2.0",
+    "@xpfw/form": "1.0.0-beta.0",
     "awesome-typescript-loader": "^5.2.1",
     "jest": "^24.1.0",
     "jest-cli": "^24.1.0",
