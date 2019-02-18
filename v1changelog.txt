@@ -1,0 +1,3 @@
+- dropped preact support and it's usage in the tests (mainly because `useEffect` is not available through `preact-compact`yet)
+- drop xpfw definitions and replace them with JSONSchema
+- drop `@xpfw/validate` in favor of `ajv`
