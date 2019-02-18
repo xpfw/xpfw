@@ -1,407 +1,1078 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Relationship Fetching Test: multi added and loaded 1`] = `
-<div
-  class="show"
->
+exports[`DbStore Create Test: after autoselectable search with option enabled and set automatically 1`] = `
+<div>
   {
-  "field": {
-    "mapTo": "ownedByMulti",
-    "type": 14,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": [
-    4,
-    7
-  ],
-  "relatedObject": [
-    null,
-    null
-  ],
-  "searchForm": {
-    "model": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "displayMode": 0,
-  "lastUsed": [
-    7
-  ]
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: multi added but not yet loaded 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedByMulti",
-    "type": 14,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": [
-    4,
-    7
-  ],
-  "relatedObject": [
-    null,
-    null
-  ],
-  "searchForm": {
-    "model": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "displayMode": 0,
-  "lastUsed": [
-    7
-  ]
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: multi load with none missing 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedByMulti",
-    "type": 14,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": [
-    3,
-    4,
-    5
-  ],
-  "relatedObject": [
-    {
-      "myString": "myText 3",
-      "myNum": 423,
-      "id": 3
-    },
-    null,
-    {
-      "myString": "myText 5",
-      "myNum": 425,
-      "id": 5
-    }
-  ],
-  "searchForm": {
-    "model": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  }
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: multi load with one missing 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedByMulti",
-    "type": 14,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": [
-    3,
-    4,
-    5
-  ],
-  "relatedObject": [
-    {
-      "myString": "myText 3",
-      "myNum": 423,
-      "id": 3
-    },
-    null,
-    {
-      "myString": "myText 5",
-      "myNum": 425,
-      "id": 5
-    }
-  ],
-  "searchForm": {
-    "model": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  }
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: multi removed one 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedByMulti",
-    "type": 14,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": [
-    3,
-    4
-  ],
-  "relatedObject": [
-    {
-      "myString": "myText 3",
-      "myNum": 423,
-      "id": 3
-    },
-    null
-  ],
-  "searchForm": {
-    "model": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  }
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: multi removed two 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedByMulti",
-    "type": 14,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": [
-    4
-  ],
-  "relatedObject": [
-    null
-  ],
-  "searchForm": {
-    "model": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  }
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: nothing set yet 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedBy",
-    "type": 13,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "searchForm": {
-    "model": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  }
-}
-</div>
-`;
-
-exports[`Relationship Fetching Test: set to first creation loaded 1`] = `
-<div
-  class="show"
->
-  {
-  "field": {
-    "mapTo": "ownedBy",
-    "type": 13,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
-    }
-  },
-  "value": 1,
+  "value": "b29999999999999999298765",
   "relatedObject": {
-    "myString": "myText 1",
-    "myNum": 421,
-    "id": 1
+    "guestName": "myText 2",
+    "myVal": 422,
+    "_id": "b29999999999999999298765"
   },
   "searchForm": {
-    "model": "searchFor.ownedBy",
+    "title": "searchFor.ownedBy",
     "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
       }
-    ]
+    },
+    "relationship": {}
+  },
+  "lastUsed": [
+    "b29999999999999999298765"
+  ],
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: after autoselectable search with option enabled but too many results 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: after autoselectable search without option enabled 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: after reset 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: after reset 2`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: customPresearch for Text 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "prefix": "customPre"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: customPresearch for my 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "prefix": "customPre"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: customPresearch for null 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "prefix": "customPre"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multi added and loaded 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ]
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ]
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multi after autoselectable search with option enabled but too many results 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multi after autoselectable search without option enabled 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multi load with none missing 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999498765",
+    "b29999999999999999598765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 5",
+      "myVal": 425,
+      "_id": "b29999999999999999598765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
   }
 }
 </div>
 `;
 
-exports[`Relationship Fetching Test: set to first creation not loaded yet 1`] = `
-<div
-  class="show"
->
+exports[`DbStore Create Test: multi load with one missing 1`] = `
+<div>
   {
-  "field": {
-    "mapTo": "ownedBy",
-    "type": 13,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999498765",
+    "b29999999999999999598765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 5",
+      "myVal": 425,
+      "_id": "b29999999999999999598765"
     }
-  },
-  "value": 0,
+  ],
   "searchForm": {
-    "model": "searchFor.ownedBy",
+    "title": "searchFor.ownedByMulti",
     "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
       }
-    ]
+    },
+    "relationship": {}
   }
 }
 </div>
 `;
 
-exports[`Relationship Fetching Test: set to invalid value 1`] = `
-<div
-  class="show"
->
+exports[`DbStore Create Test: multi removed one 1`] = `
+<div>
   {
-  "field": {
-    "mapTo": "ownedBy",
-    "type": 13,
-    "validate": {
-      "relationshipCollection": "simpleTestCol",
-      "relationshipNamePath": "myString"
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999498765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
     }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multi removed two 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multiafter autoselectable search with option enabled and set automatically 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999398765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
   },
+  "displayMode": 0,
+  "lastUsed": [
+    "b29999999999999999398765"
+  ],
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: multiafter autoselectable search with option enabled and set automatically twice 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999598765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "myText 5",
+      "myVal": 425,
+      "_id": "b29999999999999999598765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "lastUsed": [
+    "b29999999999999999598765",
+    "b29999999999999999398765"
+  ],
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: nothing set yet 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: nothing yet 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: nothing yet 2`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: nothing yet 3`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": ""
+}
+</div>
+`;
+
+exports[`DbStore Create Test: nothing yet 4`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "prefix": "customPre"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for Text 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for Text 2`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": ""
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for my 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for my 2`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": ""
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for null 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 0,
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: search for null 2`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "myText 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": "myText 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "displayMode": 1,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": ""
+}
+</div>
+`;
+
+exports[`DbStore Create Test: set to first creation loaded 1`] = `
+<div>
+  {
+  "value": "b29999999999999999198765",
+  "relatedObject": {
+    "guestName": "myText 1",
+    "myVal": 421,
+    "_id": "b29999999999999999198765"
+  },
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: set to first creation not loaded yet 1`] = `
+<div>
+  {
+  "value": "b29999999999999999098765",
+  "relatedObject": {
+    "guestName": "myText 0",
+    "myVal": 420,
+    "_id": "b29999999999999999098765"
+  },
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: set to invalid value 1`] = `
+<div>
+  {
   "value": "INVALID",
   "searchForm": {
-    "model": "searchFor.ownedBy",
+    "title": "searchFor.ownedBy",
     "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {}
-          }
-        ]
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
       }
-    ]
+    },
+    "relationship": {}
   }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: single search for Text 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: single search for my 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
+}
+</div>
+`;
+
+exports[`DbStore Create Test: single search for null 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      }
+    },
+    "relationship": {}
+  },
+  "prefix": "ownedBy"
 }
 </div>
 `;

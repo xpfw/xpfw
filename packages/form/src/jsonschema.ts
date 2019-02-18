@@ -109,6 +109,18 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      * Path to get id from if has type RelationshipSingle or RelationshipMany
      */
     idPath?: string
+    /**
+     * if set to true it wil auto select an item in relationship search if it is the only one found
+     */
+    autoSelect?: boolean
+    /**
+     * if set to true the query will contain a $nin on `dataOptions.idPath`
+     */
+    filterOutSelected?: boolean
+    /**
+     * gives you the ability to transform the name to e.g. a regular expression
+     */
+    nameTransform?: (schema: ExtendedJSONSchema, value: any) => any
   }
   /**
    * These are options related to modifying the object sent out by the DbStore functions

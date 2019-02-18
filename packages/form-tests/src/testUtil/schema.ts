@@ -85,7 +85,7 @@ const RelationshipSingleField: ExtendedJSONSchema = {
 
 const RelationshipMultiField: ExtendedJSONSchema = {
   title: "ownedByMulti",
-  type: "string",
+  type: "array",
   theme: "multi",
   items: {type: "string"},
   relationship: {

@@ -1,82 +1,62 @@
-import { FormStore, IFieldProps } from "@xpfw/form-shared"
-import ValidationRegistry, { fieldConverter, globals, IField, IFieldError, IForm, options } from "@xpfw/validate"
-import { prefixMaker } from "@xpfw/validate"
-import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash"
+import { ExtendedJSONSchema, FormStore, getMapTo, IFieldProps, memo, prependPrefix, useField, useFieldWithValidation } from "@xpfw/form"
+import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash-es"
+import { action } from "mobx"
 import * as React from "react"
-import { ComponentBase } from "resub"
+import dataOptions from "../options"
 import DbStore from "../store/db"
 import ListStore from "../store/list"
 
-export interface ISharedRelationshipField extends IFieldProps {
-}
-
-export interface ISharedRelationshipFieldState {
-  relatedObject?: any
-  displayMode: any
-  searchForm: IForm
-  lastUsed?: any[]
-  error?: IFieldError
-}
-
-export interface ISharedRelationshipFieldProps extends ISharedRelationshipField, ISharedRelationshipFieldState {
-  addId: (id: string) => any
-  removeId: (id: string) => any
-  setDisplayMode: (id: any) => any
-}
-
 const lastUsedKey = "lastUsed"
 
-const getListFormFromRelationshipField: (field: IField) => IForm = (field: IField) => {
-  const collection = get(field, "validate.relationshipCollection")
-  const nameSearchField: IField = {
-    mapTo: get(field, "validate.relationshipNamePath"),
-    type: globals.FieldType.Text,
-    validate: {
-      convert: fieldConverter.textRegex
+const getListFormFromRelationshipField:
+(schema: ExtendedJSONSchema, mapTo?: string) => ExtendedJSONSchema = (schema, mapTo) => {
+  const collection = get(schema, "relationship.collection")
+  const nameTransform: any = get(schema, "relationship.nameTransform", (schema: any, val: any) => {
+    return {
+      $regex: `(.*?)${val}(.*?)`,
+      $options: "isg"
     }
-  }
-  const fields = [nameSearchField]
-  if (!isNil(ValidationRegistry.forms[collection]) &&
-  get(ValidationRegistry.forms[collection], "options.filterOutById", false)) {
-    fields.push({
-      mapTo: get(ValidationRegistry.forms[collection], "options.idPath", "id"),
-      type: globals.FieldType.Text,
-      validate: {
-        type: globals.FieldType.Text
-      }
-    })
+  })
+  const nameSearchField: ExtendedJSONSchema = {
+    title: get(schema, "relationship.namePath"),
+    type: "string"
   }
   return {
-    model: "searchFor." + field.mapTo,
+    title: "searchFor." + getMapTo(schema, mapTo),
     collection,
-    sections: [
-      {fields}
-    ]
-  }
-}
-const displayModeChanger = (thisRef: {props: ISharedRelationshipField}) => {
-  return (newValue: any) => {
-    const mapTo: any = get(thisRef, "props.field.mapTo", "unknownRelation")
-    FormStore.setValue(`displayMode.${mapTo}`, newValue)
+    properties: {
+      [String(nameSearchField.title)]: nameSearchField,
+      [dataOptions.idPath]: {
+        title: dataOptions.idPath,
+        type: "string"
+      }
+    },
+    relationship: {
+      nameTransform
+    }
   }
 }
 
-const addId = (thisRef: {props: ISharedRelationshipField}) => {
-  const disp = displayModeChanger(thisRef)
-  return async (newValue: any) => {
-    const prefix = prefixMaker(thisRef.props.prefix)
-    const mapTo = get(thisRef, "props.field.mapTo", "undefined")
-    const valuePath = `${prefix}${mapTo}`
-    if (get(thisRef, "props.field.type") === globals.FieldType.RelationshipMulti) {
-      let currentValue = FormStore.getValue(valuePath)
-      currentValue = !isArray(currentValue) ? [] : cloneDeep(currentValue)
+const displayModeChanger = (mapTo: string, prefix?: string) => {
+  return (newValue: any) => {
+    FormStore.setValue(`displayMode.${mapTo}`, newValue, prefix)
+  }
+}
+
+const addId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
+  if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
+  const disp = displayModeChanger(mapTo, prefix)
+  return action((newValue: any) => {
+    if (schema.type === "array") {
+      let currentValue = FormStore.getValue(mapTo, prefix)
+      currentValue = !isArray(currentValue) ? [] : currentValue
       currentValue.push(newValue)
-      FormStore.setValue(valuePath, currentValue)
+      FormStore.setValue(mapTo, currentValue, prefix)
       disp(0)
     } else {
-      FormStore.setValue(valuePath, newValue)
+      FormStore.setValue(mapTo, newValue, prefix)
     }
-    const lastUsedFieldKey = `${lastUsedKey}.${prefix}${mapTo}`
+    const lastUsedFieldKey = `${lastUsedKey}.${prependPrefix(mapTo, prefix)}`
     let lastUsed = FormStore.getValue(lastUsedFieldKey)
     if (!Array.isArray(lastUsed)) {
       lastUsed = []
@@ -90,112 +70,99 @@ const addId = (thisRef: {props: ISharedRelationshipField}) => {
       lastUsed.splice(1)
     }
     FormStore.setValue(lastUsedFieldKey, lastUsed)
-  }
+  })
 }
 
-const removeId = (thisRef: {props: ISharedRelationshipField}) => {
-  return async (newValue: any) => {
-    let prefix = get(thisRef.props, "prefix", "")
-    prefix = prefix && prefix.length > 0 ? prefix + "." : ""
-    const valuePath = `${prefix}${get(thisRef, "props.field.mapTo", "undefined")}`
-    if (get(thisRef, "props.field.type") === globals.FieldType.RelationshipMulti) {
-      let currentValue = FormStore.getValue(valuePath)
-      currentValue = !isArray(currentValue) ? [] : cloneDeep(currentValue)
+const removeId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
+  if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
+  return action((newValue: any) => {
+    if (schema.type === "array") {
+      let currentValue = FormStore.getValue(mapTo)
+      currentValue = !Array.isArray(currentValue) ? [] : cloneDeep(currentValue)
       remove(currentValue, (val) => val === newValue)
-      FormStore.setValue(valuePath, currentValue)
+      FormStore.setValue(mapTo, currentValue, prefix)
     } else {
-      FormStore.setValue(valuePath, undefined)
+      FormStore.setValue(mapTo, undefined, prefix)
     }
-  }
+  })
 }
 
-const searchRelated = (thisRef: {props: ISharedRelationshipField}) => {
+const searchRelated = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
+  if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
   return async (newValue: any) => {
-    const field: any = get(thisRef, "props.field")
-    const form = getListFormFromRelationshipField(field)
-    const prefix = get(thisRef.props, "prefix", "")
-    const preppedPrefix = prefix && prefix.length > 0 ? prefix + "." : ""
-    const value = get(thisRef, "props.value", "")
-    if (value.length > 0 && !isNil(form.sections[0].fields[1])) {
-      FormStore.setValue(preppedPrefix + form.sections[0].fields[1].mapTo,
-        {$nin: Array.isArray(value) ? value : [value]})
+    const form = getListFormFromRelationshipField(schema)
+    const value = FormStore.getValue(mapTo, prefix)
+    if (get(schema.relationship, "filterOutSelected", false) === true) {
+      const f = useField(dataOptions.idPath, prependPrefix(mapTo, prefix))
+      f.setValue({$nin: Array.isArray(value) ? value : [value]})
     }
-    FormStore.setValue(preppedPrefix + form.sections[0].fields[0].mapTo, newValue)
-    const res: any = await ListStore.getList(`${preppedPrefix}${form.model}`, form, prefix, true)
-    if (FormStore.getValue(options.relationshipAutoSelect) === true) {
-      if (!isNil(res) && Array.isArray(res.result) && res.result.length === 1) {
-        const collection = get(field, "validate.relationshipCollection")
-        addId(thisRef)(get(res.result[0], get(ValidationRegistry.forms[collection], "options.idPath", "id")))
+    const nameField = useField(get(schema, "relationship.namePath"), prependPrefix(form.title, prefix))
+    const transformer = get(form, "relationship.nameTransform")
+    nameField.setValue(transformer(schema, newValue))
+    const res: any = await ListStore.getList(form, undefined, prefix, true)
+    if (get(schema.relationship, "autoSelect", false) === true) {
+      console.log("CHECKING LIST RESULT", res)
+      if (!isNil(res) && Array.isArray(res.data) && res.data.length === 1) {
+        console.log("SETTING TO ", get(res.data[0], dataOptions.idPath), dataOptions.idPath, res.data[0])
+        addId(schema, mapTo, prefix)(get(res.data[0], dataOptions.idPath))
       }
     }
     return res
   }
 }
 
-function RelationShipWrapper<T>(Component: React.ComponentType<ISharedRelationshipFieldProps & T>):
-React.ComponentType<ISharedRelationshipField & T> {
-  const bla: React.ComponentType<ISharedRelationshipField & T> =
-  class SharedRelationshipField extends ComponentBase<ISharedRelationshipField & T, ISharedRelationshipFieldState> {
-    public searchRelated: any
-    public addId: any
-    public removeId: any
-    public setDisplayMode: any
-    public constructor(props: ISharedRelationshipField & T) {
-      super(props)
-      this.searchRelated = searchRelated(this)
-      this.addId = addId(this)
-      this.removeId = removeId(this)
-      this.setDisplayMode = displayModeChanger(this)
-    }
-    public componentDidUpdate() {
-      const prefix = this.props.prefix
-      const field: any = get(this, "props.field")
-      const form = getListFormFromRelationshipField(field)
-      const preppedPrefix = prefix && prefix.length > 0 ? prefix + "." : ""
-      const value = get(this, "props.value", "")
-      if (value.length > 0 && !isNil(form.sections[0].fields[1])) {
-        FormStore.setValue(preppedPrefix + field.mapTo + "." + form.sections[0].fields[1].mapTo,
-          {$nin: Array.isArray(value) ? value : [value]})
+// public componentDidUpdate() {
+//   const prefix = this.props.prefix
+//   const field: any = get(this, "props.field")
+//   const form = getListFormFromRelationshipField(field)
+//   const preppedPrefix = prefix && prefix.length > 0 ? prefix + "." : ""
+//   const value = get(this, "props.value", "")
+//   if (value.length > 0 && !isNil(form.sections[0].fields[1])) {
+//     FormStore.setValue(preppedPrefix + field.mapTo + "." + form.sections[0].fields[1].mapTo,
+//       {$nin: Array.isArray(value) ? value : [value]})
+//   }
+// }
+
+const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
+  if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
+  const hookedField = useFieldWithValidation(schema, mapTo, prefix)
+  const value: any = hookedField.value
+  const collection: any = get(schema.relationship, "collection", "")
+  // TODO: use prefix
+  const displayMode = FormStore.getValue(`displayMode.${mapTo}`)
+  let relatedObject: any
+  const searchForm = getListFormFromRelationshipField(schema)
+  if (isArray(value)) {
+    relatedObject = []
+    for (const id of value) {
+      if (!isNil(id)) {
+        relatedObject.push(DbStore.get(id, collection, false))
       }
     }
-    public render() {
-      return (
-        <Component
-          {...this.props}
-          {...this.state}
-          addId={this.addId}
-          removeId={this.removeId}
-          setDisplayMode={this.setDisplayMode}
-        />
-      )
-    }
-    protected _buildState(props: ISharedRelationshipField, initialBuild: boolean): ISharedRelationshipFieldState {
-      const contents = get(props, "value", -1)
-      const collection = get(props, "field.validate.relationshipCollection")
-      // TODO: use prefix
-      const mapTo = get(props, "field.mapTo", `unknownRelation`)
-      const displayMode = FormStore.getValue(`displayMode.${mapTo}`)
-      let relatedObject: any
-      const searchForm = getListFormFromRelationshipField(props.field)
-      if (isArray(contents)) {
-        relatedObject = []
-        for (const id of contents) {
-          if (!isNil(id)) {
-            relatedObject.push(get(DbStore.get(id, collection, false), "result"))
-          }
-        }
-      } else if (isNumber(contents) || isString(contents) && contents.length > 0) {
-        const arg: any = contents
-        relatedObject = get(DbStore.get(arg, collection, false), "result")
-      }
-      const lastUsed = FormStore.getValue(`${lastUsedKey}.${prefixMaker(props.prefix)}${mapTo}`)
-      return {relatedObject, searchForm, displayMode, lastUsed}
-    }
+  } else if (isNumber(value) || isString(value) && value.length > 0) {
+    const arg: any = value
+    relatedObject = DbStore.get(arg, collection, false)
   }
-  return bla
+  const lastUsed = FormStore.getValue(`${lastUsedKey}.${prependPrefix(mapTo, prefix)}`)
+  // becausae autoSelect is the only relevant property in schema we only check against this instead of the stringifed schema for speed
+  const autoSelect = get(schema.relationship, "autoSelect")
+  return {
+    value, setValue: hookedField.setValue, relatedObject, searchForm, displayMode, lastUsed,
+    addId: memo(() => addId(schema, mapTo, prefix), ["addId", mapTo, prefix, autoSelect]), prefix,
+    removeId: memo(() => removeId(schema, mapTo, prefix), ["removeId", mapTo, prefix, autoSelect]),
+    searchRelated: memo(() => searchRelated(schema, mapTo, prefix), ["searchRelated", mapTo, prefix, autoSelect])
+  }
 }
 
-export default RelationShipWrapper
+export interface IRelationshipHookProps {
+  schema: ExtendedJSONSchema
+  mapTo?: string
+  prefix?: string
+}
+
+const useRelationshipWithProps = (props: IRelationshipHookProps) => useRelationship(props.schema, props.mapTo, props.prefix)
+
+export default useRelationship
 export {
-  addId, removeId, searchRelated, getListFormFromRelationshipField
+  addId, removeId, searchRelated, getListFormFromRelationshipField, useRelationshipWithProps, displayModeChanger
 }

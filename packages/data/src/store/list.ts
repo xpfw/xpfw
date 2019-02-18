@@ -87,7 +87,6 @@ export class ListStore {
     let qKey: any
     try {
       const queryObj = this.buildQueryObj(schema, mapTo, prefix)
-      console.log("ABOUT TO QUERY WITH", queryObj)
       qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
       if (!this.doingQuery[qKey]) {
         this.doingQuery[qKey] = true

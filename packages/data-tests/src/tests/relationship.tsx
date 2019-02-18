@@ -1,155 +1,151 @@
-import { FormStore, SharedField } from "@xpfw/form-shared"
-import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
 import {
-  addId, BackendClient, DbStore, getListFormFromRelationshipField, ListStore,
-  RelationShipWrapper, removeId, searchRelated, SharedFormList
-} from "@xpfw/ui-shared"
-import { globals, options, TestDefs, ValidationRegistry } from "@xpfw/validate"
-import { get, isFunction } from "lodash"
+  addId, BackendClient, dataOptions, DbStore, displayModeChanger,
+  getListFormFromRelationshipField, removeId, searchRelated
+} from "@xpfw/data"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { FormStore, SharedField, useField, useFieldWithValidation } from "@xpfw/form"
+import {
+  makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField,
+  RelationshipAndNumberSchema, RelationshipMultiField, RelationshipSingleField
+} from "@xpfw/form-tests"
+import { getRandomApp } from "@xpfw/test-util"
+import { set } from "lodash-es"
 import * as React from "react"
-import { matchStoreState } from "resub-persist"
-import makeMockElement from "../testUtil/baseMock"
 import render from "../testUtil/render"
 import login from "./login"
 
 BackendClient.client = FeathersClient
-globals.options.userIdPath = "id"
+dataOptions.idPath = "_id"
 
 const testRelationship = () => {
   test("DbStore Create Test", async () => {
-    const form = TestDefs.FormNumberAndRequiredText
-    const s: any = [TestDefs.FormNumberAndRequiredText.collection, TestDefs.FormRelationshipToNumAndRequiredText.collection]
-    const relationCol: any = TestDefs.FormNumberAndRequiredText.collection
-    const appRef = await getRandomApp(s, false, BackendClient.client, true)
-    TestDefs.FormNumberAndRequiredText.options = {idPath: "id"}
-    TestDefs.FormRelationshipToNumAndRequiredText.options = {idPath: "id"}
-    ValidationRegistry.registerForm(TestDefs.FormNumberAndRequiredText)
-    ValidationRegistry.registerForm(TestDefs.FormRelationshipToNumAndRequiredText)
-    const MockEle: any = makeMockElement("show")
+    dataOptions.idPath = "_id"
+    const schema = NumberAndRequiredTextSchema
+    const s: any = [NumberAndRequiredTextSchema.collection, RelationshipAndNumberSchema.collection]
+    const relationCol: any = NumberAndRequiredTextSchema.collection
+    const appRef = await getRandomApp(s, true, BackendClient.client, false)
     const createdEles: any = []
+    const fields = makeSubFields(NumberAndRequiredTextSchema)
+    const origId = `b29999999999999999999999`
     for (let i = 0; i < 10; i++) {
-      FormStore.setValue(TestDefs.RequiredTextField.mapTo, "myText " + i)
-      FormStore.setValue(TestDefs.NumberField.mapTo, 420 + i)
-      createdEles.push(await DbStore.create(form))
+      fields[String(NameField.title)].setValue("myText " + i)
+      fields[String(NumberField.title)].setValue(420 + i)
+      FormStore.setValue(`${NumberAndRequiredTextSchema.title}._id`,
+        `${origId.substring(0, origId.length - String(i).length - 5)}${i}98765`)
+      createdEles.push(await DbStore.create(schema))
     }
 
     // SINGLE
 
-    render(<SharedField field={TestDefs.RelationshipSingleField} />, "nothing set yet")
-    FormStore.setValue(TestDefs.RelationshipSingleField.mapTo, "INVALID")
-    render(<SharedField field={TestDefs.RelationshipSingleField} />, "set to invalid value")
-    FormStore.setValue(TestDefs.RelationshipSingleField.mapTo, createdEles[0].result.id)
-    render(<SharedField field={TestDefs.RelationshipSingleField} />, "set to first creation not loaded yet")
-    await DbStore.getFromServer(createdEles[1].result.id, relationCol)
-    FormStore.setValue(TestDefs.RelationshipSingleField.mapTo, createdEles[1].result.id)
-    render(<SharedField field={TestDefs.RelationshipSingleField} />, "set to first creation loaded")
+    const singleField = useFieldWithValidation(RelationshipSingleField)
+    render(<SharedField schema={RelationshipSingleField} />, "nothing set yet")
+    singleField.setValue("INVALID")
+    render(<SharedField schema={RelationshipSingleField} />, "set to invalid value")
+    singleField.setValue(createdEles[0]._id)
+    render(<SharedField schema={RelationshipSingleField} />, "set to first creation not loaded yet")
+    await DbStore.getFromServer(createdEles[1]._id, relationCol)
+    singleField.setValue(createdEles[1]._id)
+    render(<SharedField schema={RelationshipSingleField} />, "set to first creation loaded")
 
     // Multi
-    FormStore.setValue(TestDefs.RelationshipMultiField.mapTo,
-      [createdEles[3].result.id, createdEles[4].result.id, createdEles[5].result.id])
-    await DbStore.getFromServer(createdEles[3].result.id, relationCol)
-    await DbStore.getFromServer(createdEles[5].result.id, relationCol)
-    render(<SharedField field={TestDefs.RelationshipMultiField} />, "multi load with one missing")
-    await DbStore.getFromServer(createdEles[4].result.id, relationCol)
-    render(<SharedField field={TestDefs.RelationshipMultiField} />, "multi load with none missing")
-    const thisRef: any = {props: {field: TestDefs.RelationshipMultiField,
-                                  prefix: TestDefs.RelationshipSingleField.mapTo}}
-    const boundAddId = addId(thisRef)
-    const boundRemoveId = removeId(thisRef)
-    boundRemoveId(createdEles[5].result.id)
-    render(<SharedField field={TestDefs.RelationshipMultiField} />, "multi removed one")
-    boundRemoveId(createdEles[3].result.id)
-    render(<SharedField field={TestDefs.RelationshipMultiField} />, "multi removed two")
-    boundAddId(createdEles[7].result.id)
-    render(<SharedField field={TestDefs.RelationshipMultiField} />, "multi added but not yet loaded")
-    await DbStore.getFromServer(createdEles[7].result.id, relationCol)
-    render(<SharedField field={TestDefs.RelationshipMultiField} />, "multi added and loaded")
+    const multiField = useFieldWithValidation(RelationshipMultiField)
+    multiField.setValue([createdEles[3]._id, createdEles[4]._id, createdEles[5]._id])
+    await DbStore.getFromServer(createdEles[3]._id, relationCol)
+    await DbStore.getFromServer(createdEles[5]._id, relationCol)
+    render(<SharedField schema={RelationshipMultiField} />, "multi load with one missing")
+    await DbStore.getFromServer(createdEles[4]._id, relationCol)
+    render(<SharedField schema={RelationshipMultiField} />, "multi load with none missing")
+    const boundAddId = addId(RelationshipMultiField)
+    const boundRemoveId = removeId(RelationshipMultiField)
+    boundRemoveId(createdEles[5]._id)
+    render(<SharedField schema={RelationshipMultiField} />, "multi removed one")
+    boundRemoveId(createdEles[3]._id)
+    render(<SharedField schema={RelationshipMultiField} />, "multi removed two")
+    boundAddId(createdEles[7]._id)
+    render(<SharedField schema={RelationshipMultiField} />, "multi added but not yet loaded")
+    await DbStore.getFromServer(createdEles[7]._id, relationCol)
+    render(<SharedField schema={RelationshipMultiField} />, "multi added and loaded")
 
-    const thisRefSingle: any = {
-      props: {
-        field: TestDefs.RelationshipSingleField,
-        prefix: TestDefs.RelationshipSingleField.mapTo
-      }
-    }
-    const prefixedSingleValuePath = `${TestDefs.RelationshipSingleField.mapTo}.${TestDefs.RelationshipSingleField.mapTo}`
-    FormStore.setValue(prefixedSingleValuePath, undefined)
+    const prefixedSingle = useFieldWithValidation(RelationshipSingleField, undefined, RelationshipSingleField.title)
+    prefixedSingle.setValue(undefined)
 
-    const searchFormSingle = getListFormFromRelationshipField(TestDefs.RelationshipMultiField)
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "nothing yet")
-    const boundSearchRelatedSingle = searchRelated(thisRefSingle)
-    const MockedSingleList = SharedFormList(MockEle)
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo}/>, "single search for my")
+    const searchschemaSingle = getListFormFromRelationshipField(RelationshipMultiField)
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "nothing yet")
+    let boundSearchRelatedSingle = searchRelated(RelationshipSingleField, undefined, RelationshipSingleField.title)
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title}/>, "single search for my")
     await boundSearchRelatedSingle("Text")
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "single search for Text")
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "single search for Text")
     await boundSearchRelatedSingle("null")
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "single search for null")
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "single search for null")
 
     // autoSelect single
-    FormStore.setValue(prefixedSingleValuePath, undefined)
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "after reset")
+    prefixedSingle.setValue(undefined)
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "after reset")
     await boundSearchRelatedSingle("myText 2")
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search without option enabled")
-    FormStore.setValue(options.relationshipAutoSelect, true)
+    set(RelationshipSingleField, "relationship.autoSelect", true)
+    boundSearchRelatedSingle = searchRelated(RelationshipSingleField, undefined, RelationshipSingleField.title)
     await boundSearchRelatedSingle("myText")
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search with option enabled but too many results")
     await boundSearchRelatedSingle("myText 2")
-    render(<SharedField field={TestDefs.RelationshipSingleField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search with option enabled and set automatically")
-    FormStore.setValue(options.relationshipAutoSelect, false)
+    set(RelationshipSingleField, "relationship.autoSelect", false)
 
     // Multi
-    FormStore.setValue(`displayMode.${TestDefs.RelationshipMultiField.mapTo}`, 1)
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "nothing yet")
-    const boundSearchRelated = searchRelated(thisRef)
+    const displaySetter = displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title)
+    displaySetter(1)
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "nothing yet")
+    let boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
     await boundSearchRelated("null")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "search for null")
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for null")
     await boundSearchRelated("my")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "search for my")
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for my")
     await boundSearchRelated("Text")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "search for Text")
-    FormStore.setValue(`displayMode.${TestDefs.RelationshipMultiField.mapTo}`, 0)
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "search for Text but displaymode for items")
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for Text")
+    displaySetter(0)
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for Text but displaymode for items")
 
-    // autoSelect single
-    FormStore.setValue(`${TestDefs.RelationshipSingleField.mapTo}.${TestDefs.RelationshipMultiField.mapTo}`, undefined)
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />, "after reset")
+    // autoSelect multi
+    FormStore.setValue(`${RelationshipSingleField.title}.${RelationshipMultiField.title}`, undefined)
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "after reset")
     await boundSearchRelated("myText 2")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multi after autoselectable search without option enabled")
-    FormStore.setValue(options.relationshipAutoSelect, true)
+    set(RelationshipMultiField, "relationship.autoSelect", true)
+    boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
     await boundSearchRelated("myText")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multi after autoselectable search with option enabled but too many results")
     await boundSearchRelated("myText 3")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multiafter autoselectable search with option enabled and set automatically")
     await boundSearchRelated("myText 5")
-    render(<SharedField field={TestDefs.RelationshipMultiField} prefix={TestDefs.RelationshipSingleField.mapTo} />,
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multiafter autoselectable search with option enabled and set automatically twice")
-    FormStore.setValue(options.relationshipAutoSelect, false)
+    set(RelationshipMultiField, "relationship.autoSelect", false)
+    boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
 
     const prefixes = ["", "customPre"]
     for (const prefix of prefixes) {
-      FormStore.setValue(`displayMode.${TestDefs.RelationshipMultiField.mapTo}`, 1)
-      FormStore.setValue(`${prefix}.displayMode.${TestDefs.RelationshipMultiField.mapTo}`, 1)
-      render(<SharedField field={TestDefs.RelationshipMultiField} prefix={prefix} />, "nothing yet")
+      const dpModeC = displayModeChanger(String(RelationshipMultiField.title))
+      const dpModeCP = displayModeChanger(String(RelationshipMultiField.title))
+      dpModeC(1)
+      dpModeCP(1)
+      render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, "nothing yet")
       const thisRef: any = {props: {
-        field: TestDefs.RelationshipMultiField, prefix: prefix.length > 0 ?
-        prefix + TestDefs.RelationshipMultiField.mapTo : TestDefs.RelationshipMultiField.mapTo
+        field: RelationshipMultiField, prefix: prefix.length > 0 ?
+        prefix + RelationshipMultiField.title : RelationshipMultiField.title
       }}
-      const prefixSearch = searchRelated(thisRef)
-      const searchForm = getListFormFromRelationshipField(TestDefs.RelationshipMultiField)
-      const MockedList = SharedFormList(MockEle)
+      const prefixSearch = searchRelated(RelationshipMultiField, undefined, prefix)
       await prefixSearch("my")
-      console.log(`prefixsearchres is `, await prefixSearch("my"))
-      render(<SharedField field={TestDefs.RelationshipMultiField} prefix={prefix} />, prefix + "search for my")
+      render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for my")
       await prefixSearch("Text")
-      render(<SharedField field={TestDefs.RelationshipMultiField} prefix={prefix} />, prefix + "search for Text")
+      render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for Text")
       await prefixSearch("null")
-      render(<SharedField field={TestDefs.RelationshipMultiField} prefix={prefix} />, prefix + "search for null")
+      render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for null")
     }
 
     await appRef.cleanUp()
