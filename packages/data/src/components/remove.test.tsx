@@ -1,6 +1,15 @@
-import { tests } from "@xpfw/ui-tests"
+import { removeTest } from "@xpfw/data-tests"
 import "isomorphic-fetch"
-import makeMockElement from "../testUtil/makeMockElement"
-import { submitRemove } from "./remove"
+import useRemove, { submitRemove } from "./remove"
+import * as React from "react"
 
-tests.remove(makeMockElement("mymock"), submitRemove)
+const testFunc: React.FunctionComponent<any> = (props) => {
+  const rem = useRemove(props.id, props.schema)
+  return (
+    <div>
+      {JSON.stringify(rem, undefined, 2)}
+    </div>
+  )
+}
+
+removeTest(testFunc, submitRemove)

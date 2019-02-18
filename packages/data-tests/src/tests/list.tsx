@@ -37,13 +37,13 @@ const testList = (MockEle: any, nextPage?: Function, prevPage?: Function, onUpda
     render(<MockedList form={form} />, "list before fetch")
     await ListStore.getList(form.model, form, "", true)
     render(<MockedList form={form} />, "list after fetch")
-    matchStoreState(ListStore, "after list get")
+    expect(toJS(ListStore)).toMatchSnapshot("after list get")
 
     await ListStore.nextPage(form)
-    matchStoreState(ListStore, "after second page get")
+    expect(toJS(ListStore)).toMatchSnapshot("after second page get")
 
     await ListStore.nextPage(form)
-    matchStoreState(ListStore, "after third page get")
+    expect(toJS(ListStore)).toMatchSnapshot("after third page get")
     if (isFunction(nextPage)) {
       await nextPage({props: {form}})()
     } else {
@@ -78,7 +78,7 @@ const testList = (MockEle: any, nextPage?: Function, prevPage?: Function, onUpda
     render(<MockedList prefix={prefix} form={form} />, "prefix list before fetch")
     await ListStore.getList(form.model, form, prefix, true)
     render(<MockedList prefix={prefix} form={form} />, "prefix list after fetch")
-    matchStoreState(ListStore, "prefix after list get")
+    expect(toJS(ListStore)).toMatchSnapshot("prefix after list get")
 
     await ListStore.nextPage(form, prefix)
     render(<MockedList prefix={prefix} form={form} />, "prefix second page")

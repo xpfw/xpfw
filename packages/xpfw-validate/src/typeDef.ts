@@ -118,11 +118,11 @@ export type SelectOptionGetter = (state: any) => SelectOptions
 export type SelectOptionsField = SelectOptions | SelectOptionGetter
 
 export interface IFieldVisibilityDef {
-    create?: boolean
-    update?: boolean
-    find?: boolean
-    remove?: boolean
-  }
+  create?: boolean
+  update?: boolean
+  find?: boolean
+  remove?: boolean
+}
 export interface IField {
   type: string | number
   mapTo: string

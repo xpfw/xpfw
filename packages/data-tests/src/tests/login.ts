@@ -1,11 +1,14 @@
-import { FormStore } from "@xpfw/form-shared"
-import { MailField, PwField, UserStore } from "@xpfw/ui-shared"
+import { AuthForm, MailField, PwField, UserStore } from "@xpfw/data"
+import { makeSubFields } from "@xpfw/form-tests"
+
+const setterHelpers = makeSubFields(AuthForm)
 
 const login = async () => {
-  FormStore.setValue(MailField.mapTo, "user")
-  FormStore.setValue(PwField.mapTo, "pw")
+  setterHelpers[String(MailField.title)].setValue("user")
+  setterHelpers[String(PwField.title)].setValue("pw")
   await UserStore.register()
   await UserStore.login()
+  setterHelpers[String(AuthForm.title)].setValue(undefined)
 }
 
 export default login

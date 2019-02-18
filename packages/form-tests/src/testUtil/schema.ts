@@ -1,23 +1,23 @@
 import { ExtendedJSONSchema, JSONSchemaDefinition } from "@xpfw/form"
 
-const DateField: JSONSchemaDefinition = {
+const DateField: ExtendedJSONSchema = {
   title: "dateVal",
   type: "string",
   format: "date"
 }
 
-const PwField: JSONSchemaDefinition = {
+const PwField: ExtendedJSONSchema = {
   title: "passportWellYou",
   type: "string",
   format: "password"
 }
 
-const NumberField: JSONSchemaDefinition = {
+const NumberField: ExtendedJSONSchema = {
   type: "number",
   title: "myVal"
 }
 
-const NameField: JSONSchemaDefinition = {
+const NameField: ExtendedJSONSchema = {
   type: "string",
   title: "guestName"
 }

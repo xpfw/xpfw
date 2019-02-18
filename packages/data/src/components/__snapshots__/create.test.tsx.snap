@@ -2,189 +2,85 @@
 
 exports[`DbStore Create Test: Before reset on mount 1`] = `
 Object {
+  "errors": Object {
+    "formModel": Object {
+      "errors": Array [
+        "a",
+        "b",
+      ],
+    },
+  },
   "formData": Object {
-    "email": "user",
-    "myNum": 420,
-    "myString": "myText",
-    "password": "",
+    "authForm": undefined,
+    "formModel": Object {
+      "guestName": "myText",
+      "myVal": 420,
+    },
+  },
+  "loading": Object {
+    "formModel": false,
   },
 }
 `;
 
 exports[`DbStore Create Test: Before reset on mount 2`] = `
 Object {
-  "formData": Object {
+  "errors": Object {
     "createpref": Object {
-      "myNum": 421,
-      "myString": "SECOND OBJECT",
+      "formModel": Object {
+        "errors": Array [
+          "a",
+          "b",
+        ],
+      },
     },
-    "email": "user",
-    "myNum": 420,
-    "myString": "myText",
-    "password": "",
+    "formModel": undefined,
+  },
+  "formData": Object {
+    "authForm": undefined,
+    "createpref": Object {
+      "formModel": Object {
+        "guestName": "SECOND OBJECT",
+        "myVal": 421,
+      },
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "myVal": 420,
+    },
+  },
+  "loading": Object {
+    "formModel": false,
   },
 }
 `;
 
 exports[`DbStore Create Test: after create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "required": {
-                "type": 2
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "error": {
-    "ok": true
-  },
-  "state": {
-    "result": {
-      "myString": "myText",
-      "myNum": 420,
-      "id": 0
-    }
-  },
-  "loading": false,
+  "error": null,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "required": {
-          "type": 2
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: after login 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "required": {
-                "type": 2
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "required": {
-          "type": 2
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: after purposely set invalid err 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "required": {
-                "type": 2
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
   "error": {
     "errors": [
       "a",
@@ -195,201 +91,77 @@ exports[`DbStore Create Test: after purposely set invalid err 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "required": {
-          "type": 2
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: after reset on mount 1`] = `
 Object {
+  "errors": Object {
+    "formModel": undefined,
+  },
   "formData": Object {
-    "email": "user",
-    "myNum": undefined,
-    "myString": undefined,
-    "password": "",
+    "authForm": undefined,
+    "formModel": Object {},
+  },
+  "loading": Object {
+    "formModel": false,
   },
 }
 `;
 
 exports[`DbStore Create Test: after reset on mount 2`] = `
 Object {
-  "formData": Object {
+  "errors": Object {
     "createpref": Object {
-      "myNum": 421,
-      "myString": "SECOND OBJECT",
+      "formModel": Object {
+        "errors": Array [
+          "a",
+          "b",
+        ],
+      },
     },
-    "email": "user",
-    "myNum": undefined,
-    "myString": undefined,
-    "password": "",
+    "formModel": undefined,
+  },
+  "formData": Object {
+    "authForm": undefined,
+    "createpref": Object {
+      "formModel": Object {
+        "guestName": "SECOND OBJECT",
+        "myVal": 421,
+      },
+    },
+    "formModel": Object {},
+  },
+  "loading": Object {
+    "formModel": false,
   },
 }
 `;
 
 exports[`DbStore Create Test: before create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "required": {
-                "type": 2
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "required": {
-          "type": 2
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: before login 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "required": {
-                "type": 2
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "loading": false,
-  "user": null,
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "required": {
-          "type": 2
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  "user": null
 }
 </div>
 `;
 
 exports[`DbStore Create Test: hidden in create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
   "error": {
     "errors": [
       "a",
@@ -400,51 +172,14 @@ exports[`DbStore Create Test: hidden in create 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: hidden text 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
   "error": {
     "errors": [
       "a",
@@ -455,53 +190,14 @@ exports[`DbStore Create Test: hidden text 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: not hidden in create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": false,
-                "update": true,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
   "error": {
     "errors": [
       "a",
@@ -512,351 +208,117 @@ exports[`DbStore Create Test: not hidden in create 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "hide": {
-          "create": false,
-          "update": true,
-          "find": false
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: prefixed after create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "prefix": "createpref",
-  "error": {
-    "ok": true
-  },
-  "state": {
-    "result": {
-      "myString": "SECOND OBJECT",
-      "myNum": 421,
-      "id": 1
-    }
-  },
-  "loading": false,
+  "error": null,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: prefixed after purposely set invalid err 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "prefix": "createpref",
   "error": {
     "errors": [
       "a",
       "b"
     ]
   },
-  "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: prefixed before create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "prefix": "createpref",
-  "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: prefixed hidden in create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "prefix": "createpref",
   "error": {
     "errors": [
       "a",
       "b"
     ]
   },
-  "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: prefixed hidden text 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "prefix": "createpref",
   "error": {
     "errors": [
       "a",
       "b"
     ]
   },
-  "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: prefixed not hidden in create 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": false,
-                "update": true,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
+  "error": {
+    "errors": [
+      "a",
+      "b"
     ]
   },
-  "prefix": "createpref",
+  "user": {
+    "email": "user",
+    "id": 0
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: prefixed while loading 1`] = `
+<div>
+  {
+  "error": null,
+  "user": {
+    "email": "user",
+    "id": 0
+  }
+}
+</div>
+`;
+
+exports[`DbStore Create Test: resetOnMount = true 1`] = `
+<div>
+  {
   "error": {
     "errors": [
       "a",
@@ -867,259 +329,33 @@ exports[`DbStore Create Test: prefixed not hidden in create 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "hide": {
-          "create": false,
-          "update": true,
-          "find": false
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
-}
-</div>
-`;
-
-exports[`DbStore Create Test: prefixed while loading 1`] = `
-<div
-  class="mymock"
->
-  {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "prefix": "createpref",
-  "error": {
-    "ok": true
-  },
-  "state": {
-    "result": {
-      "myString": "SECOND OBJECT",
-      "myNum": 421,
-      "id": 1
-    }
-  },
-  "loading": false,
-  "user": {
-    "email": "user",
-    "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
-}
-</div>
-`;
-
-exports[`DbStore Create Test: resetOnMount = true 1`] = `
-<div
-  class="mymock"
->
-  {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "resetOnMount": true,
-  "loading": false,
-  "user": {
-    "email": "user",
-    "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: resetOnMount = true 2`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "hide": {
-                "create": true,
-                "update": false,
-                "find": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "resetOnMount": true,
+  "state": null,
   "loading": false,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;
 
 exports[`DbStore Create Test: while loading 1`] = `
-<div
-  class="mymock"
->
+<div>
   {
-  "form": {
-    "model": "formModel",
-    "collection": "simpleTestCol",
-    "sections": [
-      {
-        "fields": [
-          {
-            "mapTo": "myString",
-            "type": 2,
-            "validate": {
-              "required": {
-                "type": 2
-              }
-            }
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "mapTo": "myNum",
-            "type": 3,
-            "validate": {}
-          }
-        ]
-      }
-    ]
-  },
-  "error": {
-    "ok": true
-  },
-  "state": {
-    "result": {
-      "myString": "myText",
-      "myNum": 420,
-      "id": 0
-    }
-  },
+  "error": null,
   "loading": true,
   "user": {
     "email": "user",
     "id": 0
-  },
-  "fields": [
-    {
-      "mapTo": "myString",
-      "type": 2,
-      "validate": {
-        "required": {
-          "type": 2
-        }
-      }
-    },
-    {
-      "mapTo": "myNum",
-      "type": 3,
-      "validate": {}
-    }
-  ]
+  }
 }
 </div>
 `;

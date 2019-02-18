@@ -1,6 +1,15 @@
-import { tests } from "@xpfw/ui-tests"
+import { createTest } from "@xpfw/data-tests"
 import "isomorphic-fetch"
-import makeMockElement from "../testUtil/makeMockElement"
-import SharedFormCreate, { submitCreate } from "./create"
+import useCreate, { submitCreate } from "./create"
+import * as React from "react"
 
-tests.create(makeMockElement("mymock"), submitCreate)
+const testFunc: React.FunctionComponent<any> = (props) => {
+  const created = useCreate(props.schema, props.mapTo, props.prefix, props.reset)
+  return (
+    <div>
+      {JSON.stringify(created, undefined, 2)}
+    </div>
+  )
+}
+
+createTest(testFunc, submitCreate)

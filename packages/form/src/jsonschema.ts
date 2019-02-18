@@ -73,6 +73,13 @@ export type SelectOptionGetter = (state: any) => ISelectItem[]
 
 export type SelectOptionsField = ISelectItem[] | SelectOptionGetter
 
+export interface IFieldVisibilityDef {
+  create?: boolean
+  update?: boolean
+  find?: boolean
+  remove?: boolean
+}
+
 export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
   /**
    * `selectOptions` allows rendering a `<select>` in react or a `Picker` in react-native.
@@ -130,6 +137,9 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      * Be sure to convert the strings into ObjectIds on the server side in case you are using MongoDb!
      */
     filterOutById?: boolean
-
   }
+  /**
+   * Gives the ability to hide the field in situations such as CRUD-environments like useCreate
+   */
+  hide?: IFieldVisibilityDef
 }

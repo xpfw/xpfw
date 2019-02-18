@@ -1,51 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DbStore Show Test: after create 1`] = `
-<div
-  class="show"
->
+exports[`DbStore show Test: Successfully removed 1`] = `
+<div>
   {
-  "collection": "simpleTestCol",
-  "id": 0,
-  "loading": false
+  "loading": true
 }
 </div>
 `;
 
-exports[`DbStore Show Test: after fetch 1`] = `
-<div
-  class="show"
->
+exports[`DbStore show Test: While removing 1`] = `
+<div>
   {
-  "collection": "simpleTestCol",
-  "id": 0,
   "item": {
-    "myString": "myText",
-    "myNum": 420,
+    "guestName": "myText",
+    "myVal": 420,
     "id": 0
-  },
-  "loading": false
+  }
 }
 </div>
 `;
 
-exports[`DbStore Show Test: before anything 1`] = `
-<div
-  class="show"
->
+exports[`DbStore show Test: after definitely fetched 1`] = `
+<div>
   {
-  "collection": "simpleTestCol",
+  "item": {
+    "guestName": "myText",
+    "myVal": 420,
+    "id": 0
+  }
+}
+</div>
+`;
+
+exports[`DbStore show Test: after login 1`] = `
+<div>
+  {
   "loading": false
 }
 </div>
 `;
 
-exports[`DbStore Show Test: skip refetch if present 1`] = `
+exports[`DbStore show Test: before login 1`] = `
+<div>
+  {}
+</div>
+`;
+
+exports[`DbStore show Test: error for not exisiting anymore 1`] = `[NotFound: No record found for id '0']`;
+
+exports[`DbStore show Test: fetch existing resource 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
-  },
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;
+
+exports[`DbStore show Test: not yet fetched but still there because created 1`] = `
+<div>
+  {
+  "item": {
+    "guestName": "myText",
+    "myVal": 420,
+    "id": 0
+  }
+}
+</div>
+`;
+
+exports[`DbStore show Test: remove result 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
 }
 `;

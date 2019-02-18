@@ -1,62 +1,21 @@
-import { FormErrorStore, FormStore, LoadingStore } from "@xpfw/form-shared"
-import { globals, IForm, IFormError } from "@xpfw/validate"
-import { get } from "lodash"
-import * as React from "react"
-import { ComponentBase } from "resub"
+import { ExtendedJSONSchema, FormStore, memo } from "@xpfw/form"
 import DbStore, { REMOVE_ADDON_KEY } from "../store/db"
 
-export interface ISharedFormRemove extends React.Props<any> {
-  id?: string
-  form: IForm
-}
-
-export interface ISharedFormRemoveState {
-  error?: IFormError
-  state?: any
-  loading: boolean
-}
-
-export type SubmitRemove = () => Promise<any>
-
-export interface IFormRemoveProps extends ISharedFormRemove, ISharedFormRemoveState {
-  submitRemove: SubmitRemove
-}
-
-const submitRemove = (thisRef: {props: ISharedFormRemove}) => {
+const submitRemove = (id: string, schema: ExtendedJSONSchema) => {
   return async () => {
-    return DbStore.remove(get(thisRef, "props.id"),
-        get(thisRef, "props.form.collection"))
+    return DbStore.remove(id, String(schema.collection))
   }
 }
 
-function SharedFormRemove<T>(Component: React.ComponentType<IFormRemoveProps & T>):
-React.ComponentType<ISharedFormRemove & T> {
-  return class extends ComponentBase<ISharedFormRemove & T, ISharedFormRemoveState> {
-    public submitRemove: SubmitRemove
-    public constructor(props: ISharedFormRemove & T) {
-      super(props)
-      this.submitRemove = submitRemove(this)
-    }
-    public render() {
-      return (
-        <Component
-          {...this.props}
-          {...this.state}
-          submitRemove={this.submitRemove}
-        />
-      )
-    }
-    protected _buildState(props: ISharedFormRemove, initialBuild: boolean): ISharedFormRemoveState {
-      const id: any = get(props, "id", "_")
-      return {
-        state: DbStore.getRemoveState(id),
-        loading: LoadingStore.getLoading(REMOVE_ADDON_KEY + id)
-      }
-    }
+const useRemove = (id: string, schema: ExtendedJSONSchema) => {
+  return {
+    state: DbStore.getRemoveState(id),
+    loading: FormStore.getLoading(REMOVE_ADDON_KEY + id),
+    submitRemove: memo(() => submitRemove(id, schema), [id, String(schema.collection)])
   }
 }
 
-export default SharedFormRemove
+export default useRemove
 export {
   submitRemove
 }

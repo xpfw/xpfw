@@ -3,6 +3,7 @@ import { get, isEqual, isNil, set } from "lodash-es"
 import { action, observable } from "mobx"
 import BackendClient from "../client"
 import dataOptions from "../options"
+import toJS from "../util/toJS"
 import UserStore from "./user"
 
 const FETCH_THRESHOLD = 1000 * 60 * 3
@@ -59,7 +60,7 @@ export class DbStore {
     try {
       FormStore.setLoading(saveResultAt, true)
       const col: any = schema.collection
-      const result = await BackendClient.client.patch(col, id, FormStore.getValue(mapTo, prefix))
+      const result = await BackendClient.client.patch(col, id, toJS(FormStore.getValue(mapTo, prefix)))
       this.updateState[saveResultAt] = result
       FormStore.setLoading(saveResultAt, false)
       if (this.getState[col] == null) {
@@ -109,20 +110,12 @@ export class DbStore {
     return returnFetchPromise ? Promise.resolve(result) : result
   }
 
-  public setCreateState(model: string, value: any) {
-    this.createState[model] = value
+  public getCreateState(mapTo: string, prefix?: string) {
+    return this.createState[prependPrefix(mapTo, prefix)]
   }
 
-  public getCreateState(model: string) {
-    return this.createState[model]
-  }
-
-  public setUpdateState(model: string, value: any) {
-    this.updateState[model] = value
-  }
-
-  public getUpdateState(model: string) {
-    return this.updateState[model]
+  public getUpdateState(mapTo: string, prefix?: string) {
+    return this.updateState[prependPrefix(mapTo, prefix)]
   }
 
   public getRemoveState(id: string) {
