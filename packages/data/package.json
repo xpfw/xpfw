@@ -5,7 +5,7 @@
   "typings": "dist",
   "license": "MIT",
   "peerDependencies": {
-    "@xpfw/form": "0.2.x",
+    "@xpfw/form": "1.x.x",
     "ajv": "^6.x.x",
     "lodash-es": "^4.x.x",
     "mobx": "^5.x.x",
