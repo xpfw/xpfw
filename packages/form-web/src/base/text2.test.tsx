@@ -1,4 +1,4 @@
-import { ComponentRegistry, SharedField } from "@xpfw/form"
+import { ComponentRegistry, FormStore, SharedField } from "@xpfw/form"
 import { DateField, NameField, PwField, stringTest } from "@xpfw/form-tests"
 import { set } from "lodash"
 import * as MockDate from "mockdate"
@@ -14,7 +14,10 @@ test("Text Field Test", () => {
   const n: any = null
   let setTo = null
   render(<SharedField schema={DateField} />, "empty datetime-local field")
-  const dateSetter = setDate((a: any) => setTo = a, DateField, "value")
+  const dateSetter = setDate((a: any) => {
+    setTo = a
+    FormStore.setValue(String(DateField.title), a)
+  }, DateField, "value")
   expect(setTo).toBeNull()
   dateSetter({value: "2018-02-22T07:55"})
   DateField.format = "date-time"

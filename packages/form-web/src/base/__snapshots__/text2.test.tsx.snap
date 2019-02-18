@@ -10,7 +10,7 @@ exports[`Text Field Test: date with content 1`] = `
 <input
   oninput={[Function]}
   type="date"
-  value="2011-05-05"
+  value="2012-01-11"
 />
 `;
 
@@ -18,7 +18,7 @@ exports[`Text Field Test: datetime-local with content 1`] = `
 <input
   oninput={[Function]}
   type="datetime-local"
-  value="2011-05-05T16:20"
+  value="2018-02-22T00:00"
 />
 `;
 
