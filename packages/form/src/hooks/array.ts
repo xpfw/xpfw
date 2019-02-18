@@ -17,7 +17,7 @@ const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: numbe
       currentArray.splice(insertAt, 1)
     }
     FormStore.setValue(mapTo, currentArray, prefix)
-  }), [mapTo, prefix, isAdd, insertAt])
+  }), ["changeSize", mapTo, prefix, isAdd, insertAt])
 }
 export interface IArrayfield  {
   mapTo: string

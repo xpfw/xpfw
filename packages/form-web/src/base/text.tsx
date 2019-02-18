@@ -47,7 +47,7 @@ const TextField: React.FunctionComponent<IFieldProps> = (props) => {
     type = "password"
   } else if (isDate) {
     onChange = memo(setDate(fieldHelper.setValue, props.schema, "nativeEvent.target.value"),
-      [JSON.stringify(props.schema), props.mapTo, props.prefix])
+      ["setDate", JSON.stringify(props.schema), props.mapTo, props.prefix])
     if (format === "date") {
       type = "date"
     } else if (format === "time") {

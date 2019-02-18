@@ -11,7 +11,7 @@ const useRemove = (id: string, schema: ExtendedJSONSchema) => {
   return {
     state: DbStore.getRemoveState(id),
     loading: FormStore.getLoading(REMOVE_ADDON_KEY + id),
-    submitRemove: memo(() => submitRemove(id, schema), [id, String(schema.collection)])
+    submitRemove: memo(() => submitRemove(id, schema), ["submitRemove", id, String(schema.collection)])
   }
 }
 

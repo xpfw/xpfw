@@ -25,7 +25,7 @@ const useField = (mapTo: string, prefix?: string, options?: IFieldOptions) => {
   const value = FormStore.getValue(mapTo, prefix)
   const setValue = memo(() => (newValue: any) => {
     FormStore.setValue(mapTo, getValue(newValue, options), prefix)
-  }, [mapTo, prefix, JSON.stringify(options)])
+  }, ["useField", mapTo, prefix, JSON.stringify(options)])
   return {
     /**
      * mobx tracked value of the field
@@ -54,7 +54,7 @@ const useFieldWithValidation = (definition: ExtendedJSONSchema, mapTo?: string, 
     if (validationResults === false) {
       FormStore.setError(mapTo, jsonValidator.errors, prefix)
     }
-  }), [JSON.stringify(definition), mapTo, prefix, JSON.stringify(options)])
+  }), ["useFieldWithValidation", JSON.stringify(definition), mapTo, prefix, JSON.stringify(options)])
   return {
     /**
      * mobx tracked value of the field

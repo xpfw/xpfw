@@ -36,7 +36,8 @@ const useEdit = (id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix?
     loading: FormStore.getLoading(valuePath),
     original: DbStore.getEditOriginal(id, schema, mapTo, prefix),
     user: UserStore.getUser(),
-    submitEdit: memo(submitEdit(id, schema, mapTo, prefix), [id, JSON.stringify(schema), mapTo, prefix])
+    submitEdit: memo(submitEdit(id, schema, mapTo, prefix),
+      ["submitEdit", id, JSON.stringify(schema), mapTo, prefix])
   }
 }
 

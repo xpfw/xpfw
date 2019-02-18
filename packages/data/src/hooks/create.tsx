@@ -35,7 +35,8 @@ const useCreate = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, 
     state: DbStore.getCreateState(mapTo, prefix),
     loading: FormStore.getLoading(mapTo, prefix),
     user: UserStore.getUser(),
-    submitCreate: memo(() => submitCreate(schema, mapTo, prefix), [JSON.stringify(schema), mapTo, prefix])
+    submitCreate: memo(() => submitCreate(schema, mapTo, prefix),
+      ["submitCreate", JSON.stringify(schema), mapTo, prefix])
   }
 }
 
