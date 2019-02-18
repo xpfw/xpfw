@@ -5,24 +5,24 @@ Object {
   "fields": Array [
     Object {
       "mapTo": "myStringValue.checked",
-      "objectDefinition": Object {
+      "prefix": "prefix",
+      "schema": Object {
         "type": "boolean",
       },
-      "prefix": "prefix",
     },
     Object {
       "mapTo": "myStringValue.id",
-      "objectDefinition": Object {
+      "prefix": "prefix",
+      "schema": Object {
         "type": "integer",
       },
-      "prefix": "prefix",
     },
     Object {
       "mapTo": "myStringValue.name",
-      "objectDefinition": Object {
+      "prefix": "prefix",
+      "schema": Object {
         "type": "string",
       },
-      "prefix": "prefix",
     },
   ],
 }
@@ -33,24 +33,27 @@ Object {
   "fields": Array [
     Object {
       "mapTo": "myObject.checked",
-      "objectDefinition": Object {
+      "prefix": undefined,
+      "schema": Object {
+        "title": "myObject.checked",
         "type": "boolean",
       },
-      "prefix": undefined,
     },
     Object {
       "mapTo": "myObject.id",
-      "objectDefinition": Object {
+      "prefix": undefined,
+      "schema": Object {
+        "title": "myObject.id",
         "type": "integer",
       },
-      "prefix": undefined,
     },
     Object {
       "mapTo": "myObject.name",
-      "objectDefinition": Object {
+      "prefix": undefined,
+      "schema": Object {
+        "title": "myObject.name",
         "type": "string",
       },
-      "prefix": undefined,
     },
   ],
 }
