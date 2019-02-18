@@ -25,6 +25,9 @@ export default {
     "moment",
     "mockdate",
     "@xpfw/form",
+    "@xpfw/form-tests",
+    "@xpfw/form-shared",
+    "@xpfw/ui-shared",
     "moment",
     "@feathersjs/feathers",
     "@feathersjs/authentication-client",
@@ -43,6 +46,7 @@ export default {
     "@xpfw/test-util",
     "react",
     "react-dom",
+    "react-test-renderer",
     "isomorphic-fetch"
   ]
 };
