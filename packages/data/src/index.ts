@@ -1,14 +1,14 @@
 import BackendClient, { IBackendClient, IUiClient } from "./client"
 import useAuth, {
   AuthForm, MailField, OwnerField, PwField
-} from "./components/auth"
-import useCreate from "./components/create"
-import useEdit from "./components/edit"
+} from "./hooks/auth"
+import useCreate from "./hooks/create"
+import useEdit from "./hooks/edit"
 // import SharedFormList, {
 //   IFormListProps, ISharedFormList, ISharedFormListState
-// } from "./components/list"
-import useRemove from "./components/remove"
-import useShow from "./components/show"
+// } from "./hooks/list"
+import useRemove from "./hooks/remove"
+import useShow from "./hooks/show"
 // import RelationShipWrapper, {
 //   addId, getListFormFromRelationshipField, ISharedRelationshipField,
 //   ISharedRelationshipFieldProps, removeId, searchRelated
