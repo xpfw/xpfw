@@ -5,7 +5,7 @@ import UserStore from "../store/user"
 import toJS from "../util/toJS"
 
 const submitEdit = (id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
-  return async () => {
+  return () => {
     if (mapTo == null) {
       mapTo = getMapTo(schema, mapTo)
     }

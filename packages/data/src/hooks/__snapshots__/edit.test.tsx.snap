@@ -139,14 +139,14 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
     "got": "err"
   },
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": false,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
@@ -207,14 +207,14 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
   {
   "error": null,
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": false,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
@@ -254,21 +254,31 @@ exports[`DbStore Edit Test: hidden in update 1`] = `
     }
   ],
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": false,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
     "email": "user",
     "id": 0
   },
-  "submitEdit": {}
+  "submitEdit": [
+    {
+      "keyword": "required",
+      "dataPath": "",
+      "schemaPath": "#/required",
+      "params": {
+        "missingProperty": "guestName"
+      },
+      "message": "should have required property 'guestName'"
+    }
+  ]
 }
 </div>
 `;
@@ -280,21 +290,31 @@ exports[`DbStore Edit Test: hidden text 1`] = `
     "got": "err"
   },
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": false,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
     "email": "user",
     "id": 0
   },
-  "submitEdit": {}
+  "submitEdit": [
+    {
+      "keyword": "required",
+      "dataPath": "",
+      "schemaPath": "#/required",
+      "params": {
+        "missingProperty": "guestName"
+      },
+      "message": "should have required property 'guestName'"
+    }
+  ]
 }
 </div>
 `;
@@ -314,21 +334,31 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
     }
   ],
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": false,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
     "email": "user",
     "id": 0
   },
-  "submitEdit": {}
+  "submitEdit": [
+    {
+      "keyword": "required",
+      "dataPath": "",
+      "schemaPath": "#/required",
+      "params": {
+        "missingProperty": "guestName"
+      },
+      "message": "should have required property 'guestName'"
+    }
+  ]
 }
 </div>
 `;
@@ -350,9 +380,9 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "guestName": "myText",
+        "guestName": "changed",
         "id": 0,
-        "myVal": 420,
+        "myVal": 240,
       },
       "1": Object {
         "guestName": "secondOBJ",
@@ -369,9 +399,9 @@ Object {
   "updateState": Object {
     "formModel": undefined,
     "formModel0": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
 }
@@ -394,9 +424,9 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "guestName": "myText",
+        "guestName": "changed",
         "id": 0,
-        "myVal": 420,
+        "myVal": 240,
       },
       "1": Object {
         "guestName": "secondOBJ",
@@ -413,9 +443,9 @@ Object {
   "updateState": Object {
     "formModel": undefined,
     "formModel0": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
 }
@@ -500,9 +530,9 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "guestName": "myText",
+        "guestName": "changed",
         "id": 0,
-        "myVal": 420,
+        "myVal": 240,
       },
       "1": Object {
         "guestName": "secondOBJ",
@@ -519,9 +549,9 @@ Object {
   "updateState": Object {
     "formModel": undefined,
     "formModel0": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
 }
@@ -625,21 +655,31 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
     }
   ],
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": false,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
     "email": "user",
     "id": 0
   },
-  "submitEdit": {}
+  "submitEdit": [
+    {
+      "keyword": "required",
+      "dataPath": "",
+      "schemaPath": "#/required",
+      "params": {
+        "missingProperty": "guestName"
+      },
+      "message": "should have required property 'guestName'"
+    }
+  ]
 }
 </div>
 `;
@@ -654,9 +694,9 @@ Object {
 
 exports[`DbStore Edit Test: updated record 1`] = `
 Object {
-  "guestName": "myText",
+  "guestName": "changed",
   "id": 0,
-  "myVal": 420,
+  "myVal": 240,
 }
 `;
 
@@ -667,14 +707,14 @@ exports[`DbStore Edit Test: while loading 1`] = `
     "got": "err"
   },
   "state": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "loading": true,
   "original": {
-    "guestName": "myText",
-    "myVal": 420,
+    "guestName": "changed",
+    "myVal": 240,
     "id": 0
   },
   "user": {
