@@ -46,7 +46,7 @@ export class UserStore {
     if (isNil(ADbStore.getState[dataOptions.userCollection])) {
       ADbStore.getState[dataOptions.userCollection] = {}
     }
-    ADbStore.getState[dataOptions.userCollection][get(user, dataOptions.idPath, "-1")] = {result: user}
+    ADbStore.getState[dataOptions.userCollection][get(user, dataOptions.idPath, "-1")] = user
     this.loggedIn = true
     this.authErr = null
   }
