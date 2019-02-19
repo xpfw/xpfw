@@ -17,13 +17,14 @@ export class ListStore {
 
   public getList(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", awaitQuery?: boolean) {
     mapTo = getMapTo(schema, mapTo)
-    if (isNil(this.lists[mapTo]) || awaitQuery) {
+    const getAt = prependPrefix(mapTo, prefix)
+    if (this.lists[getAt] == null || awaitQuery) {
       const promise = this.makeQuery(schema, mapTo, prefix)
       if (awaitQuery) {
         return promise
       }
     }
-    return this.lists[mapTo]
+    return this.lists[getAt]
   }
 
   public getCurrentPage(index: string) {
