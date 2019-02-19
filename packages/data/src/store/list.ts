@@ -35,21 +35,25 @@ export class ListStore {
     return isNumber(this.maxPage[index]) ? this.maxPage[index] : 1
   }
 
+  @action
   public resetPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
     const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
     this.currentPage[getAt] = 0
   }
 
+  @action
   public async nextPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
     const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
     return this.searchInPage(schema, mapTo, prefix, isNumber(this.currentPage[getAt]) ? this.currentPage[getAt] + 1 : 1)
   }
 
+  @action
   public async prevPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
     const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
     return this.searchInPage(schema, mapTo, prefix, isNumber(this.currentPage[getAt]) ? this.currentPage[getAt] - 1 : 0)
   }
 
+  @action
   public async searchInPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", pageNumber: number = 0) {
     const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
     if (isNumber(this.maxPage[getAt]) && pageNumber > this.maxPage[getAt]) {
@@ -66,9 +70,13 @@ export class ListStore {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
     const queryBuilder: any = get(schema, "modify.queryBuilder")
+    const queryModifier: any = get(schema, "modify.queryModifier")
     let queryObj: any = queryBuilder ?
       queryBuilder.apply(FormStore, [schema, mapTo, prefix, "find"]) : FormStore.getValue(mapTo, prefix, {})
     queryObj = toJS(queryObj, {exportMapsAsObjects: false, detectCycles: true, recurseEverything: true})
+    if (queryModifier) {
+      queryObj = queryModifier(queryObj)
+    }
     const currentPage = this.getCurrentPage(getAt)
     if (!noDynamicNums && isNil(queryObj.$limit)) {
         queryObj.$limit = this.pageSize
@@ -82,6 +90,7 @@ export class ListStore {
     return queryObj
   }
 
+  @action
   public async makeQuery(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
