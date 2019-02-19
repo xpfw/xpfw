@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { get, isNil } from "lodash-es"
+import { get, isNil } from "lodash"
 import { useState } from "react"
 import DbStore from "../store/db"
 import ListStore from "../store/list"

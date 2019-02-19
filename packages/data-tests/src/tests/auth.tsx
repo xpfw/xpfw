@@ -5,7 +5,7 @@ import {
 import { FeathersClient } from "@xpfw/data-feathers"
 import { FormStore, useField, useFieldWithValidation, useObject } from "@xpfw/form"
 import { getRandomApp } from "@xpfw/test-util"
-import { get, isFunction } from "lodash-es"
+import { get, isFunction } from "lodash"
 import * as React from "react"
 import render from "../testUtil/render"
 

@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, jsonValidator, memo, prependPrefix } from "@xpfw/form"
-import { get, isNil } from "lodash-es"
+import { get, isNil } from "lodash"
 import { useEffect } from "react"
 import DbStore from "../store/db"
 import UserStore from "../store/user"

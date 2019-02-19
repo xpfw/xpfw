@@ -7,7 +7,7 @@ import {
  } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
 import "isomorphic-fetch"
-import { cloneDeep, get, isNil } from "lodash-es"
+import { cloneDeep, get, isNil } from "lodash"
 import BackendClient from "../client"
 import { AuthForm, MailField, PwField } from "../components/auth"
 import DbStore from "./db"

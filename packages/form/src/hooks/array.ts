@@ -1,4 +1,4 @@
-import { isNumber, memoize } from "lodash-es"
+import { isNumber } from "lodash"
 import { action } from "mobx"
 import { ExtendedJSONSchema } from "../jsonschema"
 import FormStore from "../store/form"

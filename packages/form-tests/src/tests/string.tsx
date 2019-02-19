@@ -1,5 +1,5 @@
 import { FormStore, SharedField } from "@xpfw/form"
-import { cloneDeep, set } from "lodash-es"
+import { cloneDeep, set } from "lodash"
 import * as MockDate from "mockdate"
 import * as React from "react"
 import render from "../testUtil/render"

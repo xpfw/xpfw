@@ -1,4 +1,4 @@
-import { get, set } from "lodash-es"
+import { get, set } from "lodash"
 import { action, observable } from "mobx"
 import { prependPrefix } from "../util/prefixMaker"
 

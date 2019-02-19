@@ -1,4 +1,4 @@
-import { get } from "lodash-es"
+import { get } from "lodash"
 import * as React from "react"
 import ComponentRegistry, { IFieldProps } from "../store/componentRegistry"
 

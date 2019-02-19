@@ -1,4 +1,4 @@
-import { cloneDeep } from "lodash-es"
+import { cloneDeep } from "lodash"
 import { ExtendedJSONSchema } from "../jsonschema"
 import { IFieldProps } from "../store/componentRegistry"
 import iterateSubfields from "../util/iterateSubfields"

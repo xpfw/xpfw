@@ -9,7 +9,7 @@ import {
   RelationshipAndNumberSchema, RelationshipMultiField, RelationshipSingleField
 } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
-import { set } from "lodash-es"
+import { set } from "lodash"
 import * as React from "react"
 import render from "../testUtil/render"
 import login from "./login"

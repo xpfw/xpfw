@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, IFieldProps, memo, prependPrefix, useField, useFieldWithValidation } from "@xpfw/form"
-import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash-es"
+import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash"
 import { action } from "mobx"
 import * as React from "react"
 import dataOptions from "../options"

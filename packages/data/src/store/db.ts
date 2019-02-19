@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { get, isEqual, isNil, set } from "lodash-es"
+import { get, isEqual, isNil, set } from "lodash"
 import { action, observable } from "mobx"
 import BackendClient from "../client"
 import dataOptions from "../options"

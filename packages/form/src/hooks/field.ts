@@ -1,4 +1,4 @@
-import { get } from "lodash-es"
+import { get } from "lodash"
 import { action } from "mobx"
 import { ExtendedJSONSchema } from "../jsonschema"
 import jsonValidator from "../jsonValidator"
