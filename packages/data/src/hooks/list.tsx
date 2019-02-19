@@ -48,14 +48,14 @@ const useList = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, op
   let list: any = ListStore.getList(schema, mapTo, prefix)
   if (isNil(list) || Array.isArray(list.data) && list.data.length === 0)  {
     if (options != null && Array.isArray(options.defaultEntries)) {
-      const result = []
+      const data = []
       for (const entry of options.defaultEntries) {
-        const fetchRes = get(DbStore.getGetState(entry, String(schema.collection), true), "result")
+        const fetchRes = DbStore.getGetState(entry, String(schema.collection), true)
         if (!isNil(fetchRes)) {
-          result.push(fetchRes)
+          data.push(fetchRes)
         }
       }
-      list = {result, total: 0, isDefaultList: true}
+      list = {data, total: 0, isDefaultList: true}
     }
   }
   return {
