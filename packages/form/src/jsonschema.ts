@@ -141,6 +141,10 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      */
     queryBuilder?: (form: ExtendedJSONSchema, method: string, mapTo?: string, prefix?: string) => any
     /**
+     * gives you the possibilty to adjust a query
+     */
+    queryModifier?: (value: any) => any
+    /**
      * The default sort for this collection
      */
     defaultSort?: any
