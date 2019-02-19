@@ -15,6 +15,7 @@ import dataOptions from "./options"
 import DbStore, { REMOVE_ADDON_KEY } from "./store/db"
 import ListStore from "./store/list"
 import UserStore from "./store/user"
+import toJS from "./util/toJS"
 
 export {
   DbStore, ListStore, BackendClient, IBackendClient, IUiClient, dataOptions,
@@ -23,7 +24,7 @@ export {
   useEdit, useEditWithProps, IEditHookProps,
   useGet, useGetWithProps, IGetHookProps,
   useRemove, useRemoveWithProps, IRemoveHookProps,
-  useAuth, useRelationship,
+  useAuth, useRelationship, toJS,
   UserStore, AuthForm, PwField, MailField, OwnerField, REMOVE_ADDON_KEY,
   addId, displayModeChanger, getListFormFromRelationshipField, IRelationshipHookProps,
   removeId, searchRelated, useRelationshipWithProps
