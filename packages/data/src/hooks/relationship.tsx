@@ -104,9 +104,7 @@ const searchRelated = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: stri
     nameField.setValue(transformer(schema, newValue))
     const res: any = await ListStore.getList(form, undefined, prefix, true)
     if (get(schema.relationship, "autoSelect", false) === true) {
-      console.log("CHECKING LIST RESULT", res)
       if (!isNil(res) && Array.isArray(res.data) && res.data.length === 1) {
-        console.log("SETTING TO ", get(res.data[0], dataOptions.idPath), dataOptions.idPath, res.data[0])
         addId(schema, mapTo, prefix)(get(res.data[0], dataOptions.idPath))
       }
     }
@@ -153,7 +151,9 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
     value, setValue: hookedField.setValue, relatedObject, searchForm, displayMode, lastUsed,
     addId: memo(() => addId(schema, mapTo, prefix), ["addId", mapTo, prefix, autoSelect]), prefix,
     removeId: memo(() => removeId(schema, mapTo, prefix), ["removeId", mapTo, prefix, autoSelect]),
-    searchRelated: memo(() => searchRelated(schema, mapTo, prefix), ["searchRelated", mapTo, prefix, autoSelect])
+    searchRelated: memo(() => searchRelated(schema, mapTo, prefix), ["searchRelated", mapTo, prefix, autoSelect]),
+    showDisplay: memo(() => displayModeChanger(String(mapTo), prefix)(1), ["showDisplay", mapTo, prefix]),
+    hideDisplay: memo(() => displayModeChanger(String(mapTo), prefix)(0), ["hideDisplay", mapTo, prefix])
   }
 }
 
