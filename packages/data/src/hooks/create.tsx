@@ -1,21 +1,21 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, jsonValidator, memo, prependPrefix } from "@xpfw/form"
-import { get, isNil } from "lodash"
 import { useEffect } from "react"
 import DbStore from "../store/db"
 import UserStore from "../store/user"
+import toJS from "../util/toJS"
 
 const submitCreate = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   return async () => {
     if (mapTo == null) {
       mapTo = getMapTo(schema, mapTo)
     }
-    const newValue = FormStore.getValue(mapTo, prefix)
+    const newValue = toJS(FormStore.getValue(mapTo, prefix))
     jsonValidator.validate(schema, newValue)
     FormStore.setError(mapTo, jsonValidator.errors, prefix)
     const err = FormStore.getError(mapTo, prefix)
     let res
-    if (err != null) {
-      res = await DbStore.create(schema, prefix)
+    if (err == null) {
+      res = await DbStore.create(schema, mapTo, prefix)
     }
     return res
   }
