@@ -39,7 +39,7 @@ const listenToFeathersServiceEvents = (app: any, store: any, collectionList: str
   for (const collection of collectionList) {
     const eventHandler = (isRemove?: boolean) => {
       return (eventData: any) => {
-        store.setItem(get(eventData, idPath), collection, isRemove ? null : {result: eventData})
+        store.setItem(get(eventData, idPath), collection, isRemove ? null : eventData)
       }
     }
     const dbService = app.service(collection)
