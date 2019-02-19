@@ -40,22 +40,22 @@ const getListFormFromRelationshipField:
   }
 }
 
-const displayModeChanger = (mapTo: string, prefix?: string) => {
-  return (newValue: any) => {
+const displayModeChanger = (mapTo: string, prefix?: string, newValue?: any) => {
+  return () => {
     FormStore.setValue(`displayMode.${mapTo}`, newValue, prefix)
   }
 }
 
 const addId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
-  const disp = displayModeChanger(mapTo, prefix)
+  const disp = displayModeChanger(mapTo, prefix, false)
   return action((newValue: any) => {
     if (schema.type === "array") {
       let currentValue = FormStore.getValue(mapTo, prefix)
       currentValue = !isArray(currentValue) ? [] : currentValue
       currentValue.push(newValue)
       FormStore.setValue(mapTo, currentValue, prefix)
-      disp(0)
+      disp()
     } else {
       FormStore.setValue(mapTo, newValue, prefix)
     }
@@ -80,7 +80,7 @@ const removeId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) =
   if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
   return action((newValue: any) => {
     if (schema.type === "array") {
-      let currentValue = FormStore.getValue(mapTo)
+      let currentValue = FormStore.getValue(mapTo, prefix)
       currentValue = !Array.isArray(currentValue) ? [] : cloneDeep(currentValue)
       remove(currentValue, (val) => val === newValue)
       FormStore.setValue(mapTo, currentValue, prefix)
@@ -130,7 +130,7 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
   const value: any = hookedField.value
   const collection: any = get(schema.relationship, "collection", "")
   // TODO: use prefix
-  const displayMode = FormStore.getValue(`displayMode.${mapTo}`)
+  const displayMode = FormStore.getValue(`displayMode.${mapTo}`, prefix)
   let relatedObject: any
   const searchForm = getListFormFromRelationshipField(schema)
   if (isArray(value)) {
@@ -152,8 +152,8 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
     addId: memo(() => addId(schema, mapTo, prefix), ["addId", mapTo, prefix, autoSelect]), prefix,
     removeId: memo(() => removeId(schema, mapTo, prefix), ["removeId", mapTo, prefix, autoSelect]),
     searchRelated: memo(() => searchRelated(schema, mapTo, prefix), ["searchRelated", mapTo, prefix, autoSelect]),
-    showDisplay: memo(() => displayModeChanger(String(mapTo), prefix)(1), ["showDisplay", mapTo, prefix]),
-    hideDisplay: memo(() => displayModeChanger(String(mapTo), prefix)(0), ["hideDisplay", mapTo, prefix])
+    showDisplay: memo(() => displayModeChanger(String(mapTo), prefix, true), ["showDisplay", mapTo, prefix]),
+    hideDisplay: memo(() => displayModeChanger(String(mapTo), prefix, false), ["hideDisplay", mapTo, prefix])
   }
 }
 
