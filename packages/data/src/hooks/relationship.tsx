@@ -12,6 +12,9 @@ const getListFormFromRelationshipField:
 (schema: ExtendedJSONSchema, mapTo?: string) => ExtendedJSONSchema = (schema, mapTo) => {
   const collection = get(schema, "relationship.collection")
   const nameTransform: any = get(schema, "relationship.nameTransform", (schema: any, val: any) => {
+    if (val == null || val.length === 0) {
+      return null
+    }
     return {
       $regex: `(.*?)${val}(.*?)`,
       $options: "isg"
