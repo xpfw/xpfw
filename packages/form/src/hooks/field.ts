@@ -49,6 +49,10 @@ const useField = (mapTo: string, prefix?: string, options?: IFieldOptions) => {
 const useFieldWithValidation = (definition: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: IFieldOptions) => {
   const originalWrapped = useField(mapTo ? mapTo : String(definition.title), prefix, options)
   const setValue = memo(() => action((newValue: any) => {
+    newValue = getValue(newValue, options)
+    if (definition.type === "number") {
+      newValue = Number(newValue)
+    }
     originalWrapped.setValue(newValue)
     const validationResults = jsonValidator.validate(definition, newValue)
     if (validationResults === false) {
