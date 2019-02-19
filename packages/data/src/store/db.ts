@@ -1,6 +1,6 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
 import { get, isEqual, isNil, set } from "lodash"
-import { action, observable } from "mobx"
+import { action, flow, observable } from "mobx"
 import BackendClient from "../client"
 import dataOptions from "../options"
 import toJS from "../util/toJS"
@@ -10,7 +10,39 @@ const FETCH_THRESHOLD = 1000 * 60 * 3
 
 const REMOVE_ADDON_KEY = "remove"
 
-export class DbStore {
+export class DbStoreClass {
+
+  public getFromServer = flow(function *(id: string, collection: string) {
+    if (DbStore.getState[collection] && DbStore.getState[collection][id]) {
+      if (DbStore.lastFetch[id] && Date.now() - DbStore.lastFetch[id] < FETCH_THRESHOLD) {
+        return DbStore.getState[collection][id]
+      }
+    }
+    if (DbStore.fetching[id] === true) {
+      return
+    }
+    DbStore.getState = {...DbStore.getState}
+    if (DbStore.getState[collection] == null) {
+      DbStore.getState[collection] = {}
+    }
+    try {
+      DbStore.fetching[id] = true
+      FormStore.setLoading(id, true)
+      const result = yield BackendClient.client.get(collection, id)
+      DbStore.lastFetch[id] = Date.now()
+      DbStore.getState[collection][id] = result ? result : {err: "notfound", code: 404}
+      FormStore.setLoading(id, false)
+      DbStore.fetching[id] = false
+      return result
+    } catch (error) {
+      DbStore.getState[collection][id] = {err: "notfound", code: 404}
+      FormStore.setLoading(id, false)
+      FormStore.setError(id, error)
+      DbStore.fetching[id] = false
+      return error
+    }
+  })
+
   @observable
   private createState: {[index: string]: any | undefined} = {}
   @observable
@@ -75,10 +107,10 @@ export class DbStore {
     }
   }
 
+  @action
   public getGetState(id: string, collection: string, tryFetch: boolean) {
     if (tryFetch) {
-      const thisRef: any = this
-      setTimeout(() => thisRef.getFromServer(id, collection), 1)
+      setTimeout(() => this.getFromServer(id, collection), 1)
     }
     return this.getState[collection] ? this.getState[collection][id] : undefined
   }
@@ -92,21 +124,29 @@ export class DbStore {
     this.lastFetch[id] = Date.now()
   }
 
+  @action
   public getEditOriginal(id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
     const collection: any = get(schema, "collection")
+    if (this.getState[collection] == null) {
+      this.getState[collection] = {}
+    }
+    const result = this.getState[collection] ? this.getState[collection][id] : undefined
     if (this.currentlyEditing !== id) {
       this.currentlyEditing = id
       mapTo = getMapTo(schema, mapTo)
-      const fetchPromise = this.getFromServer(id, collection).then((res) => {
-        const doc = res == null ? this.getState[collection][id] : res
-        FormStore.setValue(mapTo, doc, prefix)
-        return doc
-      })
-      if (returnFetchPromise) {
-        return fetchPromise
+      if (result == null) {
+        const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
+          const doc = res == null ? this.getState[collection][id] : res
+          const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
+          this.updateState[saveResultAt] = doc
+          FormStore.setValue(mapTo, doc, prefix)
+          return doc
+        }))
+        if (returnFetchPromise) {
+          return fetchPromise
+        }
       }
     }
-    const result = this.getState[collection] ? this.getState[collection][id] : undefined
     return returnFetchPromise ? Promise.resolve(result) : result
   }
 
@@ -126,36 +166,6 @@ export class DbStore {
     // todo: dont always call this first
     const fetchPromise = this.getFromServer(id, collection)
     return returnFetchPromise ? fetchPromise : this.getState[collection][id]
-  }
-
-  public async getFromServer(id: string, collection: string) {
-    if (this.getState[collection] && this.getState[collection][id]) {
-      if (this.lastFetch[id] && Date.now() - this.lastFetch[id] < FETCH_THRESHOLD) {
-        return this.getState[collection][id]
-      }
-    }
-    if (this.fetching[id] === true) {
-      return
-    }
-    this.getState = {...this.getState}
-    if (this.getState[collection] == null) {
-      this.getState[collection] = {}
-    }
-    try {
-      this.fetching[id] = true
-      FormStore.setLoading(id, true)
-      const result = await BackendClient.client.get(collection, id)
-      this.lastFetch[id] = Date.now()
-      this.getState[collection][id] = result
-      FormStore.setLoading(id, false)
-      this.fetching[id] = false
-      return result
-    } catch (error) {
-      FormStore.setLoading(id, false)
-      FormStore.setError(id, error)
-      this.fetching[id] = false
-      return error
-    }
   }
 
   public async remove(id: string, collection: string) {
@@ -178,8 +188,8 @@ export class DbStore {
   }
 
 }
-
-export default new DbStore()
+const DbStore = new DbStoreClass()
+export default DbStore
 export {
   REMOVE_ADDON_KEY
 }
