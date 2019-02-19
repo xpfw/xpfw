@@ -114,10 +114,10 @@ export class ListStore {
             i++
           }
           this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
-          this.lists[getAt] = {result: resList}
+          this.lists[getAt] = {data: resList}
           FormStore.setLoading(getAt, false)
           this.doingQuery[qKey] = false
-          return {result: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
+          return {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
         } else {
           const col: any = schema.collection
           const result = await BackendClient.client.find(col, queryObj)
