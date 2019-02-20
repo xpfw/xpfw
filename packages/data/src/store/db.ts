@@ -81,6 +81,8 @@ export class DbStoreClass {
           if (returnFetchPromise) {
             return fetchPromise
           }
+        } else {
+          FormStore.setValue(mapTo, toJS(result), prefix)
         }
         return undefined
       })()
