@@ -23,6 +23,7 @@ export default {
     "moment",
     "mockdate",
     "preact-render-to-json",
+    "react-test-renderer",
     "@xpfw/form"
   ]
 };
