@@ -30,6 +30,7 @@ export class DbStoreClass {
       FormStore.setLoading(id, true)
       this.lastFetch[id] = Date.now()
       const result = yield BackendClient.client.get(collection, id)
+      console.log("GET RESUL TIS", result)
       this.getState[collection][id] = result
       FormStore.setError(id, undefined)
       FormStore.setLoading(id, false)
@@ -41,33 +42,6 @@ export class DbStoreClass {
       this.fetching[id] = false
       return error
     }
-  })
-
-  public getEditOriginal = flow(function *(this: DbStoreClass,
-                                           id: string, schema: ExtendedJSONSchema,
-                                           mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
-    const collection: any = get(schema, "collection")
-    if (this.getState[collection] == null) {
-      this.getState[collection] = {}
-    }
-    const result = this.getState[collection] ? this.getState[collection][id] : undefined
-    if (this.currentlyEditing !== id) {
-      this.currentlyEditing = id
-      mapTo = getMapTo(schema, mapTo)
-      if (result == null) {
-        const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
-          const doc = res == null ? this.getState[collection][id] : res
-          const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
-          this.updateState[saveResultAt] = doc
-          FormStore.setValue(mapTo, doc, prefix)
-          return doc
-        }))
-        if (returnFetchPromise) {
-          return fetchPromise
-        }
-      }
-    }
-    return returnFetchPromise ? Promise.resolve(result) : result
   })
 
   @observable
@@ -84,6 +58,35 @@ export class DbStoreClass {
   private fetching: {[index: string]: boolean} = {}
   @observable
   private currentlyEditing: string = ""
+
+  public getEditOriginal(id: string, schema: ExtendedJSONSchema,
+                         mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
+    const collection: any = get(schema, "collection")
+    if (this.getState[collection] == null) {
+      this.getState[collection] = {}
+    }
+    const result = this.getState[collection] ? this.getState[collection][id] : undefined
+    if (this.currentlyEditing !== id) {
+      return action(() => {
+        this.currentlyEditing = id
+        mapTo = getMapTo(schema, mapTo)
+        if (result == null) {
+          const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
+            const doc = this.getState[collection][id]
+            const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
+            this.updateState[saveResultAt] = doc
+            FormStore.setValue(mapTo, doc, prefix)
+            return doc
+          }))
+          if (returnFetchPromise) {
+            return fetchPromise
+          }
+        }
+        return undefined
+      })()
+    }
+    return returnFetchPromise ? Promise.resolve(result) : result
+  }
 
   public async create(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
     mapTo = getMapTo(schema, mapTo)
