@@ -1,11 +1,69 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
 import { get, isNil, isNumber, isObject, set } from "lodash"
-import { action, observable, toJS } from "mobx"
+import { action, flow, observable, toJS } from "mobx"
 import BackendClient from "../client"
 
 export class ListStore {
   @observable
   public pageSize: number = 10
+
+  public makeQuery = flow(function *(this: ListStore, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+    mapTo = getMapTo(schema, mapTo)
+    const getAt = prependPrefix(mapTo, prefix)
+    let qKey: any
+    try {
+      const queryObj = this.buildQueryObj(schema, mapTo, prefix)
+      qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
+      if (!this.doingQuery[qKey]) {
+        this.doingQuery[qKey] = true
+        FormStore.setLoading(getAt, true)
+        if (Array.isArray(schema.multiCollection)) {
+          const resList: any[] = []
+          const promises: any[] = []
+          let biggestTotal = 0
+          for (const col of schema.multiCollection) {
+            promises.push(BackendClient.client.find(col, queryObj))
+          }
+          let i = 0
+          for (const promise of promises) {
+            const promiseRes = yield promise
+            if (isObject(promiseRes)) {
+              if (promiseRes.total > biggestTotal) {
+                biggestTotal = promiseRes.total
+              }
+              for (const e of promiseRes.data) {
+                e.fromCollection = schema.multiCollection[i]
+                resList.push(e)
+              }
+            }
+            i++
+          }
+          this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
+          this.lists[getAt] = {data: resList}
+          FormStore.setLoading(getAt, false)
+          this.doingQuery[qKey] = false
+          return {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
+        } else {
+          const col: any = schema.collection
+          const result = yield BackendClient.client.find(col, queryObj)
+          const total = get(result, "total", 1)
+          this.maxPage[getAt] = Math.ceil(total / this.pageSize)
+          this.lists[getAt] = result
+          this.doingQuery[qKey] = false
+          FormStore.setLoading(getAt, false)
+          return result
+        }
+      } else {
+        return Promise.resolve(false)
+      }
+    } catch (error) {
+      this.doingQuery[qKey] = false
+      FormStore.setError(getAt, error)
+      FormStore.setLoading(getAt, false)
+      return error
+    }
+  })
+
   @observable
   private lists: {[index: string]: any} = {}
   @observable
@@ -88,64 +146,6 @@ export class ListStore {
         queryObj.$sort = get(schema, "modify.defaultSort", { createdAt: -1 })
     }
     return queryObj
-  }
-
-  @action
-  public async makeQuery(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
-    mapTo = getMapTo(schema, mapTo)
-    const getAt = prependPrefix(mapTo, prefix)
-    let qKey: any
-    try {
-      const queryObj = this.buildQueryObj(schema, mapTo, prefix)
-      qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
-      if (!this.doingQuery[qKey]) {
-        this.doingQuery[qKey] = true
-        FormStore.setLoading(getAt, true)
-        if (Array.isArray(schema.multiCollection)) {
-          const resList: any[] = []
-          const promises: any[] = []
-          let biggestTotal = 0
-          for (const col of schema.multiCollection) {
-            promises.push(BackendClient.client.find(col, queryObj))
-          }
-          let i = 0
-          for (const promise of promises) {
-            const promiseRes = await promise
-            if (isObject(promiseRes)) {
-              if (promiseRes.total > biggestTotal) {
-                biggestTotal = promiseRes.total
-              }
-              for (const e of promiseRes.data) {
-                e.fromCollection = schema.multiCollection[i]
-                resList.push(e)
-              }
-            }
-            i++
-          }
-          this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
-          this.lists[getAt] = {data: resList}
-          FormStore.setLoading(getAt, false)
-          this.doingQuery[qKey] = false
-          return {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
-        } else {
-          const col: any = schema.collection
-          const result = await BackendClient.client.find(col, queryObj)
-          const total = get(result, "total", 1)
-          this.maxPage[getAt] = Math.ceil(total / this.pageSize)
-          this.lists[getAt] = result
-          this.doingQuery[qKey] = false
-          FormStore.setLoading(getAt, false)
-          return result
-        }
-      } else {
-        return Promise.resolve(false)
-      }
-    } catch (error) {
-      this.doingQuery[qKey] = false
-      FormStore.setError(getAt, error)
-      FormStore.setLoading(getAt, false)
-      return error
-    }
   }
 
 }

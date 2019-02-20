@@ -12,35 +12,62 @@ const REMOVE_ADDON_KEY = "remove"
 
 export class DbStoreClass {
 
-  public getFromServer = flow(function *(id: string, collection: string) {
-    if (DbStore.getState[collection] && DbStore.getState[collection][id]) {
-      if (DbStore.lastFetch[id] && Date.now() - DbStore.lastFetch[id] < FETCH_THRESHOLD) {
-        return DbStore.getState[collection][id]
+  public getFromServer = flow(function *(this: DbStoreClass, id: string, collection: string) {
+    if (this.getState[collection] && this.getState[collection][id]) {
+      if (this.lastFetch[id] && Date.now() - this.lastFetch[id] < FETCH_THRESHOLD) {
+        return this.getState[collection][id]
       }
     }
-    if (DbStore.fetching[id] === true) {
+    if (this.fetching[id] === true) {
       return
     }
-    DbStore.getState = {...DbStore.getState}
-    if (DbStore.getState[collection] == null) {
-      DbStore.getState[collection] = {}
+    this.getState = {...this.getState}
+    if (this.getState[collection] == null) {
+      this.getState[collection] = {}
     }
     try {
-      DbStore.fetching[id] = true
+      this.fetching[id] = true
       FormStore.setLoading(id, true)
       const result = yield BackendClient.client.get(collection, id)
-      DbStore.lastFetch[id] = Date.now()
-      DbStore.getState[collection][id] = result ? result : {err: "notfound", code: 404}
+      this.lastFetch[id] = Date.now()
+      this.getState[collection][id] = result ? result : {err: "notfound", code: 404}
       FormStore.setLoading(id, false)
-      DbStore.fetching[id] = false
+      this.fetching[id] = false
       return result
     } catch (error) {
-      DbStore.getState[collection][id] = {err: "notfound", code: 404}
+      this.getState[collection][id] = {err: "notfound", code: 404}
       FormStore.setLoading(id, false)
       FormStore.setError(id, error)
-      DbStore.fetching[id] = false
+      this.fetching[id] = false
       return error
     }
+  })
+
+  public getEditOriginal = flow(function *(this: DbStoreClass,
+                                           id: string, schema: ExtendedJSONSchema,
+                                           mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
+    const collection: any = get(schema, "collection")
+    if (this.getState[collection] == null) {
+      this.getState[collection] = {}
+    }
+    const result = this.getState[collection] ? this.getState[collection][id] : undefined
+    if (this.currentlyEditing !== id) {
+      this.currentlyEditing = id
+      mapTo = getMapTo(schema, mapTo)
+      if (result == null) {
+        const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
+          const doc = res == null ? this.getState[collection][id] : res
+          const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
+          this.updateState[saveResultAt] = doc
+          FormStore.setValue(mapTo, doc, prefix)
+          return doc
+        }))
+        if (returnFetchPromise) {
+          return fetchPromise
+        }
+      }
+    }
+    return returnFetchPromise ? Promise.resolve(result) : result
   })
 
   @observable
@@ -122,32 +149,6 @@ export class DbStoreClass {
     }
     this.getState[collection][id] = object
     this.lastFetch[id] = Date.now()
-  }
-
-  @action
-  public getEditOriginal(id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
-    const collection: any = get(schema, "collection")
-    if (this.getState[collection] == null) {
-      this.getState[collection] = {}
-    }
-    const result = this.getState[collection] ? this.getState[collection][id] : undefined
-    if (this.currentlyEditing !== id) {
-      this.currentlyEditing = id
-      mapTo = getMapTo(schema, mapTo)
-      if (result == null) {
-        const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
-          const doc = res == null ? this.getState[collection][id] : res
-          const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
-          this.updateState[saveResultAt] = doc
-          FormStore.setValue(mapTo, doc, prefix)
-          return doc
-        }))
-        if (returnFetchPromise) {
-          return fetchPromise
-        }
-      }
-    }
-    return returnFetchPromise ? Promise.resolve(result) : result
   }
 
   public getCreateState(mapTo: string, prefix?: string) {
