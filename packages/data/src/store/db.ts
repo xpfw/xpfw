@@ -18,7 +18,7 @@ export class DbStoreClass {
         return this.getState[collection][id]
       }
     }
-    if (this.fetching[id] === true) {
+    if (this.fetching[id] === true || Date.now() - this.lastFetch[id] < FETCH_THRESHOLD) {
       return
     }
     this.getState = {...this.getState}
@@ -28,14 +28,14 @@ export class DbStoreClass {
     try {
       this.fetching[id] = true
       FormStore.setLoading(id, true)
-      const result = yield BackendClient.client.get(collection, id)
       this.lastFetch[id] = Date.now()
-      this.getState[collection][id] = result ? result : {err: "notfound", code: 404}
+      const result = yield BackendClient.client.get(collection, id)
+      this.getState[collection][id] = result
+      FormStore.setError(id, undefined)
       FormStore.setLoading(id, false)
       this.fetching[id] = false
       return result
     } catch (error) {
-      this.getState[collection][id] = {err: "notfound", code: 404}
       FormStore.setLoading(id, false)
       FormStore.setError(id, error)
       this.fetching[id] = false
