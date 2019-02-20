@@ -1,25 +1,16 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, IFieldProps, memo, prependPrefix, useField, useFieldWithValidation } from "@xpfw/form"
 import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash"
 import { action } from "mobx"
-import * as React from "react"
 import dataOptions from "../options"
 import DbStore from "../store/db"
 import ListStore from "../store/list"
+import { changeValToRegex } from "../util/valToRegex"
 
 const lastUsedKey = "lastUsed"
 
 const getListFormFromRelationshipField:
 (schema: ExtendedJSONSchema, mapTo?: string) => ExtendedJSONSchema = (schema, mapTo) => {
   const collection = get(schema, "relationship.collection")
-  const nameTransform: any = get(schema, "relationship.nameTransform", (schema: any, val: any) => {
-    if (val == null || val.length === 0) {
-      return null
-    }
-    return {
-      $regex: `(.*?)${val}(.*?)`,
-      $options: "isg"
-    }
-  })
   const nameSearchField: ExtendedJSONSchema = {
     title: get(schema, "relationship.namePath"),
     type: "string"
@@ -34,8 +25,8 @@ const getListFormFromRelationshipField:
         type: "string"
       }
     },
-    relationship: {
-      nameTransform
+    modify: {
+      queryModifier: changeValToRegex(get(schema, "relationship.namePath"))
     }
   }
 }

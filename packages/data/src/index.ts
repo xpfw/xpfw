@@ -16,6 +16,7 @@ import DbStore, { REMOVE_ADDON_KEY } from "./store/db"
 import ListStore from "./store/list"
 import UserStore from "./store/user"
 import toJS from "./util/toJS"
+import valToRegex, { changeValToRegex } from "./util/valToRegex";
 
 export {
   DbStore, ListStore, BackendClient, IBackendClient, IUiClient, dataOptions,
@@ -24,7 +25,7 @@ export {
   useEdit, useEditWithProps, IEditHookProps,
   useGet, useGetWithProps, IGetHookProps,
   useRemove, useRemoveWithProps, IRemoveHookProps,
-  useAuth, useRelationship, toJS,
+  useAuth, useRelationship, toJS, valToRegex, changeValToRegex,
   UserStore, AuthForm, PwField, MailField, OwnerField, REMOVE_ADDON_KEY,
   addId, displayModeChanger, getListFormFromRelationshipField, IRelationshipHookProps,
   removeId, searchRelated, useRelationshipWithProps
