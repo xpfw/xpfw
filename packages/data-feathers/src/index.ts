@@ -1,6 +1,6 @@
-import FeathersClient from "./feathers"
+import FeathersClient, { feathersClientOptions } from "./feathers"
 
 export default FeathersClient
 export {
-  FeathersClient
+  FeathersClient, feathersClientOptions
 }
