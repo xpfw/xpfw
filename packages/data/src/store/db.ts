@@ -31,7 +31,6 @@ export class DbStoreClass {
       FormStore.setLoading(id, true)
       this.lastFetch[id] = Date.now()
       const result = yield BackendClient.client.get(collection, id)
-      console.log("GET RESUL TIS", result)
       this.getState[collection][id] = result
       FormStore.setError(id, undefined)
       FormStore.setLoading(id, false)
