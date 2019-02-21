@@ -43,6 +43,8 @@ export class DbStoreClass {
       return error
     }
   })
+  @observable
+  public currentlyEditing: string = ""
 
   @observable
   private createState: {[index: string]: any | undefined} = {}
@@ -56,8 +58,6 @@ export class DbStoreClass {
   private lastFetch: {[index: string]: number} = {}
   @observable
   private fetching: {[index: string]: boolean} = {}
-  @observable
-  private currentlyEditing: string = ""
 
   public getEditOriginal(id: string, schema: ExtendedJSONSchema,
                          mapTo?: string, prefix: string = "", returnFetchPromise?: boolean) {
@@ -70,7 +70,6 @@ export class DbStoreClass {
       return action(() => {
         const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
         this.updateState[saveResultAt] = null
-        FormStore.setValue(mapTo, {}, prefix)
         this.currentlyEditing = id
         mapTo = getMapTo(schema, mapTo)
         if (result == null) {
@@ -88,6 +87,10 @@ export class DbStoreClass {
         }
         return undefined
       })()
+    }
+    const currentVal = FormStore.getValue(mapTo, prefix)
+    if (result != null && (currentVal == null || currentVal[dataOptions.idPath] !== result[dataOptions.idPath])) {
+      FormStore.setValue(mapTo, result, prefix)
     }
     return returnFetchPromise ? Promise.resolve(result) : result
   }
