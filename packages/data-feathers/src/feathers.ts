@@ -95,10 +95,12 @@ const clearQueue = async () => {
     for (let i = 0; i < batchResult.data.length; i++) {
       const indexRes = batchResult.data[i]
       const queueRef = queue[i]
-      if (indexRes[0] == null) {
-        queueRef.resolve(indexRes[1])
-      } else {
-        queueRef.reject(indexRes[1])
+      if (queueRef != null) {
+        if (indexRes[0] == null) {
+          queueRef.resolve(indexRes[1])
+        } else {
+          queueRef.reject(indexRes[1])
+        }
       }
     }
     queue = []
@@ -113,12 +115,10 @@ const queueCall = (collection: string, method: string, args: any[]) => {
     return FeathersClient.client.service(collection)[method](...args)
   }
   return new Promise((resolve, reject) => {
-    console.log("QUEUEING CALL", collection, method, args)
     if (queueTimeoutId != null) {
       clearTimeout(queueTimeoutId)
       queueTimeoutId = undefined
     }
-    console.log("PUSHING")
     queue.push({resolve, reject, collection, method, args})
     queueTimeoutId = setTimeout(clearQueue, feathersClientOptions.batchWaitTime)
   })
