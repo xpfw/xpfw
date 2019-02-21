@@ -1,9 +1,7 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { get, isNil } from "lodash"
-import { useEffect, useState } from "react"
+import { isNil } from "lodash"
 import DbStore from "../store/db"
 import ListStore from "../store/list"
-import { action } from "mobx";
 
 const nextPage = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   return () => {
@@ -30,12 +28,6 @@ export interface IListHookProps {
 
 const useList = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: IListOptions) => {
   const queryObj = ListStore.buildQueryObj(schema, mapTo, prefix, true)
-  useEffect(() => {
-    setTimeout(action(() => {
-      ListStore.resetPage(schema, mapTo, prefix)
-      ListStore.makeQuery(schema, mapTo, prefix)
-    }), 1)
-  }, [JSON.stringify(queryObj)])
   if (mapTo == null) {
     mapTo = getMapTo(schema, mapTo)
   }

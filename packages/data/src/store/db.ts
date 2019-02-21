@@ -3,6 +3,7 @@ import { get, isEqual, isNil, set } from "lodash"
 import { action, flow, observable } from "mobx"
 import BackendClient from "../client"
 import dataOptions from "../options"
+import ListStore from "../store/list"
 import toJS from "../util/toJS"
 import UserStore from "./user"
 
@@ -68,13 +69,15 @@ export class DbStoreClass {
     const result = this.getState[collection] ? this.getState[collection][id] : undefined
     if (this.currentlyEditing !== id) {
       return action(() => {
+        const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
+        this.updateState[saveResultAt] = null
+        FormStore.setValue(mapTo, {}, prefix)
         this.currentlyEditing = id
         mapTo = getMapTo(schema, mapTo)
         if (result == null) {
           const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
             const doc = this.getState[collection][id]
-            const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
-            this.updateState[saveResultAt] = doc
+            this.updateState[saveResultAt] = null
             FormStore.setValue(mapTo, doc, prefix)
             return doc
           }))
@@ -105,6 +108,7 @@ export class DbStoreClass {
       const col: any = schema.collection
       const result = await BackendClient.client.create(col, data)
       this.createState[saveResultAt] = result
+      ListStore.setCollectionDirty(col)
       if (this.getState[col] == null) {
         this.getState[col] = {}
       }
@@ -123,9 +127,10 @@ export class DbStoreClass {
     const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
     try {
       FormStore.setLoading(saveResultAt, true)
-      const col: any = schema.collection
+      const col = String(schema.collection)
       const result = await BackendClient.client.patch(col, id, toJS(FormStore.getValue(mapTo, prefix)))
       this.updateState[saveResultAt] = result
+      ListStore.setCollectionDirty(col)
       FormStore.setLoading(saveResultAt, false)
       if (this.getState[col] == null) {
         this.getState[col] = {}
@@ -184,6 +189,7 @@ export class DbStoreClass {
       const result = await BackendClient.client.remove(collection, id)
       this.removeState[id] = result
       delete this.getState[collection][id]
+      ListStore.setCollectionDirty(collection)
       FormStore.setLoading(id, false, REMOVE_ADDON_KEY)
       return result
     } catch (error) {

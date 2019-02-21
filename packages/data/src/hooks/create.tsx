@@ -1,5 +1,4 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, jsonValidator, memo, prependPrefix } from "@xpfw/form"
-import { useEffect } from "react"
 import DbStore from "../store/db"
 import UserStore from "../store/user"
 import toJS from "../util/toJS"
@@ -20,16 +19,9 @@ const submitCreate = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: strin
     return res
   }
 }
-const u: any = DbStore
-const useCreate = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, reset?: boolean) => {
+
+const useCreate = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
-  useEffect(() => {
-    if (reset) {
-      u.createState[prependPrefix(mapTo, prefix)] = null
-      FormStore.setValue(mapTo, {}, prefix)
-      FormStore.setError(mapTo, undefined, prefix)
-    }
-  }, [reset])
   return {
     error: FormStore.getError(mapTo, prefix),
     state: DbStore.getCreateState(mapTo, prefix),
@@ -44,10 +36,9 @@ export interface ICreateHookProps {
   schema: ExtendedJSONSchema
   prefix?: string
   mapTo?: string
-  reset?: boolean
 }
 
-const useCreateWithProps = (props: ICreateHookProps) => useCreate(props.schema, props.mapTo, props.prefix, props.reset)
+const useCreateWithProps = (props: ICreateHookProps) => useCreate(props.schema, props.mapTo, props.prefix)
 
 export default useCreate
 export {

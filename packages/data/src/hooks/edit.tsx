@@ -1,5 +1,4 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, jsonValidator, memo, prependPrefix } from "@xpfw/form"
-import { useEffect } from "react"
 import DbStore from "../store/db"
 import UserStore from "../store/user"
 import toJS from "../util/toJS"
@@ -19,17 +18,10 @@ const submitEdit = (id: string, schema: ExtendedJSONSchema, mapTo?: string, pref
     return err
   }
 }
-const u: any = DbStore
-const useEdit = (id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, reset?: boolean) => {
+
+const useEdit = (id: string, schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
   const valuePath = `${prependPrefix(mapTo, prefix)}${id}`
-  useEffect(() => {
-    if (reset) {
-      u.currentlyEditing = ""
-      u.updateState[prependPrefix(mapTo, prefix)] = null
-      FormStore.setValue(mapTo, {}, prefix)
-    }
-  }, [reset])
   return {
     error: FormStore.getError(valuePath),
     state: DbStore.getUpdateState(valuePath),
@@ -46,10 +38,9 @@ export interface IEditHookProps {
   id: string
   prefix?: string
   mapTo?: string
-  reset?: boolean
 }
 
-const useEditWithProps = (props: IEditHookProps) => useEdit(props.id, props.schema, props.mapTo, props.prefix, props.reset)
+const useEditWithProps = (props: IEditHookProps) => useEdit(props.id, props.schema, props.mapTo, props.prefix)
 
 export default useEdit
 export {

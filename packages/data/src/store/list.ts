@@ -1,11 +1,17 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { get, isNil, isNumber, isObject, set } from "lodash"
+import { get, isEqual, isNil, isNumber, isObject } from "lodash"
 import { action, flow, observable, toJS } from "mobx"
 import BackendClient from "../client"
 
 export class ListStore {
   @observable
   public pageSize: number = 10
+  public previousQuery: {[index: string]: any} = {}
+  /**
+   * Used by DbStore after create or update to signalize that new records could be gathered by a fetch
+   */
+  @observable
+  public dirtyCollections: {[index: string]: boolean | undefined} = {}
 
   public makeQuery = flow(function *(this: ListStore, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
     mapTo = getMapTo(schema, mapTo)
@@ -39,10 +45,11 @@ export class ListStore {
             i++
           }
           this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
-          this.lists[getAt] = {data: resList}
+          const retObj = {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
+          this.lists[getAt] = retObj
           FormStore.setLoading(getAt, false)
           this.doingQuery[qKey] = false
-          return {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
+          return retObj
         } else {
           const col: any = schema.collection
           const result = yield BackendClient.client.find(col, queryObj)
@@ -76,13 +83,34 @@ export class ListStore {
   public getList(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", awaitQuery?: boolean) {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
-    if (this.lists[getAt] == null || awaitQuery) {
+    const queryObj = this.buildQueryObj(schema, mapTo, prefix)
+    const equalToPreviousQuery = isEqual(queryObj, this.previousQuery[getAt])
+    const collectionDirty = this.getIsDirty(schema)
+    if (this.lists[getAt] == null || awaitQuery || !equalToPreviousQuery || collectionDirty) {
+      this.previousQuery[getAt] = queryObj
       const promise = this.makeQuery(schema, mapTo, prefix)
       if (awaitQuery) {
         return promise
       }
     }
     return this.lists[getAt]
+  }
+
+  @action
+  public setCollectionDirty(collection: string) {
+    this.dirtyCollections[collection] = true
+  }
+
+  public getIsDirty(schema: ExtendedJSONSchema) {
+    if (Array.isArray(schema.multiCollection)) {
+      for (const collection of schema.multiCollection) {
+        if (this.dirtyCollections[String(collection)] === true) {
+          return true
+        }
+      }
+      return false
+    }
+    return this.dirtyCollections[String(schema.collection)] === true
   }
 
   public getCurrentPage(index: string) {
