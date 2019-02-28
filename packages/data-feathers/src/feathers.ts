@@ -178,7 +178,7 @@ const FeathersClient: IUiClient = {
     return queueCall(collection, "create", [createData])
   },
   find: (collection: string, queryObj: any) => {
-    return queueCall(collection, "find", [queryObj])
+    return queueCall(collection, "find", [{query: queryObj}])
   },
   patch: (collection: string, id: any, createData: any) => {
     return queueCall(collection, "patch", [id, createData])
