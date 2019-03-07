@@ -78,35 +78,36 @@ const feathersClientOptions: {
 }
 
 let queueTimeoutId: any
-let queue: IQueueEntry[] = []
+const queue: IQueueEntry[] = []
 
 const clearQueue = async () => {
-  const callArgs: any[] = []
-  for (const item of queue) {
+  const toClear: any[] = []
+  while (queue.length > 0) {
+    toClear.push(queue.pop())
+  }
+  queueTimeoutId = undefined
+  const callArgs = []
+  for (const item of toClear) {
     callArgs.push([
       `${item.collection}::${item.method}`, ...item.args
     ])
   }
   try {
     const batchResult = await FeathersClient.client
-    .service(feathersClientOptions.batchService).create({
-      call: callArgs
-    })
+    .service(feathersClientOptions.batchService).create({call: callArgs})
     for (let i = 0; i < batchResult.data.length; i++) {
-      const indexRes = batchResult.data[i]
-      const queueRef = queue[i]
-      if (queueRef != null) {
-        if (indexRes[0] == null) {
-          queueRef.resolve(indexRes[1])
-        } else {
-          queueRef.reject(indexRes[1])
+        const indexRes = batchResult.data[i]
+        const queueRef = toClear[i]
+        if (queueRef != null) {
+            if (indexRes[0] == null) {
+                queueRef.resolve(indexRes[1])
+            } else {
+                queueRef.reject(indexRes[1])
+            }
         }
-      }
     }
-    queue = []
-    queueTimeoutId = undefined
   } catch (e) {
-    console.log("ERROR doing batchcalls ", e)
+    console.log("ERROR doing batchcalls ", JSON.stringify(e))
   }
 }
 
