@@ -1,5 +1,4 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { compare } from "fast-json-patch"
 import { get } from "lodash"
 import { action, flow, observable } from "mobx"
 import BackendClient from "../client"
@@ -133,6 +132,7 @@ export class DbStoreClass {
       const col = String(schema.collection)
       let valueToSubmit = toJS(FormStore.getValue(mapTo, prefix))
       if (dataOptions.onlyPatchDiffs) {
+        const compare = require("fast-json-patch").compare
         const orig = await DbStore.getGetState(id, col, false)
         delete valueToSubmit[dataOptions.idPath]
         delete orig[dataOptions.idPath]
