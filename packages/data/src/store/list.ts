@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { get, isEqual, isNil, isNumber, isObject } from "lodash"
+import { get, isEqual, isNil, isNumber } from "lodash"
 import { action, flow, observable, toJS } from "mobx"
 import BackendClient from "../client"
 
@@ -32,8 +32,8 @@ export class ListStore {
           }
           let i = 0
           for (const promise of promises) {
-            const promiseRes = yield promise
-            if (isObject(promiseRes)) {
+            const promiseRes: any = yield promise
+            if (promiseRes != null) {
               if (promiseRes.total > biggestTotal) {
                 biggestTotal = promiseRes.total
               }
