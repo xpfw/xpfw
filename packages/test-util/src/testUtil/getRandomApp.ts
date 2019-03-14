@@ -51,7 +51,7 @@ const getRandomApp = async (memoryServiceNames: string | string[],
     memoryServiceNames = [memoryServiceNames]
   }
   if (useMongo) {
-    c = await MongoClient.connect(`mongodb://localhost:27017/`)
+    c = await MongoClient.connect(`mongodb://localhost:27017/`, { useNewUrlParser: true })
     db  = c.db("feathersxpfwvalidatetests" + port)
     for (const memoryServiceName of memoryServiceNames) {
       col = db.collection(`testFor${memoryServiceName}`)
