@@ -34,7 +34,12 @@ Object {
         ],
       },
     },
-    "formModel": undefined,
+    "formModel": Object {
+      "errors": Array [
+        "a",
+        "b",
+      ],
+    },
   },
   "formData": Object {
     "authForm": undefined,
@@ -50,6 +55,9 @@ Object {
     },
   },
   "loading": Object {
+    "createpref": Object {
+      "formModel": false,
+    },
     "formModel": false,
   },
 }
@@ -59,6 +67,12 @@ exports[`DbStore Create Test: after create 1`] = `
 <div>
   {
   "error": null,
+  "state": {
+    "guestName": "myText",
+    "myVal": 420,
+    "id": 0
+  },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -99,11 +113,19 @@ exports[`DbStore Create Test: after purposely set invalid err 1`] = `
 exports[`DbStore Create Test: after reset on mount 1`] = `
 Object {
   "errors": Object {
-    "formModel": undefined,
+    "formModel": Object {
+      "errors": Array [
+        "a",
+        "b",
+      ],
+    },
   },
   "formData": Object {
     "authForm": undefined,
-    "formModel": Object {},
+    "formModel": Object {
+      "guestName": "myText",
+      "myVal": 420,
+    },
   },
   "loading": Object {
     "formModel": false,
@@ -122,7 +144,12 @@ Object {
         ],
       },
     },
-    "formModel": undefined,
+    "formModel": Object {
+      "errors": Array [
+        "a",
+        "b",
+      ],
+    },
   },
   "formData": Object {
     "authForm": undefined,
@@ -132,9 +159,15 @@ Object {
         "myVal": 421,
       },
     },
-    "formModel": Object {},
+    "formModel": Object {
+      "guestName": "myText",
+      "myVal": 420,
+    },
   },
   "loading": Object {
+    "createpref": Object {
+      "formModel": false,
+    },
     "formModel": false,
   },
 }
@@ -217,6 +250,12 @@ exports[`DbStore Create Test: prefixed after create 1`] = `
 <div>
   {
   "error": null,
+  "state": {
+    "guestName": "SECOND OBJECT",
+    "myVal": 421,
+    "id": 1
+  },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -234,6 +273,7 @@ exports[`DbStore Create Test: prefixed after purposely set invalid err 1`] = `
       "b"
     ]
   },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -262,6 +302,7 @@ exports[`DbStore Create Test: prefixed hidden in create 1`] = `
       "b"
     ]
   },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -279,6 +320,7 @@ exports[`DbStore Create Test: prefixed hidden text 1`] = `
       "b"
     ]
   },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -296,6 +338,7 @@ exports[`DbStore Create Test: prefixed not hidden in create 1`] = `
       "b"
     ]
   },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -308,6 +351,12 @@ exports[`DbStore Create Test: prefixed while loading 1`] = `
 <div>
   {
   "error": null,
+  "state": {
+    "guestName": "SECOND OBJECT",
+    "myVal": 421,
+    "id": 1
+  },
+  "loading": false,
   "user": {
     "email": "user",
     "id": 0
@@ -337,7 +386,12 @@ exports[`DbStore Create Test: resetOnMount = true 1`] = `
 exports[`DbStore Create Test: resetOnMount = true 2`] = `
 <div>
   {
-  "state": null,
+  "error": {
+    "errors": [
+      "a",
+      "b"
+    ]
+  },
   "loading": false,
   "user": {
     "email": "user",
@@ -351,6 +405,11 @@ exports[`DbStore Create Test: while loading 1`] = `
 <div>
   {
   "error": null,
+  "state": {
+    "guestName": "myText",
+    "myVal": 420,
+    "id": 0
+  },
   "loading": true,
   "user": {
     "email": "user",

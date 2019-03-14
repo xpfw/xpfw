@@ -1,5 +1,6 @@
 const dataOptions = {
   userCollection: "users",
-  idPath: "_id"
+  idPath: "_id",
+  onlyPatchDiffs: false
 }
 export default dataOptions

@@ -62,8 +62,7 @@ Object {
 
 exports[`List filter Test: result of initial search 2`] = `
 Object {
-  "limit": 10,
-  "result": Array [
+  "data": Array [
     Object {
       "fromCollection": "simpleTestCol",
       "guestName": "40*40",
@@ -185,6 +184,7 @@ Object {
       "ownedBy": 49,
     },
   ],
+  "limit": 10,
   "skip": 40,
   "total": 450,
 }
@@ -207,8 +207,7 @@ Object {
 
 exports[`List filter Test: result of search with ownedBy 1`] = `
 Object {
-  "limit": 10,
-  "result": Array [
+  "data": Array [
     Object {
       "fromCollection": "myRelationshipCollection",
       "id": 6,
@@ -216,6 +215,7 @@ Object {
       "ownedBy": 6,
     },
   ],
+  "limit": 10,
   "skip": 0,
   "total": 1,
 }
@@ -223,8 +223,7 @@ Object {
 
 exports[`List filter Test: result of search with specifc number 1`] = `
 Object {
-  "limit": 10,
-  "result": Array [
+  "data": Array [
     Object {
       "fromCollection": "simpleTestCol",
       "guestName": "420*420",
@@ -238,6 +237,7 @@ Object {
       "ownedBy": 1,
     },
   ],
+  "limit": 10,
   "skip": 0,
   "total": 1,
 }
@@ -260,8 +260,8 @@ Object {
 
 exports[`List filter Test: result of search with text 2`] = `
 Object {
+  "data": Array [],
   "limit": 10,
-  "result": Array [],
   "skip": 0,
   "total": 0,
 }
@@ -329,8 +329,7 @@ Object {
 
 exports[`List filter Test: result of searching in higher page 2`] = `
 Object {
-  "limit": 10,
-  "result": Array [
+  "data": Array [
     Object {
       "fromCollection": "simpleTestCol",
       "guestName": "40*40",
@@ -452,6 +451,7 @@ Object {
       "ownedBy": 49,
     },
   ],
+  "limit": 10,
   "skip": 40,
   "total": 450,
 }
@@ -519,8 +519,7 @@ Object {
 
 exports[`List filter Test: result of searching too far 2`] = `
 Object {
-  "limit": 10,
-  "result": Array [
+  "data": Array [
     Object {
       "fromCollection": "simpleTestCol",
       "guestName": "440*440",
@@ -642,6 +641,7 @@ Object {
       "ownedBy": 449,
     },
   ],
+  "limit": 10,
   "skip": 440,
   "total": 450,
 }

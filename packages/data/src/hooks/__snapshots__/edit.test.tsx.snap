@@ -10,9 +10,8 @@ Object {
     },
   },
   "currentlyEditing": 0,
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -23,18 +22,16 @@ Object {
     },
     "users": Object {
       "0": Object {
-        "result": Object {
-          "email": "user",
-          "id": 0,
-        },
+        "email": "user",
+        "id": 0,
       },
     },
   },
-  "lastFetch": Object {
-    "0": 1304605243337,
-  },
+  "lastFetch": Object {},
   "removeState": Object {},
-  "updateState": Object {},
+  "updateState": Object {
+    "undefined0": null,
+  },
 }
 `;
 
@@ -48,9 +45,8 @@ Object {
     },
   },
   "currentlyEditing": 0,
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -61,26 +57,22 @@ Object {
     },
     "users": Object {
       "0": Object {
-        "result": Object {
-          "email": "user",
-          "id": 0,
-        },
+        "email": "user",
+        "id": 0,
       },
     },
   },
-  "lastFetch": Object {
-    "0": 1304605243337,
-  },
+  "lastFetch": Object {},
   "removeState": Object {},
-  "updateState": Object {},
+  "updateState": Object {
+    "undefined0": null,
+  },
 }
 `;
 
 exports[`DbStore Edit Test: Before submit patch 2`] = `
 Object {
-  "errors": Object {
-    "formModel0": null,
-  },
+  "errors": Object {},
   "formData": Object {
     "authForm": undefined,
     "formModel": Object {
@@ -90,9 +82,7 @@ Object {
     },
   },
   "loading": Object {
-    "0": false,
     "formModel": false,
-    "formModel0": true,
   },
 }
 `;
@@ -108,8 +98,7 @@ exports[`DbStore Edit Test: after create 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -126,7 +115,6 @@ Object {
     },
   },
   "loading": Object {
-    "0": false,
     "formModel": false,
   },
 }
@@ -152,8 +140,7 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -168,9 +155,8 @@ Object {
     },
   },
   "currentlyEditing": 0,
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -181,16 +167,12 @@ Object {
     },
     "users": Object {
       "0": Object {
-        "result": Object {
-          "email": "user",
-          "id": 0,
-        },
+        "email": "user",
+        "id": 0,
       },
     },
   },
-  "lastFetch": Object {
-    "0": 1304605243337,
-  },
+  "lastFetch": Object {},
   "removeState": Object {},
   "updateState": Object {
     "formModel0": Object {
@@ -198,6 +180,7 @@ Object {
       "id": 0,
       "myVal": 240,
     },
+    "undefined0": null,
   },
 }
 `;
@@ -220,8 +203,7 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -242,22 +224,10 @@ Object {
 exports[`DbStore Edit Test: hidden in update 1`] = `
 <div>
   {
-  "error": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ],
-  "state": {
-    "guestName": "changed",
-    "myVal": 240,
-    "id": 0
+  "error": {
+    "got": "err"
   },
+  "state": null,
   "loading": false,
   "original": {
     "guestName": "changed",
@@ -267,18 +237,7 @@ exports[`DbStore Edit Test: hidden in update 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ]
+  }
 }
 </div>
 `;
@@ -295,26 +254,10 @@ exports[`DbStore Edit Test: hidden text 1`] = `
     "id": 0
   },
   "loading": false,
-  "original": {
-    "guestName": "changed",
-    "myVal": 240,
-    "id": 0
-  },
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ]
+  }
 }
 </div>
 `;
@@ -322,22 +265,10 @@ exports[`DbStore Edit Test: hidden text 1`] = `
 exports[`DbStore Edit Test: not hidden in update 1`] = `
 <div>
   {
-  "error": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ],
-  "state": {
-    "guestName": "changed",
-    "myVal": 240,
-    "id": 0
+  "error": {
+    "got": "err"
   },
+  "state": null,
   "loading": false,
   "original": {
     "guestName": "changed",
@@ -347,18 +278,7 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ]
+  }
 }
 </div>
 `;
@@ -375,8 +295,8 @@ Object {
   "currentlyEditing": 1,
   "fetching": Object {
     "0": false,
-    "1": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -393,7 +313,6 @@ Object {
   },
   "lastFetch": Object {
     "0": 1304605243337,
-    "1": 1304605243337,
   },
   "removeState": Object {},
   "updateState": Object {
@@ -403,6 +322,8 @@ Object {
       "id": 0,
       "myVal": 240,
     },
+    "undefined0": null,
+    "undefined1": null,
   },
 }
 `;
@@ -419,8 +340,8 @@ Object {
   "currentlyEditing": 1,
   "fetching": Object {
     "0": false,
-    "1": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -437,7 +358,6 @@ Object {
   },
   "lastFetch": Object {
     "0": 1304605243337,
-    "1": 1304605243337,
   },
   "removeState": Object {},
   "updateState": Object {
@@ -447,6 +367,8 @@ Object {
       "id": 0,
       "myVal": 240,
     },
+    "undefined0": null,
+    "undefined1": null,
   },
 }
 `;
@@ -462,8 +384,7 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -471,6 +392,7 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
 exports[`DbStore Edit Test: prefix after edit getorig 1`] = `
 Object {
   "errors": Object {
+    "0": undefined,
     "formModel0": Object {
       "got": "err",
     },
@@ -485,7 +407,6 @@ Object {
   },
   "loading": Object {
     "0": false,
-    "1": false,
     "formModel": false,
     "formModel0": false,
   },
@@ -498,6 +419,11 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
   "error": {
     "got": "err"
   },
+  "state": {
+    "guestName": "secondOBJ",
+    "myVal": 24,
+    "id": 1
+  },
   "loading": false,
   "original": {
     "guestName": "secondOBJ",
@@ -507,8 +433,7 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -525,8 +450,8 @@ Object {
   "currentlyEditing": 1,
   "fetching": Object {
     "0": false,
-    "1": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -543,16 +468,22 @@ Object {
   },
   "lastFetch": Object {
     "0": 1304605243337,
-    "1": 1304605243337,
   },
   "removeState": Object {},
   "updateState": Object {
+    "editPrefix.formModel1": Object {
+      "guestName": "secondOBJ",
+      "id": 1,
+      "myVal": 24,
+    },
     "formModel": undefined,
     "formModel0": Object {
       "guestName": "changed",
       "id": 0,
       "myVal": 240,
     },
+    "undefined0": null,
+    "undefined1": null,
   },
 }
 `;
@@ -560,14 +491,11 @@ Object {
 exports[`DbStore Edit Test: prefix after successfull save 1`] = `
 <div>
   {
-  "error": {
-    "hook": {
-      "type": "before",
-      "method": "patch",
-      "path": "simpleTestCol",
-      "params": {},
-      "id": 1
-    }
+  "error": null,
+  "state": {
+    "guestName": "secondOBJ",
+    "myVal": 24,
+    "id": 1
   },
   "loading": false,
   "original": {
@@ -578,8 +506,7 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -587,6 +514,7 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
 exports[`DbStore Edit Test: prefix before set by getorig 1`] = `
 Object {
   "errors": Object {
+    "0": undefined,
     "formModel0": Object {
       "got": "err",
     },
@@ -603,13 +531,7 @@ Object {
 }
 `;
 
-exports[`DbStore Edit Test: prefix result of edit fetch 1`] = `
-Object {
-  "guestName": "secondOBJ",
-  "id": 1,
-  "myVal": 24,
-}
-`;
+exports[`DbStore Edit Test: prefix result of edit fetch 1`] = `undefined`;
 
 exports[`DbStore Edit Test: prefix updated record 1`] = `
 Object {
@@ -625,6 +547,11 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
   "error": {
     "got": "err"
   },
+  "state": {
+    "guestName": "secondOBJ",
+    "myVal": 24,
+    "id": 1
+  },
   "loading": true,
   "original": {
     "guestName": "secondOBJ",
@@ -634,8 +561,7 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;
@@ -643,22 +569,10 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
 exports[`DbStore Edit Test: resetOnMount 1`] = `
 <div>
   {
-  "error": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ],
-  "state": {
-    "guestName": "changed",
-    "myVal": 240,
-    "id": 0
+  "error": {
+    "got": "err"
   },
+  "state": null,
   "loading": false,
   "original": {
     "guestName": "changed",
@@ -668,29 +582,12 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": [
-    {
-      "keyword": "required",
-      "dataPath": "",
-      "schemaPath": "#/required",
-      "params": {
-        "missingProperty": "guestName"
-      },
-      "message": "should have required property 'guestName'"
-    }
-  ]
+  }
 }
 </div>
 `;
 
-exports[`DbStore Edit Test: result of edit fetch 1`] = `
-Object {
-  "guestName": "myText",
-  "id": 0,
-  "myVal": 420,
-}
-`;
+exports[`DbStore Edit Test: result of edit fetch 1`] = `undefined`;
 
 exports[`DbStore Edit Test: updated record 1`] = `
 Object {
@@ -720,8 +617,7 @@ exports[`DbStore Edit Test: while loading 1`] = `
   "user": {
     "email": "user",
     "id": 0
-  },
-  "submitEdit": {}
+  }
 }
 </div>
 `;

@@ -1,202 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DbStore Create Test: after autoselectable search with option enabled and set automatically 1`] = `
-<div>
-  {
-  "value": "b29999999999999999298765",
-  "relatedObject": {
-    "guestName": "myText 2",
-    "myVal": 422,
-    "_id": "b29999999999999999298765"
-  },
-  "searchForm": {
-    "title": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "lastUsed": [
-    "b29999999999999999298765"
-  ],
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: after autoselectable search with option enabled but too many results 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: after autoselectable search without option enabled 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: after reset 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: after reset 2`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: customPresearch for Text 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "prefix": "customPre"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: customPresearch for my 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "prefix": "customPre"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: customPresearch for null 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "prefix": "customPre"
-}
-</div>
-`;
-
 exports[`DbStore Create Test: multi added and loaded 1`] = `
 <div>
   {
@@ -229,9 +32,9 @@ exports[`DbStore Create Test: multi added and loaded 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   },
-  "displayMode": 0,
+  "displayMode": false,
   "lastUsed": [
     "b29999999999999999798765"
   ]
@@ -271,60 +74,12 @@ exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   },
-  "displayMode": 0,
+  "displayMode": false,
   "lastUsed": [
     "b29999999999999999798765"
   ]
-}
-</div>
-`;
-
-exports[`DbStore Create Test: multi after autoselectable search with option enabled but too many results 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: multi after autoselectable search without option enabled 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
 }
 </div>
 `;
@@ -367,7 +122,7 @@ exports[`DbStore Create Test: multi load with none missing 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
 }
 </div>
@@ -411,7 +166,7 @@ exports[`DbStore Create Test: multi load with one missing 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
 }
 </div>
@@ -449,7 +204,7 @@ exports[`DbStore Create Test: multi removed one 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
 }
 </div>
@@ -481,89 +236,8 @@ exports[`DbStore Create Test: multi removed two 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
-}
-</div>
-`;
-
-exports[`DbStore Create Test: multiafter autoselectable search with option enabled and set automatically 1`] = `
-<div>
-  {
-  "value": [
-    "b29999999999999999398765"
-  ],
-  "relatedObject": [
-    {
-      "guestName": "myText 3",
-      "myVal": 423,
-      "_id": "b29999999999999999398765"
-    }
-  ],
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "lastUsed": [
-    "b29999999999999999398765"
-  ],
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: multiafter autoselectable search with option enabled and set automatically twice 1`] = `
-<div>
-  {
-  "value": [
-    "b29999999999999999398765",
-    "b29999999999999999598765"
-  ],
-  "relatedObject": [
-    {
-      "guestName": "myText 3",
-      "myVal": 423,
-      "_id": "b29999999999999999398765"
-    },
-    {
-      "guestName": "myText 5",
-      "myVal": 425,
-      "_id": "b29999999999999999598765"
-    }
-  ],
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "lastUsed": [
-    "b29999999999999999598765",
-    "b29999999999999999398765"
-  ],
-  "prefix": "ownedBy"
 }
 </div>
 `;
@@ -584,7 +258,7 @@ exports[`DbStore Create Test: nothing set yet 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
 }
 </div>
@@ -606,325 +280,9 @@ exports[`DbStore Create Test: nothing yet 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   },
   "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: nothing yet 2`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: nothing yet 3`] = `
-<div>
-  {
-  "value": [
-    "b29999999999999999498765",
-    "b29999999999999999798765"
-  ],
-  "relatedObject": [
-    {
-      "guestName": "myText 4",
-      "myVal": 424,
-      "_id": "b29999999999999999498765"
-    },
-    {
-      "guestName": "myText 7",
-      "myVal": 427,
-      "_id": "b29999999999999999798765"
-    }
-  ],
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "lastUsed": [
-    "b29999999999999999798765"
-  ],
-  "prefix": ""
-}
-</div>
-`;
-
-exports[`DbStore Create Test: nothing yet 4`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "prefix": "customPre"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for Text 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for Text 2`] = `
-<div>
-  {
-  "value": [
-    "b29999999999999999498765",
-    "b29999999999999999798765"
-  ],
-  "relatedObject": [
-    {
-      "guestName": "myText 4",
-      "myVal": 424,
-      "_id": "b29999999999999999498765"
-    },
-    {
-      "guestName": "myText 7",
-      "myVal": 427,
-      "_id": "b29999999999999999798765"
-    }
-  ],
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "lastUsed": [
-    "b29999999999999999798765"
-  ],
-  "prefix": ""
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for my 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for my 2`] = `
-<div>
-  {
-  "value": [
-    "b29999999999999999498765",
-    "b29999999999999999798765"
-  ],
-  "relatedObject": [
-    {
-      "guestName": "myText 4",
-      "myVal": 424,
-      "_id": "b29999999999999999498765"
-    },
-    {
-      "guestName": "myText 7",
-      "myVal": 427,
-      "_id": "b29999999999999999798765"
-    }
-  ],
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "lastUsed": [
-    "b29999999999999999798765"
-  ],
-  "prefix": ""
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for null 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 0,
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: search for null 2`] = `
-<div>
-  {
-  "value": [
-    "b29999999999999999498765",
-    "b29999999999999999798765"
-  ],
-  "relatedObject": [
-    {
-      "guestName": "myText 4",
-      "myVal": 424,
-      "_id": "b29999999999999999498765"
-    },
-    {
-      "guestName": "myText 7",
-      "myVal": 427,
-      "_id": "b29999999999999999798765"
-    }
-  ],
-  "searchForm": {
-    "title": "searchFor.ownedByMulti",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "displayMode": 1,
-  "lastUsed": [
-    "b29999999999999999798765"
-  ],
-  "prefix": ""
 }
 </div>
 `;
@@ -951,7 +309,7 @@ exports[`DbStore Create Test: set to first creation loaded 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
 }
 </div>
@@ -979,7 +337,7 @@ exports[`DbStore Create Test: set to first creation not loaded yet 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
 }
 </div>
@@ -1002,31 +360,8 @@ exports[`DbStore Create Test: set to invalid value 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
+    "modify": {}
   }
-}
-</div>
-`;
-
-exports[`DbStore Create Test: single search for Text 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
-  },
-  "prefix": "ownedBy"
 }
 </div>
 `;
@@ -1047,30 +382,7 @@ exports[`DbStore Create Test: single search for my 1`] = `
         "type": "string"
       }
     },
-    "relationship": {}
-  },
-  "prefix": "ownedBy"
-}
-</div>
-`;
-
-exports[`DbStore Create Test: single search for null 1`] = `
-<div>
-  {
-  "searchForm": {
-    "title": "searchFor.ownedBy",
-    "collection": "simpleTestCol",
-    "properties": {
-      "guestName": {
-        "title": "guestName",
-        "type": "string"
-      },
-      "_id": {
-        "title": "_id",
-        "type": "string"
-      }
-    },
-    "relationship": {}
+    "modify": {}
   },
   "prefix": "ownedBy"
 }

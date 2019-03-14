@@ -11,6 +11,7 @@ Object {
   },
   "currentlyEditing": "",
   "fetching": Object {},
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
   },
@@ -31,6 +32,7 @@ Object {
   "createState": Object {},
   "currentlyEditing": "",
   "fetching": Object {},
+  "getFromServer": [Function],
   "getState": Object {},
   "lastFetch": Object {},
   "removeState": Object {},

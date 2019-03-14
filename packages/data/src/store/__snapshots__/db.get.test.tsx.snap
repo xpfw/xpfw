@@ -13,6 +13,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -21,7 +22,6 @@ Object {
         "myVal": 65243,
       },
     },
-    "wrongcol": Object {},
   },
   "lastFetch": Object {
     "0": 1304605243337,
@@ -58,6 +58,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -66,9 +67,10 @@ Object {
         "myVal": 4654320,
       },
     },
-    "wrongcol": Object {},
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {},
 }
@@ -87,6 +89,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -95,7 +98,6 @@ Object {
         "myVal": 4654320,
       },
     },
-    "wrongcol": Object {},
   },
   "lastFetch": Object {
     "0": 1304605243337,
@@ -112,10 +114,13 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {},
 }
@@ -134,6 +139,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -142,7 +148,6 @@ Object {
         "myVal": 65243,
       },
     },
-    "wrongcol": Object {},
   },
   "lastFetch": Object {
     "0": 1304605243337,
@@ -171,6 +176,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -179,7 +185,6 @@ Object {
         "myVal": 65243,
       },
     },
-    "wrongcol": Object {},
   },
   "lastFetch": Object {
     "0": 1304605243337,
@@ -202,11 +207,13 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
-    "wrongcol": Object {},
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {},
 }
@@ -217,6 +224,7 @@ Object {
   "createState": Object {},
   "currentlyEditing": "",
   "fetching": Object {},
+  "getFromServer": [Function],
   "getState": Object {},
   "lastFetch": Object {},
   "removeState": Object {},
@@ -232,7 +240,7 @@ Object {
     "constructor": [Function],
     "data": undefined,
     "errors": Object {},
-    "message": "Service 'wrongcol' not found",
+    "message": "No record found for id '0'",
     "name": "NotFound",
     "type": "FeathersError",
   },
@@ -244,6 +252,43 @@ Object {
   "guestName": "gettext",
   "id": 0,
   "myVal": 4654320,
+  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+    "defaultEnhancer": [Function],
+    "keysAtom": Atom$$1 {
+      "diffValue": 0,
+      "isBeingObserved": false,
+      "isPendingUnobservation": false,
+      "lastAccessedBy": 0,
+      "lowestObserverState": 2,
+      "name": "DbStoreClass@3.getState.simpleTestCol.0.keys",
+      "observers": Set {},
+    },
+    "name": "DbStoreClass@3.getState.simpleTestCol.0",
+    "pendingKeys": Map {
+      "isMobXObservableValue" => false,
+      "isMobXObservableSet" => false,
+      "isMobXObservableMap" => false,
+      "then" => false,
+      "$$typeof" => false,
+      "nodeType" => false,
+      "@@__IMMUTABLE_ITERABLE__@@" => false,
+      "@@__IMMUTABLE_RECORD__@@" => false,
+      "_isMockFunction" => false,
+      "toJSON" => false,
+    },
+    "proxy": [Circular],
+    "target": Object {
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
+      Symbol(mobx administration): [Circular],
+    },
+    "values": Map {
+      "guestName" => "gettext",
+      "myVal" => 4654320,
+      "id" => 0,
+    },
+  },
 }
 `;
 
@@ -265,4 +310,4 @@ Object {
 }
 `;
 
-exports[`DbStore Patch Test: wrongcollection 1`] = `[NotFound: Service 'wrongcol' not found]`;
+exports[`DbStore Patch Test: wrongcollection 1`] = `undefined`;

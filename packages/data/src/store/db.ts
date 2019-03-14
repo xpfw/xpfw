@@ -1,14 +1,15 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
-import { get, isEqual, isNil, set } from "lodash"
+import { compare } from "fast-json-patch"
+import { get } from "lodash"
 import { action, flow, observable } from "mobx"
 import BackendClient from "../client"
 import dataOptions from "../options"
 import ListStore from "../store/list"
+import jsonPatchToMongoDb from "../util/jsonPatchToMongoDb"
 import toJS from "../util/toJS"
 import UserStore from "./user"
 
 const FETCH_THRESHOLD = 1000 * 60 * 3
-
 const REMOVE_ADDON_KEY = "remove"
 
 export class DbStoreClass {
@@ -76,7 +77,7 @@ export class DbStoreClass {
           const fetchPromise = this.getFromServer(id, collection).then(action((res) => {
             const doc = this.getState[collection][id]
             this.updateState[saveResultAt] = null
-            FormStore.setValue(mapTo, doc, prefix)
+            FormStore.setValue(mapTo, toJS(doc), prefix)
             return doc
           }))
           if (returnFetchPromise) {
@@ -130,7 +131,17 @@ export class DbStoreClass {
     try {
       FormStore.setLoading(saveResultAt, true)
       const col = String(schema.collection)
-      const result = await BackendClient.client.patch(col, id, toJS(FormStore.getValue(mapTo, prefix)))
+      let valueToSubmit = toJS(FormStore.getValue(mapTo, prefix))
+      if (dataOptions.onlyPatchDiffs) {
+        const orig = await DbStore.getGetState(id, col, false)
+        delete valueToSubmit[dataOptions.idPath]
+        delete orig[dataOptions.idPath]
+        const diff = compare(orig, valueToSubmit)
+        console.log("PATCH DIFF IS", diff, orig, valueToSubmit)
+        valueToSubmit = jsonPatchToMongoDb(diff)
+        console.log("MONGO PATCH IS", valueToSubmit)
+      }
+      const result = await BackendClient.client.patch(col, id, valueToSubmit)
       this.updateState[saveResultAt] = result
       ListStore.setCollectionDirty(col)
       FormStore.setLoading(saveResultAt, false)

@@ -40,6 +40,7 @@ export default {
     "@xpfw/test-util",
     "react",
     "react-dom",
-    "isomorphic-fetch"
+    "isomorphic-fetch",
+    "fast-json-patch"
   ]
 };

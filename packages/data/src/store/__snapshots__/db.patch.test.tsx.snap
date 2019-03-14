@@ -10,6 +10,7 @@ Object {
 
 exports[`DbStore Patch Test: error store after broken patch 1`] = `
 Object {
+  "0": undefined,
   "formModel0": Object {
     "name": "FetchError",
     "type": "invalid-json",
