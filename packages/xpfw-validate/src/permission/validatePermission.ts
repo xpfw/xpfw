@@ -7,6 +7,9 @@ const validatePermission: (currentUser: any,
                            async (currentUser, options, forField) => {
   const idPath = isObject(options) && isString(options.idPath) ? options.idPath : `_id`
   const userId = get(currentUser, idPath)
+  if (userId === Permission.Server) {
+    return Promise.resolve(true)
+  }
   if (!isNil(options) && !isNil(options.form) &&
     !isNil(options.form.permissions) && isFunction(options.form.permissions.check)) {
     const res = await options.form.permissions.check(currentUser, options)
