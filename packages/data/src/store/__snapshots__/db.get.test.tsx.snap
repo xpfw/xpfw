@@ -13,6 +13,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
@@ -58,6 +59,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
@@ -89,6 +91,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
@@ -114,6 +117,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
@@ -139,6 +143,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
@@ -176,6 +181,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
@@ -207,6 +213,7 @@ Object {
   "fetching": Object {
     "0": false,
   },
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
@@ -224,6 +231,7 @@ Object {
   "createState": Object {},
   "currentlyEditing": "",
   "fetching": Object {},
+  "formsToUpdate": Array [],
   "getFromServer": [Function],
   "getState": Object {},
   "lastFetch": Object {},

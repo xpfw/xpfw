@@ -53,7 +53,9 @@ export class UserStore {
 
   public async login() {
     const loginData = FormStore.getValue(String(AuthForm.title))
-    loginData.strategy = "local"
+    if (loginData.strategy == null) {
+      loginData.strategy = "local"
+    }
     try {
       this.loading = true
       const loginRes = await BackendClient.client.login(loginData)

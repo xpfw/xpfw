@@ -11,6 +11,12 @@ import UserStore from "./user"
 const FETCH_THRESHOLD = 1000 * 60 * 3
 const REMOVE_ADDON_KEY = "remove"
 
+export interface FormToUpdate {
+  collection: string
+  mapTo: string
+  prefix?: string
+}
+
 export class DbStoreClass {
 
   public getFromServer = flow(function *(this: DbStoreClass, id: string, collection: string) {
@@ -45,6 +51,9 @@ export class DbStoreClass {
   })
   @observable
   public currentlyEditing: string = ""
+
+  /** Push here for forms to get updated after a real-time update */
+  public formsToUpdate: FormToUpdate[] = []
 
   @observable
   private createState: {[index: string]: any | undefined} = {}
@@ -143,10 +152,7 @@ export class DbStoreClass {
       this.updateState[saveResultAt] = result
       ListStore.setCollectionDirty(col)
       FormStore.setLoading(saveResultAt, false)
-      if (this.getState[col] == null) {
-        this.getState[col] = {}
-      }
-      this.getState[col][id] = result
+      this.setItem(id, col, result)
       return result
     } catch (error) {
       FormStore.setError(saveResultAt, error)
@@ -168,8 +174,27 @@ export class DbStoreClass {
     if (!this.getState[collection]) {
       this.getState[collection] = {}
     }
+    const previous = this.getState[collection][id]
     this.getState[collection][id] = object
     this.lastFetch[id] = Date.now()
+    this.setFormOfItem(collection, object, previous)
+  }
+
+  @action
+  public setFormOfItem(collection: string, object: any, original: any) {
+    for (const formToUpdate of this.formsToUpdate) {
+      if (formToUpdate.collection === collection) {
+        if (dataOptions.onlyPatchDiffs) {
+          const compare = require("fast-json-patch").compare
+          const patches = compare(original, object)
+          const apply = require("fast-json-patch").apply
+          const currentValue = FormStore.getValue(formToUpdate.mapTo, formToUpdate.prefix, {})
+          apply(currentValue, patches)
+        } else {
+          FormStore.setValue(formToUpdate.mapTo, object, formToUpdate.prefix)
+        }
+      }
+    }
   }
 
   public getCreateState(mapTo: string, prefix?: string) {

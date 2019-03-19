@@ -91,7 +91,7 @@ const searchRelated = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: stri
       f.setValue({$nin: Array.isArray(value) ? value : [value]})
     }
     const nameField = useField(get(schema, "relationship.namePath"), prependPrefix(form.title, prefix))
-    const transformer = get(form, "relationship.nameTransform")
+    const transformer = get(form, "relationship.nameTransform", (schema: any, v: any) => v)
     nameField.setValue(transformer(schema, newValue))
     const res: any = await ListStore.getList(form, undefined, prefix, true)
     if (get(schema.relationship, "autoSelect", false) === true) {
