@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/form-tests",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.8",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "@types/socket.io-client": "^1.4.32",
     "lodash-es": "^4.17.11",
     "moment": "^2.24.0",
-    "@xpfw/form": "^1.0.0-beta.7",
+    "@xpfw/form": "^1.0.0-beta.8",
     "jest": "^24.1.0",
     "jest-cli": "^24.1.0",
     "mockdate": "^2.0.2",

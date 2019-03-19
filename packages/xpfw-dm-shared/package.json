@@ -30,7 +30,7 @@
     "@types/react": "^16.7.6",
     "@xpfw/dm": "0.1.1",
     "@xpfw/form-shared": "0.1.1",
-    "@xpfw/test-util": "1.0.0-beta.7",
+    "@xpfw/test-util": "1.0.0-beta.8",
     "@xpfw/ui-feathers": "^0.1.1",
     "@xpfw/ui-shared": "0.1.1",
     "@xpfw/ui-tests": "0.1.1",
