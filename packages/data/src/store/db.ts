@@ -137,9 +137,7 @@ export class DbStoreClass {
         delete valueToSubmit[dataOptions.idPath]
         delete orig[dataOptions.idPath]
         const diff = compare(orig, valueToSubmit)
-        console.log("PATCH DIFF IS", diff, orig, valueToSubmit)
         valueToSubmit = jsonPatchToMongoDb(diff)
-        console.log("MONGO PATCH IS", valueToSubmit)
       }
       const result = await BackendClient.client.patch(col, id, valueToSubmit)
       this.updateState[saveResultAt] = result
