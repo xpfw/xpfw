@@ -24,7 +24,7 @@
     "@types/nedb": "^1.8.6",
     "@types/lodash": "^4.14.118",
     "@types/mockdate": "^2.0.0",
-    "@xpfw/test-util": "1.0.0-beta.8",
+    "@xpfw/test-util": "1.0.0-beta.12",
     "@xpfw/ui-tests": "0.1.1",
     "@xpfw/validate": "^0.1.1",
     "isomorphic-fetch": "^2.2.1",
