@@ -187,7 +187,7 @@ export class DbStoreClass {
         if (dataOptions.onlyPatchDiffs) {
           const compare = require("fast-json-patch").compare
           const patches = compare(original, object)
-          const apply = require("fast-json-patch").apply
+          const apply = require("fast-json-patch").applyPatch
           const currentValue = FormStore.getValue(formToUpdate.mapTo, formToUpdate.prefix, {})
           apply(currentValue, patches)
         } else {

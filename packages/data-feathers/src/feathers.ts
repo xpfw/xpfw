@@ -135,7 +135,7 @@ const FeathersClient: IUiClient = {
       app.configure(socketio(io(url, {
         pingInterval: 20000,
         pingTimeout: 40000
-      })))
+      }), {timeout: 40000}))
       if (get(options, "dbStore") && get(options, "collections")) {
         listenToFeathersServiceEvents(app, get(options, "dbStore"),  get(options, "collections"))
       }
