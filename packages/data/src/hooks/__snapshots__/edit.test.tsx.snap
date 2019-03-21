@@ -28,7 +28,9 @@ Object {
       },
     },
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {
     "undefined0": null,
@@ -64,7 +66,9 @@ Object {
       },
     },
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {
     "undefined0": null,
@@ -175,7 +179,9 @@ Object {
       },
     },
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {
     "formModel0": Object {
@@ -317,6 +323,7 @@ Object {
   },
   "lastFetch": Object {
     "0": 1304605243337,
+    "1": 1304605243337,
   },
   "removeState": Object {},
   "updateState": Object {
@@ -363,6 +370,7 @@ Object {
   },
   "lastFetch": Object {
     "0": 1304605243337,
+    "1": 1304605243337,
   },
   "removeState": Object {},
   "updateState": Object {
@@ -474,6 +482,7 @@ Object {
   },
   "lastFetch": Object {
     "0": 1304605243337,
+    "1": 1304605243337,
   },
   "removeState": Object {},
   "updateState": Object {

@@ -16,7 +16,9 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {},
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {
     "0": Object {
       "guestName": "myText",

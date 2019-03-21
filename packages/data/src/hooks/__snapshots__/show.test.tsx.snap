@@ -2,9 +2,7 @@
 
 exports[`DbStore show Test: Successfully removed 1`] = `
 <div>
-  {
-  "loading": true
-}
+  {}
 </div>
 `;
 

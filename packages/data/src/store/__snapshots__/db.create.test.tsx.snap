@@ -26,7 +26,9 @@ Object {
       },
     },
   },
-  "lastFetch": Object {},
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
   "removeState": Object {},
   "updateState": Object {},
 }
@@ -53,5 +55,46 @@ Object {
   "guestName": "myText",
   "id": 0,
   "myVal": 420,
+  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+    "defaultEnhancer": [Function],
+    "keysAtom": Atom$$1 {
+      "diffValue": 0,
+      "isBeingObserved": false,
+      "isPendingUnobservation": false,
+      "lastAccessedBy": 0,
+      "lowestObserverState": 2,
+      "name": "DbStoreClass@3.getState.simpleTestCol.0.keys",
+      "observers": Set {},
+    },
+    "name": "DbStoreClass@3.getState.simpleTestCol.0",
+    "pendingKeys": Map {
+      "isMobXObservableValue" => false,
+      "isMobXObservableSet" => false,
+      "isMobXObservableMap" => false,
+      "then" => false,
+      "$$typeof" => false,
+      "nodeType" => false,
+      "@@__IMMUTABLE_ITERABLE__@@" => false,
+      "@@__IMMUTABLE_RECORD__@@" => false,
+      "_isMockFunction" => false,
+      "toJSON" => false,
+    },
+    "proxy": [Circular],
+    "target": Object {
+      "belongsTo": "myuserid",
+      "createdAt": "2011-05-05T14:20:43.337Z",
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+      Symbol(mobx administration): [Circular],
+    },
+    "values": Map {
+      "guestName" => "myText",
+      "myVal" => 420,
+      "createdAt" => "2011-05-05T14:20:43.337Z",
+      "belongsTo" => "myuserid",
+      "id" => 0,
+    },
+  },
 }
 `;

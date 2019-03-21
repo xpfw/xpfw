@@ -28,7 +28,6 @@ export class DbStoreClass {
     if (this.fetching[id] === true || Date.now() - this.lastFetch[id] < FETCH_THRESHOLD) {
       return
     }
-    this.getState = {...this.getState}
     if (this.getState[collection] == null) {
       this.getState[collection] = {}
     }
@@ -119,11 +118,8 @@ export class DbStoreClass {
       const col: any = schema.collection
       const result = await BackendClient.client.create(col, data)
       this.createState[saveResultAt] = result
-      ListStore.setCollectionDirty(col)
-      if (this.getState[col] == null) {
-        this.getState[col] = {}
-      }
-      this.getState[col][get(result, dataOptions.idPath)] = result
+      ListStore.setCollectionDirty(col, true)
+      this.setItem(get(result, dataOptions.idPath), col, result)
       FormStore.setLoading(saveResultAt, false)
       return result
     } catch (error) {
@@ -150,7 +146,7 @@ export class DbStoreClass {
       }
       const result = await BackendClient.client.patch(col, id, valueToSubmit)
       this.updateState[saveResultAt] = result
-      ListStore.setCollectionDirty(col)
+      ListStore.setCollectionDirty(col, true)
       FormStore.setLoading(saveResultAt, false)
       this.setItem(id, col, result)
       return result
@@ -216,16 +212,15 @@ export class DbStoreClass {
   }
 
   public async remove(id: string, collection: string) {
-    this.getState = {...this.getState}
-    if (this.getState[collection] == null) {
-      this.getState[collection] = {}
-    }
     try {
       FormStore.setLoading(id, true, REMOVE_ADDON_KEY)
       const result = await BackendClient.client.remove(collection, id)
       this.removeState[id] = result
+      if (this.getState[collection] == null) {
+        this.getState[collection] = {}
+      }
       delete this.getState[collection][id]
-      ListStore.setCollectionDirty(collection)
+      ListStore.setCollectionDirty(collection, true)
       FormStore.setLoading(id, false, REMOVE_ADDON_KEY)
       return result
     } catch (error) {

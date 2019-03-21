@@ -87,6 +87,7 @@ export class ListStore {
     const equalToPreviousQuery = isEqual(queryObj, this.previousQuery[getAt])
     const collectionDirty = this.getIsDirty(schema)
     if (this.lists[getAt] == null || awaitQuery || !equalToPreviousQuery || collectionDirty) {
+      this.setCollectionDirty(String(schema.collection), false)
       this.previousQuery[getAt] = queryObj
       const promise = this.makeQuery(schema, mapTo, prefix)
       if (awaitQuery) {
@@ -97,8 +98,8 @@ export class ListStore {
   }
 
   @action
-  public setCollectionDirty(collection: string) {
-    this.dirtyCollections[collection] = true
+  public setCollectionDirty(collection: string, value: boolean) {
+    this.dirtyCollections[collection] = value
   }
 
   public getIsDirty(schema: ExtendedJSONSchema) {

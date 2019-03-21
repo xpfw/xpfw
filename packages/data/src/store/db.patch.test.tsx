@@ -26,7 +26,7 @@ test("DbStore Patch Test", async () => {
   expect(patchRes).toMatchSnapshot("patchresult")
   const getResult = await DbStore.getFromServer(get(createdObject, "id"),
     NumberAndRequiredTextSchema.collection)
-  expect(getResult).toMatchSnapshot("getresult")
+  expect(toJS(getResult)).toMatchSnapshot("getresult")
   expect(getResult).toEqual(patchRes)
   expect(getResult).not.toEqual(createdObject)
   NumberAndRequiredTextSchema.collection = "broken"
