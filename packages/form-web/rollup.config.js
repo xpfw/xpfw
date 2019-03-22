@@ -23,6 +23,8 @@ export default {
     "preact-render-to-json",
     "moment",
     "mockdate",
-    "@xpfw/form"
+    "@xpfw/form",
+    "@xpfw/form-tests",
+    "mobx-react-lite"
   ]
 };

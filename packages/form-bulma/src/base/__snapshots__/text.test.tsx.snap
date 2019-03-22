@@ -2,16 +2,15 @@
 
 exports[`Text Field Test: as number field 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
   />
 </div>
@@ -19,16 +18,15 @@ exports[`Text Field Test: as number field 1`] = `
 
 exports[`Text Field Test: as number field with number 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
     value={5432}
   />
@@ -37,16 +35,15 @@ exports[`Text Field Test: as number field with number 1`] = `
 
 exports[`Text Field Test: as number field with string 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
     value="gfsdfasd"
   />
@@ -55,16 +52,15 @@ exports[`Text Field Test: as number field with string 1`] = `
 
 exports[`Text Field Test: as number field with string number 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
     value="125"
   />
@@ -73,16 +69,15 @@ exports[`Text Field Test: as number field with string number 1`] = `
 
 exports[`Text Field Test: as slider field 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="range"
   />
 </div>
@@ -90,16 +85,15 @@ exports[`Text Field Test: as slider field 1`] = `
 
 exports[`Text Field Test: as slider field with number 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum: 5432
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="range"
     value={5432}
   />
@@ -108,16 +102,15 @@ exports[`Text Field Test: as slider field with number 1`] = `
 
 exports[`Text Field Test: as slider field with string 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum: gfsdfasd
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="range"
     value="gfsdfasd"
   />
@@ -126,16 +119,15 @@ exports[`Text Field Test: as slider field with string 1`] = `
 
 exports[`Text Field Test: as slider field with string number 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    myNum: 125
+    myVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="range"
     value="125"
   />
@@ -144,34 +136,30 @@ exports[`Text Field Test: as slider field with string number 1`] = `
 
 exports[`Text Field Test: date with content 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
     dateVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
-    type="datetime-local"
-    value="2012-01-11T00:00"
+    type="date"
+    value="2012-01-11"
   />
 </div>
 `;
 
 exports[`Text Field Test: datetime-local with content 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
     dateVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
     type="datetime-local"
     value="2018-02-22T07:55"
   />
@@ -180,51 +168,31 @@ exports[`Text Field Test: datetime-local with content 1`] = `
 
 exports[`Text Field Test: empty datetime-local field 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
     dateVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
-    type="datetime-local"
-    value="2011-05-05T16:20"
-  />
-</div>
-`;
-
-exports[`Text Field Test: empty render 1`] = `
-<div
-  class="field"
->
-  <label
-    class="label"
-  >
-    undefined
-  </label>
-  <input
-    class="input is-success"
-    oninput={[Function]}
-    type="text"
+    type="date"
+    value="2011-05-05"
   />
 </div>
 `;
 
 exports[`Text Field Test: namefield 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
     guestName
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="text"
   />
 </div>
@@ -232,16 +200,15 @@ exports[`Text Field Test: namefield 1`] = `
 
 exports[`Text Field Test: namefield changed va 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
     guestName
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="text"
     value="myval"
   />
@@ -250,16 +217,15 @@ exports[`Text Field Test: namefield changed va 1`] = `
 
 exports[`Text Field Test: password field 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
-    pwval
+    passportWellYou
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
+    onChange={[Function]}
     type="password"
   />
 </div>
@@ -267,17 +233,15 @@ exports[`Text Field Test: password field 1`] = `
 
 exports[`Text Field Test: time with content 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <label
-    class="label"
+    className="label"
   >
     dateVal
   </label>
   <input
-    class="input is-success"
-    oninput={[Function]}
-    type="datetime-local"
+    type="time"
     value="Invalid date"
   />
 </div>

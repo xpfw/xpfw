@@ -1,7 +1,9 @@
 import { getMapToFromProps, IFieldProps, JSONSchemaDefinition, memo, useFieldWithValidation } from "@xpfw/form"
 import { get } from "lodash"
+import { observer } from "mobx-react-lite"
 import * as momentA from "moment"
 import * as React from "react"
+import SelectComponent from "./select"
 
 const moment: any = momentA
 const getOriginalFormatFromType = (dateType?: string) => {
@@ -22,7 +24,12 @@ const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) 
     setValue(moment(value, getOriginalFormatFromType(get(schema, "format"))).toDate())
   }
 }
-const TextField: React.FunctionComponent<IFieldProps> = (props) => {
+const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
+  switch (props.schema.format) {
+    case "select": {
+      return <SelectComponent {...props} />
+    }
+  }
   const format = get(props, "schema.format")
   const isDate = format === "date" || format === "date-time" || format === "time"
   const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix, {
@@ -69,7 +76,7 @@ const TextField: React.FunctionComponent<IFieldProps> = (props) => {
       onChange={onChange}
     />
   )
-}
+})
 
 export default TextField
 export {

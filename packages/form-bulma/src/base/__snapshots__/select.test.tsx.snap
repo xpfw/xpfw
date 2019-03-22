@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Field Test: from function set to 2 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="2"
+    >
+      <option
+        value={4}
+      >
+        fromFuncc
+      </option>
+      <option
+        value={2}
+      >
+        fromFunca
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: from function set to 4 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="4"
+    >
+      <option
+        value={4}
+      >
+        fromFuncc
+      </option>
+      <option
+        value={2}
+      >
+        fromFunca
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: from function set to invalid 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="invalid"
+    >
+      <option
+        value={4}
+      >
+        fromFuncc
+      </option>
+      <option
+        value={2}
+      >
+        fromFunca
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: select field without value 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+    >
+      <option
+        value={4}
+      >
+        c
+      </option>
+      <option
+        value={2}
+      >
+        a
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: select field without value 2`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="invalid"
+    >
+      <option
+        value={4}
+      >
+        c
+      </option>
+      <option
+        value={2}
+      >
+        a
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: set to 2 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="2"
+    >
+      <option
+        value={4}
+      >
+        c
+      </option>
+      <option
+        value={2}
+      >
+        a
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: set to 4 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="4"
+    >
+      <option
+        value={4}
+      >
+        c
+      </option>
+      <option
+        value={2}
+      >
+        a
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Select Field Test: set to invalid 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    selectMeVal
+  </label>
+  <div
+    className="control"
+  >
+    <select
+      onChange={[Function]}
+      value="invalid"
+    >
+      <option
+        value={4}
+      >
+        c
+      </option>
+      <option
+        value={2}
+      >
+        a
+      </option>
+    </select>
+  </div>
+</div>
+`;

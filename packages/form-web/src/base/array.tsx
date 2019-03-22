@@ -1,7 +1,8 @@
 import { getMapToFromProps, IFieldProps, prependPrefix, SharedField, useArray } from "@xpfw/form"
+import { observer } from "mobx-react-lite";
 import * as React from "react"
 
-const ArrayField: React.FunctionComponent<IFieldProps> = (props) => {
+const ArrayField: React.FunctionComponent<IFieldProps> = observer((props) => {
   const arrayHelper = useArray(props.schema, getMapToFromProps(props), props.prefix)
   return (
     <div>
@@ -28,6 +29,6 @@ const ArrayField: React.FunctionComponent<IFieldProps> = (props) => {
       </div>
     </div >
   )
-}
+})
 
 export default ArrayField

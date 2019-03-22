@@ -2,13 +2,13 @@
 
 exports[`Boolean Field Test: boolfield 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <div
-    class="control"
+    className="control"
   >
     <label
-      class="checkbox"
+      className="checkbox"
     >
       <input
         onChange={[Function]}
@@ -22,13 +22,13 @@ exports[`Boolean Field Test: boolfield 1`] = `
 
 exports[`Boolean Field Test: set to false 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <div
-    class="control"
+    className="control"
   >
     <label
-      class="checkbox"
+      className="checkbox"
     >
       <input
         checked={false}
@@ -43,13 +43,13 @@ exports[`Boolean Field Test: set to false 1`] = `
 
 exports[`Boolean Field Test: set to invalid 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <div
-    class="control"
+    className="control"
   >
     <label
-      class="checkbox"
+      className="checkbox"
     >
       <input
         checked="invalid"
@@ -64,13 +64,13 @@ exports[`Boolean Field Test: set to invalid 1`] = `
 
 exports[`Boolean Field Test: set to true 1`] = `
 <div
-  class="field"
+  className="field"
 >
   <div
-    class="control"
+    className="control"
   >
     <label
-      class="checkbox"
+      className="checkbox"
     >
       <input
         checked={true}

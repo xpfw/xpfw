@@ -1,8 +1,9 @@
 import { getMapToFromProps, IFieldProps, useFieldWithValidation } from "@xpfw/form"
 import { get, isFunction } from "lodash"
+import { observer } from "mobx-react-lite"
 import * as React from "react"
 
-const SelectField: React.FunctionComponent<IFieldProps> = (props) => {
+const SelectField: React.FunctionComponent<IFieldProps> = observer((props) => {
   const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix, {
     valueEventKey: "nativeEvent.target.value"
   })
@@ -26,6 +27,6 @@ const SelectField: React.FunctionComponent<IFieldProps> = (props) => {
       {options}
     </select>
   )
-}
+})
 
 export default SelectField

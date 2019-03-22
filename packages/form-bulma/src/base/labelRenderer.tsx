@@ -4,12 +4,10 @@ export interface ILabelComponent {
   text: string
 }
 
-class Label extends React.Component<ILabelComponent, any> {
-  public render() {
-    return (
-      <label className="label">{this.props.text}</label>
-    )
-  }
+const Label: React.FunctionComponent<ILabelComponent> = (props) => {
+  return (
+    <label className="label">{props.text}</label>
+  )
 }
 
 const holder: {label: React.ComponentType<ILabelComponent>} = {

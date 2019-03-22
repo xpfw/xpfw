@@ -13,7 +13,6 @@ const text = () => {
   const SliderField = cloneDeep(NumberField)
   SliderField.format = "slider"
 
-  render(<SharedField schema={n} />, "empty render")
   render(<SharedField schema={NameField} />, "namefield")
   FormStore.setValue(NameField.title, "myval")
   render(<SharedField schema={NameField} />, "namefield changed va")
