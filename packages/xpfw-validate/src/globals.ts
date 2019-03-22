@@ -29,11 +29,10 @@ const FieldType = {
 }
 
 const Permission = {
-    Guest: "guest",
-    User: "user",
-    Owner: "owner",
-    Admin: "admin",
-    Server: "server"
+    Public: -1,
+    User: 2,
+    Owner: 3,
+    Server: 4
 }
 
 const Method = {
