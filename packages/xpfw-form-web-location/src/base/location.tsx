@@ -1,4 +1,4 @@
-import { IFieldProps } from "@xpfw/form-shared"
+import { IFieldProps } from "@xpfw/form"
 import * as leaflet from "leaflet"
 import { isNil } from "lodash"
 import * as React from "react"

@@ -1,13 +1,15 @@
 
-import { IStatConfig, IUiClient, StatType } from "@xpfw/validate"
 import { cloneDeep, get } from "lodash"
+import { StatType } from "./globals"
 import iterateEachInFind, { IEachInFindOptions } from "./iterateEachInFind"
 import statTypes from "./statTypes"
+import { IFindMethod, IStatConfig } from "./typeDef"
 import getTimeSteps from "./util/getTimesteps"
 import sum from "./util/sum"
 
 const makeStat =
-async (client: IUiClient, collection: string, chartConfig: IStatConfig, query: any, options?: IEachInFindOptions) => {
+async (findMethod: IFindMethod, collection: string,
+       chartConfig: IStatConfig, query: any, options?: IEachInFindOptions) => {
   const maker: any = get(statTypes, chartConfig.type, sum)
   const origOptions = chartConfig.options
   chartConfig.options = cloneDeep(chartConfig.options)
@@ -18,7 +20,7 @@ async (client: IUiClient, collection: string, chartConfig: IStatConfig, query: a
   }
   const calculator = maker(chartConfig.options)
   chartConfig.options = origOptions
-  const result = await iterateEachInFind(collection, query, client.find, calculator, options)
+  const result = await iterateEachInFind(collection, query, findMethod, calculator, options)
   return result
 }
 

@@ -20,8 +20,7 @@ export default {
     "resub",
     "resub-persist",
     "socket.io-client",
-    "@xpfw/validate",
-    "@xpfw/form-shared",
+    "@xpfw/form",
     "react",
     "react-dom",
     "leaflet"

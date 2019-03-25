@@ -1,3 +1,13 @@
+export interface IStatConfig {
+  type: string
+  /**
+   * used for recognition in react elements
+   */
+  id: string
+  options?: any
+}
+
+export type IFindMethod = any
 
 /**
  * Based StatCalculator Type

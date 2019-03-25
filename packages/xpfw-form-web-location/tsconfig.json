@@ -1,5 +1,4 @@
 {
-
   "compilerOptions": {
     "outDir": "dist",
     "module": "es2015",

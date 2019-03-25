@@ -1,4 +1,4 @@
-import { StatType } from "@xpfw/validate"
+import { StatType } from "./globals"
 import avgPrevTimeDistance from "./util/avgPrevTimeDistance"
 import avgTimeDistance from "./util/avgTimeDistance"
 import mean from "./util/mean"

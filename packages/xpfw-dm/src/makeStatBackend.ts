@@ -1,9 +1,8 @@
-import {
-  IStatConfig, IUiClient, ValidationRegistry
-} from "@xpfw/validate"
-import { find, get, isNil } from "lodash"
+import { isNil } from "lodash"
 import { IEachInFindOptions } from "./iterateEachInFind"
 import makeStat from "./makeStat"
+import StatRegistry from "./statRegistry"
+import { IFindMethod, IStatConfig } from "./typeDef"
 
 /**
  * Same as makeStat but also checks that config is original
@@ -12,13 +11,12 @@ import makeStat from "./makeStat"
  * @param chartConfig
  * @param query
  */
-const makeStatBackend = async (client: IUiClient, collection: string, chartConfig: IStatConfig, query: any, options?: IEachInFindOptions) => {
-  const configs = get(ValidationRegistry.forms, collection + ".stats", [])
-  const origConfig: any = find(configs, ["id", chartConfig.id])
+const makeStatBackend = async (findMethod: IFindMethod, collection: string, chartConfig: IStatConfig, query: any, options?: IEachInFindOptions) => {
+  const origConfig: any = StatRegistry[chartConfig.id]
   if (isNil(origConfig)) {
     throw new Error("invalid chartConfig")
   }
-  return makeStat(client, collection, origConfig, query, options)
+  return makeStat(findMethod, collection, origConfig, query, options)
 }
 
 export default makeStatBackend

@@ -1,7 +1,5 @@
 // rollup.config.js
 import typescript from "rollup-plugin-typescript2"
-import uglify from "rollup-plugin-uglify"
-import { minify } from "uglify-es"
 
 export default {
   input: 'src/index.ts',
@@ -13,5 +11,5 @@ export default {
     typescript({}),
     // uglify({}, minify)
   ],
-  external: ["lodash", "moment", "@xpfw/validate"]
+  external: ["lodash", "moment"]
 };
