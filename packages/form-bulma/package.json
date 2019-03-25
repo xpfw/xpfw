@@ -6,7 +6,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@xpfw/form": "1.x.x",
-    "@xpfw/form-web": "0.1.x",
+    "@xpfw/form-web": "1.x.x",
     "lodash": "4.x.x",
     "mobx": "^5.x.x",
     "mobx-react-lite": "^1.x.x",
