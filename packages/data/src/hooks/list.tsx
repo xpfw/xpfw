@@ -1,4 +1,4 @@
-import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
+import { ExtendedJSONSchema, FormStore, getMapTo, memo, prependPrefix } from "@xpfw/form"
 import { isNil } from "lodash"
 import DbStore from "../store/db"
 import ListStore from "../store/list"
@@ -55,7 +55,9 @@ const useList = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, op
     currentPage, maxPage,
     queryData: queryObj,
     showNextPage: currentPage < maxPage - 1,
-    showPrevPage: currentPage > 0
+    showPrevPage: currentPage > 0,
+    prevPage: memo(() => prevPage(schema, mapTo, prefix), ["prevPage", mapTo, prefix, JSON.stringify(schema)]),
+    nextPage: memo(() => nextPage(schema, mapTo, prefix), ["nextPage", mapTo, prefix, JSON.stringify(schema)])
   }
 }
 
