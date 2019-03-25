@@ -292,13 +292,150 @@ Object {
 }
 `;
 
+exports[`DbStore Edit Test: hidden in update 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="changed"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={240}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+  <div
+    className="notification is-danger"
+  >
+    Error please recheck your inputs or connection 
+    {"got":"err"}
+  </div>
+</div>
+`;
+
+exports[`DbStore Edit Test: hidden text 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="changed"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={240}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+  <div
+    className="notification is-success"
+  >
+    Successfully saved changes to 
+    0
+  </div>
+</div>
+`;
+
+exports[`DbStore Edit Test: not hidden in update 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="changed"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={240}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+  <div
+    className="notification is-danger"
+  >
+    Error please recheck your inputs or connection 
+    {"got":"err"}
+  </div>
+</div>
+`;
+
 exports[`DbStore Edit Test: prefix After create and geteditorig 1`] = `
 Object {
   "createState": Object {
-    "formModel": Object {
+    "editPrefix": Object {
       "guestName": "secondOBJ",
       "id": 1,
       "myVal": 24,
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
     },
   },
   "currentlyEditing": 1,
@@ -327,6 +464,7 @@ Object {
   },
   "removeState": Object {},
   "updateState": Object {
+    "editPrefix.undefined1": null,
     "formModel": undefined,
     "formModel0": Object {
       "guestName": "changed",
@@ -334,9 +472,98 @@ Object {
       "myVal": 240,
     },
     "undefined0": null,
-    "undefined1": null,
   },
 }
+`;
+
+exports[`DbStore Edit Test: prefix Before submit patch 1`] = `
+Object {
+  "createState": Object {
+    "editPrefix": Object {
+      "guestName": "secondOBJ",
+      "id": 1,
+      "myVal": 24,
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+    },
+  },
+  "currentlyEditing": 1,
+  "fetching": Object {
+    "0": false,
+  },
+  "formsToUpdate": Array [],
+  "getFromServer": [Function],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "changed",
+        "id": 0,
+        "myVal": 240,
+      },
+      "1": Object {
+        "guestName": "secondOBJ",
+        "id": 1,
+        "myVal": 24,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+    "1": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "editPrefix.undefined1": null,
+    "formModel": undefined,
+    "formModel0": Object {
+      "guestName": "changed",
+      "id": 0,
+      "myVal": 240,
+    },
+    "undefined0": null,
+  },
+}
+`;
+
+exports[`DbStore Edit Test: prefix after create 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="secondOBJ"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={24}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+</div>
 `;
 
 exports[`DbStore Edit Test: prefix after edit getorig 1`] = `
@@ -349,18 +576,175 @@ Object {
   },
   "formData": Object {
     "authForm": undefined,
+    "editPrefix": Object {
+      "formModel": Object {
+        "guestName": "secondOBJ",
+        "id": 1,
+        "myVal": 24,
+      },
+    },
     "formModel": Object {
-      "guestName": "secondOBJ",
-      "id": 1,
-      "myVal": 24,
+      "guestName": "changed",
+      "id": 0,
+      "myVal": 240,
     },
   },
   "loading": Object {
     "0": false,
+    "editPrefix": false,
     "formModel": false,
     "formModel0": false,
   },
 }
+`;
+
+exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="secondOBJ"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={24}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+  <div
+    className="notification is-danger"
+  >
+    Error please recheck your inputs or connection 
+    {"got":"err"}
+  </div>
+</div>
+`;
+
+exports[`DbStore Edit Test: prefix after submitted patch 1`] = `
+Object {
+  "createState": Object {
+    "editPrefix": Object {
+      "guestName": "secondOBJ",
+      "id": 1,
+      "myVal": 24,
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+    },
+  },
+  "currentlyEditing": 1,
+  "fetching": Object {
+    "0": false,
+  },
+  "formsToUpdate": Array [],
+  "getFromServer": [Function],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "changed",
+        "id": 0,
+        "myVal": 240,
+      },
+      "1": Object {
+        "formModel": Object {
+          "guestName": "secondOBJ",
+          "id": 1,
+          "myVal": 24,
+        },
+        "guestName": "SECOND change",
+        "id": 1,
+        "myVal": 6543,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+    "1": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "editPrefix.undefined1": null,
+    "editPrefix1": Object {
+      "formModel": Object {
+        "guestName": "secondOBJ",
+        "id": 1,
+        "myVal": 24,
+      },
+      "guestName": "SECOND change",
+      "id": 1,
+      "myVal": 6543,
+    },
+    "formModel": undefined,
+    "formModel0": Object {
+      "guestName": "changed",
+      "id": 0,
+      "myVal": 240,
+    },
+    "undefined0": null,
+  },
+}
+`;
+
+exports[`DbStore Edit Test: prefix after successfull save 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="secondOBJ"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={24}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+</div>
 `;
 
 exports[`DbStore Edit Test: prefix before set by getorig 1`] = `
@@ -373,10 +757,16 @@ Object {
   },
   "formData": Object {
     "authForm": undefined,
-    "formModel": undefined,
+    "editPrefix": undefined,
+    "formModel": Object {
+      "guestName": "changed",
+      "id": 0,
+      "myVal": 240,
+    },
   },
   "loading": Object {
     "0": false,
+    "editPrefix": false,
     "formModel": false,
     "formModel0": false,
   },
@@ -384,6 +774,107 @@ Object {
 `;
 
 exports[`DbStore Edit Test: prefix result of edit fetch 1`] = `undefined`;
+
+exports[`DbStore Edit Test: prefix updated record 1`] = `
+Object {
+  "formModel": Object {
+    "guestName": "secondOBJ",
+    "id": 1,
+    "myVal": 24,
+  },
+  "guestName": "SECOND change",
+  "id": 1,
+  "myVal": 6543,
+}
+`;
+
+exports[`DbStore Edit Test: prefix while loading 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="secondOBJ"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={24}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+  <div
+    className="notification is-danger"
+  >
+    Error please recheck your inputs or connection 
+    {"got":"err"}
+  </div>
+</div>
+`;
+
+exports[`DbStore Edit Test: resetOnMount 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      guestName
+    </label>
+    <input
+      onChange={[Function]}
+      type="text"
+      value="changed"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      myVal
+    </label>
+    <input
+      onChange={[Function]}
+      type="number"
+      value={240}
+    />
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Save Changes
+  </button>
+  <div
+    className="notification is-danger"
+  >
+    Error please recheck your inputs or connection 
+    {"got":"err"}
+  </div>
+</div>
+`;
 
 exports[`DbStore Edit Test: result of edit fetch 1`] = `undefined`;
 

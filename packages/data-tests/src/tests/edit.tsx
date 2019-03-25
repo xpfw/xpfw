@@ -57,20 +57,21 @@ const testEdit = (MockedEdit: any, submitEdit?: Function) => {
     // WITH PREFIX
     const prefix = "editPrefix"
 
-    fields[String(NameField.title)].setValue("secondOBJ")
-    fields[String(NumberField.title)].setValue(24)
+    const pFields = makeSubFields(NumberAndRequiredTextSchema, prefix)
+    pFields[String(NameField.title)].setValue("secondOBJ")
+    pFields[String(NumberField.title)].setValue(24)
     // render(<MockedEdit schema={schema} />, "before create")
-    const secondCreateRes = await DbStore.create(schema)
-    fields[String(NumberAndRequiredTextSchema.title)].setValue(undefined)
+    const secondCreateRes = await DbStore.create(schema, prefix)
+    pFields[String(NumberAndRequiredTextSchema.title)].setValue(undefined)
     expect(toJS(FormStore)).toMatchSnapshot("prefix before set by getorig")
     const secondId = get(secondCreateRes, "id")
-    const secondEditFetchRes = await DbStore.getEditOriginal(secondId, schema, undefined, undefined, true)
+    const secondEditFetchRes = await DbStore.getEditOriginal(secondId, schema, undefined, prefix, true)
     expect(secondEditFetchRes).toMatchSnapshot("prefix result of edit fetch")
     expect(toJS(DbStore)).toMatchSnapshot("prefix After create and geteditorig")
     expect(toJS(FormStore)).toMatchSnapshot("prefix after edit getorig")
     render(<MockedEdit schema={schema} id={secondId} prefix={prefix} />, "prefix after create")
 
-    const prefixedFIelds = makeSubFields(NumberAndRequiredTextSchema)
+    const prefixedFIelds = makeSubFields(NumberAndRequiredTextSchema, prefix)
     prefixedFIelds[String(NameField.title)].setValue("SECOND change")
     prefixedFIelds[String(NumberField.title)].setValue(6543)
     expect(toJS(DbStore)).toMatchSnapshot("prefix Before submit patch")

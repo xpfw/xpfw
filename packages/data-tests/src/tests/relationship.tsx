@@ -95,8 +95,9 @@ const testRelationship = () => {
     set(RelationshipSingleField, "relationship.autoSelect", false)
 
     // Multi
-    const displaySetter = displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title)
-    displaySetter(1)
+    const displaySetter1 = displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title, 1)
+    const displaySetter2 = displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title, 2)
+    displaySetter1()
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "nothing yet")
     let boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
     await boundSearchRelated("null")
@@ -105,7 +106,7 @@ const testRelationship = () => {
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for my")
     await boundSearchRelated("Text")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for Text")
-    displaySetter(0)
+    displaySetter2()
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for Text but displaymode for items")
 
     // autoSelect multi
@@ -130,10 +131,9 @@ const testRelationship = () => {
 
     const prefixes = ["", "customPre"]
     for (const prefix of prefixes) {
-      const dpModeC = displayModeChanger(String(RelationshipMultiField.title))
+      const dpModeC1 = displayModeChanger(String(RelationshipMultiField.title), prefix, 1)
       const dpModeCP = displayModeChanger(String(RelationshipMultiField.title))
-      dpModeC(1)
-      dpModeCP(1)
+      dpModeC1()
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, "nothing yet")
       const thisRef: any = {props: {
         field: RelationshipMultiField, prefix: prefix.length > 0 ?
