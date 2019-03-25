@@ -1,16 +1,15 @@
 
-import { ComponentRegistry } from "@xpfw/form-shared"
-import { tests } from "@xpfw/form-tests"
-import { FieldType } from "@xpfw/validate"
+import { ComponentRegistry } from "@xpfw/form"
+import { locationTest } from "@xpfw/form-tests"
 import * as MockDate from "mockdate"
 import LocationField, {
   handleLatLng, loadResources, valToLatLng
 } from  "./location"
 MockDate.set(new Date(2011, 4, 5, 16, 20, 42, 1337))
 
-ComponentRegistry.registerComponent(FieldType.Location, LocationField)
+ComponentRegistry.registerComponent("array", LocationField)
 
-test("Text Field Test", tests.location)
+test("Text Field Test", locationTest)
 
 test("location helpers", () => {
   loadResources()

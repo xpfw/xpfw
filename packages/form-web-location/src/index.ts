@@ -1,9 +1,8 @@
-import { ComponentRegistry } from "@xpfw/form-shared"
-import { FieldType } from "@xpfw/validate"
+import { ComponentRegistry } from "@xpfw/form"
 import LocationField, { loadResources } from "./base/location"
 
 const registerComponents = () => {
-  ComponentRegistry.registerComponent(FieldType.Location, LocationField)
+  ComponentRegistry.registerComponent("array", LocationField)
   loadResources()
 }
 

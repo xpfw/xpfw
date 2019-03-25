@@ -1,49 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Text Field Test: locationField 1`] = `
-<div
-  id="mapundefinedvalOfBool"
-  style={
-    Object {
-      "minHeight": "200pt",
-    }
-  }
-/>
-`;
-
-exports[`Text Field Test: set to invalid 1`] = `
-<div
-  id="mapundefinedvalOfBool"
-  style={
-    Object {
-      "minHeight": "200pt",
-    }
-  }
-/>
-`;
-
-exports[`Text Field Test: set to otherValidLocation 1`] = `
-<div
-  id="mapundefinedvalOfBool"
-  style={
-    Object {
-      "minHeight": "200pt",
-    }
-  }
-/>
-`;
-
-exports[`Text Field Test: set to validLocation 1`] = `
-<div
-  id="mapundefinedvalOfBool"
-  style={
-    Object {
-      "minHeight": "200pt",
-    }
-  }
-/>
-`;
-
 exports[`location helpers: after change 1`] = `
 Array [
   22,

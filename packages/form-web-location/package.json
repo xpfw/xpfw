@@ -7,10 +7,10 @@
   "peerDependencies": {
     "lodash": "4.x.x",
     "moment": "2.x.x",
-    "resub": "1.x.x",
     "leaflet": "1.x.x",
-    "resub-persist": "1.x.x",
-    "@xpfw/form": "1.x.x"
+    "@xpfw/form": "1.x.x",
+    "mobx": "^5.x.x",
+    "mobx-react-lite": "^1.x.x"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -35,13 +35,12 @@
     "jest-cli": "^23.6.0",
     "leaflet": "^1.3.4",
     "lodash": "^4.17.11",
+    "mobx-react-lite": "^1.1.1",
+    "mobx": "^5.9.0",
     "mockdate": "^2.0.2",
     "moment": "^2.22.2",
-    "preact": "^8.3.1",
-    "preact-compat": "^3.18.4",
-    "preact-render-to-json": "^3.6.6",
-    "resub": "^1.0.13",
-    "resub-persist": "^1.2.8",
+    "react": "^16.8.4",
+    "react-test-renderer": "^16.8.4",
     "rollup": "^0.67.3",
     "rollup-plugin-typescript2": "^0.18.0",
     "rollup-plugin-uglify": "^6.0.0",
@@ -68,12 +67,9 @@
     "moduleNameMapper": {
       "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts",
-      "preact-render-to-json": "preact-render-to-json",
-      "preact": "preact",
-      "react": "preact-compat",
-      "react-dom": "preact-compat",
-      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
-      "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared"
+      "^@xpfw/form-tests$": "<rootDir>/node_modules/@xpfw/form-tests",
+      "^@xpfw/form$": "<rootDir>/node_modules/@xpfw/form",
+      "^react$": "<rootDir>/node_modules/react"
     },
     "moduleFileExtensions": [
       "ts",

@@ -28,7 +28,6 @@
     "@types/react": "^16.8.8",
     "@types/react-test-renderer": "^16.8.1",
     "@types/node": "^11.9.3",
-    "@types/react": "^16.8.2",
     "@xpfw/form": "1.0.0-beta.12",
     "@xpfw/form-tests": "1.0.0-beta.12",
     "awesome-typescript-loader": "^5.2.1",

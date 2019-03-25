@@ -23,6 +23,8 @@ export default {
     "@xpfw/form",
     "react",
     "react-dom",
-    "leaflet"
+    "leaflet",
+    "mobx",
+    "mobx-react-lite"
   ]
 };

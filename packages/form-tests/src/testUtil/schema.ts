@@ -33,7 +33,7 @@ const SelectField: ExtendedJSONSchema = {
 }
 
 const LocationField: ExtendedJSONSchema = {
-  title: "valOfBool",
+  title: "locationField",
   type: "array",
   theme: "location",
   items: {

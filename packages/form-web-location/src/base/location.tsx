@@ -1,6 +1,7 @@
-import { IFieldProps } from "@xpfw/form"
+import { ExtendedJSONSchema, getMapToFromProps, IFieldProps, useField } from "@xpfw/form"
 import * as leaflet from "leaflet"
-import { isNil } from "lodash"
+import { get } from "lodash"
+import { observer } from "mobx-react-lite"
 import * as React from "react"
 
 const handleLatLng = (thisRef: any) => {
@@ -11,7 +12,7 @@ const handleLatLng = (thisRef: any) => {
 }
 
 const valToLatLng: any = (val: any) => {
-  if (isNil(val)) {
+  if (val == null) {
     return [52.1513, 4.4826]
   }
   return [val[1], val[0]]
@@ -29,9 +30,13 @@ const loadResources = () => {
   })
 }
 
-class WebMapField extends React.Component<IFieldProps & {
+class WebMapField extends React.Component<{
+  schema: ExtendedJSONSchema,
+  prefix?: string,
+  value: any,
   width?: number
   height?: number
+  setValue: any
 }, any> {
   private handleClick: any
   private map: any
@@ -41,14 +46,14 @@ class WebMapField extends React.Component<IFieldProps & {
     this.handleClick = handleLatLng(this)
   }
   public makeMapId() {
-    return `map${this.props.prefix}${this.props.field.mapTo}`
+    return `map${this.props.prefix}${this.props.schema.title}`
   }
   public createMarker() {
     const bla: any = valToLatLng(this.props.value)
     this.marker = leaflet.marker(bla, {icon: leafletIcon}).addTo(this.map)
   }
   public updateMarker() {
-    if (isNil(this.marker)) {
+    if (this.marker == null) {
       this.createMarker()
     }
     this.marker.setLatLng(valToLatLng(this.props.value))
@@ -64,18 +69,15 @@ class WebMapField extends React.Component<IFieldProps & {
     this.map.on("click", this.handleClick)
   }
   public componentWillUnmount() {
-    if (!isNil(this.marker)) {
+    if (this.marker != null) {
       this.marker.remove()
     }
-    if (!isNil(this.map)) {
+    if (this.map != null) {
       this.map.remove()
     }
   }
   public render() {
-    let style = this.props.style
-    if (isNil(style)) {
-      style = {minHeight: "200pt"}
-    }
+    const style = get(this.props, "style", {minHeight: "200pt"})
     return (
       <div
         id={this.makeMapId()}
@@ -85,7 +87,19 @@ class WebMapField extends React.Component<IFieldProps & {
   }
 }
 
-export default WebMapField
+const WrapperForWebMapField: React.FunctionComponent<IFieldProps> = observer((props) => {
+  const fieldHelper = useField(getMapToFromProps(props), props.prefix)
+  return (
+    <WebMapField
+      value={fieldHelper.value}
+      setValue={fieldHelper.setValue}
+      schema={props.schema}
+      prefix={props.prefix}
+    />
+  )
+})
+
+export default WrapperForWebMapField
 export {
   loadResources, valToLatLng, handleLatLng
 }
