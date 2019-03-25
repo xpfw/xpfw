@@ -295,10 +295,15 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
 exports[`DbStore Edit Test: prefix After create and geteditorig 1`] = `
 Object {
   "createState": Object {
-    "formModel": Object {
+    "editPrefix": Object {
       "guestName": "secondOBJ",
       "id": 1,
       "myVal": 24,
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
     },
   },
   "currentlyEditing": 1,
@@ -327,6 +332,7 @@ Object {
   },
   "removeState": Object {},
   "updateState": Object {
+    "editPrefix.undefined1": null,
     "formModel": undefined,
     "formModel0": Object {
       "guestName": "changed",
@@ -334,7 +340,6 @@ Object {
       "myVal": 240,
     },
     "undefined0": null,
-    "undefined1": null,
   },
 }
 `;
@@ -342,10 +347,15 @@ Object {
 exports[`DbStore Edit Test: prefix Before submit patch 1`] = `
 Object {
   "createState": Object {
-    "formModel": Object {
+    "editPrefix": Object {
       "guestName": "secondOBJ",
       "id": 1,
       "myVal": 24,
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
     },
   },
   "currentlyEditing": 1,
@@ -374,6 +384,7 @@ Object {
   },
   "removeState": Object {},
   "updateState": Object {
+    "editPrefix.undefined1": null,
     "formModel": undefined,
     "formModel0": Object {
       "guestName": "changed",
@@ -381,7 +392,6 @@ Object {
       "myVal": 240,
     },
     "undefined0": null,
-    "undefined1": null,
   },
 }
 `;
@@ -412,14 +422,22 @@ Object {
   },
   "formData": Object {
     "authForm": undefined,
+    "editPrefix": Object {
+      "formModel": Object {
+        "guestName": "secondOBJ",
+        "id": 1,
+        "myVal": 24,
+      },
+    },
     "formModel": Object {
-      "guestName": "secondOBJ",
-      "id": 1,
-      "myVal": 24,
+      "guestName": "changed",
+      "id": 0,
+      "myVal": 240,
     },
   },
   "loading": Object {
     "0": false,
+    "editPrefix": false,
     "formModel": false,
     "formModel0": false,
   },
@@ -454,10 +472,15 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
 exports[`DbStore Edit Test: prefix after submitted patch 1`] = `
 Object {
   "createState": Object {
-    "formModel": Object {
+    "editPrefix": Object {
       "guestName": "secondOBJ",
       "id": 1,
       "myVal": 24,
+    },
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
     },
   },
   "currentlyEditing": 1,
@@ -491,6 +514,7 @@ Object {
       "id": 1,
       "myVal": 24,
     },
+    "editPrefix.undefined1": null,
     "formModel": undefined,
     "formModel0": Object {
       "guestName": "changed",
@@ -498,7 +522,6 @@ Object {
       "myVal": 240,
     },
     "undefined0": null,
-    "undefined1": null,
   },
 }
 `;
@@ -536,10 +559,16 @@ Object {
   },
   "formData": Object {
     "authForm": undefined,
-    "formModel": undefined,
+    "editPrefix": undefined,
+    "formModel": Object {
+      "guestName": "changed",
+      "id": 0,
+      "myVal": 240,
+    },
   },
   "loading": Object {
     "0": false,
+    "editPrefix": false,
     "formModel": false,
     "formModel0": false,
   },

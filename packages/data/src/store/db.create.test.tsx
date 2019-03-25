@@ -32,7 +32,7 @@ test("DbStore Create Test", async () => {
   expect(toJS(DbStore)).toMatchSnapshot("After calling create")
   const col: any = NumberAndRequiredTextSchema.collection
   const getResult = await DbStore.getFromServer(get(createdObject, "id"), col)
-  expect(getResult).toMatchSnapshot("getresult")
+  expect(toJS(getResult)).toMatchSnapshot("getresult")
   expect(getResult).toEqual(createdObject)
   expect(getResult).toEqual(DbStore.getCreateState(NumberAndRequiredTextSchema.title))
 

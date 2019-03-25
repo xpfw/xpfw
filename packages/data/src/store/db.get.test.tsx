@@ -33,7 +33,7 @@ test("DbStore Patch Test", async () => {
   expect(createdObject).toMatchSnapshot("createresult")
   expect(toJS(DbStore)).toMatchSnapshot("dbstore after create")
 
-  expect(await DbStore.getFromServer(get(createdObject, "id"), NumberAndRequiredTextSchema.collection))
+  expect(toJS(await DbStore.getFromServer(get(createdObject, "id"), NumberAndRequiredTextSchema.collection)))
     .toMatchSnapshot("getcreated")
   expect(toJS(DbStore)).toMatchSnapshot("dbstore after create get")
   fields[NameField.title].setValue("get is now diff")

@@ -119,6 +119,7 @@ exports[`DbStore Create Test: after reset 2`] = `
     },
     "modify": {}
   },
+  "displayMode": 2,
   "prefix": "ownedBy"
 }
 </div>
@@ -142,6 +143,7 @@ exports[`DbStore Create Test: customPresearch for Text 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "customPre"
 }
 </div>
@@ -165,6 +167,7 @@ exports[`DbStore Create Test: customPresearch for my 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "customPre"
 }
 </div>
@@ -188,6 +191,7 @@ exports[`DbStore Create Test: customPresearch for null 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "customPre"
 }
 </div>
@@ -295,6 +299,7 @@ exports[`DbStore Create Test: multi after autoselectable search with option enab
     },
     "modify": {}
   },
+  "displayMode": 2,
   "prefix": "ownedBy"
 }
 </div>
@@ -318,6 +323,7 @@ exports[`DbStore Create Test: multi after autoselectable search without option e
     },
     "modify": {}
   },
+  "displayMode": 2,
   "prefix": "ownedBy"
 }
 </div>
@@ -625,6 +631,7 @@ exports[`DbStore Create Test: nothing yet 2`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "ownedBy"
 }
 </div>
@@ -664,6 +671,7 @@ exports[`DbStore Create Test: nothing yet 3`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "lastUsed": [
     "b29999999999999999798765"
   ],
@@ -690,6 +698,7 @@ exports[`DbStore Create Test: nothing yet 4`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "customPre"
 }
 </div>
@@ -713,6 +722,7 @@ exports[`DbStore Create Test: search for Text 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "ownedBy"
 }
 </div>
@@ -752,6 +762,7 @@ exports[`DbStore Create Test: search for Text 2`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "lastUsed": [
     "b29999999999999999798765"
   ],
@@ -778,6 +789,7 @@ exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 2,
   "prefix": "ownedBy"
 }
 </div>
@@ -801,6 +813,7 @@ exports[`DbStore Create Test: search for my 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "ownedBy"
 }
 </div>
@@ -840,6 +853,7 @@ exports[`DbStore Create Test: search for my 2`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "lastUsed": [
     "b29999999999999999798765"
   ],
@@ -866,6 +880,7 @@ exports[`DbStore Create Test: search for null 1`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "prefix": "ownedBy"
 }
 </div>
@@ -905,6 +920,7 @@ exports[`DbStore Create Test: search for null 2`] = `
     },
     "modify": {}
   },
+  "displayMode": 1,
   "lastUsed": [
     "b29999999999999999798765"
   ],
