@@ -1,54 +1,26 @@
-import { SharedField } from "@xpfw/form-shared"
-import {
-  IFormListProps, ISharedRelationshipField, ISharedRelationshipFieldProps,
-  RelationShipWrapper, SharedFormList
-} from "@xpfw/ui-shared"
-import { getFieldsFromForm, IField } from "@xpfw/validate"
-import { get, isNil } from "lodash"
+import { useList } from "@xpfw/data/dist"
+import { SharedField } from "@xpfw/form"
+import { get } from "lodash"
+import { observer } from "mobx-react-lite"
 import * as React from "react"
 import WebRelationshipItem from "./relationshipItem"
 
-class WebRelationshipSearchList extends React.Component<IFormListProps, any> {
-  public render() {
-    const nameObjs: any = []
-    const addId = get(this.props, "addId")
-    const removeId = get(this.props, "removeId")
-    const field = get(this.props, "field")
-    for (const child of get(this.props, "list.result", [])) {
-      let name = "loading"
-      let id
-      if (!isNil(child)) {
-        name = get(child, get(this.props, "field.validate.relationshipNamePath", "id"), "NOTFOUND")
-        id = get(child, get(this.props, "field.validate.relationshipIdPath", "id"), "-1")
-      }
-      nameObjs.push(<WebRelationshipItem field={field} item={child} addId={addId} removeId={removeId} isAdd />)
-    }
-    return (
-      <div>
-        {nameObjs}
-      </div>
-    )
+const WebRelationshipSearch: React.FunctionComponent<any> = observer((props) => {
+  const searchField = get(props, `searchForm.properties[${get(props, "schema.relationship.namePath")}]`)
+  const nameObjs: any = []
+  const addId = get(props, "addId")
+  const removeId = get(props, "removeId")
+  const field = get(props, "schema")
+  const relList = useList(props.searchForm, undefined, props.prefix)
+  for (const child of get(relList, "list.data", [])) {
+    nameObjs.push(<WebRelationshipItem schema={field} item={child} addId={addId} removeId={removeId} isAdd />)
   }
-}
-
-const WrappedWebRelationshipSearchList: any = SharedFormList<{}>(WebRelationshipSearchList)
-
-class WebRelationshipSearch extends React.Component<ISharedRelationshipFieldProps, any> {
-  public render() {
-    const field = get(this.props, "searchForm.sections[0].fields[0]")
-    return (
-      <div>
-          <SharedField field={field} prefix={this.props.prefix} />
-          <WrappedWebRelationshipSearchList
-            field={this.props.field}
-            prefix={this.props.prefix}
-            form={this.props.searchForm}
-            addId={this.props.addId}
-            defaultEntries={this.props.lastUsed}
-          />
-      </div>
-    )
-  }
-}
+  return (
+    <div>
+      <SharedField schema={searchField} prefix={props.prefix} />
+      {nameObjs}
+    </div>
+  )
+})
 
 export default WebRelationshipSearch

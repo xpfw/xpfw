@@ -1,13 +1,10 @@
-import { SharedField } from "@xpfw/form-shared"
-import { RelationShipWrapper, ISharedRelationshipFieldProps, ISharedRelationshipField } from "@xpfw/ui-shared"
-import { getFieldsFromForm, IField } from "@xpfw/validate"
+import { ExtendedJSONSchema } from "@xpfw/form";
 import { get, isNil } from "lodash"
 import * as React from "react"
-import WebRelationshipSearch from "./relationshipSearch";
 
 class WebRelationshipItem extends React.Component<{
     item: any
-    field: IField
+    schema: ExtendedJSONSchema
     removeId: any
     addId: any
     isAdd: boolean
@@ -17,10 +14,10 @@ class WebRelationshipItem extends React.Component<{
     let id
     const obj = this.props.item
     if (!isNil(obj)) {
-      name = get(obj, get(this.props, "field.validate.relationshipNamePath", "id"), "NOTFOUND")
-      id = get(obj, get(this.props, "field.validate.relationshipIdPath", "id"), "NOTFOUND")
+      name = get(obj, get(this.props, "schema.relationship.namePath", "id"), "NOTFOUND")
+      id = get(obj, get(this.props, "schema.relationship.idPath", "id"), "NOTFOUND")
     }
-    let actionBtn = this.props.isAdd ? (
+    const actionBtn = this.props.isAdd ? (
       <a className="button" onClick={this.props.addId.bind(this, id)}>
         Add
       </a>

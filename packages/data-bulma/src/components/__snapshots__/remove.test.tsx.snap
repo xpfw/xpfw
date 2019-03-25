@@ -3,7 +3,7 @@
 exports[`DbStore Create Test: Successfully removed 1`] = `
 <div>
   <a
-    class="button is-success"
+    className="button is-success"
   >
     Deleted
   </a>
@@ -13,9 +13,10 @@ exports[`DbStore Create Test: Successfully removed 1`] = `
 exports[`DbStore Create Test: While removing 1`] = `
 <div>
   <a
-    class="button is-info"
+    className="button is-warning"
+    onClick={[Function]}
   >
-    Loading...
+    Delete
   </a>
 </div>
 `;
@@ -23,7 +24,7 @@ exports[`DbStore Create Test: While removing 1`] = `
 exports[`DbStore Create Test: after login 1`] = `
 <div>
   <a
-    class="button is-warning"
+    className="button is-warning"
     onClick={[Function]}
   >
     Delete
@@ -34,7 +35,7 @@ exports[`DbStore Create Test: after login 1`] = `
 exports[`DbStore Create Test: before login 1`] = `
 <div>
   <a
-    class="button is-warning"
+    className="button is-warning"
     onClick={[Function]}
   >
     Delete
@@ -46,16 +47,16 @@ exports[`DbStore Create Test: error for not exisiting anymore 1`] = `[NotFound: 
 
 exports[`DbStore Create Test: fetch existing resource 1`] = `
 Object {
+  "guestName": "myText",
   "id": 0,
-  "myNum": 420,
-  "myString": "myText",
+  "myVal": 420,
 }
 `;
 
 exports[`DbStore Create Test: remove render 1`] = `
 <div>
   <a
-    class="button is-warning"
+    className="button is-warning"
     onClick={[Function]}
   >
     Delete
@@ -65,10 +66,8 @@ exports[`DbStore Create Test: remove render 1`] = `
 
 exports[`DbStore Create Test: remove result 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
-  },
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
 }
 `;

@@ -31,7 +31,7 @@ const BulmaCreate: React.FunctionComponent<ICreateHookProps> = observer((props) 
   return (
     <div>
       {fields}
-      <a className="button is-primary" onClick={this.props.submitCreate}>Create</a>
+      <a className="button is-primary" onClick={createProps.submitCreate}>Create</a>
       {msg}
     </div>
   )

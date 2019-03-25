@@ -28,8 +28,9 @@
     "@types/react": "^16.7.6",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__react": "^4.0.0",
-    "@xpfw/form-bulma": "1.0.0-beta.12",
     "@xpfw/form": "1.0.0-beta.12",
+    "@xpfw/form-bulma": "1.0.0-beta.12",
+    "@xpfw/form-tests": "1.0.0-beta.12",
     "@xpfw/form-web": "1.0.0-beta.12",
     "@xpfw/test-util": "1.0.0-beta.12",
     "@xpfw/data-feathers": "1.0.0-beta.12",
@@ -74,6 +75,7 @@
       "^@xpfw/form-tests$": "<rootDir>/node_modules/@xpfw/form-tests",
       "^@xpfw/form-web$": "<rootDir>/node_modules/@xpfw/form-web",
       "^@xpfw/form$": "<rootDir>/node_modules/@xpfw/form",
+      "^@xpfw/data$": "<rootDir>/node_modules/@xpfw/data",
       "^react$": "<rootDir>/node_modules/react"
     },
     "moduleFileExtensions": [

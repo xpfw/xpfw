@@ -10,4 +10,4 @@ registerComponents()
 ComponentRegistry.registerComponent("string", WebRelationshipSingle, "single")
 ComponentRegistry.registerComponent("array", WebRelationshipMulti, "multi")
 
-relationshipTest.relationship(null)
+relationshipTest()

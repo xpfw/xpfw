@@ -2,7 +2,17 @@
 
 exports[`DbStore show Test: Successfully removed 1`] = `<span />`;
 
-exports[`DbStore show Test: While removing 1`] = `<span />`;
+exports[`DbStore show Test: While removing 1`] = `
+<span>
+  {"guestName":"myText","myVal":420,"id":0}
+</span>
+`;
+
+exports[`DbStore show Test: after definitely fetched 1`] = `
+<span>
+  {"guestName":"myText","myVal":420,"id":0}
+</span>
+`;
 
 exports[`DbStore show Test: after login 1`] = `<span />`;
 
@@ -12,20 +22,22 @@ exports[`DbStore show Test: error for not exisiting anymore 1`] = `[NotFound: No
 
 exports[`DbStore show Test: fetch existing resource 1`] = `
 Object {
+  "guestName": "myText",
   "id": 0,
-  "myNum": 420,
-  "myString": "myText",
+  "myVal": 420,
 }
 `;
 
-exports[`DbStore show Test: remove render 1`] = `<span />`;
+exports[`DbStore show Test: not yet fetched but still there because created 1`] = `
+<span>
+  {"guestName":"myText","myVal":420,"id":0}
+</span>
+`;
 
 exports[`DbStore show Test: remove result 1`] = `
 Object {
-  "result": Object {
-    "id": 0,
-    "myNum": 420,
-    "myString": "myText",
-  },
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
 }
 `;
