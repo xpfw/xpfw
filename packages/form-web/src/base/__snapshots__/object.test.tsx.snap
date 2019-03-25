@@ -3,11 +3,11 @@
 exports[`Object Field Test: locationField 1`] = `
 <div>
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
   />
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
   />
 </div>
@@ -16,12 +16,12 @@ exports[`Object Field Test: locationField 1`] = `
 exports[`Object Field Test: set to invalid 1`] = `
 <div>
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
-    value="invalid"
+    value={NaN}
   />
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
   />
 </div>
@@ -30,12 +30,12 @@ exports[`Object Field Test: set to invalid 1`] = `
 exports[`Object Field Test: set to otherValidLocation 1`] = `
 <div>
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
     value={767}
   />
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
   />
 </div>
@@ -44,12 +44,12 @@ exports[`Object Field Test: set to otherValidLocation 1`] = `
 exports[`Object Field Test: set to validLocation 1`] = `
 <div>
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
     value={41}
   />
   <input
-    oninput={[Function]}
+    onChange={[Function]}
     type="number"
   />
 </div>
