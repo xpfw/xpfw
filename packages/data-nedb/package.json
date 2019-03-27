@@ -1,5 +1,5 @@
 {
-  "name": "@xpfw/ui-nedb",
+  "name": "@xpfw/data-nedb",
   "version": "1.0.0-beta.13",
   "main": "dist",
   "typings": "dist",
