@@ -7,33 +7,49 @@ exports[`Text Field Test: after datetime-local set 1`] = `2018-02-21T23:00:00.00
 exports[`Text Field Test: after time set 1`] = `2011-05-05T14:20:00.000Z`;
 
 exports[`Text Field Test: date with content 1`] = `
-<input
-  oninput={[Function]}
-  type="date"
-  value="2012-01-11"
+<SharedField
+  schema={
+    Object {
+      "format": "date",
+      "title": "dateVal",
+      "type": "string",
+    }
+  }
 />
 `;
 
 exports[`Text Field Test: datetime-local with content 1`] = `
-<input
-  oninput={[Function]}
-  type="datetime-local"
-  value="2018-02-22T00:00"
+<SharedField
+  schema={
+    Object {
+      "format": "date-time",
+      "title": "dateVal",
+      "type": "string",
+    }
+  }
 />
 `;
 
 exports[`Text Field Test: empty datetime-local field 1`] = `
-<input
-  oninput={[Function]}
-  type="date"
-  value="2011-05-05"
+<SharedField
+  schema={
+    Object {
+      "format": "date",
+      "title": "dateVal",
+      "type": "string",
+    }
+  }
 />
 `;
 
 exports[`Text Field Test: time with content 1`] = `
-<input
-  oninput={[Function]}
-  type="time"
-  value="16:20"
+<SharedField
+  schema={
+    Object {
+      "format": "time",
+      "title": "dateVal",
+      "type": "string",
+    }
+  }
 />
 `;

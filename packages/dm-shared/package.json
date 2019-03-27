@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/dm-shared",
-  "version": "0.1.2",
+  "version": "1.0.0-beta.12",
   "main": "dist",
   "license": "MIT",
   "scripts": {
@@ -18,10 +18,10 @@
   "peerDependencies": {
     "lodash": "4.x.x",
     "moment": "2.x.x",
-    "@xpfw/validate": "0.1.x",
-    "@xpfw/form-shared": "0.1.x",
-    "@xpfw/ui-shared": "0.1.x",
-    "@xpfw/dm": "0.1.x"
+    "@xpfw/data": "1.x.x",
+    "@xpfw/form": "1.x.x",
+    "mobx": "^5.x.x",
+    "mobx-react-lite": "^1.x.x"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
