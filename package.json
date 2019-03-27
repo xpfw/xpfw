@@ -16,5 +16,6 @@
   },
   "dependencies": {
     "rollup-plugin-typescript2": "^0.16.1"
-  }
+  },
+  "private": true
 }
