@@ -60,10 +60,6 @@
       "<rootDir>/dist"
     ],
     "moduleNameMapper": {
-      "preact-render-to-json": "preact-render-to-json",
-      "preact": "preact",
-      "react": "preact-compat",
-      "react-dom": "preact-compat"
     },
     "moduleFileExtensions": [
       "ts",
