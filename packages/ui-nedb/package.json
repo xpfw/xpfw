@@ -5,11 +5,11 @@
   "typings": "dist",
   "license": "MIT",
   "dependencies": {
-    "nedb": "^1.8.0"
   },
   "peerDependencies": {
     "lodash": "4.x.x",
-    "@xpfw/ui": "1.x.x"
+    "@xpfw/data": "1.x.x",
+    "nedb": "^1.8.0"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -25,9 +25,9 @@
     "@types/lodash": "^4.14.123",
     "@types/mockdate": "^2.0.0",
     "@xpfw/test-util": "1.0.0-beta.12",
-    "@xpfw/ui-tests": "1.0.0-beta.12",
+    "@xpfw/data-tests": "1.0.0-beta.12",
     "@xpfw/form": "1.0.0-beta.12",
-    "@xpfw/ui": "1.0.0-beta.12",
+    "@xpfw/data": "1.0.0-beta.12",
     "isomorphic-fetch": "^2.2.1",
     "jest": "^24.5.0",
     "jest-cli": "^24.5.0",
@@ -38,7 +38,8 @@
     "rollup-plugin-uglify": "^6.0.2",
     "ts-jest": "=24.0.0",
     "typescript": "^3.3.4000",
-    "uglify-es": "^3.3.10"
+    "uglify-es": "^3.3.10",
+    "nedb": "^1.8.0"
   },
   "jest": {
     "globals": {
@@ -60,8 +61,7 @@
       "^@xpfw/form-tests$": "<rootDir>/node_modules/@xpfw/form-tests",
       "^@xpfw/ui-tests$": "<rootDir>/node_modules/@xpfw/ui-tests",
       "^@xpfw/form$": "<rootDir>/node_modules/@xpfw/form",
-      "^@xpfw/data$": "<rootDir>/node_modules/@xpfw/data",
-      "^react$": "<rootDir>/node_modules/react"
+      "^@xpfw/data$": "<rootDir>/node_modules/@xpfw/data"
     },
     "moduleFileExtensions": [
       "ts",

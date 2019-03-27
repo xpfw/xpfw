@@ -1,5 +1,4 @@
-import { globals, IUiClient, ValidationRegistry } from "@xpfw/validate"
-import { get, isNil } from "lodash"
+import { dataOptions, IUiClient } from "@xpfw/data"
 import * as nedb from "nedb"
 
 const verifyCollectionExists = (collection: string) => {
@@ -9,10 +8,6 @@ const verifyCollectionExists = (collection: string) => {
       autoload: true
     })
   }
-}
-
-const getIdPathForCollection = (collection: string) => {
-  return get(ValidationRegistry.forms[collection], "options.idPath", "_id")
 }
 
 const NedbClient: IUiClient = {
@@ -38,7 +33,7 @@ const NedbClient: IUiClient = {
   get: (collection: string, id: any) => {
     verifyCollectionExists(collection)
     return new Promise((resolve, reject) => {
-      NedbClient.client.dbs[collection].findOne({[getIdPathForCollection(collection)]: id}, (err: any, docs: any) => {
+      NedbClient.client.dbs[collection].findOne({[dataOptions.idPath]: id}, (err: any, docs: any) => {
         if (err !== null && err !== undefined) {
           reject(err)
         } else {
@@ -51,7 +46,7 @@ const NedbClient: IUiClient = {
     verifyCollectionExists(collection)
     return new Promise((resolve, reject) => {
       NedbClient.client.dbs[collection].remove(
-        {[getIdPathForCollection(collection)]: id}, {multi: false}, (err: any, docs: any) => {
+        {[dataOptions.idPath]: id}, {multi: false}, (err: any, docs: any) => {
         if (err !== null && err !== undefined) {
           reject(err)
         } else {
@@ -114,7 +109,7 @@ const NedbClient: IUiClient = {
   patch: (collection: string, id: any, createData: any) => {
     verifyCollectionExists(collection)
     return new Promise((resolve, reject) => {
-      NedbClient.client.dbs[collection].update({[getIdPathForCollection(collection)]: id},
+      NedbClient.client.dbs[collection].update({[dataOptions.idPath]: id},
       createData, {multi: false}, (err: any, docs: any) => {
         if (err !== null && err !== undefined) {
           reject(err)
