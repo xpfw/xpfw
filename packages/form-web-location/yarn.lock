@@ -381,6 +381,11 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.10.tgz#17a8ec65cd8e88f51b418ceb271af18d3137df67"
   integrity sha512-WsVzTPshvCSbHThUduGGxbmnwcpkgSctHGHTqzWyFg4lYAuV5qXlyFPOsP3OWqCINfmg/8VXP+zJaa4OxEsBQQ==
 
+"@xpfw/validate@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/validate/-/validate-0.1.2.tgz#51bd0f6075e3abc2104dedfd6ee68b7749835270"
+  integrity sha512-rczwi93oY1ug9uuKuA0wgVfcEIzuDBFCNeKvzjf2P5X2rztweJISv+HVOvd2zg9KZR+intxu/FW4Smns6PY85g==
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"

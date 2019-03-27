@@ -393,6 +393,11 @@
   resolved "https://registry.yarnpkg.com/@xpfw/form-shared/-/form-shared-0.1.5.tgz#51456f6653960db2b793dcc13f8e675d16720c44"
   integrity sha512-8EOTqPosZWVKis77ZZXra7aGPRFUe7vnP9OAyh9BMYCZjEPpEYAGNAFQieuTeT2JLlxsJZI8pZ8gOAi1Xn95qw==
 
+"@xpfw/validate@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/validate/-/validate-0.1.2.tgz#51bd0f6075e3abc2104dedfd6ee68b7749835270"
+  integrity sha512-rczwi93oY1ug9uuKuA0wgVfcEIzuDBFCNeKvzjf2P5X2rztweJISv+HVOvd2zg9KZR+intxu/FW4Smns6PY85g==
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"
