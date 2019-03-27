@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/ui-nedb",
-  "version": "0.1.1",
+  "version": "1.0.0-beta.12",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "peerDependencies": {
     "lodash": "4.x.x",
-    "@xpfw/validate": "0.1.x"
+    "@xpfw/ui": "1.x.x"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -25,8 +25,9 @@
     "@types/lodash": "^4.14.123",
     "@types/mockdate": "^2.0.0",
     "@xpfw/test-util": "1.0.0-beta.12",
-    "@xpfw/ui-tests": "0.1.1",
-    "@xpfw/validate": "^0.1.2",
+    "@xpfw/ui-tests": "1.0.0-beta.12",
+    "@xpfw/form": "1.0.0-beta.12",
+    "@xpfw/ui": "1.0.0-beta.12",
     "isomorphic-fetch": "^2.2.1",
     "jest": "^24.5.0",
     "jest-cli": "^24.5.0",
@@ -56,9 +57,11 @@
       "<rootDir>/dist"
     ],
     "moduleNameMapper": {
-      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
-      "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared",
-      "@xpfw/ui-shared": "<rootDir>/node_modules/@xpfw/ui-shared"
+      "^@xpfw/form-tests$": "<rootDir>/node_modules/@xpfw/form-tests",
+      "^@xpfw/ui-tests$": "<rootDir>/node_modules/@xpfw/ui-tests",
+      "^@xpfw/form$": "<rootDir>/node_modules/@xpfw/form",
+      "^@xpfw/data$": "<rootDir>/node_modules/@xpfw/data",
+      "^react$": "<rootDir>/node_modules/react"
     },
     "moduleFileExtensions": [
       "ts",
