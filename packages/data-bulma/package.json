@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/ui-bulma",
-  "version": "0.1.1",
+  "version": "1.0.0-beta.12",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
@@ -40,7 +40,6 @@
     "isomorphic-fetch": "^2.2.1",
     "jest": "^24.5.0",
     "jest-cli": "^24.5.0",
-    "leaflet": "^1.4.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "mobx": "^5.9.0",
