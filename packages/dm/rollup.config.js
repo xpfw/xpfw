@@ -8,8 +8,7 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    typescript({}),
-    // uglify({}, minify)
+    typescript({})
   ],
   external: ["lodash", "moment"]
 };
