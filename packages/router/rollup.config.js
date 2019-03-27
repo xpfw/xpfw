@@ -14,14 +14,8 @@ export default {
     // uglify({}, minify)
   ],
   external: [
-    "lodash",
-    "moment",
-    "feathers-client",
-    "resub",
-    "resub-persist",
-    "socket.io-client",
-    "@xpfw/validate",
-    "react",
-    "react-dom"
+    "mobx",
+    "mobx-react-lite",
+    "react"
   ]
 };
