@@ -1,5 +1,5 @@
 {
-  "name": "@xpfw/ui-bulma",
+  "name": "@xpfw/data-bulma",
   "version": "1.0.0-beta.12",
   "main": "dist",
   "typings": "dist",
