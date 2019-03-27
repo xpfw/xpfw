@@ -2,7 +2,7 @@
 
 exports[`Basic Fields Test: back home 1`] = `
 <div
-  class="home"
+  className="home"
 >
   {"route":{"path":"/","params":{}}}
 </div>
@@ -10,7 +10,7 @@ exports[`Basic Fields Test: back home 1`] = `
 
 exports[`Basic Fields Test: back to b 1`] = `
 <div
-  class="b"
+  className="b"
 >
   {"route":{"path":"/b","params":{"my":"arg"}}}
 </div>
@@ -18,7 +18,7 @@ exports[`Basic Fields Test: back to b 1`] = `
 
 exports[`Basic Fields Test: back to c 1`] = `
 <div
-  class="c"
+  className="c"
 >
   {"route":{"path":"/c","params":{"gfsdf":"tas"}}}
 </div>
@@ -26,7 +26,7 @@ exports[`Basic Fields Test: back to c 1`] = `
 
 exports[`Basic Fields Test: back to home 1`] = `
 <div
-  class="home"
+  className="home"
 >
   {"route":{"path":"/","params":{}}}
 </div>
@@ -34,7 +34,7 @@ exports[`Basic Fields Test: back to home 1`] = `
 
 exports[`Basic Fields Test: back to home multi back no effect 1`] = `
 <div
-  class="home"
+  className="home"
 >
   {"route":{"path":"/","params":{}}}
 </div>
@@ -42,7 +42,7 @@ exports[`Basic Fields Test: back to home multi back no effect 1`] = `
 
 exports[`Basic Fields Test: invalid oute 1`] = `
 <div
-  class="404"
+  className="404"
 >
   {"route":{"path":"/gfadsdf","params":{"jk":"hj"}}}
 </div>
@@ -50,7 +50,7 @@ exports[`Basic Fields Test: invalid oute 1`] = `
 
 exports[`Basic Fields Test: renderig 404 1`] = `
 <div
-  class="404"
+  className="404"
 >
   {"route":{"path":"/","params":{}}}
 </div>
@@ -58,7 +58,7 @@ exports[`Basic Fields Test: renderig 404 1`] = `
 
 exports[`Basic Fields Test: renderig a 1`] = `
 <div
-  class="a"
+  className="a"
 >
   {"route":{"path":"/a","params":{"xvcb":"asdf"}}}
 </div>
@@ -66,7 +66,7 @@ exports[`Basic Fields Test: renderig a 1`] = `
 
 exports[`Basic Fields Test: renderig a different params 1`] = `
 <div
-  class="a"
+  className="a"
 >
   {"route":{"path":"/a","params":{"gewar":"yvcxv"}}}
 </div>
@@ -74,7 +74,7 @@ exports[`Basic Fields Test: renderig a different params 1`] = `
 
 exports[`Basic Fields Test: renderig a with old params because back 1`] = `
 <div
-  class="a"
+  className="a"
 >
   {"route":{"path":"/a","params":{"xvcb":"asdf"}}}
 </div>
@@ -82,7 +82,7 @@ exports[`Basic Fields Test: renderig a with old params because back 1`] = `
 
 exports[`Basic Fields Test: renderig b 1`] = `
 <div
-  class="b"
+  className="b"
 >
   {"route":{"path":"/b","params":{"my":"arg"}}}
 </div>
@@ -90,7 +90,7 @@ exports[`Basic Fields Test: renderig b 1`] = `
 
 exports[`Basic Fields Test: renderig c 1`] = `
 <div
-  class="c"
+  className="c"
 >
   {"route":{"path":"/c","params":{"gfsdf":"tas"}}}
 </div>
@@ -98,7 +98,7 @@ exports[`Basic Fields Test: renderig c 1`] = `
 
 exports[`Basic Fields Test: still invalid oute 1`] = `
 <div
-  class="404"
+  className="404"
 >
   {"route":{"path":"/gfadsdf","params":{"iou":".-ö"}}}
 </div>

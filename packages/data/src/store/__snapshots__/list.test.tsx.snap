@@ -4,14 +4,14 @@ exports[`List filter Test: result of initial search 1`] = `
 Object {
   "data": Array [
     Object {
-      "guestName": "225*225",
-      "id": 225,
-      "myVal": 225,
-    },
-    Object {
       "guestName": "0*0",
       "id": 0,
       "myVal": 0,
+    },
+    Object {
+      "guestName": "1*1",
+      "id": 1,
+      "myVal": 1,
     },
     Object {
       "guestName": "2*2",

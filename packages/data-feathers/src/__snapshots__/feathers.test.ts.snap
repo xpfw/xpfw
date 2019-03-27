@@ -3,34 +3,37 @@
 exports[`realtime Test: after realtime events arrived 1`] = `
 Object {
   "createState": Object {},
+  "currentlyEditing": "",
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getFromServer": [Function],
   "getState": Object {
-    "simpleTestCol": Object {
+    "lala": Object {
       "0": Object {
-        "result": Object {
-          "bla": "1",
-          "id": 0,
-        },
+        "bla": "1",
+        "id": 0,
       },
       "1": Object {
-        "result": Object {
-          "bla": "4",
-          "id": 1,
-        },
+        "bla": "4",
+        "id": 1,
       },
       "2": Object {
-        "result": Object {
-          "bla": "5",
-          "id": 2,
-        },
+        "bla": "5",
+        "id": 2,
       },
       "3": Object {
-        "result": Object {
-          "bla": "2",
-          "id": 3,
-        },
+        "bla": "2",
+        "id": 3,
       },
     },
   },
+  "lastFetch": Object {
+    "0": -2077750800000,
+    "1": -2077750800000,
+    "2": -2077750800000,
+    "3": -2077750800000,
+  },
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -38,29 +41,34 @@ Object {
 exports[`realtime Test: after realtime remove arrived 1`] = `
 Object {
   "createState": Object {},
+  "currentlyEditing": "",
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getFromServer": [Function],
   "getState": Object {
-    "simpleTestCol": Object {
+    "lala": Object {
       "0": Object {
-        "result": Object {
-          "bla": "1",
-          "id": 0,
-        },
+        "bla": "1",
+        "id": 0,
       },
       "1": Object {
-        "result": Object {
-          "bla": "4",
-          "id": 1,
-        },
+        "bla": "4",
+        "id": 1,
       },
       "2": null,
       "3": Object {
-        "result": Object {
-          "bla": "2",
-          "id": 3,
-        },
+        "bla": "2",
+        "id": 3,
       },
     },
   },
+  "lastFetch": Object {
+    "0": -2077750800000,
+    "1": -2077750800000,
+    "2": -2077750800000,
+    "3": -2077750800000,
+  },
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;
@@ -68,7 +76,13 @@ Object {
 exports[`realtime Test: before realtime events arrived 1`] = `
 Object {
   "createState": Object {},
+  "currentlyEditing": "",
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getFromServer": [Function],
   "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
   "updateState": Object {},
 }
 `;

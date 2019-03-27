@@ -2,162 +2,134 @@
 
 exports[`DbStore Create Test: after list get 1`] = `
 Object {
+  "currentPage": Object {},
+  "dirtyCollections": Object {
+    "simpleTestCol": false,
+  },
+  "doingQuery": Object {
+    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
+  },
   "lists": Object {
     "formModel": Object {
+      "data": Array [],
       "limit": 10,
-      "result": Array [
-        Object {
-          "id": 49,
-          "myNum": 20580,
-          "myString": "49num",
-        },
-        Object {
-          "id": 0,
-          "myNum": 0,
-          "myString": "0num",
-        },
-        Object {
-          "id": 2,
-          "myNum": 840,
-          "myString": "2num",
-        },
-        Object {
-          "id": 3,
-          "myNum": 1260,
-          "myString": "3num",
-        },
-        Object {
-          "id": 4,
-          "myNum": 1680,
-          "myString": "4num",
-        },
-        Object {
-          "id": 5,
-          "myNum": 2100,
-          "myString": "5num",
-        },
-        Object {
-          "id": 6,
-          "myNum": 2520,
-          "myString": "6num",
-        },
-        Object {
-          "id": 7,
-          "myNum": 2940,
-          "myString": "7num",
-        },
-        Object {
-          "id": 8,
-          "myNum": 3360,
-          "myString": "8num",
-        },
-        Object {
-          "id": 9,
-          "myNum": 3780,
-          "myString": "9num",
-        },
-      ],
       "skip": 0,
-      "total": 99,
+      "total": 0,
+    },
+  },
+  "makeQuery": [Function],
+  "maxPage": Object {
+    "formModel": 0,
+  },
+  "pageSize": 10,
+  "previousQuery": Object {
+    "formModel": Object {
+      "$limit": 10,
+      "$skip": 0,
+      "$sort": Object {
+        "createdAt": -1,
+      },
     },
   },
 }
 `;
 
 exports[`DbStore Create Test: after login 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          0
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: after second page get 1`] = `
 Object {
+  "currentPage": Object {
+    "formModel": 0,
+  },
+  "dirtyCollections": Object {
+    "simpleTestCol": false,
+  },
+  "doingQuery": Object {
+    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
+  },
   "lists": Object {
     "formModel": Object {
+      "data": Array [],
       "limit": 10,
-      "result": Array [
-        Object {
-          "id": 10,
-          "myNum": 4200,
-          "myString": "10num",
-        },
-        Object {
-          "id": 11,
-          "myNum": 4620,
-          "myString": "11num",
-        },
-        Object {
-          "id": 12,
-          "myNum": 5040,
-          "myString": "12num",
-        },
-        Object {
-          "id": 13,
-          "myNum": 5460,
-          "myString": "13num",
-        },
-        Object {
-          "id": 14,
-          "myNum": 5880,
-          "myString": "14num",
-        },
-        Object {
-          "id": 15,
-          "myNum": 6300,
-          "myString": "15num",
-        },
-        Object {
-          "id": 16,
-          "myNum": 6720,
-          "myString": "16num",
-        },
-        Object {
-          "id": 17,
-          "myNum": 7140,
-          "myString": "17num",
-        },
-        Object {
-          "id": 18,
-          "myNum": 7560,
-          "myString": "18num",
-        },
-        Object {
-          "id": 19,
-          "myNum": 7980,
-          "myString": "19num",
-        },
-      ],
-      "skip": 10,
-      "total": 99,
+      "skip": 0,
+      "total": 0,
+    },
+  },
+  "makeQuery": [Function],
+  "maxPage": Object {
+    "formModel": 0,
+  },
+  "pageSize": 10,
+  "previousQuery": Object {
+    "formModel": Object {
+      "$limit": 10,
+      "$skip": 0,
+      "$sort": Object {
+        "createdAt": -1,
+      },
     },
   },
 }
@@ -165,710 +137,1007 @@ Object {
 
 exports[`DbStore Create Test: after third page get 1`] = `
 Object {
+  "currentPage": Object {
+    "formModel": 0,
+  },
+  "dirtyCollections": Object {
+    "simpleTestCol": false,
+  },
+  "doingQuery": Object {
+    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
+  },
   "lists": Object {
     "formModel": Object {
+      "data": Array [],
       "limit": 10,
-      "result": Array [
-        Object {
-          "id": 20,
-          "myNum": 8400,
-          "myString": "20num",
-        },
-        Object {
-          "id": 21,
-          "myNum": 8820,
-          "myString": "21num",
-        },
-        Object {
-          "id": 22,
-          "myNum": 9240,
-          "myString": "22num",
-        },
-        Object {
-          "id": 23,
-          "myNum": 9660,
-          "myString": "23num",
-        },
-        Object {
-          "id": 24,
-          "myNum": 10080,
-          "myString": "24num",
-        },
-        Object {
-          "id": 25,
-          "myNum": 10500,
-          "myString": "25num",
-        },
-        Object {
-          "id": 26,
-          "myNum": 10920,
-          "myString": "26num",
-        },
-        Object {
-          "id": 27,
-          "myNum": 11340,
-          "myString": "27num",
-        },
-        Object {
-          "id": 28,
-          "myNum": 11760,
-          "myString": "28num",
-        },
-        Object {
-          "id": 29,
-          "myNum": 12180,
-          "myString": "29num",
-        },
-      ],
-      "skip": 20,
-      "total": 99,
+      "skip": 0,
+      "total": 0,
+    },
+  },
+  "makeQuery": [Function],
+  "maxPage": Object {
+    "formModel": 0,
+  },
+  "pageSize": 10,
+  "previousQuery": Object {
+    "formModel": Object {
+      "$limit": 10,
+      "$skip": 0,
+      "$sort": Object {
+        "createdAt": -1,
+      },
     },
   },
 }
 `;
 
 exports[`DbStore Create Test: before login 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          1
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: empty result 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="newpre"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: empty result with defaultVals but not fetched yet 1`] = `
-<ComponentBase
-  defaultEntries={
-    Array [
-      0,
-      11,
-      22,
-      33,
-      44,
-      55,
-      66,
-      77,
-      88,
-    ]
-  }
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="newpre"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: empty result with defaultVals with guaranteed fetch 1`] = `
-<ComponentBase
-  defaultEntries={
-    Array [
-      0,
-      11,
-      22,
-      33,
-      44,
-      55,
-      66,
-      77,
-      88,
-    ]
-  }
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="newpre"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: list after fetch 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Loading
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          0
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: list before fetch 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          0
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: list on fourth page 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Loading
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          0
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: prefix after list get 1`] = `
 Object {
+  "currentPage": Object {
+    "formModel": 0,
+  },
+  "dirtyCollections": Object {
+    "simpleTestCol": false,
+  },
+  "doingQuery": Object {
+    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
+  },
   "lists": Object {
-    "createpref.formModel": Object {
+    "formModel": Object {
+      "data": Array [],
       "limit": 10,
-      "result": Array [
-        Object {
-          "id": 49,
-          "myNum": 20580,
-          "myString": "49num",
-        },
-        Object {
-          "id": 0,
-          "myNum": 0,
-          "myString": "0num",
-        },
-        Object {
-          "id": 2,
-          "myNum": 840,
-          "myString": "2num",
-        },
-        Object {
-          "id": 3,
-          "myNum": 1260,
-          "myString": "3num",
-        },
-        Object {
-          "id": 4,
-          "myNum": 1680,
-          "myString": "4num",
-        },
-        Object {
-          "id": 5,
-          "myNum": 2100,
-          "myString": "5num",
-        },
-        Object {
-          "id": 6,
-          "myNum": 2520,
-          "myString": "6num",
-        },
-        Object {
-          "id": 7,
-          "myNum": 2940,
-          "myString": "7num",
-        },
-        Object {
-          "id": 8,
-          "myNum": 3360,
-          "myString": "8num",
-        },
-        Object {
-          "id": 9,
-          "myNum": 3780,
-          "myString": "9num",
-        },
-      ],
       "skip": 0,
-      "total": 99,
+      "total": 0,
+    },
+  },
+  "makeQuery": [Function],
+  "maxPage": Object {
+    "formModel": 0,
+  },
+  "pageSize": 10,
+  "previousQuery": Object {
+    "createpref.formModel": Object {
+      "$limit": 10,
+      "$skip": 0,
+      "$sort": Object {
+        "createdAt": -1,
+      },
     },
     "formModel": Object {
-      "limit": 10,
-      "result": Array [
-        Object {
-          "id": 20,
-          "myNum": 8400,
-          "myString": "20num",
-        },
-        Object {
-          "id": 21,
-          "myNum": 8820,
-          "myString": "21num",
-        },
-        Object {
-          "id": 22,
-          "myNum": 9240,
-          "myString": "22num",
-        },
-        Object {
-          "id": 23,
-          "myNum": 9660,
-          "myString": "23num",
-        },
-        Object {
-          "id": 24,
-          "myNum": 10080,
-          "myString": "24num",
-        },
-        Object {
-          "id": 25,
-          "myNum": 10500,
-          "myString": "25num",
-        },
-        Object {
-          "id": 26,
-          "myNum": 10920,
-          "myString": "26num",
-        },
-        Object {
-          "id": 27,
-          "myNum": 11340,
-          "myString": "27num",
-        },
-        Object {
-          "id": 28,
-          "myNum": 11760,
-          "myString": "28num",
-        },
-        Object {
-          "id": 29,
-          "myNum": 12180,
-          "myString": "29num",
-        },
-      ],
-      "skip": 20,
-      "total": 99,
+      "$limit": 10,
+      "$skip": 0,
+      "$sort": Object {
+        "createdAt": -1,
+      },
     },
   },
 }
 `;
 
 exports[`DbStore Create Test: prefix list after fetch 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="createpref"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          1
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: prefix list before fetch 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="createpref"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          1
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: prefix second page 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="createpref"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          1
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: prefix still first if prefix unknown but query number 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="newpre"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: prefix still first if prefix unknown but query set 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="newpre"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: prefix third page 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-  prefix="createpref"
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;
 
 exports[`DbStore Create Test: using prevPage back to third page 1`] = `
-<ComponentBase
-  form={
-    Object {
-      "collection": "simpleTestCol",
-      "model": "formModel",
-      "sections": Array [
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myString",
-              "type": 2,
-              "validate": Object {
-                "required": Object {
-                  "type": 2,
-                },
-              },
-            },
-          ],
-        },
-        Object {
-          "fields": Array [
-            Object {
-              "mapTo": "myNum",
-              "type": 3,
-              "validate": Object {},
-            },
-          ],
-        },
-      ],
-    }
-  }
-/>
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Loading
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          1
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          0
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 `;

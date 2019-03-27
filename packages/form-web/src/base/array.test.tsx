@@ -4,6 +4,6 @@ import ArrayField from "./array"
 import TextField from "./text"
 
 ComponentRegistry.registerComponent("array", ArrayField)
-ComponentRegistry.registerComponent("text", TextField)
+ComponentRegistry.registerComponent("string", TextField)
 
 test("Array Field Test", arrayTest)

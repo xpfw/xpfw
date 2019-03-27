@@ -8,17 +8,17 @@ test("makeStat test", async () => {
       {myNum: 12, k: "4"}, {l: "ö"}, {r: "e"}
     ]})
   }
-  const client: any = {
-    find: findMethod
-  }
+  const client: any = findMethod
   const collection = "my"
   expect(await makeStat(client, collection, {
-    type: StatType.sum
+    type: StatType.sum,
+    id: "a"
   }, {}, {pageSize: 5}))
     .toMatchSnapshot("regular")
   expect(await makeStat(client, collection, {
     type: StatType.sum,
-    options: {itemPath: "myNum"}
+    options: {itemPath: "myNum"},
+    id: "b"
   }, {}, {pageSize: 5}))
     .toMatchSnapshot("withCoinfig")
 }, 10000)

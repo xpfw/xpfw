@@ -1,7 +1,7 @@
-import * as render from "preact-render-to-json"
 import * as React from "react"
 import Router from "../components/router"
 import RouterStore from "../store/router"
+import render from "../testUtil/render"
 
 const makeMockElement = (name: string) => {
   return class extends React.Component<any, any> {
@@ -17,36 +17,36 @@ const makeMockElement = (name: string) => {
 
 test("Basic Fields Test", () => {
   const emptycomp = makeMockElement("404")
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("renderig 404")
+  render(<Router emptyComponent={emptycomp} />, "renderig 404")
   RouterStore.registerRoute("/", makeMockElement("home"))
   RouterStore.registerRoute("/a", makeMockElement("a"))
   RouterStore.registerRoute("/b", makeMockElement("b"))
   RouterStore.registerRoute("/c", makeMockElement("c"))
   RouterStore.visit({path: "/b", params: {my: "arg"}})
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("renderig b")
+  render(<Router emptyComponent={emptycomp} />, "renderig b")
   RouterStore.visit({path: "/c", params: {gfsdf: "tas"}})
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("renderig c")
+  render(<Router emptyComponent={emptycomp} />, "renderig c")
   RouterStore.visit({path: "/a", params: {xvcb: "asdf"}})
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("renderig a")
+  render(<Router emptyComponent={emptycomp} />, "renderig a")
   RouterStore.visit({path: "/a", params: {gewar: "yvcxv"}})
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("renderig a different params")
+  render(<Router emptyComponent={emptycomp} />, "renderig a different params")
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("renderig a with old params because back")
+  render(<Router emptyComponent={emptycomp} />, "renderig a with old params because back")
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("back to c")
+  render(<Router emptyComponent={emptycomp} />, "back to c")
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("back to b")
+  render(<Router emptyComponent={emptycomp} />, "back to b")
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("back to home")
+  render(<Router emptyComponent={emptycomp} />, "back to home")
   RouterStore.back()
   RouterStore.back()
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("back to home multi back no effect")
+  render(<Router emptyComponent={emptycomp} />, "back to home multi back no effect")
   RouterStore.visit({path: "/gfadsdf", params: {iou: ".-ö"}})
   RouterStore.visit({path: "/gfadsdf", params: {jk: "hj"}})
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("invalid oute")
+  render(<Router emptyComponent={emptycomp} />, "invalid oute")
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("still invalid oute")
+  render(<Router emptyComponent={emptycomp} />, "still invalid oute")
   RouterStore.back()
-  expect(render(<Router emptyComponent={emptycomp} />)).toMatchSnapshot("back home")
+  render(<Router emptyComponent={emptycomp} />, "back home")
 })

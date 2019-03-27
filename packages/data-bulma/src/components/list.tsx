@@ -9,28 +9,30 @@ const BulmaList: React.FunctionComponent<IListHookProps> = observer((props) => {
   const listProps = useListWithProps(props)
   const fields = []
   const loading = listProps.loading
-  for (const child of get(listProps, "list", [])) {
-    const fieldContent: any[] = []
-    iterateSubFields(props.schema, (key, subSchema) => {
-      fieldContent.push((
-        <td>
-          {JSON.stringify(get(child, String(subSchema.title)))}
-        </td>
-      ))
-    })
-    fields.push(
-      <tr key={child._id}>
-        <td >
-          {child._id}
-        </td>
-        {fieldContent}
-        <td>
-          <span className="has-text-danger">
-            <BulmaRemove schema={props.schema} id={child._id} />
-          </span>
-        </td>
-      </tr>
-    )
+  if (Array.isArray(listProps.list)) {
+    for (const child of listProps.list) {
+      const fieldContent: any[] = []
+      iterateSubFields(props.schema, (key, subSchema) => {
+        fieldContent.push((
+          <td>
+            {JSON.stringify(get(child, String(subSchema.title)))}
+          </td>
+        ))
+      })
+      fields.push(
+        <tr key={child._id}>
+          <td >
+            {child._id}
+          </td>
+          {fieldContent}
+          <td>
+            <span className="has-text-danger">
+              <BulmaRemove schema={props.schema} id={child._id} />
+            </span>
+          </td>
+        </tr>
+      )
+    }
   }
   if (loading) {
     fields.push(

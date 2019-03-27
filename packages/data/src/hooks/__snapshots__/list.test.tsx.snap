@@ -154,14 +154,14 @@ exports[`DbStore Create Test: empty result 1`] = `
     "skip": 0,
     "data": [
       {
-        "guestName": "49num",
-        "myVal": 20580,
-        "id": 49
-      },
-      {
         "guestName": "0num",
         "myVal": 0,
         "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
       },
       {
         "guestName": "2num",
@@ -228,14 +228,14 @@ exports[`DbStore Create Test: empty result with defaultVals but not fetched yet 
     "skip": 0,
     "data": [
       {
-        "guestName": "49num",
-        "myVal": 20580,
-        "id": 49
-      },
-      {
         "guestName": "0num",
         "myVal": 0,
         "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
       },
       {
         "guestName": "2num",
@@ -302,14 +302,14 @@ exports[`DbStore Create Test: empty result with defaultVals with guaranteed fetc
     "skip": 0,
     "data": [
       {
-        "guestName": "49num",
-        "myVal": 20580,
-        "id": 49
-      },
-      {
         "guestName": "0num",
         "myVal": 0,
         "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
       },
       {
         "guestName": "2num",
@@ -539,14 +539,14 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query num
     "skip": 0,
     "data": [
       {
-        "guestName": "49num",
-        "myVal": 20580,
-        "id": 49
-      },
-      {
         "guestName": "0num",
         "myVal": 0,
         "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
       },
       {
         "guestName": "2num",
@@ -613,14 +613,14 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query set
     "skip": 0,
     "data": [
       {
-        "guestName": "49num",
-        "myVal": 20580,
-        "id": 49
-      },
-      {
         "guestName": "0num",
         "myVal": 0,
         "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
       },
       {
         "guestName": "2num",
@@ -687,14 +687,14 @@ exports[`DbStore Create Test: prefix third page 1`] = `
     "skip": 0,
     "data": [
       {
-        "guestName": "49num",
-        "myVal": 20580,
-        "id": 49
-      },
-      {
         "guestName": "0num",
         "myVal": 0,
         "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
       },
       {
         "guestName": "2num",
