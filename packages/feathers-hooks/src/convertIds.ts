@@ -21,7 +21,7 @@ const convertIds = (idPath: string, isFind: boolean) => {
     const id = get(data, idPath)
     if (!isNil(id)) {
       let newVal: any
-      if (isObject(id) && !Array.isArray(id) && !isString(id)) {
+      if (id != null && !Array.isArray(id) && !isString(id)) {
         if (id.$nin) {
           newVal = {$nin: converter(id.$nin)}
         } else if (id.$in) {

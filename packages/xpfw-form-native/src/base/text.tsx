@@ -4,7 +4,7 @@ import { get } from "lodash"
 import * as React from "react"
 import NativeFieldContainer from "./field"
 declare const require: any
-import { FormInput } from "react-native-elements"
+import { Input } from "react-native-elements"
 
 class NativeTextField extends React.Component<IFieldProps, any> {
   public render() {
@@ -18,7 +18,7 @@ class NativeTextField extends React.Component<IFieldProps, any> {
     }
     return (
       <NativeFieldContainer {...this.props}>
-        <FormInput
+        <Input
           {...this.props}
           secureTextEntry={secureTextEntry}
           value={this.props.value}

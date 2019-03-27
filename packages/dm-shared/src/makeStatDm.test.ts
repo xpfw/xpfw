@@ -2,9 +2,8 @@ import {
   BackendClient
 } from "@xpfw/data"
 import { FeathersClient } from "@xpfw/data-feathers"
-import { makeStat } from "@xpfw/dm"
+import { makeStat, StatType } from "@xpfw/dm"
 import { getRandomApp } from "@xpfw/test-util"
-import { StatType } from "@xpfw/validate"
 import "isomorphic-fetch"
 
 BackendClient.client = FeathersClient

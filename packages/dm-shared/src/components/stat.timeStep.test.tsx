@@ -12,7 +12,7 @@ import * as React from "react"
 import StatStore from "../store/stat"
 import makeMockElement from "../testUtil/baseMock"
 import {
-  timeStepForm, timeStepSum, timeStepSumPath, timeStepTimeDistance
+  timeStepSum, timeStepSumPath, timeStepTimeDistance
 } from "../testUtil/defs"
 import render from "../testUtil/render"
 import statServiceConfigurator from "../testUtil/statService"
@@ -26,7 +26,7 @@ const moment = momentA
 BackendClient.client = FeathersClient
 
 test("makeStat timeStep test", async () => {
-  const collection = timeStepForm.collection
+  const collection = "timeStep"
   const appRef = await getRandomApp(collection, false, BackendClient.client, false)
   appRef.app.configure(statServiceConfigurator)
   for (let i = 0; i < 250; i++) {
@@ -89,7 +89,7 @@ test("makeStat timeStep test", async () => {
         config.stat.options.timeSteps = getTimeSteps(config.query.createdAt.$gte, config.query.createdAt.$lte)
       }
       await StatStore.fetchStat(collection, config.stat, config.query, false)
-      render(<StatMock collection={timeStepForm.collection} config={config.stat} />,
+      render(<StatMock collection={collection} config={config.stat} />,
         serverString + config.stat.id + config.msg)
       config.stat.options = origOptions
     }

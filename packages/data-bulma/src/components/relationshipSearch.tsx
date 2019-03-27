@@ -1,4 +1,4 @@
-import { useList } from "@xpfw/data/dist"
+import { useList } from "@xpfw/data"
 import { SharedField } from "@xpfw/form"
 import { get } from "lodash"
 import { observer } from "mobx-react-lite"

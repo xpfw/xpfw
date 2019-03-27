@@ -1,5 +1,4 @@
-import { ComponentRegistry } from "@xpfw/form-shared"
-import { FieldType } from "@xpfw/validate"
+import { ComponentRegistry } from "@xpfw/form"
 import * as React from "react"
 
 const makeMockElement: any = (name: string) => {
@@ -15,13 +14,13 @@ const makeMockElement: any = (name: string) => {
 }
 
 const baseComponentMocks = () => {
-  ComponentRegistry.registerComponent(FieldType.Text, makeMockElement("text"))
-  ComponentRegistry.registerComponent(FieldType.Array, makeMockElement("array"))
-  ComponentRegistry.registerComponent(FieldType.Boolean, makeMockElement("boolean"))
-  ComponentRegistry.registerComponent(FieldType.Date, makeMockElement("date"))
-  ComponentRegistry.registerComponent(FieldType.Number, makeMockElement("number"))
-  ComponentRegistry.registerComponent(FieldType.Object, makeMockElement("object"))
-  ComponentRegistry.registerComponent(FieldType.Select, makeMockElement("select"))
+  ComponentRegistry.registerComponent("string", makeMockElement("text"))
+  ComponentRegistry.registerComponent("array", makeMockElement("array"))
+  ComponentRegistry.registerComponent("boolean", makeMockElement("boolean"))
+  ComponentRegistry.registerComponent("date", makeMockElement("date"))
+  ComponentRegistry.registerComponent("number", makeMockElement("number"))
+  ComponentRegistry.registerComponent("object", makeMockElement("object"))
+  ComponentRegistry.registerComponent("select", makeMockElement("select"))
 }
 
 export default baseComponentMocks

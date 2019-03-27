@@ -2,7 +2,7 @@
 import * as MockDate from "mockdate"
 MockDate.set(new Date(1978, 2, 24))
 
-import {StatType} from "@xpfw/validate"
+import {StatType} from "../globals"
 import * as momentA from "moment"
 import iterateEachInFind from "../iterateEachInFind"
 import iterateMockDateDataInFind from "../testUtil/iterateMockDateDataInFind"

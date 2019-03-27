@@ -1,12 +1,11 @@
 import { get } from "lodash"
 import * as React from "react"
-import { View } from "react-native"
-import { FormLabel, FormValidationMessage } from "react-native-elements"
+import { Text, View } from "react-native"
 
 class NativeFieldContainer extends React.Component<any, any> {
   public render() {
     const err = this.props.error && this.props.error.ok !== true ?  (
-      <FormValidationMessage>{JSON.stringify(this.props.error)}</FormValidationMessage>
+      <Text>{JSON.stringify(this.props.error)}</Text>
     ) : <View />
     let label = get(this.props, "field.mapTo")
     if (this.props.showVal) {
@@ -14,7 +13,7 @@ class NativeFieldContainer extends React.Component<any, any> {
     }
     return (
       <View>
-        <FormLabel>{label}</FormLabel>
+        <Text>{label}</Text>
         {this.props.children}
         {err}
       </View>

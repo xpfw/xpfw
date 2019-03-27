@@ -1,5 +1,3 @@
-import { TestDefs } from "@xpfw/validate"
-const FormNumberAndRequiredText = TestDefs.FormNumberAndRequiredText
 import iterateEachInFeathers from "./iterateEachInFeathers"
 import getRandomApp from "./testUtil/getRandomApp"
 import validateCreate from "./validateHook/validateCreate"

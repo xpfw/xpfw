@@ -1,5 +1,5 @@
 import { IListHookProps, useListWithProps } from "@xpfw/data"
-import { iterateSubFields } from "@xpfw/form/dist"
+import { iterateSubFields } from "@xpfw/form"
 import { each, get } from "lodash"
 import { observer } from "mobx-react-lite"
 import * as React from "react"

@@ -7,7 +7,7 @@ import { DatePickerAndroid, TimePickerAndroid, TouchableHighlight, View } from "
 import NativeFieldContainer from "./field"
 declare const require: any
 import * as momentT from "moment"
-import { FormInput } from "react-native-elements"
+import { Input } from "react-native-elements"
 const moment: any = momentT
 const getOriginalFormatFromType = (dateType: number) => {
   let momentParseFrom = ""
@@ -23,7 +23,8 @@ const getOriginalFormatFromType = (dateType: number) => {
 
 const processDate = (thisRef: any) => {
   return async () => {
-    const {action, year, month, day } = await DatePickerAndroid.open({date: moment(thisRef.props.value).toDate()})
+    const r: any = await DatePickerAndroid.open({date: moment(thisRef.props.value).toDate()})
+    const {action, year, month, day } = r
     if (action !== DatePickerAndroid.dismissedAction) {
       const date = !isDate(thisRef.props.value) ? new Date() : moment(thisRef.props.value).toDate()
       date.setFullYear(year)
@@ -36,9 +37,10 @@ const processDate = (thisRef: any) => {
 const processTime = (thisRef: any) => {
   return async () => {
     const date = !isDate(thisRef.props.value) ? new Date() : moment(thisRef.props.value).toDate()
-    const { action, hour, minute } = await TimePickerAndroid.open({
+    const r: any = await TimePickerAndroid.open({
       hour: date.getHours(), minute: date.getMinutes()
     })
+    const { action, hour, minute } = r
     if (action !== TimePickerAndroid.dismissedAction) {
       date.setHours(hour)
       date.setMinutes(minute)
@@ -64,14 +66,13 @@ export default class AndroidDateField extends React.Component<IFieldProps, any> 
         <NativeFieldContainer {...this.props}>
           <View style={{flexDirection: "row", display: "flex", flex: 1}}>
           <TouchableHighlight style={{flex: 1}} underlayColor="rgba(0, 0, 0, 0)" onPress={this.pickDate}>
-
-            <FormInput
+            <Input
               editable={false}
               value={moment(value).format(getOriginalFormatFromType(globals.DateType.date))}
             />
           </TouchableHighlight>
           <TouchableHighlight  style={{ flex: 1}} underlayColor="rgba(0, 0, 0, 0)" onPress={this.pickTime}>
-            <FormInput
+            <Input
               editable={false}
               value={moment(value).format(getOriginalFormatFromType(globals.DateType.time))}
             />
@@ -85,7 +86,7 @@ export default class AndroidDateField extends React.Component<IFieldProps, any> 
     return (
       <NativeFieldContainer {...this.props}>
         <TouchableHighlight underlayColor="rgba(0, 0, 0, 0)" onPress={inputFunc}>
-          <FormInput
+          <Input
             {...this.props}
             editable={false}
             value={moment(value).format(getOriginalFormatFromType(dateType))}

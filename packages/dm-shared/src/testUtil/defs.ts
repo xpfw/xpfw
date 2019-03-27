@@ -1,4 +1,4 @@
-import { IForm, StatType } from "@xpfw/validate"
+import { StatType } from "@xpfw/dm"
 
 const simpleSum = {
   type: StatType.sum,
@@ -8,12 +8,6 @@ const pathSum = {
   type: StatType.sum,
   options: {itemPath: "myNum"},
   id: "pathSum"
-}
-
-const sumForm: IForm = {
-  collection: "sum", model: "sum",
-  sections: [],
-  stats: [simpleSum, pathSum]
 }
 
 const timeStepSum = {
@@ -42,14 +36,8 @@ const timeStepTimeDistance = {
   }}
 }
 
-const timeStepForm: IForm = {
-  collection: "timeStep", model: "timeStep",
-  sections: [],
-  stats: [timeStepSum, timeStepSumPath, timeStepTimeDistance]
-}
-
 export {
-  simpleSum, pathSum, sumForm,
+  simpleSum, pathSum,
   timeStepSum, timeStepSumPath, timeStepTimeDistance,
   timeStepForm
 }

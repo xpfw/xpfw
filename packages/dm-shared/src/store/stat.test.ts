@@ -3,18 +3,18 @@ import {
   toJS
 } from "@xpfw/data"
 import { FeathersClient } from "@xpfw/data-feathers"
+import { StatRegistry } from "@xpfw/dm"
 import { getRandomApp } from "@xpfw/test-util"
 import "isomorphic-fetch"
 import { set } from "lodash"
-import { pathSum, simpleSum, sumForm } from "../testUtil/defs"
+import { pathSum, simpleSum } from "../testUtil/defs"
 import statServiceConfigurator from "../testUtil/statService"
 import StatStore from "./stat"
-import { StatRegistry } from "@xpfw/dm"
 
 BackendClient.client = FeathersClient
 
 test("makeStat test", async () => {
-  const collection = sumForm.collection
+  const collection = "sum"
   StatRegistry[simpleSum.id] = simpleSum
   StatRegistry[pathSum.id] = pathSum
   const appRef = await getRandomApp(collection, false, BackendClient.client, false)

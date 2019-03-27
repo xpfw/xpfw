@@ -9,7 +9,7 @@ import { set } from "lodash"
 import * as React from "react"
 import StatStore from "../store/stat"
 import makeMockElement from "../testUtil/baseMock"
-import { pathSum, simpleSum, sumForm } from "../testUtil/defs"
+import { pathSum, simpleSum } from "../testUtil/defs"
 import render from "../testUtil/render"
 import statServiceConfigurator from "../testUtil/statService"
 import useStat from "./stat"
@@ -17,7 +17,7 @@ import useStat from "./stat"
 BackendClient.client = FeathersClient
 
 test("makeStat test", async () => {
-  const collection = sumForm.collection
+  const collection = "sum"
   StatRegistry[simpleSum.id] = simpleSum
   StatRegistry[pathSum.id] = pathSum
   const appRef = await getRandomApp(collection, false, BackendClient.client, false)
@@ -32,15 +32,15 @@ test("makeStat test", async () => {
     (props: any) => useStat(props.config, props.collection, props.useServer, props.prefix))
   expect(toJS(StatStore)).toMatchSnapshot("Before anything")
   await StatStore.fetchStat(collection, simpleSum, {}, false)
-  render(<StatMock collection={sumForm.collection} config={simpleSum} />, "simpleSum local")
+  render(<StatMock collection={collection} config={simpleSum} />, "simpleSum local")
   await StatStore.fetchStat(collection, pathSum, {}, false)
-  render(<StatMock collection={sumForm.collection} config={pathSum} />, "pathSum local")
+  render(<StatMock collection={collection} config={pathSum} />, "pathSum local")
   set(StatStore, "stats", {})
-  render(<StatMock collection={sumForm.collection} config={simpleSum} />, "simpleSum after reset")
-  render(<StatMock collection={sumForm.collection} config={pathSum} />, "pathSum after reset")
+  render(<StatMock collection={collection} config={simpleSum} />, "simpleSum after reset")
+  render(<StatMock collection={collection} config={pathSum} />, "pathSum after reset")
   await StatStore.fetchStat(collection, simpleSum, {}, true)
-  render(<StatMock collection={sumForm.collection} config={simpleSum} />, "simpleSum server")
+  render(<StatMock collection={collection} config={simpleSum} />, "simpleSum server")
   await StatStore.fetchStat(collection, pathSum, {}, true)
-  render(<StatMock collection={sumForm.collection} config={pathSum} />, "pathSum server")
+  render(<StatMock collection={collection} config={pathSum} />, "pathSum server")
   await appRef.cleanUp()
 }, 10000)

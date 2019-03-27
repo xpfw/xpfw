@@ -1,4 +1,4 @@
-import { StatType } from "@xpfw/validate"
+import { StatType } from "./globals"
 import makeStat from "./makeStat"
 
 test("makeStat test", async () => {

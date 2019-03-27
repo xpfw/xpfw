@@ -1,4 +1,3 @@
-import { globals } from "@xpfw/validate"
 import * as React from "react"
 
 const makeMockElement = (name: string) => {
