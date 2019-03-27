@@ -1,23 +1,22 @@
-import { makeStat } from "@xpfw/dm"
-import { FormStore } from "@xpfw/form-shared"
-import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
 import {
-  BackendClient
-} from "@xpfw/ui-shared"
-import ValidationRegistry, { IForm, StatType } from "@xpfw/validate"
+  BackendClient,
+  toJS
+} from "@xpfw/data"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { getRandomApp } from "@xpfw/test-util"
 import "isomorphic-fetch"
 import { set } from "lodash"
-import { matchStoreState } from "resub-persist"
 import { pathSum, simpleSum, sumForm } from "../testUtil/defs"
 import statServiceConfigurator from "../testUtil/statService"
 import StatStore from "./stat"
+import { StatRegistry } from "@xpfw/dm"
 
 BackendClient.client = FeathersClient
 
 test("makeStat test", async () => {
   const collection = sumForm.collection
-  ValidationRegistry.registerForm(sumForm)
+  StatRegistry[simpleSum.id] = simpleSum
+  StatRegistry[pathSum.id] = pathSum
   const appRef = await getRandomApp(collection, false, BackendClient.client, false)
   appRef.app.configure(statServiceConfigurator)
   for (let i = 0; i < 10; i++) {
@@ -26,16 +25,16 @@ test("makeStat test", async () => {
       myNum: i * 42
     })
   }
-  matchStoreState(StatStore, "Before anything")
+  expect(toJS(StatStore)).toMatchSnapshot("Before anything")
   await StatStore.fetchStat(collection, simpleSum, {}, false)
-  matchStoreState(StatStore, "after simple sum")
+  expect(toJS(StatStore)).toMatchSnapshot("after simple sum")
   await StatStore.fetchStat(collection, pathSum, {}, false)
-  matchStoreState(StatStore, "after add summ")
+  expect(toJS(StatStore)).toMatchSnapshot("after add summ")
   set(StatStore, "stats", {})
-  matchStoreState(StatStore, "after reset")
+  expect(toJS(StatStore)).toMatchSnapshot("after reset")
   await StatStore.fetchStat(collection, simpleSum, {}, false)
-  matchStoreState(StatStore, "after server simple sum")
+  expect(toJS(StatStore)).toMatchSnapshot("after server simple sum")
   await StatStore.fetchStat(collection, pathSum, {}, true)
-  matchStoreState(StatStore, "after server add summ")
+  expect(toJS(StatStore)).toMatchSnapshot("after server add summ")
   await appRef.cleanUp()
 }, 10000)

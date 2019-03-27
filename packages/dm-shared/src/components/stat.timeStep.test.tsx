@@ -1,12 +1,12 @@
-import { getTimeSteps } from "@xpfw/dm"
-import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
 import {
   BackendClient
-} from "@xpfw/ui-shared"
-import ValidationRegistry from "@xpfw/validate"
+} from "@xpfw/data"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { getTimeSteps, StatRegistry } from "@xpfw/dm"
+import { getRandomApp } from "@xpfw/test-util"
 import "isomorphic-fetch"
 import { cloneDeep } from "lodash"
+import * as MockDate from "mockdate"
 import * as momentA from "moment"
 import * as React from "react"
 import StatStore from "../store/stat"
@@ -17,13 +17,16 @@ import {
 import render from "../testUtil/render"
 import statServiceConfigurator from "../testUtil/statService"
 import SharedStatWrapper from "./stat"
+import useStat from "./stat"
+
+MockDate.set(new Date(2014, 2, 1))
+
 const moment = momentA
 
 BackendClient.client = FeathersClient
 
 test("makeStat timeStep test", async () => {
   const collection = timeStepForm.collection
-  ValidationRegistry.registerForm(timeStepForm)
   const appRef = await getRandomApp(collection, false, BackendClient.client, false)
   appRef.app.configure(statServiceConfigurator)
   for (let i = 0; i < 250; i++) {
@@ -33,8 +36,8 @@ test("makeStat timeStep test", async () => {
         moment().subtract(i, "days").toDate() : moment().add(i, "days").toDate()
     })
   }
-  const MockEle = makeMockElement("stat")
-  const StatMock = SharedStatWrapper(MockEle)
+  const StatMock = makeMockElement("stat",
+    (props: any) => useStat(props.config, props.collection, props.useServer, props.prefix))
   const configs: any[] = [
     {msg: " noquery", stat: timeStepSum, query: {}},
     {msg: " month query", stat: timeStepSum, query: {
@@ -79,13 +82,14 @@ test("makeStat timeStep test", async () => {
   for (const useServer of [false, true]) {
     const serverString = useServer ? " online " : " local "
     for (const config of configs) {
+      StatRegistry[config.id] = config
       const origOptions = config.stat.options
       if (config.query.createdAt) {
         config.stat.options = cloneDeep(origOptions)
         config.stat.options.timeSteps = getTimeSteps(config.query.createdAt.$gte, config.query.createdAt.$lte)
       }
       await StatStore.fetchStat(collection, config.stat, config.query, false)
-      render(<StatMock collection={timeStepForm.collection} configId={config.stat.id} />,
+      render(<StatMock collection={timeStepForm.collection} config={config.stat} />,
         serverString + config.stat.id + config.msg)
       config.stat.options = origOptions
     }

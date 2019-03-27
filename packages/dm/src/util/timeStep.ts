@@ -1,5 +1,5 @@
-import {  StatType } from "@xpfw/validate"
-import { get, isNumber } from "lodash"
+import { get } from "lodash"
+import { StatType } from "../globals"
 import statTypes from "../statTypes"
 import { TimeStepCalculator } from "../typeDef"
 import getDate from "./getDate"

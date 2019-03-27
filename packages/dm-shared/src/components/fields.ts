@@ -1,21 +1,17 @@
-import { FieldType, IField } from "@xpfw/validate"
+import { ExtendedJSONSchema } from "@xpfw/form"
 import * as momentA from "moment"
 const moment: any = momentA
 
-const TimeBeginField: IField = {
-  mapTo: "$gte",
-  type: FieldType.Date,
-  validate: {
-    defaultValue: moment().startOf("month").toDate()
-  }
+const TimeBeginField: ExtendedJSONSchema = {
+  title: "$gte",
+  type: "date",
+  default: moment().startOf("month").toDate()
 }
 
-const TimeEndField: IField = {
-  mapTo: "$lte",
-  type: FieldType.Date,
-  validate: {
-    defaultValue: moment().endOf("month").toDate()
-  }
+const TimeEndField: ExtendedJSONSchema = {
+  title: "$lte",
+  type: "date",
+  default: moment().endOf("month").toDate()
 }
 
 export {

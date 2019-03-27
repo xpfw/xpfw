@@ -1,6 +1,9 @@
+import { StatType } from "./globals"
 import iterateEachInFind from "./iterateEachInFind"
 import makeStat from "./makeStat"
 import makeStatBackend from "./makeStatBackend"
+import StatRegistry from "./statRegistry"
+import { IStatConfig } from "./typeDef"
 import avgPrevTimeDistance from "./util/avgPrevTimeDistance"
 import avgTimeDistance from "./util/avgTimeDistance"
 import ensureDate from "./util/ensureDate"
@@ -21,5 +24,6 @@ export {
   avgPrevTimeDistance,
   timeStep, getTimeSteps, ensureDate,
   iterateEachInFind,
-  makeStat, makeStatBackend
+  makeStat, makeStatBackend,
+  IStatConfig, StatType, StatRegistry
 }

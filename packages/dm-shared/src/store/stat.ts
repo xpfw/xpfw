@@ -1,19 +1,14 @@
-import { makeStat } from "@xpfw/dm"
-import { BackendClient } from "@xpfw/ui-shared"
-import {
-   IStatConfig, IUiClient, prefixMaker
-} from "@xpfw/validate"
-import { get, isEqual, isFunction, isNil, isObject, set } from "lodash"
-import { autoSubscribe, AutoSubscribeStore, key, StoreBase } from "resub"
-import { IPersistableStore } from "resub-persist"
+import { BackendClient } from "@xpfw/data"
+import { IStatConfig, makeStat } from "@xpfw/dm"
+import { prependPrefix } from "@xpfw/form"
+import { get, isEqual, isNil, set } from "lodash"
+import { observable } from "mobx"
 
-@AutoSubscribeStore
-export class StatStore extends StoreBase implements IPersistableStore {
-  public name = "statData"
+export class StatStore {
   public statCollection = "stats"
+  @observable
   private stats: any = {}
   private previousQuery: any = {}
-  public getPropKeys() { return ["stats"] }
 
   public async fetchStat(collection: string, config: IStatConfig, query: any, useServer?: boolean, prefix?: string) {
     let statRes: any
@@ -22,15 +17,13 @@ export class StatStore extends StoreBase implements IPersistableStore {
         collection, config, query
       })
     } else {
-      statRes = await makeStat(BackendClient.client, collection, config, query)
+      statRes = await makeStat(BackendClient.client.find, collection, config, query)
     }
-    const valKey = `${prefixMaker(prefix)}${collection}.${config.id}`
+    const valKey = `${prependPrefix(collection, prefix)}.${config.id}`
     this.stats[valKey] = statRes
-    this.trigger(valKey)
   }
 
-  @autoSubscribe
-  public getStat(@key valuePath: string, collection: string,
+  public getStat(valuePath: string, collection: string,
                  config: IStatConfig, query: any, useServer?: boolean, prefix?: string): any {
     const value = get(this.stats, valuePath)
     const previousQuery = get(this.previousQuery, valuePath)

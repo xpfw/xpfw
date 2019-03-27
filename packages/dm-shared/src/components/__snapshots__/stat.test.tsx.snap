@@ -2,54 +2,56 @@
 
 exports[`makeStat test: Before anything 1`] = `
 Object {
+  "previousQuery": Object {},
+  "statCollection": "stats",
   "stats": Object {},
 }
 `;
 
 exports[`makeStat test: pathSum after reset 1`] = `
 <div
-  class="stat"
+  className="stat"
 >
-  {"collection":"sum","configId":"pathSum","config":{"type":"sum","options":{"itemPath":"myNum"},"id":"pathSum"},"query":{}}
+  {"config":{"type":"sum","options":{"itemPath":"myNum"},"id":"pathSum"},"query":{}}
 </div>
 `;
 
 exports[`makeStat test: pathSum local 1`] = `
 <div
-  class="stat"
+  className="stat"
 >
-  {"collection":"sum","configId":"pathSum","stat":1890,"config":{"type":"sum","options":{"itemPath":"myNum"},"id":"pathSum"},"query":{}}
+  {"stat":1890,"config":{"type":"sum","options":{"itemPath":"myNum"},"id":"pathSum"},"query":{}}
 </div>
 `;
 
 exports[`makeStat test: pathSum server 1`] = `
 <div
-  class="stat"
+  className="stat"
 >
-  {"collection":"sum","configId":"pathSum","stat":1890,"config":{"type":"sum","options":{"itemPath":"myNum"},"id":"pathSum"},"query":{}}
+  {"stat":1890,"config":{"type":"sum","options":{"itemPath":"myNum"},"id":"pathSum"},"query":{}}
 </div>
 `;
 
 exports[`makeStat test: simpleSum after reset 1`] = `
 <div
-  class="stat"
+  className="stat"
 >
-  {"collection":"sum","configId":"simpleSum","config":{"type":"sum","id":"simpleSum"},"query":{}}
+  {"config":{"type":"sum","id":"simpleSum"},"query":{}}
 </div>
 `;
 
 exports[`makeStat test: simpleSum local 1`] = `
 <div
-  class="stat"
+  className="stat"
 >
-  {"collection":"sum","configId":"simpleSum","stat":10,"config":{"type":"sum","id":"simpleSum"},"query":{}}
+  {"stat":10,"config":{"type":"sum","id":"simpleSum"},"query":{}}
 </div>
 `;
 
 exports[`makeStat test: simpleSum server 1`] = `
 <div
-  class="stat"
+  className="stat"
 >
-  {"collection":"sum","configId":"simpleSum","stat":10,"config":{"type":"sum","id":"simpleSum"},"query":{}}
+  {"stat":10,"config":{"type":"sum","id":"simpleSum"},"query":{}}
 </div>
 `;

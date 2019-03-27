@@ -1,10 +1,9 @@
-import { makeStat } from "@xpfw/dm"
-import { FormStore } from "@xpfw/form-shared"
-import { getRandomApp } from "@xpfw/test-util"
-import { FeathersClient } from "@xpfw/ui-feathers"
 import {
   BackendClient
-} from "@xpfw/ui-shared"
+} from "@xpfw/data"
+import { FeathersClient } from "@xpfw/data-feathers"
+import { makeStat } from "@xpfw/dm"
+import { getRandomApp } from "@xpfw/test-util"
 import { StatType } from "@xpfw/validate"
 import "isomorphic-fetch"
 
@@ -19,13 +18,15 @@ test("makeStat test", async () => {
       myNum: i * 42
     })
   }
-  expect(await makeStat(BackendClient.client, collection, {
-    type: StatType.sum
+  expect(await makeStat(BackendClient.client.find, collection, {
+    type: StatType.sum,
+    id: "a"
   }, {}))
     .toMatchSnapshot("regular")
-  expect(await makeStat(BackendClient.client, collection, {
+  expect(await makeStat(BackendClient.client.find, collection, {
     type: StatType.sum,
-    options: {itemPath: "myNum"}
+    options: {itemPath: "myNum"},
+    id: "b"
   }, {}))
     .toMatchSnapshot("withCoinfig")
   await appRef.cleanUp()
