@@ -4,13 +4,15 @@ const moment: any = momentA
 
 const TimeBeginField: ExtendedJSONSchema = {
   title: "$gte",
-  type: "date",
+  type: "string",
+  format: "date",
   default: moment().startOf("month").toDate()
 }
 
 const TimeEndField: ExtendedJSONSchema = {
   title: "$lte",
-  type: "date",
+  type: "string",
+  format: "date",
   default: moment().endOf("month").toDate()
 }
 

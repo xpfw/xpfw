@@ -1,5 +1,5 @@
 import { useList } from "@xpfw/data"
-import { SharedField } from "@xpfw/form"
+import { prependPrefix, SharedField } from "@xpfw/form"
 import { get } from "lodash"
 import { observer } from "mobx-react-lite"
 import * as React from "react"
@@ -11,13 +11,16 @@ const WebRelationshipSearch: React.FunctionComponent<any> = observer((props) => 
   const addId = get(props, "addId")
   const removeId = get(props, "removeId")
   const field = get(props, "schema")
-  const relList = useList(props.searchForm, undefined, props.prefix)
+  const relList = useList(props.searchForm, undefined, prependPrefix(props.prefix, "search"))
   for (const child of get(relList, "list.data", [])) {
     nameObjs.push(<WebRelationshipItem schema={field} item={child} addId={addId} removeId={removeId} isAdd />)
   }
   return (
     <div>
-      <SharedField schema={searchField} prefix={props.prefix} />
+      <SharedField
+        schema={searchField}
+        prefix={prependPrefix(props.searchForm.title, prependPrefix(props.prefix, "search"))}
+      />
       {nameObjs}
     </div>
   )

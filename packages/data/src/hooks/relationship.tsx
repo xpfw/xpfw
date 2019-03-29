@@ -26,14 +26,14 @@ const getListFormFromRelationshipField:
       }
     },
     modify: {
-      queryModifier: changeValToRegex(get(schema, "relationship.namePath"))
+      queryModifier: get(schema, "modify.queryModifier", changeValToRegex(get(schema, "relationship.namePath")))
     }
   }
 }
 
 const displayModeChanger = (mapTo: string, prefix?: string, newValue?: any) => {
   return () => {
-    FormStore.setValue(`displayMode.${mapTo}`, newValue, prefix)
+    FormStore.setValue(`displayMode.${prependPrefix(mapTo, prefix)}`, newValue)
   }
 }
 
@@ -121,7 +121,7 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
   const value: any = hookedField.value
   const collection: any = get(schema.relationship, "collection", "")
   // TODO: use prefix
-  const displayMode = FormStore.getValue(`displayMode.${mapTo}`, prefix)
+  const displayMode = FormStore.getValue(`displayMode.${prependPrefix(mapTo, prefix)}`)
   let relatedObject: any
   const searchForm = getListFormFromRelationshipField(schema)
   if (isArray(value)) {

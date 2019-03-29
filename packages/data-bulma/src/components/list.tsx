@@ -9,8 +9,8 @@ const BulmaList: React.FunctionComponent<IListHookProps> = observer((props) => {
   const listProps = useListWithProps(props)
   const fields = []
   const loading = listProps.loading
-  if (Array.isArray(listProps.list)) {
-    for (const child of listProps.list) {
+  if (listProps.list != null && Array.isArray(listProps.list.data)) {
+    for (const child of listProps.list.data) {
       const fieldContent: any[] = []
       iterateSubFields(props.schema, (key, subSchema) => {
         fieldContent.push((
