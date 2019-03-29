@@ -1,12 +1,12 @@
-import * as React from 'react'
-import BulmaHero from '../../components/hero';
-import CardColumn from '../../components/cardColumn';
-import DemoForm from '../../components/demoForm';
-import HighlightedCode from '../../components/higlight';
-import siteGlobals from '../../globals';
-import { MdSpellcheck, MdSecurity } from 'react-icons/md';
-import { FaFileAlt, FaUsers, FaPlug, FaFeather, FaBolt, FaServer } from 'react-icons/fa';
-import linkClickHandler from '../../components/linkHandler';
+import * as React from "react"
+import { FaBolt, FaChartLine, FaFeather, FaFileAlt, FaLink, FaPlug, FaRocket, FaServer, FaUsers } from "react-icons/fa"
+import { MdSecurity } from "react-icons/md"
+import CardColumn from "../../components/cardColumn"
+import DemoForm from "../../components/demoForm"
+import BulmaHero from "../../components/hero"
+import HighlightedCode from "../../components/higlight"
+import linkClickHandler from "../../components/linkHandler"
+import siteGlobals from "../../globals"
 
 class CoreIntro extends React.Component<any, any> {
   public render() {
@@ -14,61 +14,55 @@ class CoreIntro extends React.Component<any, any> {
       <div>
         <BulmaHero
           className="is-light"
-          title="Versatile Validation"
-          iconConfig={MdSpellcheck}
+          title="Supercharge your JSON-Schema!"
+          iconConfig={FaRocket}
         >
           <CardColumn
                 content={[
                   {
-                    name: "Form Definitions",
+                    name: "Forms",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        Flexible <a {...siteGlobals.externalLinkConfig} href="/docs/core/definitions.html">Form definitions</a> allow all higher level packages to do as much as possible automatically.
+                        <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/form.html"}>@xpfw/form</a> renders JSON-Schema into Forms.
                       </span>
                     ),
                     icon: FaFileAlt
                   },
                   {
-                    name: "Relationships",
+                    name: "CRUD & Relationships",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>@xpfw/ui</a> shows how relationships are modeled in definitions.
+                        <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/data.html"}>@xpfw/data</a> turns your JSON-Schema into a CRUD interfaces and adds a keyword to manage relationships.
                       </span>
                     ),
                     icon: FaUsers
                   },
                   {
+                    name: "Stats",
+                    children: (
+                      <span className={siteGlobals.contentClass} key="val">
+                        <a {...siteGlobals.externalLinkConfig} href="/docs/core/permissions.html" className={siteGlobals.linkClass}>@xpfw/dm</a> enables you quick insight into your data through small definitions.
+                      </span>
+                    ),
+                    icon: FaChartLine
+                  },
+                  {
                     name: "Permission Support",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        There's an optional permission system <a {...siteGlobals.externalLinkConfig} href="/docs/core/permissions.html">explained in the docs</a>, thats helpful if used in a backend.
+                        <a {...siteGlobals.externalLinkConfig} href="/docs/core/permissions.html" className={siteGlobals.linkClass}>@xpfw/permissions</a> is an optional permission system <a {...siteGlobals.externalLinkConfig} href="/docs/core/permissions.html">that can be integrated with any stack</a>.
                       </span>
                     ),
                     icon: MdSecurity
-                  },
-                  {
-                    name: "Roll your own stack",
-                    children: (
-                      <span className={siteGlobals.contentClass} key="val">
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-validate/`}>@xpfw/validate</a>&nbsp;
-                        exports <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>validateForm</a>&nbsp;
-                        and <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>validatePermission</a> to allow quick intergration into your own existing backend.
-                        Need to connect the UI as well? Check out <a className={siteGlobals.linkClass} href={"/docs/ui/ibackendclient.html"}>IBackendClient</a>.
-                      </span>
-                    ),
-                    icon: FaPlug
                   }
                 ]}
               />
         </BulmaHero>
         <BulmaHero
           className="is-light"
-          title="Readily Usable Stacks"
+          title="Stack Options"
           iconConfig={FaServer}
         >
-          <div className="has-text-centered is-size-4 pullUpMargin">
-            If you don't wish to adapt <i>xpfw</i> to your needs you can use the following <i>backend</i> suggestions, which work out of the box.
-          </div>
           <CardColumn
                 content={[
                   {
@@ -80,8 +74,8 @@ class CoreIntro extends React.Component<any, any> {
                           @xpfw/feathers
                         </a> hooks in a feathers application.
                         Connect to it via&nbsp;
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-ui-feathers/`}>
-                          @xpfw/ui-feathers
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-data-feathers/`}>
+                          @xpfw/data-feathers
                         </a>.
                         A full example can be found&nbsp;
                         <a {...siteGlobals.externalLinkConfig} href="/docs/backend/feathers.html">in the docs.</a>
@@ -94,18 +88,39 @@ class CoreIntro extends React.Component<any, any> {
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
                         Want an offline app? Use&nbsp;
-                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-feathers/`}>
-                          @xpfw/ui-nedb
-                        </a> to persist data in localStorage!
-                        Read&nbsp;
-                        <a {...siteGlobals.externalLinkConfig} href="/docs/backend/nedb.html">the example in the documentation</a> if you're curious!
+                        <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}data-nedb/`}>
+                          @xpfw/data-nedb
+                        </a> to persist data in the devices storage!
+                        The&nbsp;
+                        <a {...siteGlobals.externalLinkConfig} href="/docs/backend/nedb.html">example in the documentation</a> will show you how.
                       </span>
                     ),
                     icon: FaBolt
+                  },
+                  {
+                    name: "Connect your stack",
+                    children: (
+                      <span className={siteGlobals.contentClass} key="val">
+                        <a className={siteGlobals.linkClass} href={"/docs/ui/ibackendclient.html"}>IBackendClient</a>, is an interface through which @xpfw/data can be connected to any backend.
+                        The stacks below are merely suggestions!
+                      </span>
+                    ),
+                    icon: FaPlug
+                  },
+                  {
+                    name: "Integrate",
+                    children: (
+                      <span className={siteGlobals.contentClass} key="val">
+                        Integrating xpfw fully into your backend is a matter of adding two function calls to your code.&nbsp;
+                        Use <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>jsonValidator.validate</a> from @xpfw/form for schema validation&nbsp;
+                        and <a className={siteGlobals.linkClass} href={"/docs/core/backend.html"}>validatePermission</a> from @xpfw/permission for permisson checks.
+                      </span>
+                    ),
+                    icon: FaLink
                   }
                 ]}
               />
-          
+
         </BulmaHero>
       </div>
     )

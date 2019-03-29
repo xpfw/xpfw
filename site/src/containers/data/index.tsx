@@ -1,25 +1,22 @@
-import { BackendClient, ListStore } from '@xpfw/ui-shared';
-import NedbClient from '@xpfw/ui-nedb';
+import { BackendClient } from "@xpfw/data"
+import NedbClient from "@xpfw/data-nedb"
 BackendClient.client = NedbClient
-import { registerComponents } from '@xpfw/form-bulma';
+import { registerComponents } from "@xpfw/form-bulma"
 registerComponents()
-import { registerComponents as regUiComp } from '@xpfw/ui-bulma';
+import { registerComponents as regUiComp } from "@xpfw/data-bulma"
 regUiComp()
 
-
-import * as React from 'react'
-import BulmaHero from '../../components/hero';
-import CardColumn from '../../components/cardColumn';
-import UiList, { resetData } from '../../components/ui/list';
-import ChangeableMiniEdit from '../../components/ui/edit';
-import MiniCreate from "../../components/ui/create";
-import siteGlobals, { TagModel, TagCollectionModel } from '../../globals';
-import PageContainer from '../../components/pageContainer'
-import { fieldConverter } from '@xpfw/validate';
-import HighlightedCode from '../../components/higlight';
-import { relationshipCode } from '../home/actualCode';
-import { get } from "lodash"
-import { FaUsers, FaPlusCircle, FaListAlt, FaPenSquare, FaUndo, FaReact, FaUsersCog } from 'react-icons/fa';
+import * as React from "react"
+import { FaListAlt, FaPenSquare, FaPlusCircle, FaReact, FaUndo, FaUsers, FaUsersCog } from "react-icons/fa"
+import CardColumn from "../../components/cardColumn"
+import BulmaHero from "../../components/hero"
+import HighlightedCode from "../../components/higlight"
+import PageContainer from "../../components/pageContainer"
+import MiniCreate from "../../components/ui/create"
+import ChangeableMiniEdit from "../../components/ui/edit"
+import UiList, { readyData, resetData } from "../../components/ui/list"
+import siteGlobals, { TagCollectionModel, TagModel } from "../../globals"
+import { relationshipCode } from "../home/actualCode"
 
 const convertTextToNedbRegex: any = (value: any) => {
   return {
@@ -27,7 +24,6 @@ const convertTextToNedbRegex: any = (value: any) => {
   }
 }
 
-fieldConverter.textRegex = convertTextToNedbRegex
 const tc: any = TagModel.collection
 const tlc: any = TagCollectionModel.collection
 class UiPage extends React.Component<any, any> {
@@ -53,7 +49,7 @@ class UiPage extends React.Component<any, any> {
                       children: (
                         <div>
                           Create a tag that will be addable to a Tag Collection.
-                          <MiniCreate form={TagModel} prefix="create" />
+                          <MiniCreate schema={TagModel} prefix="createTag" />
                         </div>
                       ),
                       className: "is-one-quarter",
@@ -82,7 +78,7 @@ class UiPage extends React.Component<any, any> {
                       children: (
                         <div>
                           Select an Tag from the list to edit it here
-                          <ChangeableMiniEdit form={TagModel} />
+                          <ChangeableMiniEdit schema={TagModel} />
                         </div>
                       ),
                       className: "is-one-quarter",
@@ -98,7 +94,7 @@ class UiPage extends React.Component<any, any> {
                           children: (
                             <div>
                               Create Tag Collections that have relationships to the Tags above
-                              <MiniCreate form={TagCollectionModel} prefix="create" />
+                              <MiniCreate schema={TagCollectionModel} prefix="createCol" />
                             </div>
                           ),
                           className: "is-one-quarter",
@@ -127,7 +123,7 @@ class UiPage extends React.Component<any, any> {
                           children: (
                             <div>
                               Select an Item from the list to edit it here
-                              <ChangeableMiniEdit form={TagCollectionModel} />
+                              <ChangeableMiniEdit schema={TagCollectionModel} />
                             </div>
                           ),
                           className: "is-one-quarter",
@@ -148,7 +144,7 @@ class UiPage extends React.Component<any, any> {
           @xpfw/ui-native
           </a>.
         </div>
-        
+
         <CardColumn
                       className="marginTopBig"
                       content={[
@@ -181,7 +177,7 @@ class UiPage extends React.Component<any, any> {
                           icon: FaPenSquare
                         }
                       ]}
-                    />  
+                    />
         </BulmaHero>
         <BulmaHero
           className="is-light"

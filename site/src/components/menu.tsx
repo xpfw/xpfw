@@ -1,7 +1,7 @@
+import { RouterStore } from "@xpfw/router"
 import * as React from "react"
-import { RouterStore } from "@xpfw/router";
-import { FaHome, FaCogs, FaWpforms, FaCloud, FaBook, FaChartLine } from "react-icons/fa";
-import linkClickHandler from "./linkHandler";
+import { FaBook, FaChartLine, FaCloud, FaCogs, FaDatabase, FaHome, FaWpforms } from "react-icons/fa"
+import linkClickHandler from "./linkHandler"
 // import Logo from "./logo.png"
 
 class WebMenu extends React.Component<any, any> {
@@ -14,18 +14,13 @@ class WebMenu extends React.Component<any, any> {
         path: "/index.html"
       },
       {
-        icon: FaCogs,
-        name: "Core",
-        path: "/core.html"
-      },
-      {
         icon: FaWpforms,
         name: "Forms",
         path: "/form.html"
       },
       {
-        icon: FaCloud,
-        name: "UI",
+        icon: FaDatabase,
+        name: "Data",
         path: "/ui.html"
       },
       {

@@ -1,21 +1,17 @@
-import * as React from 'react'
-import { IField, getFieldsFromForm } from "@xpfw/validate"
-import { SharedField, FormStore } from '@xpfw/form-shared';
-import { RecipeModel } from '../globals';
+import { iterateSubFields, SharedField } from "@xpfw/form"
+import * as React from "react"
+import { RecipeModel } from "../globals"
 
-
-class DemoForm extends React.Component<any, any> {
-  public render() {
-    const fieldDefs = getFieldsFromForm(RecipeModel)
-    const fields = fieldDefs.map((field: IField) => {
-      return <SharedField key={field.mapTo} field={field} prefix="demo" />
-    })
-    return (
-      <div>
-        {fields}
-      </div>
-    )
-  }
+const DemoForm: React.FunctionComponent<any> = () => {
+  const fields: any[] = []
+  iterateSubFields(RecipeModel, (key, subSchema) => {
+    fields.push(<SharedField key={key} schema={subSchema} prefix="demo" />)
+  })
+  return (
+    <div>
+      {fields}
+    </div>
+  )
 }
 
 export default DemoForm
