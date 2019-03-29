@@ -32,7 +32,8 @@
     "webpack",
     "jest",
     "src/setupTests.ts",
-    "__tests__"
+    "__tests__",
+    "webpackDist"
   ],
   "types": [
     "typePatches"
