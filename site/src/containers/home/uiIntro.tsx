@@ -1,16 +1,16 @@
-import { BackendClient, ListStore } from '@xpfw/ui-shared';
-import NedbClient from '@xpfw/ui-nedb';
+import { BackendClient, ListStore } from "@xpfw/data";
+import NedbClient from "@xpfw/data-nedb";
 BackendClient.client = NedbClient
 
 import * as React from 'react'
-import BulmaHero from '../../components/hero';
+import { FaDatabase, FaListAlt, FaPenSquare, FaPlusCircle, FaUndo } from 'react-icons/fa';
 import CardColumn from '../../components/cardColumn';
-import UiList, { resetData } from '../../components/ui/list';
-import ChangeableMiniEdit from '../../components/ui/edit';
+import BulmaHero from '../../components/hero';
 import MiniCreate from "../../components/ui/create";
+import ChangeableMiniEdit from '../../components/ui/edit';
+import UiList, { resetData } from '../../components/ui/list';
 import siteGlobals from '../../globals';
 import { RecipeModel } from '../../globals';
-import { FaDatabase, FaPlusCircle, FaListAlt, FaUndo, FaPenSquare } from 'react-icons/fa';
 const rc: any = RecipeModel.collection
 class UiIntro extends React.Component<any, any> {
   public render() {
@@ -35,7 +35,7 @@ class UiIntro extends React.Component<any, any> {
                       children: (
                         <div>
                           Create Items that will appear in the list
-                          <MiniCreate form={RecipeModel} prefix="create" />
+                          <MiniCreate schema={RecipeModel} prefix="create" />
                         </div>
                       ),
                       className: "is-one-quarter",

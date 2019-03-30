@@ -484,10 +484,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^11.12.0":
-  version "11.12.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.0.tgz#ec5594728811dc2797e42396cfcdf786f2052c12"
-  integrity sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+"@types/node@*", "@types/node@^11.12.2":
+  version "11.12.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.12.2.tgz#d7f302e74b10e9801d52852137f652d9ee235da8"
+  integrity sha512-c82MtnqWB/CqqK7/zit74Ob8H1dBdV7bK+BcErwtXbe0+nUGkgzq5NTDmRW/pAv2lFtmeNmW95b0zK2hxpeklg==
 
 "@types/npm@^2.0.30":
   version "2.0.30"
@@ -515,7 +515,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.8.8":
+"@types/react@*", "@types/react@^16.8.10":
   version "16.8.10"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.10.tgz#1ccb6fde17f71a62ef055382ec68bdc379d4d8d9"
   integrity sha512-7bUQeZKP4XZH/aB4i7k1i5yuwymDu/hnLMhD9NjVZvQQH7ZUgRN3d6iu8YXzx4sN/tNr0bj8jgguk8hhObzGvA==
@@ -4920,10 +4920,10 @@ mobx-react-lite@^1.2.0:
   resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-1.2.0.tgz#c7f512f1387b70cbcfc6d9214fbff363a1f2d70b"
   integrity sha512-L1Y0BFhdan7tkw4qT48h9XY9azWawZYIsadTp6TsoWSy8IdB+XYrgSA7XU2UNmT2v5TkulwTwqimvleTdnJyCQ==
 
-mobx@^5.9.0:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.9.0.tgz#a08edd7132787f771409c9c33788a5df66ff7ce7"
-  integrity sha512-D3mY1uM3H9BP5duk5tTanrOq92yqetYKsprPJWvkKDrbs+fro59xrpWX+vtr10YoLgJIFz+a4A8lI+4YtqmCUQ==
+mobx@^5.9.0, mobx@^5.9.4:
+  version "5.9.4"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.9.4.tgz#1dee92aba33f67b7baeeb679e3bd376a12e55812"
+  integrity sha512-L9JjTX2rtQUAhCIgnHokfntNOsF14uioT9LqStf6Mya+16j56ZBe21E8Y9V59tfr2aH2kLQPD10qtCJXBuTAxw==
 
 moment@^2.24.0:
   version "2.24.0"
@@ -5973,7 +5973,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.8.5:
+react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -6009,7 +6009,7 @@ react-syntax-highlighter@^10.2.1:
     prismjs "^1.8.4"
     refractor "^2.4.1"
 
-react@^16.8.5:
+react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -7244,10 +7244,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.3.4000:
-  version "3.3.4000"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.4000.tgz#76b0f89cfdbf97827e1112d64f283f1151d6adf0"
-  integrity sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
+typescript@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.1.tgz#b6691be11a881ffa9a05765a205cb7383f3b63c6"
+  integrity sha512-3NSMb2VzDQm8oBTLH6Nj55VVtUEpe/rgkIzMir0qVoLyjDZlnMBva0U6vDiV3IH+sl/Yu6oP5QwsAQtHPmDd2Q==
 
 uberproto@^2.0.0, uberproto@^2.0.1, uberproto@^2.0.2:
   version "2.0.4"
