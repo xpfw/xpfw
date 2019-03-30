@@ -1,6 +1,6 @@
 
 import { TimeBeginField, TimeEndField } from "@xpfw/dm-shared"
-import { FormStore } from "@xpfw/form-shared"
+import { FormStore } from "@xpfw/form"
 
 const moment: any = require("moment")
 
@@ -27,8 +27,8 @@ const setToDate = (type: number) => {
     begin = moment().startOf("year").toDate()
     end = moment().endOf("year").toDate()
   }
-  FormStore.setValue(TimeBeginField.mapTo, begin)
-  FormStore.setValue(TimeEndField.mapTo, end)
+  FormStore.setValue(TimeBeginField.title, begin)
+  FormStore.setValue(TimeEndField.title, end)
 }
 
 export {

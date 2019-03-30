@@ -123,5 +123,5 @@ const siteGlobals = {
 export default siteGlobals
 export {
   TagModel, TagCollectionModel, TagName, TagDescription, Title, Tags,
-  RecipeModel, RecipeName, RecipeAuthor, RecipeDate, CreatedAt
+  RecipeModel, RecipeName, RecipeAuthor, RecipeDate, CreatedAt, TagCollectionStats
 }

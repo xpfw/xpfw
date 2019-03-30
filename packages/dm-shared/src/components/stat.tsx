@@ -13,7 +13,6 @@ const useStat = (config: IStatConfig, collection: string, useServer?: boolean, p
       $lte: ensureDate(lte)
     }
   }
-  console.log("`get stat has config", config)
   const stat: any = StatStore.getStat(
     `${prependPrefix(collection, prefix)}.${config.id}`,
     collection, config, query, useServer)
