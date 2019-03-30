@@ -105,8 +105,7 @@ const RecipeModel: ExtendedJSONSchema = {
   required: [String(RecipeName.title), String(RecipeAuthor.title)],
   properties: {
     [String(RecipeName.title)]: RecipeName,
-    [String(RecipeAuthor.title)]: RecipeAuthor,
-    [String(RecipeDate.title)]: RecipeDate
+    [String(RecipeAuthor.title)]: RecipeAuthor
   }
 }
 
