@@ -21,7 +21,7 @@ const getOriginalFormatFromType = (dateType?: string) => {
 const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) => {
   return (e: any) => {
     const value = get(e, eventKey)
-    setValue(moment(value, getOriginalFormatFromType(get(schema, "format"))).toDate())
+    setValue(moment(value, getOriginalFormatFromType(get(schema, "format"))).toISOString())
   }
 }
 const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
@@ -37,6 +37,7 @@ const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
   })
   const fieldType = get(props, "schema.type")
   let value = fieldHelper.value
+  console.log("VALUE IS", value)
   let type = "text"
   let min
   let max
@@ -53,7 +54,7 @@ const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
   } else if (format === "password") {
     type = "password"
   } else if (isDate) {
-    onChange = memo(setDate(fieldHelper.setValue, props.schema, "nativeEvent.target.value"),
+    onChange = memo(() => setDate(fieldHelper.setValue, props.schema, "nativeEvent.target.value"),
       ["setDate", JSON.stringify(props.schema), props.mapTo, props.prefix])
     if (format === "date") {
       type = "date"
@@ -62,7 +63,11 @@ const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
     } else  {
       type = "datetime-local"
     }
-    value = moment(value).format(getOriginalFormatFromType(format))
+    if (value == null) {
+      value = moment(get(props, "schema.default")).format(getOriginalFormatFromType(format))
+    } else {
+      value = moment(value).format(getOriginalFormatFromType(format))
+    }
   }
   return (
     <input
