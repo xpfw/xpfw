@@ -36,7 +36,6 @@ const createData = async (form: ExtendedJSONSchema) => {
       const creationDate = new Date()
       creationDate.setDate(i)
       FormStore.setValue(CreatedAt.title, creationDate, TagCollectionModel.title)
-      console.log("USING LIST ", list)
       const newVals = list.length > 0 ? [list[i % 10]._id, list[(i + 2) % 10]._id, list[(i + 4) % 10]._id] : []
       newVals.splice(Math.floor(Math.random() * 3) + 1)
       FormStore.setValue(Tags.title, newVals, TagCollectionModel.title)
@@ -63,15 +62,23 @@ const readyData = async (form: ExtendedJSONSchema) => {
 //   await readyData(TagCollectionModel)
 // }
 // readyAll()
+const promiseTimeout = (waitTime: number) => {
+  return new Promise((resolve) => {setTimeout(resolve, waitTime)})
+}
+
 const resetData = async (form: ExtendedJSONSchema) => {
   let total = 1
   while (total !== 0) {
     const res = await ListStore.makeQuery(form, undefined, "none")
-    if (res != null && res !== false) {
-      total = res.total
-      for (const item of res.data) {
-        const c: any = form.collection
-        await DbStore.remove(item._id, c)
+    if (res != null) {
+      if (res !== false) {
+        total = res.total
+        for (const item of res.data) {
+          const c: any = form.collection
+          await DbStore.remove(item._id, c)
+        }
+      } else {
+        await promiseTimeout(50)
       }
     } else {
       total = 0
