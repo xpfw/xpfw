@@ -20,7 +20,7 @@ export class ListStore {
     try {
       const queryObj = this.buildQueryObj(schema, mapTo, prefix)
       qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
-      if (!this.doingQuery[qKey]) {
+      if (this.doingQuery[qKey] == null || this.doingQuery[qKey] === false) {
         this.doingQuery[qKey] = true
         FormStore.setLoading(getAt, true)
         if (Array.isArray(schema.multiCollection)) {
@@ -47,8 +47,8 @@ export class ListStore {
           this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
           const retObj = {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
           this.lists[getAt] = retObj
-          FormStore.setLoading(getAt, false)
           this.doingQuery[qKey] = false
+          FormStore.setLoading(getAt, false)
           return retObj
         } else {
           const col: any = schema.collection
