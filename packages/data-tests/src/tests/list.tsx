@@ -73,12 +73,12 @@ const testList = (MockedList: any, nextPage?: Function, prevPage?: Function) => 
     render(<MockedList prefix={pre} schema={schema} />, "prefix still first if prefix unknown but query set")
     prefixedFields[String(NumberField.title)].setValue(840)
     prefixedFields[String(NameField.title)].setValue(undefined)
-    console.log("search res is", await ListStore.getList(schema, undefined, "newpre", true))
+    await ListStore.getList(schema, undefined, "newpre", true)
     // TODO: find out why number query does not work here
     render(<MockedList prefix={pre} schema={schema} />, "prefix still first if prefix unknown but query number")
 
     prefixedFields[String(NameField.title)].setValue("UNDEFINEDAAA")
-    console.log("empty search res is", await ListStore.getList(schema, undefined, "newpre", true))
+    await ListStore.getList(schema, undefined, "newpre", true)
     render(<MockedList prefix={pre} schema={schema} />, "empty result")
     render(<MockedList prefix={pre} schema={schema} defaultEntries={defaultList} />, "empty result with defaultVals but not fetched yet")
     for (const entry in defaultList) {

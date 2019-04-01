@@ -49,8 +49,7 @@ test("List filter Test", async () => {
   delete multiFormStore.collection
   multiFormStore.properties[String(RelationshipSingleField.title)] = RelationshipSingleField
   multiFormStore.multiCollection = cols
-  console.log("MUILTIFORM IS", multiFormStore)
-  FormStore.setValue(multiFormStore.title, undefined, "find")
+FormStore.setValue(multiFormStore.title, undefined, "find")
   findFields = makeSubFields(multiFormStore, multiFormStore.title, "find")
   expect(await ListStore.makeQuery(multiFormStore, undefined, "page"))
     .toMatchSnapshot("result of initial search")

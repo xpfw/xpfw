@@ -7,7 +7,6 @@ const iterateEachInFind =
 async (collection: string | string[],
        queryObj: any, findMethod: (c: string, q: any) => Promise<any>, iterator: (obj: any) => Promise<any>,
        options?: IEachInFindOptions) => {
-  console.log(`entering with collection", collection`)
   if (!isObject(queryObj)) {
     queryObj = {}
   }
@@ -15,7 +14,6 @@ async (collection: string | string[],
     collection = [collection]
   }
   const pageSize: any = get(options, "pageSize", 5)
-  console.log("Trying to iterate", collection)
   for (const col of collection) {
     let gotMorePages = true
     let currentPage = 0
