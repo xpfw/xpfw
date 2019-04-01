@@ -4,11 +4,12 @@ MockDate.set(new Date(4, 2, 0))
 
 import { FeathersClient } from "@xpfw/data-feathers"
 import { toJS } from "@xpfw/data-tests"
-import { FormStore } from "@xpfw/form"
+import { addTimeStamp } from "@xpfw/form"
 import { makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
 import { get } from "lodash"
 import BackendClient from "../client"
+import { addUserId } from "../util/modifiers"
 import DbStore from "./db"
 import UserStore from "./user"
 
@@ -27,7 +28,7 @@ test("DbStore Create Test", async () => {
     addCreatedAt: true,
     addBelongsTo: true
   }
-  NumberAndRequiredTextSchema.modify = opts
+  NumberAndRequiredTextSchema.modify = [addTimeStamp("createdAt"), addUserId("belongsTo")]
   const createdObject = await DbStore.create(NumberAndRequiredTextSchema)
   expect(toJS(DbStore)).toMatchSnapshot("After calling create")
   const col: any = NumberAndRequiredTextSchema.collection

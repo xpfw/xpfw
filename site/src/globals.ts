@@ -41,9 +41,7 @@ const Tags: ExtendedJSONSchema = {
     collection: TagModel.collection,
     idPath: "_id"
   },
-  modify: {
-    queryModifier: changeValToRegex(String(TagName.title))
-  }
+  modify: changeValToRegex(String(TagName.title))
 }
 
 const TagCollectionStats = [{

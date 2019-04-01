@@ -27,7 +27,6 @@ export interface IListHookProps {
 }
 
 const useList = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: IListOptions) => {
-  const queryObj = ListStore.buildQueryObj(schema, mapTo, prefix, true)
   if (mapTo == null) {
     mapTo = getMapTo(schema, mapTo)
   }
@@ -53,7 +52,6 @@ const useList = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, op
     list,
     loading,
     currentPage, maxPage,
-    queryData: queryObj,
     showNextPage: currentPage < maxPage - 1,
     showPrevPage: currentPage > 0,
     prevPage: memo(() => prevPage(schema, mapTo, prefix), ["prevPage", mapTo, prefix, JSON.stringify(schema)]),

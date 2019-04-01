@@ -1,4 +1,4 @@
-import { ExtendedJSONSchema, FormStore, getMapTo, IFieldProps, memo, prependPrefix, useField, useFieldWithValidation } from "@xpfw/form"
+import { ExtendedJSONSchema, FormStore, getMapTo, IFieldProps, memo, ModifyFunction, prependPrefix, useField, useFieldWithValidation } from "@xpfw/form"
 import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash"
 import { action } from "mobx"
 import dataOptions from "../options"
@@ -25,9 +25,8 @@ const getListFormFromRelationshipField:
         type: "string"
       }
     },
-    modify: {
-      queryModifier: get(schema, "modify.queryModifier", changeValToRegex(get(schema, "relationship.namePath")))
-    }
+    modify: schema.modify ? schema.modify : changeValToRegex(get(schema, "relationship.namePath"), ["find"]),
+    nameSearchField
   }
 }
 
@@ -81,28 +80,6 @@ const removeId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) =
   })
 }
 
-const searchRelated = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
-  if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
-  return async (newValue: any) => {
-    const form = getListFormFromRelationshipField(schema)
-    const value = FormStore.getValue(mapTo, prefix)
-    if (get(schema.relationship, "filterOutSelected", false) === true) {
-      const f = useField(dataOptions.idPath, prependPrefix(mapTo, prefix))
-      f.setValue({$nin: Array.isArray(value) ? value : [value]})
-    }
-    const nameField = useField(get(schema, "relationship.namePath"), prependPrefix(form.title, prefix))
-    const transformer = get(form, "relationship.nameTransform", (schema: any, v: any) => v)
-    nameField.setValue(transformer(schema, newValue))
-    const res: any = await ListStore.getList(form, undefined, prefix, true)
-    if (get(schema.relationship, "autoSelect", false) === true) {
-      if (!isNil(res) && Array.isArray(res.data) && res.data.length === 1) {
-        addId(schema, mapTo, prefix)(get(res.data[0], dataOptions.idPath))
-      }
-    }
-    return res
-  }
-}
-
 // public componentDidUpdate() {
 //   const prefix = this.props.prefix
 //   const field: any = get(this, "props.field")
@@ -142,7 +119,6 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
     value, setValue: hookedField.setValue, relatedObject, searchForm, displayMode, lastUsed,
     addId: memo(() => addId(schema, mapTo, prefix), ["addId", mapTo, prefix, autoSelect]), prefix,
     removeId: memo(() => removeId(schema, mapTo, prefix), ["removeId", mapTo, prefix, autoSelect]),
-    searchRelated: memo(() => searchRelated(schema, mapTo, prefix), ["searchRelated", mapTo, prefix, autoSelect]),
     showDisplay: memo(() => displayModeChanger(String(mapTo), prefix, true), ["showDisplay", mapTo, prefix]),
     hideDisplay: memo(() => displayModeChanger(String(mapTo), prefix, false), ["hideDisplay", mapTo, prefix])
   }
@@ -158,5 +134,5 @@ const useRelationshipWithProps = (props: IRelationshipHookProps) => useRelations
 
 export default useRelationship
 export {
-  addId, removeId, searchRelated, getListFormFromRelationshipField, useRelationshipWithProps, displayModeChanger
+  addId, removeId, getListFormFromRelationshipField, useRelationshipWithProps, displayModeChanger
 }

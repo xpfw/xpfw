@@ -37,7 +37,6 @@ const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
   })
   const fieldType = get(props, "schema.type")
   let value = fieldHelper.value
-  console.log("VALUE IS", value)
   let type = "text"
   let min
   let max

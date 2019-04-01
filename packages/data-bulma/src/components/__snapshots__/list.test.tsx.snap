@@ -6,29 +6,75 @@ Object {
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
+  "doingQuery": Object {},
   "lists": Object {
     "formModel": Object {
-      "data": Array [],
+      "data": Array [
+        Object {
+          "guestName": "0num",
+          "id": 0,
+          "myVal": 0,
+        },
+        Object {
+          "guestName": "1num",
+          "id": 1,
+          "myVal": 420,
+        },
+        Object {
+          "guestName": "2num",
+          "id": 2,
+          "myVal": 840,
+        },
+        Object {
+          "guestName": "3num",
+          "id": 3,
+          "myVal": 1260,
+        },
+        Object {
+          "guestName": "4num",
+          "id": 4,
+          "myVal": 1680,
+        },
+        Object {
+          "guestName": "5num",
+          "id": 5,
+          "myVal": 2100,
+        },
+        Object {
+          "guestName": "6num",
+          "id": 6,
+          "myVal": 2520,
+        },
+        Object {
+          "guestName": "7num",
+          "id": 7,
+          "myVal": 2940,
+        },
+        Object {
+          "guestName": "8num",
+          "id": 8,
+          "myVal": 3360,
+        },
+        Object {
+          "guestName": "9num",
+          "id": 9,
+          "myVal": 3780,
+        },
+      ],
       "limit": 10,
       "skip": 0,
-      "total": 0,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
   },
 }
@@ -102,34 +148,80 @@ exports[`DbStore Create Test: after login 1`] = `
 exports[`DbStore Create Test: after second page get 1`] = `
 Object {
   "currentPage": Object {
-    "formModel": 0,
+    "formModel": 1,
   },
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
+  "doingQuery": Object {},
   "lists": Object {
     "formModel": Object {
-      "data": Array [],
+      "data": Array [
+        Object {
+          "guestName": "10num",
+          "id": 10,
+          "myVal": 4200,
+        },
+        Object {
+          "guestName": "11num",
+          "id": 11,
+          "myVal": 4620,
+        },
+        Object {
+          "guestName": "12num",
+          "id": 12,
+          "myVal": 5040,
+        },
+        Object {
+          "guestName": "13num",
+          "id": 13,
+          "myVal": 5460,
+        },
+        Object {
+          "guestName": "14num",
+          "id": 14,
+          "myVal": 5880,
+        },
+        Object {
+          "guestName": "15num",
+          "id": 15,
+          "myVal": 6300,
+        },
+        Object {
+          "guestName": "16num",
+          "id": 16,
+          "myVal": 6720,
+        },
+        Object {
+          "guestName": "17num",
+          "id": 17,
+          "myVal": 7140,
+        },
+        Object {
+          "guestName": "18num",
+          "id": 18,
+          "myVal": 7560,
+        },
+        Object {
+          "guestName": "19num",
+          "id": 19,
+          "myVal": 7980,
+        },
+      ],
       "limit": 10,
-      "skip": 0,
-      "total": 0,
+      "skip": 10,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
   },
 }
@@ -138,34 +230,80 @@ Object {
 exports[`DbStore Create Test: after third page get 1`] = `
 Object {
   "currentPage": Object {
-    "formModel": 0,
+    "formModel": 2,
   },
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
+  "doingQuery": Object {},
   "lists": Object {
     "formModel": Object {
-      "data": Array [],
+      "data": Array [
+        Object {
+          "guestName": "20num",
+          "id": 20,
+          "myVal": 8400,
+        },
+        Object {
+          "guestName": "21num",
+          "id": 21,
+          "myVal": 8820,
+        },
+        Object {
+          "guestName": "22num",
+          "id": 22,
+          "myVal": 9240,
+        },
+        Object {
+          "guestName": "23num",
+          "id": 23,
+          "myVal": 9660,
+        },
+        Object {
+          "guestName": "24num",
+          "id": 24,
+          "myVal": 10080,
+        },
+        Object {
+          "guestName": "25num",
+          "id": 25,
+          "myVal": 10500,
+        },
+        Object {
+          "guestName": "26num",
+          "id": 26,
+          "myVal": 10920,
+        },
+        Object {
+          "guestName": "27num",
+          "id": 27,
+          "myVal": 11340,
+        },
+        Object {
+          "guestName": "28num",
+          "id": 28,
+          "myVal": 11760,
+        },
+        Object {
+          "guestName": "29num",
+          "id": 29,
+          "myVal": 12180,
+        },
+      ],
       "limit": 10,
-      "skip": 0,
-      "total": 0,
+      "skip": 20,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
   },
 }
@@ -255,7 +393,238 @@ exports[`DbStore Create Test: empty result 1`] = `
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -320,7 +689,238 @@ exports[`DbStore Create Test: empty result with defaultVals but not fetched yet 
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -385,7 +985,238 @@ exports[`DbStore Create Test: empty result with defaultVals with guaranteed fetc
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -452,8 +1283,233 @@ exports[`DbStore Create Test: list after fetch 1`] = `
     </thead>
     <tbody>
       <tr>
+        <td />
         <td>
-          Loading
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
         </td>
       </tr>
     </tbody>
@@ -494,7 +1550,7 @@ exports[`DbStore Create Test: list after fetch 1`] = `
         <a
           className="pagination-link"
         >
-          0
+          10
         </a>
       </li>
     </ul>
@@ -588,8 +1644,673 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
     </thead>
     <tbody>
       <tr>
+        <td />
         <td>
-          Loading
+          "30num"
+        </td>
+        <td>
+          12600
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "31num"
+        </td>
+        <td>
+          13020
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "32num"
+        </td>
+        <td>
+          13440
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "33num"
+        </td>
+        <td>
+          13860
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "34num"
+        </td>
+        <td>
+          14280
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "35num"
+        </td>
+        <td>
+          14700
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "36num"
+        </td>
+        <td>
+          15120
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "37num"
+        </td>
+        <td>
+          15540
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "38num"
+        </td>
+        <td>
+          15960
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "39num"
+        </td>
+        <td>
+          16380
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav
+    className="pagination is-centered"
+  >
+    <a
+      className="pagination-previous"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className="pagination-next"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+    <ul
+      className="pagination-list"
+    >
+      <li>
+        <a
+          className="pagination-link is-current"
+        >
+          4
+        </a>
+      </li>
+      <li>
+        <span
+          className="pagination-ellipsis"
+        >
+           / 
+        </span>
+      </li>
+      <li>
+        <a
+          className="pagination-link"
+        >
+          10
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`DbStore Create Test: prefix after list get 1`] = `
+Object {
+  "currentPage": Object {
+    "formModel": 2,
+  },
+  "dirtyCollections": Object {
+    "simpleTestCol": false,
+  },
+  "doingQuery": Object {},
+  "lists": Object {
+    "createpref.formModel": Object {
+      "data": Array [
+        Object {
+          "guestName": "0num",
+          "id": 0,
+          "myVal": 0,
+        },
+        Object {
+          "guestName": "1num",
+          "id": 1,
+          "myVal": 420,
+        },
+        Object {
+          "guestName": "2num",
+          "id": 2,
+          "myVal": 840,
+        },
+        Object {
+          "guestName": "3num",
+          "id": 3,
+          "myVal": 1260,
+        },
+        Object {
+          "guestName": "4num",
+          "id": 4,
+          "myVal": 1680,
+        },
+        Object {
+          "guestName": "5num",
+          "id": 5,
+          "myVal": 2100,
+        },
+        Object {
+          "guestName": "6num",
+          "id": 6,
+          "myVal": 2520,
+        },
+        Object {
+          "guestName": "7num",
+          "id": 7,
+          "myVal": 2940,
+        },
+        Object {
+          "guestName": "8num",
+          "id": 8,
+          "myVal": 3360,
+        },
+        Object {
+          "guestName": "9num",
+          "id": 9,
+          "myVal": 3780,
+        },
+      ],
+      "limit": 10,
+      "skip": 0,
+      "total": 99,
+    },
+    "formModel": Object {
+      "data": Array [
+        Object {
+          "guestName": "20num",
+          "id": 20,
+          "myVal": 8400,
+        },
+        Object {
+          "guestName": "21num",
+          "id": 21,
+          "myVal": 8820,
+        },
+        Object {
+          "guestName": "22num",
+          "id": 22,
+          "myVal": 9240,
+        },
+        Object {
+          "guestName": "23num",
+          "id": 23,
+          "myVal": 9660,
+        },
+        Object {
+          "guestName": "24num",
+          "id": 24,
+          "myVal": 10080,
+        },
+        Object {
+          "guestName": "25num",
+          "id": 25,
+          "myVal": 10500,
+        },
+        Object {
+          "guestName": "26num",
+          "id": 26,
+          "myVal": 10920,
+        },
+        Object {
+          "guestName": "27num",
+          "id": 27,
+          "myVal": 11340,
+        },
+        Object {
+          "guestName": "28num",
+          "id": 28,
+          "myVal": 11760,
+        },
+        Object {
+          "guestName": "29num",
+          "id": 29,
+          "myVal": 12180,
+        },
+      ],
+      "limit": 10,
+      "skip": 20,
+      "total": 99,
+    },
+  },
+  "makeQuery": [Function],
+  "maxPage": Object {
+    "createpref.formModel": 10,
+    "formModel": 10,
+  },
+  "pageSize": 10,
+  "previousQuery": Object {
+    "createpref.formModel": Object {
+      "$limit": 10,
+      "$skip": 0,
+    },
+    "formModel": Object {
+      "$limit": 10,
+      "$skip": 20,
+    },
+  },
+}
+`;
+
+exports[`DbStore Create Test: prefix list after fetch 1`] = `
+<div>
+  <table
+    className="table is-striped is-hoverable is-fullwidth"
+  >
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          guestName
+        </th>
+        <th>
+          myVal
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
         </td>
       </tr>
     </tbody>
@@ -630,115 +2351,7 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
         <a
           className="pagination-link"
         >
-          0
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
-`;
-
-exports[`DbStore Create Test: prefix after list get 1`] = `
-Object {
-  "currentPage": Object {
-    "formModel": 0,
-  },
-  "dirtyCollections": Object {
-    "simpleTestCol": false,
-  },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
-  "lists": Object {
-    "formModel": Object {
-      "data": Array [],
-      "limit": 10,
-      "skip": 0,
-      "total": 0,
-    },
-  },
-  "makeQuery": [Function],
-  "maxPage": Object {
-    "formModel": 0,
-  },
-  "pageSize": 10,
-  "previousQuery": Object {
-    "createpref.formModel": Object {
-      "$limit": 10,
-      "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
-    },
-    "formModel": Object {
-      "$limit": 10,
-      "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
-    },
-  },
-}
-`;
-
-exports[`DbStore Create Test: prefix list after fetch 1`] = `
-<div>
-  <table
-    className="table is-striped is-hoverable is-fullwidth"
-  >
-    <thead>
-      <tr>
-        <th>
-          ID
-        </th>
-        <th>
-          guestName
-        </th>
-        <th>
-          myVal
-        </th>
-        <th />
-      </tr>
-    </thead>
-    <tbody />
-  </table>
-  <nav
-    className="pagination is-centered"
-  >
-    <a
-      className="pagination-previous"
-      onClick={[Function]}
-    >
-      Prev
-    </a>
-    <a
-      className="pagination-next"
-      onClick={[Function]}
-    >
-      Next
-    </a>
-    <ul
-      className="pagination-list"
-    >
-      <li>
-        <a
-          className="pagination-link is-current"
-        >
-          1
-        </a>
-      </li>
-      <li>
-        <span
-          className="pagination-ellipsis"
-        >
-           / 
-        </span>
-      </li>
-      <li>
-        <a
-          className="pagination-link"
-        >
-          1
+          10
         </a>
       </li>
     </ul>
@@ -830,7 +2443,238 @@ exports[`DbStore Create Test: prefix second page 1`] = `
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -868,7 +2712,7 @@ exports[`DbStore Create Test: prefix second page 1`] = `
         <a
           className="pagination-link"
         >
-          1
+          10
         </a>
       </li>
     </ul>
@@ -895,7 +2739,238 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query num
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -960,7 +3035,238 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query set
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -1025,7 +3331,238 @@ exports[`DbStore Create Test: prefix third page 1`] = `
         <th />
       </tr>
     </thead>
-    <tbody />
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          "0num"
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "1num"
+        </td>
+        <td>
+          420
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "2num"
+        </td>
+        <td>
+          840
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "3num"
+        </td>
+        <td>
+          1260
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "4num"
+        </td>
+        <td>
+          1680
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "5num"
+        </td>
+        <td>
+          2100
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "6num"
+        </td>
+        <td>
+          2520
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "7num"
+        </td>
+        <td>
+          2940
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "8num"
+        </td>
+        <td>
+          3360
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "9num"
+        </td>
+        <td>
+          3780
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
   </table>
   <nav
     className="pagination is-centered"
@@ -1092,8 +3629,233 @@ exports[`DbStore Create Test: using prevPage back to third page 1`] = `
     </thead>
     <tbody>
       <tr>
+        <td />
         <td>
-          Loading
+          "20num"
+        </td>
+        <td>
+          8400
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "21num"
+        </td>
+        <td>
+          8820
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "22num"
+        </td>
+        <td>
+          9240
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "23num"
+        </td>
+        <td>
+          9660
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "24num"
+        </td>
+        <td>
+          10080
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "25num"
+        </td>
+        <td>
+          10500
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "26num"
+        </td>
+        <td>
+          10920
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "27num"
+        </td>
+        <td>
+          11340
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "28num"
+        </td>
+        <td>
+          11760
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          "29num"
+        </td>
+        <td>
+          12180
+        </td>
+        <td>
+          <span
+            className="has-text-danger"
+          >
+            <div>
+              <a
+                className="button is-warning"
+                onClick={[Function]}
+              >
+                Delete
+              </a>
+            </div>
+          </span>
         </td>
       </tr>
     </tbody>
@@ -1120,7 +3882,7 @@ exports[`DbStore Create Test: using prevPage back to third page 1`] = `
         <a
           className="pagination-link is-current"
         >
-          1
+          3
         </a>
       </li>
       <li>
@@ -1134,7 +3896,7 @@ exports[`DbStore Create Test: using prevPage back to third page 1`] = `
         <a
           className="pagination-link"
         >
-          0
+          10
         </a>
       </li>
     </ul>

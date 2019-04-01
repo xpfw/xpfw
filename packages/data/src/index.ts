@@ -7,7 +7,7 @@ import useEdit, { IEditHookProps, useEditWithProps } from "./hooks/edit"
 import useList, { IListHookProps, useListWithProps } from "./hooks/list"
 import useRelationship, {
   addId, displayModeChanger, getListFormFromRelationshipField, IRelationshipHookProps,
-  removeId, searchRelated, useRelationshipWithProps
+  removeId, useRelationshipWithProps
 } from "./hooks/relationship"
 import useRemove, { IRemoveHookProps, useRemoveWithProps } from "./hooks/remove"
 import useGet, { IGetHookProps, useGetWithProps } from "./hooks/show"
@@ -15,8 +15,9 @@ import dataOptions from "./options"
 import DbStore, { REMOVE_ADDON_KEY } from "./store/db"
 import ListStore from "./store/list"
 import UserStore from "./store/user"
+import { addDefaultSort, addUserId } from "./util/modifiers"
 import toJS from "./util/toJS"
-import valToRegex, { changeValToRegex } from "./util/valToRegex";
+import valToRegex, { changeValToRegex } from "./util/valToRegex"
 
 export {
   DbStore, ListStore, BackendClient, IBackendClient, IUiClient, dataOptions,
@@ -28,5 +29,5 @@ export {
   useAuth, useRelationship, toJS, valToRegex, changeValToRegex,
   UserStore, AuthForm, PwField, MailField, OwnerField, REMOVE_ADDON_KEY,
   addId, displayModeChanger, getListFormFromRelationshipField, IRelationshipHookProps,
-  removeId, searchRelated, useRelationshipWithProps
+  removeId, useRelationshipWithProps, addUserId, addDefaultSort
 }

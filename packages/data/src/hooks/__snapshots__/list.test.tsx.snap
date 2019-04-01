@@ -6,29 +6,75 @@ Object {
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
+  "doingQuery": Object {},
   "lists": Object {
     "formModel": Object {
-      "data": Array [],
+      "data": Array [
+        Object {
+          "guestName": "0num",
+          "id": 0,
+          "myVal": 0,
+        },
+        Object {
+          "guestName": "1num",
+          "id": 1,
+          "myVal": 420,
+        },
+        Object {
+          "guestName": "2num",
+          "id": 2,
+          "myVal": 840,
+        },
+        Object {
+          "guestName": "3num",
+          "id": 3,
+          "myVal": 1260,
+        },
+        Object {
+          "guestName": "4num",
+          "id": 4,
+          "myVal": 1680,
+        },
+        Object {
+          "guestName": "5num",
+          "id": 5,
+          "myVal": 2100,
+        },
+        Object {
+          "guestName": "6num",
+          "id": 6,
+          "myVal": 2520,
+        },
+        Object {
+          "guestName": "7num",
+          "id": 7,
+          "myVal": 2940,
+        },
+        Object {
+          "guestName": "8num",
+          "id": 8,
+          "myVal": 3360,
+        },
+        Object {
+          "guestName": "9num",
+          "id": 9,
+          "myVal": 3780,
+        },
+      ],
       "limit": 10,
       "skip": 0,
-      "total": 0,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
   },
 }
@@ -46,11 +92,6 @@ exports[`DbStore Create Test: after login 1`] = `
   "loading": false,
   "currentPage": 0,
   "maxPage": 0,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -60,34 +101,80 @@ exports[`DbStore Create Test: after login 1`] = `
 exports[`DbStore Create Test: after second page get 1`] = `
 Object {
   "currentPage": Object {
-    "formModel": 0,
+    "formModel": 1,
   },
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
+  "doingQuery": Object {},
   "lists": Object {
     "formModel": Object {
-      "data": Array [],
+      "data": Array [
+        Object {
+          "guestName": "10num",
+          "id": 10,
+          "myVal": 4200,
+        },
+        Object {
+          "guestName": "11num",
+          "id": 11,
+          "myVal": 4620,
+        },
+        Object {
+          "guestName": "12num",
+          "id": 12,
+          "myVal": 5040,
+        },
+        Object {
+          "guestName": "13num",
+          "id": 13,
+          "myVal": 5460,
+        },
+        Object {
+          "guestName": "14num",
+          "id": 14,
+          "myVal": 5880,
+        },
+        Object {
+          "guestName": "15num",
+          "id": 15,
+          "myVal": 6300,
+        },
+        Object {
+          "guestName": "16num",
+          "id": 16,
+          "myVal": 6720,
+        },
+        Object {
+          "guestName": "17num",
+          "id": 17,
+          "myVal": 7140,
+        },
+        Object {
+          "guestName": "18num",
+          "id": 18,
+          "myVal": 7560,
+        },
+        Object {
+          "guestName": "19num",
+          "id": 19,
+          "myVal": 7980,
+        },
+      ],
       "limit": 10,
-      "skip": 0,
-      "total": 0,
+      "skip": 10,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
   },
 }
@@ -96,34 +183,80 @@ Object {
 exports[`DbStore Create Test: after third page get 1`] = `
 Object {
   "currentPage": Object {
-    "formModel": 0,
+    "formModel": 2,
   },
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
-  "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-  },
+  "doingQuery": Object {},
   "lists": Object {
     "formModel": Object {
-      "data": Array [],
+      "data": Array [
+        Object {
+          "guestName": "20num",
+          "id": 20,
+          "myVal": 8400,
+        },
+        Object {
+          "guestName": "21num",
+          "id": 21,
+          "myVal": 8820,
+        },
+        Object {
+          "guestName": "22num",
+          "id": 22,
+          "myVal": 9240,
+        },
+        Object {
+          "guestName": "23num",
+          "id": 23,
+          "myVal": 9660,
+        },
+        Object {
+          "guestName": "24num",
+          "id": 24,
+          "myVal": 10080,
+        },
+        Object {
+          "guestName": "25num",
+          "id": 25,
+          "myVal": 10500,
+        },
+        Object {
+          "guestName": "26num",
+          "id": 26,
+          "myVal": 10920,
+        },
+        Object {
+          "guestName": "27num",
+          "id": 27,
+          "myVal": 11340,
+        },
+        Object {
+          "guestName": "28num",
+          "id": 28,
+          "myVal": 11760,
+        },
+        Object {
+          "guestName": "29num",
+          "id": 29,
+          "myVal": 12180,
+        },
+      ],
       "limit": 10,
-      "skip": 0,
-      "total": 0,
+      "skip": 20,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
   },
 }
@@ -134,11 +267,6 @@ exports[`DbStore Create Test: before login 1`] = `
   {
   "currentPage": 0,
   "maxPage": 1,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -208,11 +336,6 @@ exports[`DbStore Create Test: empty result 1`] = `
   "loading": false,
   "currentPage": 0,
   "maxPage": 10,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": true,
   "showPrevPage": false
 }
@@ -282,11 +405,6 @@ exports[`DbStore Create Test: empty result with defaultVals but not fetched yet 
   "loading": false,
   "currentPage": 0,
   "maxPage": 10,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": true,
   "showPrevPage": false
 }
@@ -356,11 +474,6 @@ exports[`DbStore Create Test: empty result with defaultVals with guaranteed fetc
   "loading": false,
   "currentPage": 0,
   "maxPage": 10,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": true,
   "showPrevPage": false
 }
@@ -371,20 +484,66 @@ exports[`DbStore Create Test: list after fetch 1`] = `
 <div>
   {
   "list": {
-    "total": 0,
+    "total": 99,
     "limit": 10,
     "skip": 0,
-    "data": []
+    "data": [
+      {
+        "guestName": "0num",
+        "myVal": 0,
+        "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
+      },
+      {
+        "guestName": "2num",
+        "myVal": 840,
+        "id": 2
+      },
+      {
+        "guestName": "3num",
+        "myVal": 1260,
+        "id": 3
+      },
+      {
+        "guestName": "4num",
+        "myVal": 1680,
+        "id": 4
+      },
+      {
+        "guestName": "5num",
+        "myVal": 2100,
+        "id": 5
+      },
+      {
+        "guestName": "6num",
+        "myVal": 2520,
+        "id": 6
+      },
+      {
+        "guestName": "7num",
+        "myVal": 2940,
+        "id": 7
+      },
+      {
+        "guestName": "8num",
+        "myVal": 3360,
+        "id": 8
+      },
+      {
+        "guestName": "9num",
+        "myVal": 3780,
+        "id": 9
+      }
+    ]
   },
-  "loading": true,
+  "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
-  "showNextPage": false,
+  "maxPage": 10,
+  "showNextPage": true,
   "showPrevPage": false
 }
 </div>
@@ -402,11 +561,6 @@ exports[`DbStore Create Test: list before fetch 1`] = `
   "loading": false,
   "currentPage": 0,
   "maxPage": 0,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -417,21 +571,67 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
 <div>
   {
   "list": {
-    "total": 0,
+    "total": 99,
     "limit": 10,
-    "skip": 0,
-    "data": []
+    "skip": 20,
+    "data": [
+      {
+        "guestName": "20num",
+        "myVal": 8400,
+        "id": 20
+      },
+      {
+        "guestName": "21num",
+        "myVal": 8820,
+        "id": 21
+      },
+      {
+        "guestName": "22num",
+        "myVal": 9240,
+        "id": 22
+      },
+      {
+        "guestName": "23num",
+        "myVal": 9660,
+        "id": 23
+      },
+      {
+        "guestName": "24num",
+        "myVal": 10080,
+        "id": 24
+      },
+      {
+        "guestName": "25num",
+        "myVal": 10500,
+        "id": 25
+      },
+      {
+        "guestName": "26num",
+        "myVal": 10920,
+        "id": 26
+      },
+      {
+        "guestName": "27num",
+        "myVal": 11340,
+        "id": 27
+      },
+      {
+        "guestName": "28num",
+        "myVal": 11760,
+        "id": 28
+      },
+      {
+        "guestName": "29num",
+        "myVal": 12180,
+        "id": 29
+      }
+    ]
   },
-  "loading": true,
-  "currentPage": 0,
-  "maxPage": 0,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
-  "showNextPage": false,
-  "showPrevPage": false
+  "loading": false,
+  "currentPage": 2,
+  "maxPage": 10,
+  "showNextPage": true,
+  "showPrevPage": true
 }
 </div>
 `;
@@ -439,44 +639,150 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
 exports[`DbStore Create Test: prefix after list get 1`] = `
 Object {
   "currentPage": Object {
-    "formModel": 0,
+    "formModel": 2,
     "undefined": 0,
   },
   "dirtyCollections": Object {
     "simpleTestCol": false,
   },
   "doingQuery": Object {
-    "undefinedsimpleTestCol{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": true,
-    "undefinedundefined{\\"$limit\\":10,\\"$skip\\":0,\\"$sort\\":{\\"createdAt\\":-1}}": false,
-    "undefinedundefined{\\"$limit\\":10,\\"$skip\\":10,\\"$sort\\":{\\"createdAt\\":-1}}": false,
+    "undefinedundefined{\\"$limit\\":10,\\"$skip\\":0}": Object {
+      "cancel": [Function],
+    },
+    "undefinedundefined{\\"$limit\\":10,\\"$skip\\":10}": Object {
+      "cancel": [Function],
+    },
   },
   "lists": Object {
-    "formModel": Object {
-      "data": Array [],
+    "createpref.formModel": Object {
+      "data": Array [
+        Object {
+          "guestName": "0num",
+          "id": 0,
+          "myVal": 0,
+        },
+        Object {
+          "guestName": "1num",
+          "id": 1,
+          "myVal": 420,
+        },
+        Object {
+          "guestName": "2num",
+          "id": 2,
+          "myVal": 840,
+        },
+        Object {
+          "guestName": "3num",
+          "id": 3,
+          "myVal": 1260,
+        },
+        Object {
+          "guestName": "4num",
+          "id": 4,
+          "myVal": 1680,
+        },
+        Object {
+          "guestName": "5num",
+          "id": 5,
+          "myVal": 2100,
+        },
+        Object {
+          "guestName": "6num",
+          "id": 6,
+          "myVal": 2520,
+        },
+        Object {
+          "guestName": "7num",
+          "id": 7,
+          "myVal": 2940,
+        },
+        Object {
+          "guestName": "8num",
+          "id": 8,
+          "myVal": 3360,
+        },
+        Object {
+          "guestName": "9num",
+          "id": 9,
+          "myVal": 3780,
+        },
+      ],
       "limit": 10,
       "skip": 0,
-      "total": 0,
+      "total": 99,
+    },
+    "formModel": Object {
+      "data": Array [
+        Object {
+          "guestName": "20num",
+          "id": 20,
+          "myVal": 8400,
+        },
+        Object {
+          "guestName": "21num",
+          "id": 21,
+          "myVal": 8820,
+        },
+        Object {
+          "guestName": "22num",
+          "id": 22,
+          "myVal": 9240,
+        },
+        Object {
+          "guestName": "23num",
+          "id": 23,
+          "myVal": 9660,
+        },
+        Object {
+          "guestName": "24num",
+          "id": 24,
+          "myVal": 10080,
+        },
+        Object {
+          "guestName": "25num",
+          "id": 25,
+          "myVal": 10500,
+        },
+        Object {
+          "guestName": "26num",
+          "id": 26,
+          "myVal": 10920,
+        },
+        Object {
+          "guestName": "27num",
+          "id": 27,
+          "myVal": 11340,
+        },
+        Object {
+          "guestName": "28num",
+          "id": 28,
+          "myVal": 11760,
+        },
+        Object {
+          "guestName": "29num",
+          "id": 29,
+          "myVal": 12180,
+        },
+      ],
+      "limit": 10,
+      "skip": 20,
+      "total": 99,
     },
   },
   "makeQuery": [Function],
   "maxPage": Object {
-    "formModel": 0,
+    "createpref.formModel": 10,
+    "formModel": 10,
   },
   "pageSize": 10,
   "previousQuery": Object {
     "createpref.formModel": Object {
       "$limit": 10,
       "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
     },
     "formModel": Object {
       "$limit": 10,
-      "$skip": 0,
-      "$sort": Object {
-        "createdAt": -1,
-      },
+      "$skip": 20,
     },
   },
 }
@@ -485,14 +791,67 @@ Object {
 exports[`DbStore Create Test: prefix list after fetch 1`] = `
 <div>
   {
-  "currentPage": 0,
-  "maxPage": 1,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
+  "list": {
+    "total": 99,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "guestName": "0num",
+        "myVal": 0,
+        "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
+      },
+      {
+        "guestName": "2num",
+        "myVal": 840,
+        "id": 2
+      },
+      {
+        "guestName": "3num",
+        "myVal": 1260,
+        "id": 3
+      },
+      {
+        "guestName": "4num",
+        "myVal": 1680,
+        "id": 4
+      },
+      {
+        "guestName": "5num",
+        "myVal": 2100,
+        "id": 5
+      },
+      {
+        "guestName": "6num",
+        "myVal": 2520,
+        "id": 6
+      },
+      {
+        "guestName": "7num",
+        "myVal": 2940,
+        "id": 7
+      },
+      {
+        "guestName": "8num",
+        "myVal": 3360,
+        "id": 8
+      },
+      {
+        "guestName": "9num",
+        "myVal": 3780,
+        "id": 9
+      }
+    ]
   },
-  "showNextPage": false,
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 10,
+  "showNextPage": true,
   "showPrevPage": false
 }
 </div>
@@ -503,11 +862,6 @@ exports[`DbStore Create Test: prefix list before fetch 1`] = `
   {
   "currentPage": 0,
   "maxPage": 1,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -517,14 +871,66 @@ exports[`DbStore Create Test: prefix list before fetch 1`] = `
 exports[`DbStore Create Test: prefix second page 1`] = `
 <div>
   {
-  "currentPage": 0,
-  "maxPage": 1,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
+  "list": {
+    "total": 99,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "guestName": "0num",
+        "myVal": 0,
+        "id": 0
+      },
+      {
+        "guestName": "1num",
+        "myVal": 420,
+        "id": 1
+      },
+      {
+        "guestName": "2num",
+        "myVal": 840,
+        "id": 2
+      },
+      {
+        "guestName": "3num",
+        "myVal": 1260,
+        "id": 3
+      },
+      {
+        "guestName": "4num",
+        "myVal": 1680,
+        "id": 4
+      },
+      {
+        "guestName": "5num",
+        "myVal": 2100,
+        "id": 5
+      },
+      {
+        "guestName": "6num",
+        "myVal": 2520,
+        "id": 6
+      },
+      {
+        "guestName": "7num",
+        "myVal": 2940,
+        "id": 7
+      },
+      {
+        "guestName": "8num",
+        "myVal": 3360,
+        "id": 8
+      },
+      {
+        "guestName": "9num",
+        "myVal": 3780,
+        "id": 9
+      }
+    ]
   },
-  "showNextPage": false,
+  "currentPage": 0,
+  "maxPage": 10,
+  "showNextPage": true,
   "showPrevPage": false
 }
 </div>
@@ -593,11 +999,6 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query num
   "loading": false,
   "currentPage": 0,
   "maxPage": 10,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": true,
   "showPrevPage": false
 }
@@ -667,11 +1068,6 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query set
   "loading": false,
   "currentPage": 0,
   "maxPage": 10,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": true,
   "showPrevPage": false
 }
@@ -740,11 +1136,6 @@ exports[`DbStore Create Test: prefix third page 1`] = `
   },
   "currentPage": 0,
   "maxPage": 10,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
   "showNextPage": true,
   "showPrevPage": false
 }
@@ -755,21 +1146,67 @@ exports[`DbStore Create Test: using prevPage back to third page 1`] = `
 <div>
   {
   "list": {
-    "total": 0,
+    "total": 99,
     "limit": 10,
-    "skip": 0,
-    "data": []
+    "skip": 20,
+    "data": [
+      {
+        "guestName": "20num",
+        "myVal": 8400,
+        "id": 20
+      },
+      {
+        "guestName": "21num",
+        "myVal": 8820,
+        "id": 21
+      },
+      {
+        "guestName": "22num",
+        "myVal": 9240,
+        "id": 22
+      },
+      {
+        "guestName": "23num",
+        "myVal": 9660,
+        "id": 23
+      },
+      {
+        "guestName": "24num",
+        "myVal": 10080,
+        "id": 24
+      },
+      {
+        "guestName": "25num",
+        "myVal": 10500,
+        "id": 25
+      },
+      {
+        "guestName": "26num",
+        "myVal": 10920,
+        "id": 26
+      },
+      {
+        "guestName": "27num",
+        "myVal": 11340,
+        "id": 27
+      },
+      {
+        "guestName": "28num",
+        "myVal": 11760,
+        "id": 28
+      },
+      {
+        "guestName": "29num",
+        "myVal": 12180,
+        "id": 29
+      }
+    ]
   },
   "loading": true,
-  "currentPage": 0,
-  "maxPage": 0,
-  "queryData": {
-    "$sort": {
-      "createdAt": -1
-    }
-  },
-  "showNextPage": false,
-  "showPrevPage": false
+  "currentPage": 2,
+  "maxPage": 10,
+  "showNextPage": true,
+  "showPrevPage": true
 }
 </div>
 `;

@@ -1,4 +1,4 @@
-import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
+import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix, useModifier } from "@xpfw/form"
 import { get } from "lodash"
 import { action, flow, observable } from "mobx"
 import BackendClient from "../client"
@@ -6,7 +6,6 @@ import dataOptions from "../options"
 import ListStore from "../store/list"
 import jsonPatchToMongoDb from "../util/jsonPatchToMongoDb"
 import toJS from "../util/toJS"
-import UserStore from "./user"
 
 const FETCH_THRESHOLD = 1000 * 60 * 3
 const REMOVE_ADDON_KEY = "remove"
@@ -107,14 +106,9 @@ export class DbStoreClass {
     mapTo = getMapTo(schema, mapTo)
     const saveResultAt = prependPrefix(mapTo, prefix)
     try {
-      const data = FormStore.getValue(mapTo, prefix)
-      if (get(schema, "modify.addCreatedAt", false)) {
-        data.createdAt = new Date()
-      }
-      if (get(schema, "modify.addBelongsTo", false)) {
-        data.belongsTo = get(UserStore.getUser(), dataOptions.idPath)
-      }
       FormStore.setLoading(saveResultAt, true)
+      const data = await useModifier(toJS(FormStore.getValue(mapTo, prefix)), schema, "create")
+      // add withfunction modification
       const col: any = schema.collection
       const result = await BackendClient.client.create(col, data)
       this.createState[saveResultAt] = result
@@ -135,14 +129,16 @@ export class DbStoreClass {
     try {
       FormStore.setLoading(saveResultAt, true)
       const col = String(schema.collection)
-      let valueToSubmit = toJS(FormStore.getValue(mapTo, prefix))
+      let valueToSubmit = await useModifier(toJS(FormStore.getValue(mapTo, prefix)), schema, "update")
       if (dataOptions.onlyPatchDiffs) {
         const compare = require("fast-json-patch").compare
-        const orig = await DbStore.getGetState(id, col, false)
-        delete valueToSubmit[dataOptions.idPath]
-        delete orig[dataOptions.idPath]
-        const diff = compare(orig, valueToSubmit)
-        valueToSubmit = jsonPatchToMongoDb(diff)
+        const orig = DbStore.getGetState(id, col, false)
+        if (valueToSubmit != null && orig != null) {
+          delete valueToSubmit[dataOptions.idPath]
+          delete orig[dataOptions.idPath]
+          const diff = compare(orig, valueToSubmit)
+          valueToSubmit = jsonPatchToMongoDb(diff)
+        }
       }
       const result = await BackendClient.client.patch(col, id, valueToSubmit)
       this.updateState[saveResultAt] = result

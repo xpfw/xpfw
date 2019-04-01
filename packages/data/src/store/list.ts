@@ -1,4 +1,5 @@
-import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix } from "@xpfw/form"
+import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix, useModifier } from "@xpfw/form"
+import { AnyAaaaRecord } from "dns"
 import { get, isEqual, isNil, isNumber } from "lodash"
 import { action, flow, observable, toJS } from "mobx"
 import BackendClient from "../client"
@@ -17,58 +18,60 @@ export class ListStore {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
     let qKey: any
-    try {
-      const queryObj = this.buildQueryObj(schema, mapTo, prefix)
-      qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
-      if (this.doingQuery[qKey] == null || this.doingQuery[qKey] === false) {
-        this.doingQuery[qKey] = true
-        FormStore.setLoading(getAt, true)
-        if (Array.isArray(schema.multiCollection)) {
-          const resList: any[] = []
-          const promises: any[] = []
-          let biggestTotal = 0
-          for (const col of schema.multiCollection) {
-            promises.push(BackendClient.client.find(col, queryObj))
-          }
-          let i = 0
-          for (const promise of promises) {
-            const promiseRes: any = yield promise
-            if (promiseRes != null) {
-              if (promiseRes.total > biggestTotal) {
-                biggestTotal = promiseRes.total
-              }
-              for (const e of promiseRes.data) {
-                e.fromCollection = schema.multiCollection[i]
-                resList.push(e)
-              }
+    const queryObj = yield this.buildQueryObj(schema, mapTo, prefix)
+    qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
+    if (this.doingQuery[qKey] == null) {
+      const thisRef = this
+      const q = flow(function *(this: ListStore) {
+        try {
+          FormStore.setLoading(getAt, true)
+          if (Array.isArray(schema.multiCollection)) {
+            const resList: any[] = []
+            const promises: any[] = []
+            let biggestTotal = 0
+            for (const col of schema.multiCollection) {
+              promises.push(BackendClient.client.find(col, queryObj))
             }
-            i++
+            let i = 0
+            for (const promise of promises) {
+              const promiseRes: any = yield promise
+              if (promiseRes != null) {
+                if (promiseRes.total > biggestTotal) {
+                  biggestTotal = promiseRes.total
+                }
+                for (const e of promiseRes.data) {
+                  e.fromCollection = schema.multiCollection[i]
+                  resList.push(e)
+                }
+              }
+              i++
+            }
+            thisRef.maxPage[getAt] = Math.ceil(biggestTotal / thisRef.pageSize)
+            const retObj = {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
+            thisRef.lists[getAt] = retObj
+            delete thisRef.doingQuery[qKey]
+            FormStore.setLoading(getAt, false)
+            return retObj
+          } else {
+            const col: any = schema.collection
+            const result = yield BackendClient.client.find(col, queryObj)
+            const total = get(result, "total", 1)
+            thisRef.maxPage[getAt] = Math.ceil(total / thisRef.pageSize)
+            thisRef.lists[getAt] = result
+            delete thisRef.doingQuery[qKey]
+            FormStore.setLoading(getAt, false)
+            return result
           }
-          this.maxPage[getAt] = Math.ceil(biggestTotal / this.pageSize)
-          const retObj = {data: resList, total: biggestTotal, limit: queryObj.$limit, skip: queryObj.$skip}
-          this.lists[getAt] = retObj
-          this.doingQuery[qKey] = false
+        } catch (error) {
+          delete thisRef.doingQuery[qKey]
+          FormStore.setError(getAt, error)
           FormStore.setLoading(getAt, false)
-          return retObj
-        } else {
-          const col: any = schema.collection
-          const result = yield BackendClient.client.find(col, queryObj)
-          const total = get(result, "total", 1)
-          this.maxPage[getAt] = Math.ceil(total / this.pageSize)
-          this.lists[getAt] = result
-          this.doingQuery[qKey] = false
-          FormStore.setLoading(getAt, false)
-          return result
+          return error
         }
-      } else {
-        return Promise.resolve(false)
-      }
-    } catch (error) {
-      this.doingQuery[qKey] = false
-      FormStore.setError(getAt, error)
-      FormStore.setLoading(getAt, false)
-      return error
+      })()
+      this.doingQuery[qKey] = q
     }
+    return this.doingQuery[qKey]
   })
 
   @observable
@@ -78,21 +81,25 @@ export class ListStore {
   @observable
   private maxPage: {[index: string]: number} = {}
   @observable
-  private doingQuery: {[index: string]: boolean} = {}
+  private doingQuery: {[index: string]: Promise<any> | undefined} = {}
 
   public getList(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", awaitQuery?: boolean) {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
-    const queryObj = this.buildQueryObj(schema, mapTo, prefix)
-    const equalToPreviousQuery = isEqual(queryObj, this.previousQuery[getAt])
-    const collectionDirty = this.getIsDirty(schema)
-    if (this.lists[getAt] == null || awaitQuery || !equalToPreviousQuery || collectionDirty) {
-      this.setCollectionDirty(String(schema.collection), false)
-      this.previousQuery[getAt] = queryObj
-      const promise = this.makeQuery(schema, mapTo, prefix)
-      if (awaitQuery) {
-        return promise
+    const asyncTask = async () => {
+      const queryObj = await this.buildQueryObj(schema, mapTo, prefix)
+      const equalToPreviousQuery = isEqual(queryObj, this.previousQuery[getAt])
+      const collectionDirty = this.getIsDirty(schema)
+      if (this.lists[getAt] == null || awaitQuery || !equalToPreviousQuery || collectionDirty) {
+        this.setCollectionDirty(String(schema.collection), false)
+        this.previousQuery[getAt] = queryObj
+        return this.makeQuery(schema, mapTo, prefix)
       }
+      return Promise.resolve()
+    }
+    const promise = asyncTask()
+    if (awaitQuery) {
+      return promise
     }
     return this.lists[getAt]
   }
@@ -153,17 +160,11 @@ export class ListStore {
     return this.makeQuery(schema, mapTo, prefix)
   }
 
-  public buildQueryObj(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", noDynamicNums?: boolean) {
+  public async buildQueryObj(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", noDynamicNums?: boolean) {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
-    const queryBuilder: any = get(schema, "modify.queryBuilder")
-    const queryModifier: any = get(schema, "modify.queryModifier")
-    let queryObj: any = queryBuilder ?
-      queryBuilder.apply(FormStore, [schema, mapTo, prefix, "find"]) : FormStore.getValue(mapTo, prefix, {})
+    let queryObj: any = FormStore.getValue(mapTo, prefix, {})
     queryObj = toJS(queryObj, {exportMapsAsObjects: false, detectCycles: true, recurseEverything: true})
-    if (queryModifier) {
-      queryObj = queryModifier(queryObj)
-    }
     const currentPage = this.getCurrentPage(getAt)
     if (!noDynamicNums && isNil(queryObj.$limit)) {
         queryObj.$limit = this.pageSize
@@ -171,9 +172,7 @@ export class ListStore {
     if (!noDynamicNums && isNil(queryObj.$skip)) {
         queryObj.$skip = queryObj.$limit * currentPage
     }
-    if (isNil(queryObj.$sort)) {
-        queryObj.$sort = get(schema, "modify.defaultSort", { createdAt: -1 })
-    }
+    queryObj = await useModifier(queryObj, schema, "find")
     return queryObj
   }
 

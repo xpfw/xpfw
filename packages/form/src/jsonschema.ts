@@ -80,6 +80,8 @@ export interface IFieldVisibilityDef {
   remove?: boolean
 }
 
+export type ModifyFunction = (value: any, schema: ExtendedJSONSchema, method: string) => Promise<any>
+
 export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
   /**
    * `selectOptions` allows rendering a `<select>` in react or a `Picker` in react-native.
@@ -123,37 +125,9 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
     nameTransform?: (schema: ExtendedJSONSchema, value: any) => any
   }
   /**
-   * These are options related to modifying the object sent out by the DbStore functions
+   * Gives the ability to modify an object before submission via create, patch or find
    */
-  modify?: {
-    /**
-     * will add belongsTo in ui-shared so Permission.Owner can properly function
-     */
-    addBelongsTo?: boolean
-    /**
-     * add and display a createdAt date field
-     */
-    addCreatedAt?: boolean
-    /**
-     * Function that will return the custom built query
-     *
-     * @type {Function}
-     */
-    queryBuilder?: (form: ExtendedJSONSchema, method: string, mapTo?: string, prefix?: string) => any
-    /**
-     * gives you the possibilty to adjust a query
-     */
-    queryModifier?: (value: any) => any
-    /**
-     * The default sort for this collection
-     */
-    defaultSort?: any
-    /**
-     * Wether in the related search a $nin query on the idPath field should be included
-     * Be sure to convert the strings into ObjectIds on the server side in case you are using MongoDb!
-     */
-    filterOutById?: boolean
-  }
+  modify?: ModifyFunction | ModifyFunction[]
   /**
    * Gives the ability to hide the field in situations such as CRUD-environments like useCreate
    */
