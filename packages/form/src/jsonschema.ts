@@ -119,10 +119,6 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      * if set to true the query will contain a $nin on `dataOptions.idPath`
      */
     filterOutSelected?: boolean
-    /**
-     * gives you the ability to transform the name to e.g. a regular expression
-     */
-    nameTransform?: (schema: ExtendedJSONSchema, value: any) => any
   }
   /**
    * Gives the ability to modify an object before submission via create, patch or find

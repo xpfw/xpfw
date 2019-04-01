@@ -71,7 +71,8 @@ export class ListStore {
       })()
       this.doingQuery[qKey] = q
     }
-    return this.doingQuery[qKey]
+    const r: any = this.doingQuery[qKey]
+    return r
   })
 
   @observable

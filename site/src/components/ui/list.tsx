@@ -53,7 +53,7 @@ const createData = async (form: ExtendedJSONSchema) => {
 }
 const readyData = async (form: ExtendedJSONSchema) => {
   const res = await ListStore.makeQuery(form)
-  if (res.total === 0) {
+  if (res != null && res.total === 0) {
     await createData(form)
   }
 }

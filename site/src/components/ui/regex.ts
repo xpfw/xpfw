@@ -1,3 +1,4 @@
+import { executeForMethods } from "@xpfw/form/dist";
 import { cloneDeep } from "lodash"
 
 const valToRegex = (val: any) => {
@@ -9,15 +10,13 @@ const valToRegex = (val: any) => {
   }
 }
 
-const changeValToRegex = (path: string) => {
-  return (value: any) => {
+const changeValToRegex = (path: string, methods?: string[]) => {
+  return executeForMethods((value: any) => {
     if (value[path] != null) {
-      const newValue = cloneDeep(value)
-      newValue[path] = valToRegex(newValue[path])
-      return newValue
+      value[path] = valToRegex(value[path])
     }
-    return value
-  }
+    return Promise.resolve(value)
+  })
 }
 
 export default valToRegex
