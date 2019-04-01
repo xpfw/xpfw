@@ -1,6 +1,9 @@
 import { StatType } from "@xpfw/dm"
-import { ExtendedJSONSchema } from "@xpfw/form"
+import { executeForMethods, ExtendedJSONSchema, ModifyFunction } from "@xpfw/form"
+import { isString } from "lodash"
+import * as momentA from "moment"
 import { changeValToRegex } from "./components/ui/regex"
+const moment: any = momentA
 
 const TagName: ExtendedJSONSchema = {
   title: "tagName",
@@ -70,6 +73,15 @@ const TagCollectionStats = [{
   options: {subType: StatType.avgPrevTimeDistance, subConfig: {itemPath: `${Tags.title}.length`}}
 }]
 
+const ensureDate = (path: string, methods?: string[]) => {
+  return executeForMethods((value, schema, method) => {
+    if (isString(value[path])) {
+      value[path] = moment(value[path]).toDate()
+    }
+    return Promise.resolve(value)
+  }, methods)
+}
+
 const TagCollectionModel: ExtendedJSONSchema = {
   title: "tagColModel",
   collection: "tagCol",
@@ -78,7 +90,8 @@ const TagCollectionModel: ExtendedJSONSchema = {
     [String(Title.title)]: Title,
     [String(Tags.title)]: Tags,
     [String(CreatedAt.title)]: CreatedAt
-  }
+  },
+  modify: [ensureDate(String(CreatedAt.title), ["create", "update"])]
 }
 
 const RecipeName: ExtendedJSONSchema = {
