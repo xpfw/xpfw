@@ -1,5 +1,5 @@
 import { StatType } from "@xpfw/dm"
-import { executeForMethods, ExtendedJSONSchema, ModifyFunction } from "@xpfw/form"
+import { executeForMethods, ExtendedJSONSchema } from "@xpfw/form"
 import { isString } from "lodash"
 import * as momentA from "moment"
 import { changeValToRegex } from "./components/ui/regex"
@@ -63,14 +63,6 @@ const TagCollectionStats = [{
   id: "timeStepson",
   type: StatType.timeStep,
   options: {subType: StatType.sum, subConfig: {itemPath: `${Tags.title}.length`}}
-}, {
-  id: "timeStepMean",
-  type: StatType.timeStep,
-  options: {subType: StatType.mean, subConfig: {itemPath: `${Tags.title}.length`}}
-}, {
-  id: "timeSteppedDistance",
-  type: StatType.timeStep,
-  options: {subType: StatType.avgPrevTimeDistance, subConfig: {itemPath: `${Tags.title}.length`}}
 }]
 
 const ensureDate = (path: string, methods?: string[]) => {

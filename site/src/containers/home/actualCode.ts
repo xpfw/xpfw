@@ -1,95 +1,64 @@
-const basicFormCode =
-`import { FieldType, IField, IForm, RequiredType, ValidationRegistry } from "@xpfw/validate"
-const RecipeModel: IForm = {
-  model: "recipeModel",
-  collection: "recipes",
-  sections: [{fields: [{
-    mapTo: "name",
-    type: FieldType.Text,
-    validate: {required: {type: RequiredType.Always}}
-  }, {
-    mapTo: "createdBy",
-    type: FieldType.Text,
-    validate: {required: {type: RequiredType.Always}}
-  }, {
-    mapTo: "createdAt",
-    type: FieldType.Date
-  }]}]
-}
-ValidationRegistry.registerForm(RecipeModel)`
+import { TagCollectionStats } from "../../globals"
 
-const relationshipCode = `import { FieldType, RequiredType, IField, IForm, ValidationRegistry } from "@xpfw/validate"
-const TagName: IField = {
-  mapTo: "tagName",
-  type: FieldType.Text,
-  validate: {required: {type: RequiredType.Always}}
+const relationshipCode = `import { executeForMethods, ExtendedJSONSchema } from "@xpfw/form"
+import { changeValToRegex } from "@xpfw/data"
+import { isString } from "lodash"
+
+const TagName: ExtendedJSONSchema = {
+  title: "tagName",
+  type: "string"
 }
-const TagDescription: IField = {
-  mapTo: "description",
-  type: FieldType.Text
+const TagDescription: ExtendedJSONSchema = {
+  title: "description",
+  type: "string"
 }
-const TagModel: IForm = {
-  model: "tagModel",
+
+const TagModel: ExtendedJSONSchema = {
+  title: "tagModel",
   collection: "tags",
-  sections: [{fields: [TagName, TagDescription]}],
-  options: {
+  required: [String(TagName.title)],
+  properties: {
+    [String(TagName.title)]: TagName,
+    [String(TagDescription.title)]: TagDescription
+  }
+}
+
+const Title: ExtendedJSONSchema = {
+  title: "title",
+  type: "string"
+}
+
+const CreatedAt: ExtendedJSONSchema = {
+  title: "createdAt",
+  type: "string",
+  format: "date-time"
+}
+
+const Tags: ExtendedJSONSchema = {
+  title: "tags",
+  type: "array",
+  theme: "multi",
+  relationship: {
+    namePath: TagName.title,
+    collection: TagModel.collection,
     idPath: "_id"
-  }
+  },
+  modify: changeValToRegex(String(TagName.title))
 }
-const Title: IField = {
-  mapTo: "title",
-  type: FieldType.Text,
-  validate: {required: {type: RequiredType.Always}}
-}
-const Tags: IField = {
-  mapTo: "tags",
-  type: FieldType.RelationshipMulti,
-  validate: {
-    relationshipNamePath: TagName.mapTo,
-    relationshipCollection: TagModel.collection,
-    relationshipIdPath: "_id"
-  }
-}
-const TagCollectionModel: IForm = {
-  model: "tagColModel",
+
+const TagCollectionModel: ExtendedJSONSchema = {
+  title: "tagColModel",
   collection: "tagCol",
-  sections: [{fields: [Title, Tags]}],
-  options: {
-    idPath: "_id"
+  required: [String(Title.title)],
+  properties: {
+    [String(Title.title)]: Title,
+    [String(Tags.title)]: Tags,
+    [String(CreatedAt.title)]: CreatedAt
   }
-}
-ValidationRegistry.registerForm(TagModel)
-ValidationRegistry.registerForm(TagCollectionModel)`
+}`
 
-const statCode = `import { StatType } from "@xpfw/validate"
-import { TagCollectionModel } from "./tagModel"
-
-TagCollectionModel.stats = [{
-  id: "Some",
-  type: StatType.sum,
-  options: {itemPath: \`\${Tags.mapTo}.length\`}
-},{
-  id: "Average",
-  type: StatType.mean,
-  options: {itemPath: \`\${Tags.mapTo}.length\`}
-},{
-  id: "timeDistance",
-  type: StatType.avgPrevTimeDistance,
-  options: {itemPath: CreatedAt.mapTo}
-},{
-  id: "timeStepson",
-  type: StatType.timeStep,
-  options: {subType: StatType.sum, subConfig: {itemPath: \`\${Tags.mapTo}.length\`}}
-},{
-  id: "timeStepMean",
-  type: StatType.timeStep,
-  options: {subType: StatType.mean, subConfig: {itemPath: \`\${Tags.mapTo}.length\`}}
-},{
-  id: "timeSteppedDistance",
-  type: StatType.timeStep,
-  options: {subType: StatType.avgPrevTimeDistance, subConfig: {itemPath: \`\${Tags.mapTo}.length\`}}
-}]`
+const statCode = JSON.stringify(TagCollectionStats, undefined, 2)
 
 export {
-  basicFormCode, relationshipCode, statCode
+  relationshipCode, statCode
 }

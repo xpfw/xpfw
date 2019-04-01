@@ -35,6 +35,11 @@ class StatsPage extends React.Component<any, any> {
                   <WrappedStatShower
                     config={TagCollectionStats[1]}
                     collection={TagCollectionModel.collection}
+                  /><br />
+                  Average Time Distance between Events:
+                  <WrappedStatShower
+                    config={TagCollectionStats[2]}
+                    collection={TagCollectionModel.collection}
                   />
                 </span>
               ),
