@@ -35,7 +35,6 @@ const BulmaCreate: React.FunctionComponent<ICreateHookProps> = observer((props) 
       {msg}
     </div>
   )
-
 })
 
 export default BulmaCreate
