@@ -5,6 +5,16 @@ import {
 import { ExtendedJSONSchema } from "../jsonschema"
 import jsonValidator from "../jsonValidator"
 
+const anyOf = [
+  {type: "string"}, {type: "object", additionalProperties: {type: "string"}}
+]
+const regexSchema = {
+  properties: {
+    $regex: {anyOf},
+    $options: {anyOf}
+  }
+}
+
 const sameTypeOperators = ["$eq", "$gt", "$gte", "$lt", "$lte", "$ne"]
 const arrayQueryOperators = ["$in", "$nin"]
 const arrayWithSubFieldsOperators = ["$or", "$and"]
@@ -45,6 +55,14 @@ const validateQueryObject: (value: any, schema: ExtendedJSONSchema) => any = asy
           fieldObj[key] = fieldVal[key]
         }
         set(newObj, String(subSchema.title), fieldObj)
+      }
+      if (fieldVal != null && fieldVal.$regex != null) {
+        hadFindKeys = true
+        jsonValidator.validate(regexSchema, fieldVal)
+        if (jsonValidator.errors != null && jsonValidator.errors.length > 0) {
+          throw new Error(JSON.stringify(jsonValidator.errors))
+        }
+        set(newObj, String(subSchema.title), fieldVal)
       }
     }
   }
