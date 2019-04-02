@@ -24,7 +24,9 @@ const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) 
     setValue(moment(value, getOriginalFormatFromType(get(schema, "format"))).toISOString())
   }
 }
-const TextField: React.FunctionComponent<IFieldProps> = observer((props) => {
+const TextField: React.FunctionComponent<IFieldProps & {
+  className?: string
+}> = observer((props) => {
   switch (props.schema.format) {
     case "select": {
       return <SelectComponent {...props} />

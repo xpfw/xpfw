@@ -1,6 +1,5 @@
 import { IFieldProps } from "@xpfw/form"
 import { TextField } from "@xpfw/form-web"
-import { get } from "lodash"
 import * as React from "react"
 import FieldContainer from "./fieldWrapper"
 import SelectComponent from "./select"
@@ -15,6 +14,7 @@ const BulmaTextField: React.FunctionComponent<IFieldProps> = (props) => {
     <FieldContainer {...props}>
       <TextField
         {...props}
+        className="input"
       />
     </FieldContainer>
   )
