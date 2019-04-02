@@ -1,9 +1,9 @@
 import { StatType } from "./globals"
-import iterateEachInFind from "./iterateEachInFind"
+import iterateEachInFind, { IEachInFindOptions } from "./iterateEachInFind"
 import makeStat from "./makeStat"
 import makeStatBackend from "./makeStatBackend"
 import StatRegistry from "./statRegistry"
-import { IStatConfig } from "./typeDef"
+import { IFindMethod, IStatConfig, IChartConfig } from "./typeDef"
 import avgPrevTimeDistance from "./util/avgPrevTimeDistance"
 import avgTimeDistance from "./util/avgTimeDistance"
 import ensureDate from "./util/ensureDate"
@@ -25,5 +25,6 @@ export {
   timeStep, getTimeSteps, ensureDate,
   iterateEachInFind,
   makeStat, makeStatBackend,
-  IStatConfig, StatType, StatRegistry
+  IStatConfig, StatType, StatRegistry,
+  IEachInFindOptions, IFindMethod, IChartConfig
 }

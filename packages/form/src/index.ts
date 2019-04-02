@@ -6,6 +6,7 @@ import { ExtendedJSONSchema, JSONSchemaDefinition, ModifyFunction } from "./json
 import jsonValidator, { Ajv } from "./jsonValidator"
 import ComponentRegistry, { IFieldProps } from "./store/componentRegistry"
 import FormStore, { FormStoreClass } from "./store/form"
+import SchemaRegistry from "./store/schemaRegistry"
 import getMapToFromProps, { getMapTo } from "./util/getMapToFromProps"
 import iterateSubFields from "./util/iterateSubfields"
 import memo from "./util/memo"
@@ -17,5 +18,5 @@ export {
   useArray, useObject, ComponentRegistry, JSONSchemaDefinition, IFieldProps,
   SharedField, getMapToFromProps, memo, ExtendedJSONSchema, prependPrefix,
   getMapTo, iterateSubFields, jsonValidator, Ajv, ModifyFunction,
-  useModifier, executeForMethods, addTimeStamp
+  useModifier, executeForMethods, addTimeStamp, SchemaRegistry
 }
