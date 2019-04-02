@@ -128,4 +128,8 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
    * Gives the ability to hide the field in situations such as CRUD-environments like useCreate
    */
   hide?: IFieldVisibilityDef
+  /**
+   * use this to add your custom args
+   */
+  custom?: any
 }
