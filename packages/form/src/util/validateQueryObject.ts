@@ -1,5 +1,5 @@
 import {
-  get, intersection,
+  get, intersection, isDate,
   isNumber, keys, set,
   union } from "lodash"
 import { ExtendedJSONSchema } from "../jsonschema"
@@ -34,8 +34,16 @@ const validateQueryObject: (value: any, schema: ExtendedJSONSchema) => any = asy
         hadFindKeys = true
         const fieldObj: any = {}
         for (const key of sameTypeKeys) {
-          jsonValidator.validate(subSchema, fieldVal[key])
-          if (jsonValidator.errors != null && jsonValidator.errors.length > 0) {
+          let errors
+          if ((subSchema.format === "date" || subSchema.format === "date-time" || subSchema.format === "time") && (key == "$gte" || key == "$lte")) {
+            if (!isDate(fieldVal[key])) {
+              errors = [{"keyword":"type","dataPath":`.${subSchemaKey}`,"schemaPath":`#/properties/${subSchemaKey}/type`,"params":{"type":"date"},"message":"should be date"}]
+            }
+          } else {
+            jsonValidator.validate(subSchema, fieldVal[key])
+            errors = jsonValidator.errors
+          }
+          if (errors != null && errors.length > 0) {
             throw new Error(JSON.stringify(jsonValidator.errors))
           }
           fieldObj[key] = fieldVal[key]
