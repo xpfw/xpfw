@@ -1,5 +1,5 @@
 import { HookContext } from "@feathersjs/feathers"
-import { GeneralValidateHook, ValidateHook } from "./../typeDef"
+import { GeneralPermissionHook, PermissionHook } from "./../typeDef"
 import general from "./generalPermissionHook"
 import create from "./permissionCreate"
 import get from "./permissionGet"
@@ -7,11 +7,11 @@ import remove from "./permissionRemove"
 import update from "./permissionUpdate"
 
 const exportObj: {
-  general: GeneralValidateHook,
-  get: ValidateHook,
-  remove: ValidateHook,
-  update: ValidateHook,
-  create: ValidateHook
+  general: GeneralPermissionHook,
+  get: PermissionHook,
+  remove: PermissionHook,
+  update: PermissionHook,
+  create: PermissionHook
 } = {
   general, get, remove, update, create
 }

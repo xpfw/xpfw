@@ -1,8 +1,8 @@
 import { Method } from "../globals"
-import { ValidateHook } from "../typeDef"
+import { PermissionHook } from "../typeDef"
 import generalPermissionHook from "./generalPermissionHook"
 
-const permissionUpdate: ValidateHook = (form, params) => {
+const permissionUpdate: PermissionHook = (form, params) => {
   return generalPermissionHook(form, Method.Update, params)
 }
 

@@ -3,9 +3,9 @@ import { Hook } from "@feathersjs/feathers"
 import { Permission, validatePermission } from "@xpfw/permission"
 import { get, isString } from "lodash"
 import { Method } from "../globals"
-import { GeneralValidateHook } from "../typeDef"
+import { GeneralPermissionHook } from "../typeDef"
 
-const generalPermissionHook: GeneralValidateHook = (permissions, method, additionalOptions) => {
+const generalPermissionHook: GeneralPermissionHook = (permissions, method, additionalOptions) => {
   const getIdFrom: any = get(additionalOptions, "docIdPath", "id")
   const validationHook: Hook = async (hook) => {
     if (permissions == null) {
