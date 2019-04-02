@@ -64,6 +64,7 @@ exports[`Text Field Test: as slider field with string number 1`] = `
 
 exports[`Text Field Test: date with content 1`] = `
 <input
+  onChange={[Function]}
   type="date"
   value="2012-01-11"
 />
@@ -71,6 +72,7 @@ exports[`Text Field Test: date with content 1`] = `
 
 exports[`Text Field Test: datetime-local with content 1`] = `
 <input
+  onChange={[Function]}
   type="datetime-local"
   value="2018-02-22T07:55"
 />
@@ -78,6 +80,7 @@ exports[`Text Field Test: datetime-local with content 1`] = `
 
 exports[`Text Field Test: empty datetime-local field 1`] = `
 <input
+  onChange={[Function]}
   type="date"
   value="2011-05-05"
 />
@@ -107,6 +110,7 @@ exports[`Text Field Test: password field 1`] = `
 
 exports[`Text Field Test: time with content 1`] = `
 <input
+  onChange={[Function]}
   type="time"
   value="Invalid date"
 />
