@@ -1,3 +1,4 @@
+import PermissionRegistry from "./permissionRegistry"
 import {
   GetPermissionCustom, GetPermissions, IParameters,
   IParametersBase, IParametersCustom, IPermissionSchema,
@@ -8,5 +9,5 @@ import validatePermission from "./validatePermission"
 export {
   GetPermissionCustom, GetPermissions, IParameters,
   IParametersBase, IParametersCustom, IPermissionSchema,
-  IPermTypes, Permission, validatePermission
+  IPermTypes, Permission, validatePermission, PermissionRegistry
 }

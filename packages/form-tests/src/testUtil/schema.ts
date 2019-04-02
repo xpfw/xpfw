@@ -68,7 +68,8 @@ const NumberAndRequiredTextSchema: ExtendedJSONSchema = {
   collection: "simpleTestCol",
   properties: {
     [String(NameField.title)]: NameField,
-    [String(NumberField.title)]: NumberField
+    [String(NumberField.title)]: NumberField,
+    [String(DateField.title)]: DateField
   },
   required: [String(NameField.title)]
 }
