@@ -14,11 +14,13 @@ export class ListStore {
   @observable
   public dirtyCollections: {[index: string]: boolean | undefined} = {}
 
-  public makeQuery = flow(function *(this: ListStore, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "") {
+  public makeQuery = flow(function *(this: ListStore, schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", queryObj?: any) {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
     let qKey: any
-    const queryObj = yield this.buildQueryObj(schema, mapTo, prefix)
+    if (queryObj == null) {
+      queryObj = yield this.buildQueryObj(schema, mapTo, prefix)
+    }
     qKey = `${JSON.stringify(schema.multiCollection)}${schema.collection}${JSON.stringify(queryObj)}`
     if (this.doingQuery[qKey] == null) {
       const thisRef = this
@@ -92,9 +94,9 @@ export class ListStore {
       const equalToPreviousQuery = isEqual(queryObj, this.previousQuery[getAt])
       const collectionDirty = this.getIsDirty(schema)
       if (this.lists[getAt] == null || awaitQuery || !equalToPreviousQuery || collectionDirty) {
-        this.setCollectionDirty(String(schema.collection), false)
         this.previousQuery[getAt] = queryObj
-        return this.makeQuery(schema, mapTo, prefix)
+        this.setCollectionDirty(String(schema.collection), false)
+        return this.makeQuery(schema, mapTo, prefix, queryObj)
       }
       return Promise.resolve()
     }

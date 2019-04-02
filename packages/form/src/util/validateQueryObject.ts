@@ -14,12 +14,6 @@ const possibleQueryOperators = union(sameTypeOperators, arrayQueryOperators, arr
 // TODO:_ rewrite so not field but form is given
 const validateQueryObject: (value: any, schema: ExtendedJSONSchema) => any = async (value, schema) => {
   const newObj: any = {}
-  if (isNumber(get(value, "$limit"))) {
-    set(newObj, "$limit", get(value, "$limit"))
-  }
-  if (isNumber(get(value, "$skip"))) {
-    set(newObj, "$skip", get(value, "$skip"))
-  }
   let hadFindKeys = false
   if (schema.properties != null) {
     for (const subSchemaKey of Object.keys(schema.properties)) {
@@ -73,10 +67,19 @@ const validateQueryObject: (value: any, schema: ExtendedJSONSchema) => any = asy
   }
   if (hadFindKeys === false) {
     jsonValidator.validate(schema, value)
-    if (jsonValidator.errors != null && jsonValidator.errors.length > 0) {
-      throw new Error(JSON.stringify(jsonValidator.errors))
+    if (jsonValidator.errors != null) {
+      const errors = jsonValidator.errors.filter((err) => err.keyword !== "required")
+      if (errors.length > 0) {
+        throw new Error(JSON.stringify(jsonValidator.errors))
+      }
     }
     return value
+  }
+  if (isNumber(get(value, "$limit"))) {
+    set(newObj, "$limit", get(value, "$limit"))
+  }
+  if (isNumber(get(value, "$skip"))) {
+    set(newObj, "$skip", get(value, "$skip"))
   }
   return newObj
 }

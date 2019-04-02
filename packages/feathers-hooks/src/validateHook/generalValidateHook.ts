@@ -1,18 +1,25 @@
-import { BadRequest } from "@feathersjs/errors";
+import { BadRequest } from "@feathersjs/errors"
 import { Hook } from "@feathersjs/feathers"
 import {
   jsonValidator, validateQueryObject
 } from "@xpfw/form"
-import { get, isNil, isObject, isString, set } from "lodash"
+import { cloneDeep, get, isNil, isObject, isString, set } from "lodash"
 import { GeneralValidateHook } from "../typeDef"
 
-const generalValidateHook: GeneralValidateHook = async (schema, method, params) => {
+const generalValidateHook: GeneralValidateHook = (schema, method, params) => {
   const paste = isObject(params) ? params : {}
   const isFind = method === "find"
+  const findSchema = cloneDeep(schema)
+  if (findSchema.properties == null) {
+    findSchema.properties = {}
+  }
+  findSchema.properties.$skip = {type: "number"}
+  findSchema.properties.$limit = {type: "number"}
+  findSchema.properties.$sort = {type: "object", additionalProperties: {type: "number"}}
   const getFrom =  isFind ? "params.query" : "data"
   const validationHook: Hook = async (hook) => {
     const value = get(hook, getFrom)
-    if (isObject(value)) {
+    if (value != null) {
       const currentUser =  get(hook, "params.user")
       const idPath: any = get(paste, "idPath", "id")
       const id = get(currentUser, idPath)
@@ -21,7 +28,7 @@ const generalValidateHook: GeneralValidateHook = async (schema, method, params) 
       }
       let newVal = value
       if (isFind) {
-        newVal = await validateQueryObject(value, schema)
+        newVal = await validateQueryObject(value, findSchema)
       } else {
         jsonValidator.validate(schema, value)
         if (jsonValidator.errors != null && jsonValidator.errors.length > 0) {
