@@ -6,6 +6,12 @@ const NumberField: ExtendedJSONSchema = {
   type: "number"
 }
 
+const DateField: ExtendedJSONSchema = {
+  title: "dat",
+  type: "string",
+  format: "date-time"
+}
+
 const NumberFieldNested: ExtendedJSONSchema = {
   title: "my",
   type: "object",
@@ -32,7 +38,8 @@ const form: ExtendedJSONSchema = {
   properties: {
     [String(NumberField.title)]: NumberField,
     [String(NumberObjectField.title)]: NumberObjectField,
-    [String(NumberFieldNested.title)]: NumberFieldNested
+    [String(NumberFieldNested.title)]: NumberFieldNested,
+    [String(DateField.title)]: DateField
   }
 }
 
@@ -87,4 +94,6 @@ test("Verify validateFormWithMongoQuery", async () => {
 
   await expect(validateQueryObject({}, form))
   .resolves.toMatchSnapshot("Resolve null if nothing suiting found")
+  await expect(validateQueryObject({dat: {$lte: new Date(2010, 2, 1)}}, form))
+  .resolves.toMatchSnapshot("also allow date $lte ")
 })

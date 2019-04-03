@@ -1,6 +1,6 @@
 import {
-  get, intersection, isDate,
-  isNumber, keys, set,
+  get, intersection, isDate, isNumber,
+  isString, keys, set,
   union } from "lodash"
 import { ExtendedJSONSchema } from "../jsonschema"
 import jsonValidator from "../jsonValidator"
@@ -36,8 +36,8 @@ const validateQueryObject: (value: any, schema: ExtendedJSONSchema) => any = asy
         for (const key of sameTypeKeys) {
           let errors
           if ((subSchema.format === "date" || subSchema.format === "date-time" || subSchema.format === "time") && (key == "$gte" || key == "$lte")) {
-            if (!isDate(fieldVal[key])) {
-              errors = [{"keyword":"type","dataPath":`.${subSchemaKey}`,"schemaPath":`#/properties/${subSchemaKey}/type`,"params":{"type":"date"},"message":"should be date"}]
+            if (!isDate(fieldVal[key]) && !isString(fieldVal[key])) {
+              errors = [{keyword: "type", dataPath: `.${subSchemaKey}`, schemaPath: `#/properties/${subSchemaKey}/type`, params: {type: "date"}, message: "should be date"}]
             }
           } else {
             jsonValidator.validate(subSchema, fieldVal[key])
