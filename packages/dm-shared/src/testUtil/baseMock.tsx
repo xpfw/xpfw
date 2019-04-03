@@ -5,7 +5,7 @@ const makeMockElement = (name: string, stingifier?: Function) => {
     public render() {
       return (
         <div className={name}>
-          {JSON.stringify(stingifier ? stingifier(this.props) : this.props)}
+          {JSON.stringify(stingifier ? stingifier(this.props) : this.props, undefined, 2)}
         </div>
       )
     }

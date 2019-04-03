@@ -29,7 +29,7 @@ test("makeStat test", async () => {
     })
   }
   const StatMock = makeMockElement("stat",
-    (props: any) => useStat(props.config, props.collection, props.useServer, props.prefix))
+    (props: any) => useStat(props.config, props.collection, {useServer: props.useServer}, props.prefix))
   expect(toJS(StatStore)).toMatchSnapshot("Before anything")
   await StatStore.fetchStat(collection, simpleSum, {}, false)
   render(<StatMock collection={collection} config={simpleSum} />, "simpleSum local")

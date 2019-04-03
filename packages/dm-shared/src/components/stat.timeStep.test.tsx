@@ -37,7 +37,7 @@ test("makeStat timeStep test", async () => {
     })
   }
   const StatMock = makeMockElement("stat",
-    (props: any) => useStat(props.config, props.collection, props.useServer, props.prefix))
+    (props: any) => useStat(props.config, props.collection, {useServer: props.useServer, dateQueryPath: "createdAt"}, props.prefix))
   const configs: any[] = [
     {msg: " noquery", stat: timeStepSum, query: {}},
     {msg: " month query", stat: timeStepSum, query: {
