@@ -1,16 +1,16 @@
 import { dataOptions, IUiClient } from "@xpfw/data"
-import * as nedb from "nedb"
 
 const verifyCollectionExists = (collection: string) => {
   if (NedbClient.client.dbs[collection] === undefined || NedbClient.client.dbs[collection] === null) {
-    NedbClient.client.dbs[collection] = new nedb({
+    NedbClient.client.dbs[collection] = new NedbClient.instanceCreator({
       filename: collection,
       autoload: true
     })
   }
 }
 
-const NedbClient: IUiClient = {
+const NedbClient: IUiClient & { instanceCreator: any } = {
+  instanceCreator: () => "",
   client: {
     dbs: {},
     createdCollections:  []
