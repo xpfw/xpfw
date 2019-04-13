@@ -1,14 +1,15 @@
 import { executeForMethods, ModifyFunction } from "@xpfw/form"
-import { get, isString } from "lodash"
+import { get,isString, set } from "lodash"
 import * as momentA from "moment"
 const moment: any = momentA
 
 const ensureDate = (path: string, methods?: string[]) => {
   const dateEnsurer: ModifyFunction = executeForMethods((value) => {
-    if (isString(value[path])) {
-      const parsed: any = moment(value[path])
+    const val = get(value, path)
+    if (isString(val)) {
+      const parsed: any = moment(val)
       if (parsed.isValid()) {
-        value[path] = parsed.toDate()
+        set(value, path, parsed.toDate())
       }
     }
     return Promise.resolve(value)
