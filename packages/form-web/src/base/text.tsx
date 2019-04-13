@@ -26,6 +26,7 @@ const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) 
 }
 const TextField: React.FunctionComponent<IFieldProps & {
   className?: string
+  placeholder?: string
 }> = observer((props) => {
   switch (props.schema.format) {
     case "select": {
@@ -80,6 +81,7 @@ const TextField: React.FunctionComponent<IFieldProps & {
       min={min}
       max={max}
       onChange={onChange}
+      placeholder={props.placeholder}
     />
   )
 })
