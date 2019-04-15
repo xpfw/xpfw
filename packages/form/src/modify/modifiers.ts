@@ -1,6 +1,4 @@
-import { ModifyFunction } from "@xpfw/form"
-import { get } from "lodash"
-import { ExtendedJSONSchema } from "@xpfw/form"
+import { ExtendedJSONSchema, ModifyFunction } from "../jsonschema"
 
 const useModifier =
 async (value: any, schema: ExtendedJSONSchema, method: string) => {
