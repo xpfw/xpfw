@@ -110,3 +110,11 @@ Object {
 exports[`Verify validateFormWithMongoQuery: Throw error on arrayQueryOperator if one of the types does not match 1`] = `[Error: [{"keyword":"type","dataPath":"[4]","schemaPath":"#/items/type","params":{"type":"number"},"message":"should be number"}]]`;
 
 exports[`Verify validateFormWithMongoQuery: Throw error on sameTypeOperator if types do not match 1`] = `[Error: [{"keyword":"type","dataPath":"","schemaPath":"#/type","params":{"type":"number"},"message":"should be number"}]]`;
+
+exports[`Verify validateFormWithMongoQuery: also allow date $lte  1`] = `
+Object {
+  "dat": Object {
+    "$lte": 2010-02-28T23:00:00.000Z,
+  },
+}
+`;
