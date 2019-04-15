@@ -24,6 +24,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled an
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText 2"
@@ -107,6 +108,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled bu
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText"
@@ -622,6 +624,7 @@ exports[`DbStore Create Test: after autoselectable search without option enabled
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText 2"
@@ -705,6 +708,7 @@ exports[`DbStore Create Test: after reset 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="null"
@@ -740,6 +744,7 @@ exports[`DbStore Create Test: after reset 2`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="Text"
@@ -1255,6 +1260,7 @@ exports[`DbStore Create Test: customPresearch for Text 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="Text"
@@ -1770,6 +1776,7 @@ exports[`DbStore Create Test: customPresearch for my 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="my"
@@ -2285,6 +2292,7 @@ exports[`DbStore Create Test: customPresearch for null 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="null"
@@ -2562,6 +2570,7 @@ exports[`DbStore Create Test: multi after autoselectable search with option enab
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText"
@@ -3077,6 +3086,7 @@ exports[`DbStore Create Test: multi after autoselectable search without option e
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText 2"
@@ -3692,6 +3702,7 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText 3"
@@ -3775,6 +3786,7 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="myText 5"
@@ -3858,6 +3870,7 @@ exports[`DbStore Create Test: nothing set yet 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
           />
@@ -3892,6 +3905,7 @@ exports[`DbStore Create Test: nothing yet 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
           />
@@ -3926,6 +3940,7 @@ exports[`DbStore Create Test: nothing yet 2`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
           />
@@ -3960,6 +3975,7 @@ exports[`DbStore Create Test: nothing yet 3`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
           />
@@ -3994,6 +4010,7 @@ exports[`DbStore Create Test: nothing yet 4`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
           />
@@ -4028,6 +4045,7 @@ exports[`DbStore Create Test: search for Text 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="Text"
@@ -4543,6 +4561,7 @@ exports[`DbStore Create Test: search for Text 2`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="Text"
@@ -5058,6 +5077,7 @@ exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="Text"
@@ -5573,6 +5593,7 @@ exports[`DbStore Create Test: search for my 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="my"
@@ -6088,6 +6109,7 @@ exports[`DbStore Create Test: search for my 2`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="my"
@@ -6603,6 +6625,7 @@ exports[`DbStore Create Test: search for null 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="null"
@@ -6638,6 +6661,7 @@ exports[`DbStore Create Test: search for null 2`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="null"
@@ -6868,6 +6892,7 @@ exports[`DbStore Create Test: single search for Text 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="Text"
@@ -7383,6 +7408,7 @@ exports[`DbStore Create Test: single search for my 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="my"
@@ -7898,6 +7924,7 @@ exports[`DbStore Create Test: single search for null 1`] = `
             guestName
           </label>
           <input
+            className="input"
             onChange={[Function]}
             type="text"
             value="null"

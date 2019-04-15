@@ -9,4 +9,4 @@ registerComponents()
 ComponentRegistry.registerComponent(FieldType.RelationshipSingle, NativeRelationshipSingle)
 ComponentRegistry.registerComponent(FieldType.RelationshipMulti, NativeRelationshipMulti)
 
-tests.relationship({})
+tests.relationship()

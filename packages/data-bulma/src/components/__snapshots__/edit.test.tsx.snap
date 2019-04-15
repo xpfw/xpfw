@@ -104,6 +104,7 @@ exports[`DbStore Edit Test: after create 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="myText"
@@ -118,9 +119,25 @@ exports[`DbStore Edit Test: after create 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={420}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -159,6 +176,7 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -173,9 +191,25 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -246,6 +280,7 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -260,9 +295,25 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -303,6 +354,7 @@ exports[`DbStore Edit Test: hidden in update 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -317,9 +369,25 @@ exports[`DbStore Edit Test: hidden in update 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -347,6 +415,7 @@ exports[`DbStore Edit Test: hidden text 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -361,9 +430,25 @@ exports[`DbStore Edit Test: hidden text 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -391,6 +476,7 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -405,9 +491,25 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -539,6 +641,7 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="secondOBJ"
@@ -553,9 +656,25 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={24}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -609,6 +728,7 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="secondOBJ"
@@ -623,9 +743,25 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={24}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -720,6 +856,7 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="secondOBJ"
@@ -734,9 +871,25 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={24}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -799,6 +952,7 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="secondOBJ"
@@ -813,9 +967,25 @@ exports[`DbStore Edit Test: prefix while loading 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={24}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -843,6 +1013,7 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -857,9 +1028,25 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button
@@ -897,6 +1084,7 @@ exports[`DbStore Edit Test: while loading 1`] = `
       guestName
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="text"
       value="changed"
@@ -911,9 +1099,25 @@ exports[`DbStore Edit Test: while loading 1`] = `
       myVal
     </label>
     <input
+      className="input"
       onChange={[Function]}
       type="number"
       value={240}
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      dateVal
+    </label>
+    <input
+      className="input"
+      onChange={[Function]}
+      type="date"
+      value="2011-05-05"
     />
   </div>
   <button

@@ -10,6 +10,7 @@ exports[`Text Field Test: as number field 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="number"
   />
@@ -26,6 +27,7 @@ exports[`Text Field Test: as number field with number 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="number"
     value={5432}
@@ -43,6 +45,7 @@ exports[`Text Field Test: as number field with string 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="number"
     value="gfsdfasd"
@@ -60,6 +63,7 @@ exports[`Text Field Test: as number field with string number 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="number"
     value="125"
@@ -77,6 +81,7 @@ exports[`Text Field Test: as slider field 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="range"
   />
@@ -93,6 +98,7 @@ exports[`Text Field Test: as slider field with number 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="range"
     value={5432}
@@ -110,6 +116,7 @@ exports[`Text Field Test: as slider field with string 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="range"
     value="gfsdfasd"
@@ -127,6 +134,7 @@ exports[`Text Field Test: as slider field with string number 1`] = `
     myVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="range"
     value="125"
@@ -144,6 +152,7 @@ exports[`Text Field Test: date with content 1`] = `
     dateVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="date"
     value="2012-01-11"
@@ -161,6 +170,7 @@ exports[`Text Field Test: datetime-local with content 1`] = `
     dateVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="datetime-local"
     value="2018-02-22T07:55"
@@ -178,6 +188,7 @@ exports[`Text Field Test: empty datetime-local field 1`] = `
     dateVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="date"
     value="2011-05-05"
@@ -195,6 +206,7 @@ exports[`Text Field Test: namefield 1`] = `
     guestName
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="text"
   />
@@ -211,6 +223,7 @@ exports[`Text Field Test: namefield changed va 1`] = `
     guestName
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="text"
     value="myval"
@@ -228,6 +241,7 @@ exports[`Text Field Test: password field 1`] = `
     passportWellYou
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="password"
   />
@@ -244,6 +258,7 @@ exports[`Text Field Test: time with content 1`] = `
     dateVal
   </label>
   <input
+    className="input"
     onChange={[Function]}
     type="time"
     value="Invalid date"
