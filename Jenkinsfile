@@ -8,7 +8,7 @@ pipeline {
     stage('Initializiation & Build') {
       steps {
         sh 'yarn'
-        sh 'yarn init'
+        sh 'yarn run init'
       }
     }
     stage('Test') {
