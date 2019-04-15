@@ -9,6 +9,7 @@ pipeline {
       steps {
         sh 'yarn'
         sh 'yarn run init'
+        sh 'yarn add -g jest jest-cli'
       }
     }
     stage('Test') {
