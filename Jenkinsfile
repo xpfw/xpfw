@@ -1,20 +1,18 @@
-pipeline {
-  agent {
-    docker {
-      image 'mhart/alpine-node'
-    }
-  }
-  stages {
-    stage('Initializiation & Build') {
-      steps {
-        sh 'yarn'
-        sh 'yarn run init'
-        sh 'yarn add -g jest jest-cli'
+node {
+  checkout git
+  docker.image("mongo").withRun("--net mongonet") { c ->
+    docker.image("mhart/alpine-node").inside("--net mongonet -e MONGO_URL='mongodb://${c.id}:27017'") {
+      stage('Initializiation') {
+        steps {
+          sh 'yarn'
+          sh 'yarn run init'
+          sh 'yarn add -g jest jest-cli'
+        }
       }
-    }
-    stage('Test') {
-      steps {
+      stage('Test') {
+        steps {
         sh 'yarn test'
+        }
       }
     }
   }
