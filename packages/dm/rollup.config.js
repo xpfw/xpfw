@@ -10,5 +10,5 @@ export default {
   plugins: [
     typescript({})
   ],
-  external: ["lodash", "moment"]
+  external: ["lodash", "moment", "@xpfw/form"]
 };
