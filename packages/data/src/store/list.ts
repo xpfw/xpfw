@@ -57,7 +57,7 @@ export class ListStore {
           } else {
             const col: any = schema.collection
             const result = yield BackendClient.client.find(col, queryObj)
-            const total = get(result, "total", 1)
+            const total = Math.max(get(result, "total", 1), 1)
             thisRef.maxPage[getAt] = Math.ceil(total / thisRef.pageSize)
             thisRef.lists[getAt] = result
             delete thisRef.doingQuery[qKey]
