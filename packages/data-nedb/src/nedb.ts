@@ -3,14 +3,15 @@ import { dataOptions, IUiClient } from "@xpfw/data"
 const verifyCollectionExists = (collection: string) => {
   if (NedbClient.client.dbs[collection] === undefined || NedbClient.client.dbs[collection] === null) {
     NedbClient.client.dbs[collection] = new NedbClient.instanceCreator({
-      filename: collection,
+      filename: NedbClient.onlyInMemory ? undefined : collection,
       autoload: true
     })
   }
 }
 
-const NedbClient: IUiClient & { instanceCreator: any } = {
+const NedbClient: IUiClient & { instanceCreator: any, onlyInMemory: boolean } = {
   instanceCreator: () => "",
+  onlyInMemory: false,
   client: {
     dbs: {},
     createdCollections:  []
