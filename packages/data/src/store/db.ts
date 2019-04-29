@@ -92,7 +92,7 @@ export class DbStoreClass {
         } else {
           FormStore.setValue(mapTo, toJS(result), prefix)
         }
-        return undefined
+        return result
       })()
     }
     const currentVal = FormStore.getValue(mapTo, prefix)
