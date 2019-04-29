@@ -140,7 +140,7 @@ exports[`DbStore Create Test: after login 1`] = `
         <a
           className="pagination-link"
         >
-          0
+          1
         </a>
       </li>
     </ul>
@@ -1676,7 +1676,7 @@ exports[`DbStore Create Test: list before fetch 1`] = `
         <a
           className="pagination-link"
         >
-          0
+          1
         </a>
       </li>
     </ul>

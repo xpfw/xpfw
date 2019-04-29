@@ -208,7 +208,7 @@ exports[`DbStore Create Test: after reset 1`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -513,7 +513,7 @@ exports[`DbStore Create Test: customPresearch for null 1`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -1711,7 +1711,7 @@ exports[`DbStore Create Test: search for null 1`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -1768,7 +1768,7 @@ exports[`DbStore Create Test: search for null 2`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -2084,7 +2084,7 @@ exports[`DbStore Create Test: single search for null 1`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }

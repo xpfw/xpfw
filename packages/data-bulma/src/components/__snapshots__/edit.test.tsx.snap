@@ -926,7 +926,13 @@ Object {
 }
 `;
 
-exports[`DbStore Edit Test: prefix result of edit fetch 1`] = `undefined`;
+exports[`DbStore Edit Test: prefix result of edit fetch 1`] = `
+Object {
+  "guestName": "secondOBJ",
+  "id": 1,
+  "myVal": 24,
+}
+`;
 
 exports[`DbStore Edit Test: prefix updated record 1`] = `
 Object {
@@ -1063,7 +1069,13 @@ exports[`DbStore Edit Test: resetOnMount 1`] = `
 </div>
 `;
 
-exports[`DbStore Edit Test: result of edit fetch 1`] = `undefined`;
+exports[`DbStore Edit Test: result of edit fetch 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;
 
 exports[`DbStore Edit Test: updated record 1`] = `
 Object {

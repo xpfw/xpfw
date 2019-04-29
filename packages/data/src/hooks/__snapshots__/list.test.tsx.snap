@@ -91,7 +91,7 @@ exports[`DbStore Create Test: after login 1`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }
@@ -560,7 +560,7 @@ exports[`DbStore Create Test: list before fetch 1`] = `
   },
   "loading": false,
   "currentPage": 0,
-  "maxPage": 0,
+  "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false
 }
