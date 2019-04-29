@@ -1,4 +1,5 @@
 import { dataOptions, IUiClient } from "@xpfw/data"
+import { cloneDeep } from "lodash"
 
 const verifyCollectionExists = (collection: string) => {
   if (NedbClient.client.dbs[collection] === undefined || NedbClient.client.dbs[collection] === null) {
@@ -71,13 +72,14 @@ const NedbClient: IUiClient & { instanceCreator: any, onlyInMemory: boolean } = 
   find: (collection: string, queryObj: any) => {
     verifyCollectionExists(collection)
     return new Promise((resolve, reject) => {
+      const cloneQuery = cloneDeep(queryObj)
       const limit = queryObj.$limit
-      delete queryObj.$limit
+      delete cloneQuery.$limit
       const skip = queryObj.$skip
-      delete queryObj.$skip
+      delete cloneQuery.$skip
       const sort = queryObj.$sort
-      delete queryObj.$sort
-      const findBuilder = NedbClient.client.dbs[collection].find(queryObj)
+      delete cloneQuery.$sort
+      const findBuilder = NedbClient.client.dbs[collection].find(cloneQuery)
       if (limit) {
         findBuilder.limit(limit)
       }
@@ -87,7 +89,7 @@ const NedbClient: IUiClient & { instanceCreator: any, onlyInMemory: boolean } = 
       if (sort) {
         findBuilder.sort(sort)
       }
-      NedbClient.client.dbs[collection].count(queryObj, (cErr: any, count: any) => {
+      NedbClient.client.dbs[collection].count(cloneQuery, (cErr: any, count: any) => {
         if (cErr !== null && cErr !== undefined) {
           reject(cErr)
         } else {
