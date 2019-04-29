@@ -57,6 +57,7 @@ const testList = (MockedList: any, nextPage?: Function, prevPage?: Function) => 
     render(<MockedList prefix={prefix} schema={schema} />, "prefix list before fetch")
     await ListStore.getList(schema, undefined, prefix, true)
     render(<MockedList prefix={prefix} schema={schema} />, "prefix list after fetch")
+    await ListStore.getList(schema, undefined, prefix, true)
     expect(toJS(ListStore)).toMatchSnapshot("prefix after list get")
 
     await ListStore.nextPage(schema, prefix)
