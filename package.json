@@ -13,7 +13,8 @@
     "update": "./node_modules/.bin/ts-node ci/update && lerna bootstrap",
     "publish": "./node_modules/.bin/ts-node ci/publish",
     "test": "./node_modules/.bin/ts-node ci/test",
-    "buildSite": "./node_modules/.bin/ts-node ci/buildSite"
+    "buildSite": "./node_modules/.bin/ts-node ci/buildSite",
+    "build": "./node_modules/.bin/ts-node ci/build"
   },
   "private": true
 }
