@@ -2,7 +2,7 @@
 
 exports[`Text Field Test: after date set 1`] = `"2012-01-10T23:00:00.000Z"`;
 
-exports[`Text Field Test: after datetime-local set 1`] = `"2018-02-21T23:00:00.000Z"`;
+exports[`Text Field Test: after datetime-local set 1`] = `"2018-02-22T06:55:00.000Z"`;
 
 exports[`Text Field Test: after time set 1`] = `"2011-05-05T14:20:00.000Z"`;
 
@@ -18,7 +18,7 @@ exports[`Text Field Test: datetime-local with content 1`] = `
 <input
   onChange={[Function]}
   type="datetime-local"
-  value="2018-02-22T00:00"
+  value="2018-02-22T07:55"
 />
 `;
 

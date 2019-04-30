@@ -94,6 +94,6 @@ test("Verify validateFormWithMongoQuery", async () => {
 
   await expect(validateQueryObject({}, form))
   .resolves.toMatchSnapshot("Resolve null if nothing suiting found")
-  await expect(validateQueryObject({dat: {$lte: new Date(2010, 2, 1)}}, form))
+  await expect(validateQueryObject({dat: {$lte: new Date(1267398000000)}}, form))
   .resolves.toMatchSnapshot("also allow date $lte ")
 })
