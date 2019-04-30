@@ -1,8 +1,7 @@
 
 import * as MockDate from "mockdate"
-MockDate.set(new Date(1978, 2, 24))
+MockDate.set(new Date(259542000000))
 
-import * as moment from "moment"
 import iterateEachInFind from "../iterateEachInFind"
 import iterateMockDateDataInFind from "../testUtil/iterateMockDateDataInFind"
 import sumPrevTimeDistance from "./sumPrevTimeDistance"

@@ -1,8 +1,8 @@
 import "isomorphic-fetch"
 import * as MockDate from "mockdate"
-MockDate.set(new Date(4, 2, 0))
+MockDate.set(-2077750800000)
 
-import { DbStore, toJS, dataOptions } from "@xpfw/data"
+import { dataOptions, DbStore, toJS } from "@xpfw/data"
 import { getRandomApp } from "@xpfw/test-util"
 import { FeathersClient } from "./index"
 
