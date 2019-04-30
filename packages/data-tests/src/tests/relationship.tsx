@@ -36,7 +36,7 @@ const testRelationship = () => {
     const fields = makeSubFields(NumberAndRequiredTextSchema)
     const origId = `b29999999999999999999999`
     for (let i = 0; i < 10; i++) {
-      fields[String(NameField.title)].setValue("myText " + i)
+      fields[String(NameField.title)].setValue((i % 2 === 0 ? "What uptext " : " that Is My ") + i)
       fields[String(NumberField.title)].setValue(420 + i)
       FormStore.setValue(`${NumberAndRequiredTextSchema.title}._id`,
         `${origId.substring(0, origId.length - String(i).length - 5)}${i}98765`)
@@ -91,15 +91,15 @@ const testRelationship = () => {
     // autoSelect single
     prefixedSingle.setValue(undefined)
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "after reset")
-    await boundSearchRelatedSingle("myText 2")
+    await boundSearchRelatedSingle("Text 2")
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search without option enabled")
     set(RelationshipSingleField, "relationship.autoSelect", true)
     boundSearchRelatedSingle = searchRelated(RelationshipSingleField, undefined, RelationshipSingleField.title)
-    await boundSearchRelatedSingle("myText")
+    await boundSearchRelatedSingle("Text")
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search with option enabled but too many results")
-    await boundSearchRelatedSingle("myText 2")
+    await boundSearchRelatedSingle("Text 2")
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search with option enabled and set automatically")
     set(RelationshipSingleField, "relationship.autoSelect", false)
@@ -123,18 +123,18 @@ const testRelationship = () => {
     FormStore.setValue(`${RelationshipSingleField.title}.${RelationshipMultiField.title}`, undefined)
     displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title, true)()
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "after reset")
-    await boundSearchRelated("myText 2")
+    await boundSearchRelated("Text 2")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multi after autoselectable search without option enabled")
     set(RelationshipMultiField, "relationship.autoSelect", true)
     boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
-    await boundSearchRelated("myText")
+    await boundSearchRelated("Text")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multi after autoselectable search with option enabled but too many results")
-    await boundSearchRelated("myText 3")
+    await boundSearchRelated("Text 3")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multiafter autoselectable search with option enabled and set automatically")
-    await boundSearchRelated("myText 5")
+    await boundSearchRelated("Text 5")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multiafter autoselectable search with option enabled and set automatically twice")
     set(RelationshipMultiField, "relationship.autoSelect", false)

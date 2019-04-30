@@ -30,7 +30,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled an
     "data": [
       {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       }
     ]
@@ -68,59 +68,34 @@ exports[`DbStore Create Test: after autoselectable search with option enabled bu
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -163,7 +138,7 @@ exports[`DbStore Create Test: after autoselectable search without option enabled
     "data": [
       {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       }
     ]
@@ -239,59 +214,34 @@ exports[`DbStore Create Test: after reset 2`] = `
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -328,59 +278,34 @@ exports[`DbStore Create Test: customPresearch for Text 1`] = `
   "displayMode": true,
   "prefix": "customPre",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -417,58 +342,33 @@ exports[`DbStore Create Test: customPresearch for my 1`] = `
   "displayMode": true,
   "prefix": "customPre",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
-        "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
-        "myVal": 420
-      },
-      {
         "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
+        "guestName": " that Is My 1",
         "myVal": 421
       },
       {
-        "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
-        "myVal": 422
-      },
-      {
         "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
+        "guestName": " that Is My 3",
         "myVal": 423
       },
       {
-        "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
-        "myVal": 424
-      },
-      {
         "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
+        "guestName": " that Is My 5",
         "myVal": 425
       },
       {
-        "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
-        "myVal": 426
-      },
-      {
         "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
+        "guestName": " that Is My 7",
         "myVal": 427
       },
       {
-        "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
-        "myVal": 428
-      },
-      {
         "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
+        "guestName": " that Is My 9",
         "myVal": 429
       }
     ]
@@ -529,12 +429,12 @@ exports[`DbStore Create Test: multi added and loaded 1`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 7",
+      "guestName": " that Is My 7",
       "myVal": 427,
       "_id": "b29999999999999999798765"
     }
@@ -578,12 +478,12 @@ exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 7",
+      "guestName": " that Is My 7",
       "myVal": 427,
       "_id": "b29999999999999999798765"
     }
@@ -642,59 +542,34 @@ exports[`DbStore Create Test: multi after autoselectable search with option enab
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -737,7 +612,7 @@ exports[`DbStore Create Test: multi after autoselectable search without option e
     "data": [
       {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       }
     ]
@@ -761,17 +636,17 @@ exports[`DbStore Create Test: multi load with none missing 1`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 3",
+      "guestName": " that Is My 3",
       "myVal": 423,
       "_id": "b29999999999999999398765"
     },
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 5",
+      "guestName": " that Is My 5",
       "myVal": 425,
       "_id": "b29999999999999999598765"
     }
@@ -812,17 +687,17 @@ exports[`DbStore Create Test: multi load with one missing 1`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 3",
+      "guestName": " that Is My 3",
       "myVal": 423,
       "_id": "b29999999999999999398765"
     },
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 5",
+      "guestName": " that Is My 5",
       "myVal": 425,
       "_id": "b29999999999999999598765"
     }
@@ -862,12 +737,12 @@ exports[`DbStore Create Test: multi removed one 1`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 3",
+      "guestName": " that Is My 3",
       "myVal": 423,
       "_id": "b29999999999999999398765"
     },
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     }
@@ -906,7 +781,7 @@ exports[`DbStore Create Test: multi removed two 1`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     }
@@ -961,16 +836,10 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 1,
+    "total": 0,
     "limit": 10,
     "skip": 0,
-    "data": [
-      {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      }
-    ]
+    "data": []
   },
   "loading": false,
   "currentPage": 0,
@@ -1005,16 +874,10 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 1,
+    "total": 0,
     "limit": 10,
     "skip": 0,
-    "data": [
-      {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      }
-    ]
+    "data": []
   },
   "loading": false,
   "currentPage": 0,
@@ -1125,12 +988,12 @@ exports[`DbStore Create Test: nothing yet 3`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 7",
+      "guestName": " that Is My 7",
       "myVal": 427,
       "_id": "b29999999999999999798765"
     }
@@ -1221,59 +1084,34 @@ exports[`DbStore Create Test: search for Text 1`] = `
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -1295,12 +1133,12 @@ exports[`DbStore Create Test: search for Text 2`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 7",
+      "guestName": " that Is My 7",
       "myVal": 427,
       "_id": "b29999999999999999798765"
     }
@@ -1329,59 +1167,34 @@ exports[`DbStore Create Test: search for Text 2`] = `
   ],
   "prefix": "",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -1418,59 +1231,34 @@ exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
   "displayMode": false,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -1507,58 +1295,33 @@ exports[`DbStore Create Test: search for my 1`] = `
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
-        "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
-        "myVal": 420
-      },
-      {
         "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
+        "guestName": " that Is My 1",
         "myVal": 421
       },
       {
-        "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
-        "myVal": 422
-      },
-      {
         "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
+        "guestName": " that Is My 3",
         "myVal": 423
       },
       {
-        "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
-        "myVal": 424
-      },
-      {
         "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
+        "guestName": " that Is My 5",
         "myVal": 425
       },
       {
-        "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
-        "myVal": 426
-      },
-      {
         "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
+        "guestName": " that Is My 7",
         "myVal": 427
       },
       {
-        "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
-        "myVal": 428
-      },
-      {
         "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
+        "guestName": " that Is My 9",
         "myVal": 429
       }
     ]
@@ -1581,12 +1344,12 @@ exports[`DbStore Create Test: search for my 2`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 7",
+      "guestName": " that Is My 7",
       "myVal": 427,
       "_id": "b29999999999999999798765"
     }
@@ -1615,58 +1378,33 @@ exports[`DbStore Create Test: search for my 2`] = `
   ],
   "prefix": "",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
-        "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
-        "myVal": 420
-      },
-      {
         "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
+        "guestName": " that Is My 1",
         "myVal": 421
       },
       {
-        "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
-        "myVal": 422
-      },
-      {
         "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
+        "guestName": " that Is My 3",
         "myVal": 423
       },
       {
-        "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
-        "myVal": 424
-      },
-      {
         "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
+        "guestName": " that Is My 5",
         "myVal": 425
       },
       {
-        "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
-        "myVal": 426
-      },
-      {
         "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
+        "guestName": " that Is My 7",
         "myVal": 427
       },
       {
-        "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
-        "myVal": 428
-      },
-      {
         "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
+        "guestName": " that Is My 9",
         "myVal": 429
       }
     ]
@@ -1727,12 +1465,12 @@ exports[`DbStore Create Test: search for null 2`] = `
   ],
   "relatedObject": [
     {
-      "guestName": "myText 4",
+      "guestName": "What uptext 4",
       "myVal": 424,
       "_id": "b29999999999999999498765"
     },
     {
-      "guestName": "myText 7",
+      "guestName": " that Is My 7",
       "myVal": 427,
       "_id": "b29999999999999999798765"
     }
@@ -1780,7 +1518,7 @@ exports[`DbStore Create Test: set to first creation loaded 1`] = `
   {
   "value": "b29999999999999999198765",
   "relatedObject": {
-    "guestName": "myText 1",
+    "guestName": " that Is My 1",
     "myVal": 421,
     "_id": "b29999999999999999198765"
   },
@@ -1815,7 +1553,7 @@ exports[`DbStore Create Test: set to first creation not loaded yet 1`] = `
   {
   "value": "b29999999999999999098765",
   "relatedObject": {
-    "guestName": "myText 0",
+    "guestName": "What uptext 0",
     "myVal": 420,
     "_id": "b29999999999999999098765"
   },
@@ -1899,59 +1637,34 @@ exports[`DbStore Create Test: single search for Text 1`] = `
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
         "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
+        "guestName": "What uptext 0",
         "myVal": 420
       },
       {
-        "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
-        "myVal": 421
-      },
-      {
         "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
+        "guestName": "What uptext 2",
         "myVal": 422
       },
       {
-        "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
-        "myVal": 423
-      },
-      {
         "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
+        "guestName": "What uptext 4",
         "myVal": 424
       },
       {
-        "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
-        "myVal": 425
-      },
-      {
         "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
+        "guestName": "What uptext 6",
         "myVal": 426
       },
       {
-        "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
-        "myVal": 427
-      },
-      {
         "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
+        "guestName": "What uptext 8",
         "myVal": 428
-      },
-      {
-        "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
-        "myVal": 429
       }
     ]
   },
@@ -1988,58 +1701,33 @@ exports[`DbStore Create Test: single search for my 1`] = `
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 10,
+    "total": 5,
     "limit": 10,
     "skip": 0,
     "data": [
       {
-        "_id": "b29999999999999999098765",
-        "guestName": "myText 0",
-        "myVal": 420
-      },
-      {
         "_id": "b29999999999999999198765",
-        "guestName": "myText 1",
+        "guestName": " that Is My 1",
         "myVal": 421
       },
       {
-        "_id": "b29999999999999999298765",
-        "guestName": "myText 2",
-        "myVal": 422
-      },
-      {
         "_id": "b29999999999999999398765",
-        "guestName": "myText 3",
+        "guestName": " that Is My 3",
         "myVal": 423
       },
       {
-        "_id": "b29999999999999999498765",
-        "guestName": "myText 4",
-        "myVal": 424
-      },
-      {
         "_id": "b29999999999999999598765",
-        "guestName": "myText 5",
+        "guestName": " that Is My 5",
         "myVal": 425
       },
       {
-        "_id": "b29999999999999999698765",
-        "guestName": "myText 6",
-        "myVal": 426
-      },
-      {
         "_id": "b29999999999999999798765",
-        "guestName": "myText 7",
+        "guestName": " that Is My 7",
         "myVal": 427
       },
       {
-        "_id": "b29999999999999999898765",
-        "guestName": "myText 8",
-        "myVal": 428
-      },
-      {
         "_id": "b29999999999999999998765",
-        "guestName": "myText 9",
+        "guestName": " that Is My 9",
         "myVal": 429
       }
     ]
