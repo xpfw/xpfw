@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DbStore Create Test: after autoselectable search with option enabled and set automatically 1`] = `
+exports[`Relationship Test: after autoselectable search with option enabled and set automatically 1`] = `
 <div>
   {
   "searchForm": {
@@ -44,7 +44,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled an
 </div>
 `;
 
-exports[`DbStore Create Test: after autoselectable search with option enabled but too many results 1`] = `
+exports[`Relationship Test: after autoselectable search with option enabled but too many results 1`] = `
 <div>
   {
   "searchForm": {
@@ -108,7 +108,7 @@ exports[`DbStore Create Test: after autoselectable search with option enabled bu
 </div>
 `;
 
-exports[`DbStore Create Test: after autoselectable search without option enabled 1`] = `
+exports[`Relationship Test: after autoselectable search without option enabled 1`] = `
 <div>
   {
   "searchForm": {
@@ -152,7 +152,7 @@ exports[`DbStore Create Test: after autoselectable search without option enabled
 </div>
 `;
 
-exports[`DbStore Create Test: after reset 1`] = `
+exports[`Relationship Test: after reset 1`] = `
 <div>
   {
   "searchForm": {
@@ -190,7 +190,7 @@ exports[`DbStore Create Test: after reset 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: after reset 2`] = `
+exports[`Relationship Test: after reset 2`] = `
 <div>
   {
   "searchForm": {
@@ -254,7 +254,7 @@ exports[`DbStore Create Test: after reset 2`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: customPresearch for Text 1`] = `
+exports[`Relationship Test: customPresearch for Text 1`] = `
 <div>
   {
   "searchForm": {
@@ -318,7 +318,7 @@ exports[`DbStore Create Test: customPresearch for Text 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: customPresearch for my 1`] = `
+exports[`Relationship Test: customPresearch for my 1`] = `
 <div>
   {
   "searchForm": {
@@ -382,7 +382,7 @@ exports[`DbStore Create Test: customPresearch for my 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: customPresearch for null 1`] = `
+exports[`Relationship Test: customPresearch for null 1`] = `
 <div>
   {
   "searchForm": {
@@ -420,7 +420,7 @@ exports[`DbStore Create Test: customPresearch for null 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multi added and loaded 1`] = `
+exports[`Relationship Test: multi added and loaded 1`] = `
 <div>
   {
   "value": [
@@ -469,7 +469,7 @@ exports[`DbStore Create Test: multi added and loaded 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
+exports[`Relationship Test: multi added but not yet loaded 1`] = `
 <div>
   {
   "value": [
@@ -518,7 +518,7 @@ exports[`DbStore Create Test: multi added but not yet loaded 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multi after autoselectable search with option enabled but too many results 1`] = `
+exports[`Relationship Test: multi after autoselectable search with option enabled but too many results 1`] = `
 <div>
   {
   "searchForm": {
@@ -582,7 +582,7 @@ exports[`DbStore Create Test: multi after autoselectable search with option enab
 </div>
 `;
 
-exports[`DbStore Create Test: multi after autoselectable search without option enabled 1`] = `
+exports[`Relationship Test: multi after autoselectable search without option enabled 1`] = `
 <div>
   {
   "searchForm": {
@@ -626,7 +626,7 @@ exports[`DbStore Create Test: multi after autoselectable search without option e
 </div>
 `;
 
-exports[`DbStore Create Test: multi load with none missing 1`] = `
+exports[`Relationship Test: multi load with none missing 1`] = `
 <div>
   {
   "value": [
@@ -677,7 +677,7 @@ exports[`DbStore Create Test: multi load with none missing 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multi load with one missing 1`] = `
+exports[`Relationship Test: multi load with one missing 1`] = `
 <div>
   {
   "value": [
@@ -728,7 +728,7 @@ exports[`DbStore Create Test: multi load with one missing 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multi removed one 1`] = `
+exports[`Relationship Test: multi removed one 1`] = `
 <div>
   {
   "value": [
@@ -773,7 +773,7 @@ exports[`DbStore Create Test: multi removed one 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multi removed two 1`] = `
+exports[`Relationship Test: multi removed two 1`] = `
 <div>
   {
   "value": [
@@ -812,7 +812,7 @@ exports[`DbStore Create Test: multi removed two 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: multiafter autoselectable search with option enabled and set automatically 1`] = `
+exports[`Relationship Test: multiafter autoselectable search with option enabled and set automatically 1`] = `
 <div>
   {
   "searchForm": {
@@ -850,7 +850,7 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
 </div>
 `;
 
-exports[`DbStore Create Test: multiafter autoselectable search with option enabled and set automatically twice 1`] = `
+exports[`Relationship Test: multiafter autoselectable search with option enabled and set automatically twice 1`] = `
 <div>
   {
   "searchForm": {
@@ -888,7 +888,7 @@ exports[`DbStore Create Test: multiafter autoselectable search with option enabl
 </div>
 `;
 
-exports[`DbStore Create Test: nothing set yet 1`] = `
+exports[`Relationship Test: nothing set yet 1`] = `
 <div>
   {
   "searchForm": {
@@ -917,7 +917,7 @@ exports[`DbStore Create Test: nothing set yet 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: nothing yet 1`] = `
+exports[`Relationship Test: nothing yet 1`] = `
 <div>
   {
   "searchForm": {
@@ -948,7 +948,7 @@ exports[`DbStore Create Test: nothing yet 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: nothing yet 2`] = `
+exports[`Relationship Test: nothing yet 2`] = `
 <div>
   {
   "searchForm": {
@@ -979,7 +979,7 @@ exports[`DbStore Create Test: nothing yet 2`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: nothing yet 3`] = `
+exports[`Relationship Test: nothing yet 3`] = `
 <div>
   {
   "value": [
@@ -1029,7 +1029,7 @@ exports[`DbStore Create Test: nothing yet 3`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: nothing yet 4`] = `
+exports[`Relationship Test: nothing yet 4`] = `
 <div>
   {
   "searchForm": {
@@ -1060,7 +1060,7 @@ exports[`DbStore Create Test: nothing yet 4`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for Text 1`] = `
+exports[`Relationship Test: search for Text 1`] = `
 <div>
   {
   "searchForm": {
@@ -1124,7 +1124,7 @@ exports[`DbStore Create Test: search for Text 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for Text 2`] = `
+exports[`Relationship Test: search for Text 2`] = `
 <div>
   {
   "value": [
@@ -1207,7 +1207,7 @@ exports[`DbStore Create Test: search for Text 2`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
+exports[`Relationship Test: search for Text but displaymode for items 1`] = `
 <div>
   {
   "searchForm": {
@@ -1271,7 +1271,7 @@ exports[`DbStore Create Test: search for Text but displaymode for items 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for my 1`] = `
+exports[`Relationship Test: search for my 1`] = `
 <div>
   {
   "searchForm": {
@@ -1335,7 +1335,7 @@ exports[`DbStore Create Test: search for my 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for my 2`] = `
+exports[`Relationship Test: search for my 2`] = `
 <div>
   {
   "value": [
@@ -1418,7 +1418,7 @@ exports[`DbStore Create Test: search for my 2`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for null 1`] = `
+exports[`Relationship Test: search for null 1`] = `
 <div>
   {
   "searchForm": {
@@ -1456,7 +1456,7 @@ exports[`DbStore Create Test: search for null 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: search for null 2`] = `
+exports[`Relationship Test: search for null 2`] = `
 <div>
   {
   "value": [
@@ -1513,7 +1513,7 @@ exports[`DbStore Create Test: search for null 2`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: set to first creation loaded 1`] = `
+exports[`Relationship Test: set to first creation loaded 1`] = `
 <div>
   {
   "value": "b29999999999999999198765",
@@ -1548,7 +1548,7 @@ exports[`DbStore Create Test: set to first creation loaded 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: set to first creation not loaded yet 1`] = `
+exports[`Relationship Test: set to first creation not loaded yet 1`] = `
 <div>
   {
   "value": "b29999999999999999098765",
@@ -1583,7 +1583,7 @@ exports[`DbStore Create Test: set to first creation not loaded yet 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: set to invalid value 1`] = `
+exports[`Relationship Test: set to invalid value 1`] = `
 <div>
   {
   "value": "INVALID",
@@ -1613,7 +1613,7 @@ exports[`DbStore Create Test: set to invalid value 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: single search for Text 1`] = `
+exports[`Relationship Test: single search for Text 1`] = `
 <div>
   {
   "searchForm": {
@@ -1677,7 +1677,7 @@ exports[`DbStore Create Test: single search for Text 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: single search for my 1`] = `
+exports[`Relationship Test: single search for my 1`] = `
 <div>
   {
   "searchForm": {
@@ -1741,7 +1741,7 @@ exports[`DbStore Create Test: single search for my 1`] = `
 </div>
 `;
 
-exports[`DbStore Create Test: single search for null 1`] = `
+exports[`Relationship Test: single search for null 1`] = `
 <div>
   {
   "searchForm": {

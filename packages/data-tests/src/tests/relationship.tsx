@@ -10,23 +10,22 @@ import {
 } from "@xpfw/form-tests"
 import { getRandomApp } from "@xpfw/test-util"
 import { get, set } from "lodash"
-import { action } from "mobx"
 import * as React from "react"
 import render from "../testUtil/render"
-import login from "./login"
 
 const searchRelated = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
-  return action((newValue: any) => {
+  return async (newValue: any) => {
     const searchForm = getListFormFromRelationshipField(schema)
     FormStore.setValue(get(schema, "relationship.namePath"), newValue, prependPrefix(searchForm.title, prependPrefix(prefix, "search")))
-    return ListStore.getList(searchForm, undefined, prependPrefix(prefix, "search"), true)
-  })
+    const r = await ListStore.getList(searchForm, undefined, prependPrefix(prefix, "search"), true)
+    return r
+  }
 }
 BackendClient.client = FeathersClient
 dataOptions.idPath = "_id"
 
 const testRelationship = () => {
-  test("DbStore Create Test", async () => {
+  test("Relationship Test", async () => {
     dataOptions.idPath = "_id"
     const schema = NumberAndRequiredTextSchema
     const s: any = [NumberAndRequiredTextSchema.collection, RelationshipAndNumberSchema.collection]
@@ -146,9 +145,12 @@ const testRelationship = () => {
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, "nothing yet")
       const prefixSearch = searchRelated(RelationshipMultiField, undefined, prefix)
       await prefixSearch("my")
+      await prefixSearch("my")
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for my")
       await prefixSearch("Text")
+      await prefixSearch("Text")
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for Text")
+      await prefixSearch("null")
       await prefixSearch("null")
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for null")
     }
