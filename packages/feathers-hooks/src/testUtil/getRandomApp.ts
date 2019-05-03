@@ -10,7 +10,8 @@ import { isString } from "lodash"
 import { MongoClient } from "mongodb"
 const memd: any = memdb
 const getRandomApp = async (memoryServiceName: string, useMongo?: boolean) => {
-  const app: any = express.default(feathers())
+  const f: any = feathers()
+  const app: any = express.default(f)
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
   let col: any | undefined

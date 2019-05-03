@@ -33,7 +33,8 @@ const getRandomApp = async (memoryServiceNames: string | string[],
                             options?: {
                               userStore?: any, convertIds?: boolean, dbStore?: any, collections?: string[]
                             }) => {
-  const app: any = express.default(feathers())
+  const f: any = feathers()
+  const app: any = express.default(f)
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
   let col: any | undefined
