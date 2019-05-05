@@ -28,8 +28,25 @@ export class FormStoreClass {
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    * @param defaultValue value to return if it is not set in the form data
    */
-  public getValue(valuePath?: string, prefix?: string, defaultValue?: any): any {
-    return get(this.formData, prependPrefix(valuePath, prefix), defaultValue)
+  public getValue(mapTo?: string, prefix?: string, defaultValue?: any): any {
+    if (mapTo != null) {
+      // todo: support for multiple nested arrays
+      const mi = mapTo.indexOf("[")
+      if (mi !== -1) {
+        const me = mapTo.indexOf("]")
+        const num = Number(mapTo.substring(mi + 1, me))
+        const arr = mapTo.substring(0, mi)
+        let pop = get(this.formData, prependPrefix(arr, prefix))
+        if (pop == null) {
+          pop = []
+        }
+        while (pop.length < num) {
+          pop.push(undefined)
+        }
+        FormStore.setValue(arr, pop, prefix)
+      }
+    }
+    return get(this.formData, prependPrefix(mapTo, prefix), defaultValue)
   }
 
   /**
@@ -39,8 +56,8 @@ export class FormStoreClass {
    * @param prefix prepended to mapTo to allow same mapTo keys to have different values
    */
   @action
-  public setValue(valuePath?: string, value?: any, prefix?: string) {
-    set(this.formData, prependPrefix(valuePath, prefix), value)
+  public setValue(mapTo?: string, value?: any, prefix?: string) {
+    set(this.formData, prependPrefix(mapTo, prefix), value)
   }
 
   /**
