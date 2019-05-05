@@ -45,10 +45,10 @@ const addId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
       currentValue = !isArray(currentValue) ? [] : currentValue
       currentValue.push(newValue)
       FormStore.setValue(mapTo, currentValue, prefix)
-      disp()
     } else {
       FormStore.setValue(mapTo, newValue, prefix)
     }
+    disp()
     const lastUsedFieldKey = `${lastUsedKey}.${prependPrefix(mapTo, prefix)}`
     let lastUsed = FormStore.getValue(lastUsedFieldKey)
     if (!Array.isArray(lastUsed)) {
