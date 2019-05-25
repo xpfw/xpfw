@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/dm",
-  "version": "1.0.0-beta.16",
+  "version": "1.0.0-beta.17",
   "main": "dist",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "@types/jest": "^24.0.12",
     "@types/lodash": "^4.14.123",
     "@types/mockdate": "^2.0.0",
-    "@xpfw/form": "1.0.0-beta.16",
+    "@xpfw/form": "1.0.0-beta.17",
     "jest": "^24.7.1",
     "jest-cli": "^24.7.1",
     "lodash": "^4.17.11",

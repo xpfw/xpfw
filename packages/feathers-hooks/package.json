@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/feathers-hooks",
-  "version": "1.0.0-beta.16",
+  "version": "1.0.0-beta.17",
   "main": "dist/index",
   "typings": "dist/index",
   "license": "MIT",
@@ -36,8 +36,8 @@
     "@types/jest": "^24.0.12",
     "@types/lodash": "^4.14.123",
     "@types/mongodb": "^3.1.26",
-    "@xpfw/form": "1.0.0-beta.16",
-    "@xpfw/permission": "1.0.0-beta.16",
+    "@xpfw/form": "1.0.0-beta.17",
+    "@xpfw/permission": "1.0.0-beta.17",
     "feathers-memory": "^3.0.2",
     "feathers-mongodb": "^4.0.4",
     "jest": "^24.7.1",
