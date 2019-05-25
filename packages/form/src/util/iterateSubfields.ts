@@ -9,8 +9,10 @@ const iterateSubFields =
   if (schema != null && schema.items != null) {
     toIterate = schema.items
   }
-  for (const key of Object.keys(toIterate)) {
-    callback(key, toIterate[key])
+  if (toIterate != null) {
+    for (const key of Object.keys(toIterate)) {
+      callback(key, toIterate[key])
+    }
   }
 }
 
