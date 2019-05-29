@@ -9,7 +9,7 @@ const ArrayField: React.FunctionComponent<IFieldProps> = observer((props) => {
       {arrayHelper.fields.map((field) => {
         return (
         <div className="flex flex1 center" key={prependPrefix(field.mapTo, field.prefix)}>
-          <SharedField schema={field.schema} prefix={field.prefix} />
+          <SharedField schema={field.schema} mapTo={field.mapTo} prefix={field.prefix} />
           <a
             className="button is-warning  iconMargin"
             style={{marginTop: "1.2rem"}}
