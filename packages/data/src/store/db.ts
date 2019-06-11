@@ -37,6 +37,10 @@ export class DbStoreClass {
   private fetching: {[index: string]: any} = {}
 
   public async getFromServer(id: string, collection: string) {
+    let error = FormStore.getError(id)
+    if (error != null && error.code === 404) {
+      return undefined
+    }
     if (this.getState[collection] && this.getState[collection][id]) {
       if (this.lastFetch[id] && Date.now() - this.lastFetch[id] < FETCH_THRESHOLD) {
         return Promise.resolve(this.getState[collection][id])
