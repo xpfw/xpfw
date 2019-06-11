@@ -12,19 +12,19 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@types/jest": "^24.0.12",
-    "@types/react": "^16.8.15",
-    "jest": "^24.7.1",
-    "jest-cli": "^24.7.1",
+    "@babel/core": "^7.4.5",
+    "@types/jest": "^24.0.13",
+    "@types/react": "^16.8.19",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
     "react": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "rollup": "^1.11.0",
-    "rollup-plugin-typescript2": "^0.21.0",
+    "rollup": "^1.15.0",
+    "rollup-plugin-typescript2": "^0.21.1",
     "rollup-plugin-uglify": "^6.0.2",
     "ts-jest": "=24.0.2",
-    "tslib": "^1.9.3",
-    "typescript": "^3.4.5",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.1",
     "uglify-es": "^3.3.10"
   },
   "jest": {

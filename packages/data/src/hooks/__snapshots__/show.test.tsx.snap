@@ -40,7 +40,9 @@ exports[`DbStore show Test: after login 1`] = `
 
 exports[`DbStore show Test: before login 1`] = `
 <div>
-  {}
+  {
+  "loading": false
+}
 </div>
 `;
 

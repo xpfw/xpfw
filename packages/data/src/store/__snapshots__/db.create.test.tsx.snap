@@ -14,7 +14,6 @@ Object {
   "currentlyEditing": "",
   "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -40,7 +39,6 @@ Object {
   "currentlyEditing": "",
   "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {},
   "lastFetch": Object {},
   "removeState": Object {},

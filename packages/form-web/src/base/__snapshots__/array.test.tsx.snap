@@ -8,6 +8,7 @@ exports[`Array Field Test: got three values 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value=","
     />
     <a
       className="button is-warning  iconMargin"
@@ -27,6 +28,7 @@ exports[`Array Field Test: got three values 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value=",asdf "
     />
     <a
       className="button is-warning  iconMargin"
@@ -46,6 +48,7 @@ exports[`Array Field Test: got three values 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value="asdf"
     />
     <a
       className="button is-warning  iconMargin"
@@ -80,6 +83,7 @@ exports[`Array Field Test: increased size to four 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value=","
     />
     <a
       className="button is-warning  iconMargin"
@@ -99,6 +103,7 @@ exports[`Array Field Test: increased size to four 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value=",asdf "
     />
     <a
       className="button is-warning  iconMargin"
@@ -118,6 +123,7 @@ exports[`Array Field Test: increased size to four 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value="asdf"
     />
     <a
       className="button is-warning  iconMargin"
@@ -137,6 +143,7 @@ exports[`Array Field Test: increased size to four 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value={null}
     />
     <a
       className="button is-warning  iconMargin"
@@ -171,6 +178,7 @@ exports[`Array Field Test: removed second item 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value=","
     />
     <a
       className="button is-warning  iconMargin"
@@ -190,6 +198,7 @@ exports[`Array Field Test: removed second item 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value="asdf"
     />
     <a
       className="button is-warning  iconMargin"
@@ -209,6 +218,7 @@ exports[`Array Field Test: removed second item 1`] = `
     <input
       onChange={[Function]}
       type="text"
+      value={null}
     />
     <a
       className="button is-warning  iconMargin"
@@ -237,25 +247,6 @@ exports[`Array Field Test: removed second item 1`] = `
 
 exports[`Array Field Test: unchanged render 1`] = `
 <div>
-  <div
-    className="flex flex1 center"
-  >
-    <input
-      onChange={[Function]}
-      type="text"
-    />
-    <a
-      className="button is-warning  iconMargin"
-      onClick={[Function]}
-      style={
-        Object {
-          "marginTop": "1.2rem",
-        }
-      }
-    >
-      Delete
-    </a>
-  </div>
   <div
     className="flex center"
   >

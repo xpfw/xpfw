@@ -10,11 +10,8 @@ Object {
     },
   },
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -56,11 +53,8 @@ Object {
     },
   },
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -88,11 +82,8 @@ Object {
     },
   },
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -114,11 +105,8 @@ exports[`DbStore Patch Test: dbstore after nothingtoget 1`] = `
 Object {
   "createState": Object {},
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
   },
@@ -140,11 +128,8 @@ Object {
     },
   },
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -178,11 +163,8 @@ Object {
     },
   },
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
@@ -210,11 +192,8 @@ exports[`DbStore Patch Test: dbstore after wrongcol 1`] = `
 Object {
   "createState": Object {},
   "currentlyEditing": "",
-  "fetching": Object {
-    "0": false,
-  },
+  "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {
     "simpleTestCol": Object {},
   },
@@ -232,7 +211,6 @@ Object {
   "currentlyEditing": "",
   "fetching": Object {},
   "formsToUpdate": Array [],
-  "getFromServer": [Function],
   "getState": Object {},
   "lastFetch": Object {},
   "removeState": Object {},
@@ -255,21 +233,9 @@ Object {
 }
 `;
 
-exports[`DbStore Patch Test: getcreated 1`] = `
-Object {
-  "guestName": "gettext",
-  "id": 0,
-  "myVal": 4654320,
-}
-`;
+exports[`DbStore Patch Test: getcreated 1`] = `undefined`;
 
-exports[`DbStore Patch Test: getpatched 1`] = `
-Object {
-  "guestName": "get is now diff",
-  "id": 0,
-  "myVal": 65243,
-}
-`;
+exports[`DbStore Patch Test: getpatched 1`] = `undefined`;
 
 exports[`DbStore Patch Test: nothingtoget 1`] = `[NotFound: No record found for id '0']`;
 
