@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/test-util",
-  "version": "1.0.0-beta.17",
+  "version": "1.0.0-beta.18",
   "main": "dist/index",
   "typings": "dist/index",
   "license": "MIT",
