@@ -8,7 +8,7 @@ const makeUpdates = async function() {
   const filePaths = subPackages.map((e) => {
     return `packages/${e}`
   })
-  filePaths.push(`site/package.json`)
+  filePaths.push(`site`)
   console.log("Updating " + subPackages.length + " Packages in parallel")
   for (const subPackage of filePaths) {
     console.log(`Updating ${subPackage}`)
