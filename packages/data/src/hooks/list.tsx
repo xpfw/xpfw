@@ -54,6 +54,7 @@ const useList = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, op
     currentPage, maxPage,
     showNextPage: currentPage < maxPage - 1,
     showPrevPage: currentPage > 0,
+    isDirty: ListStore.getIsDirty(schema),
     prevPage: memo(() => prevPage(schema, mapTo, prefix), ["prevPage", mapTo, prefix, JSON.stringify(schema)]),
     nextPage: memo(() => nextPage(schema, mapTo, prefix), ["nextPage", mapTo, prefix, JSON.stringify(schema)])
   }

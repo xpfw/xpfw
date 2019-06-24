@@ -93,7 +93,8 @@ exports[`DbStore Create Test: after login 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -268,7 +269,8 @@ exports[`DbStore Create Test: before login 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -337,7 +339,8 @@ exports[`DbStore Create Test: empty result 1`] = `
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -406,7 +409,8 @@ exports[`DbStore Create Test: empty result with defaultVals but not fetched yet 
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -475,7 +479,8 @@ exports[`DbStore Create Test: empty result with defaultVals with guaranteed fetc
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -544,7 +549,8 @@ exports[`DbStore Create Test: list after fetch 1`] = `
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -562,7 +568,8 @@ exports[`DbStore Create Test: list before fetch 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": true
 }
 </div>
 `;
@@ -631,7 +638,8 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
   "currentPage": 2,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": true
+  "showPrevPage": true,
+  "isDirty": false
 }
 </div>
 `;
@@ -852,7 +860,8 @@ exports[`DbStore Create Test: prefix list after fetch 1`] = `
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -863,7 +872,8 @@ exports[`DbStore Create Test: prefix list before fetch 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -931,7 +941,8 @@ exports[`DbStore Create Test: prefix second page 1`] = `
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1000,7 +1011,8 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query num
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1069,7 +1081,8 @@ exports[`DbStore Create Test: prefix still first if prefix unknown but query set
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1137,7 +1150,8 @@ exports[`DbStore Create Test: prefix third page 1`] = `
   "currentPage": 0,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1206,7 +1220,8 @@ exports[`DbStore Create Test: using prevPage back to third page 1`] = `
   "currentPage": 2,
   "maxPage": 10,
   "showNextPage": true,
-  "showPrevPage": true
+  "showPrevPage": true,
+  "isDirty": false
 }
 </div>
 `;

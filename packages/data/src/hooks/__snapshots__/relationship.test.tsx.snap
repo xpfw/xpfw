@@ -39,7 +39,8 @@ exports[`Relationship Test: after autoselectable search with option enabled and 
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -103,7 +104,8 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -147,7 +149,8 @@ exports[`Relationship Test: after autoselectable search without option enabled 1
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -185,7 +188,8 @@ exports[`Relationship Test: after reset 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -249,7 +253,8 @@ exports[`Relationship Test: after reset 2`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -313,7 +318,8 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -377,7 +383,8 @@ exports[`Relationship Test: customPresearch for my 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -415,7 +422,8 @@ exports[`Relationship Test: customPresearch for null 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -464,7 +472,8 @@ exports[`Relationship Test: multi added and loaded 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -513,7 +522,8 @@ exports[`Relationship Test: multi added but not yet loaded 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -577,7 +587,8 @@ exports[`Relationship Test: multi after autoselectable search with option enable
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -621,7 +632,8 @@ exports[`Relationship Test: multi after autoselectable search without option ena
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -672,7 +684,8 @@ exports[`Relationship Test: multi load with none missing 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -723,7 +736,8 @@ exports[`Relationship Test: multi load with one missing 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -768,7 +782,8 @@ exports[`Relationship Test: multi removed one 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -807,7 +822,8 @@ exports[`Relationship Test: multi removed two 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -845,7 +861,8 @@ exports[`Relationship Test: multiafter autoselectable search with option enabled
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -883,7 +900,8 @@ exports[`Relationship Test: multiafter autoselectable search with option enabled
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -912,7 +930,8 @@ exports[`Relationship Test: nothing set yet 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": true
 }
 </div>
 `;
@@ -943,7 +962,8 @@ exports[`Relationship Test: nothing yet 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -974,7 +994,8 @@ exports[`Relationship Test: nothing yet 2`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1024,7 +1045,8 @@ exports[`Relationship Test: nothing yet 3`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1055,7 +1077,8 @@ exports[`Relationship Test: nothing yet 4`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1119,7 +1142,8 @@ exports[`Relationship Test: search for Text 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1202,7 +1226,8 @@ exports[`Relationship Test: search for Text 2`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1266,7 +1291,8 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1330,7 +1356,8 @@ exports[`Relationship Test: search for my 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1413,7 +1440,8 @@ exports[`Relationship Test: search for my 2`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1451,7 +1479,8 @@ exports[`Relationship Test: search for null 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1508,7 +1537,8 @@ exports[`Relationship Test: search for null 2`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1543,7 +1573,8 @@ exports[`Relationship Test: set to first creation loaded 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": true
 }
 </div>
 `;
@@ -1578,7 +1609,8 @@ exports[`Relationship Test: set to first creation not loaded yet 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": true
 }
 </div>
 `;
@@ -1608,7 +1640,8 @@ exports[`Relationship Test: set to invalid value 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": true
 }
 </div>
 `;
@@ -1672,7 +1705,8 @@ exports[`Relationship Test: single search for Text 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1736,7 +1770,8 @@ exports[`Relationship Test: single search for my 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
@@ -1774,7 +1809,8 @@ exports[`Relationship Test: single search for null 1`] = `
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
-  "showPrevPage": false
+  "showPrevPage": false,
+  "isDirty": false
 }
 </div>
 `;
