@@ -14,6 +14,10 @@ exports[`Relationship Test: after autoselectable search with option enabled and 
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -59,6 +63,10 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -124,6 +132,10 @@ exports[`Relationship Test: after autoselectable search without option enabled 1
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -169,6 +181,10 @@ exports[`Relationship Test: after reset 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -179,10 +195,16 @@ exports[`Relationship Test: after reset 1`] = `
   "displayMode": true,
   "prefix": "ownedBy",
   "list": {
-    "total": 0,
+    "total": 1,
     "limit": 10,
     "skip": 0,
-    "data": []
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
   },
   "loading": false,
   "currentPage": 0,
@@ -208,6 +230,10 @@ exports[`Relationship Test: after reset 2`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -273,6 +299,10 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -324,6 +354,55 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
 </div>
 `;
 
+exports[`Relationship Test: customPresearch for Text with number query set to 426 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "customPre",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
 exports[`Relationship Test: customPresearch for my 1`] = `
 <div>
   {
@@ -338,6 +417,10 @@ exports[`Relationship Test: customPresearch for my 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -403,6 +486,10 @@ exports[`Relationship Test: customPresearch for null 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -458,6 +545,10 @@ exports[`Relationship Test: multi added and loaded 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -508,6 +599,10 @@ exports[`Relationship Test: multi added but not yet loaded 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -542,6 +637,10 @@ exports[`Relationship Test: multi after autoselectable search with option enable
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -607,6 +706,10 @@ exports[`Relationship Test: multi after autoselectable search without option ena
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -674,6 +777,10 @@ exports[`Relationship Test: multi load with none missing 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -726,6 +833,10 @@ exports[`Relationship Test: multi load with one missing 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -772,6 +883,10 @@ exports[`Relationship Test: multi removed one 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -812,6 +927,10 @@ exports[`Relationship Test: multi removed two 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -842,6 +961,10 @@ exports[`Relationship Test: multiafter autoselectable search with option enabled
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -881,6 +1004,10 @@ exports[`Relationship Test: multiafter autoselectable search with option enabled
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -920,6 +1047,10 @@ exports[`Relationship Test: nothing set yet 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -950,6 +1081,10 @@ exports[`Relationship Test: nothing yet 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -982,6 +1117,10 @@ exports[`Relationship Test: nothing yet 2`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1030,6 +1169,10 @@ exports[`Relationship Test: nothing yet 3`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1065,6 +1208,10 @@ exports[`Relationship Test: nothing yet 4`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1097,6 +1244,10 @@ exports[`Relationship Test: search for Text 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1178,6 +1329,10 @@ exports[`Relationship Test: search for Text 2`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1246,6 +1401,10 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1297,6 +1456,74 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
 </div>
 `;
 
+exports[`Relationship Test: search for Text with number query set to 426 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": "",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
 exports[`Relationship Test: search for my 1`] = `
 <div>
   {
@@ -1311,6 +1538,10 @@ exports[`Relationship Test: search for my 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1392,6 +1623,10 @@ exports[`Relationship Test: search for my 2`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1460,6 +1695,10 @@ exports[`Relationship Test: search for null 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1515,6 +1754,10 @@ exports[`Relationship Test: search for null 2`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1563,6 +1806,10 @@ exports[`Relationship Test: set to first creation loaded 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1599,6 +1846,10 @@ exports[`Relationship Test: set to first creation not loaded yet 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1630,6 +1881,10 @@ exports[`Relationship Test: set to invalid value 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1660,6 +1915,10 @@ exports[`Relationship Test: single search for Text 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1711,6 +1970,55 @@ exports[`Relationship Test: single search for Text 1`] = `
 </div>
 `;
 
+exports[`Relationship Test: single search for Text with number query set to 426 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
 exports[`Relationship Test: single search for my 1`] = `
 <div>
   {
@@ -1725,6 +2033,10 @@ exports[`Relationship Test: single search for my 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {
@@ -1790,6 +2102,10 @@ exports[`Relationship Test: single search for null 1`] = `
       "_id": {
         "title": "_id",
         "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
       }
     },
     "nameSearchField": {

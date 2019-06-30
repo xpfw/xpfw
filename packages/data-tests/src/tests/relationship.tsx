@@ -3,7 +3,7 @@ import {
   getListFormFromRelationshipField, ListStore, removeId
 } from "@xpfw/data"
 import { FeathersClient } from "@xpfw/data-feathers"
-import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix, SharedField, useFieldWithValidation } from "@xpfw/form"
+import { ExtendedJSONSchema, FormStore, prependPrefix, SharedField, useFieldWithValidation } from "@xpfw/form"
 import {
   makeSubFields, NameField, NumberAndRequiredTextSchema, NumberField,
   RelationshipAndNumberSchema, RelationshipMultiField, RelationshipSingleField
@@ -16,7 +16,8 @@ import render from "../testUtil/render"
 const searchRelated = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   return async (newValue: any) => {
     const searchForm = getListFormFromRelationshipField(schema)
-    FormStore.setValue(get(schema, "relationship.namePath"), newValue, prependPrefix(searchForm.title, prependPrefix(prefix, "search")))
+    FormStore.setValue(get(schema, "relationship.namePath"),
+      newValue, prependPrefix(searchForm.title, prependPrefix(prefix, "search")))
     const r = await ListStore.getList(searchForm, undefined, prependPrefix(prefix, "search"), true)
     return r
   }
@@ -76,28 +77,46 @@ const testRelationship = () => {
     const prefixedSingle = useFieldWithValidation(RelationshipSingleField, undefined, RelationshipSingleField.title)
     prefixedSingle.setValue(undefined)
 
+    const searchFormSingle = getListFormFromRelationshipField(RelationshipSingleField)
     const searchschemaSingle = getListFormFromRelationshipField(RelationshipMultiField)
     displayModeChanger(String(RelationshipSingleField.title), RelationshipSingleField.title, true)()
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "nothing yet")
     let boundSearchRelatedSingle = searchRelated(RelationshipSingleField, undefined, RelationshipSingleField.title)
     await boundSearchRelatedSingle("my")
-    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title}/>, "single search for my")
+    await boundSearchRelatedSingle("my")
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title}/>,
+      "single search for my")
     await boundSearchRelatedSingle("Text")
-    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "single search for Text")
+    await boundSearchRelatedSingle("Text")
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
+      "single search for Text")
     await boundSearchRelatedSingle("null")
-    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "single search for null")
+    await boundSearchRelatedSingle("null")
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
+      "single search for null")
+    FormStore.setValue(NumberField.title, 426, prependPrefix(searchFormSingle.title,
+      prependPrefix(RelationshipSingleField.title, "search")))
+    await boundSearchRelatedSingle("Text")
+    await boundSearchRelatedSingle("Text")
+    render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
+      "single search for Text with number query set to 426")
+    FormStore.setValue(NumberField.title, undefined,
+      prependPrefix(searchFormSingle.title, prependPrefix(RelationshipSingleField.title, "search")))
 
     // autoSelect single
     prefixedSingle.setValue(undefined)
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />, "after reset")
+    await boundSearchRelatedSingle("Text 2")
     await boundSearchRelatedSingle("Text 2")
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search without option enabled")
     set(RelationshipSingleField, "relationship.autoSelect", true)
     boundSearchRelatedSingle = searchRelated(RelationshipSingleField, undefined, RelationshipSingleField.title)
     await boundSearchRelatedSingle("Text")
+    await boundSearchRelatedSingle("Text")
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search with option enabled but too many results")
+    await boundSearchRelatedSingle("Text 2")
     await boundSearchRelatedSingle("Text 2")
     render(<SharedField schema={RelationshipSingleField} prefix={RelationshipSingleField.title} />,
       "after autoselectable search with option enabled and set automatically")
@@ -105,34 +124,43 @@ const testRelationship = () => {
 
     // Multi
     const displaySetter1 = displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title, true)
-    const displaySetter2 = displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title, false)
+    const displaySetter2 = displayModeChanger(String(RelationshipMultiField.title),
+      RelationshipSingleField.title, false)
     displaySetter1()
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "nothing yet")
     let boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
     await boundSearchRelated("null")
+    await boundSearchRelated("null")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for null")
+    await boundSearchRelated("my")
     await boundSearchRelated("my")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for my")
     await boundSearchRelated("Text")
+    await boundSearchRelated("Text")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for Text")
     displaySetter2()
-    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "search for Text but displaymode for items")
+    render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
+      "search for Text but displaymode for items")
 
     // autoSelect multi
     FormStore.setValue(`${RelationshipSingleField.title}.${RelationshipMultiField.title}`, undefined)
     displayModeChanger(String(RelationshipMultiField.title), RelationshipSingleField.title, true)()
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />, "after reset")
     await boundSearchRelated("Text 2")
+    await boundSearchRelated("Text 2")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multi after autoselectable search without option enabled")
     set(RelationshipMultiField, "relationship.autoSelect", true)
     boundSearchRelated = searchRelated(RelationshipMultiField, undefined, RelationshipSingleField.title)
     await boundSearchRelated("Text")
+    await boundSearchRelated("Text")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multi after autoselectable search with option enabled but too many results")
     await boundSearchRelated("Text 3")
+    await boundSearchRelated("Text 3")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multiafter autoselectable search with option enabled and set automatically")
+    await boundSearchRelated("Text 5")
     await boundSearchRelated("Text 5")
     render(<SharedField schema={RelationshipMultiField} prefix={RelationshipSingleField.title} />,
       "multiafter autoselectable search with option enabled and set automatically twice")
@@ -141,6 +169,7 @@ const testRelationship = () => {
 
     const prefixes = ["", "customPre"]
     for (const prefix of prefixes) {
+      const searchFormMulti = getListFormFromRelationshipField(RelationshipMultiField)
       displayModeChanger(String(RelationshipMultiField.title), prefix, true)()
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, "nothing yet")
       const prefixSearch = searchRelated(RelationshipMultiField, undefined, prefix)
@@ -153,8 +182,12 @@ const testRelationship = () => {
       await prefixSearch("null")
       await prefixSearch("null")
       render(<SharedField schema={RelationshipMultiField} prefix={prefix} />, prefix + "search for null")
+      FormStore.setValue(NumberField.title, 426, prependPrefix(searchFormMulti.title, prependPrefix(prefix, "search")))
+      await prefixSearch("Text")
+      await prefixSearch("Text")
+      render(<SharedField schema={RelationshipMultiField} prefix={prefix} />,
+        prefix + "search for Text with number query set to 426")
     }
-
     await appRef.cleanUp()
   }, 10000)
 }

@@ -1,4 +1,4 @@
-import { ExtendedJSONSchema, FormStore, getMapTo, IFieldProps, memo, ModifyFunction, prependPrefix, useField, useFieldWithValidation } from "@xpfw/form"
+import { ExtendedJSONSchema, FormStore, getMapTo, memo, prependPrefix, useFieldWithValidation } from "@xpfw/form"
 import { cloneDeep, get, isArray, isNil, isNumber, isString, remove } from "lodash"
 import { action } from "mobx"
 import dataOptions from "../options"
@@ -11,6 +11,7 @@ const lastUsedKey = "lastUsed"
 const getListFormFromRelationshipField:
 (schema: ExtendedJSONSchema, mapTo?: string) => ExtendedJSONSchema = (schema, mapTo) => {
   const collection = get(schema, "relationship.collection")
+  const searchProperties = get(schema, "relationship.searchProperties", {})
   const nameSearchField: ExtendedJSONSchema = {
     title: get(schema, "relationship.namePath"),
     type: "string"
@@ -23,7 +24,8 @@ const getListFormFromRelationshipField:
       [dataOptions.idPath]: {
         title: dataOptions.idPath,
         type: "string"
-      }
+      },
+      ...searchProperties
     },
     modify: schema.modify ? schema.modify : changeValToRegex(get(schema, "relationship.namePath"), ["find"]),
     nameSearchField
@@ -113,6 +115,8 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
     relatedObject = DbStore.get(arg, collection, false)
   }
   const lastUsed = FormStore.getValue(`${lastUsedKey}.${prependPrefix(mapTo, prefix)}`)
+  // TODO: fix autoselect
+  // TODO: fix filter existing
   // becausae autoSelect is the only relevant property in schema we only check against this instead of the stringifed schema for speed
   const autoSelect = get(schema.relationship, "autoSelect")
   return {

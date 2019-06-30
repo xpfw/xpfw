@@ -119,6 +119,14 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      * if set to true the query will contain a $nin on `dataOptions.idPath`
      */
     filterOutSelected?: boolean
+    /**
+     * Here you can properties like to a regular jsonschema
+     * It will be added to the searchForm of the relationship schema
+     * Use it to customize these queries.
+     */
+    searchProperties?: {
+      [key: string]: JSONSchemaDefinition | undefined;
+    }
   }
   /**
    * Gives the ability to modify an object before submission via create, patch or find

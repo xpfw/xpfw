@@ -9,7 +9,9 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": 0,
+  "currentlyEditing": Object {
+    "": 0,
+  },
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -46,7 +48,9 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": 0,
+  "currentlyEditing": Object {
+    "": 0,
+  },
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -233,7 +237,9 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": 0,
+  "currentlyEditing": Object {
+    "": 0,
+  },
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -537,7 +543,10 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": 1,
+  "currentlyEditing": Object {
+    "": 0,
+    "editPrefix": 1,
+  },
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -586,7 +595,10 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": 1,
+  "currentlyEditing": Object {
+    "": 0,
+    "editPrefix": 1,
+  },
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -783,7 +795,10 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": 1,
+  "currentlyEditing": Object {
+    "": 0,
+    "editPrefix": 1,
+  },
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {

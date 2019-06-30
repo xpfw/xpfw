@@ -80,7 +80,8 @@ const RelationshipSingleField: ExtendedJSONSchema = {
   theme: "single",
   relationship: {
     collection: NumberAndRequiredTextSchema.collection,
-    namePath: NameField.title
+    namePath: NameField.title,
+    searchProperties: {[String(NumberField.title)]: NumberField}
   }
 }
 
@@ -91,7 +92,8 @@ const RelationshipMultiField: ExtendedJSONSchema = {
   items: {type: "string"},
   relationship: {
     collection: NumberAndRequiredTextSchema.collection,
-    namePath: NameField.title
+    namePath: NameField.title,
+    searchProperties: {[String(NumberField.title)]: NumberField}
   }
 }
 
