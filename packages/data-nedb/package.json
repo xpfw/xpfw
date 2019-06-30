@@ -35,6 +35,7 @@
     "mobx": "^5.10.1",
     "mockdate": "^2.0.2",
     "nedb": "^1.8.0",
+    "react": "^16.8.6",
     "rollup": "^1.15.0",
     "rollup-plugin-typescript2": "^0.21.1",
     "rollup-plugin-uglify": "^6.0.2",
