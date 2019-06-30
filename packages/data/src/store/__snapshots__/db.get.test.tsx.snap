@@ -9,7 +9,7 @@ Object {
       "myVal": 4654320,
     },
   },
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -52,7 +52,7 @@ Object {
       "myVal": 4654320,
     },
   },
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -81,7 +81,7 @@ Object {
       "myVal": 4654320,
     },
   },
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -104,7 +104,7 @@ Object {
 exports[`DbStore Patch Test: dbstore after nothingtoget 1`] = `
 Object {
   "createState": Object {},
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -127,7 +127,7 @@ Object {
       "myVal": 4654320,
     },
   },
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -162,7 +162,7 @@ Object {
       "myVal": 4654320,
     },
   },
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -191,7 +191,7 @@ Object {
 exports[`DbStore Patch Test: dbstore after wrongcol 1`] = `
 Object {
   "createState": Object {},
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -208,7 +208,7 @@ Object {
 exports[`DbStore Patch Test: dbstore at start 1`] = `
 Object {
   "createState": Object {},
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {},

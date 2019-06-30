@@ -18,7 +18,7 @@ export interface FormToUpdate {
 
 export class DbStoreClass {
   @observable
-  public currentlyEditing: string = ""
+  public currentlyEditing: any = {}
 
   /** Push here for forms to get updated after a real-time update */
   public formsToUpdate: FormToUpdate[] = []
@@ -37,7 +37,7 @@ export class DbStoreClass {
   private fetching: {[index: string]: any} = {}
 
   public async getFromServer(id: string, collection: string) {
-    let error = FormStore.getError(id)
+    const error = FormStore.getError(id)
     if (error != null && error.code === 404) {
       return undefined
     }
@@ -79,11 +79,11 @@ export class DbStoreClass {
       this.getState[collection] = {}
     }
     const result = this.getState[collection] ? this.getState[collection][id] : undefined
-    if (this.currentlyEditing !== id) {
+    if (this.currentlyEditing[prefix] !== id) {
       return action(() => {
         const saveResultAt = `${prependPrefix(mapTo, prefix)}${id}`
         this.updateState[saveResultAt] = null
-        this.currentlyEditing = id
+        this.currentlyEditing[prefix] = id
         mapTo = getMapTo(schema, mapTo)
         if (result == null) {
           const fetchPromise = this.getFromServer(id, collection).then(action((res: any) => {

@@ -9,7 +9,7 @@ Object {
       "myVal": 420,
     },
   },
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {
@@ -32,7 +32,7 @@ Object {
 exports[`DbStore Remove Test: before anything 1`] = `
 Object {
   "createState": Object {},
-  "currentlyEditing": "",
+  "currentlyEditing": Object {},
   "fetching": Object {},
   "formsToUpdate": Array [],
   "getState": Object {},
