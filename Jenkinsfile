@@ -1,6 +1,6 @@
 node {
   docker.image("mongo").withRun("") { c ->
-    docker.image("mhart/alpine-node").inside("--network=container:${c.id}") {
+    docker.image("node:alpine").inside("--network=container:${c.id}") {
       // ensure same time zone as developer host so snapshots don't differ
       sh "apk add tzdata"
       sh "cp /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime"
