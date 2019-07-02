@@ -5,7 +5,7 @@ import * as React from "react"
 
 const BooleanField: React.FunctionComponent<IFieldProps> = observer((props) => {
   const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix, {
-    valueEventKey: "nativeEvent.target.value"
+    valueEventKey: "nativeEvent.target.checked"
   })
   return (
     <input
