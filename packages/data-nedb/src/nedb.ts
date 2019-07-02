@@ -117,7 +117,7 @@ const NedbClient: IUiClient & { instanceCreator: any, onlyInMemory: boolean } = 
         if (err !== null && err !== undefined) {
           reject(err)
         } else {
-          resolve(docs)
+          resolve(createData)
         }
       })
     })
