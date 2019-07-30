@@ -1,4 +1,4 @@
-import { executeForMethods } from "@xpfw/form/dist";
+import { executeForMethods } from "@xpfw/form"
 import { cloneDeep } from "lodash"
 
 const valToRegex = (val: any) => {

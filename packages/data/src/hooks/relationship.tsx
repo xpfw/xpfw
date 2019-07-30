@@ -82,18 +82,6 @@ const removeId = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) =
   })
 }
 
-// public componentDidUpdate() {
-//   const prefix = this.props.prefix
-//   const field: any = get(this, "props.field")
-//   const form = getListFormFromRelationshipField(field)
-//   const preppedPrefix = prefix && prefix.length > 0 ? prefix + "." : ""
-//   const value = get(this, "props.value", "")
-//   if (value.length > 0 && !isNil(form.sections[0].fields[1])) {
-//     FormStore.setValue(preppedPrefix + field.mapTo + "." + form.sections[0].fields[1].mapTo,
-//       {$nin: Array.isArray(value) ? value : [value]})
-//   }
-// }
-
 const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string) => {
   if (mapTo == null) { mapTo = getMapTo(schema, mapTo) }
   const hookedField = useFieldWithValidation(schema, mapTo, prefix)
@@ -103,6 +91,12 @@ const useRelationship = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: st
   const displayMode = FormStore.getValue(`displayMode.${prependPrefix(mapTo, prefix)}`)
   let relatedObject: any
   const searchForm = getListFormFromRelationshipField(schema)
+  if (get(schema, "relationship.filterOutSelected", false)) {
+    const filterIds = get(schema, "relationship.filterIds", [])
+    const toFilter = filterIds.concat(Array.isArray(value) ? value : [value])
+    FormStore.setValue(dataOptions.idPath,
+      {$nin: toFilter}, prependPrefix(searchForm.title, prependPrefix(prefix, "search")))
+  }
   if (isArray(value)) {
     relatedObject = []
     for (const id of value) {

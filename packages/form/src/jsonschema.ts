@@ -116,9 +116,13 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
      */
     autoSelect?: boolean
     /**
-     * if set to true the query will contain a $nin on `dataOptions.idPath`
+     * if set to true the query will contain a $nin array with the current valueon `dataOptions.idPath`
      */
     filterOutSelected?: boolean
+    /**
+     * use this in conjunction with `filterOutSelected`. gives you the ability to add additional ID's to the filter query
+     */
+    filterIds?: any[]
     /**
      * Here you can properties like to a regular jsonschema
      * It will be added to the searchForm of the relationship schema
