@@ -153,7 +153,7 @@ export class ListStore {
   @action
   public async searchInPage(schema: ExtendedJSONSchema, mapTo?: string, prefix: string = "", pageNumber: number = 0) {
     const getAt = prependPrefix(getMapTo(schema, mapTo), prefix)
-    if (isNumber(this.maxPage[getAt]) && pageNumber > this.maxPage[getAt]) {
+    if (isNumber(this.maxPage[getAt]) && pageNumber >= this.maxPage[getAt]) {
       pageNumber = this.maxPage[getAt] - 1
     }
     if (pageNumber < 0) {
