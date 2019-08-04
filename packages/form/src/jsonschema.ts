@@ -38,7 +38,7 @@ export declare interface JSONSchemaDefinition {
       [key: string]: any;
   }
   format?: string
-  items?: JSONSchemaDefinition | JSONSchemaDefinition[]
+  items?: ExtendedJSONSchema | ExtendedJSONSchema[]
   minItems?: number
   additionalItems?: {
       anyOf: JSONSchemaDefinition[];
