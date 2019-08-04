@@ -1,4 +1,8 @@
-import { getMapToFromProps, IFieldProps, JSONSchemaDefinition, memo, useFieldWithValidation } from "@xpfw/form"
+import {
+  ExtendedJSONSchema, getMapToFromProps, IFieldProps,
+  JSONSchemaDefinition, memo, useFieldWithValidation
+} from "@xpfw/form"
+import { IFieldOptions } from "@xpfw/form/dist/hooks/field"
 import { get } from "lodash"
 import { observer } from "mobx-react-lite"
 import * as momentA from "moment"
@@ -24,6 +28,59 @@ const setDate = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) 
     setValue(moment(value, getOriginalFormatFromType(get(schema, "format"))).toISOString())
   }
 }
+const setNumber = (setValue: any, schema: JSONSchemaDefinition, eventKey: string) => {
+  return (e: any) => {
+    const value = get(e, eventKey)
+    setValue(Number(value))
+  }
+}
+const useTextField = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: IFieldOptions) => {
+  const format = get(schema, "format")
+  const isDate = format === "date" || format === "date-time" || format === "time"
+  const fieldHelper = useFieldWithValidation(schema, mapTo, prefix, {
+    valueEventKey: "nativeEvent.target.value"
+  })
+  const fieldType = get(schema, "type")
+  let value = fieldHelper.value
+  let type = "text"
+  let min
+  let max
+  let step
+  let onChange = fieldHelper.setValue
+  if (fieldType === "number") {
+    type = "number"
+    min = get(schema, "minimum")
+    max = get(schema, "maximum")
+    step = get(schema, "step")
+    onChange = memo(() => setNumber(fieldHelper.setValue, schema, "nativeEvent.target.value"),
+      ["setNumber", JSON.stringify(schema), mapTo, prefix])
+  }
+  if (format === "slider") {
+    type = "range"
+  } else if (format === "password") {
+    type = "password"
+  } else if (isDate) {
+    onChange = memo(() => setDate(fieldHelper.setValue, schema, "nativeEvent.target.value"),
+      ["setDate", JSON.stringify(schema), mapTo, prefix])
+    if (format === "date") {
+      type = "date"
+    } else if (format === "time") {
+      type = "time"
+    } else  {
+      type = "datetime-local"
+    }
+    if (value == null) {
+      value = moment(get(schema, ".default")).format(getOriginalFormatFromType(format))
+    } else {
+      value = moment(value).format(getOriginalFormatFromType(format))
+    }
+  }
+  return {
+    ...fieldHelper,
+    value, onChange, min, max, step, type
+  }
+}
+
 const TextField: React.FunctionComponent<IFieldProps & {
   className?: string
   placeholder?: string
@@ -33,54 +90,19 @@ const TextField: React.FunctionComponent<IFieldProps & {
       return <SelectComponent {...props} />
     }
   }
-  const format = get(props, "schema.format")
-  const isDate = format === "date" || format === "date-time" || format === "time"
-  const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix, {
+  const fieldHelper = useTextField(props.schema, getMapToFromProps(props), props.prefix, {
     valueEventKey: "nativeEvent.target.value"
   })
-  const fieldType = get(props, "schema.type")
-  let value = fieldHelper.value
-  let type = "text"
-  let min
-  let max
-  let step
-  let onChange = fieldHelper.setValue
-  if (fieldType === "number") {
-    type = "number"
-    min = get(props, "schema.minimum")
-    max = get(props, "schema.maximum")
-    step = get(props, "schema.step")
-  }
-  if (format === "slider") {
-    type = "range"
-  } else if (format === "password") {
-    type = "password"
-  } else if (isDate) {
-    onChange = memo(() => setDate(fieldHelper.setValue, props.schema, "nativeEvent.target.value"),
-      ["setDate", JSON.stringify(props.schema), props.mapTo, props.prefix])
-    if (format === "date") {
-      type = "date"
-    } else if (format === "time") {
-      type = "time"
-    } else  {
-      type = "datetime-local"
-    }
-    if (value == null) {
-      value = moment(get(props, "schema.default")).format(getOriginalFormatFromType(format))
-    } else {
-      value = moment(value).format(getOriginalFormatFromType(format))
-    }
-  }
   return (
     <input
-      type={type}
+      type={fieldHelper.type}
       id={get(props, "id")}
       className={get(props, "className")}
-      value={value}
-      step={step}
-      min={min}
-      max={max}
-      onChange={onChange}
+      value={fieldHelper.value}
+      step={fieldHelper.step}
+      min={fieldHelper.min}
+      max={fieldHelper.max}
+      onChange={fieldHelper.onChange}
       placeholder={props.placeholder}
     />
   )
@@ -88,5 +110,5 @@ const TextField: React.FunctionComponent<IFieldProps & {
 
 export default TextField
 export {
-  setDate
+  setDate, useTextField
 }

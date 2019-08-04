@@ -1,17 +1,25 @@
-import { getMapToFromProps, IFieldProps, useFieldWithValidation } from "@xpfw/form"
+import { ExtendedJSONSchema, getMapToFromProps, IFieldProps, useFieldWithValidation } from "@xpfw/form"
+import { IFieldOptions } from "@xpfw/form/dist/hooks/field"
 import { get, isFunction } from "lodash"
 import { observer } from "mobx-react-lite"
 import * as React from "react"
 
+const useSelect = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: IFieldOptions, props?: any) => {
+  const fieldHelper = useFieldWithValidation(schema, mapTo, prefix, options)
+  let selOpts: any = get(schema, "selectOptions", [])
+  if (isFunction(selOpts)) {
+    selOpts = selOpts(fieldHelper.value, schema, props)
+  }
+  return {
+    ...fieldHelper, selOpts
+  }
+}
+
 const SelectField: React.FunctionComponent<IFieldProps> = observer((props) => {
-  const fieldHelper = useFieldWithValidation(props.schema, getMapToFromProps(props), props.prefix, {
+  const selHelper = useSelect(props.schema, getMapToFromProps(props), props.prefix, {
     valueEventKey: "nativeEvent.target.value"
   })
-  let selOpts = get(props, "schema.selectOptions", [])
-  if (isFunction(selOpts)) {
-    selOpts = selOpts(fieldHelper.value, props.schema, props)
-  }
-  const options = selOpts.map((option: any) => {
+  const options = selHelper.selOpts.map((option: any) => {
     return (
       <option key={option.value} value={option.value}>
         {option.label}
@@ -21,8 +29,8 @@ const SelectField: React.FunctionComponent<IFieldProps> = observer((props) => {
   return (
     <select
       className={get(props, "className")}
-      value={fieldHelper.value}
-      onChange={fieldHelper.setValue}
+      value={selHelper.value}
+      onChange={selHelper.setValue}
     >
       {options}
     </select>
@@ -30,3 +38,6 @@ const SelectField: React.FunctionComponent<IFieldProps> = observer((props) => {
 })
 
 export default SelectField
+export {
+  useSelect
+}
