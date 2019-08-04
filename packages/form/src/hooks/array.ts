@@ -5,7 +5,9 @@ import FormStore from "../store/form"
 import memo from "../util/memo"
 
 const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: number) => {
-  return memo(() => action(() => {
+  return memo(() => action((e: any) => {
+    e.preventDefault()
+    e.stopPropagation()
     const currentArray = FormStore.getValue(mapTo, prefix, [undefined])
     const length = currentArray.length
     if (!isNumber(insertAt)) {
@@ -49,6 +51,7 @@ const useArrayHelper = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: str
       decreaseSize: changeSize(String(mapTo), prefix, false, i)
     })
   }
+  console.log("LENGTH IS", length, fields.length, fields)
   return {
     /**
      * The current size of the array
