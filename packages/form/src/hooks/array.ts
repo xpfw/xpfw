@@ -14,7 +14,7 @@ const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: numbe
       insertAt = length
     }
     if (isAdd) {
-      currentArray.splice(insertAt, 0, undefined)
+      currentArray.splice(Number(insertAt) + 1, 0, undefined)
     } else {
       currentArray.splice(insertAt, 1)
     }
