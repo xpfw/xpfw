@@ -51,7 +51,6 @@ const useArrayHelper = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: str
       decreaseSize: changeSize(String(mapTo), prefix, false, i)
     })
   }
-  console.log("LENGTH IS", length, fields.length, fields)
   return {
     /**
      * The current size of the array

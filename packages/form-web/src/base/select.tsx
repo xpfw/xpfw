@@ -1,11 +1,10 @@
-import { ExtendedJSONSchema, getMapToFromProps, IFieldProps, useFieldWithValidation } from "@xpfw/form"
-import { IFieldOptions } from "@xpfw/form/dist/hooks/field"
+import { ExtendedJSONSchema, getMapTo, getMapToFromProps, IFieldProps, useField } from "@xpfw/form"
 import { get, isFunction } from "lodash"
 import { observer } from "mobx-react-lite"
 import * as React from "react"
 
-const useSelect = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: IFieldOptions, props?: any) => {
-  const fieldHelper = useFieldWithValidation(schema, mapTo, prefix, options)
+const useSelect = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: any, props?: any) => {
+  const fieldHelper = useField(getMapTo(schema, mapTo), prefix, options)
   let selOpts: any = get(schema, "selectOptions", [])
   if (isFunction(selOpts)) {
     selOpts = selOpts(fieldHelper.value, schema, props)
