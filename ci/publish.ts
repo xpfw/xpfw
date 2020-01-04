@@ -6,8 +6,8 @@ const makeUpdates = async function() {
   console.log("Updating " + subPackages.length + " Packages in parallel")
   for (const subPackage of subPackages) {
     console.log(`Updating ${subPackage}`)
-    exec(`npm run build`, {cwd: resolve(`packages/${subPackage}`)})
-    exec(`npm publish`, {cwd: resolve(`packages/${subPackage}`)})
+    // exec(`npm run build`, {cwd: resolve(`packages/${subPackage}`)})
+    exec(`npm publish --tag=beta --access=public`, {cwd: resolve(`packages/${subPackage}`)})
   }
   console.log("Successfully updated versions of said packages")
 }

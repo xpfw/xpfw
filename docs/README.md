@@ -2,7 +2,7 @@
 
 Welcome to the documentation of the modular (x)ross (p)latform (f)rame(w)ork **xpfw**.
 
-xpfw is a collection of packages to makeforms and backend independent CRUD-UI's in React (Native) more concise.
+xpfw is a collection of packages to make forms and backend independent CRUD-UI's in React (Native) more concise.
 
 In case you want a ready to go package check out the [quick start](quickstart.md) or the readily usable [stacks](stacks/overview.md).
 
