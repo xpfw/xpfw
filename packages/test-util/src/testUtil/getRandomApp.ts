@@ -1,10 +1,8 @@
-import authentication from "@feathersjs/authentication"
-import jwt from "@feathersjs/authentication-jwt"
-import local, { hooks } from "@feathersjs/authentication-local"
-import * as handler from "@feathersjs/errors/handler"
+import { authenticate, AuthenticationService, JWTStrategy } from "@feathersjs/authentication"
+import { hooks, LocalStrategy } from "@feathersjs/authentication-local"
 import * as express from "@feathersjs/express"
 import * as rest from "@feathersjs/express/rest"
-import feathers, { Application, Service } from "@feathersjs/feathers"
+import feathers, { Hook, HookContext } from "@feathersjs/feathers"
 import * as sios from "@feathersjs/socketio"
 import * as memdb from "feathers-memory"
 import * as mongoService from "feathers-mongodb"
@@ -17,10 +15,10 @@ const sio: any = sios
 const res: any = rest
 const mongoServic: any = mongoService
 const memd: any = memdb
-const auth: any = authentication
 const promisifyListen = (app: any, port: number) => {
   return new Promise((resolve) => {
-    const server = app.listen(port, () => {
+    let server: any
+    server = app.listen(port, () => {
       resolve(server)
     })
   })
@@ -34,6 +32,7 @@ const getRandomApp = async (memoryServiceNames: string | string[],
                               userStore?: any, convertIds?: boolean, dbStore?: any, collections?: string[]
                             }) => {
   const f: any = feathers()
+
   const app: any = express.default(f)
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
@@ -41,9 +40,26 @@ const getRandomApp = async (memoryServiceNames: string | string[],
   let db: any | undefined
   let c: any
   app.configure(useRest ? res() : sio())
-  app.configure(auth({secret: "myawfulsecret"}))
-  app.configure(local())
-  app.configure(jwt())
+  app.set("authentication", {
+    secret: "test_secret",
+    entity: "user",
+    service: "users",
+    authStrategies: [ "jwt", "local" ],
+    jwtOptions: {
+      header: { typ: "access" },
+      audience: "https://xpfw.github.io",
+      issuer: "feathers",
+      algorithm: "HS256",
+      expiresIn: "1d"
+    },
+    local: {
+      usernameField: "email", passwordField: "password"
+    }
+  })
+  const authService = new AuthenticationService(app)
+  authService.register("jwt", new JWTStrategy())
+  authService.register("local", new LocalStrategy())
+  app.use("/authentication", authService)
   let port = -1
   if (ClientHolder) {
     port = await emptyPort()
@@ -90,24 +106,13 @@ const getRandomApp = async (memoryServiceNames: string | string[],
     after: hooks.protect("password"),
     before: {
       find: [
-        auth.hooks.authenticate("jwt")
+        authenticate("jwt")
       ],
       create: [
-        hooks.hashPassword({ passwordField: "password" })
+        hooks.hashPassword("password")
       ]
     }
   })
-  app.service("authentication").hooks({
-    before: {
-     create: [
-      // You can chain multiple strategies
-      auth.hooks.authenticate(["jwt", "local"])
-     ],
-     remove: [
-      auth.hooks.authenticate("jwt")
-     ]
-    }
-   })
 
   app.on("login", (payload: any, { connection }: any) => {
     if (connection) {

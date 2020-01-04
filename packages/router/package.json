@@ -1,12 +1,12 @@
 {
   "name": "@xpfw/router",
-  "version": "1.0.0-beta.18",
+  "version": "1.0.0",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
   "dependencies": {
-    "mobx": "^5.10.1",
-    "mobx-react-lite": "^1.4.0"
+    "mobx": "^5.15.1",
+    "mobx-react-lite": "^1.5.2"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -16,19 +16,19 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "@types/react": "^16.8.19",
-    "@types/react-test-renderer": "^16.8.1",
-    "jest": "^24.8.0",
-    "jest-cli": "^24.8.0",
-    "react": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "rollup": "^1.15.0",
-    "rollup-plugin-typescript2": "^0.21.1",
-    "rollup-plugin-uglify": "^6.0.2",
-    "ts-jest": "=24.0.2",
+    "@types/jest": "^24.0.25",
+    "@types/react": "^16.9.17",
+    "@types/react-test-renderer": "^16.9.1",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "react": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "rollup": "^1.27.14",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "=24.2.0",
     "tslib": "^1.10.0",
-    "typescript": "^3.5.1",
+    "typescript": "^3.7.4",
     "uglify-es": "^3.3.10"
   },
   "jest": {

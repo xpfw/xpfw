@@ -1,14 +1,14 @@
 {
   "devDependencies": {
-    "@types/node": "^11.13.4",
-    "@types/shelljs": "^0.8.4",
-    "jest": "^24.7.1",
-    "jest-cli": "^24.7.1",
-    "lerna": "^3.13.2",
-    "npm-check-updates": "^3.1.7",
+    "@types/node": "^13.1.4",
+    "@types/shelljs": "^0.8.6",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "lerna": "^3.20.2",
+    "npm-check-updates": "^4.0.1",
     "shelljs": "^0.8.3",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.4.3"
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
   },
   "scripts": {
     "init": "./node_modules/.bin/lerna bootstrap",

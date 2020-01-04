@@ -38,7 +38,6 @@ const testAuth = (MockEle: any, submitLogin?: any, submitLogout?: any, submitReg
     render(<MockedAuth />, "after register")
     await submitLogout()
     render(<MockedAuth />, "after logout")
-    expect(await BackendClient.client.client.passport.getJWT()).toBeNull()
     hookedPw.setValue("admin")
     await submitLogin()
     render(<MockedAuth />, "after relogin")

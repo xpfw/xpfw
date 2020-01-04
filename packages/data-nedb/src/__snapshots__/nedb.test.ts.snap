@@ -160,4 +160,10 @@ Object {
 
 exports[`nedb adapter behaves as expected: result of removal 1`] = `1`;
 
-exports[`nedb adapter behaves as expected: result of update 1`] = `1`;
+exports[`nedb adapter behaves as expected: result of update 1`] = `
+Object {
+  "$set": Object {
+    "fun": 6,
+  },
+}
+`;

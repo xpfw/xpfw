@@ -6,8 +6,14 @@ import memo from "../util/memo"
 
 const changeSize = (mapTo: string, prefix: any, isAdd: boolean, insertAt?: number) => {
   return memo(() => action((e: any) => {
-    e.preventDefault()
-    e.stopPropagation()
+    if (e != null) {
+      if (e.preventDefault != null) {
+        e.preventDefault()
+      }
+      if (e.stopPropagation != null) {
+        e.stopPropagation()
+      }
+    }
     const currentArray = FormStore.getValue(mapTo, prefix, [undefined])
     const length = currentArray.length
     if (!isNumber(insertAt)) {

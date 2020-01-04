@@ -14,7 +14,7 @@ const listenToFeathersAuthEvents = (app: any, store: any) => {
     store.loggedOut()
   }
   app.on("authenticated", async (authRes: any) => {
-    store.setLoggedIn(await getDataFromToken(authRes.accessToken))
+    store.setLoggedIn(authRes.user)
   })
   app.on("logout", logoutHandler)
   app.on("reauthentication-error", logoutHandler)
@@ -49,14 +49,6 @@ const listenToFeathersServiceEvents = (app: any, store: any, collectionList: str
     dbService.on(`updated`, eventHandler(false))
     dbService.on(`removed`, eventHandler(true))
   }
-}
-
-const getDataFromToken = async (token: any) => {
-  const verification = await FeathersClient.client.passport.verifyJWT(token)
-  if (verification.user) {
-    return verification.user
-  }
-  return FeathersClient.get(dataOptions.userCollection, get(verification, "userId"))
 }
 
 export interface IQueueEntry {
@@ -149,7 +141,7 @@ const FeathersClient: IUiClient = {
       listenToFeathersAuthEvents(app, get(options, "userStore"))
     }
     if (get(options, "makeAuth")) {
-      return app.authenticate()
+      return app.reAuthenticate()
     }
   },
   disconnect: () => {
@@ -161,7 +153,7 @@ const FeathersClient: IUiClient = {
   },
   login: async (loginData: any) => {
     const loginRes = await FeathersClient.client.authenticate(loginData)
-    return {user: await getDataFromToken(loginRes.accessToken)}
+    return {user: loginRes.user}
   },
   register: (registerData: any) => {
     return FeathersClient.client.service(dataOptions.userCollection).create(registerData)

@@ -117,7 +117,7 @@ Object {
 }
 `;
 
-exports[`User Store Test: makeauth 1`] = `[NotAuthenticated: Could not find stored JWT and no authentication strategy was given]`;
+exports[`User Store Test: makeauth 1`] = `[NotAuthenticated: No accessToken found in storage]`;
 
 exports[`User Store Test: result of registration 1`] = `
 Object {

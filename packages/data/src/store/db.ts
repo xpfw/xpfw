@@ -63,6 +63,9 @@ export class DbStoreClass {
           return result
         } catch (error) {
           FormStore.setLoading(id, false)
+          if (error != null) {
+            delete error.hook
+          }
           FormStore.setError(id, error)
           delete thisRef.fetching[id]
           return error
@@ -123,8 +126,11 @@ export class DbStoreClass {
       FormStore.setLoading(saveResultAt, false)
       return result
     } catch (error) {
-      FormStore.setError(saveResultAt, error)
       FormStore.setLoading(saveResultAt, false)
+      if (error != null) {
+        delete error.hook
+      }
+      FormStore.setError(saveResultAt, error)
       return error
     }
   }
@@ -153,8 +159,11 @@ export class DbStoreClass {
       this.setItem(id, col, result)
       return result
     } catch (error) {
-      FormStore.setError(saveResultAt, error)
       FormStore.setLoading(saveResultAt, false)
+      if (error != null) {
+        delete error.hook
+      }
+      FormStore.setError(saveResultAt, error)
       return error
     }
   }
@@ -225,8 +234,11 @@ export class DbStoreClass {
       FormStore.setLoading(id, false, REMOVE_ADDON_KEY)
       return result
     } catch (error) {
-      FormStore.setError(id, error, REMOVE_ADDON_KEY)
       FormStore.setLoading(id, false, REMOVE_ADDON_KEY)
+      if (error != null) {
+        delete error.hook
+      }
+      FormStore.setError(id, error, REMOVE_ADDON_KEY)
       return error
     }
   }

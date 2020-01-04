@@ -9,13 +9,10 @@ exports[`User Store Test: after invalid login 1`] = `
   "user": null,
   "loggedIn": false,
   "error": {
-    "name": "BadRequest",
-    "message": "Missing credentials",
-    "code": 400,
-    "className": "bad-request",
-    "data": {
-      "message": "Missing credentials"
-    },
+    "name": "NotAuthenticated",
+    "message": "Invalid login",
+    "code": 401,
+    "className": "not-authenticated",
     "errors": {}
   },
   "connected": true
@@ -112,9 +109,6 @@ exports[`User Store Test: after wrong password login 1`] = `
     "message": "Invalid login",
     "code": 401,
     "className": "not-authenticated",
-    "data": {
-      "message": "Invalid login"
-    },
     "errors": {}
   },
   "connected": true

@@ -1,13 +1,10 @@
-import * as authentication from "@feathersjs/authentication"
-import * as handler from "@feathersjs/errors/handler"
 import * as express from "@feathersjs/express"
 import * as rest from "@feathersjs/express/rest"
-import feathers, { Application, Service } from "@feathersjs/feathers"
-import * as sios from "@feathersjs/socketio"
+import feathers from "@feathersjs/feathers"
 import * as memdb from "feathers-memory"
 import * as mongoService from "feathers-mongodb"
-import { isString } from "lodash"
 import { MongoClient } from "mongodb"
+
 const memd: any = memdb
 const getRandomApp = async (memoryServiceName: string, useMongo?: boolean) => {
   const f: any = feathers()
