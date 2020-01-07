@@ -23,11 +23,11 @@ class WebMenu extends React.Component<any, any> {
         name: "Data",
         path: "/ui.html"
       },
-      {
-        icon: FaChartLine,
-        name: "Stats",
-        path: "/stats.html"
-      },
+      // {
+      //   icon: FaChartLine,
+      //   name: "Stats",
+      //   path: "/stats.html"
+      // },
       {
         icon: FaBook,
         name: "Documentation",

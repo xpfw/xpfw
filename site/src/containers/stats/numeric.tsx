@@ -1,3 +1,4 @@
+import { toJS } from "@xpfw/data"
 import { StatType } from "@xpfw/dm"
 import { useStat } from "@xpfw/dm-shared"
 import {get} from "lodash"

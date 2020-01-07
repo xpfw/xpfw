@@ -80,10 +80,7 @@ const TagCollectionModel: ExtendedJSONSchema = {
   required: [String(Title.title)],
   properties: {
     [String(Title.title)]: Title,
-    [String(Tags.title)]: Tags,
-    [String(CreatedAt.title)]: CreatedAt
-  },
-  modify: [ensureDate(String(CreatedAt.title), ["create", "update"])]
+    [String(Tags.title)]: Tags  }
 }
 
 const RecipeName: ExtendedJSONSchema = {

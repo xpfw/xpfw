@@ -3,7 +3,7 @@ import { FaReact } from "react-icons/fa"
 import CardColumn from "../../components/cardColumn"
 import DemoForm from "../../components/demoForm"
 import BulmaHero from "../../components/hero"
-import HighlightedCode from "../../components/higlight"
+import HighlightedCode from "../../components/highlight"
 import siteGlobals from "../../globals"
 
 class FormIntro extends React.Component<any, any> {
@@ -20,11 +20,11 @@ class FormIntro extends React.Component<any, any> {
             <a className={siteGlobals.externalLinkConfig.className} href="/docs/form/theming.html">
               can easily be themed
             </a>
-            &nbsp;on a per &nbsp;
+            &nbsp;on a per&nbsp;
             <a className={siteGlobals.externalLinkConfig.className} href="/docs/core/definitions.html">
               type
-            </a> basis. Prebuilt <a className={siteGlobals.externalLinkConfig.className} href="/docs/testing.html">
-            &nbsp;includable jest tests&nbsp;
+            </a> basis. <a className={siteGlobals.externalLinkConfig.className} href="/docs/testing.html">
+              Includable jest tests
             </a> will help ease your mind.
           </div>
           <CardColumn

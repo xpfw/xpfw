@@ -1,22 +1,12 @@
 # xpfw
 
-xpfw is a collection of packages to make rendering forms and having CRUD-UI's in React as well as React Native a blast. Check out the [live demo](https://xpfw.github.io) to see what's possible
+xpfw is a collection of packages geared towards turning your JSON-Schema into a React UI.
+Check out the [live demo](https://xpfw.github.io) to get a quick practical overview.
 
-It is divided into three main packages:
-- [Core](#Core)
-- [Forms](#Forms)
-- [UI](#UI)
-
-## Core
-[@xpfw/validate](https://xpfw.github.io/form), the core of xpfw, allows you to do form and permission validations based on a form definition.
-
-## Forms
-[@xpfw/form](https://xpfw.github.io/form) allows you to visualize the form definitions and their validation suggestions in React and React Native.
-
-## UI
-[@xpfw/ui](https://xpfw.github.io/ui) gives you a fully usable CRUD-UI for React and React Native!
+- [@xpfw/form](https://xpfw.github.io/form) turns your JSON-Schema Input Components just like [https://github.com/rjsf-team/react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
+- [@xpfw/data](https://xpfw.github.io/data) lets you turn JSON-Schema into a functional backend independent CRUD-UI
 
 ## Customization
-xpfw is all about integration.
-You can connect [@xpfw/ui](https://xpfw.github.io/ui) [to any backend](https://xpfw.github.io/docs/ui/backend).
-[@xpfw/form](https://xpfw.github.io/form) and [@xpfw/ui](https://xpfw.github.io/ui) are also [built to be themed](https://xpfw.github.io/docs/ui/theme) with ease.
+xpfw is all about custimziation.
+You can connect [@xpfw/data](https://xpfw.github.io/data) [to any backend](https://xpfw.github.io/docs/ui/backend).
+[@xpfw/form](https://xpfw.github.io/form) and [@xpfw/data](https://xpfw.github.io/data) are also [built to be themed via React Hooks](https://xpfw.github.io/docs/ui/theme).

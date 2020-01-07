@@ -3,7 +3,7 @@ import { FieldType } from '@xpfw/validate'
 import * as React from "react"
 import { FaPaintBrush } from "react-icons/fa"
 import BulmaHero from "../../components/hero"
-import HighlightedCode from "../../components/higlight"
+import HighlightedCode from "../../components/highlight"
 import siteGlobals from "../../globals"
 import "./theme"
 

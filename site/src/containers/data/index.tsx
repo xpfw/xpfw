@@ -1,5 +1,7 @@
 import { BackendClient } from "@xpfw/data"
 import NedbClient from "@xpfw/data-nedb"
+import * as nedb from "nedb"
+NedbClient.instanceCreator = nedb
 BackendClient.client = NedbClient
 import { registerComponents } from "@xpfw/form-bulma"
 registerComponents()
@@ -10,11 +12,11 @@ import * as React from "react"
 import { FaListAlt, FaPenSquare, FaPlusCircle, FaReact, FaUndo, FaUsers, FaUsersCog } from "react-icons/fa"
 import CardColumn from "../../components/cardColumn"
 import BulmaHero from "../../components/hero"
-import HighlightedCode from "../../components/higlight"
+import HighlightedCode from "../../components/highlight"
 import PageContainer from "../../components/pageContainer"
 import MiniCreate from "../../components/ui/create"
 import ChangeableMiniEdit from "../../components/ui/edit"
-import UiList, { readyData, resetData } from "../../components/ui/list"
+import UiList, { resetData } from "../../components/ui/list"
 import siteGlobals, { TagCollectionModel, TagModel } from "../../globals"
 import { relationshipCode } from "../home/actualCode"
 
@@ -62,7 +64,9 @@ class UiPage extends React.Component<any, any> {
                           <div className="is-flex centerJustify smallMarginBottom">
                           Check which Tags can be searched for in the Tag Collection Relationship Field.
                           <a className="button" onClick={async () => {
+                            console.log("ABOUT TO RESET TAGS")
                             await resetData(TagModel)
+                            console.log("REST")
                           }}>
                             <FaUndo />Reset Data
                           </a>
@@ -77,7 +81,7 @@ class UiPage extends React.Component<any, any> {
                       name: "Modify a Tag",
                       children: (
                         <div>
-                          Select an Tag from the list to edit it here
+                          Select a Tag from the list to edit it here
                           <ChangeableMiniEdit schema={TagModel} />
                         </div>
                       ),

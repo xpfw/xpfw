@@ -3139,22 +3139,6 @@ resolve@1.x, resolve@^1.10.0, resolve@^1.3.2:
   dependencies:
     path-parse "^1.0.6"
 
-resub-persist@^1.2.8:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/resub-persist/-/resub-persist-1.2.8.tgz#80b4d165ae5588a30a30fe5b514bd457f821f11a"
-  integrity sha512-KZC8mFYYE24j+roKheKyYO89BsYwjhGmAp6B2MonJvxHTcSO81UonoayDhf90j3dJlX8TryhrBweHWENUurtwA==
-  dependencies:
-    lodash.get "^4.4.2"
-    lodash.set "^4.3.2"
-
-resub@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/resub/-/resub-1.2.2.tgz#3277c1a5d764b54b7565a788e434dcd5ab2b3359"
-  integrity sha512-irs+7lAnpACb4AeduEwL50XIYhHIUYQFubm1EGC4fFraSiB3Ytofjry5+oi5NjhJMks2motIW2ISLwW4kRpUDg==
-  dependencies:
-    lodash "^4.17.14"
-    tslib "^1.10.0"
-
 ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"

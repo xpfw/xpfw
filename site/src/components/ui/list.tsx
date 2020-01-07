@@ -20,7 +20,7 @@ const createData = async (form: ExtendedJSONSchema) => {
     list = await ListStore.getList(TagModel, undefined, "list", true)
     list = list.data
   }
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 0; i <= 19; i++) {
     if (form.title === RecipeModel.title) {
       FormStore.setValue(RecipeName.title, "Name#" + i, RecipeModel.title)
       FormStore.setValue(RecipeAuthor.title, "Author#" + i, RecipeModel.title)
@@ -57,11 +57,11 @@ const readyData = async (form: ExtendedJSONSchema) => {
     await createData(form)
   }
 }
-// const readyAll = async () => {
-//   await readyData(TagModel)
-//   await readyData(TagCollectionModel)
-// }
-// readyAll()
+const readyAll = async () => {
+  await readyData(TagModel)
+  await readyData(TagCollectionModel)
+}
+readyAll()
 const promiseTimeout = (waitTime: number) => {
   return new Promise((resolve) => {setTimeout(resolve, waitTime)})
 }
@@ -70,6 +70,7 @@ const resetData = async (form: ExtendedJSONSchema) => {
   let total = 1
   while (total !== 0) {
     const res = await ListStore.makeQuery(form, undefined, "none")
+    console.log("RESULT OF QUERY IS", res)
     if (res != null) {
       if (res !== false) {
         total = res.total

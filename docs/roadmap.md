@@ -1,6 +1,6 @@
 # Roadmap
 
-## Required
+## Todo
 - don't use lodash as a full package but only include the ones needed via the subpackages "lodash.*"
 - improve typedoc
 

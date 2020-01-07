@@ -1,11 +1,10 @@
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/prism-light"
-import typescript from 'react-syntax-highlighter/dist/languages/prism/typescript'
-import { coy } from 'react-syntax-highlighter/dist/styles/prism'
-import * as React from "react"
 import {get} from "lodash"
+import * as React from "react"
+import typescript from "react-syntax-highlighter/dist/esm/languages/prism/typescript"
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/prism-light"
+import { coy } from "react-syntax-highlighter/dist/esm/styles/prism"
 
-registerLanguage('ts', typescript);
-
+SyntaxHighlighter.registerLanguage("ts", typescript)
 
 export interface IHighlightedCode {
   source: string
