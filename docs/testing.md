@@ -1,6 +1,6 @@
 # Testing
 
-*xpfw* delivers premade tests which you can include to get full code coverage out of your customl styled components!
+*xpfw* delivers premade tests which you can include to get full code coverage out of your custom styled components!
 
 All tests follow the same "API". It is an exported function, which you give your readily usable React Component. That will be rendered then.
 

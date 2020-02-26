@@ -1,6 +1,4 @@
 import { observable } from "mobx"
-const CURRENTROUTEKEY = "currentRoute"
-
 export interface IRoute {
   path: string
   component: React.ElementType<any>

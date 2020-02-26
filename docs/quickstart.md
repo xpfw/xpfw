@@ -1,5 +1,5 @@
 # Use a prebuilt stack
-There are multiple options available to kick you off directly
+There are multiple options available to get started.
 
 # Add to your stack
 
