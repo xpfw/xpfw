@@ -5,7 +5,7 @@
   "typings": "dist",
   "license": "MIT",
   "peerDependencies": {
-    "lodash-es": "^4.x.x",
+    "lodash": "^4.x.x",
     "moment": "2.x.x",
     "react": "^16.x.x",
     "@xpfw/form": "1.x.x"

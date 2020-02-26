@@ -6,7 +6,7 @@
   "license": "MIT",
   "peerDependencies": {
     "ajv": "^6.x.x",
-    "lodash-es": "^4.x.x",
+    "lodash": "^4.x.x",
     "mobx": "^5.x.x",
     "react": "^16.x.x"
   },
