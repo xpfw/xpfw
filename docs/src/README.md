@@ -8,5 +8,5 @@ Check out the [live demo](https://xpfw.github.io) to get a quick practical overv
 
 ## Customization
 xpfw is all about custimziation.
-You can connect [@xpfw/data](https://xpfw.github.io/data) [to any backend](https://xpfw.github.io/docs/ui/backend).
-[@xpfw/form](https://xpfw.github.io/form) and [@xpfw/data](https://xpfw.github.io/data) are also [built to be themed via React Hooks](https://xpfw.github.io/docs/ui/theme).
+You can connect [@xpfw/data](https://xpfw.github.io/data) [to any backend](https://xpfw.github.io/docs/data/ibackendclient.html).
+[@xpfw/form](https://xpfw.github.io/form) and [@xpfw/data](https://xpfw.github.io/data) also both provide React Hooks for easy themability.

@@ -8,7 +8,7 @@ const routes = [
     {name: "index"},
     {name: "core"},
     {name: "form"},
-    {name: "ui"},
+    {name: "data"},
     {name: "stats"},
     {name: "licenses"}
 ]

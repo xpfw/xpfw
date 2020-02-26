@@ -50,7 +50,7 @@ class ModularityInfo extends React.Component<any, any> {
                   name: "CRUD",
                   children: (
                     <span className={siteGlobals.contentClass}>
-                      <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/ui.html"}>@xpfw/ui</a>  like <a {...siteGlobals.externalLinkConfig} href="https://www.meteor.com/">Meteor</a> abstracts CRUD and paginated Lists for collections and comes with readily usable React UI.<br />
+                      <a onClick={linkClickHandler} className={siteGlobals.linkClass} href={"/data.html"}>@xpfw/data</a>  like <a {...siteGlobals.externalLinkConfig} href="https://www.meteor.com/">Meteor</a> abstracts CRUD and paginated Lists for collections and comes with readily usable React UI.<br />
                       Think of <a {...siteGlobals.externalLinkConfig} href="https://github.com/marmelab/react-admin">react-admin</a> written for @xpfw/validate <a className={siteGlobals.linkClass} href={"/docs/core/definitions.html"}>definitions</a>.
                     </span>
                   ),
@@ -59,8 +59,8 @@ class ModularityInfo extends React.Component<any, any> {
                 {
                   name: "Backend Independent",
                   children: (
-                    <span className={siteGlobals.contentClass}><a onClick={linkClickHandler} {...siteGlobals.externalLinkConfig} href="/ui.html">@xpfw/ui</a> has been written backend independently.<br />
-                    Implement <a className={siteGlobals.linkClass} href={"/docs/ui/ibackendclient.html"}>IBackendClient</a> or use existing ones like <a className={siteGlobals.linkClass} href={"/docs/stacks/feathers.html"}>feathers</a>.</span>
+                    <span className={siteGlobals.contentClass}><a onClick={linkClickHandler} {...siteGlobals.externalLinkConfig} href="/data.html">@xpfw/data</a> has been written backend independently.<br />
+                    Implement <a className={siteGlobals.linkClass} href={"/docs/data/ibackendclient.html"}>IBackendClient</a> or use existing ones like <a className={siteGlobals.linkClass} href={"/docs/stacks/feathers.html"}>feathers</a>.</span>
                   ),
                   icon: GoServer
                 }

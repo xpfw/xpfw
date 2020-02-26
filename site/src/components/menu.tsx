@@ -21,7 +21,7 @@ class WebMenu extends React.Component<any, any> {
       {
         icon: FaDatabase,
         name: "Data",
-        path: "/ui.html"
+        path: "/data.html"
       },
       // {
       //   icon: FaChartLine,

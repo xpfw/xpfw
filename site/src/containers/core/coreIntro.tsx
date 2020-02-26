@@ -50,7 +50,7 @@ class CoreIntro extends React.Component<any, any> {
                     name: "Permission Support",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        <a {...siteGlobals.externalLinkConfig} href="/docs/core/permissions.html" className={siteGlobals.linkClass}>@xpfw/permissions</a> is an optional permission system <a {...siteGlobals.externalLinkConfig} href="/docs/core/permissions.html">that can be integrated with any stack</a>.
+                        <a {...siteGlobals.externalLinkConfig} href="/docs/stacks/feathers.html" className={siteGlobals.linkClass}>@xpfw/permissions</a> is an optional permission system that can be integrated with any stack.
                       </span>
                     ),
                     icon: MdSecurity
@@ -70,10 +70,10 @@ class CoreIntro extends React.Component<any, any> {
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
                         xpfw comes with support for feathers.
-                        Connect to a feathers backend via <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-data-feathers/`}>
+                        Connect to a feathers backend via <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}data-feathers/`}>
                           @xpfw/data-feathers
-                        </a>. For the feathers backend <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-feathers/`}>
-                          @xpfw/feathers
+                        </a>. For the feathers backend <a className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}feathers-hooks/`}>
+                          @xpfw/feathers-hooks
                         </a> provides some ready to use hooks.
                         An example of both can be found&nbsp;
                         <a {...siteGlobals.externalLinkConfig} href="/docs/backend/feathers.html">in the docs.</a>
@@ -99,7 +99,7 @@ class CoreIntro extends React.Component<any, any> {
                     name: "Connect your stack",
                     children: (
                       <span className={siteGlobals.contentClass} key="val">
-                        <a className={siteGlobals.linkClass} href={"/docs/ui/ibackendclient.html"}>IBackendClient</a> is an interface through which @xpfw/data can be connected to any backend.
+                        <a className={siteGlobals.linkClass} href={"/docs/data/ibackendclient.html"}>IBackendClient</a> is an interface through which @xpfw/data can be connected to any backend.
                         The stacks that are already supported are merely suggestions.
                       </span>
                     ),

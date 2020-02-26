@@ -24,7 +24,7 @@ class UiIntro extends React.Component<any, any> {
           <div className="has-text-centered pullUpMargin">
             This one is backed by&nbsp;
             <a target="_blank" className={siteGlobals.linkClass} href="/docs/stacks/nedb.html">
-              @xpfw/ui-nedb
+              @xpfw/data-nedb
             </a>
           </div>
           <div style={{marginTop: "3.8rem"}}>
