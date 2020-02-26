@@ -153,7 +153,7 @@ const FeathersClient: IUiClient = {
   },
   login: async (loginData: any) => {
     const loginRes = await FeathersClient.client.authenticate(loginData)
-    return {user: loginRes.user}
+    return loginRes
   },
   register: (registerData: any) => {
     return FeathersClient.client.service(dataOptions.userCollection).create(registerData)
