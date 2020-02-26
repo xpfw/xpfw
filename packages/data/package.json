@@ -43,8 +43,6 @@
     "moment": "^2.24.0",
     "react": "^16.8.5",
     "react-test-renderer": "^16.12.0",
-    "resub": "^1.2.2",
-    "resub-persist": "^1.2.8",
     "rollup": "^1.27.14",
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-uglify": "^6.0.4",
