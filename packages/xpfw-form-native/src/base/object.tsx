@@ -1,26 +1,21 @@
-import { IFieldProps, SharedField } from "@xpfw/form-shared"
-import { globals, IField } from "@xpfw/validate"
-import { cloneDeep, each, get } from "lodash"
+import { IFieldProps, SharedField, useObject } from "@xpfw/form"
+import { each } from "lodash"
 import * as React from "react"
 import { View } from "react-native"
 
-class ObjectField extends React.Component<IFieldProps, any> {
-  public render() {
-    const children: any = []
-    const objectDef = get(this.props.field, `validate.objectDef`)
-    if (Array.isArray(objectDef)) {
-      each(objectDef, (subFieldOptions: IField) => {
-        const subField = cloneDeep(subFieldOptions)
-        subField.mapTo = `${this.props.field.mapTo}.${subFieldOptions.mapTo}`
-        children.push(<SharedField prefix={this.props.prefix} field={subField} />)
-      })
-    }
-    return (
-      <View>
-        {children}
-      </View>
-    )
+const ObjectField = (props: IFieldProps) => {
+  const children: any = []
+  const objProps = useObject(props.schema, props.mapTo, props.prefix)
+  if (Array.isArray(objProps.fields)) {
+    each(objProps.fields, (subField) => {
+      children.push(<SharedField {...subField} key={subField.mapTo} />)
+    })
   }
+  return (
+    <View>
+      {children}
+    </View>
+  )
 }
 
 export default ObjectField

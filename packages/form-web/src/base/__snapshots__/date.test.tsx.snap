@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Date Field Test: date with content 1`] = `
+<input
+  onChange={[Function]}
+  type="date"
+  value="2012-01-11"
+/>
+`;
+
+exports[`Date Field Test: datetime-local with content 1`] = `
+<input
+  onChange={[Function]}
+  type="datetime-local"
+  value="2018-02-22T07:55"
+/>
+`;
+
+exports[`Date Field Test: empty datetime-local field 1`] = `
+<input
+  onChange={[Function]}
+  type="date"
+  value="2011-05-05"
+/>
+`;
+
+exports[`Date Field Test: time with content 1`] = `
+<input
+  onChange={[Function]}
+  type="time"
+  value="Invalid date"
+/>
+`;

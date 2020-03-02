@@ -3,7 +3,20 @@
 exports[`Select Field Test: from function set to 2 1`] = `
 <View>
   <RCTPicker
-    items={Array []}
+    items={
+      Array [
+        Object {
+          "label": "fromFuncc",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "fromFunca",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
     onChange={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -23,7 +36,20 @@ exports[`Select Field Test: from function set to 2 1`] = `
 exports[`Select Field Test: from function set to 4 1`] = `
 <View>
   <RCTPicker
-    items={Array []}
+    items={
+      Array [
+        Object {
+          "label": "fromFuncc",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "fromFunca",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
     onChange={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -43,7 +69,20 @@ exports[`Select Field Test: from function set to 4 1`] = `
 exports[`Select Field Test: from function set to invalid 1`] = `
 <View>
   <RCTPicker
-    items={Array []}
+    items={
+      Array [
+        Object {
+          "label": "fromFuncc",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "fromFunca",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
     onChange={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}

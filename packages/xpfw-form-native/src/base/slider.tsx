@@ -12,7 +12,7 @@ export default class NativeSliderField extends React.Component<IFieldProps, any>
     const fieldType = get(this.props, "field.type")
     let secureTextEntry = false
     let keyboardType: any = "default"
-    if (fieldType === globals.FieldType.Number) {
+    if (fieldType === globals."number") {
       keyboardType = "numeric"
     } else if (fieldType === globals.FieldType.Password) {
       secureTextEntry = true
@@ -20,7 +20,7 @@ export default class NativeSliderField extends React.Component<IFieldProps, any>
     let min
     let max
     let step
-    if (fieldType === globals.FieldType.Number || fieldType === globals.FieldType.Slider) {
+    if (fieldType === globals."number" || fieldType === globals.FieldType.Slider) {
       min = get(this.props.field, "validate.min")
       max = get(this.props.field, "validate.max")
       step = get(this.props.field, "validate.step")

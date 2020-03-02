@@ -14,10 +14,10 @@ export default {
     "lodash",
     "moment",
     "feathers-client",
-    "resub",
-    "resub-persist",
+    "mobx",
+    "mobx-react",
     "socket.io-client",
-    "@xpfw/validate",
+    "@xpfw/form",
     "react",
     "react-dom"
   ]

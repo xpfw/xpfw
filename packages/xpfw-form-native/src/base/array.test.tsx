@@ -1,10 +1,10 @@
 import { ComponentRegistry } from "@xpfw/form"
-import { objectTest } from "@xpfw/form-tests"
-import ObjectField from "./object"
+import { arrayTest } from "@xpfw/form-tests"
+import ArrayField from "./array"
 import TextField from "./text"
 
+ComponentRegistry.registerComponent("array", ArrayField)
 ComponentRegistry.registerComponent("string", TextField)
 ComponentRegistry.registerComponent("number", TextField)
-ComponentRegistry.registerComponent("object", ObjectField)
 
-test("Object Field Test", objectTest)
+test("Array Field Test", arrayTest)

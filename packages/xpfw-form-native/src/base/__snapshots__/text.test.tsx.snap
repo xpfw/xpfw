@@ -2,89 +2,56 @@
 
 exports[`Text Field Test: as number field 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 3,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="numeric"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -92,90 +59,57 @@ exports[`Text Field Test: as number field 1`] = `
 
 exports[`Text Field Test: as number field with number 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 3,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="numeric"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value={5432}
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value={5432}
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -183,90 +117,57 @@ exports[`Text Field Test: as number field with number 1`] = `
 
 exports[`Text Field Test: as number field with string 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 3,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="numeric"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="gfsdfasd"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="gfsdfasd"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -274,90 +175,57 @@ exports[`Text Field Test: as number field with string 1`] = `
 
 exports[`Text Field Test: as number field with string number 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 3,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="numeric"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="125"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="125"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -365,89 +233,57 @@ exports[`Text Field Test: as number field with string number 1`] = `
 
 exports[`Text Field Test: as slider field 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 15,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "slider",
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -455,90 +291,58 @@ exports[`Text Field Test: as slider field 1`] = `
 
 exports[`Text Field Test: as slider field with number 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 15,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "slider",
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value={5432}
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value={5432}
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -546,90 +350,58 @@ exports[`Text Field Test: as slider field with number 1`] = `
 
 exports[`Text Field Test: as slider field with string 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 15,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "slider",
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="gfsdfasd"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="gfsdfasd"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -637,90 +409,58 @@ exports[`Text Field Test: as slider field with string 1`] = `
 
 exports[`Text Field Test: as slider field with string number 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      myNum
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "myNum",
-          "type": 15,
-          "validate": Object {},
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "slider",
+            "title": "myVal",
+            "type": "number",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="125"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="125"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -728,92 +468,58 @@ exports[`Text Field Test: as slider field with string number 1`] = `
 
 exports[`Text Field Test: date with content 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      dateVal
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "dateVal",
-          "type": 5,
-          "validate": Object {
-            "type": 2,
-          },
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "date",
+            "title": "dateVal",
+            "type": "string",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="2012-01-11"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="2012-01-11"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -821,92 +527,58 @@ exports[`Text Field Test: date with content 1`] = `
 
 exports[`Text Field Test: datetime-local with content 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      dateVal
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "dateVal",
-          "type": 5,
-          "validate": Object {
-            "type": 2,
-          },
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "date-time",
+            "title": "dateVal",
+            "type": "string",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="2018-02-22T07:55"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="2018-02-22T07:55"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -914,173 +586,57 @@ exports[`Text Field Test: datetime-local with content 1`] = `
 
 exports[`Text Field Test: empty datetime-local field 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      dateVal
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "dateVal",
-          "type": 5,
-          "validate": Object {
-            "type": 2,
-          },
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "date",
+            "title": "dateVal",
+            "type": "string",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
-  </View>
-  <View />
-</View>
-`;
-
-exports[`Text Field Test: empty render 1`] = `
-<View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
-      }
-    }
-  >
-    <TextInput
-      allowFontScaling={true}
-      field={null}
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
-          Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
-          Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -1088,96 +644,56 @@ exports[`Text Field Test: empty render 1`] = `
 
 exports[`Text Field Test: namefield 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      guestName
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "guestName",
-          "type": 2,
-          "validate": Object {
-            "permission": Object {
-              "create": "guest",
-              "find": "guest",
-              "remove": "guest",
-              "update": "guest",
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
             },
-          },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "title": "guestName",
+            "type": "string",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -1185,97 +701,57 @@ exports[`Text Field Test: namefield 1`] = `
 
 exports[`Text Field Test: namefield changed va 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      guestName
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "guestName",
-          "type": 2,
-          "validate": Object {
-            "permission": Object {
-              "create": "guest",
-              "find": "guest",
-              "remove": "guest",
-              "update": "guest",
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
             },
-          },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "title": "guestName",
+            "type": "string",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="myval"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="myval"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -1283,91 +759,57 @@ exports[`Text Field Test: namefield changed va 1`] = `
 
 exports[`Text Field Test: password field 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      pwval
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "pwval",
-          "type": 7,
-          "validate": Object {
-            "type": 2,
-          },
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={true}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "password",
+            "title": "passportWellYou",
+            "type": "string",
+          }
+        }
+        secureTextEntry={true}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+      />
+    </View>
   </View>
   <View />
 </View>
@@ -1375,92 +817,58 @@ exports[`Text Field Test: password field 1`] = `
 
 exports[`Text Field Test: time with content 1`] = `
 <View>
-  <View
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {},
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          Array [
-            Object {
-              "color": "#86939e",
-              "fontSize": 15,
-              "fontWeight": "bold",
-              "marginBottom": 1,
-              "marginLeft": 20,
-              "marginRight": 20,
-              "marginTop": 15,
-            },
-            undefined,
-            undefined,
-          ],
-        ]
-      }
-    >
-      dateVal
-    </Text>
-  </View>
+  <Text />
   <View
     style={
       Object {
-        "borderBottomColor": "#bdc6cf",
-        "borderBottomWidth": 1,
-        "marginLeft": 20,
-        "marginRight": 20,
-        "transform": Array [
-          Object {
-            "translateX": 0,
-          },
-        ],
+        "paddingHorizontal": 10,
+        "width": "100%",
       }
     }
   >
-    <TextInput
-      allowFontScaling={true}
-      field={
+    <View
+      style={
         Object {
-          "mapTo": "dateVal",
-          "type": 5,
-          "validate": Object {
-            "type": 2,
-          },
+          "alignItems": "center",
+          "borderBottomWidth": 1,
+          "borderColor": "#86939e",
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
-      keyboardType="default"
-      onChangeText={[Function]}
-      secureTextEntry={false}
-      setValue={[Function]}
-      style={
-        Array [
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        keyboardType="default"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        schema={
           Object {
-            "color": "#86939e",
-            "minHeight": 36,
-            "width": 750,
-          },
+            "format": "time",
+            "title": "dateVal",
+            "type": "string",
+          }
+        }
+        secureTextEntry={false}
+        style={
           Object {
-            "fontSize": 17.5,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="16:20"
-    />
+            "alignSelf": "center",
+            "color": "black",
+            "flex": 1,
+            "fontSize": 18,
+            "minHeight": 40,
+          }
+        }
+        testID="RNE__Input__text-input"
+        underlineColorAndroid="transparent"
+        value="16:20"
+      />
+    </View>
   </View>
   <View />
 </View>

@@ -2,11 +2,10 @@
 
 exports[`Boolean Field Test: boolfield 1`] = `
 <RCTSwitch
-  disabled={false}
+  accessibilityRole="button"
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onValueChange={[Function]}
   style={
     Object {
       "height": 31,
@@ -19,11 +18,10 @@ exports[`Boolean Field Test: boolfield 1`] = `
 
 exports[`Boolean Field Test: set to false 1`] = `
 <RCTSwitch
-  disabled={false}
+  accessibilityRole="button"
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onValueChange={[Function]}
   style={
     Object {
       "height": 31,
@@ -36,28 +34,26 @@ exports[`Boolean Field Test: set to false 1`] = `
 
 exports[`Boolean Field Test: set to invalid 1`] = `
 <RCTSwitch
-  disabled={false}
+  accessibilityRole="button"
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onValueChange={[Function]}
   style={
     Object {
       "height": 31,
       "width": 51,
     }
   }
-  value="invalid"
+  value={false}
 />
 `;
 
 exports[`Boolean Field Test: set to true 1`] = `
 <RCTSwitch
-  disabled={false}
+  accessibilityRole="button"
   onChange={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  onValueChange={[Function]}
   style={
     Object {
       "height": 31,

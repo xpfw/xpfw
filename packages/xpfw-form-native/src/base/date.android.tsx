@@ -1,19 +1,21 @@
 
-import { IFieldProps } from "@xpfw/form-shared"
-import { globals } from "@xpfw/validate"
+import { IFieldProps, useFieldWithValidation, memo, FormStore, getMapTo } from "@xpfw/form"
 import { get, isDate } from "lodash"
 import * as React from "react"
 import { DatePickerAndroid, TimePickerAndroid, TouchableHighlight, View } from "react-native"
 import NativeFieldContainer from "./field"
-declare const require: any
 import * as momentT from "moment"
 import { Input } from "react-native-elements"
+import { observer } from "mobx-react"
+import { action } from "mobx"
+
 const moment: any = momentT
-const getOriginalFormatFromType = (dateType: number) => {
+
+const getOriginalFormatFromType = (dateType: string) => {
   let momentParseFrom = ""
-  if (dateType === 3) {
+  if (dateType === "date") {
     momentParseFrom = get(moment, "HTML5_FMT.DATE")
-  } else if (dateType === 4) {
+  } else if (dateType === "time") {
     momentParseFrom = get(moment, "HTML5_FMT.TIME")
   } else  {
     momentParseFrom = get(moment, "HTML5_FMT.DATETIME_LOCAL")
@@ -21,22 +23,10 @@ const getOriginalFormatFromType = (dateType: number) => {
   return momentParseFrom
 }
 
-const processDate = (thisRef: any) => {
-  return async () => {
-    const r: any = await DatePickerAndroid.open({date: moment(thisRef.props.value).toDate()})
-    const {action, year, month, day } = r
-    if (action !== DatePickerAndroid.dismissedAction) {
-      const date = !isDate(thisRef.props.value) ? new Date() : moment(thisRef.props.value).toDate()
-      date.setFullYear(year)
-      date.setMonth(month)
-      date.setDate(day)
-      thisRef.props.setValue(date)
-    }
-  }
-}
-const processTime = (thisRef: any) => {
-  return async () => {
-    const date = !isDate(thisRef.props.value) ? new Date() : moment(thisRef.props.value).toDate()
+const processTime = (mapTo: string, prefix: any) => {
+  return memo(() => action(async () => {
+    let value = FormStore.getValue(mapTo, prefix)
+    const date = !isDate(value) ? new Date() : moment(value).toDate()
     const r: any = await TimePickerAndroid.open({
       hour: date.getHours(), minute: date.getMinutes()
     })
@@ -44,55 +34,65 @@ const processTime = (thisRef: any) => {
     if (action !== TimePickerAndroid.dismissedAction) {
       date.setHours(hour)
       date.setMinutes(minute)
-      thisRef.props.setValue(date)
+      FormStore.setValue(mapTo, date, prefix)
     }
-  }
+  }), ["processTime", mapTo, prefix])
 }
 
-export default class AndroidDateField extends React.Component<IFieldProps, any> {
-  private pickDate: any
-  private pickTime: any
-  public constructor(props: any) {
-    super(props)
-    this.pickDate = processDate(this)
-    this.pickTime = processTime(this)
-  }
-  public render() {
-    const dateType = get(this.props, "field.validate.type")
-    const value = this.props.value
-    let inputFunc = this.pickDate
-    if (dateType === globals.DateType.dateTime) {
-      return (
-        <NativeFieldContainer {...this.props}>
-          <View style={{flexDirection: "row", display: "flex", flex: 1}}>
-          <TouchableHighlight style={{flex: 1}} underlayColor="rgba(0, 0, 0, 0)" onPress={this.pickDate}>
-            <Input
-              editable={false}
-              value={moment(value).format(getOriginalFormatFromType(globals.DateType.date))}
-            />
-          </TouchableHighlight>
-          <TouchableHighlight  style={{ flex: 1}} underlayColor="rgba(0, 0, 0, 0)" onPress={this.pickTime}>
-            <Input
-              editable={false}
-              value={moment(value).format(getOriginalFormatFromType(globals.DateType.time))}
-            />
-          </TouchableHighlight>
-          </View>
-        </NativeFieldContainer >
-      )
-    } else if (dateType === 4) {
-      inputFunc = this.pickTime
+const processDate = (mapTo: string, prefix: any) => {
+  return memo(() => action(async () => {
+    let value = FormStore.getValue(mapTo, prefix)
+    const r: any = await DatePickerAndroid.open({date: moment(value).toDate()})
+    const {action, year, month, day } = r
+    if (action !== DatePickerAndroid.dismissedAction) {
+      const date = !isDate(value) ? new Date() : moment(value).toDate()
+      date.setFullYear(year)
+      date.setMonth(month)
+      date.setDate(day)
+      FormStore.setValue(mapTo, date, prefix)
     }
+  }), ["processDate", mapTo, prefix])
+}
+
+const AndroidDateField = observer((props: IFieldProps) => {
+  const mapTo = getMapTo(props.schema, props.mapTo)
+  const fieldProps = useFieldWithValidation(props.schema, props.mapTo, props.prefix)
+  const dateType = get(props, "schema.format", "date")
+  const value = fieldProps.value
+  let inputFunc = processDate(mapTo, props.prefix)
+  if (dateType === "datetime-local") {
     return (
-      <NativeFieldContainer {...this.props}>
-        <TouchableHighlight underlayColor="rgba(0, 0, 0, 0)" onPress={inputFunc}>
+      <NativeFieldContainer {...props}>
+        <View style={{flexDirection: "row", display: "flex", flex: 1}}>
+        <TouchableHighlight style={{flex: 1}} underlayColor="rgba(0, 0, 0, 0)" onPress={processDate(mapTo, props.prefix)}>
           <Input
-            {...this.props}
             editable={false}
-            value={moment(value).format(getOriginalFormatFromType(dateType))}
+            value={moment(value).format(getOriginalFormatFromType("date"))}
           />
         </TouchableHighlight>
+        <TouchableHighlight  style={{ flex: 1}} underlayColor="rgba(0, 0, 0, 0)" onPress={processTime(mapTo, props.prefix)}>
+          <Input
+            editable={false}
+            value={moment(value).format(getOriginalFormatFromType("time"))}
+          />
+        </TouchableHighlight>
+        </View>
       </NativeFieldContainer >
     )
-    }
+  } else if (dateType === 4) {
+    inputFunc = processTime(mapTo, props.prefix)
   }
+  return (
+    <NativeFieldContainer {...props}>
+      <TouchableHighlight underlayColor="rgba(0, 0, 0, 0)" onPress={inputFunc}>
+        <Input
+          {...props}
+          editable={false}
+          value={moment(value).format(getOriginalFormatFromType(dateType))}
+        />
+      </TouchableHighlight>
+    </NativeFieldContainer >
+  )
+})
+
+export default AndroidDateField
