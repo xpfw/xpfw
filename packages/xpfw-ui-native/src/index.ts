@@ -1,11 +1,12 @@
-import { ComponentRegistry } from "@xpfw/form-shared"
-import { FieldType } from "@xpfw/validate"
+import { ComponentRegistry } from "@xpfw/form"
 import RelationshipMulti from "./base/relationshipMulti"
 import RelationshipSingle from "./base/relationshipSingle"
 
 const registerComponents = (PassedComponentRegistry: any = ComponentRegistry) => {
-  PassedComponentRegistry.registerComponent(FieldType.RelationshipSingle, RelationshipSingle)
-  PassedComponentRegistry.registerComponent(FieldType.RelationshipMulti, RelationshipMulti)
+  const single: any = RelationshipSingle
+  const multi: any = RelationshipMulti
+  PassedComponentRegistry.registerComponent("string", single, "single")
+  PassedComponentRegistry.registerComponent("array", multi, "multi")
 }
 
 export {

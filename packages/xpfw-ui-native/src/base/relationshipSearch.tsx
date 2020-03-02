@@ -1,50 +1,29 @@
-import { SharedField } from "@xpfw/form-shared"
+import { SharedField, prependPrefix } from "@xpfw/form"
 import {
-   IFormListProps, ISharedRelationshipFieldProps, SharedFormList
-} from "@xpfw/ui-shared"
+   useList, IRelationshipHookProps
+} from "@xpfw/data"
 import { get } from "lodash"
 import * as React from "react"
 import { View } from "react-native"
 import NativeRelationshipItem from "./relationshipItem"
+import { observer } from "mobx-react"
 
-class NativeRelationshipSearchList extends React.Component<IFormListProps, any> {
-  public render() {
-    const nameObjs: any = []
-    const addId = get(this.props, "addId")
-    const removeId = get(this.props, "removeId")
-    const field = get(this.props, "field")
-    for (const child of get(this.props, "list.result", [])) {
-      nameObjs.push(
-        <NativeRelationshipItem key={field.mapTo} field={field} item={child} addId={addId} removeId={removeId} isAdd />
-      )
-    }
-    return (
-      <View>
-        {nameObjs}
-      </View>
-    )
+const NativeRelationshipSearch: React.FunctionComponent<any> = observer((props) => {
+  const searchField = get(props, `searchForm.properties[${get(props, "schema.relationship.namePath")}]`)
+  const nameObjs: any = []
+  const addId = get(props, "addId")
+  const removeId = get(props, "removeId")
+  const field = get(props, "schema")
+  const relList = useList(props.searchForm, undefined, prependPrefix(props.prefix, "search"))
+  for (const child of get(relList, "list.data", [])) {
+    nameObjs.push(<NativeRelationshipItem schema={field} item={child} addId={addId} removeId={removeId} isAdd />)
   }
-}
-
-const WrappedNativeRelationshipSearchList: any = SharedFormList(NativeRelationshipSearchList)
-
-class NativeRelationshipSearch extends React.Component<ISharedRelationshipFieldProps, any> {
-  public render() {
-    const searchForm = this.props.searchForm
-    const field = get(this.props, "searchForm.sections[0].fields[0]")
-    return (
-      <View>
-        <SharedField field={field} prefix={this.props.prefix} />
-        <WrappedNativeRelationshipSearchList
-          field={this.props.field}
-          prefix={this.props.prefix}
-          form={searchForm}
-          addId={this.props.addId}
-          defaultEntries={this.props.lastUsed}
-        />
-      </View>
-    )
-  }
-}
+  return (
+    <View>
+      <SharedField schema={searchField} prefix={prependPrefix(props.searchForm.title, prependPrefix(props.prefix, "search"))} />
+      {nameObjs}
+    </View>
+  )
+})
 
 export default NativeRelationshipSearch

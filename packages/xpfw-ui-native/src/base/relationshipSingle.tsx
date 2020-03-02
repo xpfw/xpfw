@@ -1,42 +1,42 @@
 
 import {
-  ISharedRelationshipField, ISharedRelationshipFieldProps, RelationShipWrapper
-} from "@xpfw/ui-shared"
-import { get, isNil } from "lodash"
+  useRelationshipWithProps, IRelationshipHookProps
+} from "@xpfw/data"
+import { isNil } from "lodash"
 import * as React from "react"
 import NativeFieldContainer from "./field"
 import NativeRelationshipItem from "./relationshipItem"
 import NativeRelationshipSearch from "./relationshipSearch"
+import { observer } from "mobx-react"
 
-class NativeRelationshipSingleField extends React.Component<ISharedRelationshipFieldProps, any> {
-  public render() {
-    let content
-    if (!isNil(this.props.value)) {
-      const obj = this.props.relatedObject
-      content = (
-        <NativeRelationshipItem
-          field={this.props.field}
-          item={obj}
-          addId={this.props.addId}
-          removeId={this.props.removeId}
-          isAdd={false}
-        />
-      )
-    } else {
-      content = (
-        <NativeRelationshipSearch {...this.props} prefix={get(this.props, "field.mapTo")} />
-      )
-    }
-    return (
-      <NativeFieldContainer {...this.props}>
-        {content}
-      </NativeFieldContainer>
+
+const NativeRelationshipSingleField: React.FunctionComponent<IRelationshipHookProps> = observer((props) => {
+  const relationHelper = useRelationshipWithProps(props)
+  let content
+  if (!isNil(relationHelper.value)) {
+    const obj = relationHelper.relatedObject
+    content = (
+      <NativeRelationshipItem
+        schema={props.schema}
+        item={obj}
+        addId={relationHelper.addId}
+        removeId={relationHelper.removeId}
+        isAdd={false}
+      />
+    )
+  } else {
+    content = (
+      <NativeRelationshipSearch
+        {...relationHelper}
+        {...props}
+      />
     )
   }
-}
+  return (
+    <NativeFieldContainer {...props}>
+      {content}
+    </NativeFieldContainer>
+  )
+})
 
-export {
-  ISharedRelationshipField, ISharedRelationshipFieldProps
-}
-
-export default RelationShipWrapper(NativeRelationshipSingleField)
+export default NativeRelationshipSingleField

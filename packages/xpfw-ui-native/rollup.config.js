@@ -19,8 +19,11 @@ export default {
     "socket.io-client",
     "@xpfw/validate",
     "@xpfw/form-native",
-    "@xpfw/form-shared",
-    "@xpfw/ui-shared",
+    "@xpfw/form",
+    "@xpfw/data",
+    "mobx",
+    "mobx-react",
+    "mobx-react-lite",
     "react",
     "react-native",
     "react-native-elements"

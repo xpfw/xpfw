@@ -1,11 +1,11 @@
-import { IField } from "@xpfw/validate"
+import { ExtendedJSONSchema } from "@xpfw/form"
 import {  get, isNil } from "lodash"
 import * as React from "react"
 import { Button, Card } from "react-native-elements"
 
 class NativeRelationshipItem extends React.Component<{
   item: any
-  field: IField
+  schema: ExtendedJSONSchema
   removeId: any
   addId: any
   isAdd: boolean
