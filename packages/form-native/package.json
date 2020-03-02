@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/form-native",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
@@ -81,7 +81,9 @@
     "moduleNameMapper": {
       "preact-render-to-json": "@xpfw/test-nativerender",
       "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts",
+      "^react$": "<rootDir>/node_modules/react",
+      "^react-native$": "<rootDir>/node_modules/react-native"
     },
     "testURL": "http://localhost/",
     "transformIgnorePatterns": [

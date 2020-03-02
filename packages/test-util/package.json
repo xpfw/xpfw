@@ -26,6 +26,7 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.8.4",
     "@types/feathersjs__authentication": "^2.1.4",
     "@types/feathersjs__authentication-jwt": "^1.0.7",
     "@types/feathersjs__authentication-local": "^1.0.5",

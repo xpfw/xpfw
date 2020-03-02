@@ -29,7 +29,6 @@ export default {
     "resub-persist",
     "socket.io-client",
     "@xpfw/validate",
-    "@xpfw/form-shared",
     "@xpfw/ui-tests",
     "@xpfw/ui-feathers",
     "@xpfw/data-tests",

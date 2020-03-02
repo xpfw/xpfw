@@ -1,15 +1,16 @@
 {
-  "name": "@xpfw/ui-native",
-  "version": "0.1.1",
+  "name": "@xpfw/data-native",
+  "version": "1.0.0",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
   "peerDependencies": {
-    "@xpfw/form-shared": "0.1.x",
-    "@xpfw/ui-shared": "0.1.x",
-    "@xpfw/validate": "0.1.x",
-    "lodash": "4.x.x",
-    "moment": "2.x.x",
+    "@xpfw/data": "1.x.x",
+    "@xpfw/form": "1.x.x",
+    "ajv": "^6.x.x",
+    "lodash": "^4.x.x",
+    "mobx": "^5.x.x",
+    "react": "^16.x.x",
     "react-native": "0.x.x",
     "react-native-elements": "1.x.x"
   },
@@ -22,20 +23,20 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.6",
     "@types/jest": "^25.1.3",
     "@types/lodash": "^4.14.149",
     "@types/mockdate": "^2.0.0",
     "@types/node": "^13.7.6",
     "@types/react": "^16.9.23",
     "@types/react-native": "^0.61.17",
-    "@xpfw/form-native": "^0.1.1",
-    "@xpfw/form-shared": "0.1.5",
+    "@xpfw/data": "^1.0.0",
+    "@xpfw/data-feathers": "^1.0.0",
+    "@xpfw/data-tests": "^1.0.0",
+    "@xpfw/form": "^1.0.0",
+    "@xpfw/form-native": "^1.0.0",
     "@xpfw/test-nativerender": "^0.1.1",
-    "@xpfw/test-util": "1.0.0",
-    "@xpfw/ui-feathers": "^0.1.1",
-    "@xpfw/ui-shared": "0.1.1",
-    "@xpfw/ui-tests": "^0.1.1",
-    "@xpfw/validate": "0.1.2",
+    "@xpfw/test-util": "^1.0.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^25.1.0",
     "babel-preset-env": "^1.7.0",
@@ -43,9 +44,12 @@
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
     "lodash": "^4.17.11",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8",
     "mockdate": "^2.0.5",
     "moment": "^2.24.0",
     "react": "^16.12.0",
+    "react-dom": "^16.13.0",
     "react-native": "^0.59.1",
     "react-native-elements": "^1.1.0",
     "react-native-vector-icons": "^6.6.0",
@@ -78,7 +82,9 @@
     "moduleNameMapper": {
       "preact-render-to-json": "@xpfw/test-nativerender",
       "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts",
+      "^react$": "<rootDir>/node_modules/react",
+      "^react-native$": "<rootDir>/node_modules/react-native"
     },
     "moduleFileExtensions": [
       "ts",
@@ -87,6 +93,9 @@
       "json"
     ],
     "testURL": "http://localhost/",
-    "transformIgnorePatterns": []
+    "transformIgnorePatterns": [
+      "\\.json$",
+      "node_modules/@xpfw/*"
+    ]
   }
 }
