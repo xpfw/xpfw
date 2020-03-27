@@ -1,5 +1,5 @@
-import { IFieldProps, useFieldWithValidation } from "@xpfw/form"
-import { get } from "lodash"
+import { IFieldProps, useFieldWithValidation, getLabelFromProps } from "@xpfw/form"
+import { get, isString } from "lodash"
 import * as React from "react"
 import NativeFieldContainer from "./field"
 import { Input } from "react-native-elements"
@@ -16,16 +16,19 @@ const NativeTextField = observer((props: IFieldProps) => {
   } else if (format === "password") {
     secureTextEntry = true
   }
+  let valueToUse = valueProps.value
+  if (valueToUse != null && !isString(valueToUse)) {
+    valueToUse = String(valueToUse)
+  }
   return (
-    <NativeFieldContainer {...props}>
-      <Input
-        {...props}
-        secureTextEntry={secureTextEntry}
-        value={valueProps.value}
-        keyboardType={keyboardType}
-        onChangeText={valueProps.setValue}
-      />
-    </NativeFieldContainer>
+    <Input
+      {...props}
+      label={getLabelFromProps(props)}
+      secureTextEntry={secureTextEntry}
+      value={valueToUse}
+      keyboardType={keyboardType}
+      onChangeText={valueProps.setValue}
+    />
   )
 })
 

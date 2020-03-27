@@ -29,16 +29,50 @@ export interface IBackendClient {
   client: IUiClient
 }
 
-const emptyClient: IUiClient = {
+const emptyClient: IUiClient & any = {
   client: {},
+  currentId: 0,
+  data: {},
+  ensureCol: (col: string) => {
+    if (emptyClient.data[col] == null) {
+      emptyClient.data[col] = {}
+    }
+  },
   login: (createData: any) => Promise.resolve({user: createData}),
   logout: () => Promise.resolve(),
   register: (createData: any) => Promise.resolve(createData),
-  create: (col: any, createData: any) => Promise.resolve(createData),
-  patch: (createData: any) => Promise.resolve(null),
-  get: (createData: any) => Promise.resolve(null),
-  find: (createData: any) => Promise.resolve(null),
-  remove: (createData: any) => Promise.resolve(null),
+  create: (col: any, createData: any) => {
+    emptyClient.ensureCol(col)
+    createData._id = emptyClient.currentId
+    emptyClient.data[col][emptyClient.currentId] = createData
+    emptyClient.currentId++
+    return Promise.resolve(createData)
+  },
+  patch: (col: string, id: any, createData: any) => {
+    emptyClient.ensureCol(col)
+    createData._id = id
+    emptyClient.data[col][id] = createData
+    return Promise.resolve(createData)
+  },
+  get: (col: string, id: any) => {
+    emptyClient.ensureCol(col)
+    return Promise.resolve(emptyClient.data[col][id])
+  },
+  find: (col: string, createData: any) => {
+    const data = []
+    for (const k of Object.keys(emptyClient.data[col])) {
+      data.push(emptyClient.data[col][k])
+    }
+    return Promise.resolve({
+      limit: 0, skip: 0, total: data.length, data
+    })
+  },
+  remove: (col: string, id: any) => {
+    emptyClient.ensureCol(col)
+    const removedRecord = emptyClient.data[col][id]
+    delete emptyClient.data[col][id]
+    return Promise.resolve(removedRecord)
+  },
   connectTo: () => Promise.resolve(),
   disconnect: () => null
 }

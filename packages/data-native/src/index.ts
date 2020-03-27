@@ -1,6 +1,9 @@
 import { ComponentRegistry } from "@xpfw/form"
 import RelationshipMulti from "./base/relationshipMulti"
 import RelationshipSingle from "./base/relationshipSingle"
+import Create from "./base/create"
+import Edit from "./base/edit"
+import List from "./base/list"
 
 const registerComponents = (PassedComponentRegistry: any = ComponentRegistry) => {
   const single: any = RelationshipSingle
@@ -10,5 +13,5 @@ const registerComponents = (PassedComponentRegistry: any = ComponentRegistry) =>
 }
 
 export {
-  registerComponents
+  registerComponents, Create, List, Edit
 }

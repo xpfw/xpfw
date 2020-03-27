@@ -1,24 +1,23 @@
 import { get } from "lodash"
 import * as React from "react"
 import { View, Text } from "react-native"
+import { getLabelFromProps, IFieldProps } from "@xpfw/form"
 
-class NativeFieldContainer extends React.Component<any, any> {
-  public render() {
-    const err = this.props.error && this.props.error.ok !== true ?  (
-      <Text>{JSON.stringify(this.props.error)}</Text>
-    ) : <View />
-    let label = get(this.props, "field.mapTo")
-    if (this.props.showVal) {
-      label += `: ${this.props.value}`
-    }
-    return (
-      <View>
-        <Text>{label}</Text>
-        {this.props.children}
-        {err}
-      </View>
-    )
+const NativeFieldContainer: React.FunctionComponent<IFieldProps & any> = (props) => {
+  const err = props.error && props.error.ok !== true ?  (
+    <Text>{JSON.stringify(props.error)}</Text>
+  ) : <View />
+  let label = getLabelFromProps(props)
+  if (props.showVal) {
+    label += `: ${props.value}`
   }
+  return (
+    <View>
+      <Text>{label}</Text>
+      {props.children}
+      {err}
+    </View>
+  )
 }
 
 export default NativeFieldContainer

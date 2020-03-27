@@ -1,5 +1,5 @@
 
-import { IFieldProps, useFieldWithValidation, memo, FormStore, getMapTo } from "@xpfw/form"
+import { IFieldProps, useFieldWithValidation, memo, FormStore, getMapTo, getLabelFromProps } from "@xpfw/form"
 import { get, isDate } from "lodash"
 import * as React from "react"
 import { DatePickerAndroid, TimePickerAndroid, TouchableHighlight, View } from "react-native"
@@ -87,6 +87,7 @@ const AndroidDateField = observer((props: IFieldProps) => {
       <TouchableHighlight underlayColor="rgba(0, 0, 0, 0)" onPress={inputFunc}>
         <Input
           {...props}
+          label={getLabelFromProps(props)}
           editable={false}
           value={moment(value).format(getOriginalFormatFromType(dateType))}
         />
