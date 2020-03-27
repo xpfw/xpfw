@@ -52,7 +52,7 @@ const createData = async (form: ExtendedJSONSchema) => {
   await ListStore.makeQuery(form, "list")
 }
 const readyData = async (form: ExtendedJSONSchema) => {
-  const res = await ListStore.makeQuery(form)
+  const res: any = await ListStore.makeQuery(form)
   if (res != null && res.total === 0) {
     await createData(form)
   }
@@ -69,7 +69,7 @@ const promiseTimeout = (waitTime: number) => {
 const resetData = async (form: ExtendedJSONSchema) => {
   let total = 1
   while (total !== 0) {
-    const res = await ListStore.makeQuery(form, undefined, "none")
+    const res: any = await ListStore.makeQuery(form, undefined, "none")
     console.log("RESULT OF QUERY IS", res)
     if (res != null) {
       if (res !== false) {

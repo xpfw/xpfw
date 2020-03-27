@@ -1,5 +1,4 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix, useModifier } from "@xpfw/form"
-import { AnyAaaaRecord } from "dns"
 import { get, isEqual, isNil, isNumber } from "lodash"
 import { action, flow, observable, toJS } from "mobx"
 import BackendClient from "../client"

@@ -1,4 +1,4 @@
-import { observable } from "mobx"
+import { observable, toJS, action } from "mobx"
 export interface IRoute {
   path: string
   component: React.ElementType<any>
@@ -24,9 +24,11 @@ export class RouterStore {
 
   public getCurrentComponent() {
     const currentRoute = this.getCurrentRoute()
-    for (const route of this.routes) {
-      if (route.path === currentRoute.path) {
-        return route.component
+    if (currentRoute != null) {
+      for (const route of this.routes) {
+        if (route.path === currentRoute.path) {
+          return route.component
+        }
       }
     }
     return undefined
@@ -36,6 +38,7 @@ export class RouterStore {
     return this.navStack[this.currentIndex]
   }
 
+  @action
   public back() {
     if (this.currentIndex === 0) {
       // nothing
@@ -45,6 +48,7 @@ export class RouterStore {
     }
   }
 
+  @action
   public visit(newRoute: IRouteState) {
     this.navStack.push(newRoute)
     this.currentIndex++

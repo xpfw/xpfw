@@ -9,7 +9,7 @@ import toJS from "../util/toJS"
 
 const FETCH_THRESHOLD = 1000 * 60 * 3
 const REMOVE_ADDON_KEY = "remove"
-
+declare const require: any
 export interface FormToUpdate {
   collection: string
   mapTo: string
