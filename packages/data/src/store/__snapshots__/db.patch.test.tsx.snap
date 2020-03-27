@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Patch Test: createresult 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;
+
+exports[`DbStore Patch Test: error store after broken patch 1`] = `
+Object {
+  "formModel0": Object {
+    "name": "FetchError",
+    "type": "invalid-json",
+  },
+}
+`;
+
+exports[`DbStore Patch Test: getresult 1`] = `
+Object {
+  "guestName": "changedText",
+  "id": 0,
+  "myVal": 123,
+}
+`;
+
+exports[`DbStore Patch Test: patchresult 1`] = `
+Object {
+  "guestName": "changedText",
+  "id": 0,
+  "myVal": 123,
+}
+`;

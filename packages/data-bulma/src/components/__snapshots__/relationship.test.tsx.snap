@@ -1,0 +1,5261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Relationship Test: after autoselectable search with option enabled and set automatically 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text 2"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: after autoselectable search with option enabled but too many results 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: after autoselectable search without option enabled 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text 2"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: after reset 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: after reset 2`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for Text 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for Text with number query set to 426 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for my 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="my"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 1
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 3
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 5
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 7
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 9
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for null 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="null"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi added and loaded 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <a
+        className="button"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                What uptext 4
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 7
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi added but not yet loaded 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <a
+        className="button"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                What uptext 4
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 7
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi after autoselectable search with option enabled but too many results 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi after autoselectable search without option enabled 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text 2"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi load with none missing 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <a
+        className="button"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 3
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                What uptext 4
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 5
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi load with one missing 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <a
+        className="button"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 3
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                What uptext 4
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 5
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi removed one 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <a
+        className="button"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                 that Is My 3
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                What uptext 4
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multi removed two 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <a
+        className="button"
+        onClick={[Function]}
+      >
+        Search
+      </a>
+      <div
+        className="card"
+        style={
+          Object {
+            "marginBottom": "1rem",
+            "marginTop": "1rem",
+          }
+        }
+      >
+        <header
+          style={
+            Object {
+              "margin": "0.4rem",
+            }
+          }
+        >
+          <div
+            className="columns"
+          >
+            <div
+              className="column is-two-thirds has-text-justified"
+            >
+              <span
+                className="is-size-6 has-text-weight-bold"
+              >
+                What uptext 4
+              </span>
+            </div>
+            <div
+              className="column is-one-third"
+            >
+              <div
+                className="is-pulled-right"
+              >
+                <a
+                  className="button"
+                  onClick={[Function]}
+                >
+                  Remove
+                </a>
+              </div>
+              <div
+                className="is-clearfix"
+              />
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multiafter autoselectable search with option enabled and set automatically 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text 3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: multiafter autoselectable search with option enabled and set automatically twice 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text 5"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: nothing set yet 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 2`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 3`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 4`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for Text 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for Text 2`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for Text but displaymode for items 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for Text with number query set to 426 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for my 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="my"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 1
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 3
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 5
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 7
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 9
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for my 2`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="my"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 1
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 3
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 5
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 7
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 9
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for null 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="null"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: search for null 2`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedByMulti
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="null"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: set to first creation loaded 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "marginBottom": "1rem",
+          "marginTop": "1rem",
+        }
+      }
+    >
+      <header
+        style={
+          Object {
+            "margin": "0.4rem",
+          }
+        }
+      >
+        <div
+          className="columns"
+        >
+          <div
+            className="column is-two-thirds has-text-justified"
+          >
+            <span
+              className="is-size-6 has-text-weight-bold"
+            >
+               that Is My 1
+            </span>
+          </div>
+          <div
+            className="column is-one-third"
+          >
+            <div
+              className="is-pulled-right"
+            >
+              <a
+                className="button"
+                onClick={[Function]}
+              >
+                Remove
+              </a>
+            </div>
+            <div
+              className="is-clearfix"
+            />
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: set to first creation not loaded yet 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "marginBottom": "1rem",
+          "marginTop": "1rem",
+        }
+      }
+    >
+      <header
+        style={
+          Object {
+            "margin": "0.4rem",
+          }
+        }
+      >
+        <div
+          className="columns"
+        >
+          <div
+            className="column is-two-thirds has-text-justified"
+          >
+            <span
+              className="is-size-6 has-text-weight-bold"
+            >
+              What uptext 0
+            </span>
+          </div>
+          <div
+            className="column is-one-third"
+          >
+            <div
+              className="is-pulled-right"
+            >
+              <a
+                className="button"
+                onClick={[Function]}
+              >
+                Remove
+              </a>
+            </div>
+            <div
+              className="is-clearfix"
+            />
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: set to invalid value 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "marginBottom": "1rem",
+          "marginTop": "1rem",
+        }
+      }
+    >
+      <header
+        style={
+          Object {
+            "margin": "0.4rem",
+          }
+        }
+      >
+        <div
+          className="columns"
+        >
+          <div
+            className="column is-two-thirds has-text-justified"
+          >
+            <span
+              className="is-size-6 has-text-weight-bold"
+            >
+              loading
+            </span>
+          </div>
+          <div
+            className="column is-one-third"
+          >
+            <div
+              className="is-pulled-right"
+            >
+              <a
+                className="button"
+                onClick={[Function]}
+              >
+                Remove
+              </a>
+            </div>
+            <div
+              className="is-clearfix"
+            />
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: single search for Text 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 0
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 2
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 4
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 8
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: single search for Text with number query set to 426 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="Text"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                  What uptext 6
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: single search for my 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="my"
+          />
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 1
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 3
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 5
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 7
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+        <div
+          className="card"
+          style={
+            Object {
+              "marginBottom": "1rem",
+              "marginTop": "1rem",
+            }
+          }
+        >
+          <header
+            style={
+              Object {
+                "margin": "0.4rem",
+              }
+            }
+          >
+            <div
+              className="columns"
+            >
+              <div
+                className="column is-two-thirds has-text-justified"
+              >
+                <span
+                  className="is-size-6 has-text-weight-bold"
+                >
+                   that Is My 9
+                </span>
+              </div>
+              <div
+                className="column is-one-third"
+              >
+                <div
+                  className="is-pulled-right"
+                >
+                  <a
+                    className="button"
+                    onClick={[Function]}
+                  >
+                    Add
+                  </a>
+                </div>
+                <div
+                  className="is-clearfix"
+                />
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Relationship Test: single search for null 1`] = `
+<div
+  className="field"
+>
+  <label
+    className="label"
+  >
+    Relationship 
+    ownedBy
+  </label>
+  <div
+    className="control"
+  >
+    <div>
+      <div>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          >
+            guestName
+          </label>
+          <input
+            className="input"
+            onChange={[Function]}
+            type="text"
+            value="null"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

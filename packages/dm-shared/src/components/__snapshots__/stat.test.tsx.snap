@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`makeStat test: Before anything 1`] = `
+Object {
+  "previousQuery": Object {},
+  "statCollection": "stats",
+  "stats": Object {},
+}
+`;
+
+exports[`makeStat test: pathSum after reset 1`] = `
+<div
+  className="stat"
+>
+  {
+  "config": {
+    "type": "sum",
+    "options": {
+      "itemPath": "myNum"
+    },
+    "id": "pathSum"
+  },
+  "query": {}
+}
+</div>
+`;
+
+exports[`makeStat test: pathSum local 1`] = `
+<div
+  className="stat"
+>
+  {
+  "stat": 1890,
+  "config": {
+    "type": "sum",
+    "options": {
+      "itemPath": "myNum"
+    },
+    "id": "pathSum"
+  },
+  "query": {}
+}
+</div>
+`;
+
+exports[`makeStat test: pathSum server 1`] = `
+<div
+  className="stat"
+>
+  {
+  "stat": 1890,
+  "config": {
+    "type": "sum",
+    "options": {
+      "itemPath": "myNum"
+    },
+    "id": "pathSum"
+  },
+  "query": {}
+}
+</div>
+`;
+
+exports[`makeStat test: simpleSum after reset 1`] = `
+<div
+  className="stat"
+>
+  {
+  "config": {
+    "type": "sum",
+    "id": "simpleSum"
+  },
+  "query": {}
+}
+</div>
+`;
+
+exports[`makeStat test: simpleSum local 1`] = `
+<div
+  className="stat"
+>
+  {
+  "stat": 10,
+  "config": {
+    "type": "sum",
+    "id": "simpleSum"
+  },
+  "query": {}
+}
+</div>
+`;
+
+exports[`makeStat test: simpleSum server 1`] = `
+<div
+  className="stat"
+>
+  {
+  "stat": 10,
+  "config": {
+    "type": "sum",
+    "id": "simpleSum"
+  },
+  "query": {}
+}
+</div>
+`;

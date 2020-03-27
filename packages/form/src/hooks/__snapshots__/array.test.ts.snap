@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Hooks Test useArrayHelper: After Using Global Decrease size 1`] = `
+Object {
+  "myStringValue": Array [
+    undefined,
+    undefined,
+    undefined,
+  ],
+}
+`;
+
+exports[`Form Hooks Test useArrayHelper: After Using subfield Decrease size 1`] = `
+Object {
+  "myStringValue": Array [
+    undefined,
+    undefined,
+    undefined,
+  ],
+}
+`;
+
+exports[`Form Hooks Test useArrayHelper: After Using subfield map to with set value 1`] = `
+Object {
+  "myStringValue": Array [
+    undefined,
+    " set specific value ",
+    undefined,
+    undefined,
+  ],
+}
+`;
+
+exports[`Form Hooks Test useArrayHelper: After calling increase size on root 1`] = `
+Object {
+  "myStringValue": Array [
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+  ],
+}
+`;
+
+exports[`Form Hooks Test useArrayHelper: After calling increase size on subfield 1`] = `
+Object {
+  "myStringValue": Array [
+    undefined,
+    undefined,
+  ],
+}
+`;
+
+exports[`Form Hooks Test useArrayHelper: Before anything 1`] = `Object {}`;

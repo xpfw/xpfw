@@ -1,30 +1,23 @@
-import {  IField } from "@xpfw/validate"
+import { IGetHookProps, useGetWithProps } from "@xpfw/data"
 import { get, isNil } from "lodash"
+import { observer } from "mobx-react"
 import * as React from "react"
-import { SharedFormShow, IFormShowProps } from "@xpfw/ui-shared"
 
-class RelationshipListItemW extends React.Component<{
-    item: any
-    field: IField
-}, any> {
-  public render() {
-    let name = "loading"
-    let id = "loading"
-    const obj = this.props.item
-    if (!isNil(obj)) {
-      name = get(obj, get(this.props, "field.validate.relationshipNamePath", "id"), "NOTFOUND")
-      id = get(obj, get(this.props, "field.validate.relationshipIdPath", "id"), "NOTFOUND")
-    }
-    return (
-      <span>
-        {name}
-      </span>
-    )
+const RelationshipListItem: React.FunctionComponent<IGetHookProps & {schema: any}> = observer((props) => {
+  const getProps = useGetWithProps(props)
+  let name = "loading"
+  let id = "loading"
+  const obj = getProps.item
+  if (!isNil(obj)) {
+    name = get(obj, get(props, "schema.relationship.namePath", "id"), "NOTFOUND")
+    id = get(obj, get(props, "schema.relationship.idPath", "id"), "NOTFOUND")
   }
-}
-const t1: any = RelationshipListItemW
-const tmp: any = SharedFormShow<{}>(t1)
-const RelationshipListItem: React.ComponentClass<IFormShowProps & {
-  field: IField
-}> = tmp
+  return (
+    <span>
+      {name}
+    </span>
+  )
+})
+
 export default RelationshipListItem
+

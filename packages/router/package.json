@@ -1,0 +1,58 @@
+{
+  "name": "@xpfw/router",
+  "version": "1.0.0",
+  "main": "dist",
+  "typings": "dist",
+  "license": "MIT",
+  "dependencies": {
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/react": "^16.9.26",
+    "@types/react-test-renderer": "^16.9.2",
+    "jest": "^25.2.3",
+    "jest-cli": "^25.2.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "rollup": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "=25.2.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleNameMapper": {},
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

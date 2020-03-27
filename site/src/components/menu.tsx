@@ -1,8 +1,9 @@
+import { RouterStore } from "@xpfw/router"
 import * as React from "react"
-import { RouterStore } from "@xpfw/router";
-import { FaHome, FaCogs, FaWpforms, FaCloud, FaBook, FaChartLine } from "react-icons/fa";
-import linkClickHandler from "./linkHandler";
-// import Logo from "./logo.png"
+import { FaBook, FaChartLine, FaCloud, FaCogs, FaDatabase, FaHome, FaWpforms } from "react-icons/fa"
+import linkClickHandler from "./linkHandler"
+
+const Logo = require("./logo.png").default
 
 class WebMenu extends React.Component<any, any> {
   public state = {menuOpen: false}
@@ -14,25 +15,20 @@ class WebMenu extends React.Component<any, any> {
         path: "/index.html"
       },
       {
-        icon: FaCogs,
-        name: "Core",
-        path: "/core.html"
-      },
-      {
         icon: FaWpforms,
         name: "Forms",
         path: "/form.html"
       },
       {
-        icon: FaCloud,
-        name: "UI",
-        path: "/ui.html"
+        icon: FaDatabase,
+        name: "Data",
+        path: "/data.html"
       },
-      {
-        icon: FaChartLine,
-        name: "Stats",
-        path: "/stats.html"
-      },
+      // {
+      //   icon: FaChartLine,
+      //   name: "Stats",
+      //   path: "/stats.html"
+      // },
       {
         icon: FaBook,
         name: "Documentation",
@@ -64,7 +60,7 @@ class WebMenu extends React.Component<any, any> {
       <nav className="navbar has-background-white-bis stickyNav" role="navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="/">
-            <img src={"Logo"} alt="xpfw" />
+            <img src={Logo} alt="xpfw" />
           </a>
           <div className="navbar-burger" onClick={() => {
             this.setState({menuOpen: !this.state.menuOpen})

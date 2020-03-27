@@ -1,0 +1,2133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Relationship Test: after autoselectable search with option enabled and set automatically 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: after autoselectable search with option enabled but too many results 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: after autoselectable search without option enabled 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: after reset 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: after reset 2`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for Text 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "customPre",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for Text with number query set to 426 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "customPre",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for my 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "customPre",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999198765",
+        "guestName": " that Is My 1",
+        "myVal": 421
+      },
+      {
+        "_id": "b29999999999999999398765",
+        "guestName": " that Is My 3",
+        "myVal": 423
+      },
+      {
+        "_id": "b29999999999999999598765",
+        "guestName": " that Is My 5",
+        "myVal": 425
+      },
+      {
+        "_id": "b29999999999999999798765",
+        "guestName": " that Is My 7",
+        "myVal": 427
+      },
+      {
+        "_id": "b29999999999999999998765",
+        "guestName": " that Is My 9",
+        "myVal": 429
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: customPresearch for null 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "customPre",
+  "list": {
+    "total": 0,
+    "limit": 10,
+    "skip": 0,
+    "data": []
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi added and loaded 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": false,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi added but not yet loaded 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": false,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi after autoselectable search with option enabled but too many results 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi after autoselectable search without option enabled 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi load with none missing 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999498765",
+    "b29999999999999999598765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": " that Is My 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 5",
+      "myVal": 425,
+      "_id": "b29999999999999999598765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi load with one missing 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999498765",
+    "b29999999999999999598765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": " that Is My 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 5",
+      "myVal": 425,
+      "_id": "b29999999999999999598765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi removed one 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999398765",
+    "b29999999999999999498765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": " that Is My 3",
+      "myVal": 423,
+      "_id": "b29999999999999999398765"
+    },
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multi removed two 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multiafter autoselectable search with option enabled and set automatically 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 0,
+    "limit": 10,
+    "skip": 0,
+    "data": []
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: multiafter autoselectable search with option enabled and set automatically twice 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 0,
+    "limit": 10,
+    "skip": 0,
+    "data": []
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: nothing set yet 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": true
+}
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 2`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 3`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": "",
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: nothing yet 4`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "customPre",
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for Text 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for Text 2`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": "",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for Text but displaymode for items 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": false,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for Text with number query set to 426 1`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": "",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for my 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999198765",
+        "guestName": " that Is My 1",
+        "myVal": 421
+      },
+      {
+        "_id": "b29999999999999999398765",
+        "guestName": " that Is My 3",
+        "myVal": 423
+      },
+      {
+        "_id": "b29999999999999999598765",
+        "guestName": " that Is My 5",
+        "myVal": 425
+      },
+      {
+        "_id": "b29999999999999999798765",
+        "guestName": " that Is My 7",
+        "myVal": 427
+      },
+      {
+        "_id": "b29999999999999999998765",
+        "guestName": " that Is My 9",
+        "myVal": 429
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for my 2`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": "",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999198765",
+        "guestName": " that Is My 1",
+        "myVal": 421
+      },
+      {
+        "_id": "b29999999999999999398765",
+        "guestName": " that Is My 3",
+        "myVal": 423
+      },
+      {
+        "_id": "b29999999999999999598765",
+        "guestName": " that Is My 5",
+        "myVal": 425
+      },
+      {
+        "_id": "b29999999999999999798765",
+        "guestName": " that Is My 7",
+        "myVal": 427
+      },
+      {
+        "_id": "b29999999999999999998765",
+        "guestName": " that Is My 9",
+        "myVal": 429
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for null 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 0,
+    "limit": 10,
+    "skip": 0,
+    "data": []
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: search for null 2`] = `
+<div>
+  {
+  "value": [
+    "b29999999999999999498765",
+    "b29999999999999999798765"
+  ],
+  "relatedObject": [
+    {
+      "guestName": "What uptext 4",
+      "myVal": 424,
+      "_id": "b29999999999999999498765"
+    },
+    {
+      "guestName": " that Is My 7",
+      "myVal": 427,
+      "_id": "b29999999999999999798765"
+    }
+  ],
+  "searchForm": {
+    "title": "searchFor.ownedByMulti",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "lastUsed": [
+    "b29999999999999999798765"
+  ],
+  "prefix": "",
+  "list": {
+    "total": 0,
+    "limit": 10,
+    "skip": 0,
+    "data": []
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: set to first creation loaded 1`] = `
+<div>
+  {
+  "value": "b29999999999999999198765",
+  "relatedObject": {
+    "guestName": " that Is My 1",
+    "myVal": 421,
+    "_id": "b29999999999999999198765"
+  },
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "loading": true,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: set to first creation not loaded yet 1`] = `
+<div>
+  {
+  "value": "b29999999999999999098765",
+  "relatedObject": {
+    "guestName": "What uptext 0",
+    "myVal": 420,
+    "_id": "b29999999999999999098765"
+  },
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": true
+}
+</div>
+`;
+
+exports[`Relationship Test: set to invalid value 1`] = `
+<div>
+  {
+  "value": "INVALID",
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": true
+}
+</div>
+`;
+
+exports[`Relationship Test: single search for Text 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999098765",
+        "guestName": "What uptext 0",
+        "myVal": 420
+      },
+      {
+        "_id": "b29999999999999999298765",
+        "guestName": "What uptext 2",
+        "myVal": 422
+      },
+      {
+        "_id": "b29999999999999999498765",
+        "guestName": "What uptext 4",
+        "myVal": 424
+      },
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      },
+      {
+        "_id": "b29999999999999999898765",
+        "guestName": "What uptext 8",
+        "myVal": 428
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: single search for Text with number query set to 426 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 1,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999698765",
+        "guestName": "What uptext 6",
+        "myVal": 426
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: single search for my 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 5,
+    "limit": 10,
+    "skip": 0,
+    "data": [
+      {
+        "_id": "b29999999999999999198765",
+        "guestName": " that Is My 1",
+        "myVal": 421
+      },
+      {
+        "_id": "b29999999999999999398765",
+        "guestName": " that Is My 3",
+        "myVal": 423
+      },
+      {
+        "_id": "b29999999999999999598765",
+        "guestName": " that Is My 5",
+        "myVal": 425
+      },
+      {
+        "_id": "b29999999999999999798765",
+        "guestName": " that Is My 7",
+        "myVal": 427
+      },
+      {
+        "_id": "b29999999999999999998765",
+        "guestName": " that Is My 9",
+        "myVal": 429
+      }
+    ]
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;
+
+exports[`Relationship Test: single search for null 1`] = `
+<div>
+  {
+  "searchForm": {
+    "title": "searchFor.ownedBy",
+    "collection": "simpleTestCol",
+    "properties": {
+      "guestName": {
+        "title": "guestName",
+        "type": "string"
+      },
+      "_id": {
+        "title": "_id",
+        "type": "string"
+      },
+      "myVal": {
+        "type": "number",
+        "title": "myVal"
+      }
+    },
+    "nameSearchField": {
+      "title": "guestName",
+      "type": "string"
+    }
+  },
+  "displayMode": true,
+  "prefix": "ownedBy",
+  "list": {
+    "total": 0,
+    "limit": 10,
+    "skip": 0,
+    "data": []
+  },
+  "loading": false,
+  "currentPage": 0,
+  "maxPage": 1,
+  "showNextPage": false,
+  "showPrevPage": false,
+  "isDirty": false
+}
+</div>
+`;

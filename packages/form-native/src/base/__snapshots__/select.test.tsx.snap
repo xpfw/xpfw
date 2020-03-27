@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Field Test: from function set to 2 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "fromFuncc",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "fromFunca",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: from function set to 4 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "fromFuncc",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "fromFunca",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: from function set to invalid 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "fromFuncc",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "fromFunca",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: select field without value 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "c",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "a",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: select field without value 2`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "c",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "a",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: set to 2 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "c",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "a",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: set to 4 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "c",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "a",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Select Field Test: set to invalid 1`] = `
+<View>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "c",
+          "textColor": undefined,
+          "value": 4,
+        },
+        Object {
+          "label": "a",
+          "textColor": undefined,
+          "value": 2,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

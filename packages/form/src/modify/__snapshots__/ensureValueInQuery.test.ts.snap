@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PermissionRegistry Test get and register permission:  inserted into $or object  1`] = `
+Object {
+  "$or": Array [
+    Object {
+      "belongsTo": " my userid ",
+    },
+    Object {
+      "belongsTo": " my userid ",
+    },
+  ],
+}
+`;
+
+exports[`PermissionRegistry Test get and register permission:  inserted into $or object  2`] = `
+Object {
+  "$and": Array [
+    Object {
+      "belongsTo": " my userid ",
+    },
+    Object {
+      "belongsTo": " my userid ",
+    },
+  ],
+}
+`;
+
+exports[`PermissionRegistry Test get and register permission:  inserted into empty object  1`] = `
+Object {
+  "belongsTo": " my userid ",
+}
+`;

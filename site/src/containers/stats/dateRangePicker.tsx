@@ -1,16 +1,16 @@
 import { TimeBeginField, TimeEndField } from "@xpfw/dm-shared"
-import { FormStore, SharedField } from "@xpfw/form-shared"
-import { dates, setToDate } from "./pickerHelpers"
-import { each, get, map } from "lodash"
+import { SharedField } from "@xpfw/form"
+import { map } from "lodash"
 import * as React from "react"
+import { dates, setToDate } from "./pickerHelpers"
 
 class WebDateRangePicker extends React.Component<any, any> {
   public render() {
     return (
       <div>
         <div className="inline">
-          <SharedField field={TimeBeginField} />
-          <SharedField field={TimeEndField} />
+          <SharedField schema={TimeBeginField} />
+          <SharedField schema={TimeEndField} />
         </div>
         <div className="has-text-centered"><b>Presets</b></div>
         <div className="buttons has-addons">
@@ -19,7 +19,9 @@ class WebDateRangePicker extends React.Component<any, any> {
               key={key}
               className="button flex1 is-info is-outlined"
               onClick={setToDate.bind(this, date)}
-            >{key}</a>
+            >
+              {key}
+            </a>
           ))}
         </div>
       </div>

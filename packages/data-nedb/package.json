@@ -1,0 +1,74 @@
+{
+  "name": "@xpfw/data-nedb",
+  "version": "1.0.0",
+  "main": "dist",
+  "typings": "dist",
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "@xpfw/data": "1.x.x",
+    "lodash": "4.x.x",
+    "nedb": "^1.8.0"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/mockdate": "^2.0.0",
+    "@types/nedb": "^1.8.9",
+    "@xpfw/data": "1.0.0",
+    "@xpfw/data-tests": "1.0.0",
+    "@xpfw/form": "1.0.0",
+    "@xpfw/test-util": "1.0.0",
+    "fast-json-patch": "^2.2.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^25.2.3",
+    "jest-cli": "^25.2.3",
+    "lodash": "^4.17.11",
+    "mobx": "^5.15.4",
+    "mockdate": "^2.0.5",
+    "nedb": "^1.8.0",
+    "react": "^16.13.1",
+    "rollup": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "=25.2.1",
+    "typescript": "^3.8.3",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleNameMapper": {
+      "^@xpfw/form-tests$": "<rootDir>/node_modules/@xpfw/form-tests",
+      "^@xpfw/ui-tests$": "<rootDir>/node_modules/@xpfw/ui-tests",
+      "^@xpfw/form$": "<rootDir>/node_modules/@xpfw/form",
+      "^@xpfw/data$": "<rootDir>/node_modules/@xpfw/data"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

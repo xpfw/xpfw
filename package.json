@@ -1,20 +1,24 @@
 {
   "devDependencies": {
-    "@types/node": "^10.12.24",
-    "@types/shelljs": "^0.8.2",
-    "lerna": "^3.11.0",
-    "npm-check-updates": "^2.15.0",
+    "@types/node": "^13.7.6",
+    "@types/shelljs": "^0.8.6",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "lerna": "^3.20.2",
+    "npm-check-updates": "^4.0.1",
     "shelljs": "^0.8.3",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.3.3"
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
   },
   "scripts": {
+    "init": "./node_modules/.bin/lerna bootstrap",
     "update": "./node_modules/.bin/ts-node ci/update && lerna bootstrap",
     "publish": "./node_modules/.bin/ts-node ci/publish",
     "test": "./node_modules/.bin/ts-node ci/test",
-    "buildSite": "./node_modules/.bin/ts-node ci/buildSite"
+    "buildSite": "./node_modules/.bin/ts-node ci/buildSite",
+    "build": "./node_modules/.bin/ts-node ci/build",
+    "serveDocs": "cd docs && mdbook serve",
+    "buildDocs": "cd docs && mdbook build"
   },
-  "dependencies": {
-    "rollup-plugin-typescript2": "^0.19.2"
-  }
+  "private": true
 }

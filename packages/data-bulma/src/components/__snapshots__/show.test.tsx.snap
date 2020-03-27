@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore show Test: Successfully removed 1`] = `<span />`;
+
+exports[`DbStore show Test: While removing 1`] = `
+<span>
+  {"guestName":"myText","myVal":420,"id":0}
+</span>
+`;
+
+exports[`DbStore show Test: after definitely fetched 1`] = `
+<span>
+  {"guestName":"myText","myVal":420,"id":0}
+</span>
+`;
+
+exports[`DbStore show Test: after login 1`] = `<span />`;
+
+exports[`DbStore show Test: before login 1`] = `<span />`;
+
+exports[`DbStore show Test: error for not exisiting anymore 1`] = `[NotFound: No record found for id '0']`;
+
+exports[`DbStore show Test: fetch existing resource 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;
+
+exports[`DbStore show Test: not yet fetched but still there because created 1`] = `
+<span>
+  {"guestName":"myText","myVal":420,"id":0}
+</span>
+`;
+
+exports[`DbStore show Test: remove result 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;

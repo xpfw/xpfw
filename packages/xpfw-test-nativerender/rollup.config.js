@@ -1,7 +1,5 @@
 // rollup.config.js
 import typescript from "rollup-plugin-typescript2"
-// import uglify from "rollup-plugin-uglify"
-// import { minify } from "uglify-es"
 
 export default {
   input: 'src/index.ts',
@@ -10,17 +8,16 @@ export default {
     format: 'cjs'
   },
   plugins: [
-    typescript(),
-    // uglify({}, minify)
+    typescript()
   ],
   external: [
     "lodash",
     "moment",
     "feathers-client",
-    "resub",
-    "resub-persist",
+    "mobx",
+    "mobx-react",
     "socket.io-client",
-    "@xpfw/validate",
+    "@xpfw/form",
     "react",
     "react-dom"
   ]

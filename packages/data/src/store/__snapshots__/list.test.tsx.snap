@@ -1,0 +1,648 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List filter Test: result of initial search 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "guestName": "0*0",
+      "id": 0,
+      "myVal": 0,
+    },
+    Object {
+      "guestName": "1*1",
+      "id": 1,
+      "myVal": 1,
+    },
+    Object {
+      "guestName": "2*2",
+      "id": 2,
+      "myVal": 2,
+    },
+    Object {
+      "guestName": "3*3",
+      "id": 3,
+      "myVal": 3,
+    },
+    Object {
+      "guestName": "4*4",
+      "id": 4,
+      "myVal": 4,
+    },
+    Object {
+      "guestName": "5*5",
+      "id": 5,
+      "myVal": 5,
+    },
+    Object {
+      "guestName": "6*6",
+      "id": 6,
+      "myVal": 6,
+    },
+    Object {
+      "guestName": "7*7",
+      "id": 7,
+      "myVal": 7,
+    },
+    Object {
+      "guestName": "8*8",
+      "id": 8,
+      "myVal": 8,
+    },
+    Object {
+      "guestName": "9*9",
+      "id": 9,
+      "myVal": 9,
+    },
+  ],
+  "limit": 10,
+  "skip": 0,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of initial search 2`] = `
+Object {
+  "data": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "40*40",
+      "id": 40,
+      "myVal": 40,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "41*41",
+      "id": 41,
+      "myVal": 41,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "42*42",
+      "id": 42,
+      "myVal": 42,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "43*43",
+      "id": 43,
+      "myVal": 43,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "44*44",
+      "id": 44,
+      "myVal": 44,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "45*45",
+      "id": 45,
+      "myVal": 45,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "46*46",
+      "id": 46,
+      "myVal": 46,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "47*47",
+      "id": 47,
+      "myVal": 47,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "48*48",
+      "id": 48,
+      "myVal": 48,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "49*49",
+      "id": 49,
+      "myVal": 49,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 40,
+      "myVal": 16800,
+      "ownedBy": 40,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 41,
+      "myVal": 17220,
+      "ownedBy": 41,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 42,
+      "myVal": 17640,
+      "ownedBy": 42,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 43,
+      "myVal": 18060,
+      "ownedBy": 43,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 44,
+      "myVal": 18480,
+      "ownedBy": 44,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 45,
+      "myVal": 18900,
+      "ownedBy": 45,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 46,
+      "myVal": 19320,
+      "ownedBy": 46,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 47,
+      "myVal": 19740,
+      "ownedBy": 47,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 48,
+      "myVal": 20160,
+      "ownedBy": 48,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 49,
+      "myVal": 20580,
+      "ownedBy": 49,
+    },
+  ],
+  "limit": 10,
+  "skip": 40,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of search with number 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "guestName": "240*240",
+      "id": 240,
+      "myVal": 240,
+    },
+  ],
+  "limit": 10,
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with ownedBy 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 6,
+      "myVal": 2520,
+      "ownedBy": 6,
+    },
+  ],
+  "limit": 10,
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with specifc number 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "420*420",
+      "id": 420,
+      "myVal": 420,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 1,
+      "myVal": 420,
+      "ownedBy": 1,
+    },
+  ],
+  "limit": 10,
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with text 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "guestName": "4*4",
+      "id": 4,
+      "myVal": 4,
+    },
+  ],
+  "limit": 10,
+  "skip": 0,
+  "total": 1,
+}
+`;
+
+exports[`List filter Test: result of search with text 2`] = `
+Object {
+  "data": Array [],
+  "limit": 10,
+  "skip": 0,
+  "total": 0,
+}
+`;
+
+exports[`List filter Test: result of searching in higher page 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "guestName": "40*40",
+      "id": 40,
+      "myVal": 40,
+    },
+    Object {
+      "guestName": "41*41",
+      "id": 41,
+      "myVal": 41,
+    },
+    Object {
+      "guestName": "42*42",
+      "id": 42,
+      "myVal": 42,
+    },
+    Object {
+      "guestName": "43*43",
+      "id": 43,
+      "myVal": 43,
+    },
+    Object {
+      "guestName": "44*44",
+      "id": 44,
+      "myVal": 44,
+    },
+    Object {
+      "guestName": "45*45",
+      "id": 45,
+      "myVal": 45,
+    },
+    Object {
+      "guestName": "46*46",
+      "id": 46,
+      "myVal": 46,
+    },
+    Object {
+      "guestName": "47*47",
+      "id": 47,
+      "myVal": 47,
+    },
+    Object {
+      "guestName": "48*48",
+      "id": 48,
+      "myVal": 48,
+    },
+    Object {
+      "guestName": "49*49",
+      "id": 49,
+      "myVal": 49,
+    },
+  ],
+  "limit": 10,
+  "skip": 40,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of searching in higher page 2`] = `
+Object {
+  "data": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "40*40",
+      "id": 40,
+      "myVal": 40,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "41*41",
+      "id": 41,
+      "myVal": 41,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "42*42",
+      "id": 42,
+      "myVal": 42,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "43*43",
+      "id": 43,
+      "myVal": 43,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "44*44",
+      "id": 44,
+      "myVal": 44,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "45*45",
+      "id": 45,
+      "myVal": 45,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "46*46",
+      "id": 46,
+      "myVal": 46,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "47*47",
+      "id": 47,
+      "myVal": 47,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "48*48",
+      "id": 48,
+      "myVal": 48,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "49*49",
+      "id": 49,
+      "myVal": 49,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 40,
+      "myVal": 16800,
+      "ownedBy": 40,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 41,
+      "myVal": 17220,
+      "ownedBy": 41,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 42,
+      "myVal": 17640,
+      "ownedBy": 42,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 43,
+      "myVal": 18060,
+      "ownedBy": 43,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 44,
+      "myVal": 18480,
+      "ownedBy": 44,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 45,
+      "myVal": 18900,
+      "ownedBy": 45,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 46,
+      "myVal": 19320,
+      "ownedBy": 46,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 47,
+      "myVal": 19740,
+      "ownedBy": 47,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 48,
+      "myVal": 20160,
+      "ownedBy": 48,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 49,
+      "myVal": 20580,
+      "ownedBy": 49,
+    },
+  ],
+  "limit": 10,
+  "skip": 40,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of searching too far 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "guestName": "440*440",
+      "id": 440,
+      "myVal": 440,
+    },
+    Object {
+      "guestName": "441*441",
+      "id": 441,
+      "myVal": 441,
+    },
+    Object {
+      "guestName": "442*442",
+      "id": 442,
+      "myVal": 442,
+    },
+    Object {
+      "guestName": "443*443",
+      "id": 443,
+      "myVal": 443,
+    },
+    Object {
+      "guestName": "444*444",
+      "id": 444,
+      "myVal": 444,
+    },
+    Object {
+      "guestName": "445*445",
+      "id": 445,
+      "myVal": 445,
+    },
+    Object {
+      "guestName": "446*446",
+      "id": 446,
+      "myVal": 446,
+    },
+    Object {
+      "guestName": "447*447",
+      "id": 447,
+      "myVal": 447,
+    },
+    Object {
+      "guestName": "448*448",
+      "id": 448,
+      "myVal": 448,
+    },
+    Object {
+      "guestName": "449*449",
+      "id": 449,
+      "myVal": 449,
+    },
+  ],
+  "limit": 10,
+  "skip": 440,
+  "total": 450,
+}
+`;
+
+exports[`List filter Test: result of searching too far 2`] = `
+Object {
+  "data": Array [
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "440*440",
+      "id": 440,
+      "myVal": 440,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "441*441",
+      "id": 441,
+      "myVal": 441,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "442*442",
+      "id": 442,
+      "myVal": 442,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "443*443",
+      "id": 443,
+      "myVal": 443,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "444*444",
+      "id": 444,
+      "myVal": 444,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "445*445",
+      "id": 445,
+      "myVal": 445,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "446*446",
+      "id": 446,
+      "myVal": 446,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "447*447",
+      "id": 447,
+      "myVal": 447,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "448*448",
+      "id": 448,
+      "myVal": 448,
+    },
+    Object {
+      "fromCollection": "simpleTestCol",
+      "guestName": "449*449",
+      "id": 449,
+      "myVal": 449,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 440,
+      "myVal": 184800,
+      "ownedBy": 440,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 441,
+      "myVal": 185220,
+      "ownedBy": 441,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 442,
+      "myVal": 185640,
+      "ownedBy": 442,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 443,
+      "myVal": 186060,
+      "ownedBy": 443,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 444,
+      "myVal": 186480,
+      "ownedBy": 444,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 445,
+      "myVal": 186900,
+      "ownedBy": 445,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 446,
+      "myVal": 187320,
+      "ownedBy": 446,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 447,
+      "myVal": 187740,
+      "ownedBy": 447,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 448,
+      "myVal": 188160,
+      "ownedBy": 448,
+    },
+    Object {
+      "fromCollection": "myRelationshipCollection",
+      "id": 449,
+      "myVal": 188580,
+      "ownedBy": 449,
+    },
+  ],
+  "limit": 10,
+  "skip": 440,
+  "total": 450,
+}
+`;

@@ -1,0 +1,78 @@
+{
+  "name": "@xpfw/feathers-hooks",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "license": "MIT",
+  "peerDependencies": {
+    "lodash": "4.x.x",
+    "moment": "2.x.x",
+    "@xpfw/form": "1.x.x",
+    "@xpfw/permission": "1.x.x",
+    "@feathersjs/feathers": "4.x.x",
+    "@feathersjs/errors": "4.x.x",
+    "feathers-memory": "4.x.x",
+    "feathers-mongodb": "6.x.x",
+    "mongodb": "x.x.x"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@feathersjs/authentication": "^4.5.2",
+    "@feathersjs/errors": "^3.3.6",
+    "@feathersjs/express": "^4.5.2",
+    "@feathersjs/feathers": "^3.3.1",
+    "@feathersjs/socketio": "^4.5.2",
+    "@types/feathersjs__authentication": "^2.1.4",
+    "@types/feathersjs__errors": "^3.3.2",
+    "@types/feathersjs__express": "^1.1.6",
+    "@types/feathersjs__feathers": "^3.1.5",
+    "@types/feathersjs__socketio": "^3.0.7",
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/mongodb": "^3.5.4",
+    "@xpfw/form": "1.0.0",
+    "@xpfw/permission": "1.0.0",
+    "feathers-memory": "^3.0.2",
+    "feathers-mongodb": "^4.0.4",
+    "jest": "^25.2.3",
+    "jest-cli": "^25.2.3",
+    "lodash": "^4.17.11",
+    "mockdate": "^2.0.5",
+    "moment": "^2.24.0",
+    "mongodb": "^3.2.2",
+    "rollup": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "=25.2.1",
+    "typescript": "^3.8.3",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

@@ -1,7 +1,7 @@
 import { get, isNil, keys } from "lodash"
 import * as React from "react"
-import { VictoryAxis, VictoryBar, VictoryChart, VictoryTheme } from "victory"
 import { MdFullscreen, MdFullscreenExit } from "react-icons/md"
+import { VictoryAxis, VictoryBar, VictoryChart, VictoryTheme } from "victory"
 
 class WebTimeStepChart extends React.Component<any, any> {
   public render() {
@@ -28,7 +28,7 @@ class WebTimeStepChart extends React.Component<any, any> {
             data={data}
           />
           <VictoryAxis />
-          <VictoryAxis dependentAxis={true} />
+          <VictoryAxis dependentAxis />
         </VictoryChart>
     )
   }

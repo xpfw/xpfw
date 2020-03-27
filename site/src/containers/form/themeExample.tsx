@@ -1,56 +1,57 @@
-import * as React from 'react';
-import BulmaHero from '../../components/hero';
-import siteGlobals from '../../globals';
-import { SharedField } from '@xpfw/form-shared';
-import HighlightedCode from '../../components/higlight';
-import { FieldType } from '@xpfw/validate';
+import { SharedField } from "@xpfw/form"
+import { FieldType } from '@xpfw/validate'
+import * as React from "react"
+import { FaPaintBrush } from "react-icons/fa"
+import BulmaHero from "../../components/hero"
+import HighlightedCode from "../../components/highlight"
+import siteGlobals from "../../globals"
 import "./theme"
-import { FaPaintBrush } from 'react-icons/fa';
 
 class ThemeExample extends React.Component<any, any> {
   public render() {
     return (
       <BulmaHero
         className="is-light"
-        title="Type supported customization"
+        title="Made to be customized"
         iconConfig={FaPaintBrush}
       >
-      <div className="has-text-centered is-size-4 pullUpMargin">
-        <a className={siteGlobals.externalLinkConfig.className} href="/docs/form/theming.html">
-          Theming a type
-        </a> is achievable through <a target="_blank" className={siteGlobals.externalLinkConfig.className} href="https://reactjs.org/docs/react-component.html">
-          React Components
-        </a>.
-      </div>
-      <SharedField field={{mapTo: "myGuidedNumber", type: FieldType.Number}} theme="guided" />
-      <HighlightedCode className="code-container" source={`import * as React from 'react'
-import { IFieldProps, ComponentRegistry } from '@xpfw/form-shared'
-import { FieldType } from '@xpfw/validate';
-class GuidedNumbersField extends React.Component<IFieldProps, any> {
-  public randomize() {
-    this.props.setValue(Math.round(Math.random() * 100))
-  }
-  public componentWillMount() {
-    this.randomize()
-  }
-  public render() {
-    return (
-      <div className="is-flex centerJustify has-text-centered is-size-5 marginTop marginBottom">
-        <a className="button" onClick={() => {
-          this.props.setValue(this.props.value - 1)
-        }}>Decrease</a>
-        <span style={{marginRight: "1rem", marginLeft: "1rem"}}>Value of <i>{this.props.field.mapTo}</i> is: <b>{this.props.value}</b></span>
-        <a className="button" onClick={() => {
-          this.props.setValue(this.props.value + 1)
-        }}>Increase</a><a style={{marginLeft: "1rem"}} className="button" onClick={() => {
-          this.randomize()
-        }}>Randomize</a>
-      </div>
-    )
-  }
-}
-ComponentRegistry.registerComponent(FieldType.Number, GuidedNumbersField, "guided")`} />
-    </BulmaHero>
+        <div className="has-text-centered is-size-4 pullUpMargin">
+          <a className={siteGlobals.externalLinkConfig.className} href="/docs/form/theming.html">
+            Theming
+          </a> is achieved through <a target="_blank" className={siteGlobals.externalLinkConfig.className} href="https://reactjs.org/docs/hooks-overview.html">
+            react hooks
+          </a> that provide all the data you need.
+        </div>
+        <SharedField schema={{title: "myGuidedNumber", type: "number", theme: "guided"}} theme="guided" />
+        <HighlightedCode
+          className="code-container"
+          source={`import { ComponentRegistry, IFieldProps, memo, useFieldWithValidation, getLabelFromProps } from "@xpfw/form"
+          import { observer } from "mobx-react"
+          import * as React from "react"
+          
+          const GuidedNumbersField: React.FunctionComponent<IFieldProps> = observer((props) => {
+            const fieldProps = useFieldWithValidation(props.schema, props.mapTo, props.prefix)
+            const memoVals = [props.mapTo, props.prefix, JSON.stringify(props.schema)]
+            const randomize = memo(() => () => fieldProps.setValue(Math.round(Math.random() * 100)), memoVals)
+            React.useEffect(randomize, memoVals)
+            return (
+              <div className="is-flex centerJustify has-text-centered is-size-5 marginTop marginBottom">
+                <a className="button" onClick={() => {
+                  fieldProps.setValue(fieldProps.value - 1)
+                }}>Decrease</a>
+                <span style={{marginRight: "1rem", marginLeft: "1rem"}}>Value of <i>{getLabelFromProps(props)}</i> is: <b>{fieldProps.value}</b></span>
+                <a className="button" onClick={() => {
+                  fieldProps.setValue(fieldProps.value + 1)
+                }}>Increase</a><a style={{marginLeft: "1rem"}} className="button" onClick={randomize}>Randomize</a>
+              </div>
+            )
+          })
+          
+          ComponentRegistry.registerComponent("number", GuidedNumbersField, "guided")
+          
+          `}
+        />
+      </BulmaHero>
     )
   }
 }

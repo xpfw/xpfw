@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Remove Test: After calling remove 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {},
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {
+    "0": Object {
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+    },
+  },
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Remove Test: before anything 1`] = `
+Object {
+  "createState": Object {},
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Remove Test: createresult 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;
+
+exports[`DbStore Remove Test: removeresult 1`] = `
+Object {
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;

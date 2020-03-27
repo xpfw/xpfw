@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Verify validateFormWithMongoQuery: $sort isn't typechecked 1`] = `
+Object {
+  "$limit": 20,
+  "$or": Array [
+    Object {
+      "myNum": Object {
+        "$gte": 234,
+      },
+    },
+    Object {
+      "myNum": Object {
+        "$in": Array [
+          54,
+          123,
+          432,
+          1543,
+          5432,
+        ],
+      },
+    },
+  ],
+  "$skip": 10,
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Correctly parse arrayQueryOperator 1`] = `
+Object {
+  "myNum": Object {
+    "$in": Array [
+      54,
+      123,
+      432,
+      1543,
+      132,
+    ],
+  },
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Correctly parse arrayedOperators 1`] = `
+Object {
+  "$or": Array [
+    Object {
+      "myNum": Object {
+        "$gte": 234,
+      },
+    },
+    Object {
+      "myNum": Object {
+        "$in": Array [
+          54,
+          123,
+          432,
+          1543,
+          5432,
+        ],
+      },
+    },
+  ],
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Correctly parse arrayedOperators with $sort 1`] = `
+Object {
+  "$limit": 20,
+  "$or": Array [
+    Object {
+      "myNum": Object {
+        "$gte": 234,
+      },
+    },
+    Object {
+      "myNum": Object {
+        "$in": Array [
+          54,
+          123,
+          432,
+          1543,
+          5432,
+        ],
+      },
+    },
+  ],
+  "$skip": 10,
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Correctly parse sameTypeOperator 1`] = `
+Object {
+  "myNum": Object {
+    "$gte": 234,
+  },
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Correctly reject invalid arrayedOperators 1`] = `[Error: [{"keyword":"type","dataPath":"[2]","schemaPath":"#/items/type","params":{"type":"number"},"message":"should be number"}]]`;
+
+exports[`Verify validateFormWithMongoQuery: Reject empty special qury 1`] = `[Error: $or should be an array but isn't]`;
+
+exports[`Verify validateFormWithMongoQuery: Resolve null if nothing suiting found 1`] = `Object {}`;
+
+exports[`Verify validateFormWithMongoQuery: Successfully Validate Number Object 1`] = `
+Object {
+  "myNum": 432,
+}
+`;
+
+exports[`Verify validateFormWithMongoQuery: Throw error on arrayQueryOperator if one of the types does not match 1`] = `[Error: [{"keyword":"type","dataPath":"[4]","schemaPath":"#/items/type","params":{"type":"number"},"message":"should be number"}]]`;
+
+exports[`Verify validateFormWithMongoQuery: Throw error on sameTypeOperator if types do not match 1`] = `[Error: [{"keyword":"type","dataPath":"","schemaPath":"#/type","params":{"type":"number"},"message":"should be number"}]]`;
+
+exports[`Verify validateFormWithMongoQuery: also allow date $lte  1`] = `
+Object {
+  "dat": Object {
+    "$lte": 2010-02-28T23:00:00.000Z,
+  },
+}
+`;

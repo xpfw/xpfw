@@ -1,0 +1,87 @@
+{
+  "name": "@xpfw/data-feathers",
+  "version": "1.0.0",
+  "main": "dist",
+  "typings": "dist",
+  "license": "MIT",
+  "dependencies": {
+    "@feathersjs/authentication-client": "^4.5.2",
+    "@feathersjs/feathers": "^4.5.2",
+    "@feathersjs/rest-client": "^4.5.2",
+    "@feathersjs/socketio-client": "^4.5.2",
+    "socket.io-client": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@xpfw/data": "1.x.x",
+    "@xpfw/form": "1.x.x",
+    "lodash": "4.x.x",
+    "moment": "2.x.x"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c",
+    "dev": "./node_modules/.bin/rollup -c -w",
+    "test": "./node_modules/.bin/jest --ci",
+    "update": "ncu -a",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.9.2",
+    "@types/feathersjs__authentication-client": "^1.0.5",
+    "@types/feathersjs__feathers": "^3.1.5",
+    "@types/feathersjs__rest-client": "^1.3.2",
+    "@types/feathersjs__socketio-client": "^1.0.3",
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/lodash-es": "^4.17.3",
+    "@types/mockdate": "^2.0.0",
+    "@types/socket.io-client": "^1.4.32",
+    "@xpfw/data": "^1.0.0",
+    "@xpfw/data-tests": "1.0.0",
+    "@xpfw/form": "^1.0.0",
+    "@xpfw/test-util": "1.0.0",
+    "ajv": "^6.12.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^25.2.3",
+    "jest-cli": "^25.2.3",
+    "lodash": "^4.17.11",
+    "lodash-es": "^4.17.15",
+    "mobx": "^5.15.4",
+    "mockdate": "^2.0.5",
+    "moment": "^2.24.0",
+    "react": "^16.13.1",
+    "react-is": "^16.13.1",
+    "rollup": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-jest": "=25.2.1",
+    "typescript": "^3.8.3",
+    "uglify-es": "^3.3.10"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib",
+      "<rootDir>/dist"
+    ],
+    "moduleNameMapper": {
+      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
+      "@xpfw/form": "<rootDir>/node_modules/@xpfw/form",
+      "@xpfw/data": "<rootDir>/node_modules/@xpfw/data"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testURL": "http://localhost/"
+  }
+}

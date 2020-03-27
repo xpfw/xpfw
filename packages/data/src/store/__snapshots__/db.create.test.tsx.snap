@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Create Test: After calling create 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "belongsTo": "myuserid",
+      "createdAt": "2011-05-05T14:20:43.337Z",
+      "guestName": "myText",
+      "id": 0,
+      "myVal": 420,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "belongsTo": "myuserid",
+        "createdAt": "2011-05-05T14:20:43.337Z",
+        "guestName": "myText",
+        "id": 0,
+        "myVal": 420,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Create Test: Before calling create 1`] = `
+Object {
+  "createState": Object {},
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Create Test: getresult 1`] = `
+Object {
+  "belongsTo": "myuserid",
+  "createdAt": "2011-05-05T14:20:43.337Z",
+  "guestName": "myText",
+  "id": 0,
+  "myVal": 420,
+}
+`;

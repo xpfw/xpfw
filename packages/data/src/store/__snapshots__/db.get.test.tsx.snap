@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbStore Patch Test: after patch 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "get is now diff",
+        "id": 0,
+        "myVal": 65243,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "formModel0": Object {
+      "guestName": "get is now diff",
+      "id": 0,
+      "myVal": 65243,
+    },
+  },
+}
+`;
+
+exports[`DbStore Patch Test: createresult 1`] = `
+Object {
+  "guestName": "gettext",
+  "id": 0,
+  "myVal": 4654320,
+}
+`;
+
+exports[`DbStore Patch Test: dbstore after create 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "gettext",
+        "id": 0,
+        "myVal": 4654320,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Patch Test: dbstore after create get 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "gettext",
+        "id": 0,
+        "myVal": 4654320,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Patch Test: dbstore after nothingtoget 1`] = `
+Object {
+  "createState": Object {},
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {},
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Patch Test: dbstore after patch 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "get is now diff",
+        "id": 0,
+        "myVal": 65243,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "formModel0": Object {
+      "guestName": "get is now diff",
+      "id": 0,
+      "myVal": 65243,
+    },
+  },
+}
+`;
+
+exports[`DbStore Patch Test: dbstore after patch get 1`] = `
+Object {
+  "createState": Object {
+    "formModel": Object {
+      "guestName": "gettext",
+      "id": 0,
+      "myVal": 4654320,
+    },
+  },
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {
+      "0": Object {
+        "guestName": "get is now diff",
+        "id": 0,
+        "myVal": 65243,
+      },
+    },
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {
+    "formModel0": Object {
+      "guestName": "get is now diff",
+      "id": 0,
+      "myVal": 65243,
+    },
+  },
+}
+`;
+
+exports[`DbStore Patch Test: dbstore after wrongcol 1`] = `
+Object {
+  "createState": Object {},
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {
+    "simpleTestCol": Object {},
+  },
+  "lastFetch": Object {
+    "0": 1304605243337,
+  },
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Patch Test: dbstore at start 1`] = `
+Object {
+  "createState": Object {},
+  "currentlyEditing": Object {},
+  "fetching": Object {},
+  "formsToUpdate": Array [],
+  "getState": Object {},
+  "lastFetch": Object {},
+  "removeState": Object {},
+  "updateState": Object {},
+}
+`;
+
+exports[`DbStore Patch Test: errorstore after wrongcol 1`] = `
+Object {
+  "0": NotFound {
+    "className": "not-found",
+    "code": 404,
+    "constructor": [Function],
+    "data": undefined,
+    "errors": Object {},
+    "message": "No record found for id '0'",
+    "name": "NotFound",
+    "type": "FeathersError",
+  },
+}
+`;
+
+exports[`DbStore Patch Test: getcreated 1`] = `undefined`;
+
+exports[`DbStore Patch Test: getpatched 1`] = `undefined`;
+
+exports[`DbStore Patch Test: nothingtoget 1`] = `[NotFound: No record found for id '0']`;
+
+exports[`DbStore Patch Test: patchresult 1`] = `
+Object {
+  "guestName": "get is now diff",
+  "id": 0,
+  "myVal": 65243,
+}
+`;
+
+exports[`DbStore Patch Test: wrongcollection 1`] = `undefined`;

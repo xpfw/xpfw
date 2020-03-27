@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Hooks Test useFieldWithValidation:  no error because valid number  1`] = `undefined`;
+
+exports[`Form Hooks Test useFieldWithValidation: Error because not a valid number instead it's a string 1`] = `undefined`;

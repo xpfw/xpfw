@@ -1,8 +1,6 @@
-import * as ExtractTextPlugin from "extract-text-webpack-plugin"
-import * as fs from "fs"
 import * as path from "path"
 import * as webpack from "webpack"
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const nodeModules: any = {}
 // fs.readdirSync(path.resolve(__dirname, "../isofw-node/node_modules"))
 // .filter((x) => {
@@ -23,7 +21,7 @@ const webpackServerConfig: webpack.Configuration = {
     path: path.resolve("webpackDist")
   },
   plugins: [
-    new ExtractTextPlugin("style.css")
+    new MiniCssExtractPlugin("style.css")
   ],
   module: {
     rules: [
@@ -40,16 +38,10 @@ const webpackServerConfig: webpack.Configuration = {
         use: `file-loader`
       }, {
         test: /\.(scss|sass)$/i,
-        use: ExtractTextPlugin.extract({
-          fallback: `style-loader`,
-          use: ["css-loader", "sass-loader"]
-        })
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       }, {
         test: /\.(css)$/i,
-        use: ExtractTextPlugin.extract({
-          fallback: `style-loader`,
-          use: "css-loader"
-        })
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       }, {
         test: /\.tsx?$/,
         exclude: /.*(node_modules).*/,
@@ -62,8 +54,8 @@ const webpackServerConfig: webpack.Configuration = {
     alias: {
       "@xpfw/router": path.resolve(__dirname, `./node_modules/@xpfw/router`),
       "@xpfw/validate": path.resolve(__dirname, `./node_modules/@xpfw/validate`),
-      "@xpfw/form-shared": path.resolve(__dirname, `./node_modules/@xpfw/form-shared`),
-      "@xpfw/ui-shared": path.resolve(__dirname, `./node_modules/@xpfw/ui-shared`)
+      "@xpfw/form": path.resolve(__dirname, `./node_modules/@xpfw/form`),
+      "@xpfw/data": path.resolve(__dirname, `./node_modules/@xpfw/data`)
     }
   }
 }
