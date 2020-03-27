@@ -1,4 +1,4 @@
-import { IFieldProps } from "@xpfw/form"
+import { IFieldProps, getLabelFromProps } from "@xpfw/form"
 import { BooleanField } from "@xpfw/form-web"
 import { get } from "lodash"
 import * as React from "react"
@@ -9,7 +9,7 @@ const BulmaBooleanField: React.FunctionComponent<IFieldProps> = (props) => {
       <div className="control">
         <label className="checkbox">
           <BooleanField {...props} />
-          {get(props, "schema.title")}
+          {getLabelFromProps(props)}
         </label>
         </div>
     </div>

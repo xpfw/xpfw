@@ -4,6 +4,7 @@ import { observer } from "mobx-react-lite"
 import * as React from "react"
 import WebRelationshipItem from "./relationshipItem"
 import WebRelationshipSearch from "./relationshipSearch"
+import { getLabelFromProps } from "@xpfw/form"
 
 const WebRelationshipSingle: React.FunctionComponent<IRelationshipHookProps> = observer((props) => {
   const relationHelper = useRelationshipWithProps(props)
@@ -25,7 +26,7 @@ const WebRelationshipSingle: React.FunctionComponent<IRelationshipHookProps> = o
   }
   return (
     <div className="field">
-      <label className="label">Relationship {get(props, "schema.label", get(props, "schema.title"))}</label>
+      <label className="label">Relationship {getLabelFromProps(props)}</label>
       <div className="control">
         {content}
       </div>

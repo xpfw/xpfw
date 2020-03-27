@@ -1,4 +1,4 @@
-import { ComponentRegistry, IFieldProps, memo, useFieldWithValidation } from "@xpfw/form"
+import { ComponentRegistry, IFieldProps, memo, useFieldWithValidation, getLabelFromProps } from "@xpfw/form"
 import { observer } from "mobx-react-lite"
 import * as React from "react"
 
@@ -12,7 +12,7 @@ const GuidedNumbersField: React.FunctionComponent<IFieldProps> = observer((props
       <a className="button" onClick={() => {
         fieldProps.setValue(fieldProps.value - 1)
       }}>Decrease</a>
-      <span style={{marginRight: "1rem", marginLeft: "1rem"}}>Value of <i>{props.schema.title}</i> is: <b>{fieldProps.value}</b></span>
+      <span style={{marginRight: "1rem", marginLeft: "1rem"}}>Value of <i>{getLabelFromProps(props)}</i> is: <b>{fieldProps.value}</b></span>
       <a className="button" onClick={() => {
         fieldProps.setValue(fieldProps.value + 1)
       }}>Increase</a><a style={{marginLeft: "1rem"}} className="button" onClick={randomize}>Randomize</a>

@@ -96,6 +96,12 @@ export declare interface ExtendedJSONSchema extends JSONSchemaDefinition {
    * Could for example be used to render custom components per field
    */
   theme?: string
+  /**
+   * This is the string that will be shown on the input
+   * If SharedField.props.label is set than this will be overriden by it
+   * In case neither schema.label nor SharedField.props.label is set then it will use schema.title
+   */
+  label?: string
   collection?: string
   multiCollection?: string[]
   relationship?: {

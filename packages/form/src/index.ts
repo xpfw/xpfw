@@ -14,11 +14,13 @@ import iterateSubFields from "./util/iterateSubfields"
 import memo from "./util/memo"
 import prefixMaker, { prependPrefix } from "./util/prefixMaker"
 import validateQueryObject from "./util/validateQueryObject"
+import getLabelFromProps from "./util/getLabelFromProps"
 
 export {
   useField, useFieldWithValidation, prefixMaker, FormStore, FormStoreClass,
   useArray, useObject, ComponentRegistry, JSONSchemaDefinition, IFieldProps,
   SharedField, getMapToFromProps, memo, ExtendedJSONSchema, prependPrefix,
   getMapTo, iterateSubFields, jsonValidator, Ajv, ModifyFunction, ensureValueInQuery,
-  useModifier, executeForMethods, addTimeStamp, SchemaRegistry, validateQueryObject
+  useModifier, executeForMethods, addTimeStamp, SchemaRegistry, validateQueryObject,
+  getLabelFromProps
 }
