@@ -5,6 +5,7 @@ export interface IFieldProps {
   mapTo?: string
   prefix?: string
   theme?: string
+  label?: string
   schema: ExtendedJSONSchema
 }
 
