@@ -1,6 +1,6 @@
 import { getMapToFromProps, IFieldProps, useFieldWithValidation } from "@xpfw/form"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 
 const BooleanField: React.FunctionComponent<IFieldProps> = observer((props) => {

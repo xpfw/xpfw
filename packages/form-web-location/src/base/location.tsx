@@ -1,7 +1,7 @@
 import { ExtendedJSONSchema, getMapToFromProps, IFieldProps, useField } from "@xpfw/form"
 import * as leaflet from "leaflet"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 
 const handleLatLng = (thisRef: any) => {

@@ -21,7 +21,7 @@
     "@xpfw/form": "1.x.x",
     "lodash": "4.x.x",
     "mobx": "^5.x.x",
-    "mobx-react-lite": "^1.x.x",
+    "mobx-react": "^6.x.x",
     "moment": "2.x.x"
   },
   "devDependencies": {

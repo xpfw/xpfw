@@ -1,5 +1,5 @@
 import { getMapToFromProps, IFieldProps, prependPrefix, SharedField, useArray } from "@xpfw/form"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 
 const ArrayField: React.FunctionComponent<IFieldProps> = observer((props) => {

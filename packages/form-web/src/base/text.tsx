@@ -4,7 +4,7 @@ import {
 } from "@xpfw/form"
 import { IFieldOptions } from "@xpfw/form/dist/hooks/field"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as momentA from "moment"
 import * as React from "react"
 import SelectComponent from "./select"

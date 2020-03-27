@@ -23,7 +23,7 @@ export default {
     "@xpfw/data",
     "mobx",
     "mobx-react",
-    "mobx-react-lite",
+    "mobx-react",
     "react",
     "react-native",
     "react-native-elements"

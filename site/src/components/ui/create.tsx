@@ -3,7 +3,7 @@ import * as React from "react"
 import { dataOptions,  ICreateHookProps, ListStore, useCreateWithProps } from "@xpfw/data"
 import { getMapToFromProps, iterateSubFields, prependPrefix, SharedField } from "@xpfw/form"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 
 const BulmaCreate: React.FunctionComponent<ICreateHookProps> = observer((props) => {
   const createProps = useCreateWithProps(props)

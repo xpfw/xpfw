@@ -1,6 +1,6 @@
 import { IRelationshipHookProps, useRelationshipWithProps } from "@xpfw/data"
 import { get, isNil } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 import WebRelationshipItem from "./relationshipItem"
 import WebRelationshipSearch from "./relationshipSearch"

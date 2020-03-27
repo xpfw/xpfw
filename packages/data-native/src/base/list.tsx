@@ -1,7 +1,7 @@
 import { IListHookProps, useListWithProps, dataOptions } from "@xpfw/data"
 import { iterateSubFields } from "@xpfw/form"
 import { each, get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 import { View } from "react-native"
 import { Text, Button, ListItem } from "react-native-elements"

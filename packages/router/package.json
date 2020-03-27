@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "mobx": "^5.15.4",
-    "mobx-react-lite": "^1.5.2"
+    "mobx-react": "^6.1.8"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -22,6 +22,7 @@
     "jest": "^25.2.3",
     "jest-cli": "^25.2.3",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.2.0",
     "rollup-plugin-typescript2": "^0.27.0",

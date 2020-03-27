@@ -2,7 +2,7 @@ import { toJS } from "@xpfw/data"
 import { StatType } from "@xpfw/dm"
 import { useStat } from "@xpfw/dm-shared"
 import {get} from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 import WebTimeStepChart from "./timeChart"
 

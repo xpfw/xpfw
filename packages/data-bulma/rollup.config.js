@@ -24,6 +24,6 @@ export default {
     "react",
     "react-dom",
     "mobx",
-    "mobx-react-lite"
+    "mobx-react"
   ]
 };

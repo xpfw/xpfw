@@ -22,6 +22,6 @@ export default {
     "mockdate",
     "@xpfw/form",
     "@xpfw/form-tests",
-    "mobx-react-lite"
+    "mobx-react"
   ]
 };

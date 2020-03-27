@@ -22,6 +22,6 @@ export default {
     "react-dom",
     "leaflet",
     "mobx",
-    "mobx-react-lite"
+    "mobx-react"
   ]
 };

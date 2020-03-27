@@ -1,6 +1,6 @@
 import { ExtendedJSONSchema, getMapTo, getMapToFromProps, IFieldProps, useField } from "@xpfw/form"
 import { get, isFunction } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 
 const useSelect = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: string, options?: any, props?: any) => {

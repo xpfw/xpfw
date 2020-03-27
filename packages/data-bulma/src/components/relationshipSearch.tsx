@@ -1,7 +1,7 @@
 import { useList } from "@xpfw/data"
 import { prependPrefix, SharedField } from "@xpfw/form"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 import WebRelationshipItem from "./relationshipItem"
 

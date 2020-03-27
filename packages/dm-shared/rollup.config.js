@@ -15,7 +15,7 @@ export default {
     "moment",
     "feathers-client",
     "mobx",
-    "mobx-react-lite",
+    "mobx-react",
     "socket.io-client",
     "@xpfw/form",
     "@xpfw/data",

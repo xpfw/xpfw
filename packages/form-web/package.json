@@ -9,7 +9,7 @@
     "lodash": "^4.x.x",
     "moment": "2.x.x",
     "mobx": "^5.x.x",
-    "mobx-react-lite": "^1.x.x",
+    "mobx-react": "^6.x.x",
     "react": "^16.x.x"
   },
   "scripts": {
@@ -33,11 +33,12 @@
     "jest": "^25.2.3",
     "jest-cli": "^25.2.3",
     "lodash": "^4.17.15",
-    "mobx-react-lite": "^1.1.1",
+    "mobx-react": "^6.1.8",
     "mobx": "^5.9.0",
     "mockdate": "^2.0.5",
     "moment": "^2.24.0",
     "react": "^16.8.5",
+    "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.2.0",
     "rollup-plugin-typescript2": "^0.27.0",

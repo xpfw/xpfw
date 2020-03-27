@@ -2,7 +2,7 @@ import { BackendClient, dataOptions, DbStore, IListHookProps, ListStore, toJS, u
 import NedbClient from "@xpfw/data-nedb"
 import { ExtendedJSONSchema, FormStore, iterateSubFields } from "@xpfw/form"
 import { get, map } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 import { FaTrash } from "react-icons/fa"
 import {

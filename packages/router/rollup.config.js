@@ -12,7 +12,7 @@ export default {
   ],
   external: [
     "mobx",
-    "mobx-react-lite",
+    "mobx-react",
     "react"
   ]
 };

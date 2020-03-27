@@ -1,7 +1,7 @@
 import { dataOptions, IEditHookProps, useEditWithProps } from "@xpfw/data"
 import {  getMapToFromProps, iterateSubFields, prependPrefix, SharedField } from "@xpfw/form"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 
 const BulmaEdit: React.FunctionComponent<IEditHookProps> = observer((props) => {

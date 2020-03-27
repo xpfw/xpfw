@@ -6,7 +6,7 @@ import { Button } from "react-native-elements"
 import NativeFieldContainer from "./field"
 import NativeRelationshipItem from "./relationshipItem"
 import NativeRelationshipSearch from "./relationshipSearch"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 
 const WebRelationshipMulti: React.FunctionComponent<IRelationshipHookProps & any> = observer((props) => {
   const relationHelper = useRelationshipWithProps(props)

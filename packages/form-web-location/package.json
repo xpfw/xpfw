@@ -10,7 +10,7 @@
     "leaflet": "1.x.x",
     "@xpfw/form": "1.x.x",
     "mobx": "^5.x.x",
-    "mobx-react-lite": "^1.x.x"
+    "mobx-react": "^6.x.x"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -34,11 +34,12 @@
     "jest-cli": "^25.2.3",
     "leaflet": "^1.4.0",
     "lodash": "^4.17.11",
-    "mobx-react-lite": "^1.1.1",
+    "mobx-react": "^6.1.8",
     "mobx": "^5.9.0",
     "mockdate": "^2.0.5",
     "moment": "^2.24.0",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "rollup": "^2.2.0",
     "rollup-plugin-typescript2": "^0.27.0",

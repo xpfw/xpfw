@@ -1,5 +1,5 @@
 import { ComponentRegistry, IFieldProps, memo, useFieldWithValidation, getLabelFromProps } from "@xpfw/form"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import * as React from "react"
 
 const GuidedNumbersField: React.FunctionComponent<IFieldProps> = observer((props) => {

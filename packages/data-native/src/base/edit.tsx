@@ -3,7 +3,7 @@ import * as React from "react"
 import { dataOptions,  useEditWithProps, IEditHookProps } from "@xpfw/data"
 import { getMapToFromProps, iterateSubFields, prependPrefix, SharedField } from "@xpfw/form"
 import { get } from "lodash"
-import { observer } from "mobx-react-lite"
+import { observer } from "mobx-react"
 import { View } from "react-native"
 import { Button, Text, Card } from "react-native-elements"
 
