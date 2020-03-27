@@ -1817,11 +1817,12 @@ exports[`Relationship Test: set to first creation loaded 1`] = `
       "type": "string"
     }
   },
+  "loading": true,
   "currentPage": 0,
   "maxPage": 1,
   "showNextPage": false,
   "showPrevPage": false,
-  "isDirty": true
+  "isDirty": false
 }
 </div>
 `;
