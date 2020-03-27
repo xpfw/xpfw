@@ -26,6 +26,10 @@ const convertTextToNedbRegex: any = (value: any) => {
   }
 }
 
+const CreateNative = require("../../components/native-create.png").default
+const EditNative = require("../../components/native-edit.png").default
+const ListNative = require("../../components/native-list.png").default
+
 const tc: any = TagModel.collection
 const tlc: any = TagCollectionModel.collection
 class UiPage extends React.Component<any, any> {
@@ -139,12 +143,19 @@ class UiPage extends React.Component<any, any> {
         </BulmaHero>
         <BulmaHero
           className="is-light"
+          title="All driven by this little definition"
+          iconConfig={FaUsersCog}
+        >
+          <HighlightedCode className="code-container" source={relationshipCode} />
+        </BulmaHero>
+        <BulmaHero
+          className="is-light"
           title="React Native support"
           iconConfig={FaReact}
         >
         <div className="has-text-centered is-size-5 pullUpMargin">
           Here are some screenshots of using&nbsp;
-          <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-ui-native`}>
+          <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}data-native`}>
           @xpfw/data-native
           </a>.
         </div>
@@ -153,42 +164,31 @@ class UiPage extends React.Component<any, any> {
                       className="marginTopBig"
                       content={[
                         {
-                          name: "Add a Tag Collection",
+                          name: "Create",
                           children: (
-                            <div>
-                              screen
-                            </div>
+                            <img src={CreateNative} alt="Screenshot of @xpfw/data-native's create component" />
                           ),
-                          className: "is-one-quarter",
+                          className: "is-one-third",
                           icon: FaPlusCircle
                         },
                         {
-                          name: "Related lists",
+                          name: "List",
                           children: (
-                            <div>screen
-                            </div>
+                            <img src={ListNative} alt="Screenshot of @xpfw/data-native's list component" />
                           ),
-                          className: "is-half",
+                          className: "is-one-third",
                           icon: FaListAlt
                         },
                         {
-                          name: "Alter a Collection",
+                          name: "Edit",
                           children: (
-                            <div>screen
-                            </div>
+                            <img src={EditNative} alt="Screenshot of @xpfw/data-native's edit component" />
                           ),
-                          className: "is-one-quarter",
+                          className: "is-one-third",
                           icon: FaPenSquare
                         }
                       ]}
                     />
-        </BulmaHero>
-        <BulmaHero
-          className="is-light"
-          title="All driven by this little definition"
-          iconConfig={FaUsersCog}
-        >
-          <HighlightedCode className="code-container" source={relationshipCode} />
         </BulmaHero>
       </PageContainer>
     )

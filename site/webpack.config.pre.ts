@@ -62,8 +62,8 @@ const webpackServerConfig: webpack.Configuration = {
     alias: {
       "@xpfw/router": path.resolve(__dirname, `./node_modules/@xpfw/router`),
       "@xpfw/validate": path.resolve(__dirname, `./node_modules/@xpfw/validate`),
-      "@xpfw/form-shared": path.resolve(__dirname, `./node_modules/@xpfw/form-shared`),
-      "@xpfw/ui-shared": path.resolve(__dirname, `./node_modules/@xpfw/ui-shared`)
+      "@xpfw/form": path.resolve(__dirname, `./node_modules/@xpfw/form`),
+      "@xpfw/data": path.resolve(__dirname, `./node_modules/@xpfw/data`)
     }
   }
 }

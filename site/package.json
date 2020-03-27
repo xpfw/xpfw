@@ -83,9 +83,8 @@
       "isofw-shared(.*)": "<rootDir>/../isofw-shared$1",
       "isofw-web(.*)": "<rootDir>/../isofw-web$1",
       "isofw-rn(.*)": "<rootDir>/../isofw-rn$1",
-      "@xpfw/validate": "<rootDir>/node_modules/@xpfw/validate",
-      "@xpfw/form-shared": "<rootDir>/node_modules/@xpfw/form-shared",
-      "@xpfw/ui-shared": "<rootDir>/node_modules/@xpfw/ui-shared",
+      "@xpfw/form": "<rootDir>/node_modules/@xpfw/form",
+      "@xpfw/data": "<rootDir>/node_modules/@xpfw/data",
       "@xpfw/ui-tests": "<rootDir>/node_modules/@xpfw/ui-tests",
       "@xpfw/test-util": "<rootDir>/node_modules/@xpfw/test-util"
     },

@@ -14,8 +14,8 @@ class FormPage extends React.Component<any, any> {
   public render() {
     return (
       <PageContainer {...this.props}>
+      <ThemeExample />
         <FormIntro />
-        <ThemeExample />
         <BulmaHero
           className="is-light"
           title="Need more automation?"

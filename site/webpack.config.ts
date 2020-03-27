@@ -13,8 +13,12 @@ const webpackConfig: webpack.Configuration = {
   ],
   module: {
     rules: [ {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: `file-loader`
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          }
+        ]
       }, {
         test: /\.(scss|sass)$/i,
         use: [
@@ -46,8 +50,8 @@ const webpackConfig: webpack.Configuration = {
     alias: {
       "@xpfw/router": path.resolve(__dirname, `./node_modules/@xpfw/router`),
       "@xpfw/validate": path.resolve(__dirname, `./node_modules/@xpfw/validate`),
-      "@xpfw/form-shared": path.resolve(__dirname, `./node_modules/@xpfw/form-shared`),
-      "@xpfw/ui-shared": path.resolve(__dirname, `./node_modules/@xpfw/ui-shared`)
+      "@xpfw/form": path.resolve(__dirname, `./node_modules/@xpfw/form`),
+      "@xpfw/data": path.resolve(__dirname, `./node_modules/@xpfw/data`)
     }
   }
 }

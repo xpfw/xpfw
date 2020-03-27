@@ -2,7 +2,8 @@ import { RouterStore } from "@xpfw/router"
 import * as React from "react"
 import { FaBook, FaChartLine, FaCloud, FaCogs, FaDatabase, FaHome, FaWpforms } from "react-icons/fa"
 import linkClickHandler from "./linkHandler"
-// import Logo from "./logo.png"
+
+const Logo = require("./logo.png").default
 
 class WebMenu extends React.Component<any, any> {
   public state = {menuOpen: false}
@@ -59,7 +60,7 @@ class WebMenu extends React.Component<any, any> {
       <nav className="navbar has-background-white-bis stickyNav" role="navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="/">
-            <img src={"Logo"} alt="xpfw" />
+            <img src={Logo} alt="xpfw" />
           </a>
           <div className="navbar-burger" onClick={() => {
             this.setState({menuOpen: !this.state.menuOpen})

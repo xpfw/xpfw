@@ -6,6 +6,7 @@ import BulmaHero from "../../components/hero"
 import HighlightedCode from "../../components/highlight"
 import siteGlobals from "../../globals"
 
+const FormNative = require("../../components/native-form.png").default
 class FormIntro extends React.Component<any, any> {
   public render() {
     return (
@@ -34,7 +35,7 @@ class FormIntro extends React.Component<any, any> {
                     name: "Web",
                     children: (
                       <div>
-                          Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-form-bulma`}>
+                          Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}form-bulma`}>
             @xpfw/form-bulma
             </a>
                           <HighlightedCode className="code-container" source={`import { iterateSubFields, SharedField } from "@xpfw/form"
@@ -64,7 +65,7 @@ const WebForm: React.FunctionComponent<any> = () => {
                     name: "Native",
                     children: (
                       <div>
-                        Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}xpfw-form-native`}>
+                        Uses <a target="_blank" className={siteGlobals.linkClass} href={`${siteGlobals.pkgRoot}form-native`}>
                           @xpfw/form-native
                         </a>
                         <HighlightedCode className="code-container" source={`import { IForm, getFieldsFromForm } from "@xpfw/validate"
@@ -90,6 +91,7 @@ form: IForm
   }
 }`}
                       />
+                      <img src={FormNative} alt="Screenshot of @xpfw/form-native" />
                     </div>
                     )
                   }
