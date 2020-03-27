@@ -1,9 +1,4 @@
-import * as React from 'react'
-import PageContainer from '../components/pageContainer';
-import BulmaHero from '../components/hero';
-import { FaBalanceScale } from 'react-icons/fa';
-
-let licenseReport = `abab licensed under BSD-3-Clause. Repository: git+https://github.com/jsdom/abab.git
+abab licensed under BSD-3-Clause. Repository: git+https://github.com/jsdom/abab.git
 abbrev licensed under ISC. Repository: http://github.com/isaacs/abbrev-js
 accepts licensed under MIT. Repository: jshttp/accepts
 acorn licensed under MIT. Repository: https://github.com/acornjs/acorn.git
@@ -860,22 +855,4 @@ yallist licensed under ISC. Repository: git+https://github.com/isaacs/yallist.gi
 yargs licensed under MIT. Repository: https://github.com/yargs/yargs.git
 yargs-parser licensed under ISC. Repository: git@github.com:yargs/yargs-parser.git
 yeast licensed under MIT. Repository: https://github.com/unshiftio/yeast.git
-yn licensed under MIT. Repository: sindresorhus/yn`
-licenseReport = licenseReport.replace(/\n/g, "<br />")
-class PageLicenses extends React.Component<any, any> {
-  public render() {
-    return (
-      <PageContainer {...this.props}>
-        <BulmaHero
-          className="is-light"
-          title="Open source licenses"
-          iconConfig={FaBalanceScale}
-        >
-        </BulmaHero>
-        <div className="content" style={{marginRight: "1rem", marginLeft: "1rem"}} dangerouslySetInnerHTML={{ __html: licenseReport }} />
-      </PageContainer>
-    )
-  }
-}
-
-export default PageLicenses
+yn licensed under MIT. Repository: sindresorhus/yn
