@@ -7,7 +7,7 @@ const makeUpdates = async function() {
   console.log("Testing " + subPackages.length + " Packages")
   const failed = []
   for (const subPackage of subPackages) {
-    if (subPackage !== "xpfw-form-native" && subPackage !== "xpfw-ui-native") {
+    if (subPackage !== "form-native" && subPackage !== "data-native") {
       console.log(`Testing ${subPackage}`)
       const res: any = exec(`${__dirname}/../node_modules/.bin/jest --forceExit`, {cwd: resolve(`packages/${subPackage}`),env:{TZ: "Europe/Amsterdam"}})
       console.log(`result for subpackage is `, res)
