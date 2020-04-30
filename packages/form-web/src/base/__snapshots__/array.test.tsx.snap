@@ -248,6 +248,25 @@ exports[`Array Field Test: removed second item 1`] = `
 exports[`Array Field Test: unchanged render 1`] = `
 <div>
   <div
+    className="flex flex1 center"
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+    />
+    <a
+      className="button is-warning  iconMargin"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginTop": "1.2rem",
+        }
+      }
+    >
+      Delete
+    </a>
+  </div>
+  <div
     className="flex center"
   >
     <a
