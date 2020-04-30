@@ -4,6 +4,7 @@ node_js:
 services:
   - mongodb
 before_script:
+  - alias node=nodejs
   - yarn run init
   - yarn run build
 cache:
