@@ -29,7 +29,7 @@
     "bulma": "^0.8.2",
     "fast-json-patch": "^3.0.0-1",
     "localforage": "^1.7.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "moment": "^2.24.0",
