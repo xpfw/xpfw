@@ -43,7 +43,7 @@
     "babel-preset-react-native": "^4.0.1",
     "jest": "^25.5.2",
     "jest-cli": "^25.5.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
     "mockdate": "^2.0.5",
