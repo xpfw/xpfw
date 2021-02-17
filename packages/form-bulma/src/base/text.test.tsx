@@ -1,7 +1,7 @@
 import { ComponentRegistry, FormStore, SharedField } from "@xpfw/form"
 import { stringTest } from "@xpfw/form-tests"
 import { set } from "lodash"
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 import * as React from "react"
 import render from "../testUtil/render"
 import TextField from  "./text"

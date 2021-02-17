@@ -1,5 +1,5 @@
 import "isomorphic-fetch"
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 MockDate.set(new Date(4, 2, 0))
 
 import { FeathersClient } from "@xpfw/data-feathers"
@@ -20,8 +20,8 @@ test("DbStore Create Test", async () => {
   const appRef = await getRandomApp(s, false, BackendClient.client, true)
   const prefix = "createpref"
   const fields = makeSubFields(NumberAndRequiredTextSchema)
-  fields[NameField.title].setValue("myText")
-  fields[NumberField.title].setValue(420)
+  fields[String(NameField.title)].setValue("myText")
+  fields[String(NumberField.title)].setValue(420)
   expect(toJS(DbStore)).toMatchSnapshot("Before calling create")
   UserStore.user = {id: "myuserid"}
   const opts: any = {
@@ -35,7 +35,7 @@ test("DbStore Create Test", async () => {
   const getResult = await DbStore.getFromServer(get(createdObject, "id"), col)
   expect(toJS(getResult)).toMatchSnapshot("getresult")
   expect(getResult).toEqual(createdObject)
-  expect(getResult).toEqual(DbStore.getCreateState(NumberAndRequiredTextSchema.title))
+  expect(getResult).toEqual(DbStore.getCreateState(String(NumberAndRequiredTextSchema.title)))
 
   NumberAndRequiredTextSchema.collection = "broken"
   const res = await DbStore.create(NumberAndRequiredTextSchema)

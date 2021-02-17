@@ -1,6 +1,6 @@
 import { RouterStore } from '@xpfw/router';
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 import App from "./app"
 declare const document: any
 declare const module: any

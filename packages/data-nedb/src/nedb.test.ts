@@ -1,4 +1,4 @@
-import * as nedb from "nedb"
+import nedb from "nedb"
 import NedbClient from "./nedb"
 NedbClient.instanceCreator = nedb
 const dataToCreate = [

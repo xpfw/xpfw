@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import CardColumn from '../../components/cardColumn';
 import BulmaHero from '../../components/hero';
 import siteGlobals from '../../globals';

@@ -1,4 +1,4 @@
-import * as http from "http"
+import http from "http"
 
 const emptyPort: () => Promise<number> = () => {
   return new Promise((resolve, reject) => {

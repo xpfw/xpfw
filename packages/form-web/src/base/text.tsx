@@ -5,7 +5,7 @@ import {
 import { IFieldOptions } from "@xpfw/form/dist/hooks/field"
 import { get } from "lodash"
 import { observer } from "mobx-react"
-import * as momentA from "moment"
+import momentA from "moment"
 import * as React from "react"
 import SelectComponent from "./select"
 
@@ -69,6 +69,7 @@ const useTextField = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: strin
     } else  {
       type = "datetime-local"
     }
+    console.log("GOT MOMENT", momentA, moment)
     if (value == null) {
       value = moment(get(schema, ".default")).format(getOriginalFormatFromType(format))
     } else {

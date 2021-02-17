@@ -1,6 +1,6 @@
 import { BackendClient } from "@xpfw/data"
 import NedbClient from "@xpfw/data-nedb"
-import * as nedb from "nedb"
+import nedb from "nedb"
 NedbClient.instanceCreator = nedb
 BackendClient.client = NedbClient
 import { registerComponents } from "@xpfw/form-bulma"

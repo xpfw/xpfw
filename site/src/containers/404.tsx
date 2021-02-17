@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import PageContainer from '../components/pageContainer';
 import BulmaHero from '../components/hero';
 import { FaExclamationTriangle } from 'react-icons/fa';

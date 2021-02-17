@@ -1,5 +1,5 @@
 import "isomorphic-fetch"
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 MockDate.set(-2077750800000)
 
 import { dataOptions, DbStore, toJS } from "@xpfw/data"

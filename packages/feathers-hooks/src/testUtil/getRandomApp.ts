@@ -1,8 +1,8 @@
-import * as express from "@feathersjs/express"
-import * as rest from "@feathersjs/express/rest"
+import express from "@feathersjs/express"
+import rest from "@feathersjs/express/rest"
 import feathers from "@feathersjs/feathers"
-import * as memdb from "feathers-memory"
-import * as mongoService from "feathers-mongodb"
+import memdb from "feathers-memory"
+import mongoService from "feathers-mongodb"
 import { MongoClient } from "mongodb"
 
 const memd: any = memdb

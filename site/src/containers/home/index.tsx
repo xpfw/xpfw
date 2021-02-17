@@ -1,7 +1,7 @@
 import { registerComponents } from "@xpfw/form-bulma";
 registerComponents()
 
-import * as React from 'react'
+import React from 'react'
 import PageContainer from '../../components/pageContainer';
 import CoreIntro from "../core/coreIntro";
 

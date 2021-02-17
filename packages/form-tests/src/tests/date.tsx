@@ -1,5 +1,5 @@
 import { FormStore, SharedField } from "@xpfw/form"
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 import * as React from "react"
 import render from "../testUtil/render"
 import { DateField } from "../testUtil/schema"

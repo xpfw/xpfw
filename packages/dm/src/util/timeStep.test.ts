@@ -1,5 +1,5 @@
 
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 MockDate.set(new Date(259542000000))
 
 import * as momentA from "moment"

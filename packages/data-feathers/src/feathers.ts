@@ -1,10 +1,10 @@
 import auth from "@feathersjs/authentication-client"
-import * as feathers from "@feathersjs/feathers"
+import feathers from "@feathersjs/feathers"
 import restClient from "@feathersjs/rest-client"
 import socketio from "@feathersjs/socketio-client"
 import { dataOptions, IUiClient } from "@xpfw/data"
 import { get, isNil } from "lodash"
-import * as sio from "socket.io-client"
+import sio from "socket.io-client"
 
 const f: any = feathers
 const io: any = sio

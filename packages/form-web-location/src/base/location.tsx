@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema, getMapToFromProps, IFieldProps, useField } from "@xpfw/form"
-import * as leaflet from "leaflet"
+import leaflet from "leaflet"
 import { get } from "lodash"
 import { observer } from "mobx-react"
 import * as React from "react"

@@ -2,7 +2,7 @@ import { BackendClient, ListStore } from "@xpfw/data";
 import NedbClient from "@xpfw/data-nedb";
 BackendClient.client = NedbClient
 
-import * as React from 'react'
+import React from 'react'
 import { FaDatabase, FaListAlt, FaPenSquare, FaPlusCircle, FaUndo } from 'react-icons/fa';
 import CardColumn from '../../components/cardColumn';
 import BulmaHero from '../../components/hero';

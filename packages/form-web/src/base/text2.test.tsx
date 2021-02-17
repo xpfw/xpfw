@@ -1,6 +1,6 @@
 import { ComponentRegistry, FormStore, SharedField } from "@xpfw/form"
 import { DateField } from "@xpfw/form-tests"
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 import * as React from "react"
 import render from "../testUtil/render"
 import TextField, { setDate } from  "./text"

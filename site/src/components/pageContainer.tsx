@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Menu from './menu';
 import { FaHeart, FaGithub, FaCode, FaBalanceScale } from "react-icons/fa"
 import siteGlobals from '../globals';

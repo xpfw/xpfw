@@ -1,7 +1,7 @@
 
 import { ComponentRegistry } from "@xpfw/form"
 import { locationTest } from "@xpfw/form-tests"
-import * as MockDate from "mockdate"
+import MockDate from "mockdate"
 import LocationField, {
   handleLatLng, loadResources, valToLatLng
 } from  "./location"

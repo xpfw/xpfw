@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { MdNetworkWifi } from 'react-icons/md';
 
 class Home extends React.Component<any, any> {

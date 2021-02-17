@@ -1,5 +1,5 @@
-import * as path from "path"
-import * as webpack from "webpack"
+import path from "path"
+import webpack from "webpack"
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const nodeModules: any = {}
 // fs.readdirSync(path.resolve(__dirname, "../isofw-node/node_modules"))

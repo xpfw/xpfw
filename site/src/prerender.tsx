@@ -1,5 +1,5 @@
 import App from "./app"
-import * as ReactDomServer from "react-dom/server"
+import ReactDomServer from "react-dom/server"
 import * as React from "react"
 import { writeFileSync } from "fs";
 import { RouterStore } from "@xpfw/router";

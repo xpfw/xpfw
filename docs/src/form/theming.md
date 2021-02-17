@@ -22,7 +22,7 @@ This is the code for the registered component.
 ```typescript
 import { ComponentRegistry, IFieldProps, memo, useFieldWithValidation } from "@xpfw/form"
 import { observer } from "mobx-react"
-import * as React from "react"
+import React from "react"
 
 const GuidedNumbersField: React.FunctionComponent<IFieldProps> = observer((props) => {
   const fieldProps = useFieldWithValidation(props.schema, props.mapTo, props.prefix)
