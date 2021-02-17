@@ -166,7 +166,8 @@ export class ListStore {
     mapTo = getMapTo(schema, mapTo)
     const getAt = prependPrefix(mapTo, prefix)
     let queryObj: any = FormStore.getValue(mapTo, prefix, {})
-    queryObj = toJS(queryObj, {exportMapsAsObjects: false, detectCycles: true, recurseEverything: true})
+    queryObj = toJS(queryObj)
+    queryObj = {...queryObj}
     const currentPage = this.getCurrentPage(getAt)
     if (!noDynamicNums && isNil(queryObj.$limit)) {
         queryObj.$limit = this.pageSize

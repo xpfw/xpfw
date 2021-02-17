@@ -1,6 +1,6 @@
 import { executeForMethods, ModifyFunction } from "@xpfw/form"
 import { get,isString, set } from "lodash"
-import * as momentA from "moment"
+import momentA from "moment"
 const moment: any = momentA
 
 const ensureDate = (path: string, methods?: string[]) => {

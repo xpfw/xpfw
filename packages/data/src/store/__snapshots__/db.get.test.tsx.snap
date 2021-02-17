@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DbStore Patch Test: after patch 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
       "guestName": "gettext",
@@ -44,7 +44,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore after create 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
       "guestName": "gettext",
@@ -73,7 +73,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore after create get 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
       "guestName": "gettext",
@@ -102,7 +102,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore after nothingtoget 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {},
   "currentlyEditing": Object {},
   "fetching": Object {},
@@ -119,7 +119,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore after patch 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
       "guestName": "gettext",
@@ -154,7 +154,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore after patch get 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
       "guestName": "gettext",
@@ -189,7 +189,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore after wrongcol 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {},
   "currentlyEditing": Object {},
   "fetching": Object {},
@@ -206,7 +206,7 @@ Object {
 `;
 
 exports[`DbStore Patch Test: dbstore at start 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {},
   "currentlyEditing": Object {},
   "fetching": Object {},
@@ -220,16 +220,7 @@ Object {
 
 exports[`DbStore Patch Test: errorstore after wrongcol 1`] = `
 Object {
-  "0": NotFound {
-    "className": "not-found",
-    "code": 404,
-    "constructor": [Function],
-    "data": undefined,
-    "errors": Object {},
-    "message": "No record found for id '0'",
-    "name": "NotFound",
-    "type": "FeathersError",
-  },
+  "0": [NotFound: No record found for id '0'],
 }
 `;
 

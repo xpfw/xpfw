@@ -1,5 +1,5 @@
 import { isNil } from "lodash"
-import * as moment from "moment"
+import moment from "moment"
 const momentA: any = moment
 const timeStepMaker = (min: any, max: any, diffUnit: string, endOfUnit: string, format: string) => {
   let amountOfDays

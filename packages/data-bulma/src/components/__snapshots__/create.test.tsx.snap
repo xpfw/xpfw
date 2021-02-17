@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DbStore Create Test: Before reset on mount 1`] = `
-Object {
+FormStoreClass {
   "errors": Object {
     "formModel": Object {
       "errors": Array [
@@ -24,7 +24,7 @@ Object {
 `;
 
 exports[`DbStore Create Test: Before reset on mount 2`] = `
-Object {
+FormStoreClass {
   "errors": Object {
     "createpref": Object {
       "formModel": Object {
@@ -240,7 +240,7 @@ exports[`DbStore Create Test: after purposely set invalid err 1`] = `
 `;
 
 exports[`DbStore Create Test: after reset on mount 1`] = `
-Object {
+FormStoreClass {
   "errors": Object {
     "formModel": Object {
       "errors": Array [
@@ -263,7 +263,7 @@ Object {
 `;
 
 exports[`DbStore Create Test: after reset on mount 2`] = `
-Object {
+FormStoreClass {
   "errors": Object {
     "createpref": Object {
       "formModel": Object {

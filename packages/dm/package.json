@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/dm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist",
   "license": "MIT",
   "scripts": {
@@ -24,12 +24,12 @@
     "@types/jest": "^26.0.20",
     "@types/lodash": "^4.14.168",
     "@types/mockdate": "^2.0.0",
-    "@xpfw/form": "1.0.0",
+    "@xpfw/form": "1.0.1",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.20",
     "mockdate": "^3.0.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.1",
     "rollup": "^2.39.0",
     "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-uglify": "^6.0.4",

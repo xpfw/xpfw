@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`User Store Test: after login 1`] = `
-Object {
+UserStore {
   "authErr": null,
   "connected": false,
   "loading": false,
@@ -24,7 +24,7 @@ Object {
 `;
 
 exports[`User Store Test: after logout 1`] = `
-Object {
+UserStore {
   "authErr": null,
   "connected": false,
   "loading": false,
@@ -34,7 +34,7 @@ Object {
 `;
 
 exports[`User Store Test: after logout 2`] = `
-Object {
+UserStore {
   "authErr": null,
   "connected": false,
   "loading": false,
@@ -44,7 +44,7 @@ Object {
 `;
 
 exports[`User Store Test: after register 1`] = `
-Object {
+UserStore {
   "authErr": null,
   "connected": false,
   "loading": false,
@@ -57,7 +57,7 @@ Object {
 `;
 
 exports[`User Store Test: after register err 1`] = `
-Object {
+UserStore {
   "authErr": "TypeError: Cannot read property 'service' of null",
   "connected": false,
   "loading": false,
@@ -76,7 +76,7 @@ Object {
 `;
 
 exports[`User Store Test: after relogin 1`] = `
-Object {
+UserStore {
   "authErr": null,
   "connected": false,
   "loading": false,
@@ -99,7 +99,7 @@ Object {
 `;
 
 exports[`User Store Test: before register 1`] = `
-Object {
+UserStore {
   "authErr": null,
   "connected": false,
   "loading": false,

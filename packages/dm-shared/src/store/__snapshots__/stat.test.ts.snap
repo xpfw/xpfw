@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`makeStat test: Before anything 1`] = `
-Object {
+StatStore {
   "previousQuery": Object {},
   "statCollection": "stats",
   "stats": Object {},
@@ -9,7 +9,7 @@ Object {
 `;
 
 exports[`makeStat test: after add summ 1`] = `
-Object {
+StatStore {
   "previousQuery": Object {},
   "statCollection": "stats",
   "stats": Object {
@@ -20,7 +20,7 @@ Object {
 `;
 
 exports[`makeStat test: after reset 1`] = `
-Object {
+StatStore {
   "previousQuery": Object {},
   "statCollection": "stats",
   "stats": Object {},
@@ -28,7 +28,7 @@ Object {
 `;
 
 exports[`makeStat test: after server add summ 1`] = `
-Object {
+StatStore {
   "previousQuery": Object {},
   "statCollection": "stats",
   "stats": Object {
@@ -39,7 +39,7 @@ Object {
 `;
 
 exports[`makeStat test: after server simple sum 1`] = `
-Object {
+StatStore {
   "previousQuery": Object {},
   "statCollection": "stats",
   "stats": Object {
@@ -49,7 +49,7 @@ Object {
 `;
 
 exports[`makeStat test: after simple sum 1`] = `
-Object {
+StatStore {
   "previousQuery": Object {},
   "statCollection": "stats",
   "stats": Object {

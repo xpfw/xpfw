@@ -12,8 +12,8 @@ export default {
   ],
   external: [
     "ajv",
+    "ajv-formats",
     "lodash",
-    "lodash-es",
     "mobx",
     "react",
     "react-dom",

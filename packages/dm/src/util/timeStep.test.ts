@@ -2,7 +2,7 @@
 import MockDate from "mockdate"
 MockDate.set(new Date(259542000000))
 
-import * as momentA from "moment"
+import momentA from "moment"
 import {StatType} from "../globals"
 import iterateEachInFind from "../iterateEachInFind"
 import iterateMockDateDataInFind from "../testUtil/iterateMockDateDataInFind"

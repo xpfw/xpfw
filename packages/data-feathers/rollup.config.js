@@ -13,8 +13,8 @@ export default {
   external: [
     "isomorphic-fetch",
     "ajv",
+    "ajv-formats",
     "lodash",
-    "lodash-es",
     "mobx",
     "react",
     "react-dom",

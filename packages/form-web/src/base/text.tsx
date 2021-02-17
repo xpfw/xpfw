@@ -69,7 +69,6 @@ const useTextField = (schema: ExtendedJSONSchema, mapTo?: string, prefix?: strin
     } else  {
       type = "datetime-local"
     }
-    console.log("GOT MOMENT", momentA, moment)
     if (value == null) {
       value = moment(get(schema, ".default")).format(getOriginalFormatFromType(format))
     } else {

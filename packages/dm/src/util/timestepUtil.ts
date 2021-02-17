@@ -1,5 +1,5 @@
 import { get, isDate, isFunction, isNil } from "lodash"
-import * as moment from "moment"
+import moment from "moment"
 
 const momentA: any = moment
 

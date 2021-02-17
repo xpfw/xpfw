@@ -1,5 +1,5 @@
 import { ExtendedJSONSchema } from "@xpfw/form"
-import * as momentA from "moment"
+import momentA from "moment"
 const moment: any = momentA
 
 const TimeBeginField: ExtendedJSONSchema = {

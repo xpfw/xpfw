@@ -1,4 +1,4 @@
-import * as moment from "moment"
+import moment from "moment"
 
 const iterateMockDataInFind = (c: string, q: any) => {
   const data1: any = []

@@ -1,5 +1,5 @@
 import { get, isString } from "lodash"
-import * as momentA from "moment"
+import momentA from "moment"
 const moment: any = momentA
 
 const getDate = (value: any, path: string, defaultVal?: any) => {

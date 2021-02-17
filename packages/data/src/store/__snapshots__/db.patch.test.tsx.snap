@@ -10,7 +10,7 @@ Object {
 
 exports[`DbStore Patch Test: error store after broken patch 1`] = `
 Object {
-  "formModel0": Object {},
+  "formModel0": [Error: errors is not defined],
 }
 `;
 

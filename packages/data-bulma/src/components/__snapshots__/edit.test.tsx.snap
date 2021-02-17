@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DbStore Edit Test: After create and geteditorig 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
       "guestName": "myText",
@@ -40,12 +40,12 @@ Object {
 `;
 
 exports[`DbStore Edit Test: Before submit patch 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
   "currentlyEditing": Object {
@@ -56,9 +56,9 @@ Object {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "guestName": "myText",
+        "guestName": "changed",
         "id": 0,
-        "myVal": 420,
+        "myVal": 240,
       },
     },
     "users": Object {
@@ -79,7 +79,7 @@ Object {
 `;
 
 exports[`DbStore Edit Test: Before submit patch 2`] = `
-Object {
+FormStoreClass {
   "errors": Object {},
   "formData": Object {
     "authForm": undefined,
@@ -151,7 +151,7 @@ exports[`DbStore Edit Test: after create 1`] = `
 `;
 
 exports[`DbStore Edit Test: after edit getorig 1`] = `
-Object {
+FormStoreClass {
   "errors": Object {},
   "formData": Object {
     "authForm": undefined,
@@ -229,12 +229,12 @@ exports[`DbStore Edit Test: after purposely set invalid err 1`] = `
 `;
 
 exports[`DbStore Edit Test: after submitted patch 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "formModel": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
   "currentlyEditing": Object {
@@ -334,7 +334,7 @@ exports[`DbStore Edit Test: after successfull save 1`] = `
 `;
 
 exports[`DbStore Edit Test: before set by getorig 1`] = `
-Object {
+FormStoreClass {
   "errors": Object {},
   "formData": Object {
     "authForm": undefined,
@@ -530,7 +530,7 @@ exports[`DbStore Edit Test: not hidden in update 1`] = `
 `;
 
 exports[`DbStore Edit Test: prefix After create and geteditorig 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "editPrefix": Object {
       "guestName": "secondOBJ",
@@ -538,9 +538,9 @@ Object {
       "myVal": 24,
     },
     "formModel": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
   "currentlyEditing": Object {
@@ -582,7 +582,7 @@ Object {
 `;
 
 exports[`DbStore Edit Test: prefix Before submit patch 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "editPrefix": Object {
       "guestName": "secondOBJ",
@@ -590,9 +590,9 @@ Object {
       "myVal": 24,
     },
     "formModel": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
   "currentlyEditing": Object {
@@ -689,7 +689,7 @@ exports[`DbStore Edit Test: prefix after create 1`] = `
 `;
 
 exports[`DbStore Edit Test: prefix after edit getorig 1`] = `
-Object {
+FormStoreClass {
   "errors": Object {
     "0": undefined,
     "formModel0": Object {
@@ -782,7 +782,7 @@ exports[`DbStore Edit Test: prefix after purposely set invalid err 1`] = `
 `;
 
 exports[`DbStore Edit Test: prefix after submitted patch 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {
     "editPrefix": Object {
       "guestName": "secondOBJ",
@@ -790,9 +790,9 @@ Object {
       "myVal": 24,
     },
     "formModel": Object {
-      "guestName": "myText",
+      "guestName": "changed",
       "id": 0,
-      "myVal": 420,
+      "myVal": 240,
     },
   },
   "currentlyEditing": Object {
@@ -904,7 +904,7 @@ exports[`DbStore Edit Test: prefix after successfull save 1`] = `
 `;
 
 exports[`DbStore Edit Test: prefix before set by getorig 1`] = `
-Object {
+FormStoreClass {
   "errors": Object {
     "0": undefined,
     "formModel0": Object {

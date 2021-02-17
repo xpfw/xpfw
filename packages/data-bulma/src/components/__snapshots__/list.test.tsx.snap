@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DbStore Create Test: after list get 1`] = `
-Object {
+ListStore {
   "currentPage": Object {},
   "dirtyCollections": Object {
     "simpleTestCol": false,
@@ -149,7 +149,7 @@ exports[`DbStore Create Test: after login 1`] = `
 `;
 
 exports[`DbStore Create Test: after second page get 1`] = `
-Object {
+ListStore {
   "currentPage": Object {
     "formModel": 1,
   },
@@ -231,7 +231,7 @@ Object {
 `;
 
 exports[`DbStore Create Test: after third page get 1`] = `
-Object {
+ListStore {
   "currentPage": Object {
     "formModel": 2,
   },
@@ -1994,7 +1994,7 @@ exports[`DbStore Create Test: list on fourth page 1`] = `
 `;
 
 exports[`DbStore Create Test: prefix after list get 1`] = `
-Object {
+ListStore {
   "currentPage": Object {
     "formModel": 2,
   },

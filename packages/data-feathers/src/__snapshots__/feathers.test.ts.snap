@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`realtime Test: after realtime events arrived 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {},
   "currentlyEditing": Object {},
   "fetching": Object {},
@@ -38,7 +38,7 @@ Object {
 `;
 
 exports[`realtime Test: after realtime remove arrived 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {},
   "currentlyEditing": Object {},
   "fetching": Object {},
@@ -72,7 +72,7 @@ Object {
 `;
 
 exports[`realtime Test: before realtime events arrived 1`] = `
-Object {
+DbStoreClass {
   "createState": Object {},
   "currentlyEditing": Object {},
   "fetching": Object {},

@@ -1,7 +1,7 @@
 import { StatType } from "@xpfw/dm"
 import { executeForMethods, ExtendedJSONSchema } from "@xpfw/form"
 import { isString } from "lodash"
-import * as momentA from "moment"
+import momentA from "moment"
 import { changeValToRegex } from "./components/ui/regex"
 const moment: any = momentA
 

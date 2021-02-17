@@ -4,61 +4,68 @@ exports[`Relationship Test: after autoselectable search with option enabled and 
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text 2"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text 2"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -69,7 +76,8 @@ exports[`Relationship Test: after autoselectable search with option enabled and 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -200,61 +208,68 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -265,7 +280,8 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -396,7 +412,8 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -527,7 +544,8 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -658,7 +676,8 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -789,7 +808,8 @@ exports[`Relationship Test: after autoselectable search with option enabled but 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -920,61 +940,68 @@ exports[`Relationship Test: after autoselectable search without option enabled 1
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text 2"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text 2"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -985,7 +1012,8 @@ exports[`Relationship Test: after autoselectable search without option enabled 1
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1116,61 +1144,68 @@ exports[`Relationship Test: after reset 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -1181,7 +1216,8 @@ exports[`Relationship Test: after reset 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1312,61 +1348,68 @@ exports[`Relationship Test: after reset 2`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -1377,7 +1420,8 @@ exports[`Relationship Test: after reset 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1508,7 +1552,8 @@ exports[`Relationship Test: after reset 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1639,7 +1684,8 @@ exports[`Relationship Test: after reset 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1770,7 +1816,8 @@ exports[`Relationship Test: after reset 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1901,7 +1948,8 @@ exports[`Relationship Test: after reset 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2032,61 +2080,68 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.customPre.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.customPre.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -2097,7 +2152,8 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2228,7 +2284,8 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2359,7 +2416,8 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2490,7 +2548,8 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2621,7 +2680,8 @@ exports[`Relationship Test: customPresearch for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2752,61 +2812,68 @@ exports[`Relationship Test: customPresearch for Text with number query set to 42
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.customPre.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.customPre.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -2817,7 +2884,8 @@ exports[`Relationship Test: customPresearch for Text with number query set to 42
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -2948,61 +3016,68 @@ exports[`Relationship Test: customPresearch for my 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.customPre.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.customPre.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="my"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="my"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -3013,7 +3088,8 @@ exports[`Relationship Test: customPresearch for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -3144,7 +3220,8 @@ exports[`Relationship Test: customPresearch for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -3275,7 +3352,8 @@ exports[`Relationship Test: customPresearch for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -3406,7 +3484,8 @@ exports[`Relationship Test: customPresearch for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -3537,7 +3616,8 @@ exports[`Relationship Test: customPresearch for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -3668,61 +3748,68 @@ exports[`Relationship Test: customPresearch for null 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.customPre.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.customPre.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="null"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="null"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -3742,7 +3829,8 @@ exports[`Relationship Test: multi added and loaded 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -3873,7 +3961,8 @@ exports[`Relationship Test: multi added and loaded 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4004,7 +4093,8 @@ exports[`Relationship Test: multi added and loaded 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4144,7 +4234,8 @@ exports[`Relationship Test: multi added but not yet loaded 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4275,7 +4366,8 @@ exports[`Relationship Test: multi added but not yet loaded 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4406,7 +4498,8 @@ exports[`Relationship Test: multi added but not yet loaded 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4537,61 +4630,68 @@ exports[`Relationship Test: multi after autoselectable search with option enable
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -4602,7 +4702,8 @@ exports[`Relationship Test: multi after autoselectable search with option enable
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4733,7 +4834,8 @@ exports[`Relationship Test: multi after autoselectable search with option enable
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4864,7 +4966,8 @@ exports[`Relationship Test: multi after autoselectable search with option enable
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -4995,7 +5098,8 @@ exports[`Relationship Test: multi after autoselectable search with option enable
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5126,7 +5230,8 @@ exports[`Relationship Test: multi after autoselectable search with option enable
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5257,61 +5362,68 @@ exports[`Relationship Test: multi after autoselectable search without option ena
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text 2"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text 2"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -5322,7 +5434,8 @@ exports[`Relationship Test: multi after autoselectable search without option ena
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5462,7 +5575,8 @@ exports[`Relationship Test: multi load with none missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5593,7 +5707,8 @@ exports[`Relationship Test: multi load with none missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5724,7 +5839,8 @@ exports[`Relationship Test: multi load with none missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5855,7 +5971,8 @@ exports[`Relationship Test: multi load with none missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -5995,7 +6112,8 @@ exports[`Relationship Test: multi load with one missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6126,7 +6244,8 @@ exports[`Relationship Test: multi load with one missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6257,7 +6376,8 @@ exports[`Relationship Test: multi load with one missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6388,7 +6508,8 @@ exports[`Relationship Test: multi load with one missing 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6528,7 +6649,8 @@ exports[`Relationship Test: multi removed one 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6659,7 +6781,8 @@ exports[`Relationship Test: multi removed one 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6790,7 +6913,8 @@ exports[`Relationship Test: multi removed one 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -6930,7 +7054,8 @@ exports[`Relationship Test: multi removed two 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7061,7 +7186,8 @@ exports[`Relationship Test: multi removed two 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7192,61 +7318,68 @@ exports[`Relationship Test: multiafter autoselectable search with option enabled
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text 3"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text 3"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -7257,61 +7390,68 @@ exports[`Relationship Test: multiafter autoselectable search with option enabled
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text 5"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text 5"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -7322,60 +7462,67 @@ exports[`Relationship Test: nothing set yet 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.undefined.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.undefined.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -7386,60 +7533,67 @@ exports[`Relationship Test: nothing yet 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -7450,60 +7604,67 @@ exports[`Relationship Test: nothing yet 2`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -7523,7 +7684,8 @@ exports[`Relationship Test: nothing yet 3`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7654,7 +7816,8 @@ exports[`Relationship Test: nothing yet 3`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7785,7 +7948,8 @@ exports[`Relationship Test: nothing yet 3`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -7916,60 +8080,67 @@ exports[`Relationship Test: nothing yet 4`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.customPre.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.customPre.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -7980,61 +8151,68 @@ exports[`Relationship Test: search for Text 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -8045,7 +8223,8 @@ exports[`Relationship Test: search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8176,7 +8355,8 @@ exports[`Relationship Test: search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8307,7 +8487,8 @@ exports[`Relationship Test: search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8438,7 +8619,8 @@ exports[`Relationship Test: search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8569,7 +8751,8 @@ exports[`Relationship Test: search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8709,7 +8892,8 @@ exports[`Relationship Test: search for Text 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8840,7 +9024,8 @@ exports[`Relationship Test: search for Text 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -8971,7 +9156,8 @@ exports[`Relationship Test: search for Text 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9102,61 +9288,68 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -9167,7 +9360,8 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9298,7 +9492,8 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9429,7 +9624,8 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9560,7 +9756,8 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9691,7 +9888,8 @@ exports[`Relationship Test: search for Text but displaymode for items 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9831,7 +10029,8 @@ exports[`Relationship Test: search for Text with number query set to 426 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -9962,7 +10161,8 @@ exports[`Relationship Test: search for Text with number query set to 426 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10093,7 +10293,8 @@ exports[`Relationship Test: search for Text with number query set to 426 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10224,61 +10425,68 @@ exports[`Relationship Test: search for my 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="my"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="my"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -10289,7 +10497,8 @@ exports[`Relationship Test: search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10420,7 +10629,8 @@ exports[`Relationship Test: search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10551,7 +10761,8 @@ exports[`Relationship Test: search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10682,7 +10893,8 @@ exports[`Relationship Test: search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10813,7 +11025,8 @@ exports[`Relationship Test: search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -10953,7 +11166,8 @@ exports[`Relationship Test: search for my 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -11084,7 +11298,8 @@ exports[`Relationship Test: search for my 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -11215,7 +11430,8 @@ exports[`Relationship Test: search for my 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -11346,61 +11562,68 @@ exports[`Relationship Test: search for null 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedByMulti"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedByMulti"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="null"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="null"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
@@ -11420,7 +11643,8 @@ exports[`Relationship Test: search for null 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -11551,7 +11775,8 @@ exports[`Relationship Test: search for null 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -11682,7 +11907,8 @@ exports[`Relationship Test: search for null 2`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -11821,7 +12047,8 @@ exports[`Relationship Test: set to first creation loaded 1`] = `
   >
     <View
       accessible={true}
-      isTVSelectable={true}
+      focusable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -11959,7 +12186,8 @@ exports[`Relationship Test: set to first creation not loaded yet 1`] = `
   >
     <View
       accessible={true}
-      isTVSelectable={true}
+      focusable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -12097,7 +12325,8 @@ exports[`Relationship Test: set to invalid value 1`] = `
   >
     <View
       accessible={true}
-      isTVSelectable={true}
+      focusable={true}
+      onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -12227,61 +12456,68 @@ exports[`Relationship Test: single search for Text 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -12292,7 +12528,8 @@ exports[`Relationship Test: single search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -12423,7 +12660,8 @@ exports[`Relationship Test: single search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -12554,7 +12792,8 @@ exports[`Relationship Test: single search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -12685,7 +12924,8 @@ exports[`Relationship Test: single search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -12816,7 +13056,8 @@ exports[`Relationship Test: single search for Text 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -12947,61 +13188,68 @@ exports[`Relationship Test: single search for Text with number query set to 426 
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="Text"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="Text"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -13012,7 +13260,8 @@ exports[`Relationship Test: single search for Text with number query set to 426 
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -13143,61 +13392,68 @@ exports[`Relationship Test: single search for my 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="my"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="my"
+        />
       </View>
-      <View />
     </View>
     <View
       style={
@@ -13208,7 +13464,8 @@ exports[`Relationship Test: single search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -13339,7 +13596,8 @@ exports[`Relationship Test: single search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -13470,7 +13728,8 @@ exports[`Relationship Test: single search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -13601,7 +13860,8 @@ exports[`Relationship Test: single search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -13732,7 +13992,8 @@ exports[`Relationship Test: single search for my 1`] = `
     >
       <View
         accessible={true}
-        isTVSelectable={true}
+        focusable={true}
+        onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -13863,61 +14124,68 @@ exports[`Relationship Test: single search for null 1`] = `
 <View>
   <Text />
   <View>
-    <View>
-      <Text />
-      <View
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "paddingHorizontal": 10,
-            "width": "100%",
+            "color": "#86939e",
+            "fontSize": 16,
+            "fontWeight": "bold",
           }
         }
       >
-        <View
-          style={
+        guestName
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "#86939e",
+            "flexDirection": "row",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          prefix="search.ownedBy.searchFor.ownedBy"
+          rejectResponderTermination={true}
+          schema={
             Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#86939e",
-              "flexDirection": "row",
-              "transform": Array [
-                Object {
-                  "translateX": 0,
-                },
-              ],
+              "title": "guestName",
+              "type": "string",
             }
           }
-        >
-          <TextInput
-            allowFontScaling={true}
-            editable={true}
-            keyboardType="default"
-            onChangeText={[Function]}
-            prefix="search.ownedBy.searchFor.ownedBy"
-            rejectResponderTermination={true}
-            schema={
-              Object {
-                "title": "guestName",
-                "type": "string",
-              }
+          secureTextEntry={false}
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "black",
+              "flex": 1,
+              "fontSize": 18,
+              "minHeight": 40,
             }
-            secureTextEntry={false}
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "black",
-                "flex": 1,
-                "fontSize": 18,
-                "minHeight": 40,
-              }
-            }
-            testID="RNE__Input__text-input"
-            underlineColorAndroid="transparent"
-            value="null"
-          />
-        </View>
+          }
+          testID="RNE__Input__text-input"
+          underlineColorAndroid="transparent"
+          value="null"
+        />
       </View>
-      <View />
     </View>
   </View>
   <View />
