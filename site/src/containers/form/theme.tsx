@@ -1,9 +1,11 @@
 import { ComponentRegistry, IFieldProps, memo, useFieldWithValidation, getLabelFromProps } from "@xpfw/form"
+import { toJS } from "mobx"
 import { observer } from "mobx-react"
 import * as React from "react"
 
 const GuidedNumbersField: React.FunctionComponent<IFieldProps> = observer((props) => {
   const fieldProps = useFieldWithValidation(props.schema, props.mapTo, props.prefix)
+  console.log("IN RENDER WITH FIELD", toJS(fieldProps))
   const memoVals = [props.mapTo, props.prefix, JSON.stringify(props.schema)]
   const randomize = memo(() => () => fieldProps.setValue(Math.round(Math.random() * 100)), memoVals)
   React.useEffect(randomize, memoVals)

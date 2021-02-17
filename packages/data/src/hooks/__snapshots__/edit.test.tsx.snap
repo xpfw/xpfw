@@ -43,9 +43,9 @@ exports[`DbStore Edit Test: Before submit patch 1`] = `
 DbStoreClass {
   "createState": Object {
     "formModel": Object {
-      "guestName": "changed",
+      "guestName": "myText",
       "id": 0,
-      "myVal": 240,
+      "myVal": 420,
     },
   },
   "currentlyEditing": Object {
@@ -56,9 +56,9 @@ DbStoreClass {
   "getState": Object {
     "simpleTestCol": Object {
       "0": Object {
-        "guestName": "changed",
+        "guestName": "myText",
         "id": 0,
-        "myVal": 240,
+        "myVal": 420,
       },
     },
     "users": Object {
@@ -157,9 +157,9 @@ exports[`DbStore Edit Test: after submitted patch 1`] = `
 DbStoreClass {
   "createState": Object {
     "formModel": Object {
-      "guestName": "changed",
+      "guestName": "myText",
       "id": 0,
-      "myVal": 240,
+      "myVal": 420,
     },
   },
   "currentlyEditing": Object {
@@ -309,9 +309,9 @@ DbStoreClass {
       "myVal": 24,
     },
     "formModel": Object {
-      "guestName": "changed",
+      "guestName": "myText",
       "id": 0,
-      "myVal": 240,
+      "myVal": 420,
     },
   },
   "currentlyEditing": Object {
@@ -361,9 +361,9 @@ DbStoreClass {
       "myVal": 24,
     },
     "formModel": Object {
-      "guestName": "changed",
+      "guestName": "myText",
       "id": 0,
-      "myVal": 240,
+      "myVal": 420,
     },
   },
   "currentlyEditing": Object {
@@ -486,9 +486,9 @@ DbStoreClass {
       "myVal": 24,
     },
     "formModel": Object {
-      "guestName": "changed",
+      "guestName": "myText",
       "id": 0,
-      "myVal": 240,
+      "myVal": 420,
     },
   },
   "currentlyEditing": Object {

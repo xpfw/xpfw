@@ -2,7 +2,7 @@ import App from "./app"
 import ReactDomServer from "react-dom/server"
 import * as React from "react"
 import { writeFileSync } from "fs";
-import { RouterStore } from "@xpfw/router";
+import RouterStore from "./components/router";
 
 const routes = [
     {name: "index"},

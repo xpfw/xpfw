@@ -32,7 +32,7 @@
     "@types/react": "^17.0.2",
     "@types/react-native": "^0.63.49",
     "@types/react-test-renderer": "^17.0.1",
-    "@xpfw/form": "1.0.1",
+    "@xpfw/form": "1.0.2",
     "@xpfw/form-tests": "1.0.1",
     "@xpfw/test-nativerender": "^0.1.1",
     "awesome-typescript-loader": "^5.2.1",

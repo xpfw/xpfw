@@ -1,4 +1,7 @@
-import { RouterStore } from '@xpfw/router';
+import process from "process"
+global.process = process
+
+import RouterStore  from './components/router';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from "./app"
@@ -22,6 +25,7 @@ if (document !== "undefined") {
     // Render!
     render(<App />)
     window.onpopstate = () => {
+      console.log("IN POP")
       RouterStore.back()
     }
    })

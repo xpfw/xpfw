@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "experimentalDecorators": true,
+    "useDefineForClassFields": true,
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noImplicitThis": true,

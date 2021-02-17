@@ -2,7 +2,7 @@ import { BackendClient } from "@xpfw/data"
 import { IStatConfig, makeStat } from "@xpfw/dm"
 import { prependPrefix } from "@xpfw/form"
 import { get, isEqual, isNil, set } from "lodash"
-import { observable } from "mobx"
+import { observable, makeObservable } from "mobx"
 
 export interface IUseStatOptions {
   /**
@@ -43,6 +43,10 @@ export class StatStore {
       this.fetchStat(collection, config, query, useServer, prefix, options)
     }
     return value
+  }
+
+  public constructor() {
+    makeObservable(this)
   }
 }
 

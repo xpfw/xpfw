@@ -1,7 +1,7 @@
-import path from "path"
-import webpack from "webpack"
+const path = require("path")
+const webpack = require("webpack")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const nodeModules: any = {}
+const nodeModules = {}
 // fs.readdirSync(path.resolve(__dirname, "../isofw-node/node_modules"))
 // .filter((x) => {
 //   return ".bin".indexOf(x) === -1
@@ -10,8 +10,8 @@ const nodeModules: any = {}
 //   nodeModules[mod] = "commonjs " + mod
 // })
 
-const webpackServerConfig: webpack.Configuration = {
-  target: "node" as "node",
+const webpackServerConfig = {
+  target: "node",
   mode: "development",
   externals: [nodeModules],
   entry: "./src/prerender.tsx",
@@ -21,7 +21,7 @@ const webpackServerConfig: webpack.Configuration = {
     path: path.resolve("webpackDist")
   },
   plugins: [
-    new MiniCssExtractPlugin("style.css")
+    new MiniCssExtractPlugin({filename: "style.css"})
   ],
   module: {
     rules: [
@@ -60,6 +60,6 @@ const webpackServerConfig: webpack.Configuration = {
   }
 }
 
-export default webpackServerConfig
+module.exports = webpackServerConfig
 
 

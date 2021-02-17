@@ -1,6 +1,6 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix, useModifier } from "@xpfw/form"
 import { get, isEqual, isNil, isNumber } from "lodash"
-import { action, flow, observable, toJS } from "mobx"
+import { action, flow, observable, toJS, makeObservable } from "mobx"
 import BackendClient from "../client"
 
 export class ListStore {
@@ -179,6 +179,9 @@ export class ListStore {
     return queryObj
   }
 
+  public constructor() {
+    makeObservable(this)
+  }
 }
 
 export default new ListStore()

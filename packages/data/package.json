@@ -1,6 +1,6 @@
 {
   "name": "@xpfw/data",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "@types/socket.io-client": "^1.4.35",
     "@xpfw/data-feathers": "1.0.1",
     "@xpfw/data-tests": "1.0.1",
-    "@xpfw/form": "1.0.1",
+    "@xpfw/form": "1.0.2",
     "@xpfw/form-tests": "1.0.1",
     "@xpfw/test-util": "1.0.1",
     "ajv": "^7.1.1",

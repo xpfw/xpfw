@@ -1,6 +1,6 @@
 import { ExtendedJSONSchema, FormStore, getMapTo, prependPrefix, useModifier } from "@xpfw/form"
 import { get } from "lodash"
-import { action, flow, observable } from "mobx"
+import { action, flow, observable, makeObservable } from "mobx"
 import BackendClient from "../client"
 import dataOptions from "../options"
 import ListStore from "../store/list"
@@ -243,6 +243,9 @@ export class DbStoreClass {
     }
   }
 
+  public constructor() {
+    makeObservable(this)
+  }
 }
 const DbStore = new DbStoreClass()
 export default DbStore

@@ -1,5 +1,5 @@
 import { get, set } from "lodash"
-import { action, observable } from "mobx"
+import { action, observable, makeObservable } from "mobx"
 import { prependPrefix } from "../util/prefixMaker"
 
 /**
@@ -98,6 +98,10 @@ export class FormStoreClass {
   @action
   public setLoading(valuePath: string, value: boolean, prefix?: string) {
     set(this.loading, prependPrefix(valuePath, prefix), value)
+  }
+
+  public constructor() {
+    makeObservable(this)
   }
 }
 

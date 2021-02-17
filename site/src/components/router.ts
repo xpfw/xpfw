@@ -1,4 +1,4 @@
-import { observable, makeObservable, action } from "mobx"
+import { observable, action, makeObservable } from "mobx"
 export interface IRoute {
   path: string
   component: React.ElementType<any>
@@ -8,15 +8,14 @@ export interface IRouteState {
   params?: any
 }
 
-export class RouterStore {
+export class RouterStoreClass {
   @observable
-  private navStack: any[] = [
+  navStack: any[] = [
     {path: "/", params: {}}
   ]
   @observable
-  private currentIndex = 0
-  @observable
-  private routes: IRoute[] = []
+  currentIndex = 0
+  routes: IRoute[] = []
 
   public registerRoute(path: string, component: any) {
     this.routes.push({path, component})
@@ -50,13 +49,15 @@ export class RouterStore {
 
   @action
   public visit(newRoute: IRouteState) {
+    console.log("PUSIHG TO NAVSTACK")
     this.navStack.push(newRoute)
     this.currentIndex++
+    console.log("DONE NOW IS ", this.getCurrentRoute().path)
   }
 
   public constructor() {
     makeObservable(this)
   }
 }
-
-export default new RouterStore()
+const StoreToExport = new RouterStoreClass()
+export default StoreToExport

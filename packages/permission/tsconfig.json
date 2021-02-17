@@ -11,6 +11,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "useDefineForClassFields": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,

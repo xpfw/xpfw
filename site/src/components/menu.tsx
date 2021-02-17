@@ -1,4 +1,4 @@
-import { RouterStore } from "@xpfw/router"
+import RouterStore from "./router"
 import * as React from "react"
 import { FaBook, FaChartLine, FaCloud, FaCogs, FaDatabase, FaHome, FaWpforms } from "react-icons/fa"
 import linkClickHandler from "./linkHandler"

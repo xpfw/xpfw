@@ -1,12 +1,13 @@
 {
   "name": "@xpfw/router",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "dist",
   "typings": "dist",
   "license": "MIT",
-  "dependencies": {
-    "mobx": "^6.1.6",
-    "mobx-react": "^7.1.0"
+  "peerDependencies": {
+    "mobx": "^6.x.x",
+    "mobx-react": "^7.x.x",
+    "react": "^17.x.x"
   },
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
@@ -27,6 +28,8 @@
     "rollup": "^2.39.0",
     "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-uglify": "^6.0.4",
+    "mobx": "^6.1.6",
+    "mobx-react": "^7.1.0",
     "ts-jest": "=26.5.1",
     "tslib": "^2.1.0",
     "typescript": "^4.1.5",

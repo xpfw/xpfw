@@ -1,7 +1,7 @@
-import path from "path"
-import webpack from "webpack"
+const path = require("path")
+const webpack = require("webpack")
 
-const webpackConfig: webpack.Configuration = {
+const webpackConfig = {
   entry: `./src/index.tsx`,
   mode: "development",
   output: {
@@ -47,6 +47,7 @@ const webpackConfig: webpack.Configuration = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
+    fallback: {path: require.resolve("path-browserify"), util: require.resolve("util/"), process: require.resolve("process")},
     alias: {
       "@xpfw/router": path.resolve(__dirname, `./node_modules/@xpfw/router`),
       "@xpfw/validate": path.resolve(__dirname, `./node_modules/@xpfw/validate`),
@@ -56,4 +57,4 @@ const webpackConfig: webpack.Configuration = {
   }
 }
 
-export default webpackConfig
+module.exports = webpackConfig

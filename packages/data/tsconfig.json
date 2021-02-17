@@ -11,6 +11,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "useDefineForClassFields": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
