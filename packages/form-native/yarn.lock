@@ -1500,15 +1500,20 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@xpfw/form-tests@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form-tests/-/form-tests-1.0.0.tgz#a6ff0d257f39917bea427ff6b5f12fe5dea36592"
-  integrity sha512-yj9gaY8aqg7M5uWmed3E6fFtcxl2dkNUU6aIV1wLOofpC3oy4KqCAdaGS6vQhWLYlgTRrT0UvWSXtkL6s3YCwQ==
+"@xpfw/form-tests@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@xpfw/form-tests/-/form-tests-1.0.1.tgz#9bece54bf42e715a91c169acc44d2b875b024a49"
+  integrity sha512-rAebAtqwhtCMzOkSeyTZiYk15dfoVFpTAzcHF7IamMcImPuCLFjXRh7YgEwOIIfHjkOS4B1rr/q3albQqhz1AQ==
 
-"@xpfw/form@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.0.tgz#3ae048e6e71b5e933e8c240d4e6919f2586e57dc"
-  integrity sha512-SIymjteaM28OzEnySita146+RCZ+xwhVUcURWWUd/4bvaarnLjDaxeiGltBL6xvUKaE8vYcDjBWJTLyB7vaWAw==
+"@xpfw/form@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.2.tgz#353e31e05373656997060c53b8a0d839f1d764a8"
+  integrity sha512-tz7UvooOcI75Kc/3Ll1TKar1AwQztSOiGKrczyI+IrlYGCE5wjw/NI1m0x/aBXXOb6Z5HPi8WTwnix59fju2pQ==
+
+"@xpfw/test-nativerender@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@xpfw/test-nativerender/-/test-nativerender-0.1.1.tgz#f6267a0896aa9e60ab04e0e561f61bdd8a0c3ae8"
+  integrity sha512-qil+KZ0ZIkIh89VSd0VYmLWTXMJrk7bQfuaUhopwtr+3ExOdCdOsmAFS9XWdgucI1rIY8KlxhQU+ADFUzJ6lRQ==
 
 abab@^2.0.3:
   version "2.0.5"
@@ -5189,9 +5194,9 @@ lodash.throttle@^4.1.1:
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash@4.x, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.1.0, log-symbols@^2.2.0:
   version "2.2.0"
