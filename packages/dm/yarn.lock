@@ -602,10 +602,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@xpfw/form@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.0.tgz#3ae048e6e71b5e933e8c240d4e6919f2586e57dc"
-  integrity sha512-SIymjteaM28OzEnySita146+RCZ+xwhVUcURWWUd/4bvaarnLjDaxeiGltBL6xvUKaE8vYcDjBWJTLyB7vaWAw==
+"@xpfw/form@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.2.tgz#353e31e05373656997060c53b8a0d839f1d764a8"
+  integrity sha512-tz7UvooOcI75Kc/3Ll1TKar1AwQztSOiGKrczyI+IrlYGCE5wjw/NI1m0x/aBXXOb6Z5HPi8WTwnix59fju2pQ==
 
 abab@^2.0.3:
   version "2.0.5"
@@ -2442,10 +2442,10 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
-lodash@4.x, lodash@^4.17.19, lodash@^4.17.20:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+lodash@4.x, lodash@^4.17.19, lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lru-cache@^6.0.0:
   version "6.0.0"
