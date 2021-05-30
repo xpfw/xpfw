@@ -602,10 +602,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@xpfw/form@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.0.tgz#3ae048e6e71b5e933e8c240d4e6919f2586e57dc"
-  integrity sha512-SIymjteaM28OzEnySita146+RCZ+xwhVUcURWWUd/4bvaarnLjDaxeiGltBL6xvUKaE8vYcDjBWJTLyB7vaWAw==
+"@xpfw/form@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.2.tgz#353e31e05373656997060c53b8a0d839f1d764a8"
+  integrity sha512-tz7UvooOcI75Kc/3Ll1TKar1AwQztSOiGKrczyI+IrlYGCE5wjw/NI1m0x/aBXXOb6Z5HPi8WTwnix59fju2pQ==
 
 abab@^2.0.3:
   version "2.0.5"
@@ -3744,9 +3744,9 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 ws@^7.2.3:
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.3.tgz#1f9643de34a543b8edb124bdcbc457ae55a6e5cd"
-  integrity sha512-hr6vCR76GsossIRsr8OLR9acVVm1jyfEWvhbNjtgPOrfvAlKzvyeg/P6r8RuDjRyrcQoPQT7K0DGEPc7Ae6jzA==
+  version "7.4.6"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.6.tgz#5654ca8ecdeee47c33a9a4bf6d28e2be2980377c"
+  integrity sha512-YmhHDO4MzaDLB+M9ym/mDA5z0naX8j7SIlT8f8z+I0VtzsRbekxEutHSme7NPS2qE8StCYQNUnfWdXta/Yu85A==
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
