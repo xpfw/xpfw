@@ -627,15 +627,15 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@xpfw/form-tests@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form-tests/-/form-tests-1.0.0.tgz#a6ff0d257f39917bea427ff6b5f12fe5dea36592"
-  integrity sha512-yj9gaY8aqg7M5uWmed3E6fFtcxl2dkNUU6aIV1wLOofpC3oy4KqCAdaGS6vQhWLYlgTRrT0UvWSXtkL6s3YCwQ==
+"@xpfw/form-tests@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@xpfw/form-tests/-/form-tests-1.0.1.tgz#9bece54bf42e715a91c169acc44d2b875b024a49"
+  integrity sha512-rAebAtqwhtCMzOkSeyTZiYk15dfoVFpTAzcHF7IamMcImPuCLFjXRh7YgEwOIIfHjkOS4B1rr/q3albQqhz1AQ==
 
-"@xpfw/form@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.0.tgz#3ae048e6e71b5e933e8c240d4e6919f2586e57dc"
-  integrity sha512-SIymjteaM28OzEnySita146+RCZ+xwhVUcURWWUd/4bvaarnLjDaxeiGltBL6xvUKaE8vYcDjBWJTLyB7vaWAw==
+"@xpfw/form@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.2.tgz#353e31e05373656997060c53b8a0d839f1d764a8"
+  integrity sha512-tz7UvooOcI75Kc/3Ll1TKar1AwQztSOiGKrczyI+IrlYGCE5wjw/NI1m0x/aBXXOb6Z5HPi8WTwnix59fju2pQ==
 
 "@xpfw/validate@0.1.2":
   version "0.1.2"
@@ -3739,9 +3739,9 @@ throat@^5.0.0:
   integrity sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
