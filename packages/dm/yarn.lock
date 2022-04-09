@@ -602,10 +602,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@xpfw/form@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.0.tgz#3ae048e6e71b5e933e8c240d4e6919f2586e57dc"
-  integrity sha512-SIymjteaM28OzEnySita146+RCZ+xwhVUcURWWUd/4bvaarnLjDaxeiGltBL6xvUKaE8vYcDjBWJTLyB7vaWAw==
+"@xpfw/form@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@xpfw/form/-/form-1.0.2.tgz#353e31e05373656997060c53b8a0d839f1d764a8"
+  integrity sha512-tz7UvooOcI75Kc/3Ll1TKar1AwQztSOiGKrczyI+IrlYGCE5wjw/NI1m0x/aBXXOb6Z5HPi8WTwnix59fju2pQ==
 
 abab@^2.0.3:
   version "2.0.5"
@@ -2564,10 +2564,10 @@ mockdate@^3.0.2:
   resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-3.0.2.tgz#a5a7bb5820da617747af424d7a4dcb22c6c03d79"
   integrity sha512-ldfYSUW1ocqSHGTK6rrODUiqAFPGAg0xaHqYJ5tvj1hQyFsjuHpuWgWFTZWwDVlzougN/s2/mhDr8r5nY5xDpA==
 
-moment@^2.29.1:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+moment@^2.29.2:
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
+  integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
 
 ms@2.0.0:
   version "2.0.0"
