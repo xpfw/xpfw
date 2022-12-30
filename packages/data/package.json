@@ -33,7 +33,7 @@
     "@xpfw/test-util": "1.0.1",
     "ajv": "^7.1.1",
     "ajv-formats": "^1.5.1",
-    "fast-json-patch": "^2.0.7",
+    "fast-json-patch": "^3.1.1",
     "isomorphic-fetch": "^3.0.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
